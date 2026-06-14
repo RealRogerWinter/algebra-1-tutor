@@ -12,6 +12,12 @@ Three rules that never change:
 
 ---
 
+## Bundled figures come first (canonical for coded examples)
+
+Many graphing examples now have a pre-generated, sympy-verified SVG bundled in `figures/`, named by reference code (e.g. `figures/12.6.f1.svg` for the y = x² − 4 parabola). When an example carries an `f` code, emit that bundled file instead of recomputing — it's the canonical, math-checked figure, and redrawing it risks the very errors this file warns about. The templates below are for ad-hoc graphs with no bundled figure.
+
+---
+
 ## When to use what
 
 | Situation | Best medium |

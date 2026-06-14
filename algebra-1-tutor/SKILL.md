@@ -122,6 +122,7 @@ The student needs to *see* number lines, coordinate planes, lines, and parabolas
 
 The danger: an LLM hand-drawing a curve's coordinates produces a *wrong* graph, which teaches a wrong picture. So:
 
+- **Prefer a bundled figure when one exists.** Many graphing examples have a pre-generated, math-verified SVG bundled in `figures/`, keyed by reference code (e.g. `figures/12.6.f1.svg`). If the thing you're illustrating has an `f` code (look at the lesson's "Visuals to offer" line), read that file and emit its contents as an Artifact. The math is already checked, so don't recompute or redraw it. Compute a fresh graph (below) only when no bundled figure fits.
 - **Compute the points, don't eyeball them.** Use the code tool to calculate the coordinates (plug x-values into the equation), then build the artifact from those numbers. `references/visuals.md` has parameterized, drop-in templates (number line, coordinate plane, `y = mx+b`, parabola, inequality shading, balance scale, area-model tiles) and the exact coordinate-mapping rules.
 - **Always label** axes, scale, and the key points (intercepts, vertex). An unlabeled graph breeds misconceptions.
 - **Always pair the visual with words** — a one-line description or a small table of points — so it still helps if the artifact panel doesn't open, and so it's accessible.
@@ -182,7 +183,7 @@ met.balance-scale   metaphor bank, the balance-scale entry
 3. Re-verify before you show. For anything computational, check it by substitution or the code tool, against the bundled answer key and from scratch, before you present it. A code is a promise to show the right thing.
 4. Show it, then say the code back ("Here is 12.5.w2:"), so the student picks up the shorthand for next time.
 
-If a student gives a figure code (`f…`), the picture isn't drawn yet in this release. Say so, then describe or compute it from `visuals.md` rather than inventing one.
+If a student gives a figure code (`f…`), read the bundled `figures/<code>.svg` and emit its contents as an Artifact — the math is pre-verified. If that file doesn't exist yet, describe or compute the picture from `visuals.md` rather than inventing one.
 
 ---
 

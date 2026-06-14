@@ -68,7 +68,7 @@ Test x = 0: 5 - 0 = 5 > 2; is 0 < 3?. Solution: **x < 3**.
 - **Open vs. filled circle** confusion — ≤/≥ get a **filled** dot ("equal is included"), </> an **open** one.
 - **Treating it like an equation with one answer** — push "name three numbers that work" to surface the *set*.
 
-**Visuals to offer:** ASCII number line in chat for quick feedback (the x>2/x≤-1 sketches in `visuals.md`), or **Template 1** (SVG artifact) for a polished line — open vs. filled endpoint, shaded ray, boundary labeled. Always pair with a sentence.
+**Visuals to offer:** {#8.1.f1} ASCII number line in chat for quick feedback (the x>2/x≤-1 sketches in `visuals.md`), or **Template 1** (SVG artifact) for a polished line — open vs. filled endpoint, shaded ray, boundary labeled. Always pair with a sentence.
 
 **Check for understanding (transfer):**
 1. {#8.1.c1} "Solve -3x ≥ 12, then test x = -5 in the *original*. Walk me through how the test confirms (or would catch a mistake in) your answer."
@@ -233,7 +233,7 @@ Test a point — x = 0 (inside): -6 < -2(0) = 0 ≤ 4 ✓. Check the endpoints t
 - **|x| = negative, or |x| < negative:** distance can't be negative. |x| = -4 → **no solution**; |x| < -3 → **no solution**; |x| > -3 → **all reals**. Reason from the picture, never a blind shortcut.
 - **Graph vs. solve.** y = |x| (and its shifts) is a *picture* to read; |x| = k is an *equation* to solve. Don't try to "solve" the graph.
 
-**Visuals to offer:** Two pictures carry this lesson — the **V-graph** of y = |x| (vertex at the origin, slope ±1, sits on the axis), and a **number line** for solving (mark 0, step k each way; dot the two solutions, or shade the between-segment for *and* / two rays for *or*). Use `visuals.md` for a clean sketch; always state the distance interpretation in words.
+**Visuals to offer:** {#8.3.f1} Two pictures carry this lesson — the **V-graph** of y = |x| (vertex at the origin, slope ±1, sits on the axis), and a **number line** for solving (mark 0, step k each way; dot the two solutions, or shade the between-segment for *and* / two rays for *or*). Use `visuals.md` for a clean sketch; always state the distance interpretation in words.
 
 **Check for understanding (transfer):**
 1. {#8.3.c1} "Sketch y = |x| in words: where's the vertex, what are the arm slopes, and why does it never go below the x-axis? Then describe y = |x| + 1."
@@ -339,7 +339,7 @@ Boundary 2: y = -x + 3, **solid**; test (0,0): 0 ≤ 3? **True** → shade the s
 - **For a system, shading each region but forgetting the answer is the *overlap*** — not the union. Confirm by testing a point that should be inside *all* of them.
 - **Sign slips computing boundary points** (`misconceptions.md` §3) — compute, don't eyeball (`visuals.md`).
 
-**Visuals to offer:** `visuals.md` **Template 4** as an **SVG artifact** — computed boundary line (dashed/solid), semi-transparent fill on the correct side, the test point and its true/false stated in the caption. For a system, layer the regions and highlight the overlap. Never paste raw SVG into chat — emit an artifact, and pair with a sentence naming the test point.
+**Visuals to offer:** {#8.4.f1} `visuals.md` **Template 4** as an **SVG artifact** — computed boundary line (dashed/solid), semi-transparent fill on the correct side, the test point and its true/false stated in the caption. For a system, layer the regions and highlight the overlap. Never paste raw SVG into chat — emit an artifact, and pair with a sentence naming the test point.
 
 **Check for understanding (transfer):**
 1. {#8.4.c1} "For y < x + 4: is the boundary dashed or solid, and how do you decide which side to shade? Do the origin test out loud."
