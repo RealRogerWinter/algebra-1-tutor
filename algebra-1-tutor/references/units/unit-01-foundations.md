@@ -110,7 +110,7 @@ Pacing: a fluent adult may blow through 1.2–1.4 — let them; reserve the full
 **Worked examples:**
 
 1. Classify 7. It's a counting number, so it's an **integer**, and 7 = 7/1 so it's also **rational**.
-2. Classify 4.8. Not a whole amount, so *not* an integer; but 4.8 = 24/5, a ratio of integers — **rational, a non-integer decimal**.
+2. Classify 4.8. Not a whole amount, so *not* an integer; but 4.8 = 24/5, a ratio of integers — **rational, non-integer**.
 3. Classify 10/2. Don't be fooled by the fraction bar: 10/2 = 5. Its *value* is 5, so it's an **integer** (and rational). How it's written doesn't fix its type.
 4. Classify 0.333…. The repeating decimal equals 1/3, a ratio of integers — **rational, non-integer**. (Again: spelling vs. value.)
 5. Show three spellings of one number: 5 = 5/1 = 5.0 — all the *same point* on the line.
@@ -142,10 +142,10 @@ Pacing: a fluent adult may blow through 1.2–1.4 — let them; reserve the full
 **Answer key:** *(all twelve are **real** numbers; the labels below add the finer type.)*
 1. integer, rational
 2. integer, rational
-3. rational, non-integer decimal
+3. rational, non-integer
 4. integer, rational
 5. rational, non-integer
-6. rational, non-integer decimal
+6. rational, non-integer
 7. =5 → integer, rational
 8. =1/3 → rational, non-integer
 9. irrational
@@ -163,7 +163,7 @@ Pacing: a fluent adult may blow through 1.2–1.4 — let them; reserve the full
 **Why it matters:** A reliable, shared order is what lets everyone agree on what an expression means. Most errors here are *systematic* (not random), so naming the trap fixes them.
 
 **New terms:**
-- **Order of operations:** the agreed sequence for evaluating an expression. PEMDAS, but really **four tiers**: **P**arentheses, **E**xponents, **[M**ultiply/**D**ivide**]** (one tier, left to right), **[A**dd/**S**ubtract**]** (one tier, left to right).
+- **Order of operations:** the agreed sequence for evaluating an expression. PEMDAS, but really **four tiers**: **Grouping symbols** (parentheses, brackets [ ], and the fraction bar) — the "P" tier, **E**xponents, **[M**ultiply/**D**ivide**]** (one tier, left to right), **[A**dd/**S**ubtract**]** (one tier, left to right). The "P" in PEMDAS is really *grouping*, not just round parentheses: a fraction bar groups too, meaning "evaluate the whole top and the whole bottom first, then divide."
 
 **Teaching arc (concrete → pictorial → symbolic):**
 1. **Four tiers, not six.** The headline (see `misconceptions.md` §5): multiply and divide are *equal-rank partners*, read left to right; same for add and subtract. There is no "M before D" or "A before S."
@@ -171,7 +171,7 @@ Pacing: a fluent adult may blow through 1.2–1.4 — let them; reserve the full
    - 12 ÷ 2 × 3: left to right, 12÷2 = 6, then 6×3 = 18 — **not** 2.
    - 8 - 3 + 2: left to right, 8-3 = 5, then 5+2 = 7 — **not** 3.
    - 2 × 3²: the exponent is a *higher* tier, so square first: 3² = 9, then 2×9 = 18 — **not** 36.
-3. **Parentheses change the meaning.** Contrast 2 + 3 × 4 = 14 with (2+3)×4 = 20: same digits, different grouping, different value.
+3. **Grouping symbols change the meaning.** Contrast 2 + 3 × 4 = 14 with (2+3)×4 = 20: same digits, different grouping, different value. Brackets [ ] group the same way parentheses do. So does a **fraction bar**: in (12−2)/(3+2) the bar is a grouping symbol — evaluate the whole top and the whole bottom first, then divide: 10/5 = 2.
 
 **Worked examples:**
 
@@ -181,6 +181,7 @@ Pacing: a fluent adult may blow through 1.2–1.4 — let them; reserve the full
 4. 12 ÷ 2 × 3: same tier, left to right → 6 × 3 = 18. *(Not 2.)*
 5. 2 + 3² × 2: exponent → 2 + 9×2; then multiply → 2 + 18 = 20.
 6. 10 - 2 × (3+1): parentheses → 10 - 2×4; multiply → 10 - 8 = 2.
+7. (12 − 2)/(3 + 2): the fraction bar groups, so evaluate top and bottom first → 10/5; then divide → 2. *(The bar means "do the whole numerator and the whole denominator before dividing.")*
 
 **Watch for:** `misconceptions.md` §5. *Tells:* 8-3+2 = 3 (added before subtracting), 12÷2×3 = 2 (multiplied before dividing), 2×3² = 36 (multiplied before squaring). *Repair:* "Reading left to right, which of these two equal-rank operations comes first?" — re-anchor on the four-tier picture, don't just re-recite PEMDAS.
 
@@ -342,6 +343,21 @@ Pacing: a fluent adult may blow through 1.2–1.4 — let them; reserve the full
 5. 14 6. 7 7. 11 8. -8 9. -13 10. 4 11. 5 12. 12
 
 *(11 previews exponents on a negative — (-2)² = 4, not -4; 12 reinforces that grouping is not the same as 2x+3.)*
+
+**Order-of-operations with signed numbers (1.3 + 1.4 callback):** Now that negatives (1.4) are in hand, mix them back into order of operations (1.3) — this is where the single most common pitfall lives. Run this short interleaved set, and contrast the two headliners out loud:
+- **−2² = −4** but **(−2)² = 4.** Without parentheses, the exponent binds *only* to the 2, and the leading minus is applied *after* squaring: −2² means −(2²) = −(4) = −4. With parentheses, the whole −2 is squared: (−2)² = (−2)(−2) = 4. Say it as: "no parentheses → square first, then take the opposite." (See `misconceptions.md` §3 and §5.)
+
+*Evaluate (mind the sign and the exponent's reach):*
+13. −2²
+14. (−2)²
+15. −3²
+16. −2² + 1
+17. 10 − 2·(−3)
+18. 8 + (−4)/2
+
+**Answer key:** 13. -4 14. 4 15. -9 16. -3 17. 16 18. 6
+
+*(13 vs 14 is the headline contrast — same digits, the parentheses flip the sign of the result; 17 and 18 fold a negative into the [MD] tier. If a student writes −2² = 4, they squared before applying the minus — re-anchor on "the exponent only touches the 2.")*
 
 ---
 

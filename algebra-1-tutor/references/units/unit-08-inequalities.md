@@ -29,7 +29,7 @@ The second persistent fuzziness is what a **solution set** *means*: an equation 
 **Goal:** Solve a linear inequality in one variable (including the negative-coefficient flip) and graph its solution set on a number line.
 **Why it matters:** Real constraints are rarely "exactly equal" — *at least* $20, *no more than* 8 hours, *under* the speed limit. Inequalities are how we solve "how much is enough / too much," and the solution is a whole range of acceptable values.
 **New terms:**
-- **Inequality:** a statement that two quantities are *not* (necessarily) equal, using < (less than), > (greater than), ≤ (less than *or equal to*), or ≥ (greater than or equal to).
+- **Inequality:** a statement that **compares** two quantities using < (less than), > (greater than), ≤ (less than *or equal to*), or ≥ (greater than or equal to) — saying one is less than, greater than, or at most/at least the other (an *order* relation).
 - **Solution set:** *all* the values that make the inequality true — usually infinitely many, drawn as a shaded ray.
 - **Strict** (<, >) vs. **inclusive** (≤, ≥): whether the boundary value itself counts.
 
@@ -122,6 +122,7 @@ Test x = 0: 5 - 0 = 5 > 2; is 0 < 3?. Solution: **x < 3**.
 **New terms:**
 - **Compound inequality:** two inequalities combined into one statement.
 - **And (intersection):** *both* parts must hold. 2 < x ≤ 5 is shorthand for x > 2 **and** x ≤ 5 — the values **between** 2 and 5 (with 5 included). On the line, the **overlap** of the two shaded regions — a single segment.
+- **Double inequality** (a.k.a. **three-part inequality**): the chained form a < x < b. It is only well-formed when **both symbols point the same way**, and it *always* means an **and** (a < x **and** x < b). Never write something like 3 < x > 1 — a chained form with the symbols pointing opposite ways is meaningless.
 - **Or (union):** *at least one* part holds. x < -1 **or** x > 3 — **everything** in either ray; the two pieces don't touch.
 
 **Teaching arc (concrete → pictorial → symbolic):**
@@ -145,6 +146,12 @@ Already solved — two rays. Graph: open circle at -1 shading **left**, open cir
 
 *Example 4 — "or" needing work.* Solve 2x ≤ -4 **or** x - 3 > 2.
 Left: x ≤ -2. Right: x > 5. Graph: filled circle at -2 shading left, open circle at 5 shading right. Solution: **x ≤ -2 or x > 5**.
+
+*Example 5 — three-part, divide by a negative (flip BOTH signs).* Solve -6 < -2x ≤ 4.
+Divide **all three** parts by **-2** → **flip both** signs: -6/-2 > x ≥ 4/-2, i.e. 3 > x ≥ -2.
+Rewrite left-to-right in **increasing** order (smaller number on the left): reading 3 > x ≥ -2 backwards gives **-2 ≤ x < 3**. (The strict end stays strict and the inclusive end stays inclusive — only their positions move, so the 3 keeps its open/strict mark and -2 keeps its filled/inclusive one.)
+Graph: filled circle at -2, open circle at 3, shade the segment **between**.
+Test a point — x = 0 (inside): -6 < -2(0) = 0 ≤ 4 ✓. Check the endpoints too: x = -2 is **in** (-2(-2) = 4, and -6 < 4 ≤ 4 ✓, so -2 is included), while x = 3 is **out** (-2(3) = -6, and -6 < -6 is false, so 3 is excluded). Solution: **-2 ≤ x < 3**.
 
 **Watch for:**
 - **Confusing *and* with *or*.** *And* = overlap (between, narrower); *or* = union (two rays, wider). If a student shades the whole line for an *and*, they've unioned by mistake.
@@ -173,6 +180,9 @@ Left: x ≤ -2. Right: x > 5. Graph: filled circle at -2 shading left, open circ
 7. 2x ≤ -4 or x > 3
 8. x - 3 ≥ 2 or x < -2
 
+*Set C — three-part, divide by a negative (flip BOTH signs, then rewrite in increasing order)*
+9. -9 ≤ -3x < 6
+
 **Answer key (all verified):**
 1. -1 < x < 4 — add 1 to all parts; open circles at -1 and 4, shade between.
 2. -1 ≤ x ≤ 3 — subtract 1 from all parts; filled circles at -1 and 3, shade between.
@@ -182,6 +192,7 @@ Left: x ≤ -2. Right: x > 5. Graph: filled circle at -2 shading left, open circ
 6. x < -1 or x > 5 — left: x<-1; right: x>5; two rays.
 7. x ≤ -2 or x > 3 — filled at -2 left, open at 3 right.
 8. x ≥ 5 or x < -2 — filled at 5 right, open at -2 left.
+9. -2 < x ≤ 3 — divide all three parts by -3 and **flip both** signs (3 ≥ x > -2), then rewrite increasing; open circle at -2, filled circle at 3, shade between. *(Test x = 0: -9 ≤ 0 < 6 ✓; endpoint x = 3 is in since -3(3) = -9 ≥ -9; endpoint x = -2 is out since -3(-2) = 6 < 6 is false.)*
 
 ---
 
