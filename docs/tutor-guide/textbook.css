@@ -24,5 +24,6 @@ figure.fig svg{max-width:100%;height:auto}figcaption{color:var(--muted);font-siz
 .katex-display{overflow-x:auto;overflow-y:hidden;padding:.2rem 0}
 footer{max-width:48rem;margin:0 auto;padding:1.2rem;color:var(--muted);font-size:.85rem;border-top:1px solid var(--rule)}
 .toc{background:var(--figbg);border:1px solid var(--rule);border-radius:8px;padding:.6rem 1rem}
-ul.units{list-style:none;padding:0}ul.units li{margin:.4rem 0}ul.units .u{color:var(--muted);font-size:.85em}
+ul.units{list-style:none;padding:0}ul.units li{margin:.4rem 0}.u{color:var(--muted);font-size:.9em}ul.units .u{font-size:.85em}
+section.ug{margin:1.2rem 0;padding-bottom:.6rem;border-bottom:1px solid var(--rule)}section.ug h3{margin:.2rem 0}
 @media print{.topbar{position:static}#theme{display:none}a{color:inherit;text-decoration:none}figure.fig{break-inside:avoid}}

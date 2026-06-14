@@ -16,6 +16,7 @@ SKILL_DIR = os.path.join(REPO_ROOT, "algebra-1-tutor")
 SKILL_FILE = os.path.join(REPO_ROOT, "algebra-1-tutor.skill")
 ZIP_FILE = os.path.join(REPO_ROOT, "algebra-1-tutor.zip")
 EXCLUDE = ("__pycache__", ".DS_Store", "Thumbs.db")
+_TEXT_EXT = (".md", ".svg", ".txt")
 
 
 def _files():
@@ -27,6 +28,13 @@ def _files():
     return sorted(out)
 
 
+def _read_norm(p):
+    """Read bytes; normalize text files to LF so the package is deterministic regardless of the
+    working-tree's line endings (Windows autocrlf vs LF)."""
+    b = open(p, "rb").read()
+    return b.replace(b"\r\n", b"\n") if p.endswith(_TEXT_EXT) else b
+
+
 def build():
     files = _files()
     for target in (SKILL_FILE, ZIP_FILE):
@@ -35,7 +43,7 @@ def build():
                 zi = zipfile.ZipInfo(rel, date_time=(1980, 1, 1, 0, 0, 0))
                 zi.compress_type = zipfile.ZIP_DEFLATED
                 zi.external_attr = 0o644 << 16
-                z.writestr(zi, open(p, "rb").read())
+                z.writestr(zi, _read_norm(p))
     return len(files)
 
 
@@ -54,7 +62,7 @@ def check():
     for rel, p in files:
         if rel not in names:
             issues.append(f"{rel}: in source dir but not in zip (run build_skill.py)")
-        elif z.read(rel) != open(p, "rb").read():
+        elif z.read(rel) != _read_norm(p):
             issues.append(f"{rel}: content differs from source (run build_skill.py)")
     for n in sorted(names - src):
         issues.append(f"{n}: in zip but not in source dir (run build_skill.py)")
