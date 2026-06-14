@@ -1,0 +1,5 @@
+# The data tables in these two files are generated LF-only by
+# _verification/generate.py. Pin them to LF so Windows checkouts (autocrlf)
+# don't show spurious whole-file CRLF diffs after running the generator.
+algebra-1-tutor/references/curriculum-map.md text eol=lf
+docs/CURRICULUM.md text eol=lf

@@ -94,7 +94,7 @@ units:
     lessons:
       - { id: "8.1", title: "One-variable inequalities" }
       - { id: "8.2", title: "Compound inequalities" }
-      - { id: "8.3", title: "Absolute-value equations & inequalities" }
+      - { id: "8.3", title: "Absolute value: graphs & distance" }
       - { id: "8.4", title: "Graphing linear inequalities (two variables) & systems" }
   - id: 9
     slug: sequences-exponentials
