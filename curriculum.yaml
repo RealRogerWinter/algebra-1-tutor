@@ -61,6 +61,7 @@ units:
       - { id: "5.3", title: "Slope" }
       - { id: "5.4", title: "Slope-intercept form y = mx + b" }
       - { id: "5.5", title: "Writing equations of lines" }
+      - { id: "5.6", title: "x-intercepts, graphing by intercepts & standard form" }
   - id: 6
     slug: modeling-translation
     title: "Modeling & Translation"

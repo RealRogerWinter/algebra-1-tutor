@@ -130,6 +130,22 @@ Golden rule: **diagnose before you re-teach**, and **never explain the same way 
 
 ---
 
+## 8. Slope: steepness vs. direction
+
+**The misconception.** Reading the **sign** of a slope as if it measured steepness. The sign of m only sets *direction* — uphill (+) or downhill (−) left-to-right; **steepness is the magnitude |m|**, how far the line rises or falls per step. So a line of slope −3 is *steeper* than one of slope +2 (compare |−3| = 3 against |2| = 2), even though as plain numbers −3 < 2. This collides with the ordering-negatives error from §3 ("−5 > −2 because 5 > 2"): students rank slopes by value when steepness asks for magnitude.
+
+**Tells:**
+- Calls slope −3 "less steep than" (or "flatter than") slope 2 — ranked by value, not by |m|.
+- Says a steeply *downhill* line "has a small slope" because the number is negative.
+- Picks the line with the larger signed slope as "steeper" when one slope is negative (e.g. chooses +1 over −4).
+- Treats "−2 is less than 1, so its line is gentler" as obvious.
+
+**Hinge question:** "Which is steeper, a line with slope −3 or a line with slope 2?" *(Correct: slope −3, because |−3| = 3 > |2| = 2. Answering "slope 2 because 2 > −3" reveals ranking by value instead of magnitude. Follow-up: "Which one points downhill?" — slope −3 — to separate direction from steepness.)*
+
+**Socratic repair:** Split the question in two — "Which *way* does each tilt, and *how hard*?" The sign answers the first (− is downhill), the size answers the second. **Ramp picture (`metaphors.md` → Slope):** a ramp dropping 3 feet per step is steeper than one rising 2 feet per step — the *drop* is bigger; whether you're going up or down doesn't change how steep the climb feels. Anchor with a number-line move from §3: |−3| and |2| are *distances from 0*, and steepness is exactly that distance. Confirm with a transfer: "Order these by steepness: 1/2, −1, 4, −3." *(By |m|: 1/2 < 1 < 3 < 4, i.e. 1/2, −1, −3, 4.)*
+
+---
+
 ## How to use this in the flow
 
 - When an answer is wrong, **match the tell** here first, then pick the hinge question if you're unsure which misconception is live.

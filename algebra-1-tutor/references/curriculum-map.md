@@ -66,6 +66,7 @@ Functions (Unit 4) are a **backbone, not a side topic** — once introduced, nar
 - 5.3 Slope (rate of change, rise/run, from two points)
 - 5.4 Slope-intercept form y = mx + b
 - 5.5 Writing equations of lines (point-slope, parallel & perpendicular)
+- 5.6 x-intercepts, graphing by intercepts & standard form
 
 **Unit 6 — Modeling & Translation**
 - 6.1 Translating words into expressions and equations
