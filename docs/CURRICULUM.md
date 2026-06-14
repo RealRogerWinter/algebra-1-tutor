@@ -13,7 +13,7 @@ The full machine-readable map (with the prerequisite graph and a placement check
 - **Modeling/translation** kept as a unit (Unit 6) and also woven throughout.
 - **A light Sequences & Exponential Functions unit (Unit 9)** added — core modern Algebra 1 content the original sequence lacked.
 - **Radicals folded into Quadratics (Unit 12)** rather than a standalone unit — they appear in service of the quadratic formula.
-- **Statistics demoted to an optional appendix** — off the default mastery path for a self‑paced adult learner.
+- **Statistics promoted to a core unit (Unit A)** — CCSS‑aligned data & statistics on the mastery path, kept trailing after the capstone so the spine numbering stays append‑only.
 - **Prerequisite metadata** on every unit so a student can jump anywhere safely.
 
 ## Units
@@ -33,7 +33,7 @@ The full machine-readable map (with the prerequisite graph and a placement check
 | 10 | Exponents & Polynomials | Exponent rules, scientific notation, polynomial operations, FOIL/area model |
 | 11 | Factoring | GCF, factoring trinomials, special patterns |
 | 12 | Quadratic Functions & Equations (the capstone) | Square roots & radicals, x²=9, factoring, completing the square, quadratic formula, parabolas |
-| A | Data & Statistics (optional) | One/two-variable statistics, line of best fit, correlation vs. causation, two-way tables |
+| A | Data & Statistics | One/two-variable statistics, line of best fit, correlation vs. causation, two-way tables |
 <!-- END GENERATED: units-table -->
 
 ## Two dependency chains to keep solid

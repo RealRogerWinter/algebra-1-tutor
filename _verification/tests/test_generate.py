@@ -12,7 +12,13 @@ def test_load_ssot_shape():
     assert u5.title == "Linear Functions & Their Graphs"
     assert [l.id for l in u5.lessons][0] == "5.1"
     appA = next(u for u in ssot.units if u.id == "A")
-    assert appA.optional is True
+    assert appA.optional is False                       # Stats promoted to a core unit in Phase 1
+
+
+def test_unit_a_letter_scope_h1():
+    # Phase 1 promotes the appendix to "# Unit A:"; H1_RE must accept a letter scope after "Unit".
+    m = generate.H1_RE.search("# Unit A: Data & Statistics\n")
+    assert m is not None and m.group(3) == "Data & Statistics"
 
 
 def test_unit_ids_normalized_to_str():
@@ -25,7 +31,8 @@ def test_render_units_table_normalizes(tmp_path):
     body = generate.render_map_table(ssot)
     assert "x²" in body and "x^2" not in body
     assert "**Proportional Reasoning (the bridge to linearity)**" in body
-    assert "*(optional, off the main path)*" in body          # appendix row
+    assert "Data & Statistics" in body                        # Stats is now a core unit row
+    assert "*(optional, off the main path)*" not in body      # no unit is optional after Phase 1
 
 
 def test_marker_rewrite_is_idempotent(tmp_path):
