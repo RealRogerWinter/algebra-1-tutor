@@ -18,37 +18,45 @@
 
 <blockquote>
 <p><strong>Prerequisites:</strong> Unit 3 (ratios, rates, <strong>unit rate</strong>) and Unit 4 (functions, f(x) notation, multiple representations). Comfort with negatives (Unit 1.4) and substituting into an expression (Unit 1.5) is assumed throughout.
-<strong>By the end, the student can:</strong>
-- Plot and name ordered pairs and identify the four quadrants.
-- Graph a linear equation from a table of values and test whether a point lies on a line.
-- Compute slope from two points and recognize the four cases (positive, negative, zero, undefined).
-- Read slope and y-intercept from y = mx + b (and f(x) = mx + b) and graph a line quickly from them.
-- Write the equation of a line from a point and a slope, or from two points, and recognize parallel / perpendicular lines.</p>
+<strong>By the end, the student can:</strong></p>
+<ul>
+<li>Plot and name ordered pairs and identify the four quadrants.</li>
+<li>Graph a linear equation from a table of values and test whether a point lies on a line.</li>
+<li>Compute slope from two points and recognize the four cases (positive, negative, zero, undefined).</li>
+<li>Read slope and y-intercept from y = mx + b (and f(x) = mx + b) and graph a line quickly from them.</li>
+<li>Write the equation of a line from a point and a slope, or from two points, and recognize parallel / perpendicular lines.</li>
+</ul>
 </blockquote>
 <h2 id="teaching-this-unit-orientation-for-the-tutor">Teaching this unit (orientation for the tutor)</h2>
 <p>This is where the abstract idea of a function from Unit 4 becomes a <strong>picture you can read</strong>. The throughline: <strong>a line is a linear function</strong>, and y = mx + b and f(x) = mx + b are the <em>same object</em> named two ways. Say this out loud and often — the y and the f(x) are interchangeable; the function machine from Unit 4 (<code>metaphors.md</code> → Functions) is now drawn as a straight line.</p>
 <p>The single most important callback is <strong>slope = rate of change = the unit rate from Unit 3</strong>. Slope is not a new mysterious thing; it's "how much y changes per 1 step in x" — exactly the per-unit rate they already met. Lean hard on the stairs/ramp and speed metaphors (<code>metaphors.md</code> → Slope) and tie them back to Unit 3 explicitly.</p>
 <p>Pacing: 5.1 is quick and concrete (most adults half-know the coordinate plane — don't belabor it, but nail the <em>order</em> of the pair and the quadrant signs). 5.2 builds the table→graph habit. 5.3 (slope) is the conceptual heart — spend the most time here. 5.4 and 5.5 are payoff lessons where everything composes.</p>
-<p><strong>Biggest misconception traps in this unit:</strong>
-- <strong>Reversing the ordered pair</strong> — plotting (3,2) as "up 3, right 2." Always re-say "x first (across), then y (up/down)."
-- <strong>The slope fraction upside down</strong> — computing run/rise instead of rise/run, or mismatching which point is "first" in numerator vs. denominator. See <code>misconceptions.md §3</code> (negatives in the differences are a common slip too) and have them <em>subtract in the same order</em> top and bottom.
-- <strong>Sign and negative-coefficient errors</strong> in y = mx + b (e.g. calling the intercept of y = -3x + 5 "−5"). This is the negatives work of <code>misconceptions.md §3</code> resurfacing in a new costume.
-- <strong>Zero vs. undefined slope</strong> confusion (horizontal is 0; vertical is undefined). Anchor with the ramp/wall picture.
-- <strong>Steepness vs. direction</strong> — reading the <em>sign</em> of the slope (which only sets uphill/downhill) as if it set steepness, so a line with slope −3 gets called "less steep" than slope +2. Steepness is the <em>magnitude</em> |slope|. See <code>misconceptions.md §8</code>.</p>
+<p><strong>Biggest misconception traps in this unit:</strong></p>
+<ul>
+<li><strong>Reversing the ordered pair</strong> — plotting (3,2) as "up 3, right 2." Always re-say "x first (across), then y (up/down)."</li>
+<li><strong>The slope fraction upside down</strong> — computing run/rise instead of rise/run, or mismatching which point is "first" in numerator vs. denominator. See <code>misconceptions.md §3</code> (negatives in the differences are a common slip too) and have them <em>subtract in the same order</em> top and bottom.</li>
+<li><strong>Sign and negative-coefficient errors</strong> in y = mx + b (e.g. calling the intercept of y = -3x + 5 "−5"). This is the negatives work of <code>misconceptions.md §3</code> resurfacing in a new costume.</li>
+<li><strong>Zero vs. undefined slope</strong> confusion (horizontal is 0; vertical is undefined). Anchor with the ramp/wall picture.</li>
+<li><strong>Steepness vs. direction</strong> — reading the <em>sign</em> of the slope (which only sets uphill/downhill) as if it set steepness, so a line with slope −3 gets called "less steep" than slope +2. Steepness is the <em>magnitude</em> |slope|. See <code>misconceptions.md §8</code>.</li>
+</ul>
 <p><strong>Visuals:</strong> this unit is visual-heavy. Use <code>visuals.md</code> <strong>Template 2</strong> (coordinate plane + line) for every graph. The rules there are non-negotiable: <strong>COMPUTE the points</strong> (plug x-values into the equation, ideally with the code tool), emit the graph as an <strong>SVG artifact</strong> (raw SVG in chat does not render), <strong>label</strong> axes and key points (intercept, slope), and <strong>always pair the artifact with a small table of points</strong> in the chat so it helps even if the panel doesn't open. The coordinate-mapping rule for these graphs is <code>screenX = 110 + x*20</code>, <code>screenY = 110 - y*20</code> (note the minus — up on the page is larger y); machine-compute every (x,y)→(screenX,screenY) pair from this mapping rather than eyeballing it. <strong>Always plot a THIRD point as a checkpoint:</strong> if the three points aren't collinear, recheck the arithmetic before drawing — a wrong graph is worse than none — so the companion tables should carry three rows, not two.</p>
 <hr>
 <h2 id="lesson-51-the-coordinate-plane">Lesson 5.1: The coordinate plane</h2>
 <p><strong>Goal:</strong> Plot and name ordered pairs (x, y) and identify which of the four quadrants (or axis) a point lies in.
 <strong>Why it matters:</strong> Every graph in the rest of algebra lives here. A function's table of inputs/outputs becomes <em>points</em>, and a line is just infinitely many of them.
-<strong>New terms:</strong>
-- <a class="refcode" id="5.1.d1" href="#5.1.d1">#5.1.d1</a> <strong>Coordinate plane:</strong> a flat grid made by two number lines crossing at right angles.
-- <a class="refcode" id="5.1.d2" href="#5.1.d2">#5.1.d2</a> <strong>x-axis / y-axis:</strong> the horizontal and vertical number lines. They cross at the <strong>origin</strong>, (0,0).
-- <a class="refcode" id="5.1.d3" href="#5.1.d3">#5.1.d3</a> <strong>Ordered pair (x, y):</strong> an address for a point — <em>x first</em> (how far across, right is +), <em>then y</em> (how far up/down, up is +). Order matters: (3,2)≠(2,3).
-- <a class="refcode" id="5.1.d4" href="#5.1.d4">#5.1.d4</a> <strong>Quadrant:</strong> one of the four regions the axes cut the plane into, numbered <strong>I, II, III, IV</strong> counter-clockwise starting top-right.</p>
-<p><strong>Teaching arc (concrete → pictorial → symbolic):</strong>
-- <strong>Concrete:</strong> "It's a street map. The x-coordinate is how many blocks east/west; the y-coordinate is how many blocks north/south. You always say the east-west one first." Ask them to give <em>you</em> directions to a point before you give them any.
-- <strong>Pictorial:</strong> Offer the labeled-plane SVG artifact (Template 2 skeleton — axes only, then drop in the points). Show the four quadrants and the sign pattern. Have them predict the quadrant <em>before</em> plotting, from the signs alone.
-- <strong>Symbolic:</strong> Connect to the sign rule:</p>
+<strong>New terms:</strong></p>
+<ul>
+<li><a class="refcode" id="5.1.d1" href="#5.1.d1">#5.1.d1</a> <strong>Coordinate plane:</strong> a flat grid made by two number lines crossing at right angles.</li>
+<li><a class="refcode" id="5.1.d2" href="#5.1.d2">#5.1.d2</a> <strong>x-axis / y-axis:</strong> the horizontal and vertical number lines. They cross at the <strong>origin</strong>, (0,0).</li>
+<li><a class="refcode" id="5.1.d3" href="#5.1.d3">#5.1.d3</a> <strong>Ordered pair (x, y):</strong> an address for a point — <em>x first</em> (how far across, right is +), <em>then y</em> (how far up/down, up is +). Order matters: (3,2)≠(2,3).</li>
+<li><a class="refcode" id="5.1.d4" href="#5.1.d4">#5.1.d4</a> <strong>Quadrant:</strong> one of the four regions the axes cut the plane into, numbered <strong>I, II, III, IV</strong> counter-clockwise starting top-right.</li>
+</ul>
+<p><strong>Teaching arc (concrete → pictorial → symbolic):</strong></p>
+<ul>
+<li><strong>Concrete:</strong> "It's a street map. The x-coordinate is how many blocks east/west; the y-coordinate is how many blocks north/south. You always say the east-west one first." Ask them to give <em>you</em> directions to a point before you give them any.</li>
+<li><strong>Pictorial:</strong> Offer the labeled-plane SVG artifact (Template 2 skeleton — axes only, then drop in the points). Show the four quadrants and the sign pattern. Have them predict the quadrant <em>before</em> plotting, from the signs alone.</li>
+<li><strong>Symbolic:</strong> Connect to the sign rule:</li>
+</ul>
 <p>$$\text{I: }(+,+)\qquad \text{II: }(-,+)\qquad \text{III: }(-,-)\qquad \text{IV: }(+,-)$$</p>
 <p>A point with a 0 coordinate sits <em>on an axis</em>, not in a quadrant — flag this, it's a favorite trick.</p>
 <p><strong>Worked examples:</strong> Plot (3,2), (-1,4), (0,-3), (-2,-2) and name each quadrant.</p>
@@ -97,36 +105,50 @@
 </table>
 <p><strong>Watch for:</strong> <strong>Reversing the pair</strong> (the #1 error here) — plotting (-1,4) as left-4-up-1. Tell: their point lands in the wrong quadrant for the signs, or they hesitate over which number moves which way. Repair with a transfer, not a repeat: "Read me the address again — which number is <em>across</em>?" Also watch the <strong>axis-point trap</strong>: (0,-3) is <em>not</em> in a quadrant. (These are surface-level, but the negative-sign care of <code>misconceptions.md §3</code> applies to reading the signs.)</p>
 <p><strong>Visuals to offer:</strong> <code>visuals.md</code> <strong>Template 2</strong> (coordinate plane). Use the axes-only skeleton, then add a small <code>&lt;circle&gt;</code> + label per point. Computed, labeled, with the table above.</p>
-<p><strong>Check for understanding (transfer):</strong>
-1. <a class="refcode" id="5.1.c1" href="#5.1.c1">#5.1.c1</a> "Without plotting, which quadrant is (-7, -2) in, and how do the signs tell you?"
-2. <a class="refcode" id="5.1.c2" href="#5.1.c2">#5.1.c2</a> "I plotted a point in Quadrant IV. What can you say about the signs of its coordinates?"
-3. <a class="refcode" id="5.1.c3" href="#5.1.c3">#5.1.c3</a> "Where does (4, 0) live — and why isn't it in a quadrant?"</p>
+<p><strong>Check for understanding (transfer):</strong></p>
+<ol>
+<li><a class="refcode" id="5.1.c1" href="#5.1.c1">#5.1.c1</a> "Without plotting, which quadrant is (-7, -2) in, and how do the signs tell you?"</li>
+<li><a class="refcode" id="5.1.c2" href="#5.1.c2">#5.1.c2</a> "I plotted a point in Quadrant IV. What can you say about the signs of its coordinates?"</li>
+<li><a class="refcode" id="5.1.c3" href="#5.1.c3">#5.1.c3</a> "Where does (4, 0) live — and why isn't it in a quadrant?"</li>
+</ol>
 <p><strong>Practice problems:</strong>
-<em>Name the quadrant (or axis):</em>
-1. <a class="refcode" id="5.1.1" href="#5.1.1">#5.1.1</a> (5, 3)
-2. <a class="refcode" id="5.1.2" href="#5.1.2">#5.1.2</a> (-4, -1)
-3. <a class="refcode" id="5.1.3" href="#5.1.3">#5.1.3</a> (-2, 6)
-4. <a class="refcode" id="5.1.4" href="#5.1.4">#5.1.4</a> (3, -5)
-5. <a class="refcode" id="5.1.5" href="#5.1.5">#5.1.5</a> (8, -2)
-6. <a class="refcode" id="5.1.6" href="#5.1.6">#5.1.6</a> (-6, 1)
-7. <a class="refcode" id="5.1.7" href="#5.1.7">#5.1.7</a> (4, 0)
-8. <a class="refcode" id="5.1.8" href="#5.1.8">#5.1.8</a> (0, 7)
-9. <a class="refcode" id="5.1.9" href="#5.1.9">#5.1.9</a> (0, 0)
-<em>Plot &amp; locate:</em>
-10. <a class="refcode" id="5.1.10" href="#5.1.10">#5.1.10</a> Plot (-3, 1) and name its quadrant.</p>
-<p><strong>Answer key:</strong>
-1. Quadrant I · 2. Quadrant III · 3. Quadrant II · 4. Quadrant IV · 5. Quadrant IV · 6. Quadrant II · 7. on the x-axis (no quadrant) · 8. on the y-axis (no quadrant) · 9. the origin (no quadrant) · 10. left 3, up 1 → Quadrant II.</p>
+<em>Name the quadrant (or axis):</em></p>
+<ol>
+<li><a class="refcode" id="5.1.1" href="#5.1.1">#5.1.1</a> (5, 3)</li>
+<li><a class="refcode" id="5.1.2" href="#5.1.2">#5.1.2</a> (-4, -1)</li>
+<li><a class="refcode" id="5.1.3" href="#5.1.3">#5.1.3</a> (-2, 6)</li>
+<li><a class="refcode" id="5.1.4" href="#5.1.4">#5.1.4</a> (3, -5)</li>
+<li><a class="refcode" id="5.1.5" href="#5.1.5">#5.1.5</a> (8, -2)</li>
+<li><a class="refcode" id="5.1.6" href="#5.1.6">#5.1.6</a> (-6, 1)</li>
+<li><a class="refcode" id="5.1.7" href="#5.1.7">#5.1.7</a> (4, 0)</li>
+<li><a class="refcode" id="5.1.8" href="#5.1.8">#5.1.8</a> (0, 7)</li>
+<li>
+<p><a class="refcode" id="5.1.9" href="#5.1.9">#5.1.9</a> (0, 0)
+<em>Plot &amp; locate:</em></p>
+</li>
+<li>
+<p><a class="refcode" id="5.1.10" href="#5.1.10">#5.1.10</a> Plot (-3, 1) and name its quadrant.</p>
+</li>
+</ol>
+<p><strong>Answer key:</strong></p>
+<ol>
+<li>Quadrant I · 2. Quadrant III · 3. Quadrant II · 4. Quadrant IV · 5. Quadrant IV · 6. Quadrant II · 7. on the x-axis (no quadrant) · 8. on the y-axis (no quadrant) · 9. the origin (no quadrant) · 10. left 3, up 1 → Quadrant II.</li>
+</ol>
 <hr>
 <h2 id="lesson-52-graphing-linear-equations-from-a-table">Lesson 5.2: Graphing linear equations from a table</h2>
 <p><strong>Goal:</strong> Build a table of values from a linear equation, plot the points, connect them into a line, and test whether a given point lies <em>on</em> the line by substitution.
 <strong>Why it matters:</strong> This is the bridge from "equation" to "picture." It also teaches the meaning of a solution to a two-variable equation — every point on the line is a solution; everything off it is not.
-<strong>New terms:</strong>
-- <a class="refcode" id="5.2.d1" href="#5.2.d1">#5.2.d1</a> <strong>Table of values:</strong> a list of x inputs and their computed y outputs — exactly the input→output table from Unit 4.3, now plotted.
-- <a class="refcode" id="5.2.d2" href="#5.2.d2">#5.2.d2</a> <strong>"On the line":</strong> a point (a,b) is on the line when its coordinates make the equation true — i.e. substituting x=a gives y=b.</p>
-<p><strong>Teaching arc (concrete → pictorial → symbolic):</strong>
-- <strong>Concrete / function callback:</strong> "This equation is a function machine (<code>metaphors.md</code> → Functions). Feed it x-values, it returns y-values. y = 2x-1 <em>is</em> f(x) = 2x-1 — same machine, two names." Have them compute a couple of outputs.
-- <strong>Pictorial:</strong> Plot the computed points; they fall in a straight row → connect into a line. Emphasize the line is <em>all</em> such points, not just the four you plotted. Offer the SVG artifact.
-- <strong>Symbolic:</strong> Test membership by substitution: is (3,5) on y=2x-1? Compute 2(3)-1 = 5; it matches → yes. This is the substitute-and-check habit from <code>SKILL.md</code>, reused.</p>
+<strong>New terms:</strong></p>
+<ul>
+<li><a class="refcode" id="5.2.d1" href="#5.2.d1">#5.2.d1</a> <strong>Table of values:</strong> a list of x inputs and their computed y outputs — exactly the input→output table from Unit 4.3, now plotted.</li>
+<li><a class="refcode" id="5.2.d2" href="#5.2.d2">#5.2.d2</a> <strong>"On the line":</strong> a point (a,b) is on the line when its coordinates make the equation true — i.e. substituting x=a gives y=b.</li>
+</ul>
+<p><strong>Teaching arc (concrete → pictorial → symbolic):</strong></p>
+<ul>
+<li><strong>Concrete / function callback:</strong> "This equation is a function machine (<code>metaphors.md</code> → Functions). Feed it x-values, it returns y-values. y = 2x-1 <em>is</em> f(x) = 2x-1 — same machine, two names." Have them compute a couple of outputs.</li>
+<li><strong>Pictorial:</strong> Plot the computed points; they fall in a straight row → connect into a line. Emphasize the line is <em>all</em> such points, not just the four you plotted. Offer the SVG artifact.</li>
+<li><strong>Symbolic:</strong> Test membership by substitution: is (3,5) on y=2x-1? Compute 2(3)-1 = 5; it matches → yes. This is the substitute-and-check habit from <code>SKILL.md</code>, reused.</li>
+</ul>
 <p><strong>Worked examples:</strong> Graph y = 2x - 1; then test (3,5) and (3,4).</p>
 <p>Table (compute each y — verify with the code tool):</p>
 <table>
@@ -161,13 +183,17 @@
 </tbody>
 </table>
 <p>Points (-1,-3),(0,-1),(1,1),(2,3) lie in a straight line. Artifact (Template 2): pick two convenient endpoints (-2,-5)→(70,210) and (3,5)→(170,10); mark the y-intercept (0,-1)→(110,130); label the line y=2x-1.</p>
-<p>Membership tests:
-- (3,5): 2(3)-1 = 5. 5 = 5 → <strong>on the line</strong>.
-- (3,4): 2(3)-1 = 5, but the point says y=4. 5 ≠ 4 → <strong>not on the line</strong>.</p>
-<p><strong>Watch for:</strong>
-- <strong>Plotting from a sign-slipped table</strong> — e.g. getting y=-3 wrong because of the negative input. This is <code>misconceptions.md §3</code> again; have them verify the table with the code tool before plotting a wrong picture (<code>visuals.md</code>: a wrong graph is worse than none).
-- <strong>Thinking "close" counts</strong> for membership. It's exact: the substitution either matches or it doesn't.
-- <strong>Connecting points in the wrong order / freehand bowing</strong> — for a <em>linear</em> equation the points are collinear; if one is off the line, recheck its arithmetic, don't bend the line to fit.</p>
+<p>Membership tests:</p>
+<ul>
+<li>(3,5): 2(3)-1 = 5. 5 = 5 → <strong>on the line</strong>.</li>
+<li>(3,4): 2(3)-1 = 5, but the point says y=4. 5 ≠ 4 → <strong>not on the line</strong>.</li>
+</ul>
+<p><strong>Watch for:</strong></p>
+<ul>
+<li><strong>Plotting from a sign-slipped table</strong> — e.g. getting y=-3 wrong because of the negative input. This is <code>misconceptions.md §3</code> again; have them verify the table with the code tool before plotting a wrong picture (<code>visuals.md</code>: a wrong graph is worse than none).</li>
+<li><strong>Thinking "close" counts</strong> for membership. It's exact: the substitution either matches or it doesn't.</li>
+<li><strong>Connecting points in the wrong order / freehand bowing</strong> — for a <em>linear</em> equation the points are collinear; if one is off the line, recheck its arithmetic, don't bend the line to fit.</li>
+</ul>
 <p><strong>Visuals to offer:</strong> <a class="refcode" id="5.2.f1" href="#5.2.f1">#5.2.f1</a> <code>visuals.md</code> <strong>Template 2</strong> — line from two computed endpoints, intercept dotted and labeled, companion table always included.</p>
 <figure class="fig" id="fig-5.2.f1"><svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
   <line x1="18.0" y1="120.0" x2="222.0" y2="120.0" stroke="#888"/>
@@ -182,35 +208,53 @@
   <text x="156.06" y="83.94" font-size="10" fill="#2980b9">y = 2x - 1</text>
 </svg><figcaption>Figure 5.2.f1</figcaption></figure>
 
-<p><strong>Check for understanding (transfer):</strong>
-1. <a class="refcode" id="5.2.c1" href="#5.2.c1">#5.2.c1</a> "Without graphing, is (4, 7) on y = 2x - 1? Show me how you know."
-2. <a class="refcode" id="5.2.c2" href="#5.2.c2">#5.2.c2</a> "Two of these are on y = 3x + 2: (1, 5), (2, 8), (0, 3). Which one isn't, and why?"
-3. <a class="refcode" id="5.2.c3" href="#5.2.c3">#5.2.c3</a> "If (a, b) is on the line and you change only b, is it still on the line? What does that mean about the point?"</p>
+<p><strong>Check for understanding (transfer):</strong></p>
+<ol>
+<li><a class="refcode" id="5.2.c1" href="#5.2.c1">#5.2.c1</a> "Without graphing, is (4, 7) on y = 2x - 1? Show me how you know."</li>
+<li><a class="refcode" id="5.2.c2" href="#5.2.c2">#5.2.c2</a> "Two of these are on y = 3x + 2: (1, 5), (2, 8), (0, 3). Which one isn't, and why?"</li>
+<li><a class="refcode" id="5.2.c3" href="#5.2.c3">#5.2.c3</a> "If (a, b) is on the line and you change only b, is it still on the line? What does that mean about the point?"</li>
+</ol>
 <p><strong>Practice problems:</strong>
-<em>Build the table for y = 3x + 2 (problems 1–4: find y for each x):</em>
-1. <a class="refcode" id="5.2.1" href="#5.2.1">#5.2.1</a> x = -1
-2. <a class="refcode" id="5.2.2" href="#5.2.2">#5.2.2</a> x = 0
-3. <a class="refcode" id="5.2.3" href="#5.2.3">#5.2.3</a> x = 1
-4. <a class="refcode" id="5.2.4" href="#5.2.4">#5.2.4</a> x = 2
-<em>Build the table for y = -x + 4:</em>
-5. <a class="refcode" id="5.2.5" href="#5.2.5">#5.2.5</a> x = 1
-6. <a class="refcode" id="5.2.6" href="#5.2.6">#5.2.6</a> x = 2
-<em>Test membership:</em>
-7. <a class="refcode" id="5.2.7" href="#5.2.7">#5.2.7</a> Is (2, 8) on y = 3x + 2?
-8. <a class="refcode" id="5.2.8" href="#5.2.8">#5.2.8</a> Is (1, 4) on y = 3x + 2?</p>
-<p><strong>Answer key:</strong>
-1. 3(-1)+2 = -1 · 2. 3(0)+2 = 2 · 3. 3(1)+2 = 5 · 4. 3(2)+2 = 8 · 5. -(1)+4 = 3 · 6. -(2)+4 = 2 · 7. 3(2)+2 = 8; 8=8 → <strong>yes, on the line</strong> · 8. 3(1)+2 = 5≠4 → <strong>no, not on the line</strong>.</p>
+<em>Build the table for y = 3x + 2 (problems 1–4: find y for each x):</em></p>
+<ol>
+<li><a class="refcode" id="5.2.1" href="#5.2.1">#5.2.1</a> x = -1</li>
+<li><a class="refcode" id="5.2.2" href="#5.2.2">#5.2.2</a> x = 0</li>
+<li><a class="refcode" id="5.2.3" href="#5.2.3">#5.2.3</a> x = 1</li>
+<li>
+<p><a class="refcode" id="5.2.4" href="#5.2.4">#5.2.4</a> x = 2
+<em>Build the table for y = -x + 4:</em></p>
+</li>
+<li>
+<p><a class="refcode" id="5.2.5" href="#5.2.5">#5.2.5</a> x = 1</p>
+</li>
+<li>
+<p><a class="refcode" id="5.2.6" href="#5.2.6">#5.2.6</a> x = 2
+<em>Test membership:</em></p>
+</li>
+<li>
+<p><a class="refcode" id="5.2.7" href="#5.2.7">#5.2.7</a> Is (2, 8) on y = 3x + 2?</p>
+</li>
+<li><a class="refcode" id="5.2.8" href="#5.2.8">#5.2.8</a> Is (1, 4) on y = 3x + 2?</li>
+</ol>
+<p><strong>Answer key:</strong></p>
+<ol>
+<li>3(-1)+2 = -1 · 2. 3(0)+2 = 2 · 3. 3(1)+2 = 5 · 4. 3(2)+2 = 8 · 5. -(1)+4 = 3 · 6. -(2)+4 = 2 · 7. 3(2)+2 = 8; 8=8 → <strong>yes, on the line</strong> · 8. 3(1)+2 = 5≠4 → <strong>no, not on the line</strong>.</li>
+</ol>
 <hr>
 <h2 id="lesson-53-slope">Lesson 5.3: Slope</h2>
 <p><strong>Goal:</strong> Compute slope as a rate of change, m = rise/run = (y₂ - y₁)/(x₂ - x₁), and recognize the four cases: positive, negative, zero (horizontal), and undefined (vertical).
 <strong>Why it matters:</strong> Slope is the steepness <em>and direction</em> of a line, and it's the single number that drives everything in 5.4–5.5. It's also the direct graphical face of the <strong>unit rate</strong> from Unit 3.
-<strong>New terms:</strong>
-- <a class="refcode" id="5.3.d1" href="#5.3.d1">#5.3.d1</a> <strong>Slope (m):</strong> how much y changes for each 1-unit increase in x — the line's rate of change.
-- <a class="refcode" id="5.3.d2" href="#5.3.d2">#5.3.d2</a> <strong>Rise:</strong> vertical change (y₂ - y₁). <strong>Run:</strong> horizontal change (x₂ - x₁).</p>
-<p><strong>Teaching arc (concrete → pictorial → symbolic):</strong>
-- <strong>Concrete / Unit 3 callback:</strong> "Slope is a rate. In Unit 3, '60 miles per <strong>1</strong> hour' was a unit rate; on a distance-vs-time graph that <em>is</em> the slope (<code>metaphors.md</code> → Slope B, speed). Slope is just rise per 1 run." Then the <strong>stairs/ramp</strong> picture (<code>metaphors.md</code> → Slope A): steep stairs = big slope, gentle ramp = small, downhill = negative, flat landing = 0, a wall = undefined (you can't go forward at all).
-- <strong>Pictorial:</strong> On a graph, draw the right triangle between two points: go <em>up</em> the rise, <em>across</em> the run. Offer an artifact if it helps them see the triangle.
-- <strong>Symbolic:</strong> $$m = \frac{y_2 - y_1}{x_2 - x_1}$$ Stress: <strong>subtract the y's and the x's in the <em>same order</em></strong> (same point first in both). Verify computations with the code tool.</p>
+<strong>New terms:</strong></p>
+<ul>
+<li><a class="refcode" id="5.3.d1" href="#5.3.d1">#5.3.d1</a> <strong>Slope (m):</strong> how much y changes for each 1-unit increase in x — the line's rate of change.</li>
+<li><a class="refcode" id="5.3.d2" href="#5.3.d2">#5.3.d2</a> <strong>Rise:</strong> vertical change (y₂ - y₁). <strong>Run:</strong> horizontal change (x₂ - x₁).</li>
+</ul>
+<p><strong>Teaching arc (concrete → pictorial → symbolic):</strong></p>
+<ul>
+<li><strong>Concrete / Unit 3 callback:</strong> "Slope is a rate. In Unit 3, '60 miles per <strong>1</strong> hour' was a unit rate; on a distance-vs-time graph that <em>is</em> the slope (<code>metaphors.md</code> → Slope B, speed). Slope is just rise per 1 run." Then the <strong>stairs/ramp</strong> picture (<code>metaphors.md</code> → Slope A): steep stairs = big slope, gentle ramp = small, downhill = negative, flat landing = 0, a wall = undefined (you can't go forward at all).</li>
+<li><strong>Pictorial:</strong> On a graph, draw the right triangle between two points: go <em>up</em> the rise, <em>across</em> the run. Offer an artifact if it helps them see the triangle.</li>
+<li><strong>Symbolic:</strong> $$m = \frac{y_2 - y_1}{x_2 - x_1}$$ Stress: <strong>subtract the y's and the x's in the <em>same order</em></strong> (same point first in both). Verify computations with the code tool.</li>
+</ul>
 <p><strong>The defining property — constant rate of change.</strong> What makes a linear function <em>linear</em> is that its rate of change is <strong>constant</strong>: pick <em>any</em> two points on the line and the slope comes out the same. That's the whole reason the points fall in a straight line, and the reason the slope formula gives one well-defined m no matter which two points you feed it. Said in steps: <strong>equal steps in x always produce equal steps in y.</strong> For y = 2x - 1, stepping x by 1 (x = 0,1,2,3 → y = -1,1,3,5) bumps y by 2 every time — that fixed +2 per +1 <em>is</em> the slope. (This is the OpenStax / LibreTexts "constant rate of change" definition of a linear function; it's also what separates a line from a curve, where the rate keeps changing.) Use this to justify slope rather than presenting it as a recipe — and call back to 5.2: this constant rate is <em>why</em> the table's points were collinear.</p>
 <p><strong>Worked examples:</strong></p>
 <ol>
@@ -245,11 +289,13 @@ The slope is <strong>15 dollars per hour</strong> — the cost climbs \$15 for e
    Same answer, as it must be — rise/run and (y₂ - y₁)/(x₂ - x₁) are the <em>same</em> subtraction, just one read off a picture and one off the coordinates. <strong>When is each handier?</strong> Rise/run is quickest when you already have a graph and can <em>count</em> boxes; the formula is safer when the points are given as numbers (especially negatives or fractions), where counting on a grid is error-prone. Teach both and let the student pick the tool that fits what they're handed.</p>
 </li>
 </ol>
-<p><strong>Watch for:</strong>
-- <strong>Rise/run flipped</strong> (computing (x₂-x₁)/(y₂-y₁)). Tell: their slope is the reciprocal of the right answer. Cue: "Which is the <em>rise</em> — the up-down change or the across change?"
-- <strong>Inconsistent subtraction order</strong> — e.g. y₂ - y₁ on top but x₁ - x₂ on bottom, flipping the sign. This collides with <code>misconceptions.md §3</code> (sign errors in the differences). Have them label point 1 and point 2 and subtract the same way both times; verify with code.
-- <strong>Zero ↔ undefined swap.</strong> Tell: they call a vertical line "slope 0" or a horizontal line "undefined." Repair with the wall (can't move forward → undefined) vs. flat landing (no rise → 0).
-- <strong>The ambiguous phrase "no slope."</strong> Avoid it for vertical lines — some students hear "no slope" as "slope 0." Say <strong>"undefined slope"</strong> for vertical and <strong>"zero slope"</strong> for horizontal, so the two never blur.</p>
+<p><strong>Watch for:</strong></p>
+<ul>
+<li><strong>Rise/run flipped</strong> (computing (x₂-x₁)/(y₂-y₁)). Tell: their slope is the reciprocal of the right answer. Cue: "Which is the <em>rise</em> — the up-down change or the across change?"</li>
+<li><strong>Inconsistent subtraction order</strong> — e.g. y₂ - y₁ on top but x₁ - x₂ on bottom, flipping the sign. This collides with <code>misconceptions.md §3</code> (sign errors in the differences). Have them label point 1 and point 2 and subtract the same way both times; verify with code.</li>
+<li><strong>Zero ↔ undefined swap.</strong> Tell: they call a vertical line "slope 0" or a horizontal line "undefined." Repair with the wall (can't move forward → undefined) vs. flat landing (no rise → 0).</li>
+<li><strong>The ambiguous phrase "no slope."</strong> Avoid it for vertical lines — some students hear "no slope" as "slope 0." Say <strong>"undefined slope"</strong> for vertical and <strong>"zero slope"</strong> for horizontal, so the two never blur.</li>
+</ul>
 <p><strong>Visuals to offer:</strong> <a class="refcode" id="5.3.f1" href="#5.3.f1">#5.3.f1</a> <code>visuals.md</code> <strong>Template 2</strong> with the rise/run right triangle drawn between two computed points; label rise, run, and m. Companion table of the two points always included.</p>
 <figure class="fig" id="fig-5.3.f1"><svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
   <line x1="18.0" y1="171.0" x2="222.0" y2="171.0" stroke="#888"/>
@@ -264,42 +310,56 @@ The slope is <strong>15 dollars per hour</strong> — the cost climbs \$15 for e
   <text x="144.4" y="100.7" font-size="10" fill="#2980b9">slope 2/3</text>
 </svg><figcaption>Figure 5.3.f1</figcaption></figure>
 
-<p><strong>Check for understanding (transfer):</strong>
-1. <a class="refcode" id="5.3.c1" href="#5.3.c1">#5.3.c1</a> "A line goes through (2,3) and (6,11). Find the slope, and tell me in words what it says about how y changes."
-2. <a class="refcode" id="5.3.c2" href="#5.3.c2">#5.3.c2</a> "One line has slope 5, another has slope 1/2. Which is steeper, and how do you know?"
-3. <a class="refcode" id="5.3.c3" href="#5.3.c3">#5.3.c3</a> "What's the slope of a perfectly horizontal line? A perfectly vertical one? Why is one a number and the other 'undefined'?"
-4. <a class="refcode" id="5.3.c4" href="#5.3.c4">#5.3.c4</a> "A savings graph passes through (0, 50) and (4, 90), where x is weeks and y is dollars. What is the slope <em>with its units</em>, and what does it tell you about the saving? What does the 50 mean?"
-5. <a class="refcode" id="5.3.c5" href="#5.3.c5">#5.3.c5</a> <strong>Spot the error.</strong> A student says: "Line A has slope -3 and line B has slope 2. Since -3 is less than 2, line A is less steep than line B." What did they get wrong, and which line is actually steeper?</p>
-<p><strong>Practice problems (find the slope through the two points):</strong>
-1. <a class="refcode" id="5.3.1" href="#5.3.1">#5.3.1</a> (1,2) and (3,8)
-2. <a class="refcode" id="5.3.2" href="#5.3.2">#5.3.2</a> (0,5) and (2,1)
-3. <a class="refcode" id="5.3.3" href="#5.3.3">#5.3.3</a> (2,3) and (6,11)
-4. <a class="refcode" id="5.3.4" href="#5.3.4">#5.3.4</a> (-1,4) and (2,-2)
-5. <a class="refcode" id="5.3.5" href="#5.3.5">#5.3.5</a> (0,0) and (4,8)
-6. <a class="refcode" id="5.3.6" href="#5.3.6">#5.3.6</a> (1,1) and (5,3)
-7. <a class="refcode" id="5.3.7" href="#5.3.7">#5.3.7</a> (-2,-3) and (2,5)
-8. <a class="refcode" id="5.3.8" href="#5.3.8">#5.3.8</a> (3,7) and (3,2)
-9. <a class="refcode" id="5.3.9" href="#5.3.9">#5.3.9</a> (-1,2) and (4,2)
-10. <a class="refcode" id="5.3.10" href="#5.3.10">#5.3.10</a> (2,5) and (6,5)
-11. <a class="refcode" id="5.3.11" href="#5.3.11">#5.3.11</a> (1,6) and (4,0)
-12. <a class="refcode" id="5.3.12" href="#5.3.12">#5.3.12</a> (1,-1) and (3,-7)
-<em>In context (give the slope with its meaning):</em>
-13. <a class="refcode" id="5.3.13" href="#5.3.13">#5.3.13</a> A distance(miles)-vs-time(hours) graph passes through (1, 30) and (3, 150). Find the slope and state what it means in words.
-14. <a class="refcode" id="5.3.14" href="#5.3.14">#5.3.14</a> A candle's height(cm)-vs-time(min) graph passes through (0, 20) and (10, 15). Find the slope and say what it means (mind the sign).</p>
-<p><strong>Answer key:</strong>
-1. (8-2)/(3-1)=3 · 2. (1-5)/(2-0)=-2 · 3. (11-3)/(6-2)=2 · 4. (-2-4)/(2-(-1))=-6/3=-2 · 5. (8-0)/(4-0)=2 · 6. (3-1)/(5-1)=1/2 · 7. (5-(-3))/(2-(-2))=8/4=2 · 8. run =3-3=0 → <strong>undefined</strong> (vertical) · 9. (2-2)/(4-(-1))=0 (horizontal) · 10. (5-5)/(6-2)=0 (horizontal) · 11. (0-6)/(4-1)=-6/3=-2 · 12. (-7-(-1))/(3-1)=-6/2=-3 · 13. (150-30)/(3-1)=120/2=<strong>60 miles per hour</strong> — the distance grows 60 miles each hour (a speed of 60 mph) · 14. (15-20)/(10-0)=-5/10=<strong>-1/2 cm per minute</strong> — the candle <em>shrinks</em> half a centimeter each minute (negative = decreasing).</p>
+<p><strong>Check for understanding (transfer):</strong></p>
+<ol>
+<li><a class="refcode" id="5.3.c1" href="#5.3.c1">#5.3.c1</a> "A line goes through (2,3) and (6,11). Find the slope, and tell me in words what it says about how y changes."</li>
+<li><a class="refcode" id="5.3.c2" href="#5.3.c2">#5.3.c2</a> "One line has slope 5, another has slope 1/2. Which is steeper, and how do you know?"</li>
+<li><a class="refcode" id="5.3.c3" href="#5.3.c3">#5.3.c3</a> "What's the slope of a perfectly horizontal line? A perfectly vertical one? Why is one a number and the other 'undefined'?"</li>
+<li><a class="refcode" id="5.3.c4" href="#5.3.c4">#5.3.c4</a> "A savings graph passes through (0, 50) and (4, 90), where x is weeks and y is dollars. What is the slope <em>with its units</em>, and what does it tell you about the saving? What does the 50 mean?"</li>
+<li><a class="refcode" id="5.3.c5" href="#5.3.c5">#5.3.c5</a> <strong>Spot the error.</strong> A student says: "Line A has slope -3 and line B has slope 2. Since -3 is less than 2, line A is less steep than line B." What did they get wrong, and which line is actually steeper?</li>
+</ol>
+<p><strong>Practice problems (find the slope through the two points):</strong></p>
+<ol>
+<li><a class="refcode" id="5.3.1" href="#5.3.1">#5.3.1</a> (1,2) and (3,8)</li>
+<li><a class="refcode" id="5.3.2" href="#5.3.2">#5.3.2</a> (0,5) and (2,1)</li>
+<li><a class="refcode" id="5.3.3" href="#5.3.3">#5.3.3</a> (2,3) and (6,11)</li>
+<li><a class="refcode" id="5.3.4" href="#5.3.4">#5.3.4</a> (-1,4) and (2,-2)</li>
+<li><a class="refcode" id="5.3.5" href="#5.3.5">#5.3.5</a> (0,0) and (4,8)</li>
+<li><a class="refcode" id="5.3.6" href="#5.3.6">#5.3.6</a> (1,1) and (5,3)</li>
+<li><a class="refcode" id="5.3.7" href="#5.3.7">#5.3.7</a> (-2,-3) and (2,5)</li>
+<li><a class="refcode" id="5.3.8" href="#5.3.8">#5.3.8</a> (3,7) and (3,2)</li>
+<li><a class="refcode" id="5.3.9" href="#5.3.9">#5.3.9</a> (-1,2) and (4,2)</li>
+<li><a class="refcode" id="5.3.10" href="#5.3.10">#5.3.10</a> (2,5) and (6,5)</li>
+<li><a class="refcode" id="5.3.11" href="#5.3.11">#5.3.11</a> (1,6) and (4,0)</li>
+<li>
+<p><a class="refcode" id="5.3.12" href="#5.3.12">#5.3.12</a> (1,-1) and (3,-7)
+<em>In context (give the slope with its meaning):</em></p>
+</li>
+<li>
+<p><a class="refcode" id="5.3.13" href="#5.3.13">#5.3.13</a> A distance(miles)-vs-time(hours) graph passes through (1, 30) and (3, 150). Find the slope and state what it means in words.</p>
+</li>
+<li><a class="refcode" id="5.3.14" href="#5.3.14">#5.3.14</a> A candle's height(cm)-vs-time(min) graph passes through (0, 20) and (10, 15). Find the slope and say what it means (mind the sign).</li>
+</ol>
+<p><strong>Answer key:</strong></p>
+<ol>
+<li>(8-2)/(3-1)=3 · 2. (1-5)/(2-0)=-2 · 3. (11-3)/(6-2)=2 · 4. (-2-4)/(2-(-1))=-6/3=-2 · 5. (8-0)/(4-0)=2 · 6. (3-1)/(5-1)=1/2 · 7. (5-(-3))/(2-(-2))=8/4=2 · 8. run =3-3=0 → <strong>undefined</strong> (vertical) · 9. (2-2)/(4-(-1))=0 (horizontal) · 10. (5-5)/(6-2)=0 (horizontal) · 11. (0-6)/(4-1)=-6/3=-2 · 12. (-7-(-1))/(3-1)=-6/2=-3 · 13. (150-30)/(3-1)=120/2=<strong>60 miles per hour</strong> — the distance grows 60 miles each hour (a speed of 60 mph) · 14. (15-20)/(10-0)=-5/10=<strong>-1/2 cm per minute</strong> — the candle <em>shrinks</em> half a centimeter each minute (negative = decreasing).</li>
+</ol>
 <hr>
 <h2 id="lesson-54-slope-intercept-form-y-mx-b">Lesson 5.4: Slope-intercept form y = mx + b</h2>
 <p><strong>Goal:</strong> Read slope m and y-intercept (0,b) directly from y = mx + b (and the function form f(x) = mx + b), and graph a line fast by plotting b then using rise/run.
 <strong>Why it matters:</strong> This is the workhorse form. Once a line is in it, you can graph it in seconds and read its behavior at a glance — no table needed.
-<strong>New terms:</strong>
-- <a class="refcode" id="5.4.d1" href="#5.4.d1">#5.4.d1</a> <strong>Slope-intercept form:</strong> y = mx + b, where m is the slope and b is the <strong>y-intercept</strong> — the y-value where the line crosses the y-axis, at the point (0, b).
-- <a class="refcode" id="5.4.d2" href="#5.4.d2">#5.4.d2</a> <strong>Function form:</strong> f(x) = mx + b — the same line, named as a function. "b is the starting output at x=0; m is how fast the output climbs."
-- <a class="refcode" id="5.4.d3" href="#5.4.d3">#5.4.d3</a> <strong>Standard form (recognition):</strong> the same line can also be written Ax + By = C (A, B, C integers) — e.g. 2x + y = 5. It hides the slope and intercept, so to read them you solve for y first. Full treatment, plus graphing from intercepts, is Lesson 5.6.</p>
-<p><strong>Teaching arc (concrete → pictorial → symbolic):</strong>
-- <strong>Concrete:</strong> "b is your <em>starting point</em> on the y-axis; m is your <em>rate</em> of climbing from there — your Unit-3 rate again." Tie f(0) = b: feeding 0 to the machine returns the intercept. <strong>In a real context each letter has a concrete meaning:</strong> b is the <strong>starting value</strong> (the output before anything happens, at x = 0) and m is the <strong>rate</strong> (how much the output changes per 1 step of input). For a phone bill c = 5t + 30, the 30 is a \$30 base charge and the 5 is \$5 per GB — read m and b as "rate" and "starting amount," not just numbers.
-- <strong>Pictorial:</strong> Graph by hand: plot (0,b), then from there step the slope — for m = 2 = 2/1, go up 2, right 1, mark the next point, connect. Offer the artifact.
-- <strong>Symbolic:</strong> Read m and b straight off. Caution: the sign travels with the number — in y = -3x + 5, m = -3 (not 3), b = 5.</p>
+<strong>New terms:</strong></p>
+<ul>
+<li><a class="refcode" id="5.4.d1" href="#5.4.d1">#5.4.d1</a> <strong>Slope-intercept form:</strong> y = mx + b, where m is the slope and b is the <strong>y-intercept</strong> — the y-value where the line crosses the y-axis, at the point (0, b).</li>
+<li><a class="refcode" id="5.4.d2" href="#5.4.d2">#5.4.d2</a> <strong>Function form:</strong> f(x) = mx + b — the same line, named as a function. "b is the starting output at x=0; m is how fast the output climbs."</li>
+<li><a class="refcode" id="5.4.d3" href="#5.4.d3">#5.4.d3</a> <strong>Standard form (recognition):</strong> the same line can also be written Ax + By = C (A, B, C integers) — e.g. 2x + y = 5. It hides the slope and intercept, so to read them you solve for y first. Full treatment, plus graphing from intercepts, is Lesson 5.6.</li>
+</ul>
+<p><strong>Teaching arc (concrete → pictorial → symbolic):</strong></p>
+<ul>
+<li><strong>Concrete:</strong> "b is your <em>starting point</em> on the y-axis; m is your <em>rate</em> of climbing from there — your Unit-3 rate again." Tie f(0) = b: feeding 0 to the machine returns the intercept. <strong>In a real context each letter has a concrete meaning:</strong> b is the <strong>starting value</strong> (the output before anything happens, at x = 0) and m is the <strong>rate</strong> (how much the output changes per 1 step of input). For a phone bill c = 5t + 30, the 30 is a \$30 base charge and the 5 is \$5 per GB — read m and b as "rate" and "starting amount," not just numbers.</li>
+<li><strong>Pictorial:</strong> Graph by hand: plot (0,b), then from there step the slope — for m = 2 = 2/1, go up 2, right 1, mark the next point, connect. Offer the artifact.</li>
+<li><strong>Symbolic:</strong> Read m and b straight off. Caution: the sign travels with the number — in y = -3x + 5, m = -3 (not 3), b = 5.</li>
+</ul>
 <p><strong>Worked examples:</strong></p>
 <ol>
 <li>
@@ -370,11 +430,13 @@ The slope is <strong>15 dollars per hour</strong> — the cost climbs \$15 for e
    - slope m = 8: \$8 is added each week — the saving <strong>rate</strong>, \$8 per week.
    So s = 8w + 50 reads "start with \$50, add \$8 a week." Evaluate to predict: s(5) = 8(5) + 50 = \$90 after 5 weeks. Naming b as the starting value and m as the rate is the same move you'll use all through Unit 6.</li>
 </ol>
-<p><strong>Watch for:</strong>
-- <strong>Dropping the sign of m or b</strong> (calling y=-3x+5's slope "3" or intercept "−5"). <code>misconceptions.md §3</code>. Cue: "Read the sign that's <em>attached</em> to the number."
-- <strong>Swapping m and b</strong> — reading y = 2x + 1 as "slope 1, intercept 2." Anchor: m rides <em>with the x</em>; b stands alone.
-- <strong>Forgetting the intercept is a <em>point</em> (0,b)</strong>, not just a number — matters when they plot.
-- <strong>Form not solved for y yet:</strong> if it's 2x + y = 5, they must isolate y first (y = -2x + 5) — callback to Unit 2 solving.</p>
+<p><strong>Watch for:</strong></p>
+<ul>
+<li><strong>Dropping the sign of m or b</strong> (calling y=-3x+5's slope "3" or intercept "−5"). <code>misconceptions.md §3</code>. Cue: "Read the sign that's <em>attached</em> to the number."</li>
+<li><strong>Swapping m and b</strong> — reading y = 2x + 1 as "slope 1, intercept 2." Anchor: m rides <em>with the x</em>; b stands alone.</li>
+<li><strong>Forgetting the intercept is a <em>point</em> (0,b)</strong>, not just a number — matters when they plot.</li>
+<li><strong>Form not solved for y yet:</strong> if it's 2x + y = 5, they must isolate y first (y = -2x + 5) — callback to Unit 2 solving.</li>
+</ul>
 <p><strong>Visuals to offer:</strong> <a class="refcode" id="5.4.f1" href="#5.4.f1">#5.4.f1</a> <code>visuals.md</code> <strong>Template 2</strong> — plot the intercept, draw the line through a second computed point, label slope and intercept, table alongside.</p>
 <figure class="fig" id="fig-5.4.f1"><svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
   <line x1="18.0" y1="120.0" x2="222.0" y2="120.0" stroke="#888"/>
@@ -387,42 +449,64 @@ The slope is <strong>15 dollars per hour</strong> — the cost climbs \$15 for e
   <text x="144.4" y="80.3" font-size="10" fill="#2980b9">y = 3x - 2</text>
 </svg><figcaption>Figure 5.4.f1</figcaption></figure>
 
-<p><strong>Check for understanding (transfer):</strong>
-1. <a class="refcode" id="5.4.c1" href="#5.4.c1">#5.4.c1</a> "In y = -4x + 7, what's the slope and where does the line cross the y-axis? Which way does it tilt?"
-2. <a class="refcode" id="5.4.c2" href="#5.4.c2">#5.4.c2</a> "Write the equation of the line with slope 1/3 and y-intercept (0, -5)."
-3. <a class="refcode" id="5.4.c3" href="#5.4.c3">#5.4.c3</a> "For f(x) = (1/2)x - 2, what is f(0), and why is that the y-intercept?"
-4. <a class="refcode" id="5.4.c4" href="#5.4.c4">#5.4.c4</a> "A pool drains by d = -20t + 300 (gallons after t minutes). What do the -20 and the 300 <em>mean</em> about the pool? Is it filling or draining, and how fast?"</p>
+<p><strong>Check for understanding (transfer):</strong></p>
+<ol>
+<li><a class="refcode" id="5.4.c1" href="#5.4.c1">#5.4.c1</a> "In y = -4x + 7, what's the slope and where does the line cross the y-axis? Which way does it tilt?"</li>
+<li><a class="refcode" id="5.4.c2" href="#5.4.c2">#5.4.c2</a> "Write the equation of the line with slope 1/3 and y-intercept (0, -5)."</li>
+<li><a class="refcode" id="5.4.c3" href="#5.4.c3">#5.4.c3</a> "For f(x) = (1/2)x - 2, what is f(0), and why is that the y-intercept?"</li>
+<li><a class="refcode" id="5.4.c4" href="#5.4.c4">#5.4.c4</a> "A pool drains by d = -20t + 300 (gallons after t minutes). What do the -20 and the 300 <em>mean</em> about the pool? Is it filling or draining, and how fast?"</li>
+</ol>
 <p><strong>Practice problems:</strong>
-<em>Identify slope and y-intercept:</em>
-1. <a class="refcode" id="5.4.1" href="#5.4.1">#5.4.1</a> y = 4x - 7
-2. <a class="refcode" id="5.4.2" href="#5.4.2">#5.4.2</a> y = -x + 6
-3. <a class="refcode" id="5.4.3" href="#5.4.3">#5.4.3</a> f(x) = (2/3)x + 1
-4. <a class="refcode" id="5.4.4" href="#5.4.4">#5.4.4</a> y = 5x
-<em>Write the equation given m and b:</em>
-5. <a class="refcode" id="5.4.5" href="#5.4.5">#5.4.5</a> m = 3, b = -4
-6. <a class="refcode" id="5.4.6" href="#5.4.6">#5.4.6</a> m = -2, b = 1
-<em>Find a point on the line (evaluate):</em>
-7. <a class="refcode" id="5.4.7" href="#5.4.7">#5.4.7</a> For y = 2x + 1, find y when x = 3.
-8. <a class="refcode" id="5.4.8" href="#5.4.8">#5.4.8</a> For y = -3x + 5, find y when x = 2.
-9. <a class="refcode" id="5.4.9" href="#5.4.9">#5.4.9</a> For f(x) = (1/2)x - 2, find f(4).
-10. <a class="refcode" id="5.4.10" href="#5.4.10">#5.4.10</a> For f(x) = (1/2)x - 2, find f(-2).
-<em>Interpret in context (state what m and b mean):</em>
-11. <a class="refcode" id="5.4.11" href="#5.4.11">#5.4.11</a> A gym membership costs c = 25m + 40 dollars after m months. What does the 40 mean, and what does the 25 mean?
-12. <a class="refcode" id="5.4.12" href="#5.4.12">#5.4.12</a> A tank holds w = 8h + 5 liters after h hours of filling. State the starting amount and the rate, then find the amount after 6 hours.</p>
-<p><strong>Answer key:</strong>
-1. slope 4, y-intercept (0,-7) · 2. slope -1, y-intercept (0,6) · 3. slope 2/3, y-intercept (0,1) · 4. slope 5, y-intercept (0,0) · 5. y = 3x - 4 · 6. y = -2x + 1 · 7. 2(3)+1 = 7 · 8. -3(2)+5 = -1 · 9. (1/2)(4)-2 = 0 · 10. (1/2)(-2)-2 = -3 · 11. the 40 is a \$40 starting/joining fee (cost at 0 months); the 25 is the rate, \$25 per month · 12. starting amount 5 liters (at h = 0), rate 8 liters per hour; after 6 hours w = 8(6) + 5 = 53 liters.</p>
+<em>Identify slope and y-intercept:</em></p>
+<ol>
+<li><a class="refcode" id="5.4.1" href="#5.4.1">#5.4.1</a> y = 4x - 7</li>
+<li><a class="refcode" id="5.4.2" href="#5.4.2">#5.4.2</a> y = -x + 6</li>
+<li><a class="refcode" id="5.4.3" href="#5.4.3">#5.4.3</a> f(x) = (2/3)x + 1</li>
+<li>
+<p><a class="refcode" id="5.4.4" href="#5.4.4">#5.4.4</a> y = 5x
+<em>Write the equation given m and b:</em></p>
+</li>
+<li>
+<p><a class="refcode" id="5.4.5" href="#5.4.5">#5.4.5</a> m = 3, b = -4</p>
+</li>
+<li>
+<p><a class="refcode" id="5.4.6" href="#5.4.6">#5.4.6</a> m = -2, b = 1
+<em>Find a point on the line (evaluate):</em></p>
+</li>
+<li>
+<p><a class="refcode" id="5.4.7" href="#5.4.7">#5.4.7</a> For y = 2x + 1, find y when x = 3.</p>
+</li>
+<li><a class="refcode" id="5.4.8" href="#5.4.8">#5.4.8</a> For y = -3x + 5, find y when x = 2.</li>
+<li><a class="refcode" id="5.4.9" href="#5.4.9">#5.4.9</a> For f(x) = (1/2)x - 2, find f(4).</li>
+<li>
+<p><a class="refcode" id="5.4.10" href="#5.4.10">#5.4.10</a> For f(x) = (1/2)x - 2, find f(-2).
+<em>Interpret in context (state what m and b mean):</em></p>
+</li>
+<li>
+<p><a class="refcode" id="5.4.11" href="#5.4.11">#5.4.11</a> A gym membership costs c = 25m + 40 dollars after m months. What does the 40 mean, and what does the 25 mean?</p>
+</li>
+<li><a class="refcode" id="5.4.12" href="#5.4.12">#5.4.12</a> A tank holds w = 8h + 5 liters after h hours of filling. State the starting amount and the rate, then find the amount after 6 hours.</li>
+</ol>
+<p><strong>Answer key:</strong></p>
+<ol>
+<li>slope 4, y-intercept (0,-7) · 2. slope -1, y-intercept (0,6) · 3. slope 2/3, y-intercept (0,1) · 4. slope 5, y-intercept (0,0) · 5. y = 3x - 4 · 6. y = -2x + 1 · 7. 2(3)+1 = 7 · 8. -3(2)+5 = -1 · 9. (1/2)(4)-2 = 0 · 10. (1/2)(-2)-2 = -3 · 11. the 40 is a \$40 starting/joining fee (cost at 0 months); the 25 is the rate, \$25 per month · 12. starting amount 5 liters (at h = 0), rate 8 liters per hour; after 6 hours w = 8(6) + 5 = 53 liters.</li>
+</ol>
 <hr>
 <h2 id="lesson-55-writing-equations-of-lines">Lesson 5.5: Writing equations of lines</h2>
 <p><strong>Goal:</strong> Write a line's equation from a point and a slope, or from two points; recognize and use parallel (equal slopes) and perpendicular (negative-reciprocal slopes) relationships.
 <strong>Why it matters:</strong> This is "modeling with lines" — given any two facts that pin a line down, produce its equation. It feeds directly into Unit 6 (modeling) and Unit 7 (systems).
-<strong>New terms:</strong>
-- <a class="refcode" id="5.5.d1" href="#5.5.d1">#5.5.d1</a> <strong>Point-slope form:</strong> y - y₁ = m(x - x₁) — build a line from one point (x₁,y₁) and a slope m. (Then tidy into y = mx + b if desired.)
-- <a class="refcode" id="5.5.d2" href="#5.5.d2">#5.5.d2</a> <strong>Parallel lines:</strong> never meet; <strong>equal slopes</strong> (m₁ = m₂), different intercepts. (Same slope but a <em>different</em> y-intercept → parallel; same slope <em>and</em> same y-intercept → they're the <strong>same line</strong> (coincident), not two parallel lines — you'll meet this case again in Unit 7 systems.)
-- <a class="refcode" id="5.5.d3" href="#5.5.d3">#5.5.d3</a> <strong>Perpendicular lines:</strong> cross at a right angle; slopes are <strong>negative reciprocals</strong> (m₂ = -1/m₁), so their product is -1. (This negative-reciprocal rule is for <strong>nonvertical</strong> lines; separately, any <strong>horizontal</strong> line and any <strong>vertical</strong> line are perpendicular — one has slope 0, the other undefined, so the "product = -1" test doesn't apply to that pair.)</p>
-<p><strong>Teaching arc (concrete → pictorial → symbolic):</strong>
-- <strong>Concrete:</strong> "A slope alone gives infinitely many parallel lines; a slope <em>plus one point it passes through</em> nails down exactly one." Point-slope is the tool that uses exactly those two facts.
-- <strong>Pictorial:</strong> Show two parallel lines (same tilt, shifted) and two perpendicular lines (one tilts up, the other down and 'sideways-flipped'). The negative reciprocal of 2 is -1/2: flip 2 to 1/2, negate.
-- <strong>Symbolic:</strong> From two points: first find m (Lesson 5.3), then plug m and <em>either</em> point into point-slope, then simplify to slope-intercept. Verify the final line by checking it passes through the given point(s) — substitute (the <code>SKILL.md</code> habit). A clean shortcut once m is known: b = y₁ - m x₁.</p>
+<strong>New terms:</strong></p>
+<ul>
+<li><a class="refcode" id="5.5.d1" href="#5.5.d1">#5.5.d1</a> <strong>Point-slope form:</strong> y - y₁ = m(x - x₁) — build a line from one point (x₁,y₁) and a slope m. (Then tidy into y = mx + b if desired.)</li>
+<li><a class="refcode" id="5.5.d2" href="#5.5.d2">#5.5.d2</a> <strong>Parallel lines:</strong> never meet; <strong>equal slopes</strong> (m₁ = m₂), different intercepts. (Same slope but a <em>different</em> y-intercept → parallel; same slope <em>and</em> same y-intercept → they're the <strong>same line</strong> (coincident), not two parallel lines — you'll meet this case again in Unit 7 systems.)</li>
+<li><a class="refcode" id="5.5.d3" href="#5.5.d3">#5.5.d3</a> <strong>Perpendicular lines:</strong> cross at a right angle; slopes are <strong>negative reciprocals</strong> (m₂ = -1/m₁), so their product is -1. (This negative-reciprocal rule is for <strong>nonvertical</strong> lines; separately, any <strong>horizontal</strong> line and any <strong>vertical</strong> line are perpendicular — one has slope 0, the other undefined, so the "product = -1" test doesn't apply to that pair.)</li>
+</ul>
+<p><strong>Teaching arc (concrete → pictorial → symbolic):</strong></p>
+<ul>
+<li><strong>Concrete:</strong> "A slope alone gives infinitely many parallel lines; a slope <em>plus one point it passes through</em> nails down exactly one." Point-slope is the tool that uses exactly those two facts.</li>
+<li><strong>Pictorial:</strong> Show two parallel lines (same tilt, shifted) and two perpendicular lines (one tilts up, the other down and 'sideways-flipped'). The negative reciprocal of 2 is -1/2: flip 2 to 1/2, negate.</li>
+<li><strong>Symbolic:</strong> From two points: first find m (Lesson 5.3), then plug m and <em>either</em> point into point-slope, then simplify to slope-intercept. Verify the final line by checking it passes through the given point(s) — substitute (the <code>SKILL.md</code> habit). A clean shortcut once m is known: b = y₁ - m x₁.</li>
+</ul>
 <p><strong>Worked examples:</strong></p>
 <ol>
 <li>
@@ -444,41 +528,61 @@ $$y = 2x + 4$$</p>
 $$y = -\tfrac12 x$$</p>
 </li>
 </ol>
-<p><strong>Watch for:</strong>
-- <strong>Sign slips in point-slope expansion</strong> — y - 3 = 4(x-2) becoming y = 4x - 8 + 3 handled wrong, or distributing the 4 onto only the x. <code>misconceptions.md §3</code> and §7 (distribution — <code>metaphors.md</code> flyers). Have them distribute carefully and <strong>substitute the point back</strong> to verify.
-- <strong>Negative reciprocal half-done</strong> — taking just the reciprocal (1/2) or just the negative (-2) instead of <em>both</em> (-1/2). Cue: "flip <em>and</em> change the sign — what's -1/2?" Check: m₁ · m₂ should equal -1.
-- <strong>Mixing up which is parallel vs. perpendicular</strong> (equal slope vs. negative reciprocal). Anchor: parallel = same tilt = same m; perpendicular = right angle = flipped-and-negated.
-- <strong>Subtraction-order slip when finding m</strong> from two points (carryover from 5.3).</p>
+<p><strong>Watch for:</strong></p>
+<ul>
+<li><strong>Sign slips in point-slope expansion</strong> — y - 3 = 4(x-2) becoming y = 4x - 8 + 3 handled wrong, or distributing the 4 onto only the x. <code>misconceptions.md §3</code> and §7 (distribution — <code>metaphors.md</code> flyers). Have them distribute carefully and <strong>substitute the point back</strong> to verify.</li>
+<li><strong>Negative reciprocal half-done</strong> — taking just the reciprocal (1/2) or just the negative (-2) instead of <em>both</em> (-1/2). Cue: "flip <em>and</em> change the sign — what's -1/2?" Check: m₁ · m₂ should equal -1.</li>
+<li><strong>Mixing up which is parallel vs. perpendicular</strong> (equal slope vs. negative reciprocal). Anchor: parallel = same tilt = same m; perpendicular = right angle = flipped-and-negated.</li>
+<li><strong>Subtraction-order slip when finding m</strong> from two points (carryover from 5.3).</li>
+</ul>
 <p><strong>Visuals to offer:</strong> <code>visuals.md</code> <strong>Template 2</strong>. For parallel/perpendicular, graph both lines on one plane (computed endpoints) so the equal tilt / right angle is visible; label each line's equation. Table of the defining points alongside.</p>
-<p><strong>Check for understanding (transfer):</strong>
-1. <a class="refcode" id="5.5.c1" href="#5.5.c1">#5.5.c1</a> "Write the equation of the line through (1, 5) with slope -2. Then verify it actually passes through that point."
-2. <a class="refcode" id="5.5.c2" href="#5.5.c2">#5.5.c2</a> "A line is perpendicular to y = (1/3)x + 2. What's its slope, and how did you get it?"
-3. <a class="refcode" id="5.5.c3" href="#5.5.c3">#5.5.c3</a> "Two lines: y = 5x - 1 and y = 5x + 4. Parallel, perpendicular, or neither? How can you tell without graphing?"</p>
+<p><strong>Check for understanding (transfer):</strong></p>
+<ol>
+<li><a class="refcode" id="5.5.c1" href="#5.5.c1">#5.5.c1</a> "Write the equation of the line through (1, 5) with slope -2. Then verify it actually passes through that point."</li>
+<li><a class="refcode" id="5.5.c2" href="#5.5.c2">#5.5.c2</a> "A line is perpendicular to y = (1/3)x + 2. What's its slope, and how did you get it?"</li>
+<li><a class="refcode" id="5.5.c3" href="#5.5.c3">#5.5.c3</a> "Two lines: y = 5x - 1 and y = 5x + 4. Parallel, perpendicular, or neither? How can you tell without graphing?"</li>
+</ol>
 <p><strong>Practice problems:</strong>
-<em>Write the equation (point + slope):</em>
-1. <a class="refcode" id="5.5.1" href="#5.5.1">#5.5.1</a> Through (3,1), slope 2.
-2. <a class="refcode" id="5.5.2" href="#5.5.2">#5.5.2</a> Through (-1,4), slope -3.
-<em>Write the equation (two points — find m first):</em>
-3. <a class="refcode" id="5.5.3" href="#5.5.3">#5.5.3</a> Find the slope through (2,5) and (4,11).  4. Then write the line's equation.
-5. <a class="refcode" id="5.5.4" href="#5.5.4">#5.5.4</a> Find the slope through (0,-2) and (3,7).  6. Then write the line's equation.
-<em>Parallel &amp; perpendicular:</em>
-7. <a class="refcode" id="5.5.5" href="#5.5.5">#5.5.5</a> What is the slope of any line parallel to y = 3x - 2?
-8. <a class="refcode" id="5.5.6" href="#5.5.6">#5.5.6</a> What is the slope of any line perpendicular to y = 2x + 1?
-9. <a class="refcode" id="5.5.7" href="#5.5.7">#5.5.7</a> Write the line perpendicular to y = 2x passing through (4, 0).
-10. <a class="refcode" id="5.5.8" href="#5.5.8">#5.5.8</a> Are y = 4x + 3 and y = 4x - 7 parallel, perpendicular, or neither? What about y = 4x + 3 and y = -(1/4)x?</p>
-<p><strong>Answer key:</strong>
-1. y - 1 = 2(x-3) ⇒ y = 2x - 5 · 2. y - 4 = -3(x+1) ⇒ y = -3x + 1 · 3. m = (11-5)/(4-2) = 3 · 4. y - 5 = 3(x-2) ⇒ y = 3x - 1 · 5. m = (7-(-2))/(3-0) = 3 · 6. b = -2, so y = 3x - 2 · 7. slope 3 (equal slopes) · 8. slope -1/2 (negative reciprocal of 2) · 9. slope -1/2, through (4,0): b = 0 - (-1/2)(4) = 2, so y = -(1/2)x + 2 · 10. y=4x+3 and y=4x-7 are <strong>parallel</strong> (both slope 4); y=4x+3 and y=-(1/4)x are <strong>perpendicular</strong> (4 · -1/4 = -1).</p>
+<em>Write the equation (point + slope):</em></p>
+<ol>
+<li><a class="refcode" id="5.5.1" href="#5.5.1">#5.5.1</a> Through (3,1), slope 2.</li>
+<li>
+<p><a class="refcode" id="5.5.2" href="#5.5.2">#5.5.2</a> Through (-1,4), slope -3.
+<em>Write the equation (two points — find m first):</em></p>
+</li>
+<li>
+<p><a class="refcode" id="5.5.3" href="#5.5.3">#5.5.3</a> Find the slope through (2,5) and (4,11).  4. Then write the line's equation.</p>
+</li>
+<li>
+<p><a class="refcode" id="5.5.4" href="#5.5.4">#5.5.4</a> Find the slope through (0,-2) and (3,7).  6. Then write the line's equation.
+<em>Parallel &amp; perpendicular:</em></p>
+</li>
+<li>
+<p><a class="refcode" id="5.5.5" href="#5.5.5">#5.5.5</a> What is the slope of any line parallel to y = 3x - 2?</p>
+</li>
+<li><a class="refcode" id="5.5.6" href="#5.5.6">#5.5.6</a> What is the slope of any line perpendicular to y = 2x + 1?</li>
+<li><a class="refcode" id="5.5.7" href="#5.5.7">#5.5.7</a> Write the line perpendicular to y = 2x passing through (4, 0).</li>
+<li><a class="refcode" id="5.5.8" href="#5.5.8">#5.5.8</a> Are y = 4x + 3 and y = 4x - 7 parallel, perpendicular, or neither? What about y = 4x + 3 and y = -(1/4)x?</li>
+</ol>
+<p><strong>Answer key:</strong></p>
+<ol>
+<li>y - 1 = 2(x-3) ⇒ y = 2x - 5 · 2. y - 4 = -3(x+1) ⇒ y = -3x + 1 · 3. m = (11-5)/(4-2) = 3 · 4. y - 5 = 3(x-2) ⇒ y = 3x - 1 · 5. m = (7-(-2))/(3-0) = 3 · 6. b = -2, so y = 3x - 2 · 7. slope 3 (equal slopes) · 8. slope -1/2 (negative reciprocal of 2) · 9. slope -1/2, through (4,0): b = 0 - (-1/2)(4) = 2, so y = -(1/2)x + 2 · 10. y=4x+3 and y=4x-7 are <strong>parallel</strong> (both slope 4); y=4x+3 and y=-(1/4)x are <strong>perpendicular</strong> (4 · -1/4 = -1).</li>
+</ol>
 <hr>
 <h2 id="lesson-56-x-intercepts-graphing-by-intercepts-standard-form">Lesson 5.6: x-intercepts, graphing by intercepts &amp; standard form</h2>
 <p><strong>Goal:</strong> Find a line's <strong>x-intercept</strong> by setting y = 0, graph a line from its two intercepts, and work with <strong>standard form Ax + By = C</strong> — convert it to and from slope-intercept form and read both intercepts straight off it.
 <strong>Why it matters:</strong> Two points fix a line, and the two intercepts are usually the easiest two to find — so intercepts are the fastest way to graph a line that arrives in standard form (where no slope or intercept is sitting in plain sight). Standard form is also how lines show up in Unit 7 (systems) and Unit 8 (regions), so meeting it now pays off there.
-<strong>New terms:</strong>
-- <a class="refcode" id="5.6.d1" href="#5.6.d1">#5.6.d1</a> <strong>x-intercept:</strong> the point (a, 0) where the line crosses the x-axis. Because every point on the x-axis has y = 0, you find it by setting y = 0 and solving for x. (Mirror of the y-intercept (0, b) from 5.4, where x = 0.)
-- <a class="refcode" id="5.6.d2" href="#5.6.d2">#5.6.d2</a> <strong>Standard form:</strong> Ax + By = C, with A, B, C integers (and A ≥ 0 by convention). It treats x and y even-handedly — neither is solved for. To read slope and y-intercept, solve for y; to graph fast, use the two intercepts.</p>
-<p><strong>Teaching arc (concrete → pictorial → symbolic):</strong>
-- <strong>Concrete:</strong> "An intercept is where the line <em>crosses an axis</em>. On the x-axis you haven't gone up or down at all, so y = 0 there; on the y-axis you haven't gone across, so x = 0 there. Set the <em>other</em> coordinate to 0 and solve for what's left." Tie back to 5.4: they already find the y-intercept by putting x = 0 (that's f(0) = b); the x-intercept is the same move with the roles swapped.
-- <strong>Pictorial:</strong> Two intercepts are two points — plot them and draw the line through them. Offer the Template 2 artifact. (Best practice: compute a <em>third</em> point as a checkpoint; if it isn't collinear with the two intercepts, recheck the arithmetic before drawing — a wrong graph is worse than none, per <code>visuals.md</code>.)
-- <strong>Symbolic:</strong> From standard form Ax + By = C, the intercepts come out cleanly: set y = 0 → x-intercept; set x = 0 → y-intercept. To get slope, isolate y (a Unit 2 / Unit 5.4 move): Ax + By = C ⇒ y = -(A/B)x + C/B, so the slope is -A/B and the y-intercept is C/B. Verify conversions with the code tool.</p>
+<strong>New terms:</strong></p>
+<ul>
+<li><a class="refcode" id="5.6.d1" href="#5.6.d1">#5.6.d1</a> <strong>x-intercept:</strong> the point (a, 0) where the line crosses the x-axis. Because every point on the x-axis has y = 0, you find it by setting y = 0 and solving for x. (Mirror of the y-intercept (0, b) from 5.4, where x = 0.)</li>
+<li><a class="refcode" id="5.6.d2" href="#5.6.d2">#5.6.d2</a> <strong>Standard form:</strong> Ax + By = C, with A, B, C integers (and A ≥ 0 by convention). It treats x and y even-handedly — neither is solved for. To read slope and y-intercept, solve for y; to graph fast, use the two intercepts.</li>
+</ul>
+<p><strong>Teaching arc (concrete → pictorial → symbolic):</strong></p>
+<ul>
+<li><strong>Concrete:</strong> "An intercept is where the line <em>crosses an axis</em>. On the x-axis you haven't gone up or down at all, so y = 0 there; on the y-axis you haven't gone across, so x = 0 there. Set the <em>other</em> coordinate to 0 and solve for what's left." Tie back to 5.4: they already find the y-intercept by putting x = 0 (that's f(0) = b); the x-intercept is the same move with the roles swapped.</li>
+<li><strong>Pictorial:</strong> Two intercepts are two points — plot them and draw the line through them. Offer the Template 2 artifact. (Best practice: compute a <em>third</em> point as a checkpoint; if it isn't collinear with the two intercepts, recheck the arithmetic before drawing — a wrong graph is worse than none, per <code>visuals.md</code>.)</li>
+<li><strong>Symbolic:</strong> From standard form Ax + By = C, the intercepts come out cleanly: set y = 0 → x-intercept; set x = 0 → y-intercept. To get slope, isolate y (a Unit 2 / Unit 5.4 move): Ax + By = C ⇒ y = -(A/B)x + C/B, so the slope is -A/B and the y-intercept is C/B. Verify conversions with the code tool.</li>
+</ul>
 <p><strong>Worked examples:</strong></p>
 <ol>
 <li>
@@ -538,11 +642,13 @@ $$y = \tfrac34 x - 2 \;\Rightarrow\; 4y = 3x - 8 \;\Rightarrow\; 3x - 4y = 8$$
    Standard form is tidy for this because each intercept just divides C by one coefficient.</p>
 </li>
 </ol>
-<p><strong>Watch for:</strong>
-- <strong>Confusing which variable to zero out.</strong> For the <em>x</em>-intercept set <em>y</em> = 0 (not x = 0). Tell: they "find the x-intercept" by setting x = 0 and get the y-intercept instead. Cue: "On the x-axis, how far up are you? So what's y there?"
-- <strong>Standard form not converted before reading slope.</strong> From 3x + 4y = 12 a student may call the slope "3" (the coefficient of x as-is). The slope is -A/B = -3/4 only <em>after</em> solving for y. Anchor: "Is it solved for y yet? Slope-intercept reading only works once y is alone." (Callback to 5.4's "solve for y first.")
-- <strong>Sign of A/B/C when rearranging.</strong> Moving the x-term across flips its sign (Unit 2). Have them substitute an intercept back to confirm, and keep A ≥ 0 so different students land on the <em>same</em> standard form.
-- <strong>A line through the origin has both intercepts at one point.</strong> y = 2x crosses both axes at (0, 0); the two-intercept method then gives only one point, so pick a second point another way (plug in any x). Tell: they're stuck because "both intercepts are the same."</p>
+<p><strong>Watch for:</strong></p>
+<ul>
+<li><strong>Confusing which variable to zero out.</strong> For the <em>x</em>-intercept set <em>y</em> = 0 (not x = 0). Tell: they "find the x-intercept" by setting x = 0 and get the y-intercept instead. Cue: "On the x-axis, how far up are you? So what's y there?"</li>
+<li><strong>Standard form not converted before reading slope.</strong> From 3x + 4y = 12 a student may call the slope "3" (the coefficient of x as-is). The slope is -A/B = -3/4 only <em>after</em> solving for y. Anchor: "Is it solved for y yet? Slope-intercept reading only works once y is alone." (Callback to 5.4's "solve for y first.")</li>
+<li><strong>Sign of A/B/C when rearranging.</strong> Moving the x-term across flips its sign (Unit 2). Have them substitute an intercept back to confirm, and keep A ≥ 0 so different students land on the <em>same</em> standard form.</li>
+<li><strong>A line through the origin has both intercepts at one point.</strong> y = 2x crosses both axes at (0, 0); the two-intercept method then gives only one point, so pick a second point another way (plug in any x). Tell: they're stuck because "both intercepts are the same."</li>
+</ul>
 <p><strong>Visuals to offer:</strong> <a class="refcode" id="5.6.f1" href="#5.6.f1">#5.6.f1</a> <code>visuals.md</code> <strong>Template 2</strong> — plot the two intercepts, draw the line, label each intercept, include a companion table (with a third checkpoint row). For standard-form examples, show the converted y = mx + b beside the graph.</p>
 <figure class="fig" id="fig-5.6.f1"><svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
   <line x1="18.0" y1="171.0" x2="222.0" y2="171.0" stroke="#888"/>
@@ -557,38 +663,62 @@ $$y = \tfrac34 x - 2 \;\Rightarrow\; 4y = 3x - 8 \;\Rightarrow\; 3x - 4y = 8$$
   <text x="128.07999999999998" y="146.6" font-size="10" fill="#2980b9">2x + y = 4</text>
 </svg><figcaption>Figure 5.6.f1</figcaption></figure>
 
-<p><strong>Check for understanding (transfer):</strong>
-1. <a class="refcode" id="5.6.c1" href="#5.6.c1">#5.6.c1</a> "For 5x + 2y = 20, find both intercepts and say which two points you'd plot to graph it."
-2. <a class="refcode" id="5.6.c2" href="#5.6.c2">#5.6.c2</a> "A classmate sets x = 0 to find the <em>x</em>-intercept. What did they actually find, and what should they have done?"
-3. <a class="refcode" id="5.6.c3" href="#5.6.c3">#5.6.c3</a> "Put y = (2/3)x - 1 into standard form Ax + By = C with integer coefficients. What are A, B, and C?"</p>
+<p><strong>Check for understanding (transfer):</strong></p>
+<ol>
+<li><a class="refcode" id="5.6.c1" href="#5.6.c1">#5.6.c1</a> "For 5x + 2y = 20, find both intercepts and say which two points you'd plot to graph it."</li>
+<li><a class="refcode" id="5.6.c2" href="#5.6.c2">#5.6.c2</a> "A classmate sets x = 0 to find the <em>x</em>-intercept. What did they actually find, and what should they have done?"</li>
+<li><a class="refcode" id="5.6.c3" href="#5.6.c3">#5.6.c3</a> "Put y = (2/3)x - 1 into standard form Ax + By = C with integer coefficients. What are A, B, and C?"</li>
+</ol>
 <p><strong>Practice problems:</strong>
-<em>Find the x-intercept (set y = 0):</em>
-1. <a class="refcode" id="5.6.1" href="#5.6.1">#5.6.1</a> y = 2x - 8
-2. <a class="refcode" id="5.6.2" href="#5.6.2">#5.6.2</a> y = -x + 5
-3. <a class="refcode" id="5.6.3" href="#5.6.3">#5.6.3</a> y = 3x + 12
-4. <a class="refcode" id="5.6.4" href="#5.6.4">#5.6.4</a> y = (1/2)x - 4
-<em>Find BOTH intercepts of the standard-form line:</em>
-5. <a class="refcode" id="5.6.5" href="#5.6.5">#5.6.5</a> 4x + 3y = 12
-6. <a class="refcode" id="5.6.6" href="#5.6.6">#5.6.6</a> 2x - 5y = 10
-<em>Convert standard form to slope-intercept (solve for y); give slope and y-intercept:</em>
-7. <a class="refcode" id="5.6.7" href="#5.6.7">#5.6.7</a> 2x + y = 7
-8. <a class="refcode" id="5.6.8" href="#5.6.8">#5.6.8</a> 3x - 4y = 8
-<em>Convert to standard form Ax + By = C (integer coefficients, A ≥ 0):</em>
-9. <a class="refcode" id="5.6.9" href="#5.6.9">#5.6.9</a> y = 2x + 3
-10. <a class="refcode" id="5.6.10" href="#5.6.10">#5.6.10</a> y = (2/3)x - 1
-<em>Graph from intercepts / mixed:</em>
-11. <a class="refcode" id="5.6.11" href="#5.6.11">#5.6.11</a> For 5x + 2y = 20, name the two intercept points you'd plot.
-12. <a class="refcode" id="5.6.12" href="#5.6.12">#5.6.12</a> A line crosses the x-axis at (4, 0) and the y-axis at (0, -2). Find its slope, then its slope-intercept equation.</p>
-<p><strong>Answer key:</strong>
-1. 0 = 2x - 8 → x = 4 → <strong>(4, 0)</strong> · 2. 0 = -x + 5 → x = 5 → <strong>(5, 0)</strong> · 3. 0 = 3x + 12 → x = -4 → <strong>(-4, 0)</strong> · 4. 0 = (1/2)x - 4 → x = 8 → <strong>(8, 0)</strong> · 5. x-int (3, 0), y-int (0, 4) · 6. x-int (5, 0), y-int (0, -2) · 7. y = -2x + 7; slope -2, y-intercept (0, 7) · 8. y = (3/4)x - 2; slope 3/4, y-intercept (0, -2) · 9. -2x + y = 3 ⇒ <strong>2x - y = -3</strong> · 10. multiply by 3: 3y = 2x - 3 ⇒ <strong>2x - 3y = 3</strong> · 11. (4, 0) and (0, 10) · 12. slope = (-2 - 0)/(0 - 4) = 1/2; y = (1/2)x - 2.</p>
+<em>Find the x-intercept (set y = 0):</em></p>
+<ol>
+<li><a class="refcode" id="5.6.1" href="#5.6.1">#5.6.1</a> y = 2x - 8</li>
+<li><a class="refcode" id="5.6.2" href="#5.6.2">#5.6.2</a> y = -x + 5</li>
+<li><a class="refcode" id="5.6.3" href="#5.6.3">#5.6.3</a> y = 3x + 12</li>
+<li>
+<p><a class="refcode" id="5.6.4" href="#5.6.4">#5.6.4</a> y = (1/2)x - 4
+<em>Find BOTH intercepts of the standard-form line:</em></p>
+</li>
+<li>
+<p><a class="refcode" id="5.6.5" href="#5.6.5">#5.6.5</a> 4x + 3y = 12</p>
+</li>
+<li>
+<p><a class="refcode" id="5.6.6" href="#5.6.6">#5.6.6</a> 2x - 5y = 10
+<em>Convert standard form to slope-intercept (solve for y); give slope and y-intercept:</em></p>
+</li>
+<li>
+<p><a class="refcode" id="5.6.7" href="#5.6.7">#5.6.7</a> 2x + y = 7</p>
+</li>
+<li>
+<p><a class="refcode" id="5.6.8" href="#5.6.8">#5.6.8</a> 3x - 4y = 8
+<em>Convert to standard form Ax + By = C (integer coefficients, A ≥ 0):</em></p>
+</li>
+<li>
+<p><a class="refcode" id="5.6.9" href="#5.6.9">#5.6.9</a> y = 2x + 3</p>
+</li>
+<li>
+<p><a class="refcode" id="5.6.10" href="#5.6.10">#5.6.10</a> y = (2/3)x - 1
+<em>Graph from intercepts / mixed:</em></p>
+</li>
+<li>
+<p><a class="refcode" id="5.6.11" href="#5.6.11">#5.6.11</a> For 5x + 2y = 20, name the two intercept points you'd plot.</p>
+</li>
+<li><a class="refcode" id="5.6.12" href="#5.6.12">#5.6.12</a> A line crosses the x-axis at (4, 0) and the y-axis at (0, -2). Find its slope, then its slope-intercept equation.</li>
+</ol>
+<p><strong>Answer key:</strong></p>
+<ol>
+<li>0 = 2x - 8 → x = 4 → <strong>(4, 0)</strong> · 2. 0 = -x + 5 → x = 5 → <strong>(5, 0)</strong> · 3. 0 = 3x + 12 → x = -4 → <strong>(-4, 0)</strong> · 4. 0 = (1/2)x - 4 → x = 8 → <strong>(8, 0)</strong> · 5. x-int (3, 0), y-int (0, 4) · 6. x-int (5, 0), y-int (0, -2) · 7. y = -2x + 7; slope -2, y-intercept (0, 7) · 8. y = (3/4)x - 2; slope 3/4, y-intercept (0, -2) · 9. -2x + y = 3 ⇒ <strong>2x - y = -3</strong> · 10. multiply by 3: 3y = 2x - 3 ⇒ <strong>2x - 3y = 3</strong> · 11. (4, 0) and (0, 10) · 12. slope = (-2 - 0)/(0 - 4) = 1/2; y = (1/2)x - 2.</li>
+</ol>
 <hr>
 <h2 id="wrap-up-interleaving">Wrap-up &amp; interleaving</h2>
 <p><strong>Consolidate:</strong> the representations of a line now hang together — a <em>table</em> (5.2) gives points, the <em>graph</em> (5.1–5.2) shows them, the <em>slope</em> (5.3) is the (constant) rate between them, y=mx+b (5.4) reads slope and intercept at a glance, <em>point-slope</em> (5.5) builds the equation from scratch, and <em>standard form</em> with <em>intercepts</em> (5.6) graphs fast when the equation isn't solved for y. Keep saying the line <strong>is a function</strong>: y = mx+b and f(x)=mx+b are one object, and its defining trait is a <strong>constant rate of change</strong>. Where a context is attached, always read m as the <em>rate</em> and b as the <em>starting value</em>.</p>
-<p><strong>Mix back in:</strong>
-- <strong>Unit 3 (rate):</strong> every time slope appears, name it as the unit rate / rate of change — that's the conceptual glue.
-- <strong>Unit 4 (functions):</strong> evaluate f(0) to find the intercept; read a line off a table; use the vertical-line-test framing if a "line" is actually vertical (x=3 is not a function).
-- <strong>Unit 2 (solving):</strong> to graph 2x + y = 5 (standard form, 5.6) they must solve for y first; point-slope expansion reuses the distributive property (Unit 2.3, <code>misconceptions.md §7</code>).
-- <strong>Negatives (Unit 1.4 / <code>misconceptions.md §3</code>):</strong> the dominant error source here — slope sign, intercept sign, differences in the slope formula. Slip in a negative-laden problem regularly. The new <strong>steepness-vs-direction</strong> slope misconception (<code>misconceptions.md §8</code>) lives right here: sign is direction, magnitude is steepness.</p>
+<p><strong>Mix back in:</strong></p>
+<ul>
+<li><strong>Unit 3 (rate):</strong> every time slope appears, name it as the unit rate / rate of change — that's the conceptual glue.</li>
+<li><strong>Unit 4 (functions):</strong> evaluate f(0) to find the intercept; read a line off a table; use the vertical-line-test framing if a "line" is actually vertical (x=3 is not a function).</li>
+<li><strong>Unit 2 (solving):</strong> to graph 2x + y = 5 (standard form, 5.6) they must solve for y first; point-slope expansion reuses the distributive property (Unit 2.3, <code>misconceptions.md §7</code>).</li>
+<li><strong>Negatives (Unit 1.4 / <code>misconceptions.md §3</code>):</strong> the dominant error source here — slope sign, intercept sign, differences in the slope formula. Slip in a negative-laden problem regularly. The new <strong>steepness-vs-direction</strong> slope misconception (<code>misconceptions.md §8</code>) lives right here: sign is direction, magnitude is steepness.</li>
+</ul>
 <p><strong>Looking ahead:</strong> Unit 6 turns words into these equations (modeling) — the m-as-rate / b-as-starting-value reading from 5.3–5.4 is exactly that bridge; Unit 7 graphs <em>two</em> lines to solve systems (and standard form from 5.6 is the form they often arrive in); Unit 8 shades regions bounded by lines. Solid slope-intercept fluency pays off in all three.</p>
 <p><strong>Progress Card should note:</strong> which lessons are mastered (5.1–5.6), whether slope sign-handling and the zero-vs-undefined distinction are solid, whether the student reads slope/intercept <em>in context</em> (rate and starting value) and can find an x-intercept / handle standard form, whether they can move fluidly between table ↔ graph ↔ y=mx+b ↔ standard form, and any lingering negative-sign shakiness to warm up next time.</p>
 </main>

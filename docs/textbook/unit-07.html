@@ -18,32 +18,40 @@
 
 <blockquote>
 <p><strong>Prerequisites:</strong> Unit 5 (coordinate plane, graphing lines, slope, slope-intercept form) and Unit 6 (translating words into equations). Comfort with solving one- and two-step equations (Unit 2) is assumed throughout.
-<strong>By the end, the student can:</strong>
-- Explain that a <em>system</em> is two relationships holding at once, and that its solution is the single (x, y) that makes <strong>both</strong> equations true — graphically, the point where the two lines cross.
-- Solve a system by <strong>graphing</strong>, by <strong>substitution</strong>, and by <strong>elimination</strong>, and choose a sensible method for a given system.
-- Recognize the two special cases — <strong>no solution</strong> (parallel lines) and <strong>infinitely many</strong> (the same line) — from both the algebra and the graph.
-- Set up and solve <strong>two-variable word problems</strong> (tickets, coins, mixtures, perimeter) as a system.
-- <strong>Verify</strong> every solution by substituting it back into <em>both</em> equations.</p>
+<strong>By the end, the student can:</strong></p>
+<ul>
+<li>Explain that a <em>system</em> is two relationships holding at once, and that its solution is the single (x, y) that makes <strong>both</strong> equations true — graphically, the point where the two lines cross.</li>
+<li>Solve a system by <strong>graphing</strong>, by <strong>substitution</strong>, and by <strong>elimination</strong>, and choose a sensible method for a given system.</li>
+<li>Recognize the two special cases — <strong>no solution</strong> (parallel lines) and <strong>infinitely many</strong> (the same line) — from both the algebra and the graph.</li>
+<li>Set up and solve <strong>two-variable word problems</strong> (tickets, coins, mixtures, perimeter) as a system.</li>
+<li><strong>Verify</strong> every solution by substituting it back into <em>both</em> equations.</li>
+</ul>
 </blockquote>
 <h2 id="teaching-this-unit-orientation-for-the-tutor">Teaching this unit (orientation for the tutor)</h2>
 <p>The whole unit rests on one reframing: up to now an equation like y = 2x + 1 had a <em>whole line</em> of solutions. A <strong>system</strong> pins it down by demanding a second condition at the same time. The solution is the one (x, y) that satisfies <strong>both</strong> — the meeting point of two lines, two functions agreeing. Keep returning to that picture: <em>"each equation is a line/function; the solution is where they cross."</em> This is also where Unit 5's "a line <em>is</em> a function, f(x) = 2x+1" pays off — a system is asking "for what input do these two functions give the same output?"</p>
 <p>The arc is concrete → symbolic three times over. <strong>7.1 graphing</strong> builds the meaning (you can <em>see</em> the crossing) but exposes its weakness: you can't read (2.5, -1.3) off a hand graph. That motivates <strong>7.2 substitution</strong> and <strong>7.3 elimination</strong>, the exact methods. <strong>7.4</strong> handles the two weird cases and lets the student aim the whole toolkit at word problems (callback to Unit 6 translation).</p>
-<p><strong>Biggest misconception traps, named up front:</strong>
-- <strong>Solving for only one variable and stopping.</strong> A system's answer is an <em>ordered pair</em>. A student who finds x = 3 and walks away has done half the problem. Always finish by finding the partner coordinate.
-- <strong>Treating the two equations as unrelated.</strong> Both equations describe the <em>same</em> x and the <em>same</em> y. The "mystery box" metaphor (<code>metaphors.md</code> Variables A) carries over: x is one hidden number shared by both equations.
-- <strong>Sign and like-term slips</strong> during substitution/elimination — same roots as <code>misconceptions.md</code> §3 (negatives) and §7 (structure). The fix is the unit's own habit: substitute the final pair back into both equations.</p>
+<p><strong>Biggest misconception traps, named up front:</strong></p>
+<ul>
+<li><strong>Solving for only one variable and stopping.</strong> A system's answer is an <em>ordered pair</em>. A student who finds x = 3 and walks away has done half the problem. Always finish by finding the partner coordinate.</li>
+<li><strong>Treating the two equations as unrelated.</strong> Both equations describe the <em>same</em> x and the <em>same</em> y. The "mystery box" metaphor (<code>metaphors.md</code> Variables A) carries over: x is one hidden number shared by both equations.</li>
+<li><strong>Sign and like-term slips</strong> during substitution/elimination — same roots as <code>misconceptions.md</code> §3 (negatives) and §7 (structure). The fix is the unit's own habit: substitute the final pair back into both equations.</li>
+</ul>
 <p><strong>Pacing.</strong> Don't drill graphing to exhaustion — its job is meaning, not precision; once the student <em>sees</em> "solution = crossing point," move to substitution. Spend the most time on elimination (the scaling step is the new motor skill). Reserve substitution for systems where a variable is already (or easily) isolated, and elimination for systems lined up in standard form — teach that judgment explicitly in 7.4. Interleave: every solved system ends with the substitution check, which quietly reviews Unit 2 evaluation.</p>
 <hr>
 <h2 id="lesson-71-solving-by-graphing">Lesson 7.1: Solving by graphing</h2>
 <p><strong>Goal:</strong> Find the solution of a system by graphing both lines and reading the point where they intersect.
 <strong>Why it matters:</strong> It makes the <em>meaning</em> of a system visible — the solution is literally where two relationships meet — and that picture anchors every algebraic method that follows.
-<strong>New terms:</strong>
-- <a class="refcode" id="7.1.d1" href="#7.1.d1">#7.1.d1</a> <strong>System of equations:</strong> two (or more) equations considered together, asking for values that satisfy all of them at once.
-- <a class="refcode" id="7.1.d2" href="#7.1.d2">#7.1.d2</a> <strong>Solution of a system:</strong> an ordered pair (x, y) that makes <strong>every</strong> equation in the system true. A system may have <strong>one</strong> such pair, <strong>none</strong>, or <strong>infinitely many</strong> (see 7.4) — so don't assume there's exactly one until you've solved it.</p>
-<p><strong>Teaching arc (concrete → pictorial → symbolic):</strong>
-- <strong>Concrete / motivating:</strong> "Equation one says y = x + 1 — a whole line of possibilities. Equation two says y = -x + 5 — another whole line. A <em>system</em> asks: is there a point that lives on <strong>both</strong> lines at once?" Each line is a function (Unit 5); we're hunting the input where the two functions return the same output.
-- <strong>Pictorial:</strong> Graph both. Use a <strong>coordinate plane + two lines</strong> artifact — see <code>visuals.md</code> <strong>Template 2</strong> (run it twice, once per line, on one plane). <strong>Compute the points, don't eyeball them</strong> (<code>visuals.md</code> rule 1). Always pair the graph with a small table of computed points and name the crossing.
-- <strong>Symbolic:</strong> Read the intersection. Then <em>verify</em> by plugging the point into both equations — this is the move that makes graphing trustworthy and seeds the checking habit.</p>
+<strong>New terms:</strong></p>
+<ul>
+<li><a class="refcode" id="7.1.d1" href="#7.1.d1">#7.1.d1</a> <strong>System of equations:</strong> two (or more) equations considered together, asking for values that satisfy all of them at once.</li>
+<li><a class="refcode" id="7.1.d2" href="#7.1.d2">#7.1.d2</a> <strong>Solution of a system:</strong> an ordered pair (x, y) that makes <strong>every</strong> equation in the system true. A system may have <strong>one</strong> such pair, <strong>none</strong>, or <strong>infinitely many</strong> (see 7.4) — so don't assume there's exactly one until you've solved it.</li>
+</ul>
+<p><strong>Teaching arc (concrete → pictorial → symbolic):</strong></p>
+<ul>
+<li><strong>Concrete / motivating:</strong> "Equation one says y = x + 1 — a whole line of possibilities. Equation two says y = -x + 5 — another whole line. A <em>system</em> asks: is there a point that lives on <strong>both</strong> lines at once?" Each line is a function (Unit 5); we're hunting the input where the two functions return the same output.</li>
+<li><strong>Pictorial:</strong> Graph both. Use a <strong>coordinate plane + two lines</strong> artifact — see <code>visuals.md</code> <strong>Template 2</strong> (run it twice, once per line, on one plane). <strong>Compute the points, don't eyeball them</strong> (<code>visuals.md</code> rule 1). Always pair the graph with a small table of computed points and name the crossing.</li>
+<li><strong>Symbolic:</strong> Read the intersection. Then <em>verify</em> by plugging the point into both equations — this is the move that makes graphing trustworthy and seeds the checking habit.</li>
+</ul>
 <p>For y = x + 1 and y = -x + 5, compute a short table for each, then map with <code>screenX = 110 + x*20</code>, <code>screenY = 110 - y*20</code>:</p>
 <p>$$\begin{array}{c|c|c}
 x &amp; y = x+1 &amp; y = -x+5 \\ \hline
@@ -63,41 +71,55 @@ Check: 6 = 2(3) and 6 = 6.</p>
 Table: at x = 1, first gives 3, second gives 3. They cross at (1, 3).
 Check: 3 = 1 + 2 and 3 = -1 + 4.</p>
 <p><em>Example 4 — the limitation, on purpose.</em> Solve y = 2x and y = x + 1 but suppose the answer weren't clean. Here it is clean — they meet at (1, 2): 2 = 2(1), 2 = 1 + 1. Now ask: <em>"What if two lines crossed at (2.5, -1.3)? Could you read that off a hand-drawn graph?"</em> You couldn't — and that's exactly why we need substitution and elimination next.</p>
-<p><strong>Watch for:</strong>
-- <strong>Reading the picture imprecisely.</strong> Hand graphs only reliably reveal <em>integer</em> crossings. If the intersection looks "between the lines," that's the signal to switch to an algebraic method — not to guess a decimal. State this limitation out loud; it's the bridge to 7.2.
-- <strong>Naming only one coordinate</strong> ("the answer is 2"). Push for the ordered pair every time — see this unit's lead trap.
-- <strong>Misplotting from a sign slip</strong> when building the table (<code>misconceptions.md</code> §3). The table-plus-check routine catches it.</p>
+<p><strong>Watch for:</strong></p>
+<ul>
+<li><strong>Reading the picture imprecisely.</strong> Hand graphs only reliably reveal <em>integer</em> crossings. If the intersection looks "between the lines," that's the signal to switch to an algebraic method — not to guess a decimal. State this limitation out loud; it's the bridge to 7.2.</li>
+<li><strong>Naming only one coordinate</strong> ("the answer is 2"). Push for the ordered pair every time — see this unit's lead trap.</li>
+<li><strong>Misplotting from a sign slip</strong> when building the table (<code>misconceptions.md</code> §3). The table-plus-check routine catches it.</li>
+</ul>
 <p><strong>Visuals to offer:</strong> <code>visuals.md</code> <strong>Template 2</strong> (coordinate plane + a line), used twice on one plane, as an <strong>SVG artifact</strong> with computed endpoints, the intercepts dotted, the crossing labeled, and the points table beside it. Never paste raw SVG into chat — emit an artifact.</p>
-<p><strong>Check for understanding (transfer):</strong>
-1. <a class="refcode" id="7.1.c1" href="#7.1.c1">#7.1.c1</a> "Without graphing yet — what does it <em>mean</em>, in words, that (2, 3) is the solution of a system? What two things must be true?"
-2. <a class="refcode" id="7.1.c2" href="#7.1.c2">#7.1.c2</a> "Two lines on the same plane never touch. What does that tell you about how many solutions the system has?" (Sets up 7.4.)
-3. <a class="refcode" id="7.1.c3" href="#7.1.c3">#7.1.c3</a> "If a system's solution were (1.5, 4.2), why would graphing by hand let you down — and what would you reach for instead?"</p>
+<p><strong>Check for understanding (transfer):</strong></p>
+<ol>
+<li><a class="refcode" id="7.1.c1" href="#7.1.c1">#7.1.c1</a> "Without graphing yet — what does it <em>mean</em>, in words, that (2, 3) is the solution of a system? What two things must be true?"</li>
+<li><a class="refcode" id="7.1.c2" href="#7.1.c2">#7.1.c2</a> "Two lines on the same plane never touch. What does that tell you about how many solutions the system has?" (Sets up 7.4.)</li>
+<li><a class="refcode" id="7.1.c3" href="#7.1.c3">#7.1.c3</a> "If a system's solution were (1.5, 4.2), why would graphing by hand let you down — and what would you reach for instead?"</li>
+</ol>
 <p><strong>Practice problems</strong> (solve by graphing / finding where the two lines meet; give the ordered pair and check both):</p>
-<p><em>Set A — one line is horizontal or through the origin</em>
-1. <a class="refcode" id="7.1.1" href="#7.1.1">#7.1.1</a> y = x and y = 4
-2. <a class="refcode" id="7.1.2" href="#7.1.2">#7.1.2</a> y = 2x and y = 6
-3. <a class="refcode" id="7.1.3" href="#7.1.3">#7.1.3</a> y = -x + 6 and y = x</p>
-<p><em>Set B — two slanted lines</em>
-4. <a class="refcode" id="7.1.4" href="#7.1.4">#7.1.4</a> y = x + 2 and y = -x + 4
-5. <a class="refcode" id="7.1.5" href="#7.1.5">#7.1.5</a> y = x - 1 and y = -x + 3
-6. <a class="refcode" id="7.1.6" href="#7.1.6">#7.1.6</a> y = 2x - 1 and y = x + 1</p>
-<p><strong>Answer key (all verified):</strong>
-1. (4, 4) — 4 = 4, 4 = 4
-2. (3, 6) — 6 = 2(3), 6 = 6
-3. (3, 3) — 3 = -3 + 6, 3 = 3
-4. (1, 3) — 3 = 1 + 2, 3 = -1 + 4
-5. (2, 1) — 1 = 2 - 1, 1 = -2 + 3
-6. (2, 3) — 3 = 2(2) - 1, 3 = 2 + 1</p>
+<p><em>Set A — one line is horizontal or through the origin</em></p>
+<ol>
+<li><a class="refcode" id="7.1.1" href="#7.1.1">#7.1.1</a> y = x and y = 4</li>
+<li><a class="refcode" id="7.1.2" href="#7.1.2">#7.1.2</a> y = 2x and y = 6</li>
+<li><a class="refcode" id="7.1.3" href="#7.1.3">#7.1.3</a> y = -x + 6 and y = x</li>
+</ol>
+<p><em>Set B — two slanted lines</em></p>
+<ol start="4">
+<li><a class="refcode" id="7.1.4" href="#7.1.4">#7.1.4</a> y = x + 2 and y = -x + 4</li>
+<li><a class="refcode" id="7.1.5" href="#7.1.5">#7.1.5</a> y = x - 1 and y = -x + 3</li>
+<li><a class="refcode" id="7.1.6" href="#7.1.6">#7.1.6</a> y = 2x - 1 and y = x + 1</li>
+</ol>
+<p><strong>Answer key (all verified):</strong></p>
+<ol>
+<li>(4, 4) — 4 = 4, 4 = 4</li>
+<li>(3, 6) — 6 = 2(3), 6 = 6</li>
+<li>(3, 3) — 3 = -3 + 6, 3 = 3</li>
+<li>(1, 3) — 3 = 1 + 2, 3 = -1 + 4</li>
+<li>(2, 1) — 1 = 2 - 1, 1 = -2 + 3</li>
+<li>(2, 3) — 3 = 2(2) - 1, 3 = 2 + 1</li>
+</ol>
 <hr>
 <h2 id="lesson-72-substitution">Lesson 7.2: Substitution</h2>
 <p><strong>Goal:</strong> Solve a system by isolating one variable in one equation and substituting that expression into the other, reducing two equations to a single one-variable equation.
 <strong>Why it matters:</strong> It's exact (no graph-reading guesswork) and it shines when one variable is already alone — common in word problems and in any equation written as y = ...
-<strong>New terms:</strong>
-- <a class="refcode" id="7.2.d1" href="#7.2.d1">#7.2.d1</a> <strong>Substitution:</strong> replacing a variable with an expression equal to it. Because each variable denotes the <em>same</em> number in both equations, an expression equal to (say) y in one equation may stand in for y in the other.</p>
-<p><strong>Teaching arc (concrete → pictorial → symbolic):</strong>
-- <strong>Concrete:</strong> "Equation one tells you exactly what y <em>is</em> — say y = 2x. The mystery box y is just 2x in disguise. So anywhere the second equation says y, pour in 2x instead." (Mystery-box metaphor, <code>metaphors.md</code> Variables A — both equations share the same hidden numbers.)
-- <strong>Pictorial:</strong> Substitution is collapsing two lines' worth of information into one equation in one unknown — the crossing point falls out as soon as only one variable remains.
-- <strong>Symbolic:</strong> (1) isolate a variable, (2) substitute into the <em>other</em> equation, (3) solve the resulting one-variable equation, (4) back-substitute to get the partner, (5) <strong>check both</strong>.</p>
+<strong>New terms:</strong></p>
+<ul>
+<li><a class="refcode" id="7.2.d1" href="#7.2.d1">#7.2.d1</a> <strong>Substitution:</strong> replacing a variable with an expression equal to it. Because each variable denotes the <em>same</em> number in both equations, an expression equal to (say) y in one equation may stand in for y in the other.</li>
+</ul>
+<p><strong>Teaching arc (concrete → pictorial → symbolic):</strong></p>
+<ul>
+<li><strong>Concrete:</strong> "Equation one tells you exactly what y <em>is</em> — say y = 2x. The mystery box y is just 2x in disguise. So anywhere the second equation says y, pour in 2x instead." (Mystery-box metaphor, <code>metaphors.md</code> Variables A — both equations share the same hidden numbers.)</li>
+<li><strong>Pictorial:</strong> Substitution is collapsing two lines' worth of information into one equation in one unknown — the crossing point falls out as soon as only one variable remains.</li>
+<li><strong>Symbolic:</strong> (1) isolate a variable, (2) substitute into the <em>other</em> equation, (3) solve the resulting one-variable equation, (4) back-substitute to get the partner, (5) <strong>check both</strong>.</li>
+</ul>
 <p><strong>Worked examples:</strong></p>
 <p><em>Example 1.</em> Solve y = 2x and x + y = 9.
 y is already isolated. Substitute 2x for y in the second:
@@ -115,44 +137,56 @@ Check: 4 = 6 - 2 and 6 + 4 = 10.</p>
 <p><em>Example 4 — isolate when nothing is alone yet.</em> Solve x + y = 7 and 2x + y = 11 by substitution.
 Isolate y in the first: y = 7 - x. Substitute: 2x + (7 - x) = 11 ⇒ x + 7 = 11 ⇒ x = 4. Then y = 7 - 4 = 3. Solution (4, 3).
 Check: 4 + 3 = 7 and 2(4) + 3 = 11. (Note: this same system is a natural fit for elimination — preview 7.3.)</p>
-<p><strong>Watch for:</strong>
-- <strong>Substituting back into the <em>same</em> equation you isolated from.</strong> That collapses to a true-but-useless statement (e.g. 0 = 0) and finds nothing. Always substitute into the <strong>other</strong> equation.
-- <strong>Dropping a sign or skipping distribution</strong> in 2(y+1) → people write 2y + 1 (<code>misconceptions.md</code> §7 structure; §3 negatives). Distribute to <em>everyone</em> inside (handing-out-flyers, <code>metaphors.md</code>).
-- <strong>Stopping at one variable.</strong> After x = 3, the problem is <em>not</em> done — back-substitute for y.</p>
+<p><strong>Watch for:</strong></p>
+<ul>
+<li><strong>Substituting back into the <em>same</em> equation you isolated from.</strong> That collapses to a true-but-useless statement (e.g. 0 = 0) and finds nothing. Always substitute into the <strong>other</strong> equation.</li>
+<li><strong>Dropping a sign or skipping distribution</strong> in 2(y+1) → people write 2y + 1 (<code>misconceptions.md</code> §7 structure; §3 negatives). Distribute to <em>everyone</em> inside (handing-out-flyers, <code>metaphors.md</code>).</li>
+<li><strong>Stopping at one variable.</strong> After x = 3, the problem is <em>not</em> done — back-substitute for y.</li>
+</ul>
 <p><strong>Visuals to offer:</strong> None needed; substitution is symbolic. If a student wants to <em>see</em> the answer, plot both lines (Template 2) and point to the crossing as confirmation.</p>
-<p><strong>Check for understanding (transfer):</strong>
-1. <a class="refcode" id="7.2.c1" href="#7.2.c1">#7.2.c1</a> "In y = 2x and x + y = 9, why is it safe to write x + 2x = 9? What justifies swapping y for 2x?"
-2. <a class="refcode" id="7.2.c2" href="#7.2.c2">#7.2.c2</a> "You isolated y in equation one. Into <em>which</em> equation do you substitute, and why not the other?"
-3. <a class="refcode" id="7.2.c3" href="#7.2.c3">#7.2.c3</a> "Make up a system where substitution is clearly the easier method than elimination, and say why."</p>
-<p><strong>Practice problems</strong> (solve by substitution; give (x, y) and verify both):
-1. <a class="refcode" id="7.2.1" href="#7.2.1">#7.2.1</a> y = 3x and x + y = 8
-2. <a class="refcode" id="7.2.2" href="#7.2.2">#7.2.2</a> y = x + 4 and 2x + y = 10
-3. <a class="refcode" id="7.2.3" href="#7.2.3">#7.2.3</a> x = 2y and x + y = 9
-4. <a class="refcode" id="7.2.4" href="#7.2.4">#7.2.4</a> y = x - 1 and 3x + y = 11
-5. <a class="refcode" id="7.2.5" href="#7.2.5">#7.2.5</a> x = y + 3 and x + 2y = 9
-6. <a class="refcode" id="7.2.6" href="#7.2.6">#7.2.6</a> y = 2x + 1 and x + y = 7
-7. <a class="refcode" id="7.2.7" href="#7.2.7">#7.2.7</a> y = 4x and 2x + y = 18
-8. <a class="refcode" id="7.2.8" href="#7.2.8">#7.2.8</a> x = 3y and 2x - y = 10</p>
-<p><strong>Answer key (all verified):</strong>
-1. (2, 6) — 6 = 3(2), 2 + 6 = 8
-2. (2, 6) — 6 = 2 + 4, 2(2) + 6 = 10
-3. (6, 3) — 6 = 2(3), 6 + 3 = 9
-4. (3, 2) — 2 = 3 - 1, 3(3) + 2 = 11
-5. (5, 2) — 5 = 2 + 3, 5 + 2(2) = 9
-6. (2, 5) — 5 = 2(2) + 1, 2 + 5 = 7
-7. (3, 12) — 12 = 4(3), 2(3) + 12 = 18
-8. (6, 2) — 6 = 3(2), 2(6) - 2 = 10</p>
+<p><strong>Check for understanding (transfer):</strong></p>
+<ol>
+<li><a class="refcode" id="7.2.c1" href="#7.2.c1">#7.2.c1</a> "In y = 2x and x + y = 9, why is it safe to write x + 2x = 9? What justifies swapping y for 2x?"</li>
+<li><a class="refcode" id="7.2.c2" href="#7.2.c2">#7.2.c2</a> "You isolated y in equation one. Into <em>which</em> equation do you substitute, and why not the other?"</li>
+<li><a class="refcode" id="7.2.c3" href="#7.2.c3">#7.2.c3</a> "Make up a system where substitution is clearly the easier method than elimination, and say why."</li>
+</ol>
+<p><strong>Practice problems</strong> (solve by substitution; give (x, y) and verify both):</p>
+<ol>
+<li><a class="refcode" id="7.2.1" href="#7.2.1">#7.2.1</a> y = 3x and x + y = 8</li>
+<li><a class="refcode" id="7.2.2" href="#7.2.2">#7.2.2</a> y = x + 4 and 2x + y = 10</li>
+<li><a class="refcode" id="7.2.3" href="#7.2.3">#7.2.3</a> x = 2y and x + y = 9</li>
+<li><a class="refcode" id="7.2.4" href="#7.2.4">#7.2.4</a> y = x - 1 and 3x + y = 11</li>
+<li><a class="refcode" id="7.2.5" href="#7.2.5">#7.2.5</a> x = y + 3 and x + 2y = 9</li>
+<li><a class="refcode" id="7.2.6" href="#7.2.6">#7.2.6</a> y = 2x + 1 and x + y = 7</li>
+<li><a class="refcode" id="7.2.7" href="#7.2.7">#7.2.7</a> y = 4x and 2x + y = 18</li>
+<li><a class="refcode" id="7.2.8" href="#7.2.8">#7.2.8</a> x = 3y and 2x - y = 10</li>
+</ol>
+<p><strong>Answer key (all verified):</strong></p>
+<ol>
+<li>(2, 6) — 6 = 3(2), 2 + 6 = 8</li>
+<li>(2, 6) — 6 = 2 + 4, 2(2) + 6 = 10</li>
+<li>(6, 3) — 6 = 2(3), 6 + 3 = 9</li>
+<li>(3, 2) — 2 = 3 - 1, 3(3) + 2 = 11</li>
+<li>(5, 2) — 5 = 2 + 3, 5 + 2(2) = 9</li>
+<li>(2, 5) — 5 = 2(2) + 1, 2 + 5 = 7</li>
+<li>(3, 12) — 12 = 4(3), 2(3) + 12 = 18</li>
+<li>(6, 2) — 6 = 3(2), 2(6) - 2 = 10</li>
+</ol>
 <hr>
 <h2 id="lesson-73-elimination">Lesson 7.3: Elimination</h2>
 <p><strong>Goal:</strong> Solve a system by adding or subtracting the two equations (scaling one or both first when needed) so that one variable cancels, leaving a single one-variable equation.
 <strong>Why it matters:</strong> It's the workhorse for systems written in standard form ax + by = c, where nothing is isolated. Scaling-then-combining is the core skill that carries into later math.
-<strong>New terms:</strong>
-- <a class="refcode" id="7.3.d1" href="#7.3.d1">#7.3.d1</a> <strong>Elimination (linear combination):</strong> combining two equations so that one variable's terms sum to zero ("go to zero"), removing it.
-- <a class="refcode" id="7.3.d2" href="#7.3.d2">#7.3.d2</a> <strong>Scaling an equation:</strong> multiplying an <em>entire</em> equation by a number. Because both sides are multiplied equally, the line — and the solution — is unchanged (balance scale, <code>metaphors.md</code> Equations A).</p>
-<p><strong>Teaching arc (concrete → pictorial → symbolic):</strong>
-- <strong>Concrete:</strong> "If one equation says x + y = 10 and another says x - y = 4, stack them and add. The +y and -y are a debt and an equal cash — they cancel to zero (<code>misconceptions.md</code> §3). You're left with 2x = 14, one unknown."
-- <strong>Pictorial:</strong> Adding two equations produces a <em>third</em> true equation — and <strong>when the system has one solution</strong>, that's a new line through the same crossing point. Choosing the right multiplier aims to kill a variable (make its terms go to zero). When <strong>no single crossing point exists</strong>, the combination that kills a variable doesn't leave a line at all — it collapses to a bare <em>numeric</em> statement: a <strong>false</strong> one (e.g. 0 = 5) when the lines are parallel, or an always-<strong>true</strong> one (0 = 0) when they're secretly the same line. That leftover statement is exactly the signal we exploit in 7.4, so don't be surprised when the variables vanish there.
-- <strong>Symbolic:</strong> (1) line both equations up in ax + by = c form; (2) if neither variable's coefficients match, <strong>scale</strong> one or both so a pair matches; (3) add (to cancel opposite signs) or subtract (to cancel equal signs); (4) solve the one-variable result; (5) back-substitute; (6) <strong>check both</strong>.</p>
+<strong>New terms:</strong></p>
+<ul>
+<li><a class="refcode" id="7.3.d1" href="#7.3.d1">#7.3.d1</a> <strong>Elimination (linear combination):</strong> combining two equations so that one variable's terms sum to zero ("go to zero"), removing it.</li>
+<li><a class="refcode" id="7.3.d2" href="#7.3.d2">#7.3.d2</a> <strong>Scaling an equation:</strong> multiplying an <em>entire</em> equation by a number. Because both sides are multiplied equally, the line — and the solution — is unchanged (balance scale, <code>metaphors.md</code> Equations A).</li>
+</ul>
+<p><strong>Teaching arc (concrete → pictorial → symbolic):</strong></p>
+<ul>
+<li><strong>Concrete:</strong> "If one equation says x + y = 10 and another says x - y = 4, stack them and add. The +y and -y are a debt and an equal cash — they cancel to zero (<code>misconceptions.md</code> §3). You're left with 2x = 14, one unknown."</li>
+<li><strong>Pictorial:</strong> Adding two equations produces a <em>third</em> true equation — and <strong>when the system has one solution</strong>, that's a new line through the same crossing point. Choosing the right multiplier aims to kill a variable (make its terms go to zero). When <strong>no single crossing point exists</strong>, the combination that kills a variable doesn't leave a line at all — it collapses to a bare <em>numeric</em> statement: a <strong>false</strong> one (e.g. 0 = 5) when the lines are parallel, or an always-<strong>true</strong> one (0 = 0) when they're secretly the same line. That leftover statement is exactly the signal we exploit in 7.4, so don't be surprised when the variables vanish there.</li>
+<li><strong>Symbolic:</strong> (1) line both equations up in ax + by = c form; (2) if neither variable's coefficients match, <strong>scale</strong> one or both so a pair matches; (3) add (to cancel opposite signs) or subtract (to cancel equal signs); (4) solve the one-variable result; (5) back-substitute; (6) <strong>check both</strong>.</li>
+</ul>
 <p>Avoid the word "cancel" as magic — say the terms <strong>go to zero</strong> (what literally happens), per <code>misconceptions.md</code> §1.</p>
 <p><strong>Worked examples:</strong></p>
 <p><em>Example 1 — add to cancel.</em> Solve x + y = 10 and x - y = 4.
@@ -178,35 +212,45 @@ The y-terms are +2y and -2y. <strong>Add</strong>:
 $$(3x + 2y) + (5x - 2y) = 12 + 4 \;\Rightarrow\; 8x = 16 \;\Rightarrow\; x = 2.$$
 Back-substitute into 3x + 2y = 12: 6 + 2y = 12 ⇒ 2y = 6 ⇒ y = 3. Solution (2, 3).
 Check: 3(2) + 2(3) = 12 and 5(2) - 2(3) = 4.</p>
-<p><strong>Watch for:</strong>
-- <strong>Adding when you should subtract</strong> (and vice versa). The rule: equal-sign coefficients → <em>subtract</em>; opposite-sign coefficients → <em>add</em>. A subtraction that forgets to flip <em>every</em> sign in the second equation is the classic slip (<code>misconceptions.md</code> §3) — e.g. (2x + 3y) - (2x - y) becomes 4y, not 2y.
-- <strong>Scaling only one side or only one term.</strong> Multiply the <em>entire</em> equation — both sides, every term — or the balance breaks.
-- <strong>Stopping at the first variable.</strong> Same trap as the rest of the unit: back-substitute for the partner.</p>
+<p><strong>Watch for:</strong></p>
+<ul>
+<li><strong>Adding when you should subtract</strong> (and vice versa). The rule: equal-sign coefficients → <em>subtract</em>; opposite-sign coefficients → <em>add</em>. A subtraction that forgets to flip <em>every</em> sign in the second equation is the classic slip (<code>misconceptions.md</code> §3) — e.g. (2x + 3y) - (2x - y) becomes 4y, not 2y.</li>
+<li><strong>Scaling only one side or only one term.</strong> Multiply the <em>entire</em> equation — both sides, every term — or the balance breaks.</li>
+<li><strong>Stopping at the first variable.</strong> Same trap as the rest of the unit: back-substitute for the partner.</li>
+</ul>
 <p><strong>Visuals to offer:</strong> None required. Optionally graph (Template 2) to confirm the crossing, especially if a student doubts the algebra.</p>
-<p><strong>Check for understanding (transfer):</strong>
-1. <a class="refcode" id="7.3.c1" href="#7.3.c1">#7.3.c1</a> "In 2x + 3y = 12 and 2x - y = 4, why subtract rather than add? What tells you which to do?"
-2. <a class="refcode" id="7.3.c2" href="#7.3.c2">#7.3.c2</a> "Why is it legal to multiply x + y = 6 by 2? What stays true after you do?"
-3. <a class="refcode" id="7.3.c3" href="#7.3.c3">#7.3.c3</a> "Given 4x + 3y = 10 and 2x + y = 4, which equation would you scale and by what, to eliminate x? (Don't solve — just plan the move.)"</p>
+<p><strong>Check for understanding (transfer):</strong></p>
+<ol>
+<li><a class="refcode" id="7.3.c1" href="#7.3.c1">#7.3.c1</a> "In 2x + 3y = 12 and 2x - y = 4, why subtract rather than add? What tells you which to do?"</li>
+<li><a class="refcode" id="7.3.c2" href="#7.3.c2">#7.3.c2</a> "Why is it legal to multiply x + y = 6 by 2? What stays true after you do?"</li>
+<li><a class="refcode" id="7.3.c3" href="#7.3.c3">#7.3.c3</a> "Given 4x + 3y = 10 and 2x + y = 4, which equation would you scale and by what, to eliminate x? (Don't solve — just plan the move.)"</li>
+</ol>
 <p><strong>Practice problems</strong> (solve by elimination; scale first where needed; give (x, y) and verify both):</p>
-<p><em>Set A — add or subtract directly</em>
-1. <a class="refcode" id="7.3.1" href="#7.3.1">#7.3.1</a> x + y = 8 and x - y = 2
-2. <a class="refcode" id="7.3.2" href="#7.3.2">#7.3.2</a> x + y = 12 and x - y = 6
-3. <a class="refcode" id="7.3.3" href="#7.3.3">#7.3.3</a> 2x + y = 9 and x - y = 3
-4. <a class="refcode" id="7.3.4" href="#7.3.4">#7.3.4</a> 3x + y = 14 and x + y = 6
-5. <a class="refcode" id="7.3.5" href="#7.3.5">#7.3.5</a> 2x + 3y = 13 and 2x + y = 7
-6. <a class="refcode" id="7.3.6" href="#7.3.6">#7.3.6</a> x + 2y = 11 and x + y = 7</p>
-<p><em>Set B — scale first</em>
-7. <a class="refcode" id="7.3.7" href="#7.3.7">#7.3.7</a> 3x + 2y = 16 and x + 4y = 22
-8. <a class="refcode" id="7.3.8" href="#7.3.8">#7.3.8</a> 2x + y = 11 and 3x + 2y = 18</p>
-<p><strong>Answer key (all verified):</strong>
-1. (5, 3) — 5 + 3 = 8, 5 - 3 = 2
-2. (9, 3) — 9 + 3 = 12, 9 - 3 = 6
-3. (4, 1) — 2(4) + 1 = 9, 4 - 1 = 3
-4. (4, 2) — 3(4) + 2 = 14, 4 + 2 = 6
-5. (2, 3) — 2(2) + 3(3) = 13, 2(2) + 3 = 7
-6. (3, 4) — 3 + 2(4) = 11, 3 + 4 = 7
-7. (2, 5) — multiply eq.1 by 2 → 6x+4y=32, subtract eq.2 → 5x=10, x=2, y=5. 3(2)+2(5)=16, 2+4(5)=22
-8. (4, 3) — multiply eq.1 by 2 → 4x+2y=22, subtract eq.2 → x=4, y=3. 2(4)+3=11, 3(4)+2(3)=18</p>
+<p><em>Set A — add or subtract directly</em></p>
+<ol>
+<li><a class="refcode" id="7.3.1" href="#7.3.1">#7.3.1</a> x + y = 8 and x - y = 2</li>
+<li><a class="refcode" id="7.3.2" href="#7.3.2">#7.3.2</a> x + y = 12 and x - y = 6</li>
+<li><a class="refcode" id="7.3.3" href="#7.3.3">#7.3.3</a> 2x + y = 9 and x - y = 3</li>
+<li><a class="refcode" id="7.3.4" href="#7.3.4">#7.3.4</a> 3x + y = 14 and x + y = 6</li>
+<li><a class="refcode" id="7.3.5" href="#7.3.5">#7.3.5</a> 2x + 3y = 13 and 2x + y = 7</li>
+<li><a class="refcode" id="7.3.6" href="#7.3.6">#7.3.6</a> x + 2y = 11 and x + y = 7</li>
+</ol>
+<p><em>Set B — scale first</em></p>
+<ol start="7">
+<li><a class="refcode" id="7.3.7" href="#7.3.7">#7.3.7</a> 3x + 2y = 16 and x + 4y = 22</li>
+<li><a class="refcode" id="7.3.8" href="#7.3.8">#7.3.8</a> 2x + y = 11 and 3x + 2y = 18</li>
+</ol>
+<p><strong>Answer key (all verified):</strong></p>
+<ol>
+<li>(5, 3) — 5 + 3 = 8, 5 - 3 = 2</li>
+<li>(9, 3) — 9 + 3 = 12, 9 - 3 = 6</li>
+<li>(4, 1) — 2(4) + 1 = 9, 4 - 1 = 3</li>
+<li>(4, 2) — 3(4) + 2 = 14, 4 + 2 = 6</li>
+<li>(2, 3) — 2(2) + 3(3) = 13, 2(2) + 3 = 7</li>
+<li>(3, 4) — 3 + 2(4) = 11, 3 + 4 = 7</li>
+<li>(2, 5) — multiply eq.1 by 2 → 6x+4y=32, subtract eq.2 → 5x=10, x=2, y=5. 3(2)+2(5)=16, 2+4(5)=22</li>
+<li>(4, 3) — multiply eq.1 by 2 → 4x+2y=22, subtract eq.2 → x=4, y=3. 2(4)+3=11, 3(4)+2(3)=18</li>
+</ol>
 <hr>
 <h2 id="lesson-74-special-cases-applications">Lesson 7.4: Special cases &amp; applications</h2>
 <p><strong>Goal:</strong> Recognize when a system has <strong>no solution</strong> or <strong>infinitely many</strong>, and use systems to solve two-variable word problems.
@@ -242,10 +286,12 @@ Check: 3(2) + 2(3) = 12 and 5(2) - 2(3) = 4.</p>
 <li><strong>No solution:</strong> the parallel-lines case. Whatever method you use, the variables vanish and you're left with something <strong>false</strong> (like 0 = 5) — nothing can make it true, so nothing solves the system.</li>
 <li><strong>Infinitely many solutions:</strong> the same-line case (one equation is just a multiple of the other). The variables vanish and you're left with something always <strong>true</strong> (like 0 = 0) — every point on the shared line works.</li>
 </ul>
-<p><strong>Teaching arc (concrete → pictorial → symbolic):</strong>
-- <strong>Concrete / pictorial:</strong> "Two lines on a plane do one of three things: cross once (one solution), run parallel forever (none), or sit exactly on top of each other (infinitely many)." Tie slopes to Unit 5: <em>same slope, different intercept → parallel → no solution; same slope, same intercept → identical → infinitely many.</em>
-- <strong>Symbolic tell:</strong> When you eliminate/substitute, the <em>variables themselves</em> vanish. If what's left is <strong>false</strong> (0 = 5) → no solution. If it's <strong>true</strong> (0 = 0) → infinitely many. This is the diagnostic — teach the student to <em>read the leftover statement</em>.
-- <strong>Applications:</strong> name the two unknowns, write two equations from the two facts (Unit 6 translation), then solve by whichever method fits, and <strong>check both</strong> against the story.</p>
+<p><strong>Teaching arc (concrete → pictorial → symbolic):</strong></p>
+<ul>
+<li><strong>Concrete / pictorial:</strong> "Two lines on a plane do one of three things: cross once (one solution), run parallel forever (none), or sit exactly on top of each other (infinitely many)." Tie slopes to Unit 5: <em>same slope, different intercept → parallel → no solution; same slope, same intercept → identical → infinitely many.</em></li>
+<li><strong>Symbolic tell:</strong> When you eliminate/substitute, the <em>variables themselves</em> vanish. If what's left is <strong>false</strong> (0 = 5) → no solution. If it's <strong>true</strong> (0 = 0) → infinitely many. This is the diagnostic — teach the student to <em>read the leftover statement</em>.</li>
+<li><strong>Applications:</strong> name the two unknowns, write two equations from the two facts (Unit 6 translation), then solve by whichever method fits, and <strong>check both</strong> against the story.</li>
+</ul>
 <p><strong>Worked examples:</strong></p>
 <p><em>Example 1 — no solution (parallel).</em> Solve y = 2x + 1 and y = 2x - 3.
 Substitute: 2x + 1 = 2x - 3. Subtract 2x from both sides: 1 = -3 — <strong>false</strong>. No (x, y) can fix that. <strong>No solution.</strong> (Both have slope 2, different intercepts → parallel, per Unit 5.)</p>
@@ -273,47 +319,59 @@ Let l = length, w = width. The two facts give two equations:
 $$l = w + 4 \qquad 2l + 2w = 28.$$
 Length is already isolated, so <strong>substitute</strong> (l = w + 4) into the perimeter equation: 2(w + 4) + 2w = 28 ⇒ 4w + 8 = 28 ⇒ 4w = 20 ⇒ w = 5. Then l = 5 + 4 = 9.
 Check in the story: length 9 is 4 more than width 5, and perimeter 2(9) + 2(5) = 18 + 10 = 28. <strong>Width 5, length 9.</strong></p>
-<p><strong>Watch for:</strong>
-- <strong>Calling 0 = 0 "no solution" or 0 = 5 "infinitely many."</strong> They're swapped constantly. Anchor it: a <strong>true</strong> leftover means <em>everything</em> works (infinite); a <strong>false</strong> leftover means <em>nothing</em> works (none).
-- <strong>Reversing the two relationships in word problems</strong> — writing 8a = total instead of counting tickets vs. counting dollars. Keep the two equations on different <em>units</em> (one counts items, one counts money) and label them (<code>misconceptions.md</code> §2 letter-as-object / variable reversal).
-- <strong>Forgetting to check against the story</strong>, not just the algebra — negative or fractional tickets signal a setup error.</p>
+<p><strong>Watch for:</strong></p>
+<ul>
+<li><strong>Calling 0 = 0 "no solution" or 0 = 5 "infinitely many."</strong> They're swapped constantly. Anchor it: a <strong>true</strong> leftover means <em>everything</em> works (infinite); a <strong>false</strong> leftover means <em>nothing</em> works (none).</li>
+<li><strong>Reversing the two relationships in word problems</strong> — writing 8a = total instead of counting tickets vs. counting dollars. Keep the two equations on different <em>units</em> (one counts items, one counts money) and label them (<code>misconceptions.md</code> §2 letter-as-object / variable reversal).</li>
+<li><strong>Forgetting to check against the story</strong>, not just the algebra — negative or fractional tickets signal a setup error.</li>
+</ul>
 <p><strong>Visuals to offer:</strong> For the special cases, a quick <strong>Template 2</strong> artifact showing the two <strong>parallel</strong> lines (no crossing) or the two lines <strong>coincident</strong> (one on top of the other) makes "none" and "infinitely many" visible. Compute endpoints; label slopes/intercepts.</p>
-<p><strong>Check for understanding (transfer):</strong>
-1. <a class="refcode" id="7.4.c1" href="#7.4.c1">#7.4.c1</a> "You solve a system and reach 7 = 7. How many solutions, and what do the graphs look like?"
-2. <a class="refcode" id="7.4.c2" href="#7.4.c2">#7.4.c2</a> "Two lines have the same slope. What two situations are still possible, and how does the algebra tell them apart?"
-3. <a class="refcode" id="7.4.c3" href="#7.4.c3">#7.4.c3</a> "A problem says '30 nickels and dimes worth $2.40.' Name your two variables and write the two equations — don't solve yet."</p>
+<p><strong>Check for understanding (transfer):</strong></p>
+<ol>
+<li><a class="refcode" id="7.4.c1" href="#7.4.c1">#7.4.c1</a> "You solve a system and reach 7 = 7. How many solutions, and what do the graphs look like?"</li>
+<li><a class="refcode" id="7.4.c2" href="#7.4.c2">#7.4.c2</a> "Two lines have the same slope. What two situations are still possible, and how does the algebra tell them apart?"</li>
+<li><a class="refcode" id="7.4.c3" href="#7.4.c3">#7.4.c3</a> "A problem says '30 nickels and dimes worth $2.40.' Name your two variables and write the two equations — don't solve yet."</li>
+</ol>
 <p><strong>Practice problems:</strong></p>
-<p><em>Set A — classify (one solution / none / infinitely many); if one, give it</em>
-1. <a class="refcode" id="7.4.1" href="#7.4.1">#7.4.1</a> y = 3x + 2 and y = 3x - 5
-2. <a class="refcode" id="7.4.2" href="#7.4.2">#7.4.2</a> x + y = 5 and 3x + 3y = 15
-3. <a class="refcode" id="7.4.3" href="#7.4.3">#7.4.3</a> y = x + 1 and y = -x + 7</p>
-<p><em>Set B — applications (set up two equations, solve, check the story)</em>
-4. <a class="refcode" id="7.4.4" href="#7.4.4">#7.4.4</a> Two numbers add to 30, and one is 6 more than the other. Find the numbers.
-5. <a class="refcode" id="7.4.5" href="#7.4.5">#7.4.5</a> A snack stand: 2 burgers and 1 fries cost $11; 1 burger and 2 fries cost $10. Find the price of a burger and of fries.
-6. <a class="refcode" id="7.4.6" href="#7.4.6">#7.4.6</a> A boat goes <strong>20 mph downstream</strong> (with the current) and <strong>4 mph upstream</strong> (against it). Find the boat's speed in still water and the speed of the current. (Hint: with the current the speeds add, against it they subtract.)
-7. <a class="refcode" id="7.4.7" href="#7.4.7">#7.4.7</a> <em>(mixture)</em> How many milliliters of a <strong>10%</strong> acid solution and a <strong>40%</strong> acid solution make <strong>40 mL</strong> of a <strong>25%</strong> solution?
-8. <a class="refcode" id="7.4.8" href="#7.4.8">#7.4.8</a> <em>(perimeter)</em> A rectangle's length is <strong>2 more than its width</strong> and its perimeter is <strong>24</strong>. Find the width and length.</p>
-<p><strong>Answer key (all verified):</strong>
-1. <strong>No solution</strong> — same slope 3, different intercepts (parallel); substituting gives 2 = -5, false.
-2. <strong>Infinitely many</strong> — eq.2 is eq.1 times 3 (same line); reduces to 0 = 0.
-3. <strong>One solution, (3, 4)</strong> — 4 = 3 + 1, 4 = -3 + 7.
-4. x + y = 30, x = y + 6 → (y + 6) + y = 30 ⇒ y = 12, x = 18. The numbers are <strong>18 and 12</strong> (18 + 12 = 30, 18 = 12 + 6).
-5. 2b + f = 11, b + 2f = 10 → eliminate: scale eq.2 by 2 → 2b + 4f = 20, subtract eq.1 → 3f = 9, f = 3, then b = 4. <strong>Burger $4, fries $3</strong> (2(4)+3 = 11, 4 + 2(3) = 10).
-6. Let b = boat speed in still water, c = current. Downstream the speeds add, upstream they subtract: b + c = 20, b − c = 4 → add → 2b = 24, b = 12, then c = 8. <strong>Boat 12 mph, current 8 mph</strong> (12 + 8 = 20, 12 − 8 = 4).
-7. Let x = mL of 10%, y = mL of 40%; one equation counts mL, one counts acid (25% of 40 = 10 mL): x + y = 40, 0.10x + 0.40y = 10. Clear decimals (×10): x + 4y = 100; subtract x + y = 40 → 3y = 60 ⇒ y = 20, then x = 20. <strong>20 mL of each</strong> (20 + 20 = 40; 0.10(20) + 0.40(20) = 2 + 8 = 10 mL acid).
-8. Let l = length, w = width: l = w + 2, 2l + 2w = 24. Substitute → 2(w + 2) + 2w = 24 ⇒ 4w + 4 = 24 ⇒ w = 5, then l = 7. <strong>Width 5, length 7</strong> (perimeter 2(7) + 2(5) = 24, and 7 = 5 + 2).</p>
+<p><em>Set A — classify (one solution / none / infinitely many); if one, give it</em></p>
+<ol>
+<li><a class="refcode" id="7.4.1" href="#7.4.1">#7.4.1</a> y = 3x + 2 and y = 3x - 5</li>
+<li><a class="refcode" id="7.4.2" href="#7.4.2">#7.4.2</a> x + y = 5 and 3x + 3y = 15</li>
+<li><a class="refcode" id="7.4.3" href="#7.4.3">#7.4.3</a> y = x + 1 and y = -x + 7</li>
+</ol>
+<p><em>Set B — applications (set up two equations, solve, check the story)</em></p>
+<ol start="4">
+<li><a class="refcode" id="7.4.4" href="#7.4.4">#7.4.4</a> Two numbers add to 30, and one is 6 more than the other. Find the numbers.</li>
+<li><a class="refcode" id="7.4.5" href="#7.4.5">#7.4.5</a> A snack stand: 2 burgers and 1 fries cost $11; 1 burger and 2 fries cost $10. Find the price of a burger and of fries.</li>
+<li><a class="refcode" id="7.4.6" href="#7.4.6">#7.4.6</a> A boat goes <strong>20 mph downstream</strong> (with the current) and <strong>4 mph upstream</strong> (against it). Find the boat's speed in still water and the speed of the current. (Hint: with the current the speeds add, against it they subtract.)</li>
+<li><a class="refcode" id="7.4.7" href="#7.4.7">#7.4.7</a> <em>(mixture)</em> How many milliliters of a <strong>10%</strong> acid solution and a <strong>40%</strong> acid solution make <strong>40 mL</strong> of a <strong>25%</strong> solution?</li>
+<li><a class="refcode" id="7.4.8" href="#7.4.8">#7.4.8</a> <em>(perimeter)</em> A rectangle's length is <strong>2 more than its width</strong> and its perimeter is <strong>24</strong>. Find the width and length.</li>
+</ol>
+<p><strong>Answer key (all verified):</strong></p>
+<ol>
+<li><strong>No solution</strong> — same slope 3, different intercepts (parallel); substituting gives 2 = -5, false.</li>
+<li><strong>Infinitely many</strong> — eq.2 is eq.1 times 3 (same line); reduces to 0 = 0.</li>
+<li><strong>One solution, (3, 4)</strong> — 4 = 3 + 1, 4 = -3 + 7.</li>
+<li>x + y = 30, x = y + 6 → (y + 6) + y = 30 ⇒ y = 12, x = 18. The numbers are <strong>18 and 12</strong> (18 + 12 = 30, 18 = 12 + 6).</li>
+<li>2b + f = 11, b + 2f = 10 → eliminate: scale eq.2 by 2 → 2b + 4f = 20, subtract eq.1 → 3f = 9, f = 3, then b = 4. <strong>Burger $4, fries $3</strong> (2(4)+3 = 11, 4 + 2(3) = 10).</li>
+<li>Let b = boat speed in still water, c = current. Downstream the speeds add, upstream they subtract: b + c = 20, b − c = 4 → add → 2b = 24, b = 12, then c = 8. <strong>Boat 12 mph, current 8 mph</strong> (12 + 8 = 20, 12 − 8 = 4).</li>
+<li>Let x = mL of 10%, y = mL of 40%; one equation counts mL, one counts acid (25% of 40 = 10 mL): x + y = 40, 0.10x + 0.40y = 10. Clear decimals (×10): x + 4y = 100; subtract x + y = 40 → 3y = 60 ⇒ y = 20, then x = 20. <strong>20 mL of each</strong> (20 + 20 = 40; 0.10(20) + 0.40(20) = 2 + 8 = 10 mL acid).</li>
+<li>Let l = length, w = width: l = w + 2, 2l + 2w = 24. Substitute → 2(w + 2) + 2w = 24 ⇒ 4w + 4 = 24 ⇒ w = 5, then l = 7. <strong>Width 5, length 7</strong> (perimeter 2(7) + 2(5) = 24, and 7 = 5 + 2).</li>
+</ol>
 <hr>
 <h2 id="wrap-up-interleaving">Wrap-up &amp; interleaving</h2>
 <p><strong>Consolidate:</strong> A system is two relationships at once; in the usual case its solution is the single (x, y) that satisfies <strong>both</strong> — the crossing point of two lines/functions (and sometimes there's none, or infinitely many — the 7.4 special cases). Three methods, each exact except graphing: <strong>graph</strong> (best for meaning and integer crossings), <strong>substitution</strong> (best when a variable is isolated), <strong>elimination</strong> (best for standard form, with scaling as the key move). Two special cases: <strong>parallel → no solution → false statement</strong>; <strong>same line → infinitely many → true statement</strong>. The non-negotiable habit: <strong>substitute the final pair back into both equations.</strong></p>
-<p><strong>Mix back in (spaced review, per <code>pedagogy.md</code>):</strong>
-- <strong>Unit 5</strong> — read off slope and intercept to <em>predict</em> before solving: "same slope? then expect parallel or identical." Graphing a system is pure Unit 5 graphing, twice.
-- <strong>Unit 6</strong> — every application is a Unit 6 translation with <em>two</em> unknowns and <em>two</em> facts; warm up with one-variable translation before a two-variable one.
-- <strong>Unit 2</strong> — the one-variable equation left after substitution/elimination is exactly a Unit 2 solve; slip in a two-step solve as a warm-up.
-- Choosing a <em>method</em> is itself a skill — give a mixed set and ask "graph, substitution, or elimination, and why?" before solving. Teach the read explicitly:
-  - <strong>A variable is already isolated</strong> (y = …, x = …) or trivially isolatable (coefficient 1, like x + y = 7) → <strong>substitution</strong> is cleaner — pour the expression straight in.
-  - <strong>Both equations are in standard form</strong> ax + by = c, <strong>especially with a matching or opposite coefficient pair</strong> (e.g. both 2x, or +3y and −3y) → <strong>elimination</strong> is cleaner — add or subtract to kill that variable on sight; if coefficients don't line up, scale one equation first.
-  - <strong>You only need to <em>see</em> / estimate the crossing, or to confirm a special case visually</strong> → <strong>graph</strong> — but switch to algebra the moment the answer isn't a clean integer pair.
-  - Worth a 10-second look before committing: e.g. y = 2x + 1 with 3x + y = 11 <em>screams</em> substitution (y is alone), while 3x + 2y = 12 with 5x − 2y = 4 <em>screams</em> elimination (the +2y/−2y add away).</p>
+<p><strong>Mix back in (spaced review, per <code>pedagogy.md</code>):</strong></p>
+<ul>
+<li><strong>Unit 5</strong> — read off slope and intercept to <em>predict</em> before solving: "same slope? then expect parallel or identical." Graphing a system is pure Unit 5 graphing, twice.</li>
+<li><strong>Unit 6</strong> — every application is a Unit 6 translation with <em>two</em> unknowns and <em>two</em> facts; warm up with one-variable translation before a two-variable one.</li>
+<li><strong>Unit 2</strong> — the one-variable equation left after substitution/elimination is exactly a Unit 2 solve; slip in a two-step solve as a warm-up.</li>
+<li>Choosing a <em>method</em> is itself a skill — give a mixed set and ask "graph, substitution, or elimination, and why?" before solving. Teach the read explicitly:</li>
+<li><strong>A variable is already isolated</strong> (y = …, x = …) or trivially isolatable (coefficient 1, like x + y = 7) → <strong>substitution</strong> is cleaner — pour the expression straight in.</li>
+<li><strong>Both equations are in standard form</strong> ax + by = c, <strong>especially with a matching or opposite coefficient pair</strong> (e.g. both 2x, or +3y and −3y) → <strong>elimination</strong> is cleaner — add or subtract to kill that variable on sight; if coefficients don't line up, scale one equation first.</li>
+<li><strong>You only need to <em>see</em> / estimate the crossing, or to confirm a special case visually</strong> → <strong>graph</strong> — but switch to algebra the moment the answer isn't a clean integer pair.</li>
+<li>Worth a 10-second look before committing: e.g. y = 2x + 1 with 3x + y = 11 <em>screams</em> substitution (y is alone), while 3x + 2y = 12 with 5x − 2y = 4 <em>screams</em> elimination (the +2y/−2y add away).</li>
+</ul>
 <p><strong>Progress Card should note:</strong> which methods are fluent vs. shaky (especially the <strong>scaling</strong> step in elimination); whether the student reliably <strong>finishes to the ordered pair</strong> rather than stopping at one variable; whether they <strong>check in both equations</strong> automatically; and whether they correctly read 0 = 0 vs. 0 = 5 for the special cases. Flag any lingering sign slips during subtraction-elimination (<code>misconceptions.md</code> §3) for targeted warm-ups.</p>
 </main>
 <footer><p>Generated from the unit source by <code>_verification/build_textbook.py</code>. Math by KaTeX.</p></footer>

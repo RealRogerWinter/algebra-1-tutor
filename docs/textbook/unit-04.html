@@ -18,32 +18,40 @@
 
 <blockquote>
 <p><strong>Prerequisites:</strong> Unit 2 (solving and evaluating expressions). Helped by Unit 3 — the <em>unit rate</em> idea returns here as a function's constant rate of change.
-<strong>By the end, the student can:</strong>
-- Decide whether a table, a set of pairs, a graph, or a rule is a function (each input is paired with exactly one output; the vertical line test).
-- Read and use f(x) notation; evaluate a function at a number and at a simple expression; explain why f(x) is <em>not</em> multiplication.
-- State the domain and range from a small table or list, and for a line.
-- Move the <em>same</em> relationship between table, graph, equation, and words, and tell linear from nonlinear from any of those.</p>
+<strong>By the end, the student can:</strong></p>
+<ul>
+<li>Decide whether a table, a set of pairs, a graph, or a rule is a function (each input is paired with exactly one output; the vertical line test).</li>
+<li>Read and use f(x) notation; evaluate a function at a number and at a simple expression; explain why f(x) is <em>not</em> multiplication.</li>
+<li>State the domain and range from a small table or list, and for a line.</li>
+<li>Move the <em>same</em> relationship between table, graph, equation, and words, and tell linear from nonlinear from any of those.</li>
+</ul>
 </blockquote>
 <h2 id="teaching-this-unit-orientation-for-the-tutor">Teaching this unit (orientation for the tutor)</h2>
 <p>Functions are the backbone of everything after this unit — once a student owns them, every later topic (lines, systems, sequences, quadratics) gets <em>narrated in function language</em>. So the goal here is fluency and comfort, not speed. From this unit on, when a line or rule shows up, name it as a function: "this line <em>is</em> a function; f(x)=2x+1 just names it."</p>
 <p>The arc is: (4.1) build the <em>one-output-per-input</em> idea with the <strong>vending-machine</strong> picture and the vertical line test; (4.2) name the rule with <strong>f(x)</strong> notation using the <strong>recipe</strong> picture, then pin down domain and range; (4.3) show that table ↔ graph ↔ equation ↔ words are four faces of <em>one</em> relationship, and split linear from nonlinear (constant rate of change → the seed of slope, forward to Unit 5).</p>
-<p><strong>The three biggest traps:</strong>
-1. <strong>"Two outputs is fine."</strong> Students often think <em>any</em> repetition breaks a function. The exact rule: two inputs <em>may</em> share an output (fine); one input may <em>not</em> have two outputs (broken). Drill the asymmetry directly.
-2. <strong>f(x) read as multiplication</strong> — "f times x." This is the single most important fix in 4.2. Name it early, every time. (Ties to the variable misconception, <code>misconceptions.md</code> §2 — letter as object/operation.)
-3. <strong>Sign slips when evaluating at negatives</strong>, e.g. f(-2) with a squared or doubled term. Lean on the substitution habit and <code>misconceptions.md</code> §3 (negatives).</p>
+<p><strong>The three biggest traps:</strong></p>
+<ol>
+<li><strong>"Two outputs is fine."</strong> Students often think <em>any</em> repetition breaks a function. The exact rule: two inputs <em>may</em> share an output (fine); one input may <em>not</em> have two outputs (broken). Drill the asymmetry directly.</li>
+<li><strong>f(x) read as multiplication</strong> — "f times x." This is the single most important fix in 4.2. Name it early, every time. (Ties to the variable misconception, <code>misconceptions.md</code> §2 — letter as object/operation.)</li>
+<li><strong>Sign slips when evaluating at negatives</strong>, e.g. f(-2) with a squared or doubled term. Lean on the substitution habit and <code>misconceptions.md</code> §3 (negatives).</li>
+</ol>
 <p><strong>Pacing:</strong> an adult who already evaluates expressions can move briskly through 4.1–4.2; spend the saved time on 4.3's representation-translation, which is where durable understanding lives. Use the <strong>backward-faded</strong> evaluation scripts from <code>pedagogy.md</code> if notation feels shaky. Interleave: every evaluation is also an order-of-operations and a negatives rep — call that out as a free callback to Units 1–2.</p>
 <hr>
 <h2 id="lesson-41-what-is-a-function">Lesson 4.1: What is a function</h2>
 <p><strong>Goal:</strong> Decide whether a table, set of pairs, graph, or rule is a function — using "each input is paired with exactly one output."</p>
 <p><strong>Why it matters:</strong> "Function" is the word the rest of the course is built on. Lines, sequences, and parabolas are all functions; getting the definition clean now pays off in every later unit.</p>
-<p><strong>New terms:</strong>
-- <a class="refcode" id="4.1.d1" href="#4.1.d1">#4.1.d1</a> <strong>Function</strong> — a <strong>pairing</strong> (a correspondence) that matches <strong>each input with exactly one output</strong>. The pairing can be given any way at all — a list of (input, output) pairs, a table, a graph, or a formula. What makes it a <em>function</em> is the one-output-per-input promise, not the form it comes in. (Heads-up: in 4.2 a <em>formula</em> like f(x)=3x−1 is called a <strong>rule</strong> — a rule is one common <em>way</em> to give a function's pairing, not the definition itself. A pair-list with no formula is still a function.)
-- <a class="refcode" id="4.1.d2" href="#4.1.d2">#4.1.d2</a> <strong>Input / output</strong> — what you feed in, and what comes back, written as a pair (input, output). The inputs form one set and the outputs form another; in 4.2 those sets get the names <strong>domain</strong> and <strong>range</strong>. (Later the input is also called the variable and the output its value.)
-- <a class="refcode" id="4.1.d3" href="#4.1.d3">#4.1.d3</a> <strong>Vertical line test</strong> — a graph is a function exactly when <strong>every vertical line</strong> hits it in <strong>at most one point</strong> (one hit, or none). If some vertical line hits the graph twice, that one input has two outputs, so it is not a function.</p>
-<p><strong>Teaching arc (concrete → pictorial → symbolic):</strong>
-- <strong>Concrete (vending machine — <code>metaphors.md</code> Functions A):</strong> "Press a button (input), get exactly one snack (output). Press B4 today and tomorrow — same snack both times. That reliable <em>pairing</em> of each button with one snack <em>is</em> what makes it a function." Then the key asymmetry: "Two different buttons can both give pretzels — two inputs paired to one output, totally fine. But one button can <em>not</em> sometimes give pretzels and sometimes give a soda — that machine is broken. One input paired to two outputs = not a function." Note there is no formula here — the machine just <em>pairs</em> buttons with snacks, and that is already a function.
-- <strong>Pictorial (input → output table / arrow map):</strong> draw inputs on the left, outputs on the right, arrows between — this <em>is</em> the pairing. It's a function if <strong>every input has exactly one arrow leaving it</strong>. Repeated <em>outputs</em> (two arrows landing on the same right-hand value) are fine; a <em>split input</em> (two arrows leaving one left-hand value) breaks it.
-- <strong>Symbolic / graphical (vertical line test):</strong> on a graph, an input is an x-value; a vertical line is "all the points with that one x." Sweep a vertical line across: a function lets it hit the graph <strong>at most once</strong> at every position. If a vertical line ever hits twice, that input has two outputs → not a function. Walk a finger left-to-right as an imaginary vertical line.</p>
+<p><strong>New terms:</strong></p>
+<ul>
+<li><a class="refcode" id="4.1.d1" href="#4.1.d1">#4.1.d1</a> <strong>Function</strong> — a <strong>pairing</strong> (a correspondence) that matches <strong>each input with exactly one output</strong>. The pairing can be given any way at all — a list of (input, output) pairs, a table, a graph, or a formula. What makes it a <em>function</em> is the one-output-per-input promise, not the form it comes in. (Heads-up: in 4.2 a <em>formula</em> like f(x)=3x−1 is called a <strong>rule</strong> — a rule is one common <em>way</em> to give a function's pairing, not the definition itself. A pair-list with no formula is still a function.)</li>
+<li><a class="refcode" id="4.1.d2" href="#4.1.d2">#4.1.d2</a> <strong>Input / output</strong> — what you feed in, and what comes back, written as a pair (input, output). The inputs form one set and the outputs form another; in 4.2 those sets get the names <strong>domain</strong> and <strong>range</strong>. (Later the input is also called the variable and the output its value.)</li>
+<li><a class="refcode" id="4.1.d3" href="#4.1.d3">#4.1.d3</a> <strong>Vertical line test</strong> — a graph is a function exactly when <strong>every vertical line</strong> hits it in <strong>at most one point</strong> (one hit, or none). If some vertical line hits the graph twice, that one input has two outputs, so it is not a function.</li>
+</ul>
+<p><strong>Teaching arc (concrete → pictorial → symbolic):</strong></p>
+<ul>
+<li><strong>Concrete (vending machine — <code>metaphors.md</code> Functions A):</strong> "Press a button (input), get exactly one snack (output). Press B4 today and tomorrow — same snack both times. That reliable <em>pairing</em> of each button with one snack <em>is</em> what makes it a function." Then the key asymmetry: "Two different buttons can both give pretzels — two inputs paired to one output, totally fine. But one button can <em>not</em> sometimes give pretzels and sometimes give a soda — that machine is broken. One input paired to two outputs = not a function." Note there is no formula here — the machine just <em>pairs</em> buttons with snacks, and that is already a function.</li>
+<li><strong>Pictorial (input → output table / arrow map):</strong> draw inputs on the left, outputs on the right, arrows between — this <em>is</em> the pairing. It's a function if <strong>every input has exactly one arrow leaving it</strong>. Repeated <em>outputs</em> (two arrows landing on the same right-hand value) are fine; a <em>split input</em> (two arrows leaving one left-hand value) breaks it.</li>
+<li><strong>Symbolic / graphical (vertical line test):</strong> on a graph, an input is an x-value; a vertical line is "all the points with that one x." Sweep a vertical line across: a function lets it hit the graph <strong>at most once</strong> at every position. If a vertical line ever hits twice, that input has two outputs → not a function. Walk a finger left-to-right as an imaginary vertical line.</li>
+</ul>
 <p>Always restate the definition as a one-liner the student can repeat: <em>"Each input is paired with exactly one output. Repeats are only a problem on the input side."</em></p>
 <p><strong>Worked examples:</strong></p>
 <p><em>Example 1 — a set of pairs (no formula needed).</em> Is {(1,2),(2,4),(3,6),(4,8)} a function?
@@ -76,64 +84,80 @@ Input 1 is paired with both 2 <em>and</em> 3 — one input, two outputs. <strong
 <p>Input 0 appears twice, giving 4 once and 9 once — two outputs for one input. <strong>No, not a function.</strong></p>
 <p><em>Example 5 — a graph (vertical line test).</em> A non-vertical straight line such as y=2x+1: sweep a vertical line across it — it touches exactly once everywhere. <strong>Function.</strong> A circle centered at the origin, or a sideways "U" (a parabola opening rightward): a vertical line through the middle hits it <strong>twice</strong>. <strong>Not a function.</strong>
 One straight line is the exception: a <strong>vertical</strong> line such as x=3 is <em>not</em> a function — every point on it shares the same input x=3, so that single input has infinitely many outputs. It is the cleanest case of "one input, many outputs."</p>
-<p><strong>Watch for:</strong>
-- <strong>"Any repeat means it's not a function."</strong> Tell: student rejects {(1,5),(2,5)}. Repair: back to the vending machine — "two buttons, same snack: is the machine broken? No." Then point only at the <em>input</em> column. (Root: same asymmetry as <code>misconceptions.md</code> §2 — read what the structure actually says, not a memorized "no repeats" rule.)
-- <strong>Vertical vs. horizontal line confusion.</strong> Tell: student sweeps a <em>horizontal</em> line. Repair: "an input is an x; the line that gathers one x's points is <em>vertical</em>."</p>
+<p><strong>Watch for:</strong></p>
+<ul>
+<li><strong>"Any repeat means it's not a function."</strong> Tell: student rejects {(1,5),(2,5)}. Repair: back to the vending machine — "two buttons, same snack: is the machine broken? No." Then point only at the <em>input</em> column. (Root: same asymmetry as <code>misconceptions.md</code> §2 — read what the structure actually says, not a memorized "no repeats" rule.)</li>
+<li><strong>Vertical vs. horizontal line confusion.</strong> Tell: student sweeps a <em>horizontal</em> line. Repair: "an input is an x; the line that gathers one x's points is <em>vertical</em>."</li>
+</ul>
 <p><strong>Visuals to offer:</strong> A clean arrow-map (inputs→outputs) reads fine as plain text or a small table — no artifact needed. For the vertical line test, offer an <strong>SVG artifact</strong> of a line vs. a sideways parabola with a dashed vertical test line (<code>visuals.md</code> Template 2 for the line; compute points, label the double-hit). Pair any picture with the one-line rule.</p>
-<p><strong>Check for understanding (transfer):</strong>
-1. <a class="refcode" id="4.1.c1" href="#4.1.c1">#4.1.c1</a> "Make me a set of three pairs that is <em>not</em> a function, and tell me which input breaks it."
-2. <a class="refcode" id="4.1.c2" href="#4.1.c2">#4.1.c2</a> "Here's a table where the output 7 shows up three times — can it still be a function? What would I have to check?"
-3. <a class="refcode" id="4.1.c3" href="#4.1.c3">#4.1.c3</a> "Why does the <em>vertical</em> line test, and not a horizontal one, decide it?" (Model answer to steer toward: a vertical line gathers all the points that share one <em>input</em>; two hits means one input with two outputs = broken. A horizontal line would gather all the points that share one <em>output</em> — but two inputs sharing an output is <em>allowed</em>, so a horizontal line tests nothing about being a function. This ties straight back to the lesson's asymmetry.)</p>
+<p><strong>Check for understanding (transfer):</strong></p>
+<ol>
+<li><a class="refcode" id="4.1.c1" href="#4.1.c1">#4.1.c1</a> "Make me a set of three pairs that is <em>not</em> a function, and tell me which input breaks it."</li>
+<li><a class="refcode" id="4.1.c2" href="#4.1.c2">#4.1.c2</a> "Here's a table where the output 7 shows up three times — can it still be a function? What would I have to check?"</li>
+<li><a class="refcode" id="4.1.c3" href="#4.1.c3">#4.1.c3</a> "Why does the <em>vertical</em> line test, and not a horizontal one, decide it?" (Model answer to steer toward: a vertical line gathers all the points that share one <em>input</em>; two hits means one input with two outputs = broken. A horizontal line would gather all the points that share one <em>output</em> — but two inputs sharing an output is <em>allowed</em>, so a horizontal line tests nothing about being a function. This ties straight back to the lesson's asymmetry.)</li>
+</ol>
 <p><strong>Practice problems:</strong></p>
-<p><em>A. Sets of pairs — function or not? (give the reason)</em>
-1. <a class="refcode" id="4.1.1" href="#4.1.1">#4.1.1</a> {(0,1),(1,2),(2,3)}
-2. <a class="refcode" id="4.1.2" href="#4.1.2">#4.1.2</a> {(2,4),(3,4),(5,4)}
-3. <a class="refcode" id="4.1.3" href="#4.1.3">#4.1.3</a> {(1,1),(1,2),(3,4)}
-4. <a class="refcode" id="4.1.4" href="#4.1.4">#4.1.4</a> {(-1,0),(0,1),(1,0)}
-5. <a class="refcode" id="4.1.5" href="#4.1.5">#4.1.5</a> {(5,5),(5,6)}</p>
-<p><em>B. Tables — function or not?</em>
-6. <a class="refcode" id="4.1.6" href="#4.1.6">#4.1.6</a> inputs 1,2,3,4 → outputs 2,2,2,2
-7. <a class="refcode" id="4.1.7" href="#4.1.7">#4.1.7</a> inputs 3,4,3 → outputs 1,2,8
-8. <a class="refcode" id="4.1.8" href="#4.1.8">#4.1.8</a> inputs -2,-1,0,1 → outputs 4,1,0,1</p>
-<p><em>C. Descriptions / graphs — function or not?</em>
-9. <a class="refcode" id="4.1.9" href="#4.1.9">#4.1.9</a> "Each person is matched to their birth year." (input = person)
-10. <a class="refcode" id="4.1.10" href="#4.1.10">#4.1.10</a> "Each birth year is matched to a person born then." (input = year)
-11. <a class="refcode" id="4.1.11" href="#4.1.11">#4.1.11</a> The graph of a single non-vertical straight line.
-12. <a class="refcode" id="4.1.12" href="#4.1.12">#4.1.12</a> The graph of a circle.
-13. <a class="refcode" id="4.1.13" href="#4.1.13">#4.1.13</a> The graph of the vertical line x=3.
-14. <a class="refcode" id="4.1.14" href="#4.1.14">#4.1.14</a> "Each student is paired with the one chair they sit in." (input = student)</p>
-<p><strong>Answer key:</strong>
-1. <strong>Function</strong> — inputs 0,1,2 all distinct.
-2. <strong>Function</strong> — output 4 repeats, but inputs 2,3,5 are distinct (two buttons, same snack).
-3. <strong>Not a function</strong> — input 1 gives both 1 and 2.
-4. <strong>Function</strong> — output 0 repeats, but inputs -1,0,1 are distinct.
-5. <strong>Not a function</strong> — input 5 gives both 5 and 6.
-6. <strong>Function</strong> — inputs all distinct; identical outputs are allowed.
-7. <strong>Not a function</strong> — input 3 appears twice with outputs 1 and 8.
-8. <strong>Function</strong> — inputs -2,-1,0,1 distinct; repeated output 1 is fine.
-9. <strong>Function</strong> — each person has exactly one birth year.
-10. <strong>Not a function</strong> — a year can match many people (one input → many outputs).
-11. <strong>Function</strong> — a non-vertical line passes the vertical line test (each x has exactly one y).
-12. <strong>Not a function</strong> — a vertical line through it hits twice.
-13. <strong>Not a function</strong> — every point shares the input x=3, so that one input has infinitely many outputs; it fails the vertical line test.
-14. <strong>Function</strong> — each input (a student) is paired with exactly one output (a chair). It's a plain pairing, no formula needed.</p>
+<p><em>A. Sets of pairs — function or not? (give the reason)</em></p>
+<ol>
+<li><a class="refcode" id="4.1.1" href="#4.1.1">#4.1.1</a> {(0,1),(1,2),(2,3)}</li>
+<li><a class="refcode" id="4.1.2" href="#4.1.2">#4.1.2</a> {(2,4),(3,4),(5,4)}</li>
+<li><a class="refcode" id="4.1.3" href="#4.1.3">#4.1.3</a> {(1,1),(1,2),(3,4)}</li>
+<li><a class="refcode" id="4.1.4" href="#4.1.4">#4.1.4</a> {(-1,0),(0,1),(1,0)}</li>
+<li><a class="refcode" id="4.1.5" href="#4.1.5">#4.1.5</a> {(5,5),(5,6)}</li>
+</ol>
+<p><em>B. Tables — function or not?</em></p>
+<ol start="6">
+<li><a class="refcode" id="4.1.6" href="#4.1.6">#4.1.6</a> inputs 1,2,3,4 → outputs 2,2,2,2</li>
+<li><a class="refcode" id="4.1.7" href="#4.1.7">#4.1.7</a> inputs 3,4,3 → outputs 1,2,8</li>
+<li><a class="refcode" id="4.1.8" href="#4.1.8">#4.1.8</a> inputs -2,-1,0,1 → outputs 4,1,0,1</li>
+</ol>
+<p><em>C. Descriptions / graphs — function or not?</em></p>
+<ol start="9">
+<li><a class="refcode" id="4.1.9" href="#4.1.9">#4.1.9</a> "Each person is matched to their birth year." (input = person)</li>
+<li><a class="refcode" id="4.1.10" href="#4.1.10">#4.1.10</a> "Each birth year is matched to a person born then." (input = year)</li>
+<li><a class="refcode" id="4.1.11" href="#4.1.11">#4.1.11</a> The graph of a single non-vertical straight line.</li>
+<li><a class="refcode" id="4.1.12" href="#4.1.12">#4.1.12</a> The graph of a circle.</li>
+<li><a class="refcode" id="4.1.13" href="#4.1.13">#4.1.13</a> The graph of the vertical line x=3.</li>
+<li><a class="refcode" id="4.1.14" href="#4.1.14">#4.1.14</a> "Each student is paired with the one chair they sit in." (input = student)</li>
+</ol>
+<p><strong>Answer key:</strong></p>
+<ol>
+<li><strong>Function</strong> — inputs 0,1,2 all distinct.</li>
+<li><strong>Function</strong> — output 4 repeats, but inputs 2,3,5 are distinct (two buttons, same snack).</li>
+<li><strong>Not a function</strong> — input 1 gives both 1 and 2.</li>
+<li><strong>Function</strong> — output 0 repeats, but inputs -1,0,1 are distinct.</li>
+<li><strong>Not a function</strong> — input 5 gives both 5 and 6.</li>
+<li><strong>Function</strong> — inputs all distinct; identical outputs are allowed.</li>
+<li><strong>Not a function</strong> — input 3 appears twice with outputs 1 and 8.</li>
+<li><strong>Function</strong> — inputs -2,-1,0,1 distinct; repeated output 1 is fine.</li>
+<li><strong>Function</strong> — each person has exactly one birth year.</li>
+<li><strong>Not a function</strong> — a year can match many people (one input → many outputs).</li>
+<li><strong>Function</strong> — a non-vertical line passes the vertical line test (each x has exactly one y).</li>
+<li><strong>Not a function</strong> — a vertical line through it hits twice.</li>
+<li><strong>Not a function</strong> — every point shares the input x=3, so that one input has infinitely many outputs; it fails the vertical line test.</li>
+<li><strong>Function</strong> — each input (a student) is paired with exactly one output (a chair). It's a plain pairing, no formula needed.</li>
+</ol>
 <hr>
 <h2 id="lesson-42-function-notation-fx-domain-range">Lesson 4.2: Function notation f(x), domain &amp; range</h2>
 <p><strong>Goal:</strong> Read and use f(x); evaluate at numbers and simple expressions; state domain and range.</p>
 <p><strong>Why it matters:</strong> f(x) is the standard language for "the output of this rule at this input." Every later unit writes lines, systems, and curves this way, so comfort here removes friction everywhere after.</p>
-<p><strong>New terms:</strong>
-- <a class="refcode" id="4.2.d1" href="#4.2.d1">#4.2.d1</a> <strong>Rule</strong> — a <strong>formula</strong> that gives a function's pairing, like f(x)=3x−1. A rule is <em>one way</em> to specify a function (the way that comes with a computation); a table or a pair-list is another. So "rule" here means the formula, not the definition of "function" from 4.1.
-- <a class="refcode" id="4.2.d2" href="#4.2.d2">#4.2.d2</a> <strong>Function notation f(x)</strong> — a <em>name</em> for a rule (f) together with what you fed it (x). Read "f of x." It is <strong>not</strong> "f times x."
-- <a class="refcode" id="4.2.d3" href="#4.2.d3">#4.2.d3</a> <strong>Evaluate</strong> — substitute a value for the input and compute. f(2) means "run 2 through the rule f."
-- <a class="refcode" id="4.2.d4" href="#4.2.d4">#4.2.d4</a> <strong>Independent / dependent variable</strong> — the input x is the <strong>independent variable</strong> (you pick it freely); the output f(x) is the <strong>dependent variable</strong> (its value <em>depends</em> on x). On a graph, the input goes on the horizontal axis and the output on the vertical (pre-loads Unit 5).
-- <a class="refcode" id="4.2.d5" href="#4.2.d5">#4.2.d5</a> <strong>Domain</strong> — the set of allowed inputs.
-- <a class="refcode" id="4.2.d6" href="#4.2.d6">#4.2.d6</a> <strong>Range</strong> — the set of outputs you actually get.
-- <a class="refcode" id="4.2.d7" href="#4.2.d7">#4.2.d7</a> <strong>Discrete domain</strong> — the inputs are <em>separate</em> values (a finite list, or counting numbers like 0,1,2,3,…). You plot them as <strong>separate dots</strong> and you list them in braces, e.g. {1,2,3,4}. <em>Don't connect the dots.</em>
-- <a class="refcode" id="4.2.d8" href="#4.2.d8">#4.2.d8</a> <strong>Continuous domain</strong> — the inputs are <em>every</em> real number across a range (no gaps). The graph is an <strong>unbroken</strong> line or curve, so you describe it in words (e.g. "all real numbers") rather than listing them.</p>
-<p><strong>Teaching arc (concrete → pictorial → symbolic):</strong>
-- <strong>Concrete (recipe — <code>metaphors.md</code> Functions B):</strong> "f(x)=3x-1 is the recipe <em>triple it, then subtract one</em>. The name of the recipe is f. The thing in the parentheses is what you drop into the bowl. f(2) = 'run 2 through the recipe': 3(2)-1=5." Say plainly: "The parentheses here mean <em>feed this in</em>, not <em>multiply</em>."
-- <strong>Pictorial (the machine with a readout):</strong> input goes in the top, the rule runs, the output f(2)=5 appears on the display. Domain = every input the machine accepts; range = every output that can light up.
-- <strong>Symbolic:</strong> f(2)=3(2)-1=6-1=5. Show the substitution explicitly with parentheses <em>around</em> the input — that's the habit that survives negatives. Then evaluate at an <em>expression</em>: f(a+1)=3(a+1)-1=3a+3-1=3a+2 — "feed a+1 wherever x was."</p>
+<p><strong>New terms:</strong></p>
+<ul>
+<li><a class="refcode" id="4.2.d1" href="#4.2.d1">#4.2.d1</a> <strong>Rule</strong> — a <strong>formula</strong> that gives a function's pairing, like f(x)=3x−1. A rule is <em>one way</em> to specify a function (the way that comes with a computation); a table or a pair-list is another. So "rule" here means the formula, not the definition of "function" from 4.1.</li>
+<li><a class="refcode" id="4.2.d2" href="#4.2.d2">#4.2.d2</a> <strong>Function notation f(x)</strong> — a <em>name</em> for a rule (f) together with what you fed it (x). Read "f of x." It is <strong>not</strong> "f times x."</li>
+<li><a class="refcode" id="4.2.d3" href="#4.2.d3">#4.2.d3</a> <strong>Evaluate</strong> — substitute a value for the input and compute. f(2) means "run 2 through the rule f."</li>
+<li><a class="refcode" id="4.2.d4" href="#4.2.d4">#4.2.d4</a> <strong>Independent / dependent variable</strong> — the input x is the <strong>independent variable</strong> (you pick it freely); the output f(x) is the <strong>dependent variable</strong> (its value <em>depends</em> on x). On a graph, the input goes on the horizontal axis and the output on the vertical (pre-loads Unit 5).</li>
+<li><a class="refcode" id="4.2.d5" href="#4.2.d5">#4.2.d5</a> <strong>Domain</strong> — the set of allowed inputs.</li>
+<li><a class="refcode" id="4.2.d6" href="#4.2.d6">#4.2.d6</a> <strong>Range</strong> — the set of outputs you actually get.</li>
+<li><a class="refcode" id="4.2.d7" href="#4.2.d7">#4.2.d7</a> <strong>Discrete domain</strong> — the inputs are <em>separate</em> values (a finite list, or counting numbers like 0,1,2,3,…). You plot them as <strong>separate dots</strong> and you list them in braces, e.g. {1,2,3,4}. <em>Don't connect the dots.</em></li>
+<li><a class="refcode" id="4.2.d8" href="#4.2.d8">#4.2.d8</a> <strong>Continuous domain</strong> — the inputs are <em>every</em> real number across a range (no gaps). The graph is an <strong>unbroken</strong> line or curve, so you describe it in words (e.g. "all real numbers") rather than listing them.</li>
+</ul>
+<p><strong>Teaching arc (concrete → pictorial → symbolic):</strong></p>
+<ul>
+<li><strong>Concrete (recipe — <code>metaphors.md</code> Functions B):</strong> "f(x)=3x-1 is the recipe <em>triple it, then subtract one</em>. The name of the recipe is f. The thing in the parentheses is what you drop into the bowl. f(2) = 'run 2 through the recipe': 3(2)-1=5." Say plainly: "The parentheses here mean <em>feed this in</em>, not <em>multiply</em>."</li>
+<li><strong>Pictorial (the machine with a readout):</strong> input goes in the top, the rule runs, the output f(2)=5 appears on the display. Domain = every input the machine accepts; range = every output that can light up.</li>
+<li><strong>Symbolic:</strong> f(2)=3(2)-1=6-1=5. Show the substitution explicitly with parentheses <em>around</em> the input — that's the habit that survives negatives. Then evaluate at an <em>expression</em>: f(a+1)=3(a+1)-1=3a+3-1=3a+2 — "feed a+1 wherever x was."</li>
+</ul>
 <p>For domain and range, stay concrete: from a <em>table or list</em>, the domain is just the input column and the range is the (de-duplicated) output column. For a <em>line</em> like f(x)=3x-1, any real number is an allowed input and any real number can come out, so domain and range are both <strong>all real numbers</strong>.</p>
 <p><strong>Worked examples:</strong></p>
 <p><em>Example 1 — f(x)=3x-1 at several inputs.</em>
@@ -168,67 +192,89 @@ $$f(2a)=3(2a)-1=6a-1.$$
 </tbody>
 </table>
 <p><strong>Domain</strong> = {1,2,3,4}; <strong>Range</strong> = {5,7,9} (list each output once).</p>
-<p><em>Example 6 — discrete vs. continuous domain (why braces for one, "all reals" for the other).</em> This is the difference between Example 5's table and the line f(x)=3x−1.
-- A <strong>table or pair-list</strong> gives a <strong>discrete</strong> domain — a handful of <em>separate</em> inputs. You plot them as separate dots and list them in braces. Concrete case: tickets cost \$12 each, so the cost of n tickets is t(n)=12n. You can buy 0, 1, 2, 3, … tickets but never 2.5, so the domain is the <em>separate</em> whole numbers {0,1,2,3,…} — separate dots, <strong>don't connect them</strong>.
-- A <strong>line</strong> like f(x)=3x−1 accepts <strong>every</strong> real number in between — there are no gaps — so its domain is <strong>continuous</strong>: an unbroken line, described in words as "all real numbers." Concrete case: a candle's height after t hours, for any t from 0 to 5; time can be 2.5 hours or 2.501 hours, so the inputs fill the whole range and the graph is an unbroken curve.</p>
+<p><em>Example 6 — discrete vs. continuous domain (why braces for one, "all reals" for the other).</em> This is the difference between Example 5's table and the line f(x)=3x−1.</p>
+<ul>
+<li>A <strong>table or pair-list</strong> gives a <strong>discrete</strong> domain — a handful of <em>separate</em> inputs. You plot them as separate dots and list them in braces. Concrete case: tickets cost \$12 each, so the cost of n tickets is t(n)=12n. You can buy 0, 1, 2, 3, … tickets but never 2.5, so the domain is the <em>separate</em> whole numbers {0,1,2,3,…} — separate dots, <strong>don't connect them</strong>.</li>
+<li>A <strong>line</strong> like f(x)=3x−1 accepts <strong>every</strong> real number in between — there are no gaps — so its domain is <strong>continuous</strong>: an unbroken line, described in words as "all real numbers." Concrete case: a candle's height after t hours, for any t from 0 to 5; time can be 2.5 hours or 2.501 hours, so the inputs fill the whole range and the graph is an unbroken curve.</li>
+</ul>
 <p>So the form of the answer follows the domain: a discrete domain → list in braces {…}; a continuous domain → say "all real numbers" (or "all real numbers from 0 to 5"). The one-line check: <em>can the input land between two of your values?</em> If no (tickets), it's discrete dots; if yes (hours), it's a continuous line. (No interval notation yet — that's later; words are enough here.)</p>
-<p><strong>Watch for:</strong>
-- <strong>f(x) as multiplication</strong> — the headline misconception of this lesson. Tell: "f(2)=2f" or treating f as a number. Repair: name it — "f is the recipe's <em>name</em>; the parentheses say <em>what we fed it</em>." Re-read it aloud as "f of 2."
-- <strong>Sign loss at negatives</strong> (<code>misconceptions.md</code> §3). Tell: g(-2)=-3 (computed -2²+1). Repair: "substitute with parentheses: (-2)². What is a negative squared?"
-- <strong>Listing the range with duplicates.</strong> Range is a <em>set</em> — list 5 once even if it appears twice.
-- <strong>Connecting the dots on a discrete domain (or listing a continuous one).</strong> Tell: a student draws a solid line through the ticket-cost dots, or tries to <em>list</em> the inputs of a line. Repair with the one-line check — "can the input land between two of your values?" Tickets can't (discrete dots); hours can (continuous line).</p>
+<p><strong>Watch for:</strong></p>
+<ul>
+<li><strong>f(x) as multiplication</strong> — the headline misconception of this lesson. Tell: "f(2)=2f" or treating f as a number. Repair: name it — "f is the recipe's <em>name</em>; the parentheses say <em>what we fed it</em>." Re-read it aloud as "f of 2."</li>
+<li><strong>Sign loss at negatives</strong> (<code>misconceptions.md</code> §3). Tell: g(-2)=-3 (computed -2²+1). Repair: "substitute with parentheses: (-2)². What is a negative squared?"</li>
+<li><strong>Listing the range with duplicates.</strong> Range is a <em>set</em> — list 5 once even if it appears twice.</li>
+<li><strong>Connecting the dots on a discrete domain (or listing a continuous one).</strong> Tell: a student draws a solid line through the ticket-cost dots, or tries to <em>list</em> the inputs of a line. Repair with the one-line check — "can the input land between two of your values?" Tickets can't (discrete dots); hours can (continuous line).</li>
+</ul>
 <p><strong>Visuals to offer:</strong> none needed for evaluation. For domain/range of a <em>line</em>, a small <strong>SVG line graph</strong> (<code>visuals.md</code> Template 2) with a sentence — "the line runs left-to-right forever and up-down forever, so domain and range are all real numbers" — helps the "all reals" idea land.</p>
-<p><strong>Check for understanding (transfer):</strong>
-1. <a class="refcode" id="4.2.c1" href="#4.2.c1">#4.2.c1</a> "With h(x)=2x+1, find h(-3), and tell me each step out loud."
-2. <a class="refcode" id="4.2.c2" href="#4.2.c2">#4.2.c2</a> "Someone reads f(5) as 'f times 5'. In one sentence, what's wrong?"
-3. <a class="refcode" id="4.2.c3" href="#4.2.c3">#4.2.c3</a> "Give me the domain and range of {(0,2),(1,2),(2,8)} — and explain why 2 is written once in the range."</p>
+<p><strong>Check for understanding (transfer):</strong></p>
+<ol>
+<li><a class="refcode" id="4.2.c1" href="#4.2.c1">#4.2.c1</a> "With h(x)=2x+1, find h(-3), and tell me each step out loud."</li>
+<li><a class="refcode" id="4.2.c2" href="#4.2.c2">#4.2.c2</a> "Someone reads f(5) as 'f times 5'. In one sentence, what's wrong?"</li>
+<li><a class="refcode" id="4.2.c3" href="#4.2.c3">#4.2.c3</a> "Give me the domain and range of {(0,2),(1,2),(2,8)} — and explain why 2 is written once in the range."</li>
+</ol>
 <p><strong>Practice problems:</strong></p>
-<p><em>A. Evaluate f(x)=3x-1.</em>
-1. <a class="refcode" id="4.2.1" href="#4.2.1">#4.2.1</a> f(2)
-2. <a class="refcode" id="4.2.2" href="#4.2.2">#4.2.2</a> f(0)
-3. <a class="refcode" id="4.2.3" href="#4.2.3">#4.2.3</a> f(-2)
-4. <a class="refcode" id="4.2.4" href="#4.2.4">#4.2.4</a> f(5)
-5. <a class="refcode" id="4.2.5" href="#4.2.5">#4.2.5</a> f(-1)</p>
-<p><em>B. Evaluate g(x)=x²+1.</em>
-6. <a class="refcode" id="4.2.6" href="#4.2.6">#4.2.6</a> g(3)
-7. <a class="refcode" id="4.2.7" href="#4.2.7">#4.2.7</a> g(0)
-8. <a class="refcode" id="4.2.8" href="#4.2.8">#4.2.8</a> g(-2)
-9. <a class="refcode" id="4.2.9" href="#4.2.9">#4.2.9</a> g(1)</p>
-<p><em>C. Evaluate (mixed rules).</em>
-10. <a class="refcode" id="4.2.10" href="#4.2.10">#4.2.10</a> q(x)=5-2x: find q(4)
-11. <a class="refcode" id="4.2.11" href="#4.2.11">#4.2.11</a> r(x)=x²-3: find r(-3)
-12. <a class="refcode" id="4.2.12" href="#4.2.12">#4.2.12</a> p(x)=4x+2: find p(-1)</p>
-<p><em>D. Domain &amp; range (from the explicit data).</em>
-13. <a class="refcode" id="4.2.13" href="#4.2.13">#4.2.13</a> State domain and range of {(1,3),(2,6),(3,9)}.
-14. <a class="refcode" id="4.2.14" href="#4.2.14">#4.2.14</a> State domain and range of {(-2,4),(-1,1),(0,0),(1,1)}.
-15. <a class="refcode" id="4.2.15" href="#4.2.15">#4.2.15</a> State the domain and range of the line f(x)=3x-1.</p>
-<p><em>E. Discrete or continuous domain? (say which, and why)</em>
-16. <a class="refcode" id="4.2.16" href="#4.2.16">#4.2.16</a> A pizza costs \$8; p(n)=8n gives the cost of n whole pizzas.
-17. <a class="refcode" id="4.2.17" href="#4.2.17">#4.2.17</a> A car's distance d(t) after t hours, for any t from 0 to 4.
-18. <a class="refcode" id="4.2.18" href="#4.2.18">#4.2.18</a> The line f(x)=3x-1.</p>
-<p><strong>Answer key:</strong>
-1. f(2)=5  2. f(0)=-1  3. f(-2)=-7  4. f(5)=14  5. f(-1)=-4
-6. g(3)=10  7. g(0)=1  8. g(-2)=5  9. g(1)=2
-10. q(4)=5-8=-3  11. r(-3)=9-3=6  12. p(-1)=-4+2=-2
-13. Domain {1,2,3}, Range {3,6,9}.
-14. Domain {-2,-1,0,1}, Range {0,1,4} (output 1 listed once).
-15. Domain: all real numbers; Range: all real numbers.
-16. <strong>Discrete</strong> — you can only buy a whole number of pizzas (0,1,2,…), never 2.5, so the inputs are separate dots.
-17. <strong>Continuous</strong> — time can be any real number from 0 to 4 (2.5 hours is fine), so the inputs fill the range and the graph is an unbroken curve.
-18. <strong>Continuous</strong> — a line accepts every real number with no gaps, so its domain is an unbroken line.</p>
+<p><em>A. Evaluate f(x)=3x-1.</em></p>
+<ol>
+<li><a class="refcode" id="4.2.1" href="#4.2.1">#4.2.1</a> f(2)</li>
+<li><a class="refcode" id="4.2.2" href="#4.2.2">#4.2.2</a> f(0)</li>
+<li><a class="refcode" id="4.2.3" href="#4.2.3">#4.2.3</a> f(-2)</li>
+<li><a class="refcode" id="4.2.4" href="#4.2.4">#4.2.4</a> f(5)</li>
+<li><a class="refcode" id="4.2.5" href="#4.2.5">#4.2.5</a> f(-1)</li>
+</ol>
+<p><em>B. Evaluate g(x)=x²+1.</em></p>
+<ol start="6">
+<li><a class="refcode" id="4.2.6" href="#4.2.6">#4.2.6</a> g(3)</li>
+<li><a class="refcode" id="4.2.7" href="#4.2.7">#4.2.7</a> g(0)</li>
+<li><a class="refcode" id="4.2.8" href="#4.2.8">#4.2.8</a> g(-2)</li>
+<li><a class="refcode" id="4.2.9" href="#4.2.9">#4.2.9</a> g(1)</li>
+</ol>
+<p><em>C. Evaluate (mixed rules).</em></p>
+<ol start="10">
+<li><a class="refcode" id="4.2.10" href="#4.2.10">#4.2.10</a> q(x)=5-2x: find q(4)</li>
+<li><a class="refcode" id="4.2.11" href="#4.2.11">#4.2.11</a> r(x)=x²-3: find r(-3)</li>
+<li><a class="refcode" id="4.2.12" href="#4.2.12">#4.2.12</a> p(x)=4x+2: find p(-1)</li>
+</ol>
+<p><em>D. Domain &amp; range (from the explicit data).</em></p>
+<ol start="13">
+<li><a class="refcode" id="4.2.13" href="#4.2.13">#4.2.13</a> State domain and range of {(1,3),(2,6),(3,9)}.</li>
+<li><a class="refcode" id="4.2.14" href="#4.2.14">#4.2.14</a> State domain and range of {(-2,4),(-1,1),(0,0),(1,1)}.</li>
+<li><a class="refcode" id="4.2.15" href="#4.2.15">#4.2.15</a> State the domain and range of the line f(x)=3x-1.</li>
+</ol>
+<p><em>E. Discrete or continuous domain? (say which, and why)</em></p>
+<ol start="16">
+<li><a class="refcode" id="4.2.16" href="#4.2.16">#4.2.16</a> A pizza costs \$8; p(n)=8n gives the cost of n whole pizzas.</li>
+<li><a class="refcode" id="4.2.17" href="#4.2.17">#4.2.17</a> A car's distance d(t) after t hours, for any t from 0 to 4.</li>
+<li><a class="refcode" id="4.2.18" href="#4.2.18">#4.2.18</a> The line f(x)=3x-1.</li>
+</ol>
+<p><strong>Answer key:</strong></p>
+<ol>
+<li>f(2)=5  2. f(0)=-1  3. f(-2)=-7  4. f(5)=14  5. f(-1)=-4</li>
+<li>g(3)=10  7. g(0)=1  8. g(-2)=5  9. g(1)=2</li>
+<li>q(4)=5-8=-3  11. r(-3)=9-3=6  12. p(-1)=-4+2=-2</li>
+<li>Domain {1,2,3}, Range {3,6,9}.</li>
+<li>Domain {-2,-1,0,1}, Range {0,1,4} (output 1 listed once).</li>
+<li>Domain: all real numbers; Range: all real numbers.</li>
+<li><strong>Discrete</strong> — you can only buy a whole number of pizzas (0,1,2,…), never 2.5, so the inputs are separate dots.</li>
+<li><strong>Continuous</strong> — time can be any real number from 0 to 4 (2.5 hours is fine), so the inputs fill the range and the graph is an unbroken curve.</li>
+<li><strong>Continuous</strong> — a line accepts every real number with no gaps, so its domain is an unbroken line.</li>
+</ol>
 <hr>
 <h2 id="lesson-43-multiple-representations-linear-vs-nonlinear">Lesson 4.3: Multiple representations; linear vs. nonlinear</h2>
 <p><strong>Goal:</strong> Move one relationship between table, graph, equation, and words; tell linear from nonlinear.</p>
 <p><strong>Why it matters:</strong> A function rarely arrives in your preferred form. Reading the <em>same</em> relationship as a table, a picture, an equation, or a sentence — and spotting when it's a straight line — is exactly the fluency Unit 5 (graphing, slope) and Unit 9 (linear vs. exponential) build on.</p>
-<p><strong>New terms:</strong>
-- <a class="refcode" id="4.3.d1" href="#4.3.d1">#4.3.d1</a> <strong>Linear function</strong> — constant rate of change; its graph is a straight line; its equation has the form y=mx+b (equivalently f(x)=mx+b), where — looking ahead to Unit 5 — m is that constant step (how much the output changes per +1 in x) and b is the starting output at x=0. For now you don't need to manipulate m and b; just recognize the straight-line shape and the constant step.
-- <a class="refcode" id="4.3.d2" href="#4.3.d2">#4.3.d2</a> <strong>Constant rate of change</strong> — equal steps in x always produce equal steps in the output. (This <em>is</em> the unit rate from Unit 3, and it becomes <strong>slope</strong> in Unit 5.)
-- <a class="refcode" id="4.3.d3" href="#4.3.d3">#4.3.d3</a> <strong>Nonlinear function</strong> — rate of change is <em>not</em> constant; the graph curves (e.g. y=x²).</p>
-<p><strong>Teaching arc (concrete → pictorial → symbolic):</strong>
-- <strong>Concrete / words:</strong> "<em>Start with \$1, add \$2 every step</em>" is the same relationship as the rule f(x)=2x+1, as a table, and as a straight-line graph. Build the table together to see the words become numbers.
-- <strong>Pictorial (table → graph):</strong> plot the table's pairs; equal x-steps with equal output-steps make the dots fall in a straight line. The <strong>constant difference</strong> in the output column is what your eye sees as a straight line, and what Unit 5 will call slope.
-- <strong>Symbolic (spot linear from a table):</strong> "Equal steps in x give equal steps in y" ⇒ linear. If the differences themselves change, it's nonlinear (it curves). Connect to Unit 3: the constant step is the <em>unit rate</em>; forward to Unit 5: it's the slope m in y=mx+b.
-- <strong>Translate both directions (don't just read left-to-right):</strong> the four faces — words, table, equation, graph — should be reversible. Drill <em>equation → table</em> (plug in x-values) <strong>and</strong> <em>table → equation</em> (read the constant step as the number in front of x, and the value at x=0 as the constant added). For a linear table, the step gives the coefficient and the x=0 entry gives the constant — that's the whole table→equation move. Always have the student <em>check</em> the recovered equation against one row of the table.</p>
+<p><strong>New terms:</strong></p>
+<ul>
+<li><a class="refcode" id="4.3.d1" href="#4.3.d1">#4.3.d1</a> <strong>Linear function</strong> — constant rate of change; its graph is a straight line; its equation has the form y=mx+b (equivalently f(x)=mx+b), where — looking ahead to Unit 5 — m is that constant step (how much the output changes per +1 in x) and b is the starting output at x=0. For now you don't need to manipulate m and b; just recognize the straight-line shape and the constant step.</li>
+<li><a class="refcode" id="4.3.d2" href="#4.3.d2">#4.3.d2</a> <strong>Constant rate of change</strong> — equal steps in x always produce equal steps in the output. (This <em>is</em> the unit rate from Unit 3, and it becomes <strong>slope</strong> in Unit 5.)</li>
+<li><a class="refcode" id="4.3.d3" href="#4.3.d3">#4.3.d3</a> <strong>Nonlinear function</strong> — rate of change is <em>not</em> constant; the graph curves (e.g. y=x²).</li>
+</ul>
+<p><strong>Teaching arc (concrete → pictorial → symbolic):</strong></p>
+<ul>
+<li><strong>Concrete / words:</strong> "<em>Start with \$1, add \$2 every step</em>" is the same relationship as the rule f(x)=2x+1, as a table, and as a straight-line graph. Build the table together to see the words become numbers.</li>
+<li><strong>Pictorial (table → graph):</strong> plot the table's pairs; equal x-steps with equal output-steps make the dots fall in a straight line. The <strong>constant difference</strong> in the output column is what your eye sees as a straight line, and what Unit 5 will call slope.</li>
+<li><strong>Symbolic (spot linear from a table):</strong> "Equal steps in x give equal steps in y" ⇒ linear. If the differences themselves change, it's nonlinear (it curves). Connect to Unit 3: the constant step is the <em>unit rate</em>; forward to Unit 5: it's the slope m in y=mx+b.</li>
+<li><strong>Translate both directions (don't just read left-to-right):</strong> the four faces — words, table, equation, graph — should be reversible. Drill <em>equation → table</em> (plug in x-values) <strong>and</strong> <em>table → equation</em> (read the constant step as the number in front of x, and the value at x=0 as the constant added). For a linear table, the step gives the coefficient and the x=0 entry gives the constant — that's the whole table→equation move. Always have the student <em>check</em> the recovered equation against one row of the table.</li>
+</ul>
 <p><strong>Worked examples:</strong></p>
 <p><em>Example 1 — build a table from f(x)=2x+1; note the constant step.</em></p>
 <table>
@@ -296,14 +342,18 @@ $$f(2a)=3(2a)-1=6a-1.$$
 </tbody>
 </table>
 <p>Equal x-steps of +1; output steps 3,3,3 — constant. <strong>Linear.</strong> (Rule: y=3x-2.)</p>
-<p><em>Example 4 — same relationship, four faces (translate in both directions).</em>
-- <strong>Words:</strong> "start at \$1, add \$2 each step."
-- <strong>Equation:</strong> f(x)=2x+1.
-- <strong>Table:</strong> the table from Example 1.
-- <strong>Graph:</strong> a straight line through (0,1) rising 2 for every 1 right.</p>
+<p><em>Example 4 — same relationship, four faces (translate in both directions).</em></p>
+<ul>
+<li><strong>Words:</strong> "start at \$1, add \$2 each step."</li>
+<li><strong>Equation:</strong> f(x)=2x+1.</li>
+<li><strong>Table:</strong> the table from Example 1.</li>
+<li><strong>Graph:</strong> a straight line through (0,1) rising 2 for every 1 right.</li>
+</ul>
 <p>All four describe one function, and the skill runs <strong>both ways</strong>: given the equation you can <em>build the table</em> (plug in x=0,1,2,3 to get 1,3,5,7), and given the table you can <em>read off the equation</em> (the constant step +2 is the number in front of x, and the value at x=0 is the +1, so f(x)=2x+1). Practice going each direction, not just left-to-right.</p>
-<p><em>Example 5 — both directions explicitly (table ↔ equation).</em>
-- <strong>Equation → table.</strong> From g(x)=5x−2, build the table at x=0,1,2,3: g(0)=−2, g(1)=3, g(2)=8, g(3)=13.</p>
+<p><em>Example 5 — both directions explicitly (table ↔ equation).</em></p>
+<ul>
+<li><strong>Equation → table.</strong> From g(x)=5x−2, build the table at x=0,1,2,3: g(0)=−2, g(1)=3, g(2)=8, g(3)=13.</li>
+</ul>
 <table>
 <thead>
 <tr>
@@ -348,10 +398,12 @@ $$f(2a)=3(2a)-1=6a-1.$$
 </tbody>
 </table>
 <p>read the constant step (5−2=3, 8−5=3, 11−8=3 → +3 per step, so 3 sits in front of x) and the start at x=0 (that's 2), giving <strong>y=3x+2</strong>. Check it against the table: 3(2)+2=8 ✓. Same relationship, recovered from numbers alone.</p>
-<p><strong>Watch for:</strong>
-- <strong>Checking y-differences without checking x-steps.</strong> The "constant difference ⇒ linear" shortcut only works when the x-values step <em>evenly</em>. Tell: a student calls a table linear when x jumps 1,2,4,8. Repair: "Are the inputs evenly spaced first? Then check the outputs."
-- <strong>"Curved means broken/not a function."</strong> Nonlinear is still a function (callback to 4.1's vertical line test) — it just isn't a straight line.
-- <strong>Sign slips filling x² at negatives</strong> (<code>misconceptions.md</code> §3) if you extend the parabola table leftward.</p>
+<p><strong>Watch for:</strong></p>
+<ul>
+<li><strong>Checking y-differences without checking x-steps.</strong> The "constant difference ⇒ linear" shortcut only works when the x-values step <em>evenly</em>. Tell: a student calls a table linear when x jumps 1,2,4,8. Repair: "Are the inputs evenly spaced first? Then check the outputs."</li>
+<li><strong>"Curved means broken/not a function."</strong> Nonlinear is still a function (callback to 4.1's vertical line test) — it just isn't a straight line.</li>
+<li><strong>Sign slips filling x² at negatives</strong> (<code>misconceptions.md</code> §3) if you extend the parabola table leftward.</li>
+</ul>
 <p><strong>Visuals to offer:</strong> <a class="refcode" id="4.3.f1" href="#4.3.f1">#4.3.f1</a> <a class="refcode" id="4.3.f2" href="#4.3.f2">#4.3.f2</a> <strong>SVG artifacts</strong> — Template 2 for the straight line from Example 1, Template 3 for the y=x² parabola from Example 2 (compute the points, label them). Showing the two side by side makes "straight vs. curved" unmistakable. Pair each with its difference row in words.</p>
 <figure class="fig" id="fig-4.3.f1"><svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
   <line x1="18.0" y1="137.0" x2="222.0" y2="137.0" stroke="#888"/>
@@ -376,36 +428,48 @@ $$f(2a)=3(2a)-1=6a-1.$$
   <text x="193.0" y="114.0" font-size="10" fill="#c0392b">(2,4)</text>
 </svg><figcaption>Figure 4.3.f2</figcaption></figure>
 
-<p><strong>Check for understanding (transfer):</strong>
-1. <a class="refcode" id="4.3.c1" href="#4.3.c1">#4.3.c1</a> "Here's a table with x = 0,1,2,3 and y = 2,2,2,2. Linear or not? What's its rate of change?"
-2. <a class="refcode" id="4.3.c2" href="#4.3.c2">#4.3.c2</a> "Turn the words <em>'start at 10 and lose 1 each step'</em> into an equation and a four-row table."
-3. <a class="refcode" id="4.3.c3" href="#4.3.c3">#4.3.c3</a> "A table's outputs go 2, 6, 12, 20 for x=1,2,3,4. Linear or nonlinear — and how can you tell without graphing?"</p>
+<p><strong>Check for understanding (transfer):</strong></p>
+<ol>
+<li><a class="refcode" id="4.3.c1" href="#4.3.c1">#4.3.c1</a> "Here's a table with x = 0,1,2,3 and y = 2,2,2,2. Linear or not? What's its rate of change?"</li>
+<li><a class="refcode" id="4.3.c2" href="#4.3.c2">#4.3.c2</a> "Turn the words <em>'start at 10 and lose 1 each step'</em> into an equation and a four-row table."</li>
+<li><a class="refcode" id="4.3.c3" href="#4.3.c3">#4.3.c3</a> "A table's outputs go 2, 6, 12, 20 for x=1,2,3,4. Linear or nonlinear — and how can you tell without graphing?"</li>
+</ol>
 <p><strong>Practice problems:</strong></p>
-<p><em>A. Fill the table from the rule.</em>
-1. <a class="refcode" id="4.3.1" href="#4.3.1">#4.3.1</a> f(x)=3x: find outputs at x=0,1,2,3,4.
-2. <a class="refcode" id="4.3.2" href="#4.3.2">#4.3.2</a> k(x)=10-x: find outputs at x=0,1,2,3.
-3. <a class="refcode" id="4.3.3" href="#4.3.3">#4.3.3</a> f(x)=2x+1: find outputs at x=-2,-1,0,1.</p>
-<p><em>B. Linear or nonlinear? (equal x-steps; check the output differences)</em>
-4. <a class="refcode" id="4.3.4" href="#4.3.4">#4.3.4</a> x:0,1,2,3 → y:1,4,7,10
-5. <a class="refcode" id="4.3.5" href="#4.3.5">#4.3.5</a> x:0,1,2,3 → y:0,1,4,9
-6. <a class="refcode" id="4.3.6" href="#4.3.6">#4.3.6</a> x:1,2,3,4 → y:5,5,5,5
-7. <a class="refcode" id="4.3.7" href="#4.3.7">#4.3.7</a> x:0,1,2,3 → y:1,2,4,8</p>
-<p><em>C. Match the representation.</em>
-8. <a class="refcode" id="4.3.8" href="#4.3.8">#4.3.8</a> Which equation matches the words <em>"start at \$1 and add \$2 each step"</em>: (a) f(x)=x+2, (b) f(x)=2x+1, (c) f(x)=2x?</p>
-<p><em>D. Translate both directions (table ↔ equation).</em>
-9. <a class="refcode" id="4.3.9" href="#4.3.9">#4.3.9</a> <strong>Table → equation.</strong> The table x:0,1,2,3 → y:2,5,8,11 is linear. Write its equation.
-10. <a class="refcode" id="4.3.10" href="#4.3.10">#4.3.10</a> <strong>Equation → table.</strong> From g(x)=5x-2, fill the outputs at x=0,1,2,3.</p>
-<p><strong>Answer key:</strong>
-1. 0,3,6,9,12 — constant +3, linear.
-2. 10,9,8,7 — constant -1, linear.
-3. -3,-1,1,3 — constant +2, linear.
-4. <strong>Linear</strong> — output steps 3,3,3.
-5. <strong>Nonlinear</strong> — steps 1,3,5 (this is y=x²).
-6. <strong>Linear</strong> — steps 0,0,0 (a constant/horizontal function; rate of change 0).
-7. <strong>Nonlinear</strong> — steps 1,2,4 (doubling; previews exponential, Unit 9).
-8. <strong>(b)</strong> f(x)=2x+1 — start 1 at x=0, add 2 per step.
-9. <strong>y=3x+2</strong> — constant step +3 (so 3 in front of x), value 2 at x=0. Check: 3(3)+2=11 ✓.
-10. -2, 3, 8, 13 — at x=0,1,2,3 (constant step +5, linear).</p>
+<p><em>A. Fill the table from the rule.</em></p>
+<ol>
+<li><a class="refcode" id="4.3.1" href="#4.3.1">#4.3.1</a> f(x)=3x: find outputs at x=0,1,2,3,4.</li>
+<li><a class="refcode" id="4.3.2" href="#4.3.2">#4.3.2</a> k(x)=10-x: find outputs at x=0,1,2,3.</li>
+<li><a class="refcode" id="4.3.3" href="#4.3.3">#4.3.3</a> f(x)=2x+1: find outputs at x=-2,-1,0,1.</li>
+</ol>
+<p><em>B. Linear or nonlinear? (equal x-steps; check the output differences)</em></p>
+<ol start="4">
+<li><a class="refcode" id="4.3.4" href="#4.3.4">#4.3.4</a> x:0,1,2,3 → y:1,4,7,10</li>
+<li><a class="refcode" id="4.3.5" href="#4.3.5">#4.3.5</a> x:0,1,2,3 → y:0,1,4,9</li>
+<li><a class="refcode" id="4.3.6" href="#4.3.6">#4.3.6</a> x:1,2,3,4 → y:5,5,5,5</li>
+<li><a class="refcode" id="4.3.7" href="#4.3.7">#4.3.7</a> x:0,1,2,3 → y:1,2,4,8</li>
+</ol>
+<p><em>C. Match the representation.</em></p>
+<ol start="8">
+<li><a class="refcode" id="4.3.8" href="#4.3.8">#4.3.8</a> Which equation matches the words <em>"start at \$1 and add \$2 each step"</em>: (a) f(x)=x+2, (b) f(x)=2x+1, (c) f(x)=2x?</li>
+</ol>
+<p><em>D. Translate both directions (table ↔ equation).</em></p>
+<ol start="9">
+<li><a class="refcode" id="4.3.9" href="#4.3.9">#4.3.9</a> <strong>Table → equation.</strong> The table x:0,1,2,3 → y:2,5,8,11 is linear. Write its equation.</li>
+<li><a class="refcode" id="4.3.10" href="#4.3.10">#4.3.10</a> <strong>Equation → table.</strong> From g(x)=5x-2, fill the outputs at x=0,1,2,3.</li>
+</ol>
+<p><strong>Answer key:</strong></p>
+<ol>
+<li>0,3,6,9,12 — constant +3, linear.</li>
+<li>10,9,8,7 — constant -1, linear.</li>
+<li>-3,-1,1,3 — constant +2, linear.</li>
+<li><strong>Linear</strong> — output steps 3,3,3.</li>
+<li><strong>Nonlinear</strong> — steps 1,3,5 (this is y=x²).</li>
+<li><strong>Linear</strong> — steps 0,0,0 (a constant/horizontal function; rate of change 0).</li>
+<li><strong>Nonlinear</strong> — steps 1,2,4 (doubling; previews exponential, Unit 9).</li>
+<li><strong>(b)</strong> f(x)=2x+1 — start 1 at x=0, add 2 per step.</li>
+<li><strong>y=3x+2</strong> — constant step +3 (so 3 in front of x), value 2 at x=0. Check: 3(3)+2=11 ✓.</li>
+<li>-2, 3, 8, 13 — at x=0,1,2,3 (constant step +5, linear).</li>
+</ol>
 <hr>
 <h2 id="wrap-up-interleaving">Wrap-up &amp; interleaving</h2>
 <p><strong>Consolidate:</strong> the one-output-per-input rule and the vertical line test (4.1); f(x) as a <em>named rule you feed a value</em> — never multiplication — plus domain/range from explicit data (4.2); and the table ↔ graph ↔ equation ↔ words quartet with the linear/nonlinear split (4.3).</p>

@@ -59,9 +59,13 @@ def _id_worked_practice(text):
              for m in [re.match(r"^## Lesson ([0-9A]+\.\d+):", ln)] if m]
     for li, (lstart, lid) in enumerate(spans):
         lend = spans[li + 1][0] if li + 1 < len(spans) else len(lines)
-        block, wk, pk = None, 0, 0
+        block, wk, pk, infence = None, 0, 0, False
         for j in range(lstart, lend):
             ln = lines[j]
+            if ln.lstrip().startswith("```"):
+                infence = not infence; continue
+            if infence:
+                continue
             if ln.startswith("**Worked example"):
                 block = "w"; continue
             if ln.startswith("**Practice problem"):
@@ -92,10 +96,35 @@ def _convert_anchors(text):
     return "\n".join(out)
 
 
+_LIST_RE = re.compile(r"^\s*(?:[-*+]|\d+\.)\s")
+_BQ_LIST_RE = re.compile(r"^>\s*(?:[-*+]|\d+\.)\s")
+
+
+def _ensure_list_blank_lines(text):
+    """python-markdown needs a blank line before a list. The unit sources glue lists directly under
+    a label (e.g. '**New terms:**' then '- ...'), so insert a blank before the first item of each
+    list group. Fence-aware (never edits inside ``` blocks); handles blockquote lists with a '>' line."""
+    out, prev, infence = [], "", False
+    for ln in text.split("\n"):
+        if ln.lstrip().startswith("```"):
+            infence = not infence
+            out.append(ln); prev = ln; continue
+        if not infence:
+            if _BQ_LIST_RE.match(ln):
+                if prev.startswith(">") and prev.strip() != ">" and not _BQ_LIST_RE.match(prev):
+                    out.append(">")
+            elif _LIST_RE.match(ln) and not ln.startswith(">"):
+                if prev.strip() != "" and not _LIST_RE.match(prev):
+                    out.append("")
+        out.append(ln); prev = ln
+    return "\n".join(out)
+
+
 def md_to_body(text):
     text, math = _protect_math(text)
     text = _id_worked_practice(text)
     text = _convert_anchors(text)
+    text = _ensure_list_blank_lines(text)
     body = mdlib.markdown(text, extensions=["extra", "sane_lists", "toc"], output_format="html5")
     return _restore_math(body, math)
 

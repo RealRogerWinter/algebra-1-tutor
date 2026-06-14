@@ -18,43 +18,51 @@
 
 <blockquote>
 <p><strong>Prerequisites:</strong> Unit 11 (factoring trinomials, difference of squares) and Unit 10 (exponents, multiplying binomials) — the dependency chain <em>exponents → square roots → simplest quadratics → quadratic formula</em> and <em>FOIL → factoring → solving by factoring</em> both land here. Unit 5 (coordinate plane, reading a graph) for the parabola lessons. Comfort with negatives (<code>misconceptions.md §3</code>) is assumed throughout.
-<strong>By the end, the student can:</strong>
-- Simplify radicals by pulling out perfect-square factors (√12=2√3), and recognize an irrational root as an <em>exact</em> answer.
-- Solve the simplest quadratics with the <strong>Square-Root Property</strong>, keeping <strong>both</strong> signs when k≥0 (x²=9 ⇒ x=±3) and recognizing <strong>no real solution</strong> when k&lt;0.
-- Solve a quadratic by factoring via the zero-product property.
-- Complete the square on x²+bx+c once, and see why it produces the quadratic formula.
-- Apply the quadratic formula and read the discriminant to count real solutions (and tell rational from irrational roots when it's positive).
-- <strong>Choose</strong> the cleanest method for a given quadratic (square-root property vs factoring vs formula).
-- Graph a parabola: find roots (x-intercepts), vertex, and direction of opening, and explain <em>why</em> a quadratic usually has two solutions.</p>
+<strong>By the end, the student can:</strong></p>
+<ul>
+<li>Simplify radicals by pulling out perfect-square factors (√12=2√3), and recognize an irrational root as an <em>exact</em> answer.</li>
+<li>Solve the simplest quadratics with the <strong>Square-Root Property</strong>, keeping <strong>both</strong> signs when k≥0 (x²=9 ⇒ x=±3) and recognizing <strong>no real solution</strong> when k&lt;0.</li>
+<li>Solve a quadratic by factoring via the zero-product property.</li>
+<li>Complete the square on x²+bx+c once, and see why it produces the quadratic formula.</li>
+<li>Apply the quadratic formula and read the discriminant to count real solutions (and tell rational from irrational roots when it's positive).</li>
+<li><strong>Choose</strong> the cleanest method for a given quadratic (square-root property vs factoring vs formula).</li>
+<li>Graph a parabola: find roots (x-intercepts), vertex, and direction of opening, and explain <em>why</em> a quadratic usually has two solutions.</li>
+</ul>
 </blockquote>
 <h2 id="teaching-this-unit-orientation-for-the-tutor">Teaching this unit (orientation for the tutor)</h2>
 <p>This is the capstone — every back-half skill composes here. The arc: <strong>12.1</strong> folds in radicals (the inverse of squaring) so the student has the tool to <em>express</em> answers; <strong>12.2</strong> introduces the defining surprise of quadratics with the cleanest possible case (x²=9); <strong>12.3–12.5</strong> build three ways to solve the general quadratic; <strong>12.6</strong> ties it all to the picture.</p>
 <p><strong>The one recurring theme, stated out loud and often: squaring loses sign information.</strong> 3²=9 and (-3)²=9 — squaring throws away whether you started positive or negative, so undoing a square has to recover <em>both</em> origins. That is <em>why</em> quadratics usually have <strong>two</strong> solutions, why the ± appears in every method, and why the parabola crosses the x-axis twice. Lean on <code>metaphors.md</code> → "Quadratics having two solutions" (both angles: A "squaring loses the sign," B "the parabola crossing twice"). Keep saying it; it unifies the whole unit.</p>
 <p><strong>Thread function language.</strong> A quadratic <em>is</em> a function: y=x²-4 and f(x)=x²-4 are the same object (callback to Units 4–5). The "solutions/roots" are exactly the inputs where f(x)=0 — the x-intercepts of its graph. Narrate this connection whenever you can.</p>
-<p><strong>Biggest misconception traps in this unit:</strong>
-- <strong>Dropping a solution</strong> — giving x=3 for x²=9 and forgetting x=-3. The signature error of the whole unit. Repair with "squaring loses the sign" (<code>metaphors.md</code>).
-- <strong>√( ) of a non-perfect-square called "wrong."</strong> √7 <em>is</em> the answer — an exact irrational number (callback to Unit 1.2, the number system). Don't let them reach for a rounded decimal as if the radical were a failure.
-- <strong>Solving by factoring without setting equal to 0 first</strong> — factoring x²-5x+6=8 and setting factors to 8. The zero-product property needs a <strong>zero</strong>.
-- <strong>Sign and arithmetic slips inside the formula</strong> — especially -b when b is already negative, and b²-4ac with negatives. <code>misconceptions.md §3</code>. Substitute a found root back to check (the <code>SKILL.md</code> habit).
-- <strong>-3² vs (-3)²</strong> resurfaces constantly in the discriminant; flag it (<code>misconceptions.md §3</code>).</p>
+<p><strong>Biggest misconception traps in this unit:</strong></p>
+<ul>
+<li><strong>Dropping a solution</strong> — giving x=3 for x²=9 and forgetting x=-3. The signature error of the whole unit. Repair with "squaring loses the sign" (<code>metaphors.md</code>).</li>
+<li><strong>√( ) of a non-perfect-square called "wrong."</strong> √7 <em>is</em> the answer — an exact irrational number (callback to Unit 1.2, the number system). Don't let them reach for a rounded decimal as if the radical were a failure.</li>
+<li><strong>Solving by factoring without setting equal to 0 first</strong> — factoring x²-5x+6=8 and setting factors to 8. The zero-product property needs a <strong>zero</strong>.</li>
+<li><strong>Sign and arithmetic slips inside the formula</strong> — especially -b when b is already negative, and b²-4ac with negatives. <code>misconceptions.md §3</code>. Substitute a found root back to check (the <code>SKILL.md</code> habit).</li>
+<li><strong>-3² vs (-3)²</strong> resurfaces constantly in the discriminant; flag it (<code>misconceptions.md §3</code>).</li>
+</ul>
 <p><strong>Pacing:</strong> 12.1 and 12.2 are quick and concrete — get the ± reflex solid before any factoring. 12.3 is the workhorse (most class quadratics factor). 12.4 is shown <em>once</em> for understanding, not drilled. 12.5 is the universal payoff. 12.6 is where the algebra becomes a picture — spend time, use the artifact. Verify every computation with the code tool before showing it (<code>visuals.md</code>: a wrong graph teaches a false picture).</p>
 <hr>
 <h2 id="lesson-121-square-roots-simplifying-radicals">Lesson 12.1: Square roots &amp; simplifying radicals</h2>
 <p><strong>Goal:</strong> Take square roots of perfect squares, simplify a radical by pulling out perfect-square factors (√12=2√3), and treat an irrational root as an exact answer; add like radicals, multiply radicals, and lightly rationalize a denominator.
 <strong>Why it matters:</strong> The square root is the <em>inverse of squaring</em> — the exact tool we need to undo x² in every later lesson. Without it, the answer to x²=7 has no name.
-<strong>New terms:</strong>
-- <a class="refcode" id="12.1.d1" href="#12.1.d1">#12.1.d1</a> <strong>Square root (√( )):</strong> the inverse of squaring. √9=3 because 3²=9. The symbol gives the <strong>principal (non-negative) root</strong> — √9 is 3, not -3. (We restore the second sign by hand in 12.2 with ±.)
-- <a class="refcode" id="12.1.d2" href="#12.1.d2">#12.1.d2</a> <strong>Radical / radicand:</strong> the √( ) is the <em>radical</em>; the number under it is the <em>radicand</em>.
-- <a class="refcode" id="12.1.d3" href="#12.1.d3">#12.1.d3</a> <strong>Perfect square:</strong> a number that's some integer squared — 1,4,9,16,25,36,49,...
-- <a class="refcode" id="12.1.d4" href="#12.1.d4">#12.1.d4</a> <strong>Simplified radical:</strong> no perfect-square factor left under the root. √12=√(4·3)=2√3 is simplified; √12 is not.
-- <a class="refcode" id="12.1.d5" href="#12.1.d5">#12.1.d5</a> <strong>Like radicals:</strong> radicals with the <em>same</em> radicand (2√3 and 4√3) — they add like the "boxes" of Unit 2's like terms.</p>
-<p><strong>Teaching arc (concrete → pictorial → symbolic):</strong>
-- <strong>Concrete:</strong> "Squaring asks 'what's the area of a square with this side?' The square root asks the reverse: 'a square has area 9 — what's its side?' Side 3, so √9=3." Tie it to Unit 10 exponents: √( ) undoes the 2 power.
-- <strong>Number system callback (Unit 1.2):</strong> √9=3 is a tidy integer, but √7 is <strong>irrational</strong> — it has no exact decimal or fraction. That doesn't make it "unfinished"; √7 <em>is</em> the exact answer, the same way 1/3 is exact even though its decimal never stops. Resist rounding unless a decimal is asked for.
-- <strong>Locating an irrational root without rounding it (optional number sense):</strong> you can say <em>which two consecutive integers</em> a radical sits between by bracketing it with nearby perfect squares — √45 is between 6 and 7 because 36&lt;45&lt;49, and √10 is between 3 and 4 because 9&lt;10&lt;16. This <em>locates</em> the exact answer (useful for a sanity check or a number line) without <em>replacing</em> it; it is the productive middle ground between the exact radical and premature rounding, not a license to round.
-- <strong>Symbolic — simplifying:</strong> split the radicand into a <em>perfect-square factor times the rest</em>, then the perfect square comes out:
+<strong>New terms:</strong></p>
+<ul>
+<li><a class="refcode" id="12.1.d1" href="#12.1.d1">#12.1.d1</a> <strong>Square root (√( )):</strong> the inverse of squaring. √9=3 because 3²=9. The symbol gives the <strong>principal (non-negative) root</strong> — √9 is 3, not -3. (We restore the second sign by hand in 12.2 with ±.)</li>
+<li><a class="refcode" id="12.1.d2" href="#12.1.d2">#12.1.d2</a> <strong>Radical / radicand:</strong> the √( ) is the <em>radical</em>; the number under it is the <em>radicand</em>.</li>
+<li><a class="refcode" id="12.1.d3" href="#12.1.d3">#12.1.d3</a> <strong>Perfect square:</strong> a number that's some integer squared — 1,4,9,16,25,36,49,...</li>
+<li><a class="refcode" id="12.1.d4" href="#12.1.d4">#12.1.d4</a> <strong>Simplified radical:</strong> no perfect-square factor left under the root. √12=√(4·3)=2√3 is simplified; √12 is not.</li>
+<li><a class="refcode" id="12.1.d5" href="#12.1.d5">#12.1.d5</a> <strong>Like radicals:</strong> radicals with the <em>same</em> radicand (2√3 and 4√3) — they add like the "boxes" of Unit 2's like terms.</li>
+</ul>
+<p><strong>Teaching arc (concrete → pictorial → symbolic):</strong></p>
+<ul>
+<li><strong>Concrete:</strong> "Squaring asks 'what's the area of a square with this side?' The square root asks the reverse: 'a square has area 9 — what's its side?' Side 3, so √9=3." Tie it to Unit 10 exponents: √( ) undoes the 2 power.</li>
+<li><strong>Number system callback (Unit 1.2):</strong> √9=3 is a tidy integer, but √7 is <strong>irrational</strong> — it has no exact decimal or fraction. That doesn't make it "unfinished"; √7 <em>is</em> the exact answer, the same way 1/3 is exact even though its decimal never stops. Resist rounding unless a decimal is asked for.</li>
+<li><strong>Locating an irrational root without rounding it (optional number sense):</strong> you can say <em>which two consecutive integers</em> a radical sits between by bracketing it with nearby perfect squares — √45 is between 6 and 7 because 36&lt;45&lt;49, and √10 is between 3 and 4 because 9&lt;10&lt;16. This <em>locates</em> the exact answer (useful for a sanity check or a number line) without <em>replacing</em> it; it is the productive middle ground between the exact radical and premature rounding, not a license to round.</li>
+<li><strong>Symbolic — simplifying:</strong> split the radicand into a <em>perfect-square factor times the rest</em>, then the perfect square comes out:
 $$\sqrt{12}=\sqrt{4\cdot 3}=\sqrt4\,\sqrt3=2\sqrt3$$
-Hunt for the <strong>largest</strong> perfect-square factor so you finish in one step.</p>
+Hunt for the <strong>largest</strong> perfect-square factor so you finish in one step.</li>
+</ul>
 <p><strong>Worked examples:</strong></p>
 <ol>
 <li><a class="refcode" id="12.1.w1" href="#12.1.w1">#12.1.w1</a> √50=√(25·2)=√25 √2=5√2.</li>
@@ -66,55 +74,83 @@ $$\frac{1}{\sqrt2}=\frac{1}{\sqrt2}\cdot\frac{\sqrt2}{\sqrt2}=\frac{\sqrt2}{2}.$
 This "multiply by the radical over itself" trick is for a <em>single</em> radical in the denominator; denominators like 2+√3 come later (Intermediate Algebra) and use a different move (the conjugate) — don't over-generalize this one.</li>
 </ol>
 <p><strong>Cube roots in one line:</strong> ∛27=3 because 3³=27 — the cube root undoes cubing, same idea one power up.</p>
-<p><strong>Watch for:</strong>
-- <strong>"√7 is wrong / unfinished."</strong> It's the exact answer. Tell: they reach straight for 2.6457... and treat the radical as an error. Repair via the number-system callback (Unit 1.2): irrational ≠ incorrect.
-- <strong>Not pulling the <em>largest</em> square</strong> (√72=2√18, left unsimplified). Tell: a perfect square still hides under the root. Cue: "Is there still a perfect-square factor inside?" (√72=6√2). If a student only spots the smaller square, that's recoverable, not stuck: √72=2√18=2·3√2=6√2 — keep pulling until no perfect square remains. The largest-square route just gets there in one step.
-- <strong>Adding unlike radicals</strong> (√2+√3=√5). Tell: they merged different radicands. Cue: "Could you add 2x+3y into one term? Same thing here." (<code>misconceptions.md §7</code>, unlike terms.)
-- <strong>√a·√a mishandled</strong> — writing √5·√5=√5 instead of 5.</p>
+<p><strong>Watch for:</strong></p>
+<ul>
+<li><strong>"√7 is wrong / unfinished."</strong> It's the exact answer. Tell: they reach straight for 2.6457... and treat the radical as an error. Repair via the number-system callback (Unit 1.2): irrational ≠ incorrect.</li>
+<li><strong>Not pulling the <em>largest</em> square</strong> (√72=2√18, left unsimplified). Tell: a perfect square still hides under the root. Cue: "Is there still a perfect-square factor inside?" (√72=6√2). If a student only spots the smaller square, that's recoverable, not stuck: √72=2√18=2·3√2=6√2 — keep pulling until no perfect square remains. The largest-square route just gets there in one step.</li>
+<li><strong>Adding unlike radicals</strong> (√2+√3=√5). Tell: they merged different radicands. Cue: "Could you add 2x+3y into one term? Same thing here." (<code>misconceptions.md §7</code>, unlike terms.)</li>
+<li><strong>√a·√a mishandled</strong> — writing √5·√5=√5 instead of 5.</li>
+</ul>
 <p><strong>Visuals to offer:</strong> none needed (a number line placing √7 between 2 and 3 can help the "it's a real, exact number" point — <code>visuals.md</code> Template 1).</p>
-<p><strong>Check for understanding (transfer):</strong>
-1. <a class="refcode" id="12.1.c1" href="#12.1.c1">#12.1.c1</a> "Simplify √45, and tell me how you knew which factor to pull out."
-2. <a class="refcode" id="12.1.c2" href="#12.1.c2">#12.1.c2</a> "Is √10 a 'finished' answer? How is it like 1/3 and unlike √9?"
-3. <a class="refcode" id="12.1.c3" href="#12.1.c3">#12.1.c3</a> "Why can you combine 5√2+3√2 but not 5√2+3√3?"</p>
+<p><strong>Check for understanding (transfer):</strong></p>
+<ol>
+<li><a class="refcode" id="12.1.c1" href="#12.1.c1">#12.1.c1</a> "Simplify √45, and tell me how you knew which factor to pull out."</li>
+<li><a class="refcode" id="12.1.c2" href="#12.1.c2">#12.1.c2</a> "Is √10 a 'finished' answer? How is it like 1/3 and unlike √9?"</li>
+<li><a class="refcode" id="12.1.c3" href="#12.1.c3">#12.1.c3</a> "Why can you combine 5√2+3√2 but not 5√2+3√3?"</li>
+</ol>
 <p><strong>Practice problems:</strong>
-<em>Evaluate (perfect squares &amp; cube root):</em>
-1. <a class="refcode" id="12.1.1" href="#12.1.1">#12.1.1</a> √16
-2. <a class="refcode" id="12.1.2" href="#12.1.2">#12.1.2</a> √49
-3. <a class="refcode" id="12.1.3" href="#12.1.3">#12.1.3</a> √100
-4. <a class="refcode" id="12.1.4" href="#12.1.4">#12.1.4</a> ∛27
-<em>Simplify:</em>
-5. <a class="refcode" id="12.1.5" href="#12.1.5">#12.1.5</a> √8
-6. <a class="refcode" id="12.1.6" href="#12.1.6">#12.1.6</a> √20
-7. <a class="refcode" id="12.1.7" href="#12.1.7">#12.1.7</a> √45
-8. <a class="refcode" id="12.1.8" href="#12.1.8">#12.1.8</a> √72
-9. <a class="refcode" id="12.1.9" href="#12.1.9">#12.1.9</a> √48
-10. <a class="refcode" id="12.1.10" href="#12.1.10">#12.1.10</a> √75
-<em>Add / multiply / rationalize:</em>
-11. <a class="refcode" id="12.1.11" href="#12.1.11">#12.1.11</a> 3√5+√5
-12. <a class="refcode" id="12.1.12" href="#12.1.12">#12.1.12</a> √2·√8
-<em>Locate between two consecutive integers (keep the exact radical):</em>
-13. <a class="refcode" id="12.1.13" href="#12.1.13">#12.1.13</a> √45 is between which two consecutive integers?
-14. <a class="refcode" id="12.1.14" href="#12.1.14">#12.1.14</a> √10 is between which two consecutive integers?</p>
-<p><strong>Answer key:</strong>
-1. 4 · 2. 7 · 3. 10 · 4. 3 · 5. √(4·2)=2√2 · 6. √(4·5)=2√5 · 7. √(9·5)=3√5 · 8. √(36·2)=6√2 · 9. √(16·3)=4√3 · 10. √(25·3)=5√3 · 11. 4√5 · 12. √16=4 · 13. between <strong>6 and 7</strong> (36&lt;45&lt;49) · 14. between <strong>3 and 4</strong> (9&lt;10&lt;16).</p>
+<em>Evaluate (perfect squares &amp; cube root):</em></p>
+<ol>
+<li><a class="refcode" id="12.1.1" href="#12.1.1">#12.1.1</a> √16</li>
+<li><a class="refcode" id="12.1.2" href="#12.1.2">#12.1.2</a> √49</li>
+<li><a class="refcode" id="12.1.3" href="#12.1.3">#12.1.3</a> √100</li>
+<li>
+<p><a class="refcode" id="12.1.4" href="#12.1.4">#12.1.4</a> ∛27
+<em>Simplify:</em></p>
+</li>
+<li>
+<p><a class="refcode" id="12.1.5" href="#12.1.5">#12.1.5</a> √8</p>
+</li>
+<li><a class="refcode" id="12.1.6" href="#12.1.6">#12.1.6</a> √20</li>
+<li><a class="refcode" id="12.1.7" href="#12.1.7">#12.1.7</a> √45</li>
+<li><a class="refcode" id="12.1.8" href="#12.1.8">#12.1.8</a> √72</li>
+<li><a class="refcode" id="12.1.9" href="#12.1.9">#12.1.9</a> √48</li>
+<li>
+<p><a class="refcode" id="12.1.10" href="#12.1.10">#12.1.10</a> √75
+<em>Add / multiply / rationalize:</em></p>
+</li>
+<li>
+<p><a class="refcode" id="12.1.11" href="#12.1.11">#12.1.11</a> 3√5+√5</p>
+</li>
+<li>
+<p><a class="refcode" id="12.1.12" href="#12.1.12">#12.1.12</a> √2·√8
+<em>Locate between two consecutive integers (keep the exact radical):</em></p>
+</li>
+<li>
+<p><a class="refcode" id="12.1.13" href="#12.1.13">#12.1.13</a> √45 is between which two consecutive integers?</p>
+</li>
+<li><a class="refcode" id="12.1.14" href="#12.1.14">#12.1.14</a> √10 is between which two consecutive integers?</li>
+</ol>
+<p><strong>Answer key:</strong></p>
+<ol>
+<li>4 · 2. 7 · 3. 10 · 4. 3 · 5. √(4·2)=2√2 · 6. √(4·5)=2√5 · 7. √(9·5)=3√5 · 8. √(36·2)=6√2 · 9. √(16·3)=4√3 · 10. √(25·3)=5√3 · 11. 4√5 · 12. √16=4 · 13. between <strong>6 and 7</strong> (36&lt;45&lt;49) · 14. between <strong>3 and 4</strong> (9&lt;10&lt;16).</li>
+</ol>
 <hr>
 <h2 id="lesson-122-the-simplest-quadratics-x29-two-solutions">Lesson 12.2: The simplest quadratics (x²=9 → two solutions)</h2>
 <p><strong>Goal:</strong> Solve x²=k by the <strong>Square-Root Property</strong> — isolate x² first, then, when k≥0, take the square root of <strong>both</strong> signs (x=±√k); recognize that when k&lt;0 there is no real solution.
 <strong>Why it matters:</strong> This is the unit's defining idea in its purest form — <em>two</em> solutions, and <em>why</em>. No factoring or formula yet; just the inverse of squaring done honestly. The conditional on k (≥0 vs &lt;0) is the seed of the discriminant in 12.5.
-<strong>New terms:</strong>
-- <a class="refcode" id="12.2.d1" href="#12.2.d1">#12.2.d1</a> <strong>±("plus or minus"):</strong> shorthand for <em>two</em> answers at once. x=±3 means x=3 <strong>or</strong> x=-3.
-- <a class="refcode" id="12.2.d2" href="#12.2.d2">#12.2.d2</a> <strong>Quadratic equation:</strong> an equation with an x² term (and no higher power). Standard form is ax²+bx+c=0 with a≠0 — these are the special case where b=0.
-- <a class="refcode" id="12.2.d3" href="#12.2.d3">#12.2.d3</a> <strong>Square-Root Property (the rule of this lesson — box it):</strong> for x²=k,
-  - <strong>if k≥0, then x=±√k</strong> (i.e. x=√k or x=-√k — two real solutions, collapsing to the single x=0 when k=0);
-  - <strong>if k&lt;0, there is no real solution</strong> (no real number squares to a negative).</p>
+<strong>New terms:</strong></p>
+<ul>
+<li><a class="refcode" id="12.2.d1" href="#12.2.d1">#12.2.d1</a> <strong>±("plus or minus"):</strong> shorthand for <em>two</em> answers at once. x=±3 means x=3 <strong>or</strong> x=-3.</li>
+<li><a class="refcode" id="12.2.d2" href="#12.2.d2">#12.2.d2</a> <strong>Quadratic equation:</strong> an equation with an x² term (and no higher power). Standard form is ax²+bx+c=0 with a≠0 — these are the special case where b=0.</li>
+<li><a class="refcode" id="12.2.d3" href="#12.2.d3">#12.2.d3</a> <strong>Square-Root Property (the rule of this lesson — box it):</strong> for x²=k,</li>
+<li><strong>if k≥0, then x=±√k</strong> (i.e. x=√k or x=-√k — two real solutions, collapsing to the single x=0 when k=0);</li>
+<li><strong>if k&lt;0, there is no real solution</strong> (no real number squares to a negative).</li>
+</ul>
 <p>Stated once, conditional and complete: <em>x²=k ⇒ x=±√k when k≥0; no real solution when k&lt;0.</em> The k&lt;0 branch is not a side-exception to patch later — it is half of the rule, and it returns in 12.5 as the discriminant's sign.</p>
-<p><strong>Teaching arc (concrete → pictorial → symbolic):</strong>
-- <strong>Concrete — the core metaphor:</strong> "x²=9 asks: <em>what number, squared, gives 9?</em> Try 3: yes. But try -3: (-3)²=9 — also yes! Squaring <strong>lost the sign</strong> (<code>metaphors.md</code> → Quadratics A), so two different starts land on 9. We have to report both." This is the whole unit in one sentence.
-- <strong>Pictorial (optional):</strong> the parabola y=x²-9 crosses the x-axis at -3 <em>and</em> 3 (preview of 12.6, <code>metaphors.md</code> → Quadratics B).
-- <strong>Symbolic — the Square-Root Property:</strong> isolate x², check the sign of k, then (if k≥0) apply ±√( ):
+<p><strong>Teaching arc (concrete → pictorial → symbolic):</strong></p>
+<ul>
+<li><strong>Concrete — the core metaphor:</strong> "x²=9 asks: <em>what number, squared, gives 9?</em> Try 3: yes. But try -3: (-3)²=9 — also yes! Squaring <strong>lost the sign</strong> (<code>metaphors.md</code> → Quadratics A), so two different starts land on 9. We have to report both." This is the whole unit in one sentence.</li>
+<li><strong>Pictorial (optional):</strong> the parabola y=x²-9 crosses the x-axis at -3 <em>and</em> 3 (preview of 12.6, <code>metaphors.md</code> → Quadratics B).</li>
+<li>
+<p><strong>Symbolic — the Square-Root Property:</strong> isolate x², check the sign of k, then (if k≥0) apply ±√( ):
 $$x^2=9\;\Rightarrow\; x=\pm\sqrt9=\pm3.$$
-When k isn't a perfect square, the answer stays in radical form (12.1): x²=7 ⇒ x=±√7. When k is negative, the rule's other branch fires: x²=-4 has <strong>no real solution</strong> — stop there, it is a finished, correct answer, not a failure.
-- <strong>Strategy note (which method to reach for):</strong> the Square-Root Property is the cleanest tool <em>exactly when the equation is (something)²=k with no linear x term</em> — e.g. x²=9, 3x²=27, (x+1)²=5. The moment a plain x term appears (x²+5x+6=0), this property no longer applies on its own; that case wants factoring (12.3) or the formula (12.5). See the method-chooser box at the end of the unit.</p>
+When k isn't a perfect square, the answer stays in radical form (12.1): x²=7 ⇒ x=±√7. When k is negative, the rule's other branch fires: x²=-4 has <strong>no real solution</strong> — stop there, it is a finished, correct answer, not a failure.</p>
+</li>
+<li>
+<p><strong>Strategy note (which method to reach for):</strong> the Square-Root Property is the cleanest tool <em>exactly when the equation is (something)²=k with no linear x term</em> — e.g. x²=9, 3x²=27, (x+1)²=5. The moment a plain x term appears (x²+5x+6=0), this property no longer applies on its own; that case wants factoring (12.3) or the formula (12.5). See the method-chooser box at the end of the unit.</p>
+</li>
+</ul>
 <p><strong>Worked examples:</strong></p>
 <ol>
 <li><a class="refcode" id="12.2.w1" href="#12.2.w1">#12.2.w1</a> x²=9 ⇒ x=±3, i.e. x=3 or x=-3. Check both: 3²=9, (-3)²=9.</li>
@@ -124,45 +160,61 @@ When k isn't a perfect square, the answer stays in radical form (12.1): x²=7 �
 <li><a class="refcode" id="12.2.w5" href="#12.2.w5">#12.2.w5</a> x²-3=0 ⇒ x²=3 ⇒ x=±√3.</li>
 <li><a class="refcode" id="12.2.w6" href="#12.2.w6">#12.2.w6</a> <strong>The k&lt;0 branch (no real solution):</strong> x²=-4. Here k=-4&lt;0. By the Square-Root Property there is <strong>no real solution</strong> — no real number squares to -4, since any real square is ≥0. (Check the intuition: 2²=4 and (-2)²=4; nothing real lands on -4.) The answer is "no real solution," full stop. Same for x²+4=0 ⇒ x²=-4: isolate first, see the negative, stop.</li>
 </ol>
-<p><strong>Watch for:</strong>
-- <strong>Dropping the negative root</strong> (answering just x=3). The signature error of the unit. Tell: a single answer to x²=k. Repair: "What's (-3)²? So is -3 also a valid start? Squaring hid its sign." (<code>metaphors.md</code> → Quadratics A.)
-- <strong>Rooting before isolating</strong> (2x²=50→x=±√50). Tell: x=±5√2 instead of ±5. Cue: "Get x² by itself first — what undoes the ×2?"
-- <strong>Calling √7 wrong.</strong> Carryover from 12.1 — it's the exact answer.
-- <strong>Sign of k:</strong> if isolating gives x²=-4 (k&lt;0), the Square-Root Property's second branch says <strong>no real solution</strong> — and that <em>is</em> the answer, not an error to fix or a sign to drop. (A student may "force" x=±2 by ignoring the minus; the check (±2)²=+4≠-4 catches it.) This returns in 12.5 as the discriminant&lt;0 case.</p>
+<p><strong>Watch for:</strong></p>
+<ul>
+<li><strong>Dropping the negative root</strong> (answering just x=3). The signature error of the unit. Tell: a single answer to x²=k. Repair: "What's (-3)²? So is -3 also a valid start? Squaring hid its sign." (<code>metaphors.md</code> → Quadratics A.)</li>
+<li><strong>Rooting before isolating</strong> (2x²=50→x=±√50). Tell: x=±5√2 instead of ±5. Cue: "Get x² by itself first — what undoes the ×2?"</li>
+<li><strong>Calling √7 wrong.</strong> Carryover from 12.1 — it's the exact answer.</li>
+<li><strong>Sign of k:</strong> if isolating gives x²=-4 (k&lt;0), the Square-Root Property's second branch says <strong>no real solution</strong> — and that <em>is</em> the answer, not an error to fix or a sign to drop. (A student may "force" x=±2 by ignoring the minus; the check (±2)²=+4≠-4 catches it.) This returns in 12.5 as the discriminant&lt;0 case.</li>
+</ul>
 <p><strong>Visuals to offer:</strong> none needed (optionally a parabola preview, <code>visuals.md</code> Template 3).</p>
-<p><strong>Check for understanding (transfer):</strong>
-1. <a class="refcode" id="12.2.c1" href="#12.2.c1">#12.2.c1</a> "Solve x²=49. How many answers, and why isn't it just one?"
-2. <a class="refcode" id="12.2.c2" href="#12.2.c2">#12.2.c2</a> "A classmate says x²=20 has answer x=√20. What did they leave out, and can you simplify the radical too?"
-3. <a class="refcode" id="12.2.c3" href="#12.2.c3">#12.2.c3</a> "Solve 3x²=27. What has to happen <em>before</em> you take a square root?"</p>
+<p><strong>Check for understanding (transfer):</strong></p>
+<ol>
+<li><a class="refcode" id="12.2.c1" href="#12.2.c1">#12.2.c1</a> "Solve x²=49. How many answers, and why isn't it just one?"</li>
+<li><a class="refcode" id="12.2.c2" href="#12.2.c2">#12.2.c2</a> "A classmate says x²=20 has answer x=√20. What did they leave out, and can you simplify the radical too?"</li>
+<li><a class="refcode" id="12.2.c3" href="#12.2.c3">#12.2.c3</a> "Solve 3x²=27. What has to happen <em>before</em> you take a square root?"</li>
+</ol>
 <p><strong>Practice problems:</strong>
-<em>Solve (keep both signs; leave irrationals exact):</em>
-1. <a class="refcode" id="12.2.1" href="#12.2.1">#12.2.1</a> x²=25
-2. <a class="refcode" id="12.2.2" href="#12.2.2">#12.2.2</a> x²=49
-3. <a class="refcode" id="12.2.3" href="#12.2.3">#12.2.3</a> x²=1
-4. <a class="refcode" id="12.2.4" href="#12.2.4">#12.2.4</a> x²-11=0
-5. <a class="refcode" id="12.2.5" href="#12.2.5">#12.2.5</a> x²-2=0
-6. <a class="refcode" id="12.2.6" href="#12.2.6">#12.2.6</a> 3x²=27
-7. <a class="refcode" id="12.2.7" href="#12.2.7">#12.2.7</a> 5x²=45
-8. <a class="refcode" id="12.2.8" href="#12.2.8">#12.2.8</a> 2x²=18
-9. <a class="refcode" id="12.2.9" href="#12.2.9">#12.2.9</a> x²-100=0
-10. <a class="refcode" id="12.2.10" href="#12.2.10">#12.2.10</a> x²=5
-<em>No real solution (the k&lt;0 branch) — state it and say why:</em>
-11. <a class="refcode" id="12.2.11" href="#12.2.11">#12.2.11</a> x²=-9
-12. <a class="refcode" id="12.2.12" href="#12.2.12">#12.2.12</a> x²+16=0</p>
-<p><strong>Answer key:</strong>
-1. x=±5 · 2. x=±7 · 3. x=±1 · 4. x²=11, x=±√11 · 5. x²=2, x=±√2 · 6. x²=9, x=±3 · 7. x²=9, x=±3 · 8. x²=9, x=±3 · 9. x²=100, x=±10 · 10. x=±√5 · 11. <strong>no real solution</strong> (k=-9&lt;0; no real number squares to -9) · 12. x²=-16, <strong>no real solution</strong> (k=-16&lt;0).</p>
+<em>Solve (keep both signs; leave irrationals exact):</em></p>
+<ol>
+<li><a class="refcode" id="12.2.1" href="#12.2.1">#12.2.1</a> x²=25</li>
+<li><a class="refcode" id="12.2.2" href="#12.2.2">#12.2.2</a> x²=49</li>
+<li><a class="refcode" id="12.2.3" href="#12.2.3">#12.2.3</a> x²=1</li>
+<li><a class="refcode" id="12.2.4" href="#12.2.4">#12.2.4</a> x²-11=0</li>
+<li><a class="refcode" id="12.2.5" href="#12.2.5">#12.2.5</a> x²-2=0</li>
+<li><a class="refcode" id="12.2.6" href="#12.2.6">#12.2.6</a> 3x²=27</li>
+<li><a class="refcode" id="12.2.7" href="#12.2.7">#12.2.7</a> 5x²=45</li>
+<li><a class="refcode" id="12.2.8" href="#12.2.8">#12.2.8</a> 2x²=18</li>
+<li><a class="refcode" id="12.2.9" href="#12.2.9">#12.2.9</a> x²-100=0</li>
+<li>
+<p><a class="refcode" id="12.2.10" href="#12.2.10">#12.2.10</a> x²=5
+<em>No real solution (the k&lt;0 branch) — state it and say why:</em></p>
+</li>
+<li>
+<p><a class="refcode" id="12.2.11" href="#12.2.11">#12.2.11</a> x²=-9</p>
+</li>
+<li><a class="refcode" id="12.2.12" href="#12.2.12">#12.2.12</a> x²+16=0</li>
+</ol>
+<p><strong>Answer key:</strong></p>
+<ol>
+<li>x=±5 · 2. x=±7 · 3. x=±1 · 4. x²=11, x=±√11 · 5. x²=2, x=±√2 · 6. x²=9, x=±3 · 7. x²=9, x=±3 · 8. x²=9, x=±3 · 9. x²=100, x=±10 · 10. x=±√5 · 11. <strong>no real solution</strong> (k=-9&lt;0; no real number squares to -9) · 12. x²=-16, <strong>no real solution</strong> (k=-16&lt;0).</li>
+</ol>
 <hr>
 <h2 id="lesson-123-solving-by-factoring-zero-product-property">Lesson 12.3: Solving by factoring (zero-product property)</h2>
 <p><strong>Goal:</strong> Solve a quadratic by writing it as (factor)(factor)=0, then setting each factor to zero — the zero-product property.
 <strong>Why it matters:</strong> This is the everyday method for the quadratics that factor (most of the ones you'll meet). It directly cashes in the factoring from Unit 11.
-<strong>New terms:</strong>
-- <a class="refcode" id="12.3.d1" href="#12.3.d1">#12.3.d1</a> <strong>Zero-product property:</strong> if a product equals 0, then <em>at least one</em> factor is 0. If A·B=0, then A=0 or B=0. (No other number forces a product to zero — this is special to 0.)
-- <a class="refcode" id="12.3.d2" href="#12.3.d2">#12.3.d2</a> <strong>Root / solution:</strong> a value of x that makes the equation true — the same "roots" that are x-intercepts in 12.6.</p>
-<p><strong>Teaching arc (concrete → pictorial → symbolic):</strong>
-- <strong>Concrete:</strong> "If I multiply two numbers and get 0, one of them <em>had</em> to be 0 — there's no other way. (Two non-zeros never multiply to zero.) So if (x-2)(x-3)=0, either x-2=0 or x-3=0." Stress this only works against <strong>0</strong> — that's why we move everything to one side first.
-- <strong>Why each factor-equal-to-zero gives a real solution (the reverse direction):</strong> the property runs both ways. Forward: product 0 ⇒ a factor is 0 (this finds candidate x's). Reverse: if a factor <em>is</em> 0, the whole product is 0 ⇒ that x genuinely satisfies the equation. The substitution check at the end ((2-2)(2-3)=0) is exactly this reverse direction confirming the root is real, not just a candidate.
-- <strong>Pictorial:</strong> factoring is the reverse-distribute / area-box from Unit 11 (<code>metaphors.md</code> → Factoring A). Once factored, each factor being zero is a separate little one-step equation.
-- <strong>Symbolic — the procedure:</strong> (1) get the equation into ax²+bx+c=0 form (one side is 0); (2) factor (Unit 11); (3) set each factor =0; (4) solve each.</p>
+<strong>New terms:</strong></p>
+<ul>
+<li><a class="refcode" id="12.3.d1" href="#12.3.d1">#12.3.d1</a> <strong>Zero-product property:</strong> if a product equals 0, then <em>at least one</em> factor is 0. If A·B=0, then A=0 or B=0. (No other number forces a product to zero — this is special to 0.)</li>
+<li><a class="refcode" id="12.3.d2" href="#12.3.d2">#12.3.d2</a> <strong>Root / solution:</strong> a value of x that makes the equation true — the same "roots" that are x-intercepts in 12.6.</li>
+</ul>
+<p><strong>Teaching arc (concrete → pictorial → symbolic):</strong></p>
+<ul>
+<li><strong>Concrete:</strong> "If I multiply two numbers and get 0, one of them <em>had</em> to be 0 — there's no other way. (Two non-zeros never multiply to zero.) So if (x-2)(x-3)=0, either x-2=0 or x-3=0." Stress this only works against <strong>0</strong> — that's why we move everything to one side first.</li>
+<li><strong>Why each factor-equal-to-zero gives a real solution (the reverse direction):</strong> the property runs both ways. Forward: product 0 ⇒ a factor is 0 (this finds candidate x's). Reverse: if a factor <em>is</em> 0, the whole product is 0 ⇒ that x genuinely satisfies the equation. The substitution check at the end ((2-2)(2-3)=0) is exactly this reverse direction confirming the root is real, not just a candidate.</li>
+<li><strong>Pictorial:</strong> factoring is the reverse-distribute / area-box from Unit 11 (<code>metaphors.md</code> → Factoring A). Once factored, each factor being zero is a separate little one-step equation.</li>
+<li><strong>Symbolic — the procedure:</strong> (1) get the equation into ax²+bx+c=0 form (one side is 0); (2) factor (Unit 11); (3) set each factor =0; (4) solve each.</li>
+</ul>
 <p><strong>Worked examples:</strong></p>
 <ol>
 <li><a class="refcode" id="12.3.w1" href="#12.3.w1">#12.3.w1</a> (x-2)(x-3)=0. Already factored and equal to 0. Set each: x-2=0 ⇒ x=2; x-3=0 ⇒ x=3. <strong>x=2 or x=3.</strong> Check: (2-2)(2-3)=0·(-1)=0.</li>
@@ -171,45 +223,65 @@ When k isn't a perfect square, the answer stays in radical form (12.1): x²=7 �
 <li><a class="refcode" id="12.3.w4" href="#12.3.w4">#12.3.w4</a> x²-9=0. Difference of squares (Unit 11.3): (x-3)(x+3)=0 ⇒ x=±3. (Same answer 12.2 gives — two routes, one truth.)</li>
 <li><a class="refcode" id="12.3.w5" href="#12.3.w5">#12.3.w5</a> <strong>Must equal 0 first:</strong> x²-5x=-6 is <em>not</em> ready. Move the -6 over: x²-5x+6=0, then factor as in #2 → x=2,3. Setting factors of x²-5x=-6 to numbers is meaningless.</li>
 </ol>
-<p><strong>Watch for:</strong>
-- <strong>Not setting equal to 0</strong> (factoring x²-5x+6=8 and writing x-2=8). The zero-product property needs a <strong>zero</strong>; 8 gives you nothing. Tell: factors set to a non-zero number. Cue: "What does our property require on the right side?" Move everything over first.
-- <strong>Solving only one factor</strong> (stopping at x=2). Each factor gives a root — two factors, (usually) two roots. Ties back to the unit theme.
-- <strong>Factoring errors from Unit 11</strong> (sign of the constants). Repair at the factoring step, and <strong>check by expanding</strong> back (<code>factor_check</code> habit) or substituting the root.
-- <strong>Confusing "set factor to 0" with the answer's sign:</strong> x+3=0 gives x=-3, not +3. <code>misconceptions.md §3</code>.</p>
+<p><strong>Watch for:</strong></p>
+<ul>
+<li><strong>Not setting equal to 0</strong> (factoring x²-5x+6=8 and writing x-2=8). The zero-product property needs a <strong>zero</strong>; 8 gives you nothing. Tell: factors set to a non-zero number. Cue: "What does our property require on the right side?" Move everything over first.</li>
+<li><strong>Solving only one factor</strong> (stopping at x=2). Each factor gives a root — two factors, (usually) two roots. Ties back to the unit theme.</li>
+<li><strong>Factoring errors from Unit 11</strong> (sign of the constants). Repair at the factoring step, and <strong>check by expanding</strong> back (<code>factor_check</code> habit) or substituting the root.</li>
+<li><strong>Confusing "set factor to 0" with the answer's sign:</strong> x+3=0 gives x=-3, not +3. <code>misconceptions.md §3</code>.</li>
+</ul>
 <p><strong>Visuals to offer:</strong> area-model box for the factoring step (<code>visuals.md</code> "Area-model boxes", LaTeX <code>array</code>); the parabola preview if they want to <em>see</em> the two roots (12.6).</p>
-<p><strong>Check for understanding (transfer):</strong>
-1. <a class="refcode" id="12.3.c1" href="#12.3.c1">#12.3.c1</a> "Solve (x+5)(x-1)=0 without expanding. What lets you split it into two easy equations?"
-2. <a class="refcode" id="12.3.c2" href="#12.3.c2">#12.3.c2</a> "A student factors x²-2x-8=0 into (x-4)(x+2) and stops at x=4. What did they miss?"
-3. <a class="refcode" id="12.3.c3" href="#12.3.c3">#12.3.c3</a> "Why must x²-3x=10 be rewritten as x²-3x-10=0 before factoring to solve?"</p>
+<p><strong>Check for understanding (transfer):</strong></p>
+<ol>
+<li><a class="refcode" id="12.3.c1" href="#12.3.c1">#12.3.c1</a> "Solve (x+5)(x-1)=0 without expanding. What lets you split it into two easy equations?"</li>
+<li><a class="refcode" id="12.3.c2" href="#12.3.c2">#12.3.c2</a> "A student factors x²-2x-8=0 into (x-4)(x+2) and stops at x=4. What did they miss?"</li>
+<li><a class="refcode" id="12.3.c3" href="#12.3.c3">#12.3.c3</a> "Why must x²-3x=10 be rewritten as x²-3x-10=0 before factoring to solve?"</li>
+</ol>
 <p><strong>Practice problems:</strong>
-<em>Solve (already factored):</em>
-1. <a class="refcode" id="12.3.1" href="#12.3.1">#12.3.1</a> (x-1)(x-4)=0
-2. <a class="refcode" id="12.3.2" href="#12.3.2">#12.3.2</a> (x+5)(x-2)=0
-<em>Factor, then solve:</em>
-3. <a class="refcode" id="12.3.3" href="#12.3.3">#12.3.3</a> x²-7x+12=0
-4. <a class="refcode" id="12.3.4" href="#12.3.4">#12.3.4</a> x²+5x+6=0
-5. <a class="refcode" id="12.3.5" href="#12.3.5">#12.3.5</a> x²-2x-8=0
-6. <a class="refcode" id="12.3.6" href="#12.3.6">#12.3.6</a> x²+7x+10=0
-7. <a class="refcode" id="12.3.7" href="#12.3.7">#12.3.7</a> x²-x-12=0
-8. <a class="refcode" id="12.3.8" href="#12.3.8">#12.3.8</a> x²-8x+15=0
-9. <a class="refcode" id="12.3.9" href="#12.3.9">#12.3.9</a> x²+3x=0  <em>(GCF: x(x+3))</em>
-<em>Special patterns:</em>
-10. <a class="refcode" id="12.3.10" href="#12.3.10">#12.3.10</a> x²-16=0
-11. <a class="refcode" id="12.3.11" href="#12.3.11">#12.3.11</a> x²-6x+9=0  <em>(perfect square)</em>
-12. <a class="refcode" id="12.3.12" href="#12.3.12">#12.3.12</a> x²-3x-10=0</p>
-<p><strong>Answer key:</strong>
-1. x=1,4 · 2. x=-5,2 · 3. (x-3)(x-4), x=3,4 · 4. (x+2)(x+3), x=-2,-3 · 5. (x-4)(x+2), x=-2,4 · 6. (x+2)(x+5), x=-2,-5 · 7. (x-4)(x+3), x=-3,4 · 8. (x-3)(x-5), x=3,5 · 9. x(x+3), x=0,-3 · 10. (x-4)(x+4), x=±4 · 11. (x-3)², x=3 (one repeated root) · 12. (x-5)(x+2), x=-2,5.</p>
+<em>Solve (already factored):</em></p>
+<ol>
+<li><a class="refcode" id="12.3.1" href="#12.3.1">#12.3.1</a> (x-1)(x-4)=0</li>
+<li>
+<p><a class="refcode" id="12.3.2" href="#12.3.2">#12.3.2</a> (x+5)(x-2)=0
+<em>Factor, then solve:</em></p>
+</li>
+<li>
+<p><a class="refcode" id="12.3.3" href="#12.3.3">#12.3.3</a> x²-7x+12=0</p>
+</li>
+<li><a class="refcode" id="12.3.4" href="#12.3.4">#12.3.4</a> x²+5x+6=0</li>
+<li><a class="refcode" id="12.3.5" href="#12.3.5">#12.3.5</a> x²-2x-8=0</li>
+<li><a class="refcode" id="12.3.6" href="#12.3.6">#12.3.6</a> x²+7x+10=0</li>
+<li><a class="refcode" id="12.3.7" href="#12.3.7">#12.3.7</a> x²-x-12=0</li>
+<li><a class="refcode" id="12.3.8" href="#12.3.8">#12.3.8</a> x²-8x+15=0</li>
+<li>
+<p><a class="refcode" id="12.3.9" href="#12.3.9">#12.3.9</a> x²+3x=0  <em>(GCF: x(x+3))</em>
+<em>Special patterns:</em></p>
+</li>
+<li>
+<p><a class="refcode" id="12.3.10" href="#12.3.10">#12.3.10</a> x²-16=0</p>
+</li>
+<li><a class="refcode" id="12.3.11" href="#12.3.11">#12.3.11</a> x²-6x+9=0  <em>(perfect square)</em></li>
+<li><a class="refcode" id="12.3.12" href="#12.3.12">#12.3.12</a> x²-3x-10=0</li>
+</ol>
+<p><strong>Answer key:</strong></p>
+<ol>
+<li>x=1,4 · 2. x=-5,2 · 3. (x-3)(x-4), x=3,4 · 4. (x+2)(x+3), x=-2,-3 · 5. (x-4)(x+2), x=-2,4 · 6. (x+2)(x+5), x=-2,-5 · 7. (x-4)(x+3), x=-3,4 · 8. (x-3)(x-5), x=3,5 · 9. x(x+3), x=0,-3 · 10. (x-4)(x+4), x=±4 · 11. (x-3)², x=3 (one repeated root) · 12. (x-5)(x+2), x=-2,5.</li>
+</ol>
 <hr>
 <h2 id="lesson-124-completing-the-square">Lesson 12.4: Completing the square</h2>
 <p><strong>Goal:</strong> Turn x²+bx into a perfect-square trinomial by adding (b/2)², and use it to solve a quadratic — shown <strong>once</strong>, to build understanding and to set up the quadratic formula.
 <strong>Why it matters:</strong> It's the method that <em>works even when factoring fails</em>, and — crucially — it's where the quadratic formula comes from. Seeing it once makes 12.5 feel earned, not handed down.
-<strong>New terms:</strong>
-- <a class="refcode" id="12.4.d1" href="#12.4.d1">#12.4.d1</a> <strong>Perfect-square trinomial:</strong> a trinomial that factors as something squared — x²+6x+9=(x+3)² (Unit 11.3).
-- <a class="refcode" id="12.4.d2" href="#12.4.d2">#12.4.d2</a> <strong>Completing the square:</strong> adding the exact number, (b/2)², that turns x²+bx into a perfect square.</p>
-<p><strong>Teaching arc (concrete → pictorial → symbolic):</strong>
-- <strong>Concrete / the key fact:</strong> "(x+3)²=x²+6x+9. Notice the constant 9 is (6/2)² — half the middle coefficient, squared. So to <em>manufacture</em> a perfect square from x²+6x, add 9." Have them verify (6/2)²=9 and expand (x+3)² to confirm.
-- <strong>Pictorial:</strong> the literal "square" — x²+6x is an x-by-x square plus two 3-by-x strips; the missing corner is a 3-by-3 block of area 9. Adding it <em>completes the square</em>.
-- <strong>Symbolic — the move (keep the equation balanced):</strong> add (b/2)² to <strong>both sides</strong>, factor the left as a square, then finish with the ±√( ) of 12.2.</p>
+<strong>New terms:</strong></p>
+<ul>
+<li><a class="refcode" id="12.4.d1" href="#12.4.d1">#12.4.d1</a> <strong>Perfect-square trinomial:</strong> a trinomial that factors as something squared — x²+6x+9=(x+3)² (Unit 11.3).</li>
+<li><a class="refcode" id="12.4.d2" href="#12.4.d2">#12.4.d2</a> <strong>Completing the square:</strong> adding the exact number, (b/2)², that turns x²+bx into a perfect square.</li>
+</ul>
+<p><strong>Teaching arc (concrete → pictorial → symbolic):</strong></p>
+<ul>
+<li><strong>Concrete / the key fact:</strong> "(x+3)²=x²+6x+9. Notice the constant 9 is (6/2)² — half the middle coefficient, squared. So to <em>manufacture</em> a perfect square from x²+6x, add 9." Have them verify (6/2)²=9 and expand (x+3)² to confirm.</li>
+<li><strong>Pictorial:</strong> the literal "square" — x²+6x is an x-by-x square plus two 3-by-x strips; the missing corner is a 3-by-3 block of area 9. Adding it <em>completes the square</em>.</li>
+<li><strong>Symbolic — the move (keep the equation balanced):</strong> add (b/2)² to <strong>both sides</strong>, factor the left as a square, then finish with the ±√( ) of 12.2.</li>
+</ul>
 <p><strong>Worked examples:</strong></p>
 <ol>
 <li>
@@ -228,44 +300,64 @@ Check: (-1)²+6(-1)+5=0, (-5)²+6(-5)+5=0.</p>
 <p><a class="refcode" id="12.4.w4" href="#12.4.w4">#12.4.w4</a> <strong>Where it earns its keep (factoring fails):</strong> x²-4x+1=0. Move: x²-4x=-1. Add (-4/2)²=4: (x-2)²=3 ⇒ x-2=±√3 ⇒ x=2±√3. No integer factoring could have found this — but completing the square (and 12.5) does.</p>
 </li>
 </ol>
-<p><strong>Watch for:</strong>
-- <strong>Adding (b/2)² to one side only</strong> — that changes the equation. Tell: a wrong root. Cue: "We added 9 on the left; to keep the balance (<code>metaphors.md</code> → balance scale), what must we do on the right?"
-- <strong>Forgetting to halve before squaring</strong> (adding b² instead of (b/2)²). Tell: the left doesn't factor to a clean square. Cue: "Half of b first, <em>then</em> square."
-- <strong>± dropped at the root step</strong> (the unit theme again) — x+3=2 only, losing x=-5.
-- <strong>Sign of b/2 when b is negative</strong> — (-2/2)²=1, and the square is (x-1)², not (x+1)². <code>misconceptions.md §3</code>.</p>
+<p><strong>Watch for:</strong></p>
+<ul>
+<li><strong>Adding (b/2)² to one side only</strong> — that changes the equation. Tell: a wrong root. Cue: "We added 9 on the left; to keep the balance (<code>metaphors.md</code> → balance scale), what must we do on the right?"</li>
+<li><strong>Forgetting to halve before squaring</strong> (adding b² instead of (b/2)²). Tell: the left doesn't factor to a clean square. Cue: "Half of b first, <em>then</em> square."</li>
+<li><strong>± dropped at the root step</strong> (the unit theme again) — x+3=2 only, losing x=-5.</li>
+<li><strong>Sign of b/2 when b is negative</strong> — (-2/2)²=1, and the square is (x-1)², not (x+1)². <code>misconceptions.md §3</code>.</li>
+</ul>
 <p><strong>Visuals to offer:</strong> the area "completing the square" picture (a labeled <code>array</code>/sketch) helps the name land; otherwise none needed.</p>
-<p><strong>Check for understanding (transfer):</strong>
-1. <a class="refcode" id="12.4.c1" href="#12.4.c1">#12.4.c1</a> "To complete the square on x²+10x, what number do you add, and how did you get it?"
-2. <a class="refcode" id="12.4.c2" href="#12.4.c2">#12.4.c2</a> "Solve x²+8x+7=0 by completing the square. Show the balanced step on both sides."
-3. <a class="refcode" id="12.4.c3" href="#12.4.c3">#12.4.c3</a> "Why does completing the square solve x²-4x+1=0 when factoring can't?"</p>
+<p><strong>Check for understanding (transfer):</strong></p>
+<ol>
+<li><a class="refcode" id="12.4.c1" href="#12.4.c1">#12.4.c1</a> "To complete the square on x²+10x, what number do you add, and how did you get it?"</li>
+<li><a class="refcode" id="12.4.c2" href="#12.4.c2">#12.4.c2</a> "Solve x²+8x+7=0 by completing the square. Show the balanced step on both sides."</li>
+<li><a class="refcode" id="12.4.c3" href="#12.4.c3">#12.4.c3</a> "Why does completing the square solve x²-4x+1=0 when factoring can't?"</li>
+</ol>
 <p><strong>Practice problems:</strong>
-<em>State the number that completes the square for:</em>
-1. <a class="refcode" id="12.4.1" href="#12.4.1">#12.4.1</a> x²+6x
-2. <a class="refcode" id="12.4.2" href="#12.4.2">#12.4.2</a> x²-10x
-<em>Solve by completing the square:</em>
-3. <a class="refcode" id="12.4.3" href="#12.4.3">#12.4.3</a> x²+8x+7=0
-4. <a class="refcode" id="12.4.4" href="#12.4.4">#12.4.4</a> x²-6x+8=0
-5. <a class="refcode" id="12.4.5" href="#12.4.5">#12.4.5</a> x²+2x-8=0
-6. <a class="refcode" id="12.4.6" href="#12.4.6">#12.4.6</a> x²-2x-3=0</p>
-<p><strong>Answer key:</strong>
-1. (6/2)²=9 · 2. (-10/2)²=25 · 3. x²+8x=-7; +16: (x+4)²=9; x=-4±3; x=-1,-7 · 4. x²-6x=-8; +9: (x-3)²=1; x=3±1; x=2,4 · 5. x²+2x=8; +1: (x+1)²=9; x=-1±3; x=2,-4 · 6. x²-2x=3; +1: (x-1)²=4; x=1±2; x=3,-1.</p>
+<em>State the number that completes the square for:</em></p>
+<ol>
+<li><a class="refcode" id="12.4.1" href="#12.4.1">#12.4.1</a> x²+6x</li>
+<li>
+<p><a class="refcode" id="12.4.2" href="#12.4.2">#12.4.2</a> x²-10x
+<em>Solve by completing the square:</em></p>
+</li>
+<li>
+<p><a class="refcode" id="12.4.3" href="#12.4.3">#12.4.3</a> x²+8x+7=0</p>
+</li>
+<li><a class="refcode" id="12.4.4" href="#12.4.4">#12.4.4</a> x²-6x+8=0</li>
+<li><a class="refcode" id="12.4.5" href="#12.4.5">#12.4.5</a> x²+2x-8=0</li>
+<li><a class="refcode" id="12.4.6" href="#12.4.6">#12.4.6</a> x²-2x-3=0</li>
+</ol>
+<p><strong>Answer key:</strong></p>
+<ol>
+<li>(6/2)²=9 · 2. (-10/2)²=25 · 3. x²+8x=-7; +16: (x+4)²=9; x=-4±3; x=-1,-7 · 4. x²-6x=-8; +9: (x-3)²=1; x=3±1; x=2,4 · 5. x²+2x=8; +1: (x+1)²=9; x=-1±3; x=2,-4 · 6. x²-2x=3; +1: (x-1)²=4; x=1±2; x=3,-1.</li>
+</ol>
 <hr>
 <h2 id="lesson-125-the-quadratic-formula-the-discriminant">Lesson 12.5: The quadratic formula &amp; the discriminant</h2>
 <p><strong>Goal:</strong> Solve any quadratic ax²+bx+c=0 with the quadratic formula, and use the discriminant b²-4ac to predict the number of real solutions.
 <strong>Why it matters:</strong> This is the <strong>universal</strong> method — it solves <em>every</em> quadratic, factorable or not, rational or irrational. It is exactly "completing the square, done once in general," so 12.4 was its origin story.
-<strong>New terms:</strong>
-- <a class="refcode" id="12.5.d1" href="#12.5.d1">#12.5.d1</a> <strong>Quadratic formula:</strong> for ax²+bx+c=0 (with a≠0),
+<strong>New terms:</strong></p>
+<ul>
+<li>
+<p><a class="refcode" id="12.5.d1" href="#12.5.d1">#12.5.d1</a> <strong>Quadratic formula:</strong> for ax²+bx+c=0 (with a≠0),
 $$x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}.$$
-The ± is the same two-solutions ± as always — recovering the sign squaring destroyed.
-- <a class="refcode" id="12.5.d2" href="#12.5.d2">#12.5.d2</a> <strong>Discriminant:</strong> the inside-the-root part, b²-4ac. For a real quadratic (a≠0, real coefficients) its <strong>sign</strong> counts the real solutions before you finish:
-  - b²-4ac&gt;0: <strong>two</strong> real solutions (root of a positive → ± two values).
-  - b²-4ac=0: <strong>one</strong> real solution — a <strong>repeated (double) root</strong> (±0 collapses to one; the parabola's vertex sits on the axis).
-  - b²-4ac&lt;0: <strong>no real</strong> solution (no real square root of a negative — the parabola misses the axis).
-  - <em>One refinement when b²-4ac&gt;0 (optional, real-only):</em> a <strong>perfect-square</strong> discriminant means the two roots are <strong>rational</strong> — the √ comes out whole, so the quadratic factored over the rationals (the 12.3 case). A <strong>non-perfect-square</strong> discriminant means the two roots are <strong>irrational</strong> — they keep a radical (12.5's payoff, e.g. 1±√6). This is exactly <em>why</em> some quadratics factor cleanly and others only yield to the formula. (Concretely: x²-3x-10=0 has discriminant 49=7², rational roots 5,-2; x²-2x-5=0 has discriminant 24, irrational roots 1±√6.)</p>
-<p><strong>Teaching arc (concrete → pictorial → symbolic):</strong>
-- <strong>Concrete:</strong> "Factoring is elegant when it works; completing the square always works but is fiddly. The formula is completing-the-square done <em>once, in general</em>, so you never have to redo it — just read off a,b,c and plug in." (Honest footnote on the "in general": 12.4 completed the square only on monic cases, a=1. When a≠1 — e.g. 2x²+3x-2=0 — the general derivation first <strong>divides every term by a</strong> so the x² coefficient becomes 1, <em>then</em> completes the square; that single extra step is exactly what produces the 2a in the formula's denominator. You don't have to drill non-monic completing-the-square — the formula has already done it for you — but that's where the 2a comes from.)
-- <strong>Identify a,b,c carefully (sign and all):</strong> for 2x²+3x-2=0, a=2, b=3, c=-2. The sign travels with the number.
-- <strong>Symbolic:</strong> substitute, simplify the discriminant first, then take its root and resolve the ±. Verify a root by substitution.</p>
+The ± is the same two-solutions ± as always — recovering the sign squaring destroyed.</p>
+</li>
+<li>
+<p><a class="refcode" id="12.5.d2" href="#12.5.d2">#12.5.d2</a> <strong>Discriminant:</strong> the inside-the-root part, b²-4ac. For a real quadratic (a≠0, real coefficients) its <strong>sign</strong> counts the real solutions before you finish:</p>
+</li>
+<li>b²-4ac&gt;0: <strong>two</strong> real solutions (root of a positive → ± two values).</li>
+<li>b²-4ac=0: <strong>one</strong> real solution — a <strong>repeated (double) root</strong> (±0 collapses to one; the parabola's vertex sits on the axis).</li>
+<li>b²-4ac&lt;0: <strong>no real</strong> solution (no real square root of a negative — the parabola misses the axis).</li>
+<li><em>One refinement when b²-4ac&gt;0 (optional, real-only):</em> a <strong>perfect-square</strong> discriminant means the two roots are <strong>rational</strong> — the √ comes out whole, so the quadratic factored over the rationals (the 12.3 case). A <strong>non-perfect-square</strong> discriminant means the two roots are <strong>irrational</strong> — they keep a radical (12.5's payoff, e.g. 1±√6). This is exactly <em>why</em> some quadratics factor cleanly and others only yield to the formula. (Concretely: x²-3x-10=0 has discriminant 49=7², rational roots 5,-2; x²-2x-5=0 has discriminant 24, irrational roots 1±√6.)</li>
+</ul>
+<p><strong>Teaching arc (concrete → pictorial → symbolic):</strong></p>
+<ul>
+<li><strong>Concrete:</strong> "Factoring is elegant when it works; completing the square always works but is fiddly. The formula is completing-the-square done <em>once, in general</em>, so you never have to redo it — just read off a,b,c and plug in." (Honest footnote on the "in general": 12.4 completed the square only on monic cases, a=1. When a≠1 — e.g. 2x²+3x-2=0 — the general derivation first <strong>divides every term by a</strong> so the x² coefficient becomes 1, <em>then</em> completes the square; that single extra step is exactly what produces the 2a in the formula's denominator. You don't have to drill non-monic completing-the-square — the formula has already done it for you — but that's where the 2a comes from.)</li>
+<li><strong>Identify a,b,c carefully (sign and all):</strong> for 2x²+3x-2=0, a=2, b=3, c=-2. The sign travels with the number.</li>
+<li><strong>Symbolic:</strong> substitute, simplify the discriminant first, then take its root and resolve the ±. Verify a root by substitution.</li>
+</ul>
 <p><strong>Worked examples:</strong></p>
 <ol>
 <li>
@@ -286,45 +378,61 @@ $$x=\frac{4\pm\sqrt0}{2}=\frac{4}{2}=2.$$
 <p><a class="refcode" id="12.5.w4" href="#12.5.w4">#12.5.w4</a> x²+x+1=0: a=1,b=1,c=1. Discriminant 1²-4(1)(1)=1-4=-3&lt;0 → <strong>no real solution</strong> (can't take a real square root of -3). We stop here.</p>
 </li>
 </ol>
-<p><strong>Watch for:</strong>
-- <strong>-b when b is negative</strong> — for b=-5, -b=+5, not -5. The single most common slip. <code>misconceptions.md §3</code>. Cue: "-b means <em>the opposite of</em> b; b is -5, so -b is...?"
-- <strong>Discriminant sign errors</strong> — especially -4ac when c is negative makes it <em>add</em> (example 2: -4(2)(-2)=+16). And b² is always positive even if b is negative ((-5)²=25, the -3² vs (-3)² trap). <code>misconceptions.md §3</code>.
-- <strong>Dividing only part of the numerator by 2a</strong> — the whole -b±√( ) is over 2a. Keep the fraction bar full-width.
-- <strong>Calling "no real solution" a mistake.</strong> A negative discriminant is a <em>real, correct finding</em> (the parabola doesn't cross — 12.6), not an error to fix.</p>
+<p><strong>Watch for:</strong></p>
+<ul>
+<li><strong>-b when b is negative</strong> — for b=-5, -b=+5, not -5. The single most common slip. <code>misconceptions.md §3</code>. Cue: "-b means <em>the opposite of</em> b; b is -5, so -b is...?"</li>
+<li><strong>Discriminant sign errors</strong> — especially -4ac when c is negative makes it <em>add</em> (example 2: -4(2)(-2)=+16). And b² is always positive even if b is negative ((-5)²=25, the -3² vs (-3)² trap). <code>misconceptions.md §3</code>.</li>
+<li><strong>Dividing only part of the numerator by 2a</strong> — the whole -b±√( ) is over 2a. Keep the fraction bar full-width.</li>
+<li><strong>Calling "no real solution" a mistake.</strong> A negative discriminant is a <em>real, correct finding</em> (the parabola doesn't cross — 12.6), not an error to fix.</li>
+</ul>
 <p><strong>Visuals to offer:</strong> the parabola (12.6) makes the three discriminant cases visible — crosses twice / touches once / misses. <code>visuals.md</code> Template 3.</p>
-<p><strong>Check for understanding (transfer):</strong>
-1. <a class="refcode" id="12.5.c1" href="#12.5.c1">#12.5.c1</a> "Use the formula on x²-2x-5=0. What's the discriminant, and what does its sign tell you before you finish?"
-2. <a class="refcode" id="12.5.c2" href="#12.5.c2">#12.5.c2</a> "Without solving, how many real solutions does x²+x+5=0 have? How can you tell?"
-3. <a class="refcode" id="12.5.c3" href="#12.5.c3">#12.5.c3</a> "In 2x²-7x+3=0, what are a, b, and c — signs included — and what is -b?"</p>
+<p><strong>Check for understanding (transfer):</strong></p>
+<ol>
+<li><a class="refcode" id="12.5.c1" href="#12.5.c1">#12.5.c1</a> "Use the formula on x²-2x-5=0. What's the discriminant, and what does its sign tell you before you finish?"</li>
+<li><a class="refcode" id="12.5.c2" href="#12.5.c2">#12.5.c2</a> "Without solving, how many real solutions does x²+x+5=0 have? How can you tell?"</li>
+<li><a class="refcode" id="12.5.c3" href="#12.5.c3">#12.5.c3</a> "In 2x²-7x+3=0, what are a, b, and c — signs included — and what is -b?"</li>
+</ol>
 <p><strong>Practice problems:</strong>
-<em>Find the discriminant and state the number of real solutions:</em>
-1. <a class="refcode" id="12.5.1" href="#12.5.1">#12.5.1</a> x²-3x-10=0
-2. <a class="refcode" id="12.5.2" href="#12.5.2">#12.5.2</a> x²+6x+9=0
-3. <a class="refcode" id="12.5.3" href="#12.5.3">#12.5.3</a> x²+x+5=0
-4. <a class="refcode" id="12.5.4" href="#12.5.4">#12.5.4</a> x²-6x+10=0
-<em>Solve with the quadratic formula:</em>
-5. <a class="refcode" id="12.5.5" href="#12.5.5">#12.5.5</a> x²-5x+6=0
-6. <a class="refcode" id="12.5.6" href="#12.5.6">#12.5.6</a> 2x²+3x-2=0
-7. <a class="refcode" id="12.5.7" href="#12.5.7">#12.5.7</a> x²-4x+4=0
-8. <a class="refcode" id="12.5.8" href="#12.5.8">#12.5.8</a> 3x²-5x-2=0
-9. <a class="refcode" id="12.5.9" href="#12.5.9">#12.5.9</a> 2x²-7x+3=0
-10. <a class="refcode" id="12.5.10" href="#12.5.10">#12.5.10</a> x²-2x-5=0  <em>(irrational roots — leave exact)</em></p>
-<p><strong>Answer key:</strong>
-1. 9+40=49&gt;0, two solutions (x=5,-2) · 2. 36-36=0, one solution (x=-3) · 3. 1-20=-19&lt;0, <strong>no real solutions</strong> · 4. 36-40=-4&lt;0, <strong>no real solutions</strong> · 5. (5±√1)/2=3,2 · 6. (-3±√25)/4=1/2,-2 · 7. (4±√0)/2=2 · 8. (5±√49)/6=(5±7)/6=2,-1/3 · 9. (7±√25)/4=(7±5)/4=3,1/2 · 10. (2±√24)/2=1±√6.</p>
+<em>Find the discriminant and state the number of real solutions:</em></p>
+<ol>
+<li><a class="refcode" id="12.5.1" href="#12.5.1">#12.5.1</a> x²-3x-10=0</li>
+<li><a class="refcode" id="12.5.2" href="#12.5.2">#12.5.2</a> x²+6x+9=0</li>
+<li><a class="refcode" id="12.5.3" href="#12.5.3">#12.5.3</a> x²+x+5=0</li>
+<li>
+<p><a class="refcode" id="12.5.4" href="#12.5.4">#12.5.4</a> x²-6x+10=0
+<em>Solve with the quadratic formula:</em></p>
+</li>
+<li>
+<p><a class="refcode" id="12.5.5" href="#12.5.5">#12.5.5</a> x²-5x+6=0</p>
+</li>
+<li><a class="refcode" id="12.5.6" href="#12.5.6">#12.5.6</a> 2x²+3x-2=0</li>
+<li><a class="refcode" id="12.5.7" href="#12.5.7">#12.5.7</a> x²-4x+4=0</li>
+<li><a class="refcode" id="12.5.8" href="#12.5.8">#12.5.8</a> 3x²-5x-2=0</li>
+<li><a class="refcode" id="12.5.9" href="#12.5.9">#12.5.9</a> 2x²-7x+3=0</li>
+<li><a class="refcode" id="12.5.10" href="#12.5.10">#12.5.10</a> x²-2x-5=0  <em>(irrational roots — leave exact)</em></li>
+</ol>
+<p><strong>Answer key:</strong></p>
+<ol>
+<li>9+40=49&gt;0, two solutions (x=5,-2) · 2. 36-36=0, one solution (x=-3) · 3. 1-20=-19&lt;0, <strong>no real solutions</strong> · 4. 36-40=-4&lt;0, <strong>no real solutions</strong> · 5. (5±√1)/2=3,2 · 6. (-3±√25)/4=1/2,-2 · 7. (4±√0)/2=2 · 8. (5±√49)/6=(5±7)/6=2,-1/3 · 9. (7±√25)/4=(7±5)/4=3,1/2 · 10. (2±√24)/2=1±√6.</li>
+</ol>
 <hr>
 <h2 id="lesson-126-graphing-parabolas">Lesson 12.6: Graphing parabolas</h2>
 <p><strong>Goal:</strong> Graph a quadratic as a parabola: find its roots (x-intercepts), its vertex and axis of symmetry, and its direction of opening — and explain <em>why</em> a quadratic usually has two solutions.
 <strong>Why it matters:</strong> The picture is the payoff. It makes "two solutions" obvious (the U crosses the axis twice), explains the rare one/none cases, and ties the whole unit — radicals, roots, discriminant — into one image.
-<strong>New terms:</strong>
-- <a class="refcode" id="12.6.d1" href="#12.6.d1">#12.6.d1</a> <strong>Parabola:</strong> the U-shaped graph of a quadratic y=ax²+bx+c.
-- <a class="refcode" id="12.6.d2" href="#12.6.d2">#12.6.d2</a> <strong>Roots / x-intercepts:</strong> where the parabola crosses the x-axis — exactly the solutions of ax²+bx+c=0 (12.3–12.5). This is <em>why</em> a quadratic usually has two.
-- <a class="refcode" id="12.6.d3" href="#12.6.d3">#12.6.d3</a> <strong>Vertex:</strong> the turning point (bottom of the U if it opens up, top if down). Its x-coordinate is x=-b/2a.
-- <a class="refcode" id="12.6.d4" href="#12.6.d4">#12.6.d4</a> <strong>Axis of symmetry:</strong> the vertical line x=-b/2a through the vertex; the parabola is a mirror image across it.
-- <a class="refcode" id="12.6.d5" href="#12.6.d5">#12.6.d5</a> <strong>Opens up / down:</strong> <strong>up if a&gt;0</strong>, <strong>down if a&lt;0</strong>.</p>
-<p><strong>Teaching arc (concrete → pictorial → symbolic):</strong>
-- <strong>Concrete / the unifying picture (<code>metaphors.md</code> → Quadratics B):</strong> "A quadratic graphs as a U. The solutions are where it crosses the x-axis — and a U usually crosses <em>twice</em> (once going down, once coming back up). That's the two solutions, drawn. One solution = the U just <em>kisses</em> the axis at its vertex (discriminant 0); none = it floats entirely above or below (discriminant &lt; 0)." This visually re-explains 12.5.
-- <strong>Pictorial / building it:</strong> <strong>compute</strong> a small table of points (plug x-values into the equation — use the code tool), plot, join into a smooth U. Mark roots and vertex. Emit as an <strong>SVG artifact</strong> (<code>visuals.md</code> <strong>Template 3</strong> — raw SVG in chat won't render), labeled, with the companion table.
-- <strong>Symbolic — the quick read:</strong> roots by solving y=0 (any method from 12.3–12.5); vertex x at x=-b/2a, then plug back for its y; direction from the sign of a. For a symmetric parabola, the vertex sits exactly <strong>between</strong> the two roots. When a parabola has two real roots, their <strong>average gives the axis of symmetry and the vertex x</strong> — a fast check on -b/2a that follows straight from symmetry (the unit's organizing idea). -b/2a stays the general tool: it also works when the roots are irrational or absent.</p>
+<strong>New terms:</strong></p>
+<ul>
+<li><a class="refcode" id="12.6.d1" href="#12.6.d1">#12.6.d1</a> <strong>Parabola:</strong> the U-shaped graph of a quadratic y=ax²+bx+c.</li>
+<li><a class="refcode" id="12.6.d2" href="#12.6.d2">#12.6.d2</a> <strong>Roots / x-intercepts:</strong> where the parabola crosses the x-axis — exactly the solutions of ax²+bx+c=0 (12.3–12.5). This is <em>why</em> a quadratic usually has two.</li>
+<li><a class="refcode" id="12.6.d3" href="#12.6.d3">#12.6.d3</a> <strong>Vertex:</strong> the turning point (bottom of the U if it opens up, top if down). Its x-coordinate is x=-b/2a.</li>
+<li><a class="refcode" id="12.6.d4" href="#12.6.d4">#12.6.d4</a> <strong>Axis of symmetry:</strong> the vertical line x=-b/2a through the vertex; the parabola is a mirror image across it.</li>
+<li><a class="refcode" id="12.6.d5" href="#12.6.d5">#12.6.d5</a> <strong>Opens up / down:</strong> <strong>up if a&gt;0</strong>, <strong>down if a&lt;0</strong>.</li>
+</ul>
+<p><strong>Teaching arc (concrete → pictorial → symbolic):</strong></p>
+<ul>
+<li><strong>Concrete / the unifying picture (<code>metaphors.md</code> → Quadratics B):</strong> "A quadratic graphs as a U. The solutions are where it crosses the x-axis — and a U usually crosses <em>twice</em> (once going down, once coming back up). That's the two solutions, drawn. One solution = the U just <em>kisses</em> the axis at its vertex (discriminant 0); none = it floats entirely above or below (discriminant &lt; 0)." This visually re-explains 12.5.</li>
+<li><strong>Pictorial / building it:</strong> <strong>compute</strong> a small table of points (plug x-values into the equation — use the code tool), plot, join into a smooth U. Mark roots and vertex. Emit as an <strong>SVG artifact</strong> (<code>visuals.md</code> <strong>Template 3</strong> — raw SVG in chat won't render), labeled, with the companion table.</li>
+<li><strong>Symbolic — the quick read:</strong> roots by solving y=0 (any method from 12.3–12.5); vertex x at x=-b/2a, then plug back for its y; direction from the sign of a. For a symmetric parabola, the vertex sits exactly <strong>between</strong> the two roots. When a parabola has two real roots, their <strong>average gives the axis of symmetry and the vertex x</strong> — a fast check on -b/2a that follows straight from symmetry (the unit's organizing idea). -b/2a stays the general tool: it also works when the roots are irrational or absent.</li>
+</ul>
 <p><strong>Worked examples:</strong></p>
 <ol>
 <li><a class="refcode" id="12.6.w1" href="#12.6.w1">#12.6.w1</a> y=x²-4 (here a=1,b=0,c=-4).
@@ -394,11 +502,13 @@ $$x=\frac{4\pm\sqrt0}{2}=\frac{4}{2}=2.$$
 </tbody>
 </table>
 <p>Artifact (origin (110,110), 20 px/unit) — full point set so the curve is built from numbers, not eyeballed: (-2,5)→(70,10), (-1,0)→(90,110), (0,-3)→(110,170), (1,-4)→(130,190), (2,-3)→(150,170), (3,0)→(170,110), (4,5)→(190,10). Join these with a <code>&lt;polyline&gt;</code> into a smooth U. Roots dotted at (90,110) and (170,110); vertex labeled at (130,190).</p>
-<p><strong>Watch for:</strong>
-- <strong>Eyeballing the curve.</strong> A misshapen parabola teaches a false picture. Always <strong>compute</strong> the table (code tool) and build the artifact from numbers (<code>visuals.md</code> rule 1).
-- <strong>Wrong opening direction</strong> — reading y=-x²+4 as opening up. Tell: vertex on the wrong side. Cue: "What's the sign of a? Negative → opens down."
-- <strong>Vertex-x sign slip</strong> in -b/2a, especially when b&lt;0: for b=-2, -(-2)/2=+1. <code>misconceptions.md §3</code>.
-- <strong>Confusing roots with the vertex</strong>, or thinking the y-intercept (0,c) is a root. Roots are where y=0; the vertex is the turn; (0,c) is where it meets the y-axis.</p>
+<p><strong>Watch for:</strong></p>
+<ul>
+<li><strong>Eyeballing the curve.</strong> A misshapen parabola teaches a false picture. Always <strong>compute</strong> the table (code tool) and build the artifact from numbers (<code>visuals.md</code> rule 1).</li>
+<li><strong>Wrong opening direction</strong> — reading y=-x²+4 as opening up. Tell: vertex on the wrong side. Cue: "What's the sign of a? Negative → opens down."</li>
+<li><strong>Vertex-x sign slip</strong> in -b/2a, especially when b&lt;0: for b=-2, -(-2)/2=+1. <code>misconceptions.md §3</code>.</li>
+<li><strong>Confusing roots with the vertex</strong>, or thinking the y-intercept (0,c) is a root. Roots are where y=0; the vertex is the turn; (0,c) is where it meets the y-axis.</li>
+</ul>
 <p><strong>Visuals to offer:</strong> <a class="refcode" id="12.6.f1" href="#12.6.f1">#12.6.f1</a> <code>visuals.md</code> <strong>Template 3</strong> (parabola) — computed sample points joined by a <code>&lt;polyline&gt;</code>, roots and vertex dotted and labeled, companion table always in the chat.</p>
 <figure class="fig" id="fig-12.6.f1"><svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
   <line x1="18.0" y1="129.27" x2="222.0" y2="129.27" stroke="#888"/>
@@ -414,59 +524,79 @@ $$x=\frac{4\pm\sqrt0}{2}=\frac{4}{2}=2.$$
   <text x="125.0" y="197.45" font-size="10" fill="#c0392b">vertex (0,-4)</text>
 </svg><figcaption>Figure 12.6.f1</figcaption></figure>
 
-<p><strong>Check for understanding (transfer):</strong>
-1. <a class="refcode" id="12.6.c1" href="#12.6.c1">#12.6.c1</a> "For y=x²-6x+8, find the roots and the vertex. How are the roots and the vertex's x-coordinate related?"
-2. <a class="refcode" id="12.6.c2" href="#12.6.c2">#12.6.c2</a> "A parabola opens downward and never touches the x-axis. What can you say about its a and about its discriminant?"
-3. <a class="refcode" id="12.6.c3" href="#12.6.c3">#12.6.c3</a> "Why are the x-intercepts of y=x²-9 exactly the solutions of x²-9=0?"</p>
+<p><strong>Check for understanding (transfer):</strong></p>
+<ol>
+<li><a class="refcode" id="12.6.c1" href="#12.6.c1">#12.6.c1</a> "For y=x²-6x+8, find the roots and the vertex. How are the roots and the vertex's x-coordinate related?"</li>
+<li><a class="refcode" id="12.6.c2" href="#12.6.c2">#12.6.c2</a> "A parabola opens downward and never touches the x-axis. What can you say about its a and about its discriminant?"</li>
+<li><a class="refcode" id="12.6.c3" href="#12.6.c3">#12.6.c3</a> "Why are the x-intercepts of y=x²-9 exactly the solutions of x²-9=0?"</li>
+</ol>
 <p><strong>Practice problems:</strong>
-<em>For each, find the roots, the vertex, and the direction it opens (then sketch):</em>
-1. <a class="refcode" id="12.6.1" href="#12.6.1">#12.6.1</a> y=x²-1
-2. <a class="refcode" id="12.6.2" href="#12.6.2">#12.6.2</a> y=x²-9
-3. <a class="refcode" id="12.6.3" href="#12.6.3">#12.6.3</a> y=x²-4
-4. <a class="refcode" id="12.6.4" href="#12.6.4">#12.6.4</a> y=x²+4x+3
-5. <a class="refcode" id="12.6.5" href="#12.6.5">#12.6.5</a> y=x²-6x+8
-6. <a class="refcode" id="12.6.6" href="#12.6.6">#12.6.6</a> y=x²+2x-3
-7. <a class="refcode" id="12.6.7" href="#12.6.7">#12.6.7</a> y=-x²+4
-8. <a class="refcode" id="12.6.8" href="#12.6.8">#12.6.8</a> Sketch y=x²-2x-3 using its roots and vertex.</p>
-<p><strong>Answer key:</strong>
-1. roots x=±1; vertex (0,-1); opens up · 2. roots x=±3; vertex (0,-9); opens up · 3. roots x=±2; vertex (0,-4); opens up · 4. (x+1)(x+3), roots x=-1,-3; vertex x=-2, y=-1 → (-2,-1); opens up · 5. (x-2)(x-4), roots x=2,4; vertex x=3, y=-1 → (3,-1); opens up · 6. (x+3)(x-1), roots x=-3,1; vertex x=-1, y=-4 → (-1,-4); opens up · 7. roots x=±2; vertex (0,4); opens <strong>down</strong> (a=-1) · 8. roots x=-1,3; vertex (1,-4); opens up — U through (-1,0),(1,-4),(3,0).</p>
+<em>For each, find the roots, the vertex, and the direction it opens (then sketch):</em></p>
+<ol>
+<li><a class="refcode" id="12.6.1" href="#12.6.1">#12.6.1</a> y=x²-1</li>
+<li><a class="refcode" id="12.6.2" href="#12.6.2">#12.6.2</a> y=x²-9</li>
+<li><a class="refcode" id="12.6.3" href="#12.6.3">#12.6.3</a> y=x²-4</li>
+<li><a class="refcode" id="12.6.4" href="#12.6.4">#12.6.4</a> y=x²+4x+3</li>
+<li><a class="refcode" id="12.6.5" href="#12.6.5">#12.6.5</a> y=x²-6x+8</li>
+<li><a class="refcode" id="12.6.6" href="#12.6.6">#12.6.6</a> y=x²+2x-3</li>
+<li><a class="refcode" id="12.6.7" href="#12.6.7">#12.6.7</a> y=-x²+4</li>
+<li><a class="refcode" id="12.6.8" href="#12.6.8">#12.6.8</a> Sketch y=x²-2x-3 using its roots and vertex.</li>
+</ol>
+<p><strong>Answer key:</strong></p>
+<ol>
+<li>roots x=±1; vertex (0,-1); opens up · 2. roots x=±3; vertex (0,-9); opens up · 3. roots x=±2; vertex (0,-4); opens up · 4. (x+1)(x+3), roots x=-1,-3; vertex x=-2, y=-1 → (-2,-1); opens up · 5. (x-2)(x-4), roots x=2,4; vertex x=3, y=-1 → (3,-1); opens up · 6. (x+3)(x-1), roots x=-3,1; vertex x=-1, y=-4 → (-1,-4); opens up · 7. roots x=±2; vertex (0,4); opens <strong>down</strong> (a=-1) · 8. roots x=-1,3; vertex (1,-4); opens up — U through (-1,0),(1,-4),(3,0).</li>
+</ol>
 <hr>
 <h2 id="a-short-word-problems-strand-where-the-two-solutions-mean-something">A short word problems strand (where the two solutions mean something)</h2>
 <p>Offer these once the methods are solid. The point isn't harder algebra — it's that <strong>a quadratic from a real situation still gives two roots, and context decides which to keep</strong> (the "reject the impossible root" move). This is where "two solutions" and "no real solution" stop being mechanics. Solve each by whichever method is cleanest (factoring suffices for all three below), then read the answer back into the story.</p>
 <p><strong>Worked example (model it, then reject a root):</strong> <em>A ball is thrown straight up; its height in feet after t seconds is h=-16t²+32t. When does it hit the ground (h=0)?</em>
 Set -16t²+32t=0, factor -16t(t-2)=0 ⇒ t=0 or t=2. Both are real, but in context <strong>t=0 is the launch instant</strong> (height 0 because it just left the hand) and <strong>t=2 is the landing</strong> — so it hits the ground at t=2 seconds. The algebra offered two roots; the situation told us which one answers the question.</p>
-<p><strong>Application practice (state both roots, then the one that fits — and why):</strong>
-1. A ball's height is h=-16t²+48t feet after t seconds. Find both times its height is 0, and say which is the launch and which is the landing.
-2. Two consecutive positive integers have a product of 56. Set up n(n+1)=56 and find them; explain why the negative-integer pair is rejected.
-3. A rectangle's length is 3 more than its width, and its area is 40. Find the width (let the width be w, so w(w+3)=40); explain why one root is impossible.</p>
-<p><strong>Answer key:</strong>
-1. -16t²+48t=0 ⇒ -16t(t-3)=0 ⇒ t=0 or t=3; <strong>t=0 launch, t=3 landing</strong> (hits the ground at 3 s). · 2. n(n+1)=56 ⇒ n²+n-56=0 ⇒ (n-7)(n+8)=0 ⇒ n=7 or n=-8; keep <strong>n=7 → integers 7 and 8</strong> (the problem says <em>positive</em>, so reject n=-8). · 3. w(w+3)=40 ⇒ w²+3w-40=0 ⇒ (w-5)(w+8)=0 ⇒ w=5 or w=-8; a width can't be negative, so <strong>w=5</strong> (rectangle 5 by 8). </p>
+<p><strong>Application practice (state both roots, then the one that fits — and why):</strong></p>
+<ol>
+<li>A ball's height is h=-16t²+48t feet after t seconds. Find both times its height is 0, and say which is the launch and which is the landing.</li>
+<li>Two consecutive positive integers have a product of 56. Set up n(n+1)=56 and find them; explain why the negative-integer pair is rejected.</li>
+<li>A rectangle's length is 3 more than its width, and its area is 40. Find the width (let the width be w, so w(w+3)=40); explain why one root is impossible.</li>
+</ol>
+<p><strong>Answer key:</strong></p>
+<ol>
+<li>-16t²+48t=0 ⇒ -16t(t-3)=0 ⇒ t=0 or t=3; <strong>t=0 launch, t=3 landing</strong> (hits the ground at 3 s). · 2. n(n+1)=56 ⇒ n²+n-56=0 ⇒ (n-7)(n+8)=0 ⇒ n=7 or n=-8; keep <strong>n=7 → integers 7 and 8</strong> (the problem says <em>positive</em>, so reject n=-8). · 3. w(w+3)=40 ⇒ w²+3w-40=0 ⇒ (w-5)(w+8)=0 ⇒ w=5 or w=-8; a width can't be negative, so <strong>w=5</strong> (rectangle 5 by 8). </li>
+</ol>
 <hr>
 <h2 id="quadratics-reference-choosing-a-solving-method">Quadratics reference (choosing a solving method)</h2>
 <p>Keep this box handy; offer it when a student asks "which method should I use?" The first job is <em>triage</em> — pick the cleanest tool for the shape in front of you, then solve.</p>
-<p><strong>Pick by the shape of the equation (strategy-choice):</strong>
-- <strong>Looks like (something)²=k — no linear x term?</strong> Use the <strong>Square-Root Property (12.2)</strong>: isolate the square, then x=±√k if k≥0 (no real solution if k&lt;0). Cleanest for x²=9 (→ x=±3), 3x²=27, (x+1)²=5. Don't drag the formula into these.
-- <strong>Factors with nice integers?</strong> Use <strong>factoring (12.3)</strong>. Best for tidy integer roots like x²+5x+6=0 (→ x=-2,-3) or x²-9=0. Quick test: does the discriminant b²-4ac come out a perfect square? Then it factors over the rationals and factoring will be fast.
-- <strong>Messy, or it won't factor, or you just want a guaranteed route?</strong> Use the <strong>quadratic formula (12.5)</strong>. It solves <em>every</em> quadratic — e.g. x²-2x-5=0 (→ 1±√6, discriminant 24, not a perfect square) or any non-monic case like 2x²+3x-2=0.
-- A rule of thumb: try square-root property → factoring → formula, in that order of "is it clean here?" When in doubt, the formula never fails.</p>
-<p><strong>The four tools:</strong>
-- <strong>Square-Root Property (12.2) — for (something)²=k.</strong> Isolate the square, apply ±√( ) when k≥0; k&lt;0 gives no real solution. The narrow but cleanest case.
-- <strong>Factoring (12.3) — elegant, but not always possible.</strong> Fastest when the quadratic factors with nice integers. Get one side to 0, factor, set each factor =0. Fails on most irrational-root quadratics (those whose discriminant isn't a perfect square).
-- <strong>Quadratic formula (12.5) — universal.</strong>
+<p><strong>Pick by the shape of the equation (strategy-choice):</strong></p>
+<ul>
+<li><strong>Looks like (something)²=k — no linear x term?</strong> Use the <strong>Square-Root Property (12.2)</strong>: isolate the square, then x=±√k if k≥0 (no real solution if k&lt;0). Cleanest for x²=9 (→ x=±3), 3x²=27, (x+1)²=5. Don't drag the formula into these.</li>
+<li><strong>Factors with nice integers?</strong> Use <strong>factoring (12.3)</strong>. Best for tidy integer roots like x²+5x+6=0 (→ x=-2,-3) or x²-9=0. Quick test: does the discriminant b²-4ac come out a perfect square? Then it factors over the rationals and factoring will be fast.</li>
+<li><strong>Messy, or it won't factor, or you just want a guaranteed route?</strong> Use the <strong>quadratic formula (12.5)</strong>. It solves <em>every</em> quadratic — e.g. x²-2x-5=0 (→ 1±√6, discriminant 24, not a perfect square) or any non-monic case like 2x²+3x-2=0.</li>
+<li>A rule of thumb: try square-root property → factoring → formula, in that order of "is it clean here?" When in doubt, the formula never fails.</li>
+</ul>
+<p><strong>The four tools:</strong></p>
+<ul>
+<li><strong>Square-Root Property (12.2) — for (something)²=k.</strong> Isolate the square, apply ±√( ) when k≥0; k&lt;0 gives no real solution. The narrow but cleanest case.</li>
+<li><strong>Factoring (12.3) — elegant, but not always possible.</strong> Fastest when the quadratic factors with nice integers. Get one side to 0, factor, set each factor =0. Fails on most irrational-root quadratics (those whose discriminant isn't a perfect square).</li>
+<li>
+<p><strong>Quadratic formula (12.5) — universal.</strong>
 $$x=\dfrac{-b\pm\sqrt{b^2-4ac}}{2a}$$
-Works on <em>every</em> quadratic; read a,b,c (signs included) straight off ax²+bx+c=0. The discriminant b²-4ac pre-counts the real solutions (&gt;0 two — perfect square → rational, else irrational; =0 one repeated root; &lt;0 none).
-- <strong>Completing the square (12.4) — the formula's origin.</strong> Add (b/2)² to both sides to build a perfect square, then ±√( ). Rarely the quickest for a numeric answer, but it's <em>where the formula comes from</em> and is worth seeing once.</p>
+Works on <em>every</em> quadratic; read a,b,c (signs included) straight off ax²+bx+c=0. The discriminant b²-4ac pre-counts the real solutions (&gt;0 two — perfect square → rational, else irrational; =0 one repeated root; &lt;0 none).</p>
+</li>
+<li>
+<p><strong>Completing the square (12.4) — the formula's origin.</strong> Add (b/2)² to both sides to build a perfect square, then ±√( ). Rarely the quickest for a numeric answer, but it's <em>where the formula comes from</em> and is worth seeing once.</p>
+</li>
+</ul>
 <p>The ± runs through all of them, and the parabola (12.6) shows why: a U usually crosses the x-axis <strong>twice</strong> because <strong>squaring lost the sign</strong> — the single idea this whole unit recovers.</p>
 <hr>
 <h2 id="wrap-up-interleaving">Wrap-up &amp; interleaving</h2>
 <p><strong>Consolidate:</strong> the four solving methods (Square-Root Property, factoring, completing the square, the formula) are roads to the same place — confirm a student can <strong>triage</strong> the equation (square-root property for (something)²=k, factoring for clean integer roots, the formula when it's messy or won't factor) and <em>read the discriminant</em> to know how many real answers to expect — and, when it's positive, whether they'll be rational (perfect square) or irrational — before grinding. The parabola (12.6) should now be the mental image behind "two solutions."</p>
-<p><strong>Mix back in:</strong>
-- <strong>Unit 11 (factoring):</strong> every 12.3 problem <em>is</em> a factoring problem with one extra step. Slip in a difference-of-squares (x²-9=0) and a perfect-square (x²-6x+9=0) to keep 11.3 warm.
-- <strong>Unit 10 (exponents / binomials):</strong> "check by expanding" turns a factored answer back into the original — reuse FOIL/the area model.
-- <strong>Unit 5 (graphing):</strong> the parabola lives on the same coordinate plane; reading roots off a graph reuses the x-intercept idea, and the vertex is a point (x,y) like any other.
-- <strong>Unit 1.2 (number system):</strong> irrational roots (√7, 1±√6) are exact answers — revisit whenever a student wants to round prematurely.
-- <strong>Negatives (<code>misconceptions.md §3</code>):</strong> the dominant error source — the lost - root, -b with negative b, b²-4ac signs, (-3)² vs -3². Keep a negative-laden problem in every set and model the substitute-back check.
-- <strong>Applications (the word-problems strand above):</strong> once methods are fluent, drop in a height/area/consecutive-integers problem so "two solutions" and "no real solution" gain meaning and the student practices <strong>rejecting the impossible root</strong> in context.</p>
+<p><strong>Mix back in:</strong></p>
+<ul>
+<li><strong>Unit 11 (factoring):</strong> every 12.3 problem <em>is</em> a factoring problem with one extra step. Slip in a difference-of-squares (x²-9=0) and a perfect-square (x²-6x+9=0) to keep 11.3 warm.</li>
+<li><strong>Unit 10 (exponents / binomials):</strong> "check by expanding" turns a factored answer back into the original — reuse FOIL/the area model.</li>
+<li><strong>Unit 5 (graphing):</strong> the parabola lives on the same coordinate plane; reading roots off a graph reuses the x-intercept idea, and the vertex is a point (x,y) like any other.</li>
+<li><strong>Unit 1.2 (number system):</strong> irrational roots (√7, 1±√6) are exact answers — revisit whenever a student wants to round prematurely.</li>
+<li><strong>Negatives (<code>misconceptions.md §3</code>):</strong> the dominant error source — the lost - root, -b with negative b, b²-4ac signs, (-3)² vs -3². Keep a negative-laden problem in every set and model the substitute-back check.</li>
+<li><strong>Applications (the word-problems strand above):</strong> once methods are fluent, drop in a height/area/consecutive-integers problem so "two solutions" and "no real solution" gain meaning and the student practices <strong>rejecting the impossible root</strong> in context.</li>
+</ul>
 <p><strong>Looking ahead / closure:</strong> this is the capstone — the back-half dependency chains (exponents → roots → quadratics, and FOIL → factoring → solving) both terminate here. A student who can <strong>choose</strong> fluidly among the solving methods (square-root property / factoring / formula, with completing the square as the formula's origin) <em>and</em> picture the parabola has closed the loop on Algebra 1.</p>
 <p><strong>Progress Card should note:</strong> which lessons are mastered (12.1–12.6); whether the <strong>± / two-solutions reflex</strong> is automatic; whether they recognize the <strong>k&lt;0 → no real solution</strong> branch of the Square-Root Property (and the discriminant&lt;0 case) as a <em>correct answer</em>, not an error; whether they keep irrational roots exact (vs. rounding); whether they reliably set a quadratic to 0 before factoring; whether they can <strong>choose</strong> the cleanest method (square-root property / factoring / formula); whether they handle signs inside the formula and the discriminant (including rational-vs-irrational from a perfect-square discriminant); and whether they can produce a correct, labeled parabola (roots + vertex + direction). Flag any lingering negative-sign shakiness to warm up next time.</p>
 </main>
