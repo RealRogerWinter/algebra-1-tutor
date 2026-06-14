@@ -10,11 +10,11 @@ The unit file is **read by the tutor (an AI), not shown directly to students**. 
 2. **Verification data:** `C:\Users\18084\algebra\_verification\unit-NN.json`.
 
 ## Conventions
-- All math in **LaTeX**: `$$...$$` for display, `\(...\)` for inline. **Never** lone `$...$`. Escape literal currency as `\$`.
+- Display math in **`$$...$$`** blocks. **Inline math is plain Unicode** (x², √12, ½, ±, ≤, →) — **never** `\(...\)` or lone `$...$` (they show as raw text on Claude.ai). Escape literal currency as `\$`.
 - Treat every concept beyond arithmetic as a **first introduction**; define each new term plainly the first time it appears.
 - Keep it concise and tutor-usable. Warm in spirit but this is guidance, not a lecture.
 - Reference the right misconception section (e.g. "see misconceptions.md §3 negatives") and the right visual template (e.g. "visuals.md Template 3 — parabola") rather than re-explaining them.
-- If your unit introduces or uses functions, thread **function language** (e.g. "this line *is* a function; \(f(x)=2x+1\) names it") per the course design.
+- If your unit introduces or uses functions, thread **function language** (e.g. "this line *is* a function; f(x)=2x+1 names it") per the course design.
 
 ## Required structure of the unit `.md`
 
@@ -72,6 +72,9 @@ Every numeric/algebraic answer MUST be correct. A wrong answer key becomes wrong
 Rules:
 - **Python syntax** in all expressions: `*` multiply, `**` power, `/` divide, explicit parentheses; single-letter variables.
 - `solve`: `eq` is `"lhs=rhs"`; `var` the variable; `answer` the solution. Multiple solutions → comma-separated, e.g. `"3,-3"`.
+- Line-equation `solve` problems (find the intercept `b`, template `m*x0+b=y0`) MUST also carry
+  `on_line`: the given point(s) as `[[x,y],...]`, plus `slope` for one-point (point+slope)
+  problems. The point-on-line lint rebuilds the line and cross-checks it against the .md answer key.
 - `eval`: pure-number expression; `answer` is the value (a fraction like `"3/4"` is fine).
 - `simplify` / `expand`: `answer` is an equivalent expression; the checker tests algebraic equality.
 - `factor_check`: `answer` multiplies back to `expr`; checker tests `expand(answer) == expand(expr)`.

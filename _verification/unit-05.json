@@ -62,19 +62,19 @@
     {"id": "5.4.9", "kind": "eval", "expr": "(1/2)*4-2", "answer": "0"},
     {"id": "5.4.10", "kind": "eval", "expr": "(1/2)*(-2)-2", "answer": "-3"},
 
-    {"id": "5.5.w1", "kind": "solve", "eq": "4*2+b=3", "var": "b", "answer": "-5"},
-    {"id": "5.5.w2", "kind": "solve", "eq": "3*1+b=2", "var": "b", "answer": "-1"},
+    {"id": "5.5.w1", "kind": "solve", "eq": "4*2+b=3", "var": "b", "answer": "-5", "on_line": [[2,3]], "slope": 4},
+    {"id": "5.5.w2", "kind": "solve", "eq": "3*1+b=2", "var": "b", "answer": "-1", "on_line": [[1,2],[3,8]]},
     {"id": "5.5.w3", "kind": "manual", "answer": "parallel to y=2x+1 through (0,4): y=2x+4"},
     {"id": "5.5.w4", "kind": "manual", "answer": "perpendicular to y=2x through (0,0): y=-x/2"},
-    {"id": "5.5.1", "kind": "solve", "eq": "2*3+b=1", "var": "b", "answer": "-5"},
-    {"id": "5.5.2", "kind": "solve", "eq": "-3*(-1)+b=4", "var": "b", "answer": "1"},
+    {"id": "5.5.1", "kind": "solve", "eq": "2*3+b=1", "var": "b", "answer": "-5", "on_line": [[3,1]], "slope": 2},
+    {"id": "5.5.2", "kind": "solve", "eq": "-3*(-1)+b=4", "var": "b", "answer": "1", "on_line": [[-1,4]], "slope": -3},
     {"id": "5.5.3", "kind": "eval", "expr": "(11-5)/(4-2)", "answer": "3"},
-    {"id": "5.5.4", "kind": "solve", "eq": "3*2+b=5", "var": "b", "answer": "-1"},
+    {"id": "5.5.4", "kind": "solve", "eq": "3*2+b=5", "var": "b", "answer": "-1", "on_line": [[2,5],[4,11]]},
     {"id": "5.5.5", "kind": "eval", "expr": "(7-(-2))/(3-0)", "answer": "3"},
-    {"id": "5.5.6", "kind": "solve", "eq": "3*1+b=5", "var": "b", "answer": "2"},
+    {"id": "5.5.6", "kind": "solve", "eq": "3*3+b=7", "var": "b", "answer": "-2", "on_line": [[0,-2],[3,7]]},
     {"id": "5.5.7", "kind": "manual", "answer": "slope of any line parallel to y=3x-2 is 3"},
     {"id": "5.5.8", "kind": "manual", "answer": "slope perpendicular to y=2x+1 (m=2) is -1/2"},
-    {"id": "5.5.9", "kind": "solve", "eq": "(-1/2)*4+b=0", "var": "b", "answer": "2"},
+    {"id": "5.5.9", "kind": "solve", "eq": "(-1/2)*4+b=0", "var": "b", "answer": "2", "on_line": [[4,0]], "slope": "-1/2"},
     {"id": "5.5.10", "kind": "manual", "answer": "y=4x+3 and y=4x-7 are parallel (equal slope 4); y=4x+3 and y=-x/4 are perpendicular"}
   ]
 }

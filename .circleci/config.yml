@@ -1,0 +1,26 @@
+version: 2.1
+jobs:
+  gates:
+    docker:
+      - image: cimg/python:3.11
+    steps:
+      - checkout
+      - run:
+          name: Install deps
+          command: pip install -r requirements.txt
+      - run:
+          name: Answer-key verifier (sympy)
+          command: python _verification/verify_answers.py
+      - run:
+          name: SSOT generation up to date
+          command: python _verification/generate.py --check
+      - run:
+          name: Alignment guard (alignment + notation + point-on-line + code-grammar)
+          command: python _verification/check_alignment.py
+      - run:
+          name: Unit tests
+          command: python -m pytest _verification/tests -v
+workflows:
+  phase-0-gates:
+    jobs:
+      - gates

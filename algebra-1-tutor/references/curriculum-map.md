@@ -10,9 +10,10 @@ The spine is deliberately ordered so each idea rests on the one before it. But a
 
 | # | Unit | What it's about | Assumes (prerequisites) |
 |---|------|-----------------|--------------------------|
+<!-- BEGIN GENERATED: units-at-a-glance -->
 | 1 | **Foundations & the Language of Algebra** | Variables, the equals sign as a balance, the number system & number line, order of operations, negative numbers, expressions vs. equations | Arithmetic only |
 | 2 | **Solving Linear Equations** | One- and two-step equations, like terms, distributive property, variables on both sides, fractions in equations | Unit 1 (esp. negatives, order of operations) |
-| 3 | **Proportional Reasoning** (bridge to linearity) | Ratios, rates, unit rate, proportions, percents | Unit 2 (solving), fraction comfort |
+| 3 | **Proportional Reasoning (the bridge to linearity)** | Ratios, rates, unit rate, proportions, percents | Unit 2 (solving), fraction comfort |
 | 4 | **Introducing Functions** | What a function is, f(x) notation, domain & range, table/graph/equation/words | Unit 2; helped by Unit 3 (rates) |
 | 5 | **Linear Functions & Their Graphs** | Coordinate plane, graphing, slope, slope-intercept, writing equations of lines | Units 3 & 4 (rate, functions) |
 | 6 | **Modeling & Translation** | Turning words into equations; number/age/distance/mixture problems; intro scatter plots | Units 2 & 5 |
@@ -21,8 +22,9 @@ The spine is deliberately ordered so each idea rests on the one before it. But a
 | 9 | **Sequences & Exponential Functions** | Arithmetic/geometric sequences as functions, exponential growth & decay, linear vs. exponential | Unit 4 (functions); some Unit 5 |
 | 10 | **Exponents & Polynomials** | Exponent rules, scientific notation, polynomial operations, FOIL/area model | Unit 1 (exponents), Unit 2 (distributive) |
 | 11 | **Factoring** | GCF, factoring trinomials, special patterns | Unit 10 (multiplying polynomials) |
-| 12 | **Quadratic Functions & Equations** (capstone) | Square roots & radicals, x^2=9, factoring, completing the square, quadratic formula, parabolas | Units 10 & 11; Unit 5 (graphing) |
-| A | **Appendix: Data & Statistics** *(optional, off the main path)* | One/two-variable statistics, line of best fit, correlation vs. causation, two-way tables | Unit 5 (graphing lines) |
+| 12 | **Quadratic Functions & Equations (the capstone)** | Square roots & radicals, x²=9, factoring, completing the square, quadratic formula, parabolas | Units 10 & 11; Unit 5 (graphing) |
+| A | **Data & Statistics** *(optional, off the main path)* | One/two-variable statistics, line of best fit, correlation vs. causation, two-way tables | Unit 5 (graphing lines) |
+<!-- END GENERATED: units-at-a-glance -->
 
 **Two dependency chains** run through the back half — keep them solid:
 - distributive property → multiplying binomials (FOIL) → factoring → solving by factoring
