@@ -16,12 +16,24 @@ REPO_ROOT = os.path.dirname(HERE)
 UNIT_MD = os.path.join(REPO_ROOT, "algebra-1-tutor", "references", "units")
 TRANSFORMS = standard_transformations + (implicit_multiplication_application,)
 
-# Backward-compatible id grammar (RESEARCH_REDTEAM_HANDOFF.md s5), restricted to the
-# forms present in the answer-key JSON this phase:
-#   standard : (1-12 | A) . lesson . [w|ex]index [part]  e.g. 5.5.6, 12.1.w1, 6.2.ex1, A.2.3, 8.2.5b
-#   refresher: ref[AB] . index                           e.g. refA.4, refB.10
-# (the 'w' worked-example and 'ex' example tags are the only alpha tag prefixes present this phase)
-ID_RE = re.compile(r"^(?:(?:[1-9]|1[0-2]|A)\.\d+\.(?:w|ex)?\d+[a-z]?|ref[AB]\.\d+)\Z")
+# Unified backward-compatible id grammar (RESEARCH_REDTEAM_HANDOFF.md s5). ONE regex, TWO
+# scanners: code_grammar_lint() checks JSON ids (a strict subset); md_anchor_lint() checks the
+# .md {#code} anchors. Collision-free by construction (numeric scope vs letter scope; a
+# letter-then-digit tag vs digit-only practice).
+#   lesson item : (1-12 | A) . lesson . [w|ex|d|c|h|f]index[part]  e.g. 5.5.6, 12.1.w1, 1.1.d3, 1.2.f1
+#   refresher   : ref[AB] . index                                 e.g. refA.4, refB.10
+#   globals     : mis.N | vis.tN | met.<kebab-slug>               e.g. mis.3, vis.t1, met.balance-scale
+# Tags: w worked example, ex example, (none) practice, d definition, c transfer-check,
+# h how-to/procedure, f figure (reserved for Phase 3; simple fN[part] form only).
+ID_RE = re.compile(
+    r"^(?:"
+    r"(?:[1-9]|1[0-2]|A)\.\d+\.(?:w|ex|d|c|h|f)?\d+[a-z]?"
+    r"|ref[AB]\.\d+"
+    r"|mis\.\d+"
+    r"|vis\.t\d+"
+    r"|met\.[a-z0-9]+(?:-[a-z0-9]+)*"
+    r")\Z"
+)
 
 
 def _json_files():
