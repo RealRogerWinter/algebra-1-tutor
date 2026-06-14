@@ -12,6 +12,8 @@
 
 This unit is the heart of Algebra 1: it turns "what's the mystery number?" into a reliable *procedure*. The whole unit rests on one idea from Unit 1 — **the equals sign means balance** — so keep the balance-scale metaphor (metaphors.md → "Equations") live throughout. Every solving move is "do the same thing to *both* sides so the scale stays level."
 
+A **linear equation** has the variable only to the first power — no x², no x in a denominator, no two variables multiplied. (Its graph, later, is a straight line, which is why these almost always have a single solution; the two exceptions — none and infinitely many — show up in Lesson 2.4.)
+
 Two habits to thread through **every** example, no exceptions:
 1. **Verify by substituting back.** After getting x, put it into the *original* equation and show both sides match. This is both your safety net (you are a language model and can slip) and the single most valuable skill the student carries forward. Model it every single time — make it feel automatic, not optional.
 2. **Inverse operations, named honestly.** Avoid the word "cancel." Say a term **"goes to zero"** (for +/-) or **"goes to one"** (for ×/÷) — that's literally what happens, and it heads off the misconception that symbols just vanish by magic (misconceptions.md §1).
@@ -35,6 +37,7 @@ The arc: 2.1 formalizes "same to both sides" on one-step equations; 2.2 stacks t
 **Why it matters:** This is the atom every later equation is built from. Two-step, both-sides, and fraction equations are all just sequences of these single moves.
 
 **New terms:**
+- **Solution:** a value that makes the equation a *true statement* when you substitute it in. (That's exactly why we check by substituting — we're confirming the statement is true.)
 - **Isolate the variable:** get x alone on one side, with a number on the other.
 - **Inverse (opposite) operation:** the operation that undoes another. Addition ↔ subtraction; multiplication ↔ division.
 
@@ -169,10 +172,10 @@ $$3x+6=6 \;\xrightarrow{\,-6\,}\; 3x=0 \;\xrightarrow{\,\div 3\,}\; x=0 \qquad \
 **Why it matters:** Before you can solve a messier equation you have to *tidy* it. This lesson also seeds the area model that returns for multiplying binomials and factoring (Units 10–11). And distributing a negative is the single most common sign error in all of Algebra 1 — worth real care here.
 
 **New terms:**
-- **Term:** a single piece of an expression separated by + or - (e.g. in 3x+2, the terms are 3x and 2).
+- **Term:** a number, a variable, or numbers and variables multiplied together; in an expression the terms are the parts being *added*. A minus sign belongs to the term that follows it (subtracting is adding a negative), so in 3x − 5 the terms are 3x and **−5** — the sign travels with its term. That's exactly why distributing −2 over (x − 5) has to send −2 to **both** x and −5: the −5 is a term, sign and all.
 - **Coefficient:** the number multiplying the variable (the 3 in 3x).
-- **Like terms:** terms with the **same variable part** — 3x and 2x are like; 3x and 2 are **not** (one is "boxes," the other is "loose units").
-- **Distributive property:** a(b+c)=ab+ac — the outside factor multiplies *everything* inside.
+- **Like terms:** terms with the **same variable part** — the same variable(s) raised to the same power. Right now that just means the same variable: 3x and 2x are like; 3x and 2 are **not** (one is "boxes," the other is "loose units"). Later, 3x² and 5x² will be like, but 3x and 3x² will not.
+- **Distributive property:** a(b+c)=ab+ac, and likewise a(b−c)=ab−ac. Subtracting is adding a negative, so it's the same rule — just keep the sign. The outside factor multiplies *everything* inside.
 
 **Teaching arc (concrete → pictorial → symbolic):**
 - *Combining like terms (mystery-box picture, metaphors.md → Variables):* 3x is three identical boxes, 2x is two more of the same box — together 5x. But 3x+2 is three boxes plus two loose coins: you can't merge boxes with loose coins, so it **stays** 3x+2 (misconceptions.md §7). Ask: "Can you add boxes to loose units and get one kind of thing?"
@@ -236,9 +239,12 @@ Check at x=1: original 3-2(1-5)=3-2(-4)=3+8=11; rewrite -2(1)+13=11. (Common wro
 
 **Goal:** Solve equations with the variable on **both** sides by gathering variable terms on one side and constants on the other — same move to both sides.
 
-**Why it matters:** Real comparisons ("when does plan A cost the same as plan B?") put unknowns on both sides. It's also a direct rehearsal of every habit so far.
+**Why it matters:** Real comparisons ("when does plan A cost the same as plan B?") put unknowns on both sides. It's also a direct rehearsal of every habit so far. And it's where a linear equation finally shows all three things it can do — see "The three outcomes" below.
 
-**New terms:** none new — it's "do the same to both sides" applied to a variable term.
+**New terms:**
+- **Conditional equation:** an equation that's true for exactly one value of the variable — the usual case, with a single solution (e.g. 5x+2=3x+10, true only at x=4).
+- **Identity:** an equation that's true for *every* value — both sides are really the same expression. Its solution set is **all real numbers / infinitely many solutions** (e.g. 2x+4=2(x+2)).
+- **Contradiction:** an equation that's true for *no* value — it reduces to a false numeric statement. It has **no solution** (e.g. 2x+3=2x+5).
 
 **Teaching arc (concrete → pictorial → symbolic):**
 - *Balance picture:* 5x+2=3x+10 — both pans have boxes *and* coins. To corner x, remove the same thing from both pans. Take 3x off each side (the 3x on the right **goes to zero**), leaving 2x+2=10. Then it's a familiar two-step.
@@ -264,9 +270,50 @@ $$\text{Check: } 4(-4)+1=-15 \;\text{ and }\; 6(-4)+9=-15$$
 $$2(x-1)=x+5 \xrightarrow{\text{distribute}} 2x-2=x+5 \xrightarrow{-x} x-2=5 \xrightarrow{+2} x=7$$
 $$\text{Check: } 2(7-1)=12 \;\text{ and }\; 7+5=12$$
 
+### The three outcomes
+
+So far every equation has had **exactly one** solution. That's the common case, but it isn't the only one. Once the variable is on both sides, the *same procedure* can land in one of three places. The tell is what happens to the variable when you gather terms:
+
+- **Conditional — exactly one solution.** The variable terms *don't* cancel; you isolate x and get one value. This is everything in Lessons 2.1–2.4 so far.
+- **Identity — infinitely many solutions (all real numbers).** When you gather, the variable terms cancel **and** the leftover numeric statement is **true** (like 4=4). The two sides were the same expression all along, so *every* number works.
+- **Contradiction — no solution.** The variable terms cancel **and** the leftover statement is **false** (like 3=5). No number can make a false statement true, so nothing works.
+
+Teaching arc: don't announce the categories first — let the student run the usual procedure and *watch the x disappear*, then ask "okay, the x's are gone; is what's left actually true?" The answer to that one question decides the outcome. Frame it in the balance language they already have: if both pans are secretly identical, the scale balances no matter what's in the box (identity); if the pans can never match, no box-weight balances it (contradiction).
+
+**Worked examples (one of each outcome — keep the substitution habit even here):**
+
+*Conditional — the usual one solution:*
+$$3(x-2)+4=2(x+1)-x \xrightarrow{\text{distribute}} 3x-2=x+2 \xrightarrow{-x} 2x-2=2 \xrightarrow{+2,\,\div 2} x=2$$
+$$\text{Check: } 3(2-2)+4=4 \;\text{ and }\; 2(2+1)-2=4$$
+
+*Identity — the x's cancel, true statement, so all real numbers:*
+$$2x+4=2(x+2) \xrightarrow{\text{distribute}} 2x+4=2x+4 \xrightarrow{-2x} 4=4 \;\checkmark\text{ (always true)}$$
+The variable vanished and left **4=4**, a true statement → **infinitely many solutions (all real numbers).** Sanity check with two different numbers: at x=0, both sides are 4; at x=5, both sides are 14. They match for *any* x.
+
+*Contradiction — the x's cancel, false statement, so no solution:*
+$$2x+3=2x+5 \xrightarrow{-2x} 3=5 \;\text{(false)}$$
+The variable vanished and left **3=5**, which is never true → **no solution.** Sanity check: at x=0 the sides are 3 and 5; at x=10 they're 23 and 25 — the right side is *always* 2 bigger, so they can never be equal.
+
+**How to write the answer:** for an identity, say "**all real numbers**" (or "infinitely many solutions"); for a contradiction, say "**no solution**." Don't write "x=4=4" or "x=3=5" — once the variable is gone there's no x to report; you're just reading whether the leftover statement is true or false.
+
+### Two valid solving orders (which is cleaner, and when)
+
+For a multi-step equation there's often more than one correct first move. Take 3(x+2)=18. Both of these are right:
+
+$$\textbf{Distribute first:}\quad 3(x+2)=18 \xrightarrow{\text{distribute}} 3x+6=18 \xrightarrow{-6} 3x=12 \xrightarrow{\div 3} x=4$$
+
+$$\textbf{Divide first:}\quad 3(x+2)=18 \xrightarrow{\div 3} x+2=6 \xrightarrow{-2} x=4$$
+
+Same answer (x=4, and 3(4+2)=18 checks). Ask the student: *which did you like, and why?* The point to draw out: when the whole left side is multiplied by a number that divides the right side cleanly (3 into 18), **dividing first** is fewer steps and smaller numbers. But if the right side *weren't* a clean multiple — say 3(x+2)=20 — dividing first gives x+2=20/3 and drags a fraction through every later step, so **distributing first** keeps it whole longer. Both orders are valid — the skill is glancing ahead to pick the cleaner one for *this* equation.
+
+**One spot-the-error (distributing a negative — misconceptions.md §3).** A student solves 5−2(x−1)=9 like this:
+$$5-2(x-1)=9 \;\to\; 5-2x-2=9 \;\to\; 3-2x=9 \;\to\; -2x=6 \;\to\; x=-3$$
+Find the line where it breaks. (The distribution: −2 times −1 is **+2**, not −2, so the correct second line is 5−2x**+2**=9 → 7−2x=9 → −2x=2 → **x=−1**.) Have the student confirm x=−1 in the *original*: 5−2(−1−1)=5−2(−2)=5+4=9. ✓ This is the same trap as Lesson 2.3, now living inside a both-sides solve — exactly where it relapses.
+
 **Watch for:**
+- **The three-outcome tell:** when the variable terms cancel, *stop and read the leftover numeric statement*. True (4=4) → all real numbers (identity); false (3=5) → no solution (contradiction). Students who haven't met this often panic when the x disappears, or wrongly write "x=0." Reassure: a vanished variable isn't an error — it's the equation telling you it's special.
 - **Sign loss when subtracting a variable term:** subtracting 3x from 5x but forgetting it also hits the right side. Repair: "Both pans, every time."
-- **Distributing-a-negative carry-over** from 2.3 (e.g. in problem 10, 2(x-1)=4x+6). Same trap; same fix.
+- **Sign care when distributing over a subtraction:** in problem 10, 2(x-1)=4x+6, the left side is 2(x-1)=2x**-2** (not 2x-1 or 2x+2). This is *positive* 2 distributed over a subtraction — keep the −2. (The harsher "distribute a *negative* coefficient" trap from 2.3 — e.g. −2(x−5) — shows up in the spot-the-error 5−2(x−1)=9 above; same fix: the sign greets every term, then substitution-check.)
 - **Forgetting to distribute before gathering** (problems 9–12). Tip: tidy each side *first*, then move terms across.
 - A **negative answer feels "wrong"** to some students — reassure (Unit 1): negatives are real solutions; the substitution check confirms them.
 
@@ -276,6 +323,8 @@ $$\text{Check: } 2(7-1)=12 \;\text{ and }\; 7+5=12$$
 1. "Solve 6x+1=4x+9. Which side did you move the variable to, and why that one?"
 2. "In 3x+8=7x+20, if you move 3x right you'll hit a negative. Walk me through it and check."
 3. "Why must we distribute 2(x-1) *before* gathering the x's?"
+4. "You solve an equation and the x's disappear, leaving 7=7. What's the solution — and what would it mean instead if you'd been left with 7=2?" (all real numbers; vs. no solution)
+5. "Give me the fewest-steps first move for 4(x+5)=24, and say why dividing by 4 first is cleaner here than distributing."
 
 **Practice problems:**
 
@@ -288,10 +337,17 @@ $$\text{Check: } 2(7-1)=12 \;\text{ and }\; 7+5=12$$
 *Distribute first, then gather:*
 9. 3(x+2)=x+10  10. 2(x-1)=4x+6  11. 5x-4=3(x+2)  12. 4(x-3)=2x+2
 
+*Three outcomes — decide: one solution, all real numbers, or no solution? (Gather, then read the leftover statement.)*
+13. 4x+5=2x+13  14. 3x+5=3x+5  15. 2x+3=2x+5  16. 6x+1=2x+13  17. 2(x+3)=2x+6  18. 5x+2=5x-9  19. 3(x-4)=3x-12  20. 4(x+1)=2(2x+5)
+
+*Strategy choice — solve, then say which first move (divide-first vs. distribute-first) was cleaner and why:*
+21. 5(x+2)=35
+
 **Answer key (all verified — and worth substitution-checking each with the student):**
 1) 4  2) 3  3) 5  4) 5  5) 5  6) 4  7) -3  8) -4  9) 2  10) -4  11) 5  12) 7
+13) x=4  14) identity — all real numbers  15) contradiction — no solution  16) x=3  17) identity — all real numbers  18) contradiction — no solution  19) identity — all real numbers  20) contradiction — no solution  21) x=5
 
-*Substitution spot-checks:* #7: 3(-3)+8=-1, 7(-3)+20=-1. #10: 2(-4-1)=-10, 4(-4)+6=-10. #11: 5(5)-4=21, 3(5+2)=21.
+*Substitution spot-checks:* #7: 3(-3)+8=-1, 7(-3)+20=-1. #10: 2(-4-1)=-10, 4(-4)+6=-10. #11: 5(5)-4=21, 3(5+2)=21. #14: 3(0)+5=5 and 3(0)+5=5; at x=2 both give 11 — true for every x. #15: at x=0 the sides are 3 and 5; the right side stays 2 bigger for every x, so never equal. #21 (divide-first): 5(x+2)=35 → x+2=7 → x=5, cleaner than distributing to 5x+10=35 since 35/5 is whole; check 5(5+2)=35.
 
 ---
 
@@ -359,6 +415,10 @@ $$\frac{x}{2}+\frac{x}{3}=5 \xrightarrow{\times 6} 3x+2x=30 \Rightarrow 5x=30 \R
 *Reciprocal with a bigger numerator:*
 $$\frac34 x=9 \xrightarrow{\times \frac43} x=12 \qquad \text{Check: } \frac34(12)=9$$
 
+*An answer that's itself a fraction (a fraction is a perfectly good solution):*
+$$\frac23 x=5 \xrightarrow{\times \frac32} x=\frac{15}{2} \qquad \text{Check: } \frac23\cdot\frac{15}{2}=\frac{30}{6}=5$$
+Don't "round" 15/2 to 7 or 8 — an exact fraction *is* the answer. Just as zero was a fine answer earlier, so is 15/2.
+
 **Watch for:**
 - **Multiplying only some terms** when clearing fractions (forgetting the constant or the right side). Repair: "Every term gets the ×6 — the scale only stays level if *both whole pans* are multiplied."
 - **Flipping the wrong thing / not flipping:** dividing by 2/3 instead of multiplying by 3/2. Both are valid, but the reciprocal is cleaner; show they agree.
@@ -377,22 +437,39 @@ $$\frac34 x=9 \xrightarrow{\times \frac43} x=12 \qquad \text{Check: } \frac34(12
 *Reciprocal method (single fraction coefficient):*
 1. (1/2)x=5  2. (2/3)x=8  3. (3/5)x=9  4. (5/2)x=10
 
-*Clear the fractions (common denominator):*
+*Clear the fractions (common denominator) — items 5, 6, 7, 9:*
 5. x/2+x/4=6  6. x/3+x/6=3  7. x/2-x/5=3  9. x/4+x/2=9
 
-*Mixed (fraction coefficient with a constant):*
+*Mixed (fraction coefficient with a constant) — items 8, 10:*
 8. (2/3)x+1=7  10. (3/4)x-2=4
 
-**Answer key (all verified):**
-1) 10  2) 12  3) 15  4) 4  5) 8  6) 6  7) 10  8) 9  9) 12  10) 8
+*Fractional answer (the solution is itself a fraction — state it exactly):*
+11. (2/5)x=3
 
-*Substitution spot-checks:* #5: 8/2+8/4=4+2=6. #7: 10/2-10/5=5-2=3. #8: (2/3)(9)+1=6+1=7.
+*(Heads up: by type, 8 and 9 read out of their number order — match each problem to the answer key by its number, not its position.)*
+
+**Answer key (all verified) — listed in number order:**
+1) 10  2) 12  3) 15  4) 4  5) 8  6) 6  7) 10  8) 9  9) 12  10) 8  11) 15/2
+
+*Substitution spot-checks:* #5: 8/2+8/4=4+2=6. #7: 10/2-10/5=5-2=3. #8: (2/3)(9)+1=6+1=7. #11: (2/5)(15/2)=30/10=3 — a fraction is a fine solution.
 
 ---
 
 ## Wrap-up & interleaving
 
 **Consolidate:** The student should leave able to solve any linear equation by a single reliable habit — *do the same inverse move to both sides until x is alone, then substitute back to check.* The procedure is identical whether the equation is one-step, two-step, both-sides, or fractional; only the number of moves changes.
+
+**General strategy (recap — this just names the pattern you've already been using):**
+
+> 1. **Tidy each side** — clear fractions (multiply through by a common denominator) and parentheses (distribute), then combine like terms.
+> 2. **Gather the variable terms** onto one side (subtract the smaller one from both sides — it goes to zero on the other).
+> 3. **Gather the constants** onto the other side (same move).
+> 4. **Make the coefficient go to one** — divide (or multiply by the reciprocal) to isolate x.
+> 5. **Substitute back** into the *original* equation and confirm both sides match.
+>
+> If at step 2 the variable terms cancel entirely, you've hit a special case — read the leftover statement: true → **all real numbers**, false → **no solution** (Lesson 2.4).
+
+This is the same backbone used in 2.4 (variables on both sides) and 2.5 (fractions) — point a stuck student here when an unfamiliar equation appears; the steps don't change, only how many you need.
 
 **Mix back in (interleaving, pedagogy.md):**
 - Keep slipping in **negative answers** (callback to Unit 1.4) — e.g. revisit 8-2x=14 and the both-sides negatives — so signs stay sharp.
