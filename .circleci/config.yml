@@ -33,6 +33,12 @@ jobs:
           name: Skill package up to date
           command: python _verification/build_skill.py --check
       - run:
+          name: Student guide up to date
+          command: python _verification/build_student_guide.py --check
+      - run:
+          name: Integration smoke test (cross-material alignment + code resolution)
+          command: python _verification/smoke_test.py
+      - run:
           name: Unit tests
           command: python -m pytest _verification/tests -v
 workflows:

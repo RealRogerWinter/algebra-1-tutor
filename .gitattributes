@@ -13,3 +13,6 @@ docs/textbook/** text eol=lf
 
 # The tutor guide is generated LF-only by _verification/build_tutor_guide.py.
 docs/tutor-guide/** text eol=lf
+
+# The student guide is generated LF-only by _verification/build_student_guide.py.
+docs/student-guide/** text eol=lf
