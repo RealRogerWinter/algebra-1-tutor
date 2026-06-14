@@ -1,0 +1,10 @@
+# Built skill artifact duplicate (.zip is the installable one and is committed)
+algebra-1-tutor.skill
+
+# Python
+__pycache__/
+*.pyc
+
+# OS
+.DS_Store
+Thumbs.db
