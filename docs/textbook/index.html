@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Algebra 1 — Contents — Algebra 1</title>
+<link rel="stylesheet" href="textbook.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous">
+</head>
+<body>
+<header class="topbar">
+  <nav><a href="index.html">Contents</a></nav>
+  <button id="theme" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<h1>Algebra 1 — Contents</h1>
+
+<p class="subtitle">A full Algebra 1 textbook, generated from the tutor's lesson source. Every worked example, definition, and figure has a reference code you can quote to the tutor.</p><ul class="units"><li><a href="unit-01.html"><b>Unit 1</b> · Foundations &amp; the Language of Algebra</a><br><span class="u">Variables, the equals sign as a balance, the number system &amp; number line, order of operations, negative numbers, expressions vs. equations</span></li>
+<li><a href="unit-02.html"><b>Unit 2</b> · Solving Linear Equations</a><br><span class="u">One- and two-step equations, like terms, distributive property, variables on both sides, fractions in equations</span></li>
+<li><a href="unit-03.html"><b>Unit 3</b> · Proportional Reasoning (the bridge to linearity)</a><br><span class="u">Ratios, rates, unit rate, proportions, percents</span></li>
+<li><a href="unit-04.html"><b>Unit 4</b> · Introducing Functions</a><br><span class="u">What a function is, f(x) notation, domain &amp; range, table/graph/equation/words</span></li>
+<li><a href="unit-05.html"><b>Unit 5</b> · Linear Functions &amp; Their Graphs</a><br><span class="u">Coordinate plane, graphing, slope, slope-intercept, writing equations of lines</span></li>
+<li><a href="unit-06.html"><b>Unit 6</b> · Modeling &amp; Translation</a><br><span class="u">Turning words into equations; number/age/distance/value &amp; relationship problems; intro scatter plots</span></li>
+<li><a href="unit-07.html"><b>Unit 7</b> · Systems of Equations</a><br><span class="u">Two equations, two unknowns: graphing, substitution, elimination, special cases</span></li>
+<li><a href="unit-08.html"><b>Unit 8</b> · Inequalities</a><br><span class="u">One-variable, the sign-flip, compound, absolute value, two-variable graphing</span></li>
+<li><a href="unit-09.html"><b>Unit 9</b> · Sequences &amp; Exponential Functions</a><br><span class="u">Arithmetic/geometric sequences as functions, exponential growth &amp; decay, linear vs. exponential</span></li>
+<li><a href="unit-10.html"><b>Unit 10</b> · Exponents &amp; Polynomials</a><br><span class="u">Exponent rules, scientific notation, polynomial operations, FOIL/area model</span></li>
+<li><a href="unit-11.html"><b>Unit 11</b> · Factoring</a><br><span class="u">GCF, factoring trinomials, special patterns</span></li>
+<li><a href="unit-12.html"><b>Unit 12</b> · Quadratic Functions &amp; Equations (the capstone)</a><br><span class="u">Square roots &amp; radicals, x²=9, factoring, completing the square, quadratic formula, parabolas</span></li>
+<li><a href="appendix.html"><b>Unit A</b> · Data &amp; Statistics</a><br><span class="u">One/two-variable statistics, line of best fit, correlation vs. causation, two-way tables</span></li></ul>
+</main>
+<footer><p>Generated from the unit source by <code>_verification/build_textbook.py</code>. Math by KaTeX.</p></footer>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  renderMathInElement(document.body, {delimiters: [{left: "$$", right: "$$", display: true}], throwOnError: false});
+  var t = document.getElementById("theme"), root = document.documentElement;
+  if (localStorage.getItem("a1-theme") === "dark") root.classList.add("dark");
+  t.addEventListener("click", function () {
+    root.classList.toggle("dark");
+    localStorage.setItem("a1-theme", root.classList.contains("dark") ? "dark" : "light");
+  });
+});
+</script>
+</body>
+</html>

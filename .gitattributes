@@ -7,3 +7,6 @@ docs/CURRICULUM.md text eol=lf
 # Figures are generated LF-only by _verification/figures.py; pin so regeneration
 # doesn't show spurious CRLF diffs on Windows checkouts.
 algebra-1-tutor/figures/*.svg text eol=lf
+
+# The HTML textbook is generated LF-only by _verification/build_textbook.py.
+docs/textbook/** text eol=lf

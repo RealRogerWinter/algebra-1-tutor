@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Unit 6: Modeling &amp; Translation — Algebra 1</title>
+<link rel="stylesheet" href="textbook.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous">
+</head>
+<body>
+<header class="topbar">
+  <nav><a href="index.html">Contents</a> &nbsp;·&nbsp; <a href="unit-05.html">&larr; Unit 5</a> &nbsp;·&nbsp; <a href="unit-07.html">Unit 7 &rarr;</a></nav>
+  <button id="theme" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<h1>Unit 6: Modeling &amp; Translation</h1>
+<p class="subtitle">Turning words into equations; number/age/distance/value & relationship problems; intro scatter plots</p>
+
+<blockquote>
+<p><strong>Prerequisites:</strong> Unit 2 (solving linear equations — two-step, distributive, variables on both sides) and Unit 5 (linear functions, slope, y = mx + b, the coordinate plane).
+<strong>By the end, the student can:</strong></p>
+<ul>
+<li>Translate phrases into algebraic expressions and full sentences into equations, defining the variable in words first.</li>
+<li>Read the <em>structure</em> of a situation rather than chasing keyword tricks.</li>
+<li>Set up and solve classic word problems (number, age, distance, value &amp; relationship) with a repeatable method, and check the answer against the <em>original</em> wording.</li>
+<li>Plot paired data, name the association (positive / negative / none), use a line of best fit to predict, interpret its slope and intercept in context, distinguish interpolation from extrapolation, and state that correlation is not causation — a first taste of Unit A (Data &amp; Statistics).</li>
+</ul>
+</blockquote>
+<h2 id="teaching-this-unit-orientation-for-the-tutor">Teaching this unit (orientation for the tutor)</h2>
+<p>This unit is the hinge of the whole course. Up to now the student has been <em>solving</em> equations that were handed to them. The real intellectual work of algebra is the step <em>before</em> solving: turning a messy English situation into symbols. Make this explicit early — "you already know how to solve 4x - 7 = 9; the new skill is recognizing when a sentence <em>is</em> that equation." Solving is the easy half now; setting up is the hard half, and it deserves most of the time.</p>
+<p>The single biggest trap is <strong>keyword tricks</strong> — "'of' means multiply," "'more than' means add," "'is' means equals," "'less than' means subtract in the order you read." These shortcuts feel efficient and are wrong often enough to wreck a student (see <code>misconceptions.md §7</code> — over-applied tricks; and §2, the letter-as-object reversal, which keyword reading feeds). The two classic disasters:</p>
+<ul>
+<li><strong>Order reversal:</strong> "3 less than a number" is x - 3, <em>not</em> 3 - x. The phrase you read first lands second.</li>
+<li><strong>The reversal error:</strong> "6 students for every 1 professor" tempts 6s = p; it's actually p = 6s (see <code>misconceptions.md §2</code>).</li>
+</ul>
+<p>The antidote is the same every lesson and you should enforce it relentlessly: <strong>define the variable in words first</strong> — literally have the student write or say "let x = the number of dimes" before any symbol gets written. A variable with no English definition is the root of most setup errors. Then read the situation's <em>structure</em> (what equals what, what's being combined, what's the total) instead of word-by-word substitution.</p>
+<p>Pacing: 6.1 builds the translation reflex on small pieces. 6.2 applies it to multi-sentence problems with a fixed four-step method. 6.3 is a deliberately light first taste of data that connects back to Unit 5 — a best-fit line <em>is</em> a linear function (<code>f(x) = mx + b</code>) fit to messy points. It's the on-ramp to <strong>Unit A (Data &amp; Statistics)</strong>, which is a <strong>core unit of this course, not an optional appendix</strong> — 6.3 previews its line-of-best-fit lesson (Unit A, Lesson A.2), so keep 6.3 light and let Unit A carry the full data treatment (form, correlation strength, two-way tables). Don't try to teach all of statistics here, but <em>do</em> point forward: the ideas you plant in 6.3 (association, predicting from a trend line, correlation ≠ causation) get developed in Unit A. Thread function language throughout 6.3: the prediction line is a function you evaluate. Interleave Unit 2 solving (every setup ends in a solve) and Unit 5 graphing (6.3) so those skills stay warm.</p>
+<hr>
+<h2 id="lesson-61-translating-words-into-expressions-and-equations">Lesson 6.1: Translating words into expressions and equations</h2>
+<p><strong>Goal:</strong> Turn phrases into algebraic expressions and full sentences into equations, by reading structure — not keywords — and defining the variable first.</p>
+<p><strong>Why it matters:</strong> Every word problem, every real application, and every later modeling task (systems in Unit 7, inequalities in Unit 8) begins with this translation. It is the gateway skill; if it's shaky, nothing downstream works.</p>
+<p><strong>New terms:</strong></p>
+<ul>
+<li><a class="refcode" id="6.1.d1" href="#6.1.d1">#6.1.d1</a> <strong>Translate (in algebra):</strong> rewrite an English phrase or sentence as an equivalent algebraic expression or equation.</li>
+<li><a class="refcode" id="6.1.d2" href="#6.1.d2">#6.1.d2</a> <strong>Expression vs. equation (callback to Unit 1):</strong> an <em>expression</em> (x + 5) is a quantity with no equals sign — nothing to solve; an <em>equation</em> (x + 5 = 12) asserts two quantities are equal and <em>can</em> be solved.</li>
+</ul>
+<p><strong>Teaching arc (concrete → pictorial → symbolic):</strong></p>
+<ol>
+<li><strong>Define the variable first, always.</strong> Before anything: "What is the unknown? Write <em>let x =</em> and finish the sentence in words." Make this a non-negotiable ritual. Use the mystery-box metaphor (<code>metaphors.md</code>, Variables A): x is a box holding the unknown number; the phrase tells you what to <em>do</em> to that box.</li>
+<li><strong>Build phrases as actions on the box.</strong> "Twice a number" = two of the box = 2x. "5 more than a number" = the box plus 5 = x + 5. Say the action aloud, then write it.</li>
+<li><strong>Confront order directly.</strong> For "3 less than a number," ask: "Start with the number — the box. Now take 3 <em>away from it</em>. What's left?" → x - 3. Then show the trap: 3 - x would be "3, with the number taken away from <em>it</em>" — a different quantity. Test with a number: if the number is 10, "3 less than 10" is 7, and x - 3 = 7 while 3 - x = -7. The substitution check (<code>misconceptions.md §7</code>) settles it every time.</li>
+<li><strong>Sentences → equations.</strong> The verb <em>is / equals / will be / results in</em> is the =. Everything before it is the left expression, everything after is the right. Translate each side as an expression, join with =, then solve with Unit 2 tools.</li>
+<li><strong>Warn off keywords out loud.</strong> "I'm not going to give you a list of 'these words mean these operations' — that backfires. We read what the sentence is <em>doing</em>." (<code>misconceptions.md §7</code>.) If a student has met a keyword table elsewhere (many textbooks list them — sum → +, "less than" → reverse-order subtraction): acknowledge it rather than contradict it. "Those tables are fine as a memory aid, but they fail on comparisons and reversals (the exact traps below), which is why we read structure first and use the words only as a backstop." This frames our approach as a refinement of the common advice, not a flat rejection of it.</li>
+</ol>
+<p><strong>Worked examples:</strong></p>
+<p><em>Example 1 — phrase to expression (order trap).</em> "3 less than 4 times a number."
+Let x = the number. "4 times a number" is 4x. "3 less than 4x" takes 3 <em>away from</em> 4x:
+$$4x - 3$$
+Not 3 - 4x. Check with x = 10: "3 less than 40" is 37, and 4(10) - 3 = 37.</p>
+<p><em>Example 2 — phrase to expression (two actions).</em> "A number doubled, then increased by 7."
+Let x = the number. Double it: 2x. Increase that by 7:
+$$2x + 7$$</p>
+<p><em>Example 3 — sentence to equation, then solve.</em> "7 less than 4 times a number is 9."
+Let x = the number. Left side: "7 less than 4x" = 4x - 7. The word <em>is</em> = 9.
+$$4x - 7 = 9 \;\Rightarrow\; 4x = 16 \;\Rightarrow\; x = 4$$
+Check in the original words: 4 times 4 is 16; 7 less than 16 is 9.</p>
+<p><em>Example 4 — sentence to equation, then solve.</em> "The sum of a number and 12 is 20."
+Let x = the number. "The sum of a number and 12" = x + 12; "is 20" = 20.
+$$x + 12 = 20 \;\Rightarrow\; x = 8$$
+Check: 8 + 12 = 20.</p>
+<p><em>Example 5 — the reversal trap (relationship, not a number).</em> "There are 6 students for every professor; s students, p professors. Write the equation."
+Don't translate left-to-right into 6s = p. Read the structure: students are the <em>bigger</em> group, six times as many. Test with 1 professor: that's 6 students, so s = 6p. (<code>misconceptions.md §2</code>.) Confirm: p = 2 gives s = 12 — 12 students, 2 professors, ratio 6-to-1.</p>
+<p><strong>Watch for:</strong></p>
+<ul>
+<li><strong>Order reversal</strong> on "less than" / "subtracted from": tell is 3 - x for "3 less than a number." Repair: substitute a number; the wrong order gives a value that contradicts the plain-English meaning (<code>misconceptions.md §7</code>).</li>
+<li><strong>Keyword over-application:</strong> mechanically mapping each word to an operation, e.g. reading "is less than" (a comparison) as subtraction, or auto-multiplying on "of." Repair: re-read for what the sentence <em>does</em> (<code>misconceptions.md §7</code>).</li>
+<li><strong>The reversal error</strong> in relationships (6s = p): tell is the equation failing a quick number test. Repair: plug in the smaller quantity = 1 (<code>misconceptions.md §2</code>).</li>
+<li><strong>Skipping the variable definition:</strong> if the student writes symbols before saying what x is, stop and back up — most setup errors trace to here.</li>
+</ul>
+<p><strong>Visuals to offer:</strong> None needed — this lesson is symbolic. The LaTeX area-model boxes from <code>visuals.md</code> aren't relevant here.</p>
+<p><strong>Check for understanding (transfer):</strong></p>
+<ol>
+<li><a class="refcode" id="6.1.c1" href="#6.1.c1">#6.1.c1</a> Translate "8 fewer than twice a number," then explain in one sentence why it isn't 8 - 2x.</li>
+<li><a class="refcode" id="6.1.c2" href="#6.1.c2">#6.1.c2</a> A sentence translates to x - 5 = 11. Invent an English sentence that would produce it.</li>
+<li><a class="refcode" id="6.1.c3" href="#6.1.c3">#6.1.c3</a> "A number divided by 3, then increased by 4, is 10." Set up the equation and say which word told you where the equals sign goes.</li>
+</ol>
+<p><strong>Practice problems:</strong></p>
+<p><em>Translate each phrase to an expression (definition: let x = the number):</em></p>
+<ol>
+<li><a class="refcode" id="6.1.1" href="#6.1.1">#6.1.1</a> 5 more than a number.</li>
+<li><a class="refcode" id="6.1.2" href="#6.1.2">#6.1.2</a> Twice a number.</li>
+<li><a class="refcode" id="6.1.3" href="#6.1.3">#6.1.3</a> 3 less than a number.</li>
+<li><a class="refcode" id="6.1.4" href="#6.1.4">#6.1.4</a> A number doubled, then increased by 7.</li>
+<li><a class="refcode" id="6.1.5" href="#6.1.5">#6.1.5</a> The quotient of a number and 4.</li>
+<li><a class="refcode" id="6.1.6" href="#6.1.6">#6.1.6</a> 6 less than three times a number.</li>
+</ol>
+<p><em>Translate each sentence to an equation, then solve:</em></p>
+<ol start="7">
+<li><a class="refcode" id="6.1.7" href="#6.1.7">#6.1.7</a> The sum of a number and 12 is 20.</li>
+<li><a class="refcode" id="6.1.8" href="#6.1.8">#6.1.8</a> 7 less than 4 times a number is 9.</li>
+<li><a class="refcode" id="6.1.9" href="#6.1.9">#6.1.9</a> A number doubled and then increased by 7 is 23.</li>
+<li><a class="refcode" id="6.1.10" href="#6.1.10">#6.1.10</a> 3 less than a number is 10.</li>
+<li><a class="refcode" id="6.1.11" href="#6.1.11">#6.1.11</a> Three times a number is 21.</li>
+<li><a class="refcode" id="6.1.12" href="#6.1.12">#6.1.12</a> Half of a number, increased by 5, is 11.</li>
+<li><a class="refcode" id="6.1.13" href="#6.1.13">#6.1.13</a> 4 less than 5 times a number is 26.</li>
+<li><a class="refcode" id="6.1.14" href="#6.1.14">#6.1.14</a> Twice the sum of a number and 3 is 16.</li>
+<li><a class="refcode" id="6.1.15" href="#6.1.15">#6.1.15</a> A number increased by 8 equals three times the number.</li>
+</ol>
+<p><strong>Answer key:</strong></p>
+<ol>
+<li>x + 5 · 2. 2x · 3. x - 3 (not 3 - x) · 4. 2x + 7 · 5. x/4 · 6. 3x - 6 (not 6 - 3x)</li>
+<li>x + 12 = 20 ⇒ x = 8</li>
+<li>4x - 7 = 9 ⇒ x = 4</li>
+<li>2x + 7 = 23 ⇒ x = 8</li>
+<li>x - 3 = 10 ⇒ x = 13</li>
+<li>3x = 21 ⇒ x = 7</li>
+<li>x/2 + 5 = 11 ⇒ x = 12</li>
+<li>5x - 4 = 26 ⇒ x = 6</li>
+<li>2(x + 3) = 16 ⇒ x = 5</li>
+<li>x + 8 = 3x ⇒ x = 4</li>
+</ol>
+<hr>
+<h2 id="lesson-62-classic-word-problems-number-age-distance-value-relationship">Lesson 6.2: Classic word problems (number, age, distance, value &amp; relationship)</h2>
+<p><strong>Goal:</strong> Solve number, age, distance, and value/relationship problems with one repeatable method, and check the answer against the original words. (Percent-<em>concentration</em> mixtures — "blend 20% and 50% to get 30%" — are a two-variable <em>systems</em> topic and are deferred to Unit 7; here "value" means coins/tickets and the like.)</p>
+<p><strong>Why it matters:</strong> These four families cover most of the word problems in Algebra 1 and beyond, and the <em>method</em> — not the memorized type — is what transfers to systems (Unit 7) and any real model. A reliable setup routine is the deliverable here.</p>
+<p><strong>New terms:</strong></p>
+<ul>
+<li><a class="refcode" id="6.2.d1" href="#6.2.d1">#6.2.d1</a> <strong>Consecutive integers:</strong> integers in a row, each one more than the last: n, n+1, n+2, … For consecutive <strong>even</strong> or <strong>odd</strong> integers, the gap is 2: n, n+2, n+4, … (This same gap-of-2 form fits both even and odd runs; which one you get depends only on the starting value n. So if solving gives a non-integer n — say n = 74/3 — that total simply has <em>no</em> such consecutive run, and the fractional answer is the signal.)</li>
+<li><a class="refcode" id="6.2.d2" href="#6.2.d2">#6.2.d2</a> <strong>Distance–rate–time relationship:</strong> d = rt — distance equals rate (speed) times time. (Slope from Unit 5 <em>is</em> a rate; on a distance-vs-time graph the speed is the slope — <code>metaphors.md</code>, Slope B.)</li>
+<li><a class="refcode" id="6.2.d3" href="#6.2.d3">#6.2.d3</a> <strong>Value problem:</strong> total <em>value</em> = (value of each item) × (number of items), summed over the kinds of items (e.g. dimes worth $0.10 each).</li>
+</ul>
+<p><strong>Teaching arc — the four-step method (use it every time):</strong></p>
+<ol>
+<li><strong>Define the variable in words.</strong> "Let x = ____." If two quantities are unknown, express the second <em>in terms of</em> the first using the relationship in the problem (e.g. "Sam is 3 older than Pat" → Pat = p, Sam = p + 3). This is the heart of the method; don't skip it.</li>
+<li><strong>Write the equation</strong> from the structure: what totals to what, what equals what.</li>
+<li><strong>Solve</strong> with Unit 2 tools.</li>
+<li><strong>Check in the ORIGINAL words</strong> — not just in your equation. Re-read the problem and confirm the numbers fit the story. This catches setup errors a symbolic check can't.</li>
+</ol>
+<p>Narrate that defining the <em>second</em> unknown in terms of the first is what keeps everything to a single variable (one equation, one unknown) — the same move that later makes substitution natural in Unit 7.</p>
+<p><strong>Worked examples:</strong></p>
+<p><em>Example 1 — number (consecutive integers).</em> "Three consecutive integers sum to 33. Find them."
+Let n = the smallest. The next two are n + 1 and n + 2.
+$$n + (n + 1) + (n + 2) = 33 \;\Rightarrow\; 3n + 3 = 33 \;\Rightarrow\; 3n = 30 \;\Rightarrow\; n = 10$$
+So the integers are 10, 11, 12. Check in words: 10 + 11 + 12 = 33.</p>
+<p><em>Example 2 — number (consecutive even).</em> "Three consecutive even integers sum to 78."
+Let n = the smallest even integer; the next even integers are n + 2 and n + 4.
+$$n + (n + 2) + (n + 4) = 78 \;\Rightarrow\; 3n + 6 = 78 \;\Rightarrow\; n = 24$$
+Integers: 24, 26, 28. Check: 24 + 26 + 28 = 78, and all even.</p>
+<p><em>Example 3 — age.</em> "Sam is 3 years older than Pat. Together their ages total 27. How old is each?"
+Let p = Pat's age. Then Sam's age = p + 3 (second unknown in terms of the first).
+$$p + (p + 3) = 27 \;\Rightarrow\; 2p + 3 = 27 \;\Rightarrow\; 2p = 24 \;\Rightarrow\; p = 12$$
+Pat is 12, Sam is 12 + 3 = 15. Check in words: Sam (15) is 3 more than Pat (12), and 12 + 15 = 27.</p>
+<p><em>Example 4 — distance (d = rt).</em> "A car travels at 60 mph. How long to go 180 miles?"
+Let t = the time in hours. Using d = rt with d = 180, r = 60:
+$$60t = 180 \;\Rightarrow\; t = 3$$
+3 hours. Check: 60 × 3 = 180 miles.</p>
+<p><em>Example 5 — distance (two objects).</em> "Two cars leave the same point in opposite directions, one at 50 mph and one at 70 mph. After how many hours are they 360 miles apart?"
+Let t = the time in hours. Distance apart = sum of the two distances = 50t + 70t.
+$$50t + 70t = 360 \;\Rightarrow\; 120t = 360 \;\Rightarrow\; t = 3$$
+3 hours. Check: in 3 hours one goes 150 mi, the other 210 mi; 150 + 210 = 360.</p>
+<p><em>Example 6 — value (coins).</em> "A jar has 15 coins, all dimes and quarters, worth $2.55 total. How many of each?"
+Let d = the number of dimes. Then the number of quarters = 15 - d (the rest of the 15). Value in dollars:
+$$0.10d + 0.25(15 - d) = 2.55$$
+$$0.10d + 3.75 - 0.25d = 2.55 \;\Rightarrow\; -0.15d = -1.20 \;\Rightarrow\; d = 8$$
+8 dimes, 15 - 8 = 7 quarters. Check in words: 15 coins; value 8(0.10) + 7(0.25) = 0.80 + 1.75 = $2.55.</p>
+<p><em>Example 7 — value (tickets).</em> "100 tickets sold: adult $8, child $5, for $680 total. How many adult tickets?"
+Let a = the number of adult tickets; child tickets = 100 - a.
+$$8a + 5(100 - a) = 680 \;\Rightarrow\; 8a + 500 - 5a = 680 \;\Rightarrow\; 3a = 180 \;\Rightarrow\; a = 60$$
+60 adult, 40 child. Check: 60(8) + 40(5) = 480 + 200 = $680.</p>
+<p><strong>Watch for:</strong></p>
+<ul>
+<li><strong>Two unknowns, one variable:</strong> students introduce a fresh letter for the second quantity and stall. Repair: re-read for the relationship ("3 older than," "the rest of the 15") and write the second in terms of the first.</li>
+<li><strong>Mixing units in value problems:</strong> adding cents to dollars, e.g. 10d (cents) plus 0.25q (dollars). Repair: pick one unit for the whole equation and state it.</li>
+<li><strong>Distance setups:</strong> confusing "same direction (difference of distances)" with "opposite directions (sum)," or forgetting both objects share the same t. Repair: a quick picture and the d = rt table.</li>
+<li><strong>Checking only the equation, not the story:</strong> an answer can satisfy a <em>wrongly built</em> equation. Always re-read the original (<code>misconceptions.md §1</code> — = as a real relationship, not just a compute step).</li>
+</ul>
+<p><strong>Visuals to offer:</strong> For distance problems, a simple labeled sketch (two arrows from a point) clarifies sum-vs-difference — a plain ASCII sketch in chat is enough; no <code>visuals.md</code> artifact required. The coordinate-plane artifact belongs in 6.3.</p>
+<p><strong>Check for understanding (transfer):</strong></p>
+<ol>
+<li><a class="refcode" id="6.2.c1" href="#6.2.c1">#6.2.c1</a> In Example 3, suppose instead the ages total 41. Without redoing all the algebra from scratch, what changes and what is Pat's new age?</li>
+<li><a class="refcode" id="6.2.c2" href="#6.2.c2">#6.2.c2</a> Why must the <em>second</em> unknown be written in terms of the first rather than as a new letter, if we want a single equation?</li>
+<li><a class="refcode" id="6.2.c3" href="#6.2.c3">#6.2.c3</a> A value problem gives "0.05n + 0.10(20 − n) = ...". In one sentence, what do n, 20 - n, and the coefficients 0.05 and 0.10 each represent?</li>
+</ol>
+<p><strong>Practice problems:</strong></p>
+<p><em>Number:</em></p>
+<ol>
+<li><a class="refcode" id="6.2.1" href="#6.2.1">#6.2.1</a> Two consecutive integers sum to 47. Find them.</li>
+<li><a class="refcode" id="6.2.2" href="#6.2.2">#6.2.2</a> Two consecutive <strong>odd</strong> integers sum to 56. Find them.</li>
+</ol>
+<p><em>Age:</em></p>
+<ol start="3">
+<li><a class="refcode" id="6.2.3" href="#6.2.3">#6.2.3</a> Maya is 5 years older than her brother. Their ages total 33. How old is each?</li>
+<li><a class="refcode" id="6.2.4" href="#6.2.4">#6.2.4</a> A mother is 4 times as old as her daughter. The mother is 18 years older than the daughter. How old is each?</li>
+</ol>
+<p><em>Distance:</em></p>
+<ol start="5">
+<li><a class="refcode" id="6.2.5" href="#6.2.5">#6.2.5</a> A cyclist rides at 45 mph (assume) for some hours and covers 225 miles. How many hours?</li>
+<li><a class="refcode" id="6.2.6" href="#6.2.6">#6.2.6</a> A train covers 220 miles in 4 hours. What is its speed?</li>
+</ol>
+<p><em>Value (coins):</em></p>
+<ol start="7">
+<li><a class="refcode" id="6.2.7" href="#6.2.7">#6.2.7</a> A purse holds 20 coins, all nickels and dimes, worth $1.55. How many of each?</li>
+</ol>
+<p><em>Geometry / relationship:</em></p>
+<ol start="8">
+<li><a class="refcode" id="6.2.8" href="#6.2.8">#6.2.8</a> A rectangle's length is 5 more than its width, and its perimeter is 46. Find the width and length.</li>
+</ol>
+<p><strong>Answer key:</strong></p>
+<ol>
+<li>n + (n+1) = 47 ⇒ n = 23: the integers are <strong>23 and 24</strong>. Check 23 + 24 = 47.</li>
+<li>n + (n+2) = 56 ⇒ n = 27: <strong>27 and 29</strong> (both odd). Check 27 + 29 = 56.</li>
+<li>Let brother = b, Maya = b + 5: b + (b+5) = 33 ⇒ b = 14. Brother <strong>14</strong>, Maya <strong>19</strong>. Check 14 + 19 = 33.</li>
+<li>Let daughter = d, mother = 4d; difference 18: 4d - d = 18 ⇒ d = 6. Daughter <strong>6</strong>, mother <strong>24</strong>. Check 24 - 6 = 18 and 24 = 4 × 6.</li>
+<li>45t = 225 ⇒ t = 5 hours. Check 45 × 5 = 225.</li>
+<li>r · 4 = 220 ⇒ r = 55 mph. Check 55 × 4 = 220.</li>
+<li>Let n = nickels, dimes = 20 - n: 0.05n + 0.10(20 - n) = 1.55 ⇒ n = 9. <strong>9 nickels, 11 dimes</strong>. Check 9(0.05) + 11(0.10) = 0.45 + 1.10 = $1.55.</li>
+<li>Let w = width, length = w + 5: 2(w + (w+5)) = 46 ⇒ w = 9. Width <strong>9</strong>, length <strong>14</strong>. Check perimeter 2(9 + 14) = 46.</li>
+</ol>
+<hr>
+<h2 id="lesson-63-scatter-plots-line-of-best-fit-a-first-taste-of-data">Lesson 6.3: Scatter plots &amp; line of best fit (a first taste of data)</h2>
+<p><strong>Goal:</strong> Plot paired data, name the association, use a line of best fit to predict (and read what its slope and intercept <em>mean</em> in context), and recognize that correlation is not causation. Keep it light — this is the <strong>first taste</strong> of data that previews <strong>Unit A (Data &amp; Statistics)</strong>, the course's core data unit; Unit A is where these ideas get the full treatment.</p>
+<p><strong>Why it matters:</strong> Real data is messy and rarely sits on a perfect line, yet a <em>trend</em> is often clear and useful. A line of best fit is exactly the linear function from Unit 5 — y = mx + b, or f(x) = mx + b — fit to scattered points so we can summarize and predict. This is the everyday face of linear functions. And because it's that same line, its <strong>slope and intercept carry real meaning</strong>: the slope is a <em>rate</em> (how much y changes per unit of x — the same rate idea as d = rt in 6.2), and the intercept is the predicted y when x = 0. Reading those in context is what makes a trend line meaningful rather than a black box, and it's exactly what Unit A builds on.</p>
+<p><strong>New terms:</strong></p>
+<ul>
+<li><a class="refcode" id="6.3.d1" href="#6.3.d1">#6.3.d1</a> <strong>Scatter plot:</strong> a graph of paired data (x, y) plotted as individual points — no connecting line.</li>
+<li><a class="refcode" id="6.3.d2" href="#6.3.d2">#6.3.d2</a> <strong>Association / correlation:</strong> the overall trend in the cloud of points. <strong>Positive:</strong> as x goes up, y tends to go up (cloud rises left to right). <strong>Negative:</strong> as x goes up, y tends to go down. <strong>No association:</strong> no clear up-or-down trend.</li>
+<li><a class="refcode" id="6.3.d3" href="#6.3.d3">#6.3.d3</a> <strong>Line of best fit (trend line):</strong> a single line drawn to pass as close as possible to all the points, summarizing the trend. It <em>is</em> a linear function — you evaluate it to predict.</li>
+<li><a class="refcode" id="6.3.d4" href="#6.3.d4">#6.3.d4</a> <strong>Correlation is not causation:</strong> two quantities trending together does <strong>not</strong> prove one <em>causes</em> the other.</li>
+</ul>
+<p><strong>Teaching arc (concrete → pictorial → symbolic):</strong></p>
+<ol>
+<li><strong>Start with a story and a table.</strong> E.g. hours studied vs. quiz score for a handful of students. Read two or three rows aloud so the pairs feel concrete.</li>
+<li><strong>Plot the points</strong> on a coordinate plane (callback to Unit 5.1) — offer the SVG artifact below (coordinates <strong>computed</strong>, never eyeballed, per <code>visuals.md</code>). Each dot is one student; no line connecting dots.</li>
+<li><strong>Name the association</strong> by eye: does the cloud rise, fall, or drift? Here it rises → positive.</li>
+<li><strong>Lay a line of best fit through the cloud</strong> — "the line that best summarizes the trend." Emphasize it won't hit every point, and that's the <em>point</em>: it's a model of messy data. This is Unit 5's y = mx + b again.</li>
+<li><strong>Predict by evaluating the function.</strong> Given a best-fit line like f(x) = 3x + 2, predicting at x = 10 is just f(10) = 32 — the same evaluation skill from Unit 4/5. Name the two prediction zones once: predicting <em>inside</em> the data's x-range is <strong>interpolation</strong> (more trustworthy); predicting <em>outside</em> it is <strong>extrapolation</strong> (riskier the farther out you reach). Both terms come back in Unit A.</li>
+<li><strong>Read the slope and intercept in context.</strong> Don't stop at the number — say what the line <em>means</em>. For f(x) = 3x + 2 (hours practiced → free throws made): the <strong>slope 3</strong> means about 3 more free throws for each extra hour of practice (a rate, just like 6.2's d = rt); the <strong>intercept 2</strong> is the predicted makes with zero practice. This is the most useful thing a trend line tells you, and Unit A leans on it.</li>
+<li><strong>One cautionary sentence on causation:</strong> "Ice-cream sales and drownings both rise in summer — but ice cream doesn't cause drownings; hot weather drives both. A trend is not proof of cause."</li>
+</ol>
+<p><strong>Visuals to offer:</strong> <code>visuals.md</code> — coordinate plane with plotted points (SVG artifact). Below is a ready scatter plot with <strong>computed</strong> screen coordinates (hours studied x vs. quiz score y; map sₓ = 40 + 30x, s_y = 170 - 1.4y), including a best-fit line y = 7x + 50 drawn from its computed endpoints (0,50) and (6,92). Always pair it with the table of points in chat. Tell the student this trend line is <strong>an estimate sketched by eye to run through the middle of the cloud</strong> — a different reasonable person might draw a slightly different one, and that's fine. (A calculator's line-of-best-fit tool finds the single optimal one; ours is close. Computing it by formula is a Unit A / technology job, not something to do here.)</p>
+<pre><code class="language-svg">&lt;svg viewBox=&quot;0 0 250 200&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; font-family=&quot;sans-serif&quot; font-size=&quot;10&quot;&gt;
+  &lt;!-- axes --&gt;
+  &lt;line x1=&quot;40&quot; y1=&quot;170&quot; x2=&quot;235&quot; y2=&quot;170&quot; stroke=&quot;#888&quot;/&gt;   &lt;!-- x-axis --&gt;
+  &lt;line x1=&quot;40&quot; y1=&quot;10&quot;  x2=&quot;40&quot;  y2=&quot;170&quot; stroke=&quot;#888&quot;/&gt;   &lt;!-- y-axis --&gt;
+  &lt;text x=&quot;120&quot; y=&quot;192&quot; text-anchor=&quot;middle&quot; fill=&quot;#555&quot;&gt;hours studied&lt;/text&gt;
+  &lt;text x=&quot;12&quot; y=&quot;90&quot; fill=&quot;#555&quot; transform=&quot;rotate(-90 12 90)&quot;&gt;quiz score&lt;/text&gt;
+  &lt;!-- best-fit line y = 7x + 50, endpoints (0,50)-&gt;(40,100) and (6,92)-&gt;(220,41.2) --&gt;
+  &lt;line x1=&quot;40&quot; y1=&quot;100&quot; x2=&quot;220&quot; y2=&quot;41.2&quot; stroke=&quot;#2980b9&quot; stroke-width=&quot;2&quot;/&gt;
+  &lt;text x=&quot;150&quot; y=&quot;55&quot; fill=&quot;#2980b9&quot;&gt;best fit: y = 7x + 50&lt;/text&gt;
+  &lt;!-- data points (computed) --&gt;
+  &lt;circle cx=&quot;70&quot;  cy=&quot;93&quot;   r=&quot;3.5&quot; fill=&quot;#c0392b&quot;/&gt;  &lt;!-- (1,55) --&gt;
+  &lt;circle cx=&quot;100&quot; cy=&quot;86&quot;   r=&quot;3.5&quot; fill=&quot;#c0392b&quot;/&gt;  &lt;!-- (2,60) --&gt;
+  &lt;circle cx=&quot;100&quot; cy=&quot;74.8&quot; r=&quot;3.5&quot; fill=&quot;#c0392b&quot;/&gt;  &lt;!-- (2,68) --&gt;
+  &lt;circle cx=&quot;130&quot; cy=&quot;72&quot;   r=&quot;3.5&quot; fill=&quot;#c0392b&quot;/&gt;  &lt;!-- (3,70) --&gt;
+  &lt;circle cx=&quot;160&quot; cy=&quot;58&quot;   r=&quot;3.5&quot; fill=&quot;#c0392b&quot;/&gt;  &lt;!-- (4,80) --&gt;
+  &lt;circle cx=&quot;190&quot; cy=&quot;49.6&quot; r=&quot;3.5&quot; fill=&quot;#c0392b&quot;/&gt;  &lt;!-- (5,86) --&gt;
+  &lt;circle cx=&quot;220&quot; cy=&quot;41.2&quot; r=&quot;3.5&quot; fill=&quot;#c0392b&quot;/&gt;  &lt;!-- (6,92) --&gt;
+&lt;/svg&gt;
+</code></pre>
+<p>Point table to show alongside it: (1,55),(2,60),(2,68),(3,70),(4,80),(5,86),(6,92) — the cloud rises, so the association is <strong>positive</strong>.</p>
+<p><strong>Worked examples:</strong></p>
+<p><em>Example 1 — read the trend.</em> The scatter plot above (hours studied vs. quiz score) rises from lower-left to upper-right. <strong>Association: positive</strong> — more study hours tend to go with higher scores. (Tend to — not every point obeys; that's why it's a trend, not a rule.)</p>
+<p><em>Example 2 — predict, then interpret slope and intercept.</em> A study finds the best-fit line f(x) = 3x + 2 for (hours practiced, free throws made). Predict the makes for someone who practices x = 10 hours:
+$$f(10) = 3(10) + 2 = 32 \text{ free throws.}$$
+This is just evaluating the linear function from Unit 5 — the line <em>is</em> the model. Now read the parts in context: the <strong>slope 3</strong> says about 3 more makes per extra hour practiced (a rate); the <strong>intercept 2</strong> is the predicted makes with no practice. And note the x = 10 prediction is likely an <strong>extrapolation</strong> — if the data only ran up to a few practice hours, x = 10 reaches past it, so trust it less than a within-range prediction.</p>
+<p><em>Example 3 — negative association + prediction + causation caution.</em> A best-fit line for (daily screen-time hours x, hours of sleep y) is f(x) = -0.5x + 9. Predict the sleep for someone with x = 6 hours of screen time:
+$$f(6) = -0.5(6) + 9 = 6 \text{ hours of sleep.}$$
+The negative slope means a <strong>negative association</strong> — more of x goes with less of y. In context: the <strong>slope −0.5</strong> says roughly half an hour less sleep per extra hour of screen time; the <strong>intercept 9</strong> is the predicted sleep with zero screen time. But caution: a downward trend doesn't <em>prove</em> screen time <em>causes</em> less sleep — some other factor could drive both. Correlation is not causation.</p>
+<p><strong>Watch for:</strong></p>
+<ul>
+<li><strong>Connecting the dots:</strong> drawing a zig-zag through every point instead of one straight trend line. Repair: "we want <em>one</em> line that summarizes all of them, not a path that visits each."</li>
+<li><strong>Treating the best-fit line as exact:</strong> expecting every data point to lie on it. Repair: "real data scatters; the line is a model, deliberately close-but-not-through-all."</li>
+<li><strong>Causation overclaim:</strong> "the graph proves x causes y." Repair: the ice-cream/drownings example.</li>
+<li><strong>Reading association backwards:</strong> calling a falling cloud "positive because the numbers are positive." Repair: association is about <em>direction of the trend</em>, not the sign of the values — does the cloud rise or fall left to right?</li>
+</ul>
+<p><strong>Check for understanding (transfer):</strong></p>
+<ol>
+<li><a class="refcode" id="6.3.c1" href="#6.3.c1">#6.3.c1</a> Sketch in words what a scatter plot with <strong>no association</strong> looks like, and give a real pair of quantities you'd expect to show it.</li>
+<li><a class="refcode" id="6.3.c2" href="#6.3.c2">#6.3.c2</a> A town finds shoe size and reading level are positively associated in children. Does bigger feet cause better reading? Explain in one sentence what's really going on.</li>
+<li><a class="refcode" id="6.3.c3" href="#6.3.c3">#6.3.c3</a> A best-fit line is f(x) = 0.5x + 60. Predict y when x = 20, and say whether the association is positive or negative.</li>
+<li><a class="refcode" id="6.3.c4" href="#6.3.c4">#6.3.c4</a> For the same best-fit line f(x) = 0.5x + 60 modeling (minutes of exercise x, resting heart-rate-recovery score y), explain in context what the <strong>0.5</strong> and the <strong>60</strong> each tell you. (One sentence each.)</li>
+</ol>
+<p><strong>Practice problems:</strong></p>
+<p><em>Conceptual:</em></p>
+<ol>
+<li><a class="refcode" id="6.3.1" href="#6.3.1">#6.3.1</a> For each, name the likely association (positive / negative / none): (a) hours of exercise per week vs. resting heart rate; (b) a car's age vs. its resale price; (c) a person's height vs. their phone number.</li>
+<li><a class="refcode" id="6.3.2" href="#6.3.2">#6.3.2</a> In your own words, what does a line of best fit <em>do</em>, and why won't it pass through every point?</li>
+<li><a class="refcode" id="6.3.3" href="#6.3.3">#6.3.3</a> True or false, with a one-sentence reason: "If two quantities are strongly correlated, one must cause the other."</li>
+<li><a class="refcode" id="6.3.4" href="#6.3.4">#6.3.4</a> A scatter plot's cloud falls from upper-left to lower-right. Positive, negative, or no association?</li>
+</ol>
+<p><em>Predictions (evaluate the given best-fit line):</em></p>
+<ol start="5">
+<li><a class="refcode" id="6.3.5" href="#6.3.5">#6.3.5</a> Best-fit line f(x) = 3x + 2. Predict y at x = 4.</li>
+<li><a class="refcode" id="6.3.6" href="#6.3.6">#6.3.6</a> Best-fit line f(x) = -2x + 50. Predict y at x = 15.</li>
+<li><a class="refcode" id="6.3.7" href="#6.3.7">#6.3.7</a> Best-fit line f(x) = 0.5x + 60. Predict y at x = 20.</li>
+</ol>
+<p><em>Interpret &amp; range (in context):</em></p>
+<ol start="8">
+<li><a class="refcode" id="6.3.8" href="#6.3.8">#6.3.8</a> A best-fit line for (hours worked x, dollars earned y) is f(x) = 12x + 0. In context, what does the <strong>slope 12</strong> mean, and what does the <strong>intercept 0</strong> mean?</li>
+<li><a class="refcode" id="6.3.9" href="#6.3.9">#6.3.9</a> The line in problems 5 was built from data running from x = 1 to x = 6. Is predicting at x = 4 an <strong>interpolation</strong> or an <strong>extrapolation</strong>, and which kind of prediction is more trustworthy?</li>
+</ol>
+<p><strong>Answer key:</strong></p>
+<ol>
+<li>(a) <strong>negative</strong> (more exercise tends to lower resting heart rate); (b) <strong>negative</strong> (older car, lower price); (c) <strong>none</strong> (height and phone number are unrelated).</li>
+<li>It draws a single straight line that best summarizes the overall trend so you can describe it and predict; it won't hit every point because real data scatters — the line is a model of messy data, not a connect-the-dots path.</li>
+<li><strong>False</strong> — correlation shows two things trend together, but a hidden third factor (or coincidence) can cause the trend; correlation is not causation.</li>
+<li><strong>Negative association</strong> (the trend falls as x increases).</li>
+<li>f(4) = 3(4) + 2 = 14.</li>
+<li>f(15) = -2(15) + 50 = 20.</li>
+<li>f(20) = 0.5(20) + 60 = 70.</li>
+<li><strong>Slope 12:</strong> each extra hour worked adds about \$12 to earnings (a rate, \$12 per hour); <strong>intercept 0:</strong> with 0 hours worked, predicted earnings are \$0.</li>
+<li><strong>Interpolation</strong> — x = 4 sits inside the data's range (1 to 6), so it's the more trustworthy kind of prediction; an extrapolation reaches outside the data and is riskier.</li>
+</ol>
+<hr>
+<h2 id="wrap-up-interleaving">Wrap-up &amp; interleaving</h2>
+<p><strong>Consolidate:</strong> the order of this unit is the lesson — <em>define the variable in words → read the structure → write the equation → solve → check in the original words.</em> Reinforce that translation is its own skill, separate from (and harder than) solving, and that keyword tricks are a trap to read <em>structure</em> instead (<code>misconceptions.md §7</code>, §2). 6.3 lands the idea that a line of best fit is just a Unit 5 linear function fit to real, messy data — and that a trend never proves a cause.</p>
+<p><strong>Mix back in:</strong> every 6.2 setup ends in a Unit 2 solve (two-step, distributive, variables on both sides) — keep those reps live. 6.3 reuses Unit 5 (plotting points, y = mx + b, evaluating a function) and Unit 4 function notation, and it <strong>feeds Unit A (Data &amp; Statistics)</strong> — the association/best-fit/correlation ideas planted here are picked up and extended there (form, correlation strength, two-way tables). When the student is fluent here, they're ready for Unit 7 (systems), where defining a <em>second</em> unknown in terms of the first matures into two equations in two variables.</p>
+<p><strong>Progress Card should note:</strong></p>
+<ul>
+<li>Does the student <strong>define the variable in words</strong> unprompted? (The key habit of this unit.)</li>
+<li>Can they avoid the <strong>order-reversal</strong> ("3 less than x" = x - 3) and <strong>relationship-reversal</strong> (s = 6p) traps?</li>
+<li>Which word-problem families are solid vs. shaky (number / age / distance / value &amp; relationship)?</li>
+<li>Can they name an association, predict from a best-fit line, <strong>interpret its slope and intercept in context</strong>, tell <strong>interpolation from extrapolation</strong>, and correctly say <strong>correlation ≠ causation</strong>? (These preview Unit A.)</li>
+</ul>
+</main>
+<footer><p>Generated from the unit source by <code>_verification/build_textbook.py</code>. Math by KaTeX.</p></footer>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  renderMathInElement(document.body, {delimiters: [{left: "$$", right: "$$", display: true}], throwOnError: false});
+  var t = document.getElementById("theme"), root = document.documentElement;
+  if (localStorage.getItem("a1-theme") === "dark") root.classList.add("dark");
+  t.addEventListener("click", function () {
+    root.classList.toggle("dark");
+    localStorage.setItem("a1-theme", root.classList.contains("dark") ? "dark" : "light");
+  });
+});
+</script>
+</body>
+</html>

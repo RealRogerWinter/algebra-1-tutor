@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Unit A: Data &amp; Statistics — Algebra 1</title>
+<link rel="stylesheet" href="textbook.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous">
+</head>
+<body>
+<header class="topbar">
+  <nav><a href="index.html">Contents</a> &nbsp;·&nbsp; <a href="unit-12.html">&larr; Unit 12</a></nav>
+  <button id="theme" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<h1>Unit A: Data &amp; Statistics</h1>
+<p class="subtitle">One/two-variable statistics, line of best fit, correlation vs. causation, two-way tables</p>
+
+<blockquote>
+<p><strong>Prerequisites:</strong> Unit 5 (graphing lines, f(x)=mx+b) for Lesson A.2. Lessons A.1 and A.3 need only arithmetic and fractions/percents (Unit 3).
+<strong>By the end, the student can:</strong></p>
+<ul>
+<li>Compute and interpret <strong>mean, median, mode, and range</strong> for a small data set, name an <strong>outlier</strong> and its effect, and say when the median is the fairer "center."</li>
+<li>Read a <strong>scatter plot</strong>, <strong>check whether its form is roughly linear</strong> before fitting a line, describe its association, use a given <strong>line of best fit</strong> to predict, read a correlation qualitatively, and explain why <strong>correlation ≠ causation</strong>.</li>
+<li>Organize categorical data in a <strong>two-way table</strong>, find row/column totals, read a count and a <strong>relative frequency</strong>, and compare <strong>conditional relative frequencies</strong> to decide whether two variables are <strong>associated</strong>.</li>
+</ul>
+</blockquote>
+<h2 id="teaching-this-unit-orientation-for-the-tutor">Teaching this unit (orientation for the tutor)</h2>
+<p>This is the "where does algebra show up in real life" unit, so lead with relevance and keep it concrete. It's the course's data-literacy strand: three short, mostly independent lessons. A.1 (one-variable center &amp; spread) and A.3 (two-way tables) are pure arithmetic-and-fractions; A.2 (line of best fit) is the payoff — it reuses Unit 5's f(x)=mx+b on <em>messy</em> real data, so it lands best once Unit 5 is solid.</p>
+<p>This is data literacy, not heavy computation, so keep it <strong>appropriately light</strong> — a couple of worked examples and a handful of practice problems per lesson carry each idea; you don't need to grind. The point is judgment about data, not arithmetic volume. The biggest conceptual win is <strong>correlation vs. causation</strong> in A.2 — make sure that one lands, because it's a lifelong critical-thinking tool.</p>
+<p>Keep the standard habits from <code>SKILL.md</code> (verify arithmetic, never yes/no checks). The main misconception traps are light: forgetting to <strong>order the data before taking the median</strong>, treating "the average" as always the fair center, <strong>fitting a line to a cloud that isn't actually straight</strong>, and reading "two things move together" as "one causes the other." Lean on everyday framings rather than formulas — describe a correlation by eye, and define standard deviation only in words; don't compute either.</p>
+<hr>
+<h2 id="lesson-a1-one-variable-statistics-center-spread">Lesson A.1: One-variable statistics — center &amp; spread</h2>
+<p><strong>Goal:</strong> Given a small list of numbers, compute the <strong>mean, median, mode,</strong> and <strong>range</strong>, and judge when the median describes the "typical" value better than the mean.
+<strong>Why it matters:</strong> "What's typical?" and "how spread out is it?" are the two questions you ask of <em>any</em> pile of numbers — test scores, prices, wait times. These four numbers are the everyday toolkit.
+<strong>New terms:</strong></p>
+<ul>
+<li><a class="refcode" id="A.1.d1" href="#A.1.d1">#A.1.d1</a> <strong>Mean (average):</strong> add all the values, divide by how many there are. The "fair share" if everyone got the same.</li>
+<li><a class="refcode" id="A.1.d2" href="#A.1.d2">#A.1.d2</a> <strong>Median:</strong> the <strong>middle</strong> value once the data is <strong>put in order</strong>. With an even count, average the two middle ones.</li>
+<li><a class="refcode" id="A.1.d3" href="#A.1.d3">#A.1.d3</a> <strong>Mode:</strong> the value that appears <strong>most often</strong>. A set can have one mode, two or more, or — when nothing repeats — <strong>none</strong>. (That "nothing repeats → no mode" is a labeling convention; some books instead say <em>every</em> value is a mode. We'll use "no mode" here.)</li>
+<li><a class="refcode" id="A.1.d4" href="#A.1.d4">#A.1.d4</a> <strong>Range:</strong> max - min — how far the biggest is from the smallest. A first measure of <strong>spread</strong>.</li>
+<li><a class="refcode" id="A.1.d5" href="#A.1.d5">#A.1.d5</a> <strong>Outlier:</strong> a value sitting <strong>far above or below where the rest of the numbers cluster</strong> — an unusually huge or tiny entry compared with its neighbors. Outliers are the reason the mean and median can disagree (see below).</li>
+<li><a class="refcode" id="A.1.d6" href="#A.1.d6">#A.1.d6</a> <strong>Spread (intuition):</strong> are the numbers <strong>clustered</strong> tightly together or <strong>scattered</strong> widely apart? Range is the quick version; <strong>standard deviation</strong> is just <em>a single number summarizing the typical distance of values from the mean</em> (a special kind of averaged distance) — bigger means more spread out. (We name it for vocabulary only; no need to compute it here.)</li>
+</ul>
+<p><strong>Teaching arc (concrete → pictorial → symbolic):</strong></p>
+<ul>
+<li><strong>Concrete:</strong> "Five friends' quiz scores — what's a typical score, and were they all close or all over the place?" <em>Typical</em> = center (mean/median/mode); <em>all over the place</em> = spread (range).</li>
+<li><strong>Pictorial:</strong> Drop the values on a number line. The mean is the <strong>balance point</strong>; the median is the one with <strong>equal counts on each side</strong>; clustering vs. scattering is visible at a glance.</li>
+<li><strong>Symbolic:</strong> mean =sum/count; median = middle of the <strong>ordered</strong> list; range =max-min.</li>
+</ul>
+<p><strong>When the median beats the mean:</strong> one <strong>outlier</strong> drags the mean toward itself but barely moves the median. To spot an outlier in a small list, scan for a value sitting far away from where the rest cluster. Classic case: a few ordinary salaries plus one CEO's — the <em>mean</em> salary looks high, the <em>median</em> tells the truer "typical" story. Use the median when the data is <strong>skewed</strong> or has outliers. (The mean isn't "wrong" — if those extreme values genuinely matter, e.g. a total bill, the mean is the right summary; it's "typical" specifically that the median reports better.)</p>
+<p><strong>Worked examples:</strong></p>
+<ol>
+<li>
+<p><a class="refcode" id="A.1.w1" href="#A.1.w1">#A.1.w1</a> Data set {4, 8, 6, 5, 2} (5 values).
+   - <strong>Mean:</strong> (4+8+6+5+2)/5 = 25/5 = 5.
+   - <strong>Median:</strong> order it → 2, 4, 5, 6, 8; the middle value is 5.
+   - <strong>Range:</strong> 8 - 2 = 6.
+   - (No value repeats, so there's <strong>no mode</strong>.)</p>
+</li>
+<li>
+<p><a class="refcode" id="A.1.w2" href="#A.1.w2">#A.1.w2</a> Data set {2, 2, 3, 9} (4 values — even count).
+   - <strong>Mean:</strong> (2+2+3+9)/4 = 16/4 = 4.
+   - <strong>Median:</strong> ordered 2, 2, 3, 9; average the two middle values: (2+3)/2 = 2.5.
+   - <strong>Mode:</strong> 2 (appears twice).
+   - <strong>Range:</strong> 9 - 2 = 7.
+   - Note the <strong>9</strong> is an outlier: it pulls the mean (4) above the median (2.5). The median better describes "typical" here.</p>
+</li>
+<li>
+<p><a class="refcode" id="A.1.w3" href="#A.1.w3">#A.1.w3</a> <strong>Spotting an outlier and its effect.</strong> Data set {3, 4, 5, 6, 30}. Ordered, it's already 3, 4, 5, 6, <strong>30</strong> — four values clustered near 3–6, then one that's far above the rest: <strong>30 is the outlier.</strong>
+   - <strong>Mean:</strong> (3+4+5+6+30)/5 = 48/5 = 9.6.
+   - <strong>Median:</strong> the middle of the ordered list is <strong>5</strong>.
+   - Already the mean (9.6) sits well above the median (5) and above <em>every</em> clustered value — that gap is the outlier talking.
+   - <strong>Now drop the outlier</strong> (just 3, 4, 5, 6): the mean falls all the way to (3+4+5+6)/4 = 18/4 = <strong>4.5</strong>, while the median only shifts from 5 to (4+5)/2 = <strong>4.5</strong>. So removing 30 <strong>moved the mean by 5.1 but the median by only 0.5</strong> — the outlier dragged the <em>mean</em>, but the <em>median</em> barely budged. That's exactly why the median is the fairer "typical" when an outlier is present.</p>
+</li>
+</ol>
+<p><strong>Watch for:</strong></p>
+<ul>
+<li><strong>Taking the median without ordering first</strong> — the single most common slip. Tell: their "middle" value isn't actually in the center once sorted. Cue: "Line them up smallest to largest <em>first</em>, then point to the middle."</li>
+<li><strong>Even-count median</strong> — forgetting to average the <strong>two</strong> middle values.</li>
+<li><strong>Mode confusion</strong> — assuming every set has exactly one mode (it can have none, or several). "Most frequent — and sometimes nothing repeats."</li>
+<li><strong>Calling the mean 'the' answer for typical</strong> when an outlier is present — that's the median's job.</li>
+</ul>
+<p><strong>Visuals to offer:</strong> none needed (a number line sketched in ASCII per <code>visuals.md</code> can show the balance/middle idea if it helps; keep it light).</p>
+<p><strong>Check for understanding (transfer):</strong></p>
+<ol>
+<li><a class="refcode" id="A.1.c1" href="#A.1.c1">#A.1.c1</a> "A house on your street sells for \$50,000, \$60,000, \$55,000, and one mansion for \$2,000,000. Would you describe 'typical' with the mean or the median, and why?"</li>
+<li><a class="refcode" id="A.1.c2" href="#A.1.c2">#A.1.c2</a> "I have five numbers with mean 10. If I add a sixth number equal to 10, does the mean change? What if I add a 40?"</li>
+<li><a class="refcode" id="A.1.c3" href="#A.1.c3">#A.1.c3</a> "Two classes both averaged 80 on a test, but one class's scores were all near 80 and the other's ranged from 50 to 100. Which fact is about <em>center</em> and which is about <em>spread</em>?"</li>
+<li><a class="refcode" id="A.1.c4" href="#A.1.c4">#A.1.c4</a> "In the set {3, 4, 5, 6, 30}, which value is the outlier, and what does it do to the mean compared with the median? If you removed it, which of the two would change a lot and which would barely move?"</li>
+</ol>
+<p><strong>Practice problems</strong> (for each set, find the mean, median, mode, and range):</p>
+<ol>
+<li><a class="refcode" id="A.1.1" href="#A.1.1">#A.1.1</a> {3, 7, 7, 9, 4}</li>
+<li><a class="refcode" id="A.1.2" href="#A.1.2">#A.1.2</a> {10, 12, 14, 12}</li>
+<li><a class="refcode" id="A.1.3" href="#A.1.3">#A.1.3</a> {1, 2, 2, 2, 8}</li>
+<li><a class="refcode" id="A.1.4" href="#A.1.4">#A.1.4</a> {5, 5, 6, 8}</li>
+<li><a class="refcode" id="A.1.5" href="#A.1.5">#A.1.5</a> {15, 25, 25, 35}</li>
+<li><a class="refcode" id="A.1.6" href="#A.1.6">#A.1.6</a> {6, 6, 6, 6}</li>
+<li><a class="refcode" id="A.1.7" href="#A.1.7">#A.1.7</a> {2, 4, 4, 6, 9}</li>
+<li><a class="refcode" id="A.1.8" href="#A.1.8">#A.1.8</a> {2, 5, 5, 8, 10}</li>
+<li><a class="refcode" id="A.1.9" href="#A.1.9">#A.1.9</a> {1, 1, 2, 4}</li>
+<li><a class="refcode" id="A.1.10" href="#A.1.10">#A.1.10</a> {3, 3, 7, 8, 9}</li>
+<li><a class="refcode" id="A.1.11" href="#A.1.11">#A.1.11</a> {2, 4, 5, 6, 8}  <em>(which mode case is this?)</em></li>
+<li><a class="refcode" id="A.1.12" href="#A.1.12">#A.1.12</a> {3, 3, 7, 7, 30}  <em>(spot the outlier — what does it do to the mean vs. the median?)</em></li>
+</ol>
+<p><strong>Answer key</strong> (mean · median · mode · range):</p>
+<ol>
+<li>6 · 7 · 7 · 6</li>
+<li>12 · 12 · 12 · 4</li>
+<li>3 · 2 · 2 · 7</li>
+<li>6 · 5.5 · 5 · 3</li>
+<li>25 · 25 · 25 · 20</li>
+<li>6 · 6 · 6 · 0</li>
+<li>5 · 4 · 4 · 7</li>
+<li>6 · 5 · 5 · 8</li>
+<li>2 · 1.5 · 1 · 3</li>
+<li>6 · 7 · 3 · 6</li>
+<li>5 · 5 · <strong>no mode</strong> · 6 — nothing repeats, so there's no mode.</li>
+<li>10 · 7 · <strong>3 and 7</strong> (bimodal) · 27 — <strong>30 is the outlier</strong>: it drags the mean up to 10 while the median stays at 7.</li>
+</ol>
+<hr>
+<h2 id="lesson-a2-two-variable-data-line-of-best-fit-correlation-vs-causation">Lesson A.2: Two-variable data — line of best fit, correlation vs. causation</h2>
+<p><strong>Goal:</strong> Read a <strong>scatter plot</strong> of paired data, describe its <strong>association</strong>, use a given <strong>line of best fit</strong> to make a prediction, and explain why <strong>correlation does not prove causation</strong>.
+<strong>Why it matters:</strong> This is where Unit 5's lines earn their keep on <strong>real, messy data</strong>: a line of best fit lets you summarize a cloud of points and predict beyond it. And spotting correlation-vs-causation is one of the most useful thinking skills algebra gives you.
+<strong>New terms:</strong></p>
+<ul>
+<li><a class="refcode" id="A.2.d1" href="#A.2.d1">#A.2.d1</a> <strong>Scatter plot:</strong> a coordinate-plane graph of <strong>paired data</strong> — each data point is one (x, y) dot (e.g. hours studied vs. test score).</li>
+<li><a class="refcode" id="A.2.d2" href="#A.2.d2">#A.2.d2</a> <strong>Association:</strong> the overall trend in the cloud of dots:</li>
+<li><strong>Positive</strong> — as x goes up, y tends to go up (dots rise left-to-right).</li>
+<li><strong>Negative</strong> — as x goes up, y tends to go down (dots fall).</li>
+<li><strong>No association</strong> — no clear up-or-down trend.</li>
+<li><a class="refcode" id="A.2.d3" href="#A.2.d3">#A.2.d3</a> <strong>Form:</strong> the <em>shape</em> of the cloud — does it run roughly along a <strong>straight line</strong> (linear) or does it <strong>curve / bend</strong> (nonlinear)? Form is a separate question from direction, and it's the one that decides whether a <em>line</em> is even the right summary.</li>
+<li><a class="refcode" id="A.2.d4" href="#A.2.d4">#A.2.d4</a> <strong>Line of best fit:</strong> a straight line f(x)=mx+b drawn to pass as close as possible to all the dots — <strong>the same linear function from Unit 5</strong>, now fit to data that doesn't sit perfectly on any line. Used to <strong>predict</strong> a y for a new x. (A line is only appropriate when the form is roughly linear — see the teaching arc.)</li>
+<li><a class="refcode" id="A.2.d5" href="#A.2.d5">#A.2.d5</a> <strong>Correlation:</strong> a measured tendency for two variables to move together. Read it <strong>qualitatively</strong> here: its <strong>direction</strong> (positive or negative, from which way the cloud leans) and its <strong>strength</strong> — <em>strong</em> if the dots hug the line tightly, <em>weak</em> if they're loosely scattered around it. <strong>Causation:</strong> one variable actually <em>makes</em> the other change. <strong>Correlation and causation are not the same.</strong></li>
+</ul>
+<p><strong>Teaching arc (concrete → pictorial → symbolic):</strong></p>
+<ul>
+<li><strong>Concrete:</strong> "Plot every (hours studied, score) pair as a dot. They won't land on one neat line — real data is messy. But you can <em>see</em> a trend, and draw the line that best threads through the cloud."</li>
+<li><strong>Pictorial:</strong> Show a small scatter and a line running through the middle of it (<code>visuals.md</code> <strong>Template 2</strong> mapping — coordinate plane with <strong>computed</strong> plotted points, then the best-fit line on top; always pair it with the table of points). The line need not hit any single dot; it captures the <em>overall</em> direction. While the picture is up, read the correlation <strong>by eye</strong>: which way does it lean (positive/negative), and how <em>tightly</em> do the dots hug the line — a narrow band is a <strong>strong</strong> correlation, a loose scatter is a <strong>weak</strong> one.</li>
+<li><strong>Check the form FIRST (do this before you fit or trust a line):</strong> glance at the cloud and ask <strong>"is this roughly straight?"</strong> A line of best fit only makes sense when the dots run <em>approximately along a line</em>. <strong>If the cloud curves (bends like a U or arch) or is a shapeless blob, a straight line is the wrong model</strong> — fitting one would summarize and predict badly no matter how carefully you draw it. So the order is: see the dots → check the form is linear → <em>then</em> fit/use a line. (Also scan for an <strong>outlier</strong> — one dot sitting far off the trend — since a single stray point can tilt the line.)</li>
+<li><strong>Symbolic — callback to Unit 5:</strong> Once you've confirmed a line is appropriate and have f(x)=mx+b, prediction is just <strong>evaluating the function</strong> (Unit 5.4): plug in an x, read off the predicted y. Same machine, applied data.</li>
+</ul>
+<p><strong>Correlation ≠ causation (make this land):</strong> In summer, <strong>ice cream sales</strong> and <strong>drowning incidents</strong> both rise — they're <em>correlated</em>. But ice cream doesn't cause drownings; a hidden third cause, <strong>hot weather</strong>, drives both (more ice cream <em>and</em> more swimming). That hidden third factor has a name — statisticians call it a <strong>lurking</strong> (or <strong>confounding</strong>) <strong>variable</strong> — but the everyday idea is what matters: "two things move together" never by itself proves "one causes the other." Always ask: <em>could a third factor explain both? could it be coincidence?</em></p>
+<p><strong>Worked examples:</strong></p>
+<ol>
+<li>
+<p><a class="refcode" id="A.2.w1" href="#A.2.w1">#A.2.w1</a> A line of best fit for some data is y = 2x + 3. <strong>Predict</strong> y when x = 5:
+   $$y = 2(5) + 3 = 10 + 3 = 13.$$
+   (Same as evaluating f(5) for f(x)=2x+3 — Unit 5.4.) So we'd predict about <strong>13</strong>. Stress "about": a best-fit prediction is an estimate, not a guarantee.</p>
+</li>
+<li>
+<p><a class="refcode" id="A.2.w2" href="#A.2.w2">#A.2.w2</a> <strong>Describe the association.</strong> A scatter of (hours studied, test score) shows dots that climb left-to-right — students who studied more generally scored higher. That's a <strong>positive association</strong>. A scatter of (hours of TV, test score) whose dots drift downward would be a <strong>negative association</strong>. A scatter of (shoe size, test score) with dots scattered every which way shows <strong>no association</strong>.</p>
+</li>
+<li>
+<p><a class="refcode" id="A.2.w3" href="#A.2.w3">#A.2.w3</a> <strong>Correlation vs. causation.</strong> "Towns with more firefighters at a blaze tend to have more fire damage." Does sending firefighters cause damage? No — <strong>bigger fires</strong> (the <strong>lurking variable</strong>) cause <em>both</em> more firefighters being called <em>and</em> more damage. Correlation, not causation.</p>
+</li>
+<li>
+<p><a class="refcode" id="A.2.w4" href="#A.2.w4">#A.2.w4</a> <strong>Check the form before fitting a line.</strong> Two scatter plots. In the first, (hours studied, score) dots run in a roughly straight, rising band — the <strong>form is linear</strong>, so a line of best fit is a sensible summary; fit it. In the second, plotting (hours of practice, score) the dots rise quickly then <em>level off</em>, bending into an <strong>arch shape</strong> — the <strong>form is nonlinear</strong>, so a straight line is the <strong>wrong model</strong> here: it would overshoot the leveling-off part and predict badly. Same with a shapeless blob — no line summarizes it. The move: <strong>look at the form first; only fit a line when the cloud is roughly straight.</strong></p>
+</li>
+<li>
+<p><a class="refcode" id="A.2.w5" href="#A.2.w5">#A.2.w5</a> <strong>Read a correlation qualitatively (direction + strength).</strong> Suppose two scatter plots both lean <strong>upward</strong> (positive direction). In plot A the dots sit in a <strong>tight, narrow band</strong> right along the trend; in plot B they're <strong>loosely scattered</strong> in a fat cloud around it. Both are <em>positive</em>, but plot A shows a <strong>strong</strong> correlation and plot B a <strong>weak</strong> one — strength is just how tightly the dots hug the line. (You read this by eye; you do <strong>not</strong> compute a number for it at this level.)</p>
+</li>
+</ol>
+<p><strong>Watch for:</strong></p>
+<ul>
+<li><strong>"Correlation proves causation"</strong> — the headline trap. Tell: the student leaps from "they move together" to "X causes Y." Repair with the ice-cream/drowning or firefighter example and the "is there a third cause?" question.</li>
+<li><strong>Fitting a line to a cloud that isn't straight</strong> — the form trap. Tell: the student reaches for a line of best fit on a clearly <strong>curved</strong> or <strong>shapeless</strong> scatter. Cue: "First — is this cloud roughly <em>straight</em>? If it bends or has no shape, a line is the wrong tool." A confidently-drawn line on curved data is worse than admitting no line fits.</li>
+<li><strong>Expecting points to sit exactly on the line</strong> — real data is scattered; the best-fit line is a summary, not a perfect fit.</li>
+<li><strong>Reversing the association</strong> (calling a downward trend "positive"). Cue: "As x increases, does y go up or down?"</li>
+<li><strong>Confusing strength with direction</strong> — "strong" is <em>how tightly</em> the dots hug the line; "positive/negative" is <em>which way</em> it leans. A weak positive and a strong positive both lean up.</li>
+<li><strong>Over-trusting predictions far outside the data</strong> — a best-fit line predicts best <em>near</em> the data it came from (a within-range prediction is safer than one reaching far past the data).</li>
+</ul>
+<p><strong>Visuals to offer:</strong> <a class="refcode" id="A.2.f1" href="#A.2.f1">#A.2.f1</a> <code>visuals.md</code> <strong>Template 2</strong> (coordinate plane + line). <strong>Compute the plotted points</strong> and the two line endpoints (don't eyeball), emit as an <strong>SVG artifact</strong>, label the axes and the line equation, and always include the companion <strong>table of points</strong> in chat. A scatter is just the plane with several small <code>&lt;circle&gt;</code> dots plus the best-fit line drawn through them.</p>
+<figure class="fig" id="fig-A.2.f1"><svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+  <line x1="18.0" y1="196.5" x2="222.0" y2="196.5" stroke="#888"/>
+  <text x="216.0" y="192.5" font-size="10" fill="#888">x</text>
+  <line x1="47.14" y1="18.0" x2="47.14" y2="222.0" stroke="#888"/>
+  <text x="51.14" y="26.0" font-size="10" fill="#888">y</text>
+  <line x1="18.0" y1="196.5" x2="222.0" y2="18.0" stroke="#c0392b" stroke-width="2"/>
+  <circle cx="76.29" cy="145.5" r="3" fill="#2980b9"/>
+  <circle cx="105.43" cy="120.0" r="3" fill="#2980b9"/>
+  <circle cx="134.57" cy="120.0" r="3" fill="#2980b9"/>
+  <circle cx="163.71" cy="69.0" r="3" fill="#2980b9"/>
+  <circle cx="192.86" cy="43.5" r="3" fill="#2980b9"/>
+</svg><figcaption>Figure A.2.f1</figcaption></figure>
+
+<p><strong>Check for understanding (transfer):</strong></p>
+<ol>
+<li><a class="refcode" id="A.2.c1" href="#A.2.c1">#A.2.c1</a> "A best-fit line is y = -(1/2)x + 10. Predict y at x = 4, and say whether the association is positive or negative — how can you tell from the equation?"</li>
+<li><a class="refcode" id="A.2.c2" href="#A.2.c2">#A.2.c2</a> "Sales of sunglasses and the number of people getting sunburned both rise in July. Are they correlated? Does one cause the other? What's really going on?"</li>
+<li><a class="refcode" id="A.2.c3" href="#A.2.c3">#A.2.c3</a> "Two scatter plots: in one the dots rise steadily; in the other they're a shapeless blob. Describe each association in words."</li>
+<li><a class="refcode" id="A.2.c4" href="#A.2.c4">#A.2.c4</a> "Before you draw a line of best fit, what should you check about the <em>shape</em> of the scatter? Describe a cloud where a straight line would be the <strong>wrong</strong> summary, and say why."</li>
+<li><a class="refcode" id="A.2.c5" href="#A.2.c5">#A.2.c5</a> "Two scatters both lean upward, but one is a tight narrow band and the other a loose fat cloud. Which shows the <em>stronger</em> correlation, and does 'stronger' change whether it's positive or negative?"</li>
+</ol>
+<p><strong>Practice problems:</strong>
+<em>Predict using the given line of best fit. The line in 1–2 was built from data that ran from x = 1 to x = 6:</em></p>
+<ol>
+<li><a class="refcode" id="A.2.1" href="#A.2.1">#A.2.1</a> y = 2x + 3; predict y at x = 5. Is this prediction inside the data range or outside it?</li>
+<li><a class="refcode" id="A.2.2" href="#A.2.2">#A.2.2</a> y = 2x + 3; predict y at x = 10. Inside or outside the data range — and which of 1 or 2 is the more trustworthy prediction, and why?</li>
+<li><a class="refcode" id="A.2.3" href="#A.2.3">#A.2.3</a> y = 3x - 1; predict y at x = 4.</li>
+<li><a class="refcode" id="A.2.4" href="#A.2.4">#A.2.4</a> y = -2x + 10; predict y at x = 3. Then say whether the association is <strong>positive or negative</strong>, and how the equation tells you.</li>
+<li>
+<p><a class="refcode" id="A.2.5" href="#A.2.5">#A.2.5</a> y = (1/2)x + 1; predict y at x = 6.
+<em>Conceptual (describe / explain):</em></p>
+</li>
+<li>
+<p><a class="refcode" id="A.2.6" href="#A.2.6">#A.2.6</a> A scatter of (hours studied, score) has dots climbing left-to-right. Positive, negative, or no association?</p>
+</li>
+<li><a class="refcode" id="A.2.7" href="#A.2.7">#A.2.7</a> A scatter of (hours of TV, score) has dots drifting downward left-to-right. Which association is that?</li>
+<li><a class="refcode" id="A.2.8" href="#A.2.8">#A.2.8</a> "Children with bigger feet tend to read better." Is bigger feet <em>causing</em> better reading? Name a likely third factor (the lurking variable).</li>
+<li><a class="refcode" id="A.2.9" href="#A.2.9">#A.2.9</a> A scatter's dots rise steeply, then flatten out into an arch — they clearly <em>curve</em> rather than run straight. Should you summarize this with a line of best fit? Why or why not?</li>
+<li><a class="refcode" id="A.2.10" href="#A.2.10">#A.2.10</a> Two scatters both lean upward; in one the dots sit in a tight narrow band, in the other a loose fat cloud. Which has the <strong>stronger</strong> correlation? Are both still <strong>positive</strong>?</li>
+</ol>
+<p><strong>Answer key:</strong></p>
+<ol>
+<li>2(5)+3 = <strong>13</strong>. <strong>Inside</strong> the data range (x = 5 is within 1–6) — an interpolation.</li>
+<li>2(10)+3 = <strong>23</strong>. <strong>Outside</strong> the range (x = 10 is past 6) — an extrapolation. <strong>Problem 1 is more trustworthy</strong>: a best-fit line predicts best near the data it came from; x = 10 reaches well beyond it.</li>
+<li>3(4)-1 = <strong>11</strong>.</li>
+<li>-2(3)+10 = <strong>4</strong>. <strong>Negative</strong> association — the slope is <strong>negative</strong> (-2), so as x rises, y falls.</li>
+<li>1/2(6)+1 = <strong>4</strong>.</li>
+<li><strong>Positive</strong> association (as x rises, y rises).</li>
+<li><strong>Negative</strong> association (as x rises, y falls).</li>
+<li><strong>No</strong> — correlation, not causation. The hidden third factor (lurking variable) is <strong>age</strong>: older children have bigger feet <em>and</em> read better.</li>
+<li><strong>No</strong> — the form is <strong>nonlinear</strong> (it curves), so a straight line is the wrong model; it would fit and predict poorly. Check the form is roughly straight <em>before</em> fitting a line.</li>
+<li>The <strong>tight narrow band</strong> shows the <strong>stronger</strong> correlation. <strong>Yes, both are still positive</strong> — strength (tight vs. loose) is a separate question from direction (up vs. down).</li>
+</ol>
+<hr>
+<h2 id="lesson-a3-two-way-tables">Lesson A.3: Two-way tables</h2>
+<p><strong>Goal:</strong> Organize <strong>categorical</strong> data (yes/no, type A/type B) in a two-way table, compute <strong>row and column totals</strong>, read off a <strong>count</strong> and a <strong>relative frequency</strong>, and compare <strong>conditional relative frequencies</strong> across groups to decide whether the two variables are <strong>associated</strong>.
+<strong>Why it matters:</strong> Survey and yes/no data ("owns a pet? lives in an apartment?") is everywhere, and a two-way table is the clean way to see how two categories interact, turn raw counts into percentages, and answer the real question: <em>does one category go with the other?</em>
+<strong>New terms:</strong></p>
+<ul>
+<li><a class="refcode" id="A.3.d1" href="#A.3.d1">#A.3.d1</a> <strong>Categorical data:</strong> data sorted into <strong>groups/labels</strong> (yes/no, apartment/house), not measured numbers.</li>
+<li><a class="refcode" id="A.3.d2" href="#A.3.d2">#A.3.d2</a> <strong>Two-way table:</strong> a grid with one category across the <strong>rows</strong> and another across the <strong>columns</strong>; each inner cell holds a <strong>count</strong>.</li>
+<li><a class="refcode" id="A.3.d3" href="#A.3.d3">#A.3.d3</a> <strong>Row total / column total (marginals):</strong> the sum across a row or down a column. The corner <strong>grand total</strong> is everyone.</li>
+<li><a class="refcode" id="A.3.d4" href="#A.3.d4">#A.3.d4</a> <strong>Relative frequency:</strong> a count expressed as a <strong>fraction or percent of a total</strong> — count/total. Which total you divide by depends on the question:</li>
+<li><strong>Joint relative frequency</strong> — a single cell over the <strong>grand total</strong> (e.g. "owns a pet <em>and</em> lives in an apartment, out of everyone").</li>
+<li><strong>Conditional relative frequency</strong> — a cell over its <strong>row or column total</strong>, i.e. a rate <em>within one group</em> (e.g. "of the apartment dwellers, the share who own a pet"). These are the ones you compare to detect association.</li>
+<li><a class="refcode" id="A.3.d5" href="#A.3.d5">#A.3.d5</a> <strong>Association (for two categories):</strong> two categorical variables are <strong>associated</strong> when a <strong>conditional relative frequency differs across groups</strong> — e.g. if the pet-ownership rate among apartment dwellers is clearly different from the rate among house dwellers, then <em>where you live</em> and <em>owning a pet</em> are associated. If those rates are about equal, there's little or no association. (This is the categorical-data echo of A.2's positive/negative association for scatter plots.)</li>
+</ul>
+<p><strong>Teaching arc (concrete → pictorial → symbolic):</strong></p>
+<ul>
+<li><strong>Concrete:</strong> "We surveyed 50 people: does each own a pet, and do they live in an apartment? Sort them into four buckets." Each bucket is a cell.</li>
+<li><strong>Pictorial:</strong> Lay it out as a grid with a totals row and column. Seeing the marginals add up to the grand total is a built-in check.</li>
+<li><strong>Symbolic:</strong> A count is read straight from a cell. A relative frequency is (cell (or total))/(chosen total), then converted to a percent.</li>
+</ul>
+<p><strong>Worked example:</strong> 50 people surveyed — <em>owns a pet</em> (rows) × <em>lives in an apartment</em> (columns):</p>
+<p>$$\begin{array}{c|c|c|c}
+ &amp; \text{Apartment} &amp; \text{House} &amp; \textbf{Total} \\ \hline
+\text{Pet: Yes} &amp; 6 &amp; 24 &amp; \mathbf{30} \\ \hline
+\text{Pet: No} &amp; 14 &amp; 6 &amp; \mathbf{20} \\ \hline
+\textbf{Total} &amp; \mathbf{20} &amp; \mathbf{30} &amp; \mathbf{50}
+\end{array}$$</p>
+<ul>
+<li><strong>Row totals:</strong> Pet-Yes =6+24=30; Pet-No =14+6=20.</li>
+<li><strong>Column totals:</strong> Apartment =6+14=20; House =24+6=30.</li>
+<li><strong>Grand total:</strong> 30+20=50 (check: 20+30=50).</li>
+<li><strong>Read a count:</strong> people who own a pet <strong>and</strong> live in an apartment =6 (top-left cell).</li>
+<li><strong>Joint relative frequency (of everyone):</strong> fraction who own a pet =30/50=3/5=60%.</li>
+<li><strong>Conditional relative frequency (within a column):</strong> of the 20 apartment dwellers, the fraction owning a pet =6/20=3/10=30%. (Note how the <em>total you divide by</em> changes with the question.)</li>
+</ul>
+<p><strong>Does owning a pet go with where you live? (compare the conditional rates):</strong></p>
+<ul>
+<li>Pet rate <strong>among apartment dwellers</strong> =6/20=3/10=<strong>30%</strong>.</li>
+<li>Pet rate <strong>among house dwellers</strong> =24/30=4/5=<strong>80%</strong>.</li>
+<li>These two conditional rates are <strong>very different</strong> — 30% vs. 80% — so <strong>owning a pet and where you live ARE associated</strong>: house dwellers are far more likely to own a pet. (Compare with the overall 60%: each group sits well off it.) If instead both groups had landed near 60%, the rates would be about equal and we'd say there's <strong>little or no association</strong>. This "compare the rates across rows/columns" move is exactly how a two-way table reveals association — the categorical cousin of A.2's positive/negative association.</li>
+</ul>
+<p><strong>Watch for:</strong></p>
+<ul>
+<li><strong>Wrong denominator</strong> — dividing by the grand total when the question asks "of the apartment dwellers…" (use the <strong>column</strong> total there). Cue: "Out of <em>which</em> group? That group's total is your denominator."</li>
+<li><strong>Totals that don't reconcile</strong> — row totals and column totals must both sum to the same grand total; if not, a cell was misread.</li>
+<li><strong>Confusing 'and' with a conditional</strong> — "owns a pet <strong>and</strong> in an apartment" (a <strong>joint</strong> relative frequency: one cell over the <strong>grand</strong> total) vs. "of apartment dwellers, owns a pet" (a <strong>conditional</strong> relative frequency: that cell over the <strong>column</strong> total). Different denominators, different questions.</li>
+<li><strong>Reading association off one rate alone</strong> — a single conditional rate (e.g. "30% of apartment dwellers own pets") says nothing by itself; association is about whether that rate <strong>differs from the other group's</strong>. Always compute <em>both</em> rates and compare.</li>
+<li><strong>Fraction → percent</strong> slips — reuse Unit 3 (3/5=0.6=60%).</li>
+</ul>
+<p><strong>Visuals to offer:</strong> none needed — the LaTeX <code>array</code> table above renders cleanly in chat (per <code>visuals.md</code>, area-model/table boxes use LaTeX, not an artifact).</p>
+<p><strong>Check for understanding (transfer):</strong></p>
+<ol>
+<li><a class="refcode" id="A.3.c1" href="#A.3.c1">#A.3.c1</a> "Using the table, what fraction of <strong>house</strong> dwellers own a pet? Which total did you divide by, and why?"</li>
+<li><a class="refcode" id="A.3.c2" href="#A.3.c2">#A.3.c2</a> "If I told you the four inner counts but no totals, how would you find the grand total two different ways — and what does it mean if they disagree?"</li>
+<li><a class="refcode" id="A.3.c3" href="#A.3.c3">#A.3.c3</a> "What's the difference between 'owns a pet <em>and</em> lives in a house' (a joint relative frequency) and 'of house dwellers, the share who own a pet' (a conditional one)?"</li>
+<li><a class="refcode" id="A.3.c4" href="#A.3.c4">#A.3.c4</a> "The apartment dwellers own pets 30% of the time and the house dwellers 80% of the time. From comparing those two rates, are <em>owning a pet</em> and <em>where you live</em> associated? How would the rates look if they were <strong>not</strong> associated?"</li>
+</ol>
+<p><strong>Practice problems</strong> — use this table of 50 students, <em>plays a sport</em> (rows) × <em>wears glasses</em> (columns):</p>
+<p>$$\begin{array}{c|c|c|c}
+ &amp; \text{Glasses} &amp; \text{No Glasses} &amp; \textbf{Total} \\ \hline
+\text{Sport: Yes} &amp; 14 &amp; 6 &amp; ? \\ \hline
+\text{Sport: No} &amp; 6 &amp; 24 &amp; ? \\ \hline
+\textbf{Total} &amp; ? &amp; ? &amp; ?
+\end{array}$$</p>
+<ol>
+<li><a class="refcode" id="A.3.1" href="#A.3.1">#A.3.1</a> Find the row total for <strong>Sport: Yes</strong>.</li>
+<li><a class="refcode" id="A.3.2" href="#A.3.2">#A.3.2</a> Find the column total for <strong>Glasses</strong>.</li>
+<li><a class="refcode" id="A.3.3" href="#A.3.3">#A.3.3</a> Find the <strong>grand total</strong>.</li>
+<li><a class="refcode" id="A.3.4" href="#A.3.4">#A.3.4</a> How many students <strong>play a sport and wear glasses</strong>?</li>
+<li><a class="refcode" id="A.3.5" href="#A.3.5">#A.3.5</a> What percent of <strong>all</strong> students wear glasses?</li>
+<li><a class="refcode" id="A.3.6" href="#A.3.6">#A.3.6</a> Of the students who <strong>wear glasses</strong>, what percent <strong>play a sport</strong>? (a conditional relative frequency)</li>
+<li><a class="refcode" id="A.3.7" href="#A.3.7">#A.3.7</a> Of the students who <strong>don't wear glasses</strong>, what percent <strong>play a sport</strong>? Compare this with your answer to #6 — are <strong>playing a sport</strong> and <strong>wearing glasses</strong> associated? Explain.</li>
+</ol>
+<p><strong>Answer key:</strong></p>
+<ol>
+<li>14+6=20</li>
+<li>14+6=20</li>
+<li>50 — add the row totals (20+30) or the column totals (20+30); both give 50.</li>
+<li>14 (top-left cell)</li>
+<li>20/50=2/5=40%</li>
+<li>14/20=7/10=70%</li>
+<li>6/30=1/5=20%. The two conditional rates are <strong>far apart — 70% (glasses) vs. 20% (no glasses)</strong> — so <strong>yes, playing a sport and wearing glasses are associated</strong> here (sport-players are much more likely to wear glasses). If the two rates had been about equal, there'd be little or no association.</li>
+</ol>
+<hr>
+<h2 id="wrap-up-interleaving">Wrap-up &amp; interleaving</h2>
+<p><strong>Consolidate:</strong> the student now has a small statistics toolkit — <strong>center &amp; spread</strong> for one variable, including spotting an <strong>outlier</strong> and its pull on the mean (A.1); <strong>scatter plots + checking the form is linear before fitting + best-fit lines + reading a correlation by eye + correlation/causation</strong> for two variables (A.2); and <strong>two-way tables + relative frequency + comparing conditional rates to detect association</strong> for categorical data (A.3). The unifying algebra idea is A.2's punchline: <strong>a line of best fit is just f(x)=mx+b from Unit 5, fit to messy data and used to predict</strong> — once you've confirmed a line is the right shape for the cloud. A second throughline worth naming: <strong>association</strong> shows up in both A.2 (direction of a scatter) and A.3 (conditional rates differing across groups).</p>
+<p><strong>Mix back in:</strong></p>
+<ul>
+<li><strong>Unit 3 (fractions, percents, rates):</strong> relative frequencies in A.3 and the "average rate" feel of slope in A.2 are Unit 3 skills reused.</li>
+<li><strong>Unit 5 (lines &amp; f(x)):</strong> A.2 is a direct application — predicting is <em>evaluating the function</em>; describing positive/negative association is <em>reading the sign of the slope</em>.</li>
+</ul>
+<p><strong>Pacing:</strong> it's a light, applied unit — three short, self-contained lessons. Land the ideas with a couple of examples each rather than grinding; the goal is data judgment, not arithmetic volume.</p>
+<p><strong>Progress Card should note:</strong> which lessons the student worked through and that the data-literacy toolkit was covered. The ideas worth recording as "learned" when they come up: <strong>correlation ≠ causation</strong>, <strong>check the form is linear before fitting a line</strong>, and <strong>compare conditional rates to spot association</strong>.</p>
+</main>
+<footer><p>Generated from the unit source by <code>_verification/build_textbook.py</code>. Math by KaTeX.</p></footer>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  renderMathInElement(document.body, {delimiters: [{left: "$$", right: "$$", display: true}], throwOnError: false});
+  var t = document.getElementById("theme"), root = document.documentElement;
+  if (localStorage.getItem("a1-theme") === "dark") root.classList.add("dark");
+  t.addEventListener("click", function () {
+    root.classList.toggle("dark");
+    localStorage.setItem("a1-theme", root.classList.contains("dark") ? "dark" : "light");
+  });
+});
+</script>
+</body>
+</html>

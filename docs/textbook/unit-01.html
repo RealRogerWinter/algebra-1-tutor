@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Unit 1: Foundations &amp; the Language of Algebra — Algebra 1</title>
+<link rel="stylesheet" href="textbook.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous">
+</head>
+<body>
+<header class="topbar">
+  <nav><a href="index.html">Contents</a> &nbsp;·&nbsp; <a href="unit-02.html">Unit 2 &rarr;</a></nav>
+  <button id="theme" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<h1>Unit 1: Foundations &amp; the Language of Algebra</h1>
+<p class="subtitle">Variables, the equals sign as a balance, the number system & number line, order of operations, negative numbers, expressions vs. equations</p>
+
+<blockquote>
+<p><strong>Prerequisites:</strong> Arithmetic only (add, subtract, multiply, divide whole numbers; basic fractions and decimals).
+<strong>By the end, the student can:</strong></p>
+<ul>
+<li>Read = as "the same as" (a balance), and judge whether a number sentence is true, false, or open.</li>
+<li>Solve simple one-step equations by inspection and by undoing.</li>
+<li>Name the kinds of numbers (natural, whole, integer, rational, irrational, real) and place them on the number line; recognize that <em>decimal</em> and <em>fraction</em> are ways of <em>writing</em> a number, and that a number's <em>value</em>, not its <em>spelling</em>, fixes its type.</li>
+<li>Apply order of operations as four tiers (P, E, [MD], [AS]), working left to right within a tier.</li>
+<li>Add, subtract, multiply, and divide negative numbers fluently, with the sign rules.</li>
+<li>Tell an <em>expression</em> from an <em>equation</em>, and evaluate an expression by substitution.</li>
+</ul>
+</blockquote>
+<h2 id="teaching-this-unit-orientation-for-the-tutor">Teaching this unit (orientation for the tutor)</h2>
+<p>This unit builds the <em>language</em> the rest of the course speaks. The arc: first re-wire what = means (1.1), then map the terrain of numbers so later answers like 3.5 or -5 feel normal (1.2), then nail the two procedural skills everything rests on — order of operations (1.3) and signed arithmetic (1.4) — and finally separate the two central objects, <em>expressions</em> and <em>equations</em> (1.5).</p>
+<p>The single highest-leverage moment is 1.1: the <strong>relational meaning of the equals sign</strong> (see <code>misconceptions.md</code> §1). Front-load it and keep testing it with non-standard sentences (7 = 4+3, □ + 3 = 5 + 7) all unit long — every solving move later depends on it. The other big traps: same-tier left-to-right in order of operations (<code>misconceptions.md</code> §5), and the cluster of negative-number errors, especially subtracting a negative and ordering negatives (<code>misconceptions.md</code> §3).</p>
+<p>Pacing: a fluent adult may blow through 1.2–1.4 — let them; reserve the full concrete→pictorial→symbolic ceremony (<code>pedagogy.md</code>) for whatever actually snags. Thread a light <strong>function preview</strong>: an equation or rule turns an input into an output; we will <em>name</em> that idea (functions) in Unit 4. Use the mystery-box / reserved-seat variable metaphors (<code>metaphors.md</code>) and the money/number-line metaphors for negatives. Model the habit of <strong>substituting an answer back to check</strong> from day one — it self-catches most sign and order errors.</p>
+<hr>
+<h2 id="lesson-11-variables-and-the-meaning-of-equations">Lesson 1.1: Variables and the meaning of equations</h2>
+<p><strong>Goal:</strong> Read = as a balance ("the same as"), use a variable as a stand-in for an unknown number, and solve one-step equations by inspection and by undoing.
+<strong>Why it matters:</strong> This is the most predictive idea in the whole course. Every equation-solving move — "do the same to both sides" — only makes sense if = means <em>balance</em>, not <em>compute the answer here</em>.</p>
+<p><strong>New terms:</strong></p>
+<ul>
+<li><a class="refcode" id="1.1.d1" href="#1.1.d1">#1.1.d1</a> <strong>Variable:</strong> a letter that stands in for a number we don't know yet (not a label for an object). Every copy of the same letter in one problem holds the <em>same</em> hidden number.</li>
+<li><a class="refcode" id="1.1.d2" href="#1.1.d2">#1.1.d2</a> <strong>Equation:</strong> a sentence claiming two things have the <em>same value</em>, joined by =.</li>
+<li><a class="refcode" id="1.1.d3" href="#1.1.d3">#1.1.d3</a> <strong>Open sentence:</strong> a number sentence with a blank or variable — neither true nor false until the unknown is filled (e.g. x + 3 = 7).</li>
+</ul>
+<p><strong>Teaching arc (concrete → pictorial → symbolic):</strong></p>
+<ol>
+<li><strong>Front-load the key idea.</strong> Say it plainly: "= means <em>the same as</em> — the two sides balance. It is <strong>not</strong> a button that says 'the answer goes here.'" This reframe is the whole lesson (see <code>misconceptions.md</code> §1).</li>
+<li><strong>Concrete (balance scale).</strong> Use the balance-scale metaphor (<code>metaphors.md</code>, Equations A). Left pan holds 8+4; the right pan must weigh the same. For □ + 5 to balance 8+4=12, the box must hold 7. Whatever you do to one pan, do to the other to stay level.</li>
+<li><strong>True / false / open sorting.</strong> Have them judge sentences written in <em>non-standard</em> forms — this is where the operational misread surfaces:
+   - 7 = 4 + 3 → <strong>true</strong> (don't let "it's backwards" throw them).
+   - 8 = 8 → <strong>true</strong> (nothing to "do" — and that's fine).
+   - 5 + 2 = 9 → <strong>false</strong>.
+   - □ + 3 = 5 + 7 → <strong>open</strong>; fill the blank so it <em>stays true</em> (right side is 12, so □ = 9).</li>
+<li><strong>Variable as a box.</strong> Reframe "3 + ? = 7" as "3 + x = 7": the x is a closed box; what number inside keeps the balance? Use the mystery-box / reserved-seat metaphor (<code>metaphors.md</code>, Variables).</li>
+<li><strong>Symbolic — two roads to the same answer.</strong> Solve x + 3 = 7:
+   - <em>By inspection:</em> "what plus 3 is 7?" → 4.
+   - <em>By undoing:</em> the 3 is added on, so undo it by subtracting 3 from <strong>both</strong> sides: x + 3 - 3 = 7 - 3 ⇒ x = 4. Check: 4 + 3 = 7.</li>
+<li><strong>Function preview (light).</strong> "Notice the rule '+3' turns an input into an output: feed in 4, out comes 7. An equation pins the output and asks for the input. We'll give that input→output idea a name later — it's called a <em>function</em>."</li>
+</ol>
+<p><strong>Worked examples:</strong></p>
+<ol>
+<li><a class="refcode" id="1.1.w1" href="#1.1.w1">#1.1.w1</a> Fill the blank so it stays true: 8 + 4 = □ + 5. Left side = 12; need □ + 5 = 12, so □ = 7. <em>(Filling 9 or 17 is the "compute here" misread — see Watch for.)</em></li>
+<li><a class="refcode" id="1.1.w2" href="#1.1.w2">#1.1.w2</a> True, false, or open? 7 = 4 + 3. Both sides equal 7 — <strong>true</strong>.</li>
+<li><a class="refcode" id="1.1.w3" href="#1.1.w3">#1.1.w3</a> Solve by undoing: x + 3 = 7. Subtract 3 from both sides: x = 4. Check: 4+3=7.</li>
+<li><a class="refcode" id="1.1.w4" href="#1.1.w4">#1.1.w4</a> Solve by undoing: 2x = 10. The x is multiplied by 2; undo by dividing both sides by 2: x = 5. Check: 2(5)=10.</li>
+<li><a class="refcode" id="1.1.w5" href="#1.1.w5">#1.1.w5</a> Solve: x/3 = 4. The x is divided by 3; undo by multiplying both sides by 3: x = 12. Check: 12/3 = 4.</li>
+</ol>
+<p><strong>Watch for:</strong> The operational view of = (<code>misconceptions.md</code> §1). <em>Tell:</em> fills 8 + 4 = □ + 5 with <strong>9</strong> (computed 8+4, ignored the +5) or <strong>17</strong> (added everything). <em>Repair:</em> go back to the balance scale and ask what the right pan must weigh — don't just restate the rule. Also watch the letter-as-object error (<code>misconceptions.md</code> §2): x is a <em>number we don't know</em>, not "apples."</p>
+<p><strong>Visuals to offer:</strong> A simple balance-scale sketch in words usually suffices; no artifact required. A number line can wait for 1.2.</p>
+<p><strong>Check for understanding (transfer):</strong></p>
+<ul>
+<li><a class="refcode" id="1.1.c1" href="#1.1.c1">#1.1.c1</a> "Fill the blank so it stays true: 6 + □ = 4 + 5. Walk me through how you know."</li>
+<li><a class="refcode" id="1.1.c2" href="#1.1.c2">#1.1.c2</a> "Is 9 = 9 a real equation? Why or why not?"</li>
+<li><a class="refcode" id="1.1.c3" href="#1.1.c3">#1.1.c3</a> "In x - 2 = 5, which operation do we undo, and why does undoing it tell us x?"</li>
+</ul>
+<p><strong>Practice problems:</strong></p>
+<p><em>Judge true / false / open (write which):</em></p>
+<ol>
+<li><a class="refcode" id="1.1.1" href="#1.1.1">#1.1.1</a> 6 = 2 + 4</li>
+<li><a class="refcode" id="1.1.2" href="#1.1.2">#1.1.2</a> 3 + 5 = 9</li>
+<li><a class="refcode" id="1.1.3" href="#1.1.3">#1.1.3</a> □ + 2 = 6</li>
+</ol>
+<p><em>Fill the blank so the sentence stays true:</em></p>
+<ol start="4">
+<li><a class="refcode" id="1.1.4" href="#1.1.4">#1.1.4</a> 8 + 4 = □ + 5</li>
+<li><a class="refcode" id="1.1.5" href="#1.1.5">#1.1.5</a> 10 = □ + 3</li>
+</ol>
+<p><em>Solve by inspection or by undoing (show the undo step):</em></p>
+<ol start="6">
+<li><a class="refcode" id="1.1.6" href="#1.1.6">#1.1.6</a> x + 3 = 7</li>
+<li><a class="refcode" id="1.1.7" href="#1.1.7">#1.1.7</a> x + 4 = 9</li>
+<li><a class="refcode" id="1.1.8" href="#1.1.8">#1.1.8</a> x - 2 = 5</li>
+<li><a class="refcode" id="1.1.9" href="#1.1.9">#1.1.9</a> 2x = 10</li>
+<li><a class="refcode" id="1.1.10" href="#1.1.10">#1.1.10</a> x/3 = 4</li>
+<li><a class="refcode" id="1.1.11" href="#1.1.11">#1.1.11</a> 5 + x = 12</li>
+<li><a class="refcode" id="1.1.12" href="#1.1.12">#1.1.12</a> x - 6 = 0</li>
+<li><a class="refcode" id="1.1.13" href="#1.1.13">#1.1.13</a> 4x = 20</li>
+</ol>
+<p><strong>Answer key:</strong></p>
+<ol>
+<li>true 2. false 3. open (true when the blank is 4) 4. 7 5. 7 6. x=4 7. x=5 8. x=7 9. x=5 10. x=12 11. x=7 12. x=6 13. x=5</li>
+</ol>
+<hr>
+<h2 id="lesson-12-the-number-system-the-number-line">Lesson 1.2: The number system &amp; the number line</h2>
+<p><strong>Goal:</strong> Build a layered map of the kinds of numbers and place them on one number line, so later non-integer and negative answers feel normal, not like mistakes.
+<strong>Why it matters:</strong> When a student solves 2x = 7 and gets 3.5, they need to <em>trust</em> that 3.5 is a real, correct number — not assume they erred. The number line is the unifying picture for the whole course; algebra lives on the <em>whole</em> line.</p>
+<p><strong>New terms:</strong></p>
+<ul>
+<li><a class="refcode" id="1.2.d1" href="#1.2.d1">#1.2.d1</a> <strong>Natural (counting) numbers:</strong> 1, 2, 3, …</li>
+<li><a class="refcode" id="1.2.d2" href="#1.2.d2">#1.2.d2</a> <strong>Whole numbers:</strong> the naturals plus 0.</li>
+<li><a class="refcode" id="1.2.d3" href="#1.2.d3">#1.2.d3</a> <strong>Integers:</strong> whole numbers and their negatives — …, -2, -1, 0, 1, 2, … — no fractional part.</li>
+<li><a class="refcode" id="1.2.d4" href="#1.2.d4">#1.2.d4</a> <strong>Rational numbers:</strong> any number that can be written as a ratio of two integers a/b (b ≠ 0). This <em>includes</em> integers (5 = 5/1), terminating decimals (4.8 = 24/5), and repeating decimals (0.333… = 1/3).</li>
+<li><a class="refcode" id="1.2.d5" href="#1.2.d5">#1.2.d5</a> <strong>Irrational numbers:</strong> numbers whose decimal <em>never ends and never repeats</em>, so they <strong>cannot</strong> be written as a ratio of two integers — for example π = 3.14159… and √2 = 1.41421…. (No radical arithmetic yet; √2 returns in Unit 12. Here, just know it names a real point on the line.)</li>
+<li><a class="refcode" id="1.2.d6" href="#1.2.d6">#1.2.d6</a> <strong>Real numbers:</strong> every number on the number line — the rationals <strong>and</strong> the irrationals together. Algebra works over the real numbers, so "the whole line" finally has a name.</li>
+<li><a class="refcode" id="1.2.d7" href="#1.2.d7">#1.2.d7</a> <strong>Decimal:</strong> a way of <em>writing</em> a number using a decimal point; the way it's written doesn't change what kind of number it is.</li>
+</ul>
+<p><strong>Teaching arc (concrete → pictorial → symbolic):</strong></p>
+<ol>
+<li><strong>Layers, like nested boxes.</strong> Start at counting numbers and add one capability at a time: add 0 → whole numbers; add negatives → integers; allow ratios → rationals. Each layer <em>contains</em> the previous one (every integer is rational).</li>
+<li><strong>The number line is the map.</strong> Draw it: integers as evenly spaced ticks, with 0 in the middle and negatives to the left. Then the key picture: <strong>between any two integers there are infinitely many numbers</strong> — 3/4, 2.5, 0.333… all live in the gaps. Algebra uses the <em>whole</em> line, not just the ticks.</li>
+<li><strong>Name the rest of the line (irrational → real).</strong> Most points on the line are rational, but not all: π and √2 are <strong>irrational</strong> — their decimals run forever without repeating, so no fraction a/b equals them exactly. The rationals together with the irrationals are the <strong>real numbers</strong> — <em>every</em> point on the line. The "whole line" the picture just promised now has a name, and it's the set algebra works over.</li>
+<li><strong>Same value, many spellings.</strong> Show 5 = 5/1 = 5.0 — one point on the line, three spellings. This is the crux: a number's <em>type</em> is set by its <em>value</em>, not by how it's written.</li>
+<li><strong>Connect forward.</strong> "When we solve 2x = 7 we get 3.5. That's not an error — it's a perfectly real point on the line, sitting halfway between 3 and 4." Plant that now so it pays off in Unit 2.</li>
+</ol>
+<p><strong>Worked examples:</strong></p>
+<ol>
+<li><a class="refcode" id="1.2.w1" href="#1.2.w1">#1.2.w1</a> Classify 7. It's a counting number, so it's an <strong>integer</strong>, and 7 = 7/1 so it's also <strong>rational</strong>.</li>
+<li><a class="refcode" id="1.2.w2" href="#1.2.w2">#1.2.w2</a> Classify 4.8. Not a whole amount, so <em>not</em> an integer; but 4.8 = 24/5, a ratio of integers — <strong>rational, non-integer</strong>.</li>
+<li><a class="refcode" id="1.2.w3" href="#1.2.w3">#1.2.w3</a> Classify 10/2. Don't be fooled by the fraction bar: 10/2 = 5. Its <em>value</em> is 5, so it's an <strong>integer</strong> (and rational). How it's written doesn't fix its type.</li>
+<li><a class="refcode" id="1.2.w4" href="#1.2.w4">#1.2.w4</a> Classify 0.333…. The repeating decimal equals 1/3, a ratio of integers — <strong>rational, non-integer</strong>. (Again: spelling vs. value.)</li>
+<li><a class="refcode" id="1.2.w5" href="#1.2.w5">#1.2.w5</a> Show three spellings of one number: 5 = 5/1 = 5.0 — all the <em>same point</em> on the line.</li>
+<li><a class="refcode" id="1.2.w6" href="#1.2.w6">#1.2.w6</a> Classify √2 and π. Neither can be written as a ratio of integers — their decimals never end and never repeat — so both are <strong>irrational</strong> (and therefore <strong>real</strong>, like every point on the line). Contrast √9: it <em>looks</em> like a root, but √9 = 3, an <strong>integer</strong> — value, not spelling.</li>
+</ol>
+<p><strong>Watch for:</strong> The belief that a number written as a fraction "must be a fraction" or that a decimal "can't be an integer." Problems 7 (10/2=5) and 8 (0.333… = 1/3) below are the instructive ones — <em>evaluate first, then classify</em>. Also pre-empt the negatives-ordering surprise that's coming in 1.4 ("which is farther left?"). Fraction-magnitude care connects to <code>misconceptions.md</code> §4.</p>
+<p><strong>Visuals to offer:</strong> <a class="refcode" id="1.2.f1" href="#1.2.f1">#1.2.f1</a> A clean <strong>number line</strong> (<code>visuals.md</code> Template 1 for a marked point, or a simple ASCII line) showing integers as ticks with 3/4, 2.5, and -2.5 placed in the gaps. Always pair with a one-sentence description.</p>
+<figure class="fig" id="fig-1.2.f1"><svg viewBox="0 0 320 60" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+  <line x1="14" y1="30" x2="306" y2="30" stroke="#333" stroke-width="2"/>
+  <line x1="20.0" y1="25" x2="20.0" y2="35" stroke="#333"/>
+  <text x="20.0" y="50" font-size="10" text-anchor="middle">-3</text>
+  <line x1="55.0" y1="25" x2="55.0" y2="35" stroke="#333"/>
+  <text x="55.0" y="50" font-size="10" text-anchor="middle">-2</text>
+  <line x1="90.0" y1="25" x2="90.0" y2="35" stroke="#333"/>
+  <text x="90.0" y="50" font-size="10" text-anchor="middle">-1</text>
+  <line x1="125.0" y1="25" x2="125.0" y2="35" stroke="#333"/>
+  <text x="125.0" y="50" font-size="10" text-anchor="middle">0</text>
+  <line x1="160.0" y1="25" x2="160.0" y2="35" stroke="#333"/>
+  <text x="160.0" y="50" font-size="10" text-anchor="middle">1</text>
+  <line x1="195.0" y1="25" x2="195.0" y2="35" stroke="#333"/>
+  <text x="195.0" y="50" font-size="10" text-anchor="middle">2</text>
+  <line x1="230.0" y1="25" x2="230.0" y2="35" stroke="#333"/>
+  <text x="230.0" y="50" font-size="10" text-anchor="middle">3</text>
+  <line x1="265.0" y1="25" x2="265.0" y2="35" stroke="#333"/>
+  <text x="265.0" y="50" font-size="10" text-anchor="middle">4</text>
+  <line x1="300.0" y1="25" x2="300.0" y2="35" stroke="#333"/>
+  <text x="300.0" y="50" font-size="10" text-anchor="middle">5</text>
+  <circle cx="230.0" cy="30" r="5" fill="#c0392b" stroke="#c0392b" stroke-width="2"/>
+  <text x="230.0" y="18" font-size="10" text-anchor="middle" fill="#c0392b">3</text>
+</svg><figcaption>Figure 1.2.f1</figcaption></figure>
+
+<p><strong>Check for understanding (transfer):</strong></p>
+<ul>
+<li><a class="refcode" id="1.2.c1" href="#1.2.c1">#1.2.c1</a> "Give me a number that is rational but <em>not</em> an integer, and explain how you know it's rational."</li>
+<li><a class="refcode" id="1.2.c2" href="#1.2.c2">#1.2.c2</a> "Is 12/3 an integer? Convince me using its value, not its appearance."</li>
+<li><a class="refcode" id="1.2.c3" href="#1.2.c3">#1.2.c3</a> "Roughly where does -2.5 sit relative to -2 and -3 on the line?"</li>
+</ul>
+<p><strong>Practice problems:</strong> Classify each number; label <strong>all</strong> types that apply (integer / rational / irrational / real — note non-integer where it matters). Evaluate first where needed. Every one of these is a <strong>real</strong> number.</p>
+<ol>
+<li><a class="refcode" id="1.2.1" href="#1.2.1">#1.2.1</a> 7</li>
+<li><a class="refcode" id="1.2.2" href="#1.2.2">#1.2.2</a> -4</li>
+<li><a class="refcode" id="1.2.3" href="#1.2.3">#1.2.3</a> 4.8</li>
+<li><a class="refcode" id="1.2.4" href="#1.2.4">#1.2.4</a> 0</li>
+<li><a class="refcode" id="1.2.5" href="#1.2.5">#1.2.5</a> 3/4</li>
+<li><a class="refcode" id="1.2.6" href="#1.2.6">#1.2.6</a> -2.5</li>
+<li><a class="refcode" id="1.2.7" href="#1.2.7">#1.2.7</a> 10/2</li>
+<li><a class="refcode" id="1.2.8" href="#1.2.8">#1.2.8</a> 0.333…</li>
+<li><a class="refcode" id="1.2.9" href="#1.2.9">#1.2.9</a> √2</li>
+<li><a class="refcode" id="1.2.10" href="#1.2.10">#1.2.10</a> π</li>
+<li><a class="refcode" id="1.2.11" href="#1.2.11">#1.2.11</a> √16</li>
+<li><a class="refcode" id="1.2.12" href="#1.2.12">#1.2.12</a> 0.1010010001… (one more 0 each time — never repeating)</li>
+</ol>
+<p><strong>Answer key:</strong> <em>(all twelve are </em><em>real</em><em> numbers; the labels below add the finer type.)</em></p>
+<ol>
+<li>integer, rational</li>
+<li>integer, rational</li>
+<li>rational, non-integer</li>
+<li>integer, rational</li>
+<li>rational, non-integer</li>
+<li>rational, non-integer</li>
+<li>=5 → integer, rational</li>
+<li>=1/3 → rational, non-integer</li>
+<li>irrational</li>
+<li>irrational</li>
+<li>=4 → integer, rational</li>
+<li>irrational (never repeats)</li>
+</ol>
+<p><em>(7, 8, and 11 are the teaching moments: how a number is written doesn't fix its type — its value does. 9, 10, and 12 are the new irrationals — real points on the line with no fraction form.)</em></p>
+<hr>
+<h2 id="lesson-13-order-of-operations">Lesson 1.3: Order of operations</h2>
+<p><strong>Goal:</strong> Evaluate numeric expressions correctly using order of operations as <strong>four tiers</strong> — P, E, [MD], [AS] — working left to right within a tier.
+<strong>Why it matters:</strong> A reliable, shared order is what lets everyone agree on what an expression means. Most errors here are <em>systematic</em> (not random), so naming the trap fixes them.</p>
+<p><strong>New terms:</strong></p>
+<ul>
+<li><a class="refcode" id="1.3.d1" href="#1.3.d1">#1.3.d1</a> <strong>Order of operations:</strong> the agreed sequence for evaluating an expression. PEMDAS, but really <strong>four tiers</strong>: <strong>Grouping symbols</strong> (parentheses, brackets [ ], and the fraction bar) — the "P" tier, <strong>E</strong>xponents, <strong>[M</strong>ultiply/<strong>D</strong>ivide<strong>]</strong> (one tier, left to right), <strong>[A</strong>dd/<strong>S</strong>ubtract<strong>]</strong> (one tier, left to right). The "P" in PEMDAS is really <em>grouping</em>, not just round parentheses: a fraction bar groups too, meaning "evaluate the whole top and the whole bottom first, then divide."</li>
+</ul>
+<p><strong>Teaching arc (concrete → pictorial → symbolic):</strong></p>
+<ol>
+<li><strong>Four tiers, not six.</strong> The headline (see <code>misconceptions.md</code> §5): multiply and divide are <em>equal-rank partners</em>, read left to right; same for add and subtract. There is no "M before D" or "A before S."</li>
+<li><strong>Show the traps directly.</strong> Walk each one slowly:
+   - 12 ÷ 2 × 3: left to right, 12÷2 = 6, then 6×3 = 18 — <strong>not</strong> 2.
+   - 8 - 3 + 2: left to right, 8-3 = 5, then 5+2 = 7 — <strong>not</strong> 3.
+   - 2 × 3²: the exponent is a <em>higher</em> tier, so square first: 3² = 9, then 2×9 = 18 — <strong>not</strong> 36.</li>
+<li><strong>Grouping symbols change the meaning.</strong> Contrast 2 + 3 × 4 = 14 with (2+3)×4 = 20: same digits, different grouping, different value. Brackets [ ] group the same way parentheses do. So does a <strong>fraction bar</strong>: in (12−2)/(3+2) the bar is a grouping symbol — evaluate the whole top and the whole bottom first, then divide: 10/5 = 2.</li>
+</ol>
+<p><strong>Worked examples:</strong></p>
+<ol>
+<li><a class="refcode" id="1.3.w1" href="#1.3.w1">#1.3.w1</a> 2 + 3 × 4: multiply first → 2 + 12 = 14.</li>
+<li><a class="refcode" id="1.3.w2" href="#1.3.w2">#1.3.w2</a> (2+3)×4: parentheses first → 5 × 4 = 20.</li>
+<li><a class="refcode" id="1.3.w3" href="#1.3.w3">#1.3.w3</a> 8 - 3 + 2: same tier, left to right → 5 + 2 = 7. <em>(Not 3.)</em></li>
+<li><a class="refcode" id="1.3.w4" href="#1.3.w4">#1.3.w4</a> 12 ÷ 2 × 3: same tier, left to right → 6 × 3 = 18. <em>(Not 2.)</em></li>
+<li><a class="refcode" id="1.3.w5" href="#1.3.w5">#1.3.w5</a> 2 + 3² × 2: exponent → 2 + 9×2; then multiply → 2 + 18 = 20.</li>
+<li><a class="refcode" id="1.3.w6" href="#1.3.w6">#1.3.w6</a> 10 - 2 × (3+1): parentheses → 10 - 2×4; multiply → 10 - 8 = 2.</li>
+<li><a class="refcode" id="1.3.w7" href="#1.3.w7">#1.3.w7</a> (12 − 2)/(3 + 2): the fraction bar groups, so evaluate top and bottom first → 10/5; then divide → 2. <em>(The bar means "do the whole numerator and the whole denominator before dividing.")</em></li>
+</ol>
+<p><strong>Watch for:</strong> <code>misconceptions.md</code> §5. <em>Tells:</em> 8-3+2 = 3 (added before subtracting), 12÷2×3 = 2 (multiplied before dividing), 2×3² = 36 (multiplied before squaring). <em>Repair:</em> "Reading left to right, which of these two equal-rank operations comes first?" — re-anchor on the four-tier picture, don't just re-recite PEMDAS.</p>
+<p><strong>Visuals to offer:</strong> None needed; the tier list and worked traps carry it.</p>
+<p><strong>Check for understanding (transfer):</strong></p>
+<ul>
+<li><a class="refcode" id="1.3.c1" href="#1.3.c1">#1.3.c1</a> "Without computing fully — in 20 ÷ 4 × 2, which operation happens first and why?"</li>
+<li><a class="refcode" id="1.3.c2" href="#1.3.c2">#1.3.c2</a> "Why does 2 × 3² come out to 18, not 36?"</li>
+<li><a class="refcode" id="1.3.c3" href="#1.3.c3">#1.3.c3</a> "Put parentheses into 2 + 3 × 4 to make it equal 20."</li>
+</ul>
+<p><strong>Practice problems:</strong></p>
+<ol>
+<li><a class="refcode" id="1.3.1" href="#1.3.1">#1.3.1</a> 5 + 2 × 3</li>
+<li><a class="refcode" id="1.3.2" href="#1.3.2">#1.3.2</a> (5 + 2)×3</li>
+<li><a class="refcode" id="1.3.3" href="#1.3.3">#1.3.3</a> 10 - 4 + 1</li>
+<li><a class="refcode" id="1.3.4" href="#1.3.4">#1.3.4</a> 20 ÷ 4 × 2</li>
+<li><a class="refcode" id="1.3.5" href="#1.3.5">#1.3.5</a> 3 + 4²</li>
+<li><a class="refcode" id="1.3.6" href="#1.3.6">#1.3.6</a> 2 × 3²</li>
+<li><a class="refcode" id="1.3.7" href="#1.3.7">#1.3.7</a> (6 - 2)²</li>
+<li><a class="refcode" id="1.3.8" href="#1.3.8">#1.3.8</a> 18 ÷ 3 + 3</li>
+<li><a class="refcode" id="1.3.9" href="#1.3.9">#1.3.9</a> 2 + 2 × (5 - 3)</li>
+<li><a class="refcode" id="1.3.10" href="#1.3.10">#1.3.10</a> 30 ÷ 5 ÷ 2</li>
+<li><a class="refcode" id="1.3.11" href="#1.3.11">#1.3.11</a> 4 + 3 × 2 - 1</li>
+<li><a class="refcode" id="1.3.12" href="#1.3.12">#1.3.12</a> (8 - 3)×2 + 4²</li>
+</ol>
+<p><strong>Answer key:</strong></p>
+<ol>
+<li>11 2. 21 3. 7 4. 10 5. 19 6. 18 7. 16 8. 9 9. 6 10. 3 11. 9 12. 26</li>
+</ol>
+<p><em>(3, 4, and 10 test left-to-right within a tier; 6 tests square-before-multiply; 12 combines all four tiers.)</em></p>
+<hr>
+<h2 id="lesson-14-negative-numbers">Lesson 1.4: Negative numbers</h2>
+<p><strong>Goal:</strong> Add, subtract, multiply, and divide negative numbers fluently, including ordering them and the sign rules.
+<strong>Why it matters:</strong> Negatives appear in nearly every later answer. Making them automatic now means a future problem adds only <em>one</em> new difficulty, not two.</p>
+<p><strong>New terms:</strong></p>
+<ul>
+<li><a class="refcode" id="1.4.d1" href="#1.4.d1">#1.4.d1</a> <strong>Opposite (additive inverse):</strong> the same distance from 0 on the other side; the opposite of 5 is -5. Subtracting a number is the same as adding its opposite.</li>
+<li><a class="refcode" id="1.4.d2" href="#1.4.d2">#1.4.d2</a> <strong>Absolute value |a|:</strong> how far a is from 0 on the number line — a <em>distance</em>, so it is <strong>never negative</strong>. |5| = 5 and |-5| = 5 (both sit 5 units from 0); |0| = 0. Opposite and absolute value pair up: opposites share the same absolute value (|5| = |-5|) but have opposite signs.</li>
+<li><a class="refcode" id="1.4.d3" href="#1.4.d3">#1.4.d3</a> <strong>Sign rules (×, ÷):</strong> same signs → positive; different signs → negative. In a product, an <strong>even</strong> number of negative factors → positive; an <strong>odd</strong> number → negative.</li>
+</ul>
+<p><strong>Teaching arc (concrete → pictorial → symbolic):</strong></p>
+<ol>
+<li><strong>Order on the number line.</strong> Bigger negative = farther <em>left</em>. So -5 &lt; -2 (a common surprise — 5 &gt; 2 tempts the eye). Money framing (<code>metaphors.md</code>, Negatives A): owing $5 is worse off than owing $2, so -5 &lt; -2. Name the distance: |a| is how far a sits from 0, ignoring direction, so |-5| = 5 &gt; |-2| = 2 — -5 is farther left because its <strong>distance from 0 is larger</strong>, even though as a <em>value</em> -5 &lt; -2. Keep <strong>distance</strong> (|a|, always ≥ 0) separate from <strong>value</strong> (which can be negative); blurring the two is what makes ordering negatives feel backwards.</li>
+<li><strong>Add = walk the line.</strong> Add a positive → move right; add a negative → move left (<code>metaphors.md</code>, Negatives B; <code>pedagogy.md</code> -2+5 script). -3 + (-5): start at -3, move 5 more left → -8.</li>
+<li><strong>Subtract = add the opposite.</strong> 5 - 8 = 5 + (-8) = -3. And the slow, explicit one (see <code>misconceptions.md</code> §3): <strong>subtracting a negative is adding</strong> — 3 - (-4) = 3 + 4 = 7. Use the "two about-faces" or "a debt forgiven makes you richer" framing; do it deliberately, one negative at a time.</li>
+<li><strong>Multiply/divide — count the negatives.</strong> Same signs → positive, different → negative: (-6)(3) = -18, (-6)(-3) = 18, -20 ÷ 4 = -5, -20 ÷ (-5) = 4. For chains, count negatives: even → positive, odd → negative.</li>
+<li><strong>Separate the two minus signs out loud</strong> — the <em>operation</em> sign vs. the <em>number's</em> sign — and substitute to check.</li>
+</ol>
+<p><strong>Worked examples:</strong></p>
+<ol>
+<li><a class="refcode" id="1.4.w1" href="#1.4.w1">#1.4.w1</a> -3 + (-5) = -8 (two debts pile up; or start at -3, move 5 left).</li>
+<li><a class="refcode" id="1.4.w2" href="#1.4.w2">#1.4.w2</a> 4 + (-9) = -5 (start at 4, move 9 left).</li>
+<li><a class="refcode" id="1.4.w3" href="#1.4.w3">#1.4.w3</a> 5 - 8 = 5 + (-8) = -3 (subtract = add the opposite).</li>
+<li><a class="refcode" id="1.4.w4" href="#1.4.w4">#1.4.w4</a> 3 - (-4) = 3 + 4 = 7 (subtracting a negative <em>adds</em>; two about-faces — slow this down).</li>
+<li><a class="refcode" id="1.4.w5" href="#1.4.w5">#1.4.w5</a> (-6)(3) = -18 (different signs → negative).</li>
+<li><a class="refcode" id="1.4.w6" href="#1.4.w6">#1.4.w6</a> (-6)(-3) = 18 (same signs → positive).</li>
+<li><a class="refcode" id="1.4.w7" href="#1.4.w7">#1.4.w7</a> -20 ÷ 4 = -5 (different signs → negative).</li>
+<li><a class="refcode" id="1.4.w8" href="#1.4.w8">#1.4.w8</a> -20 ÷ (-5) = 4 (same signs → positive).</li>
+<li><a class="refcode" id="1.4.w9" href="#1.4.w9">#1.4.w9</a> Absolute value: |5| = 5, |-5| = 5, |0| = 0 — each is a <em>distance</em> from 0, never negative.</li>
+<li><a class="refcode" id="1.4.w10" href="#1.4.w10">#1.4.w10</a> Which is farther from 0, -8 or 3? |-8| = 8 and |3| = 3, so -8 is farther — even though -8 &lt; 3 as values. (Distance vs. value, the 1.4 headline.)</li>
+</ol>
+<p><strong>Watch for:</strong> <code>misconceptions.md</code> §3 — the negative-number cluster. <em>Tells:</em> -3 + (-5) = +8 (applying the multiplication rule to addition), 6 - (-2) = 4 (not seeing subtract-a-negative as adding), -5 &gt; -2 (magnitude mistaken for value). <em>Repair:</em> switch representation — number line for add/subtract, money/debt for ordering and for subtracting a negative — never just repeat the rule.</p>
+<p><strong>Visuals to offer:</strong> An <strong>ASCII number line</strong> is ideal here (<code>visuals.md</code>): show a hop, e.g. start at -3, move 5 left to -8. Pair with a sentence.</p>
+<p><strong>Check for understanding (transfer):</strong></p>
+<ul>
+<li><a class="refcode" id="1.4.c1" href="#1.4.c1">#1.4.c1</a> "Which is greater, -7 or -3? Explain using the number line or debt."</li>
+<li><a class="refcode" id="1.4.c2" href="#1.4.c2">#1.4.c2</a> "Rewrite 6 - (-2) as an addition, then evaluate it."</li>
+<li><a class="refcode" id="1.4.c3" href="#1.4.c3">#1.4.c3</a> "(-2)(-2)(-2) — is the result positive or negative <em>before</em> you multiply? How do you know?"</li>
+</ul>
+<p><strong>Practice problems:</strong></p>
+<p><em>Add / subtract:</em></p>
+<ol>
+<li><a class="refcode" id="1.4.1" href="#1.4.1">#1.4.1</a> -4 + (-7)</li>
+<li><a class="refcode" id="1.4.2" href="#1.4.2">#1.4.2</a> 6 + (-10)</li>
+<li><a class="refcode" id="1.4.3" href="#1.4.3">#1.4.3</a> -3 + 8</li>
+<li><a class="refcode" id="1.4.4" href="#1.4.4">#1.4.4</a> 5 - 9</li>
+<li><a class="refcode" id="1.4.5" href="#1.4.5">#1.4.5</a> -2 - 6</li>
+<li><a class="refcode" id="1.4.6" href="#1.4.6">#1.4.6</a> 4 - (-3)</li>
+<li><a class="refcode" id="1.4.7" href="#1.4.7">#1.4.7</a> -7 - (-2)</li>
+<li><a class="refcode" id="1.4.8" href="#1.4.8">#1.4.8</a> -10 + 10</li>
+</ol>
+<p><em>Multiply / divide:</em></p>
+<ol start="9">
+<li><a class="refcode" id="1.4.9" href="#1.4.9">#1.4.9</a> (-5)(4)</li>
+<li><a class="refcode" id="1.4.10" href="#1.4.10">#1.4.10</a> (-6)(-2)</li>
+<li><a class="refcode" id="1.4.11" href="#1.4.11">#1.4.11</a> (3)(-7)</li>
+<li><a class="refcode" id="1.4.12" href="#1.4.12">#1.4.12</a> -24 ÷ 6</li>
+<li><a class="refcode" id="1.4.13" href="#1.4.13">#1.4.13</a> -18 ÷ (-3)</li>
+<li><a class="refcode" id="1.4.14" href="#1.4.14">#1.4.14</a> 15 ÷ (-5)</li>
+<li><a class="refcode" id="1.4.15" href="#1.4.15">#1.4.15</a> (-2)(-2)(-2)</li>
+<li><a class="refcode" id="1.4.16" href="#1.4.16">#1.4.16</a> (-1)(-1)(-1)(-1)</li>
+</ol>
+<p><em>Absolute value (distance from 0):</em></p>
+<ol start="17">
+<li><a class="refcode" id="1.4.17" href="#1.4.17">#1.4.17</a> |-7|</li>
+<li><a class="refcode" id="1.4.18" href="#1.4.18">#1.4.18</a> |3|</li>
+<li><a class="refcode" id="1.4.19" href="#1.4.19">#1.4.19</a> |0|</li>
+<li><a class="refcode" id="1.4.20" href="#1.4.20">#1.4.20</a> |-10|</li>
+</ol>
+<p><strong>Answer key:</strong></p>
+<ol>
+<li>-11 2. -4 3. 5 4. -4 5. -8 6. 7 7. -5 8. 0 9. -20 10. 12 11. -21 12. -4 13. 6 14. -3 15. -8 16. 1 17. 7 18. 3 19. 0 20. 10</li>
+</ol>
+<p><em>(6 and 7 are the subtract-a-negative cases; 15 and 16 are the even/odd-of-negatives chains; 17–20 read absolute value as distance from 0 — always ≥ 0.)</em></p>
+<hr>
+<h2 id="lesson-15-expressions-vs-equations-evaluating-expressions">Lesson 1.5: Expressions vs. equations; evaluating expressions</h2>
+<p><strong>Goal:</strong> Distinguish an <em>expression</em> from an <em>equation</em>, and evaluate an expression by substituting a value for its variable.
+<strong>Why it matters:</strong> These are the two central objects of algebra. An expression <em>has a value</em> once you know the variable; an equation <em>makes a claim</em>. Confusing them ("solving" an expression, or "evaluating" an equation) derails everything that follows.</p>
+<p><strong>New terms:</strong></p>
+<ul>
+<li><a class="refcode" id="1.5.d1" href="#1.5.d1">#1.5.d1</a> <strong>Expression:</strong> a mathematical <em>phrase</em> with no equals sign — e.g. 3x + 2. It names a value once you know the variable; you <strong>evaluate</strong> it.</li>
+<li><a class="refcode" id="1.5.d2" href="#1.5.d2">#1.5.d2</a> <strong>Equation:</strong> a full <em>sentence</em> with an = — e.g. 3x + 2 = 14. It <em>claims</em> two things are equal; you <strong>solve</strong> it.</li>
+<li><a class="refcode" id="1.5.d3" href="#1.5.d3">#1.5.d3</a> <strong>Evaluate / substitute:</strong> replace the variable with a given number and compute (use the reserved-seat metaphor — the person finally sits down, <code>metaphors.md</code>, Variables B).</li>
+</ul>
+<p><strong>Teaching arc (concrete → pictorial → symbolic):</strong></p>
+<ol>
+<li><strong>Phrase vs. sentence.</strong> An expression is a <em>noun phrase</em> ("three more than twice a number"); an equation is a full <em>sentence</em> with a verb, the =, claiming a balance. The tell is simply: <strong>is there an equals sign?</strong></li>
+<li><strong>Evaluate by substitution.</strong> To evaluate 3x + 2 at x = 4: the box x holds 4, so 3(4) + 2 = 14. Then a signed one — evaluate 5 - 2x at x = -1: 5 - 2(-1) = 5 + 2 = 7 (callback to 1.4: subtracting a negative). Order of operations (1.3) applies inside every evaluation.</li>
+<li><strong>Read the structure (lightly).</strong> Order and grouping matter: a - b is <strong>not</strong> b - a (5 - 2 ≠ 2 - 5); and 2(x+3) is <strong>not</strong> 2x + 3 — the 2 multiplies <em>everything</em> in the parentheses (a preview of the distributive property in Unit 2). Don't formalize yet; just notice it.</li>
+<li><strong>Function preview (light).</strong> "Evaluating 3x+2 at different inputs is exactly the input→output machine from 1.1: feed in 4, out comes 14. When we name that machine in Unit 4, we'll write it f(x) = 3x + 2 and f(4) = 14."</li>
+</ol>
+<p><strong>Worked examples:</strong></p>
+<ol>
+<li><a class="refcode" id="1.5.w1" href="#1.5.w1">#1.5.w1</a> Expression or equation? 3x + 2. No equals sign — it's an <strong>expression</strong>.</li>
+<li><a class="refcode" id="1.5.w2" href="#1.5.w2">#1.5.w2</a> Expression or equation? 3x + 2 = 14. Has an = — it's an <strong>equation</strong>.</li>
+<li><a class="refcode" id="1.5.w3" href="#1.5.w3">#1.5.w3</a> Evaluate 3x + 2 at x = 4: 3(4) + 2 = 12 + 2 = 14.</li>
+<li><a class="refcode" id="1.5.w4" href="#1.5.w4">#1.5.w4</a> Evaluate 5 - 2x at x = -1: 5 - 2(-1) = 5 + 2 = 7. <em>(Watch the sign — subtracting a negative adds.)</em></li>
+<li><a class="refcode" id="1.5.w5" href="#1.5.w5">#1.5.w5</a> Structure check: evaluate 2(x+3) and 2x + 3 at x = 3. 2(3+3) = 2(6) = 12, but 2(3) + 3 = 9. Different expressions — grouping matters.</li>
+</ol>
+<p><strong>Watch for:</strong> Trying to "solve" an expression (there's nothing to solve — only to evaluate), or dropping a sign when substituting a negative (<code>misconceptions.md</code> §3) — keep parentheses around the substituted value: 5 - 2(-1), not 5 - 2-1. Also the structure error 2(x+3) = 2x+3 (<code>misconceptions.md</code> §7) — flag it, formalize in Unit 2.</p>
+<p><strong>Visuals to offer:</strong> None needed. If structure confuses, a quick area-model box for 2(x+3) in LaTeX (<code>visuals.md</code>, area-model section) previews distribution.</p>
+<p><strong>Check for understanding (transfer):</strong></p>
+<ul>
+<li><a class="refcode" id="1.5.c1" href="#1.5.c1">#1.5.c1</a> "Is 7y an expression or an equation? How do you know, and what would you <em>do</em> with it?"</li>
+<li><a class="refcode" id="1.5.c2" href="#1.5.c2">#1.5.c2</a> "Evaluate 4x - 1 at x = 2, then at x = -2. What changed?"</li>
+<li><a class="refcode" id="1.5.c3" href="#1.5.c3">#1.5.c3</a> "Does 2(x + 3) equal 2x + 3? Test it with x = 5."</li>
+</ul>
+<p><strong>Practice problems:</strong></p>
+<p><em>Identify each as an expression or an equation:</em></p>
+<ol>
+<li><a class="refcode" id="1.5.1" href="#1.5.1">#1.5.1</a> 3x + 2</li>
+<li><a class="refcode" id="1.5.2" href="#1.5.2">#1.5.2</a> 3x + 2 = 14</li>
+<li><a class="refcode" id="1.5.3" href="#1.5.3">#1.5.3</a> 7 - y</li>
+<li><a class="refcode" id="1.5.4" href="#1.5.4">#1.5.4</a> 5 = 2x - 1</li>
+</ol>
+<p><em>Evaluate each expression at the given value:</em></p>
+<ol start="5">
+<li><a class="refcode" id="1.5.5" href="#1.5.5">#1.5.5</a> 3x + 2 at x = 4</li>
+<li><a class="refcode" id="1.5.6" href="#1.5.6">#1.5.6</a> 5 - 2x at x = -1</li>
+<li><a class="refcode" id="1.5.7" href="#1.5.7">#1.5.7</a> 2x + 1 at x = 5</li>
+<li><a class="refcode" id="1.5.8" href="#1.5.8">#1.5.8</a> 4x at x = -2</li>
+<li><a class="refcode" id="1.5.9" href="#1.5.9">#1.5.9</a> 3x - 4 at x = -3</li>
+<li><a class="refcode" id="1.5.10" href="#1.5.10">#1.5.10</a> 10 - 3x at x = 2</li>
+<li><a class="refcode" id="1.5.11" href="#1.5.11">#1.5.11</a> x² + 1 at x = -2</li>
+<li><a class="refcode" id="1.5.12" href="#1.5.12">#1.5.12</a> 2(x + 3) at x = 3</li>
+</ol>
+<p><strong>Answer key:</strong></p>
+<ol>
+<li>expression 2. equation 3. expression 4. equation</li>
+<li>14 6. 7 7. 11 8. -8 9. -13 10. 4 11. 5 12. 12</li>
+</ol>
+<p><em>(11 previews exponents on a negative — (-2)² = 4, not -4; 12 reinforces that grouping is not the same as 2x+3.)</em></p>
+<p><strong>Order-of-operations with signed numbers (1.3 + 1.4 callback):</strong> Now that negatives (1.4) are in hand, mix them back into order of operations (1.3) — this is where the single most common pitfall lives. Run this short interleaved set, and contrast the two headliners out loud:</p>
+<ul>
+<li><strong>−2² = −4</strong> but <strong>(−2)² = 4.</strong> Without parentheses, the exponent binds <em>only</em> to the 2, and the leading minus is applied <em>after</em> squaring: −2² means −(2²) = −(4) = −4. With parentheses, the whole −2 is squared: (−2)² = (−2)(−2) = 4. Say it as: "no parentheses → square first, then take the opposite." (See <code>misconceptions.md</code> §3 and §5.)</li>
+</ul>
+<p><em>Evaluate (mind the sign and the exponent's reach):</em></p>
+<ol start="13">
+<li>−2²</li>
+<li>(−2)²</li>
+<li>−3²</li>
+<li>−2² + 1</li>
+<li>10 − 2·(−3)</li>
+<li>8 + (−4)/2</li>
+</ol>
+<p><strong>Answer key:</strong> 13. -4 14. 4 15. -9 16. -3 17. 16 18. 6</p>
+<p><em>(13 vs 14 is the headline contrast — same digits, the parentheses flip the sign of the result; 17 and 18 fold a negative into the [MD] tier. If a student writes −2² = 4, they squared before applying the minus — re-anchor on "the exponent only touches the 2.")</em></p>
+<hr>
+<h2 id="wrap-up-interleaving">Wrap-up &amp; interleaving</h2>
+<p><strong>Consolidate:</strong> the relational = (1.1) is the spine — keep judging non-standard true/false/open sentences in later sessions. The four-tier order of operations (1.3) and signed arithmetic (1.4) are the procedural workhorses; mix them into every future computation. The expression/equation distinction (1.5) sets up <em>all</em> of Unit 2.</p>
+<p><strong>Mix back in (interleaving, <code>pedagogy.md</code>):</strong> When starting Unit 2's solving, slip in one-step equations that land on a <strong>negative</strong> or <strong>non-integer</strong> answer (callbacks to 1.2 and 1.4) so those stay normal. Use a 60-second order-of-operations or signed-arithmetic warm-up before new material. Always model <strong>substituting the answer back to check</strong> — the self-verification habit seeded here.</p>
+<p><strong>Threading forward:</strong> the input→output preview in 1.1 and 1.5 is the seed of <strong>functions</strong> (Unit 4): "an equation/rule turns an input into an output; we'll name that machine f(x) later."</p>
+<p><strong>Progress Card should note:</strong> Does the student read = as balance (not "compute")? Are they fluent with same-tier left-to-right and with negatives (especially subtracting a negative and ordering)? Can they tell an expression from an equation and evaluate by substitution? Flag any of these that are shaky — they're load-bearing for Unit 2.</p>
+</main>
+<footer><p>Generated from the unit source by <code>_verification/build_textbook.py</code>. Math by KaTeX.</p></footer>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  renderMathInElement(document.body, {delimiters: [{left: "$$", right: "$$", display: true}], throwOnError: false});
+  var t = document.getElementById("theme"), root = document.documentElement;
+  if (localStorage.getItem("a1-theme") === "dark") root.classList.add("dark");
+  t.addEventListener("click", function () {
+    root.classList.toggle("dark");
+    localStorage.setItem("a1-theme", root.classList.contains("dark") ? "dark" : "light");
+  });
+});
+</script>
+</body>
+</html>

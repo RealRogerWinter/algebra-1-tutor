@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Unit 8: Inequalities — Algebra 1</title>
+<link rel="stylesheet" href="textbook.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous">
+</head>
+<body>
+<header class="topbar">
+  <nav><a href="index.html">Contents</a> &nbsp;·&nbsp; <a href="unit-07.html">&larr; Unit 7</a> &nbsp;·&nbsp; <a href="unit-09.html">Unit 9 &rarr;</a></nav>
+  <button id="theme" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<h1>Unit 8: Inequalities</h1>
+<p class="subtitle">One-variable, the sign-flip, compound, absolute value, two-variable graphing</p>
+
+<blockquote>
+<p><strong>Prerequisites:</strong> Unit 2 (solving one- and two-step equations; the balance-scale meaning of <code>=</code>) and Unit 5 (the coordinate plane, slope, and graphing y = mx + b). Comfort with negatives (Unit 1 / <code>misconceptions.md</code> §3) is leaned on heavily here.
+<strong>By the end, the student can:</strong></p>
+<ul>
+<li>Read and write the four inequality symbols &lt;, ≤, &gt;, ≥ and explain that a solution is a <strong>set</strong> of many values, not a single number.</li>
+<li>Solve a linear inequality like an equation, applying the <strong>sign-flip rule</strong> when multiplying or dividing by a negative — <em>and explain why it must flip</em>.</li>
+<li><strong>Graph</strong> an inequality on a number line (open vs. filled circle, shade the ray) and self-check by <strong>testing a point</strong>.</li>
+<li>Solve and graph <strong>compound</strong> inequalities (<em>and</em> = between; <em>or</em> = union).</li>
+<li>Graph y = |x| (the V) and solve the symmetric absolute-value cases |x| = k, |x| &lt; k, |x| &gt; k by reading |x| as distance from 0 (off-center algebraic solving is flagged as Algebra-2 reach).</li>
+<li><strong>Graph a two-variable linear inequality</strong> (dashed/solid boundary, shade the correct half-plane via a test point) and find the solution region of a <strong>system</strong> of inequalities.</li>
+</ul>
+</blockquote>
+<h2 id="teaching-this-unit-orientation-for-the-tutor">Teaching this unit (orientation for the tutor)</h2>
+<p>Inequalities are "equations with a direction." Almost everything from Unit 2 transfers — isolate the variable with balanced moves — with <strong>one</strong> new rule that causes the overwhelming majority of errors: <strong>multiplying or dividing both sides by a negative reverses the inequality sign.</strong> This is the central trap of the unit (<code>misconceptions.md</code> §6). Do not teach it as a rule to memorize; teach the <strong>why</strong>, then the <strong>self-check</strong>:</p>
+<ul>
+<li><strong>The why:</strong> start from something obviously true, 2 &lt; 3. Multiply both sides by -1: you get -2 and -3. Is -2 &lt; -3? No — -2 is the <em>bigger</em> number. To keep a true statement, the sign had to flip: -2 &gt; -3. The flip isn't a trick; it's what keeps the statement true.</li>
+<li><strong>The self-check (works every time):</strong> after solving, <strong>test a point</strong>. Put a number from your answer set into the <em>original</em> inequality. If it makes the original true, good; if the original is true at x = 0 but 0 isn't in your answer, a flip went missing. Model this on every negative-coefficient problem (<code>misconceptions.md</code> §6).</li>
+</ul>
+<p>The second persistent fuzziness is what a <strong>solution set</strong> <em>means</em>: an equation usually has one answer; an inequality has infinitely many, which is exactly why we <strong>graph</strong> it (a shaded ray, not a dot). Keep tying the algebra to the number-line picture.</p>
+<p><strong>The arc.</strong> <strong>8.1</strong> builds one-variable solving + number-line graphing + the flip. <strong>8.2</strong> chains two conditions (<em>and</em>/<em>or</em>). <strong>8.3</strong> centers on <em>distance from 0</em> — graph the V of y = |x|, then solve the symmetric |x| = k / |x| &lt; k / |x| &gt; k cases, where "within" becomes an <em>and</em> and "outside" an <em>or</em> (a direct payoff of 8.2); off-center algebraic solving is flagged as Algebra-2 reach. <strong>8.4</strong> lifts everything into two variables: a line splits the plane, you shade a half, and a <strong>system</strong> is the overlap. Thread <strong>function language</strong> where natural: a boundary like y = 2x+1 <em>is</em> the function f(x) = 2x+1; the inequality y &gt; 2x+1 asks "where is the output <em>above</em> the line?"</p>
+<p><strong>Pacing.</strong> Spend real time on the flip in 8.1 until the <em>test-a-point</em> habit is automatic — it pays off in 8.2 and 8.3. Don't drill number-line drawing to exhaustion; its job is meaning. In 8.4, precision matters less than three correct decisions: dashed-vs-solid, which side, and stating the test point out loud.</p>
+<hr>
+<h2 id="lesson-81-one-variable-inequalities">Lesson 8.1: One-variable inequalities</h2>
+<p><strong>Goal:</strong> Solve a linear inequality in one variable (including the negative-coefficient flip) and graph its solution set on a number line.
+<strong>Why it matters:</strong> Real constraints are rarely "exactly equal" — <em>at least</em> $20, <em>no more than</em> 8 hours, <em>under</em> the speed limit. Inequalities are how we solve "how much is enough / too much," and the solution is a whole range of acceptable values.
+<strong>New terms:</strong></p>
+<ul>
+<li><a class="refcode" id="8.1.d1" href="#8.1.d1">#8.1.d1</a> <strong>Inequality:</strong> a statement that <strong>compares</strong> two quantities using &lt; (less than), &gt; (greater than), ≤ (less than <em>or equal to</em>), or ≥ (greater than or equal to) — saying one is less than, greater than, or at most/at least the other (an <em>order</em> relation).</li>
+<li><a class="refcode" id="8.1.d2" href="#8.1.d2">#8.1.d2</a> <strong>Solution set:</strong> <em>all</em> the values that make the inequality true — usually infinitely many, drawn as a shaded ray.</li>
+<li><a class="refcode" id="8.1.d3" href="#8.1.d3">#8.1.d3</a> <strong>Strict</strong> (&lt;, &gt;) vs. <strong>inclusive</strong> (≤, ≥): whether the boundary value itself counts.</li>
+</ul>
+<p><strong>Teaching arc (concrete → pictorial → symbolic):</strong></p>
+<ul>
+<li><strong>Concrete:</strong> "‘You must be <strong>at least</strong> 13’ — is 13 allowed? Is 20? Is 12? That's age ≥ 13: a whole crowd of allowed numbers, not one." Contrast with an equation (one answer). Anchor ≤/≥ to "<em>or equal to</em> = the boundary is invited in."</li>
+<li><strong>Pictorial:</strong> The solution lives on a <strong>number line</strong>. <strong>Open circle</strong> ○ at the boundary for strict (&lt;, &gt;) — "the boundary itself is <em>not</em> included"; <strong>filled circle</strong> ● for inclusive (≤, ≥) — "included." Then <strong>shade the ray</strong> toward all the values that work. Use the ASCII number lines in <code>visuals.md</code> (the x&gt;2 and x ≤ -1 sketches) for in-chat, or <strong>Template 1</strong> for a polished SVG artifact. Always say in words what the picture shows.</li>
+<li><strong>Symbolic:</strong> Solve <em>exactly like an equation</em> (Unit 2 balanced moves) with <strong>one</strong> added rule: <strong>if you multiply or divide both sides by a negative, flip the inequality sign.</strong> Adding/subtracting, or multiplying/dividing by a <em>positive</em>, never flips it.</li>
+</ul>
+<p>Teach the flip's <strong>why</strong> (the 2&lt;3 → -2 ? -3 argument above, <code>misconceptions.md</code> §6), then close every problem with <strong>test a point</strong>.</p>
+<p><strong>Worked examples:</strong></p>
+<p><em>Example 1 — no flip.</em> Solve x + 3 &lt; 7.
+Subtract 3 from both sides: x &lt; 4.
+Graph: <strong>open circle</strong> at 4 (strict), shade <strong>left</strong> (toward smaller values).
+Test a point: try x = 0. Original: 0 + 3 = 3 &lt; 7, and 0 &lt; 4 — agree. Solution: <strong>x &lt; 4</strong>.</p>
+<p><em>Example 2 — two steps, no flip.</em> Solve 2x - 1 ≥ 5.
+Add 1: 2x ≥ 6. Divide by <strong>+2</strong> (positive → no flip): x ≥ 3.
+Graph: <strong>filled circle</strong> at 3 (inclusive), shade <strong>right</strong>.
+Test x = 4: 2(4) - 1 = 7 ≥ 5, and 4 ≥ 3. Solution: <strong>x ≥ 3</strong>.</p>
+<p><em>Example 3 — the flip.</em> Solve -2x &lt; 6.
+Divide both sides by <strong>-2</strong> → <strong>flip</strong> the sign: x &gt; -3.
+Graph: <strong>open circle</strong> at -3, shade <strong>right</strong>.
+Test x = 0: original -2(0) = 0 &lt; 6; is 0 &gt; -3? — agree. (Had we forgotten to flip and written x &lt; -3, then 0 would be <em>excluded</em> even though it makes the original true — the test catches it.) Solution: <strong>x &gt; -3</strong>.</p>
+<p><em>Example 4 — the -x trap.</em> Solve 5 - x &gt; 2.
+Subtract 5: -x &gt; -3. Now divide by -1 → <strong>flip</strong>: x &lt; 3.
+Test x = 0: 5 - 0 = 5 &gt; 2; is 0 &lt; 3?. Solution: <strong>x &lt; 3</strong>.
+<em>(Alternative that avoids a negative coefficient: add x to both sides → 5 &gt; 2 + x → 3 &gt; x, i.e. x &lt; 3. Same answer; show this as the flip-free route.)</em></p>
+<p><strong>Watch for:</strong></p>
+<ul>
+<li><strong>The missing flip</strong> (<code>misconceptions.md</code> §6) — the unit's headline error. Tell: -2x &lt; 6 ⇒ x &lt; -3. Repair with the 2&lt;3 argument <em>and</em> the test-a-point check, not a louder restatement.</li>
+<li><strong>Mishandling -x</strong> in 5 - x &gt; 2 (writing x &gt; 3). Same root; the test-a-point check exposes it.</li>
+<li><strong>Open vs. filled circle</strong> confusion — ≤/≥ get a <strong>filled</strong> dot ("equal is included"),  an <strong>open</strong> one.</li>
+<li><strong>Treating it like an equation with one answer</strong> — push "name three numbers that work" to surface the <em>set</em>.</li>
+</ul>
+<p><strong>Visuals to offer:</strong> <a class="refcode" id="8.1.f1" href="#8.1.f1">#8.1.f1</a> ASCII number line in chat for quick feedback (the x&gt;2/x≤-1 sketches in <code>visuals.md</code>), or <strong>Template 1</strong> (SVG artifact) for a polished line — open vs. filled endpoint, shaded ray, boundary labeled. Always pair with a sentence.</p>
+<figure class="fig" id="fig-8.1.f1"><svg viewBox="0 0 320 60" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+  <line x1="14" y1="30" x2="306" y2="30" stroke="#333" stroke-width="2"/>
+  <line x1="20.0" y1="25" x2="20.0" y2="35" stroke="#333"/>
+  <text x="20.0" y="50" font-size="10" text-anchor="middle">-1</text>
+  <line x1="66.67" y1="25" x2="66.67" y2="35" stroke="#333"/>
+  <text x="66.67" y="50" font-size="10" text-anchor="middle">0</text>
+  <line x1="113.33" y1="25" x2="113.33" y2="35" stroke="#333"/>
+  <text x="113.33" y="50" font-size="10" text-anchor="middle">1</text>
+  <line x1="160.0" y1="25" x2="160.0" y2="35" stroke="#333"/>
+  <text x="160.0" y="50" font-size="10" text-anchor="middle">2</text>
+  <line x1="206.67" y1="25" x2="206.67" y2="35" stroke="#333"/>
+  <text x="206.67" y="50" font-size="10" text-anchor="middle">3</text>
+  <line x1="253.33" y1="25" x2="253.33" y2="35" stroke="#333"/>
+  <text x="253.33" y="50" font-size="10" text-anchor="middle">4</text>
+  <line x1="300.0" y1="25" x2="300.0" y2="35" stroke="#333"/>
+  <text x="300.0" y="50" font-size="10" text-anchor="middle">5</text>
+  <line x1="160.0" y1="30" x2="300.0" y2="30" stroke="#c0392b" stroke-width="4"/>
+  <circle cx="160.0" cy="30" r="5" fill="white" stroke="#c0392b" stroke-width="2"/>
+  <text x="160.0" y="18" font-size="10" text-anchor="middle" fill="#c0392b">x > 2</text>
+</svg><figcaption>Figure 8.1.f1</figcaption></figure>
+
+<p><strong>Check for understanding (transfer):</strong></p>
+<ol>
+<li><a class="refcode" id="8.1.c1" href="#8.1.c1">#8.1.c1</a> "Solve -3x ≥ 12, then test x = -5 in the <em>original</em>. Walk me through how the test confirms (or would catch a mistake in) your answer."</li>
+<li><a class="refcode" id="8.1.c2" href="#8.1.c2">#8.1.c2</a> "Two students solve -x &lt; 4. One writes x &lt; -4, the other x &gt; -4. Using x = 0, decide who's right and explain how you know."</li>
+<li><a class="refcode" id="8.1.c3" href="#8.1.c3">#8.1.c3</a> "In words, describe the number-line graph of x ≤ 2: which circle, filled or open, and which direction do you shade?"</li>
+</ol>
+<p><strong>Practice problems</strong> (solve; then describe the number-line graph in words — which circle and which way you shade):</p>
+<p><em>Set A — no flip</em></p>
+<ol>
+<li><a class="refcode" id="8.1.1" href="#8.1.1">#8.1.1</a> x - 2 &lt; 3</li>
+<li><a class="refcode" id="8.1.2" href="#8.1.2">#8.1.2</a> x + 5 ≤ 2</li>
+<li><a class="refcode" id="8.1.3" href="#8.1.3">#8.1.3</a> 3x &gt; 12</li>
+<li><a class="refcode" id="8.1.4" href="#8.1.4">#8.1.4</a> x/2 ≥ 4</li>
+<li><a class="refcode" id="8.1.5" href="#8.1.5">#8.1.5</a> 2x + 1 ≤ 9</li>
+<li><a class="refcode" id="8.1.6" href="#8.1.6">#8.1.6</a> 4x - 3 &gt; 9</li>
+</ol>
+<p><em>Set B — requires a flip (multiply/divide by a negative)</em></p>
+<ol start="7">
+<li><a class="refcode" id="8.1.7" href="#8.1.7">#8.1.7</a> -x &lt; 4</li>
+<li><a class="refcode" id="8.1.8" href="#8.1.8">#8.1.8</a> -3x ≤ 9</li>
+<li><a class="refcode" id="8.1.9" href="#8.1.9">#8.1.9</a> -x + 2 &lt; 5</li>
+<li><a class="refcode" id="8.1.10" href="#8.1.10">#8.1.10</a> 10 - 2x ≥ 4</li>
+<li><a class="refcode" id="8.1.11" href="#8.1.11">#8.1.11</a> 3 - x ≤ 7</li>
+<li><a class="refcode" id="8.1.12" href="#8.1.12">#8.1.12</a> -4x ≤ -8</li>
+</ol>
+<p><em>Set C — read the graph (manual)</em></p>
+<ol start="13">
+<li><a class="refcode" id="8.1.13" href="#8.1.13">#8.1.13</a> A number line shows an <strong>open</strong> circle at 1 shaded to the <strong>right</strong>. Write the inequality.</li>
+<li><a class="refcode" id="8.1.14" href="#8.1.14">#8.1.14</a> A number line shows a <strong>filled</strong> circle at -2 shaded to the <strong>left</strong>. Write the inequality.</li>
+</ol>
+<p><strong>Answer key (all verified):</strong></p>
+<ol>
+<li>x &lt; 5 — open circle at 5, shade left.</li>
+<li>x ≤ -3 — filled circle at -3, shade left.</li>
+<li>x &gt; 4 — open circle at 4, shade right.</li>
+<li>x ≥ 8 — filled circle at 8, shade right.</li>
+<li>x ≤ 4 — filled circle at 4, shade left.</li>
+<li>x &gt; 3 — open circle at 3, shade right.</li>
+<li>x &gt; -4 — <strong>flip</strong> (÷ by -1); open circle at -4, shade right. <em>(Test x=0: -0&lt;4, 0&gt;-4.)</em></li>
+<li>x ≥ -3 — <strong>flip</strong> (÷ by -3); filled circle at -3, shade right.</li>
+<li>x &gt; -3 — subtract 2 → -x &lt; 3 → <strong>flip</strong> → x &gt; -3; open circle at -3, shade right.</li>
+<li>x ≤ 3 — subtract 10 → -2x ≥ -6 → <strong>flip</strong> (÷ by -2) → x ≤ 3; filled circle at 3, shade left.</li>
+<li>x ≥ -4 — subtract 3 → -x ≤ 4 → <strong>flip</strong> → x ≥ -4; filled circle at -4, shade right.</li>
+<li>x ≥ 2 — divide by -4 → <strong>flip</strong> → x ≥ 2; filled circle at 2, shade right. <em>(Test x=2: -8 ≤ -8.)</em></li>
+<li>x &gt; 1 (open + right = strict greater-than).</li>
+<li>x ≤ -2 (filled + left = inclusive less-than-or-equal).</li>
+</ol>
+<hr>
+<h2 id="lesson-82-compound-inequalities">Lesson 8.2: Compound inequalities</h2>
+<p><strong>Goal:</strong> Solve and graph compound inequalities joined by <strong>and</strong> (intersection — <em>between</em>) or <strong>or</strong> (union — two separate rays).
+<strong>Why it matters:</strong> Real constraints often come in pairs — "between 60 and 80," "older than 12 <strong>or</strong> with a guardian." <em>And</em> narrows; <em>or</em> widens.
+<strong>New terms:</strong></p>
+<ul>
+<li><a class="refcode" id="8.2.d1" href="#8.2.d1">#8.2.d1</a> <strong>Compound inequality:</strong> two inequalities combined into one statement.</li>
+<li><a class="refcode" id="8.2.d2" href="#8.2.d2">#8.2.d2</a> <strong>And (intersection):</strong> <em>both</em> parts must hold. 2 &lt; x ≤ 5 is shorthand for x &gt; 2 <strong>and</strong> x ≤ 5 — the values <strong>between</strong> 2 and 5 (with 5 included). On the line, the <strong>overlap</strong> of the two shaded regions — a single segment.</li>
+<li><a class="refcode" id="8.2.d3" href="#8.2.d3">#8.2.d3</a> <strong>Double inequality</strong> (a.k.a. <strong>three-part inequality</strong>): the chained form a &lt; x &lt; b. It is only well-formed when <strong>both symbols point the same way</strong>, and it <em>always</em> means an <strong>and</strong> (a &lt; x <strong>and</strong> x &lt; b). Never write something like 3 &lt; x &gt; 1 — a chained form with the symbols pointing opposite ways is meaningless.</li>
+<li><a class="refcode" id="8.2.d4" href="#8.2.d4">#8.2.d4</a> <strong>Or (union):</strong> <em>at least one</em> part holds. x &lt; -1 <strong>or</strong> x &gt; 3 — <strong>everything</strong> in either ray; the two pieces don't touch.</li>
+</ul>
+<p><strong>Teaching arc (concrete → pictorial → symbolic):</strong></p>
+<ul>
+<li><strong>Concrete:</strong> <em>And</em> = "you must clear <strong>both</strong> bars" (narrows to the overlap). <em>Or</em> = "clear <strong>either</strong> bar" (widens to the union). "Temperature between 60 and 80" is an <em>and</em>; "under 32 or over 100" is an <em>or</em>.</li>
+<li><strong>Pictorial:</strong> Shade each condition on the same number line. <em>And</em> keeps only where the shadings <strong>overlap</strong> (a between-segment, two endpoints). <em>Or</em> keeps <strong>everything</strong> shaded by either (two rays heading opposite ways). Endpoints follow 8.1's open/filled rule per symbol.</li>
+<li><strong>Symbolic:</strong> A three-part <em>and</em> like -1 &lt; x + 2 &lt; 4 is solved by doing the <strong>same move to all three parts</strong> at once. An <em>or</em> is solved as <strong>two separate</strong> inequalities, then unioned.</li>
+</ul>
+<p><strong>Worked examples:</strong></p>
+<p><em>Example 1 — "and" (three-part).</em> Solve -1 &lt; x + 2 &lt; 4.
+Subtract 2 from <strong>all three</strong> parts: -1 - 2 &lt; x &lt; 4 - 2, i.e. -3 &lt; x &lt; 2.
+Graph: open circles at -3 and 2, shade the segment <strong>between</strong>.
+Test x = 0 (inside): -1 &lt; 0+2=2 &lt; 4. Solution: <strong>-3 &lt; x &lt; 2</strong>.</p>
+<p><em>Example 2 — "and" with a division.</em> Solve 3 ≤ 2x - 1 ≤ 9.
+Add 1 to all parts: 4 ≤ 2x ≤ 10. Divide all by +2 (positive → no flip): 2 ≤ x ≤ 5.
+Graph: filled circles at 2 and 5, shade between. Solution: <strong>2 ≤ x ≤ 5</strong>.</p>
+<p><em>Example 3 — "or".</em> Solve x &lt; -1 <strong>or</strong> x &gt; 3.
+Already solved — two rays. Graph: open circle at -1 shading <strong>left</strong>, open circle at 3 shading <strong>right</strong>; nothing in the middle. Solution: <strong>x &lt; -1 or x &gt; 3</strong>.</p>
+<p><em>Example 4 — "or" needing work.</em> Solve 2x ≤ -4 <strong>or</strong> x - 3 &gt; 2.
+Left: x ≤ -2. Right: x &gt; 5. Graph: filled circle at -2 shading left, open circle at 5 shading right. Solution: <strong>x ≤ -2 or x &gt; 5</strong>.</p>
+<p><em>Example 5 — three-part, divide by a negative (flip BOTH signs).</em> Solve -6 &lt; -2x ≤ 4.
+Divide <strong>all three</strong> parts by <strong>-2</strong> → <strong>flip both</strong> signs: -6/-2 &gt; x ≥ 4/-2, i.e. 3 &gt; x ≥ -2.
+Rewrite left-to-right in <strong>increasing</strong> order (smaller number on the left): reading 3 &gt; x ≥ -2 backwards gives <strong>-2 ≤ x &lt; 3</strong>. (The strict end stays strict and the inclusive end stays inclusive — only their positions move, so the 3 keeps its open/strict mark and -2 keeps its filled/inclusive one.)
+Graph: filled circle at -2, open circle at 3, shade the segment <strong>between</strong>.
+Test a point — x = 0 (inside): -6 &lt; -2(0) = 0 ≤ 4 ✓. Check the endpoints too: x = -2 is <strong>in</strong> (-2(-2) = 4, and -6 &lt; 4 ≤ 4 ✓, so -2 is included), while x = 3 is <strong>out</strong> (-2(3) = -6, and -6 &lt; -6 is false, so 3 is excluded). Solution: <strong>-2 ≤ x &lt; 3</strong>.</p>
+<p><strong>Watch for:</strong></p>
+<ul>
+<li><strong>Confusing <em>and</em> with <em>or</em>.</strong> <em>And</em> = overlap (between, narrower); <em>or</em> = union (two rays, wider). If a student shades the whole line for an <em>and</em>, they've unioned by mistake.</li>
+<li><strong>In a three-part <em>and</em>, only changing the middle.</strong> Whatever you do, do it to <strong>all three</strong> parts (<code>misconceptions.md</code> §1 — balance applies across the whole statement).</li>
+<li><strong>The flip still applies</strong> to compound inequalities — dividing the three-part statement by a negative flips <strong>both</strong> signs (turning a &lt; x &lt; b into b &gt; x &gt; a). Same self-check: test a point.</li>
+<li><strong>Writing an empty <em>and</em> as if it had answers</strong> — e.g. x &gt; 5 <strong>and</strong> x &lt; 1 has <em>no</em> solution (no overlap). Worth one example if it arises.</li>
+</ul>
+<p><strong>Visuals to offer:</strong> ASCII number lines (one segment for <em>and</em>, two rays for <em>or</em>), or two endpoints on <strong>Template 1</strong>. Show <em>and</em> and <em>or</em> on stacked lines so the contrast is visible. Pair with words.</p>
+<p><strong>Check for understanding (transfer):</strong></p>
+<ol>
+<li><a class="refcode" id="8.2.c1" href="#8.2.c1">#8.2.c1</a> "Rewrite 2 &lt; x ≤ 5 as two separate inequalities joined by a word. Which word, and why is the graph a single segment instead of two rays?"</li>
+<li><a class="refcode" id="8.2.c2" href="#8.2.c2">#8.2.c2</a> "Why does x &gt; 5 <strong>and</strong> x &lt; 1 have no solution, while x &gt; 5 <strong>or</strong> x &lt; 1 has lots? Describe both graphs."</li>
+<li><a class="refcode" id="8.2.c3" href="#8.2.c3">#8.2.c3</a> "You solve a three-part inequality and divide all parts by -2. What happens to the two inequality signs, and how would testing a point confirm it?"</li>
+</ol>
+<p><strong>Practice problems</strong> (solve and describe the graph: segment-between for <em>and</em>, two rays for <em>or</em>):</p>
+<p><em>Set A — "and"</em></p>
+<ol>
+<li><a class="refcode" id="8.2.1" href="#8.2.1">#8.2.1</a> -2 &lt; x - 1 &lt; 3</li>
+<li><a class="refcode" id="8.2.2" href="#8.2.2">#8.2.2</a> 0 ≤ x + 1 ≤ 4</li>
+<li><a class="refcode" id="8.2.3" href="#8.2.3">#8.2.3</a> 3 ≤ 2x - 1 ≤ 9</li>
+<li><a class="refcode" id="8.2.4" href="#8.2.4">#8.2.4</a> -4 &lt; 2x &lt; 6</li>
+</ol>
+<p><em>Set B — "or"</em></p>
+<ol start="5">
+<li><a class="refcode" id="8.2.5" href="#8.2.5">#8.2.5</a> x &lt; -1 or x &gt; 5</li>
+<li><a class="refcode" id="8.2.6" href="#8.2.6">#8.2.6</a> x + 1 &lt; 0 or x - 3 &gt; 2</li>
+<li><a class="refcode" id="8.2.7" href="#8.2.7">#8.2.7</a> 2x ≤ -4 or x &gt; 3</li>
+<li><a class="refcode" id="8.2.8" href="#8.2.8">#8.2.8</a> x - 3 ≥ 2 or x &lt; -2</li>
+</ol>
+<p><em>Set C — three-part, divide by a negative (flip BOTH signs, then rewrite in increasing order)</em></p>
+<ol start="9">
+<li><a class="refcode" id="8.2.9" href="#8.2.9">#8.2.9</a> -9 ≤ -3x &lt; 6</li>
+</ol>
+<p><strong>Answer key (all verified):</strong></p>
+<ol>
+<li>-1 &lt; x &lt; 4 — add 1 to all parts; open circles at -1 and 4, shade between.</li>
+<li>-1 ≤ x ≤ 3 — subtract 1 from all parts; filled circles at -1 and 3, shade between.</li>
+<li>2 ≤ x ≤ 5 — add 1, divide by 2; filled circles at 2 and 5, shade between.</li>
+<li>-2 &lt; x &lt; 3 — divide all by 2; open circles at -2 and 3, shade between.</li>
+<li>x &lt; -1 or x &gt; 5 — two rays (open at -1 left, open at 5 right).</li>
+<li>x &lt; -1 or x &gt; 5 — left: x&lt;-1; right: x&gt;5; two rays.</li>
+<li>x ≤ -2 or x &gt; 3 — filled at -2 left, open at 3 right.</li>
+<li>x ≥ 5 or x &lt; -2 — filled at 5 right, open at -2 left.</li>
+<li>-2 &lt; x ≤ 3 — divide all three parts by -3 and <strong>flip both</strong> signs (3 ≥ x &gt; -2), then rewrite increasing; open circle at -2, filled circle at 3, shade between. <em>(Test x = 0: -9 ≤ 0 &lt; 6 ✓; endpoint x = 3 is in since -3(3) = -9 ≥ -9; endpoint x = -2 is out since -3(-2) = 6 &lt; 6 is false.)</em></li>
+</ol>
+<hr>
+<h2 id="lesson-83-absolute-value-graphs-distance">Lesson 8.3: Absolute value: graphs &amp; distance</h2>
+<p><strong>Goal:</strong> Read |x| as <strong>distance from 0</strong>, graph <strong>y = |x|</strong> (the V) and its simple shifts, and solve the <strong>symmetric</strong> cases |x| = k, |x| &lt; k, |x| &gt; k straight from that distance picture.
+<strong>Why it matters:</strong> Absolute value measures <em>how far</em>, ignoring direction — tolerance ("within 0.5 of target"), distance, magnitude. Centering on 0 keeps the algebra light and makes "within → <em>and</em> / outside → <em>or</em>" visible (the payoff of 8.2). <em>(Shifting the center off 0 — |x − 3| = 5, |2x − 1| = 7 — needs a two-case algebraic method that belongs to Algebra 2; it's flagged in the Reach note at the end.)</em>
+<strong>New terms:</strong></p>
+<ul>
+<li><a class="refcode" id="8.3.d1" href="#8.3.d1">#8.3.d1</a> <strong>Absolute value |x|:</strong> the distance of x from 0 on the number line; always ≥ 0. |5| = 5 and |-5| = 5 — both are 5 units from 0 (callback to Unit 1.4).</li>
+<li><a class="refcode" id="8.3.d2" href="#8.3.d2">#8.3.d2</a> <strong>The graph y = |x|:</strong> a <strong>V</strong> with its vertex at the origin — the right arm rises at slope +1, the left arm at slope -1 — and it never dips below the x-axis, because an output that <em>is</em> a distance can't be negative.</li>
+<li><a class="refcode" id="8.3.d3" href="#8.3.d3">#8.3.d3</a> <strong>Simple shifts of the V:</strong> y = |x| + 2 lifts the whole V up 2; y = |x| − 3 drops it 3; y = |x − 1| slides it right 1 (the vertex moves to where the inside equals 0). These are <em>graph</em> moves read off the picture — not algebra to solve.</li>
+</ul>
+<p><strong>Teaching arc (concrete → pictorial → symbolic):</strong></p>
+<ul>
+<li><strong>Distance from 0 (concrete).</strong> |x| asks "how far is x from 0?" |3| = 3 and |-3| = 3 — different inputs, same distance.</li>
+<li><strong>The V-graph (pictorial).</strong> Plot y = |x| at x = -3…3: (-3,3), (-2,2), (-1,1), (0,0), (1,1), (2,2), (3,3) — a V resting on the origin. Then name the simple shifts above. (Sketch it as a line/curve per <code>visuals.md</code>; describe it in words in chat.)</li>
+<li><strong>Symmetric solving, read off the distance.</strong> With the center at 0:</li>
+<li><strong>|x| = k → x = k or x = -k</strong> ("k from 0, both ways"). Needs k ≥ 0; at k = 0 the one answer is x = 0; if k &lt; 0 there's <strong>no solution</strong>.</li>
+<li><strong>|x| &lt; k → -k &lt; x &lt; k</strong> ("within k of 0" — an <strong>and</strong>, one segment). Needs k &gt; 0; if k ≤ 0, no solution.</li>
+<li><strong>|x| &gt; k → x &lt; -k or x &gt; k</strong> ("more than k from 0" — an <strong>or</strong>, two rays). Holds for any k ≥ 0; if k &lt; 0 it's <strong>all real numbers</strong>.</li>
+<li><strong>Isolate the |·| first (one positive step).</strong> If the absolute value is scaled, divide to get |x| by itself, then read it: 2|x| ≤ 8 → |x| ≤ 4 → -4 ≤ x ≤ 4. (Keep isolation to a <em>positive</em> divide here; the sign-flip-during-isolation case is Algebra 2.)</li>
+</ul>
+<p><strong>Worked examples</strong> (the mastery set — symmetric, centered at 0; quote a code like 8.3.w7 to revisit one):</p>
+<p><em>w5 — inclusive "within".</em> Solve |x| ≤ 2. Within 2 of 0, inclusive → -2 ≤ x ≤ 2. Filled circles at -2 and 2, shade between. Solution: <strong>-2 ≤ x ≤ 2</strong>.</p>
+<p><em>w6 — the graph y = |x|.</em> Plot (-2,2), (-1,1), (0,0), (1,1), (2,2): a <strong>V</strong> with vertex (0,0), arms at slope ±1, resting on the x-axis. y = |x| − 2 is the same V dropped 2 (vertex (0,-2)); y = |x − 1| is it slid right 1 (vertex (1,0)). No solving here — just read the picture.</p>
+<p><em>w7 — "outside" (or).</em> Solve |x| &gt; 2. More than 2 from 0 → <strong>x &lt; -2 or x &gt; 2</strong>. Open circles at -2 and 2, shade outward (two rays).</p>
+<p><em>w8 — isolate first.</em> Solve 2|x| ≤ 8. Divide by 2 (positive → no flip): |x| ≤ 4. Within 4 of 0 → <strong>-4 ≤ x ≤ 4</strong>. Filled circles at -4 and 4, shade between.</p>
+<p><em>w9 — no solution / all reals.</em> Distance is never negative, so read these straight off the picture: |x| = -3 has <strong>no solution</strong>; |x| &lt; -2 has <strong>no solution</strong>; |x| &gt; -1 is true for <strong>every</strong> real x (<strong>all real numbers</strong>).</p>
+<p><strong>Watch for:</strong></p>
+<ul>
+<li><strong>Giving only one answer to |x| = k.</strong> Distance goes <em>both</em> ways → two answers, x = ±k (unless k = 0, one answer; k &lt; 0, none).</li>
+<li><strong>Swapping <em>and</em>/<em>or</em>:</strong> "within / less-than" → <strong>and</strong> (one segment between -k and k); "outside / greater-than" → <strong>or</strong> (two rays). Re-derive from the distance picture if unsure.</li>
+<li><strong>Forgetting to isolate first.</strong> In 2|x| ≤ 8 you must divide by 2 <em>before</em> reading the distance — |x| ≤ 8 is a different (wrong) statement.</li>
+<li><strong>|x| = negative, or |x| &lt; negative:</strong> distance can't be negative. |x| = -4 → <strong>no solution</strong>; |x| &lt; -3 → <strong>no solution</strong>; |x| &gt; -3 → <strong>all reals</strong>. Reason from the picture, never a blind shortcut.</li>
+<li><strong>Graph vs. solve.</strong> y = |x| (and its shifts) is a <em>picture</em> to read; |x| = k is an <em>equation</em> to solve. Don't try to "solve" the graph.</li>
+</ul>
+<p><strong>Visuals to offer:</strong> <a class="refcode" id="8.3.f1" href="#8.3.f1">#8.3.f1</a> Two pictures carry this lesson — the <strong>V-graph</strong> of y = |x| (vertex at the origin, slope ±1, sits on the axis), and a <strong>number line</strong> for solving (mark 0, step k each way; dot the two solutions, or shade the between-segment for <em>and</em> / two rays for <em>or</em>). Use <code>visuals.md</code> for a clean sketch; always state the distance interpretation in words.</p>
+<figure class="fig" id="fig-8.3.f1"><svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+  <line x1="18.0" y1="188.0" x2="222.0" y2="188.0" stroke="#888"/>
+  <text x="216.0" y="184.0" font-size="10" fill="#888">x</text>
+  <line x1="120.0" y1="18.0" x2="120.0" y2="222.0" stroke="#888"/>
+  <text x="124.0" y="26.0" font-size="10" fill="#888">y</text>
+  <polyline fill="none" stroke="#8e44ad" stroke-width="2.5" points="18.0,52.0 120.0,188.0 222.0,52.0"/>
+  <circle cx="120.0" cy="188.0" r="3.5" fill="#c0392b"/>
+  <text x="125.0" y="182.0" font-size="10" fill="#c0392b">vertex (0,0)</text>
+  <circle cx="196.5" cy="86.0" r="3.5" fill="#c0392b"/>
+  <text x="201.5" y="80.0" font-size="10" fill="#c0392b">(3,3)</text>
+</svg><figcaption>Figure 8.3.f1</figcaption></figure>
+
+<p><strong>Check for understanding (transfer):</strong></p>
+<ol>
+<li><a class="refcode" id="8.3.c1" href="#8.3.c1">#8.3.c1</a> "Sketch y = |x| in words: where's the vertex, what are the arm slopes, and why does it never go below the x-axis? Then describe y = |x| + 1."</li>
+<li><a class="refcode" id="8.3.c2" href="#8.3.c2">#8.3.c2</a> "Why does |x| &lt; 4 become an <em>and</em> (a single segment) while |x| &gt; 4 becomes an <em>or</em> (two rays)? Use the distance picture."</li>
+<li><a class="refcode" id="8.3.c3" href="#8.3.c3">#8.3.c3</a> "What is the solution of |x| = -3? Of |x| &gt; -3? Explain each from ‘distance is never negative.’"</li>
+</ol>
+<p><strong>Practice problems (core — the mastery path):</strong> symmetric, centered at 0. <em>(Problems 2, 3, 5, 6, 7 shift the center off 0 — they've moved to the Reach set below.)</em></p>
+<p><em>Equations (give both solutions; check):</em></p>
+<ol>
+<li><a class="refcode" id="8.3.1" href="#8.3.1">#8.3.1</a> |x| = 4</li>
+<li><a class="refcode" id="8.3.2" href="#8.3.2">#8.3.2</a> |2x| = 8</li>
+<li><a class="refcode" id="8.3.3" href="#8.3.3">#8.3.3</a> |x| = 7</li>
+</ol>
+<p><em>Inequalities (solve; describe the graph):</em></p>
+<ol start="8">
+<li><a class="refcode" id="8.3.4" href="#8.3.4">#8.3.4</a> |2x| &lt; 6</li>
+<li><a class="refcode" id="8.3.5" href="#8.3.5">#8.3.5</a> |x| &gt; 5</li>
+<li><a class="refcode" id="8.3.6" href="#8.3.6">#8.3.6</a> 2|x| ≤ 10</li>
+<li><a class="refcode" id="8.3.7" href="#8.3.7">#8.3.7</a> |x| &lt; -2</li>
+<li><a class="refcode" id="8.3.8" href="#8.3.8">#8.3.8</a> |x| &gt; -1</li>
+</ol>
+<p><strong>Answer key (all verified):</strong></p>
+<ol>
+<li>x = 4 or x = -4. (|4| = 4, |-4| = 4.)</li>
+<li>x = 4 or x = -4. (|2·4| = 8, |2·(-4)| = 8.)</li>
+<li>x = 7 or x = -7. (|7| = 7, |-7| = 7.)</li>
+<li>-3 &lt; x &lt; 3 — |2x| &lt; 6 ⇒ -6 &lt; 2x &lt; 6; open circles at -3 and 3, shade between (<em>and</em>).</li>
+<li>x &lt; -5 or x &gt; 5 — "more than 5 from 0"; open circles at -5 and 5, shade outward (<em>or</em>).</li>
+<li>-5 ≤ x ≤ 5 — isolate: divide by 2 → |x| ≤ 5; filled circles at -5 and 5, shade between.</li>
+<li><strong>no solution</strong> — a distance can't be less than -2.</li>
+<li><strong>all real numbers</strong> — every distance is more than -1.</li>
+</ol>
+<hr>
+<h3 id="reach-beyond-algebra-1-optional-off-the-mastery-path">Reach beyond Algebra 1 (optional — off the mastery path)</h3>
+<p>When the center moves off 0 — |x − 3| = 5, |2x − 1| = 7 — you can't just read x = ±k. You split into <strong>two cases</strong> (the inside equals +k <em>or</em> −k), solve each, and name the answer set with <strong>interval notation</strong>. That general algebraic method is the standard <strong>Algebra 2 / intermediate-algebra</strong> treatment. It's here so you can see where the idea goes, but it is <strong>not</strong> part of the Algebra-1 mastery target — master the distance-from-0 core above first.</p>
+<p><em>The general method, one worked example.</em></p>
+<p><em>w1 — |x − 3| = 5.</em> Two cases: x − 3 = 5 → x = 8, or x − 3 = -5 → x = -2. Solutions: <strong>x = 8 or x = -2</strong>. Check: |8 − 3| = 5, |-2 − 3| = 5. <em>(Pictured: "distance 5 from 3.")</em></p>
+<p><em>A few more, same idea.</em>
+<em>w2 — |x − 3| &lt; 5.</em> Within 5 of 3 → -5 &lt; x − 3 &lt; 5 → -2 &lt; x &lt; 8 (interval (-2, 8)).
+<em>w3 — |x − 3| &gt; 5.</em> More than 5 from 3 → x − 3 &lt; -5 or x − 3 &gt; 5 → x &lt; -2 or x &gt; 8.
+<em>w4 — |x + 2| = 3.</em> |x + 2| = |x − (-2)|, distance 3 from -2 → x = 1 or x = -5.</p>
+<p><em>Reach practice (optional):</em></p>
+<ol start="2">
+<li>|x + 2| = 3</li>
+<li>|x - 1| = 4</li>
+<li>|2x - 1| = 7</li>
+<li>|x + 1| &lt; 3</li>
+<li>|x - 2| ≥ 4</li>
+</ol>
+<p><strong>Reach answer key:</strong></p>
+<ol start="2">
+<li>x = 1 or x = -5. (|1+2| = 3, |-5+2| = 3.)</li>
+<li>x = 5 or x = -3. (|5-1| = 4, |-3-1| = 4.)</li>
+<li>x = 4 or x = -3. (2x-1 = 7 → x = 4; 2x-1 = -7 → x = -3.)</li>
+<li>-4 &lt; x &lt; 2 — "within 3 of -1"; interval (-4, 2).</li>
+<li>x ≤ -2 or x ≥ 6 — "at least 4 from 2"; two rays.</li>
+</ol>
+<hr>
+<h2 id="lesson-84-graphing-linear-inequalities-two-variables-systems">Lesson 8.4: Graphing linear inequalities (two variables) &amp; systems</h2>
+<p><strong>Goal:</strong> Graph a two-variable linear inequality (boundary line + shaded half-plane) and find the solution region of a system of inequalities (the overlap).
+<strong>Why it matters:</strong> It generalizes "the line is the solution" (Unit 5) to "a whole region is the solution," and it's the picture behind constraints and optimization (which combination of two quantities is <em>allowed</em>).
+<strong>New terms:</strong></p>
+<ul>
+<li><a class="refcode" id="8.4.d1" href="#8.4.d1">#8.4.d1</a> <strong>Linear inequality in two variables:</strong> e.g. y &gt; 2x + 1 — satisfied not by a line but by a <strong>half-plane</strong> (every point on one side of the boundary).</li>
+<li><a class="refcode" id="8.4.d2" href="#8.4.d2">#8.4.d2</a> <strong>Boundary line:</strong> the line you get by replacing the inequality with = (here y = 2x + 1, the function f(x) = 2x+1). <strong>Dashed</strong> if strict (&lt;, &gt;) — the line itself is <em>not</em> included; <strong>solid</strong> if inclusive (≤, ≥).</li>
+<li><a class="refcode" id="8.4.d3" href="#8.4.d3">#8.4.d3</a> <strong>Half-plane / test point:</strong> one of the two sides the boundary cuts the plane into. To choose the correct side, <strong>test a point</strong> not on the line — the <strong>origin (0,0)</strong> is easiest — and shade the side that makes the inequality true.</li>
+<li><a class="refcode" id="8.4.d4" href="#8.4.d4">#8.4.d4</a> <strong>System of inequalities:</strong> two or more inequalities at once; the solution is the <strong>overlap</strong> of their shaded regions.</li>
+</ul>
+<p><strong>Teaching arc (concrete → pictorial → symbolic):</strong></p>
+<ul>
+<li><strong>Concrete / symbolic:</strong> y &gt; 2x + 1 asks "where is the output <strong>above</strong> the line y = 2x+1?" The boundary splits "above" from "below."</li>
+<li><strong>Pictorial (the procedure):</strong>
+  1. Graph the <strong>boundary</strong> (Unit 5 — compute two points; <strong>dashed</strong> for , <strong>solid</strong> for ≤/≥).
+  2. <strong>Test a point</strong> off the line (use (0,0) unless the line passes through it). If it makes the inequality <strong>true</strong>, shade <strong>its</strong> side; if <strong>false</strong>, shade the <strong>other</strong> side.
+  3. <strong>Say the test out loud</strong> in words ("(0,0): 0 &gt; 1? false → shade the <em>other</em> side").</li>
+<li>Use <code>visuals.md</code> <strong>Template 4</strong> — a <strong>computed SVG artifact</strong>: boundary line + semi-transparent fill, with the test point and its true/false result stated. <strong>Compute the boundary points</strong> (<code>visuals.md</code> rule 1), never eyeball.</li>
+<li><strong>Systems:</strong> graph each inequality's region, then keep only the <strong>overlap</strong> — the points satisfying <em>all</em> of them at once.</li>
+</ul>
+<p><strong>Worked examples:</strong></p>
+<p><em>Example 1 — strict, dashed.</em> Graph y &gt; 2x + 1.
+Boundary y = 2x + 1 (points (0,1) and (1,3)), <strong>dashed</strong> (strict).
+Test (0,0): 0 &gt; 2(0)+1 = 1? <strong>False</strong> → shade the side <strong>not</strong> containing the origin (above the line). Region: everything above the dashed line.</p>
+<p><em>Example 2 — inclusive, solid.</em> Graph y ≤ -x + 3.
+Boundary y = -x + 3 (points (0,3) and (3,0)), <strong>solid</strong> (inclusive).
+Test (0,0): 0 ≤ -0 + 3 = 3? <strong>True</strong> → shade the side <strong>containing</strong> the origin (below the line). Region: the line and everything below it.</p>
+<p><em>Example 3 — fractional slope, dashed.</em> Graph y &lt; (1/2)x - 2.
+Boundary y = (1/2)x - 2 (points (0,-2) and (2,-1)), <strong>dashed</strong>.
+Test (0,0): 0 &lt; (1/2)(0) - 2 = -2? <strong>False</strong> → shade the <strong>other</strong> side (below the line). Region: below the dashed line.</p>
+<p><em>Example 4 — a system.</em> Graph the system y ≥ x - 1 <strong>and</strong> y ≤ -x + 3.
+Boundary 1: y = x - 1, <strong>solid</strong>; test (0,0): 0 ≥ -1? <strong>True</strong> → shade the side with the origin (above/left).
+Boundary 2: y = -x + 3, <strong>solid</strong>; test (0,0): 0 ≤ 3? <strong>True</strong> → shade the side with the origin (below/left).
+<strong>Solution = the overlap</strong> of the two shaded regions (a wedge containing the origin, bounded by both solid lines, e.g. the point (0,0) satisfies both). Check a point in the overlap, e.g. (1,0): 0 ≥ 1-1=0 and 0 ≤ -1+3=2.</p>
+<p><strong>Watch for:</strong></p>
+<ul>
+<li><strong>Dashed vs. solid:</strong> strict (&lt;, &gt;) → <strong>dashed</strong> (boundary excluded); inclusive (≤, ≥) → <strong>solid</strong>. Mirrors the open/filled circle from 8.1.</li>
+<li><strong>Shading the wrong half.</strong> The only reliable cure is to <strong>test a point and state the result</strong> — don't guess from the inequality direction (a &gt; does <em>not</em> always mean "shade up" once the line tilts). If the boundary passes through the origin, pick a different test point (e.g. (1,0)).</li>
+<li><strong>For a system, shading each region but forgetting the answer is the <em>overlap</em></strong> — not the union. Confirm by testing a point that should be inside <em>all</em> of them.</li>
+<li><strong>Sign slips computing boundary points</strong> (<code>misconceptions.md</code> §3) — compute, don't eyeball (<code>visuals.md</code>).</li>
+</ul>
+<p><strong>Visuals to offer:</strong> <a class="refcode" id="8.4.f1" href="#8.4.f1">#8.4.f1</a> <code>visuals.md</code> <strong>Template 4</strong> as an <strong>SVG artifact</strong> — computed boundary line (dashed/solid), semi-transparent fill on the correct side, the test point and its true/false stated in the caption. For a system, layer the regions and highlight the overlap. Never paste raw SVG into chat — emit an artifact, and pair with a sentence naming the test point.</p>
+<figure class="fig" id="fig-8.4.f1"><svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+  <polygon points="18.0,196.5 222.0,43.5 222.0,18.0 18.0,18.0" fill="#2980b9" fill-opacity="0.15"/>
+  <line x1="18.0" y1="145.5" x2="222.0" y2="145.5" stroke="#888"/>
+  <text x="216.0" y="141.5" font-size="10" fill="#888">x</text>
+  <line x1="120.0" y1="18.0" x2="120.0" y2="222.0" stroke="#888"/>
+  <text x="124.0" y="26.0" font-size="10" fill="#888">y</text>
+  <line x1="18.0" y1="196.5" x2="222.0" y2="43.5" stroke="#2980b9" stroke-width="2.5" stroke-dasharray="5 3"/>
+  <circle cx="120.0" cy="69.0" r="3.5" fill="#27ae60"/>
+  <text x="125.0" y="63.0" font-size="10" fill="#27ae60">test (0, 3)</text>
+</svg><figcaption>Figure 8.4.f1</figcaption></figure>
+
+<p><strong>Check for understanding (transfer):</strong></p>
+<ol>
+<li><a class="refcode" id="8.4.c1" href="#8.4.c1">#8.4.c1</a> "For y &lt; x + 4: is the boundary dashed or solid, and how do you decide which side to shade? Do the origin test out loud."</li>
+<li><a class="refcode" id="8.4.c2" href="#8.4.c2">#8.4.c2</a> "Your boundary line passes through (0,0). Why can't you use the origin as your test point, and what would you use instead?"</li>
+<li><a class="refcode" id="8.4.c3" href="#8.4.c3">#8.4.c3</a> "A system is y &gt; x and y &lt; 4. Describe the solution region — which two boundaries, dashed or solid, and roughly where the overlap sits."</li>
+</ol>
+<p><strong>Practice problems</strong> (for each: name the boundary line, dashed or solid, the test point with its true/false result, and which side to shade):</p>
+<p><em>Set A — single inequalities</em></p>
+<ol>
+<li><a class="refcode" id="8.4.1" href="#8.4.1">#8.4.1</a> y &gt; x + 2</li>
+<li><a class="refcode" id="8.4.2" href="#8.4.2">#8.4.2</a> y ≤ 2x - 1</li>
+<li><a class="refcode" id="8.4.3" href="#8.4.3">#8.4.3</a> y &lt; -x + 4</li>
+<li><a class="refcode" id="8.4.4" href="#8.4.4">#8.4.4</a> y ≥ 3x  <em>(boundary through origin — choose a different test point)</em></li>
+<li><a class="refcode" id="8.4.5" href="#8.4.5">#8.4.5</a> x + y &lt; 5</li>
+</ol>
+<p><em>Set B — a system</em></p>
+<ol start="6">
+<li><a class="refcode" id="8.4.6" href="#8.4.6">#8.4.6</a> y &gt; x <strong>and</strong> y &lt; -x + 4  <em>(describe the overlap region)</em></li>
+</ol>
+<p><em>Set C — boundary arithmetic (eval)</em></p>
+<ol start="7">
+<li><a class="refcode" id="8.4.7" href="#8.4.7">#8.4.7</a> For the boundary y = 2x - 3, compute y at x = 2 (a point to plot).</li>
+</ol>
+<p><strong>Answer key (all verified):</strong></p>
+<ol>
+<li>Boundary y = x + 2 (e.g. (0,2),(1,3)), <strong>dashed</strong>. Test (0,0): 0 &gt; 2? <strong>false</strong> → shade the side <strong>without</strong> the origin (above the line).</li>
+<li>Boundary y = 2x - 1 ((0,-1),(1,1)), <strong>solid</strong>. Test (0,0): 0 ≤ -1? <strong>false</strong> → shade the <strong>other</strong> side (below the line).</li>
+<li>Boundary y = -x + 4 ((0,4),(4,0)), <strong>dashed</strong>. Test (0,0): 0 &lt; 4? <strong>true</strong> → shade the side <strong>with</strong> the origin (below/left).</li>
+<li>Boundary y = 3x ((0,0),(1,3)), <strong>solid</strong>. Origin is <em>on</em> the line — test (1,0): 0 ≥ 3(1)=3? <strong>false</strong> → shade the side <strong>not</strong> containing (1,0): the side holding points like (0,1) and (-1,0) — above/left of the steep line. <em>(For a steep line, locate the region by a true in-region point, not "left/right" — the Watch-for warning in action.)</em></li>
+<li>Boundary x + y = 5 ((0,5),(5,0)), <strong>dashed</strong>. Test (0,0): 0 + 0 = 0 &lt; 5? <strong>true</strong> → shade the side <strong>with</strong> the origin (below/left).</li>
+<li>Boundary 1 y = x, <strong>dashed</strong>, shade above (test (0,1): 1 &gt; 0). Boundary 2 y = -x + 4, <strong>dashed</strong>, shade below (test (0,0): 0 &lt; 4). <strong>Solution = the overlap</strong>, a wedge between the two dashed lines (e.g. (1,2): 2 &gt; 1 and 2 &lt; 3).</li>
+<li>y = 2(2) - 3 = 1 → plot (2, 1).</li>
+</ol>
+<hr>
+<h2 id="wrap-up-interleaving">Wrap-up &amp; interleaving</h2>
+<p><strong>Consolidate:</strong> An inequality's solution is a <strong>set</strong> (a shaded ray, segment, region) — not a single value. Solve like an equation, with the one new rule: <strong>multiply/divide by a negative ⇒ flip the sign</strong> — justified by the 2&lt;3 → -2 &gt; -3 argument, and <strong>confirmed by testing a point in the original</strong> (<code>misconceptions.md</code> §6). Graph with open/filled circles (strict/inclusive) and a shaded ray. <strong>And</strong> = overlap (between); <strong>or</strong> = union (two rays). <strong>Absolute value</strong> = distance from 0 → two cases for "=", "within" is an <em>and</em>, "outside" is an <em>or</em>. In <strong>two variables</strong>, the boundary is dashed (strict) or solid (inclusive), and a <strong>test point</strong> picks the half-plane; a <strong>system</strong> is the overlap of regions.</p>
+<p><strong>Mix back in (spaced review, per <code>pedagogy.md</code>):</strong></p>
+<ul>
+<li><strong>Unit 2</strong> — every inequality solve <em>is</em> a Unit 2 equation solve plus the flip rule; warm up with a plain two-step equation, then make it an inequality.</li>
+<li><strong>Unit 5</strong> — graphing a 2-D inequality is Unit 5 line-graphing plus a shade; have the student graph the boundary <em>as a line</em> first. Reinforce "the boundary <em>is</em> a function, f(x) = mx + b."</li>
+<li><strong>Negatives (<code>misconceptions.md</code> §3)</strong> — the flip, the -x trap, and boundary-point arithmetic all lean on sign fluency; slip in a sign-heavy warm-up.</li>
+<li>Interleave <strong>and/or</strong> classification and <strong>within/outside</strong> absolute-value reading, since both hinge on the same intersection-vs-union idea.</li>
+</ul>
+<p><strong>Progress Card should note:</strong> whether the student <strong>flips reliably</strong> on negative coefficients and <strong>tests a point</strong> without prompting (the §6 self-check); whether they pick <strong>open vs. filled</strong> circles and <strong>dashed vs. solid</strong> boundaries correctly; whether they distinguish <strong>and (overlap)</strong> from <strong>or (union)</strong>; whether they read <strong>absolute value as distance</strong> and map "within→and / outside→or"; and whether, for 2-D systems, they take the <strong>overlap</strong> (not the union) and <strong>state the test point</strong>. Flag lingering sign slips (<code>misconceptions.md</code> §3) for targeted warm-ups.</p>
+</main>
+<footer><p>Generated from the unit source by <code>_verification/build_textbook.py</code>. Math by KaTeX.</p></footer>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  renderMathInElement(document.body, {delimiters: [{left: "$$", right: "$$", display: true}], throwOnError: false});
+  var t = document.getElementById("theme"), root = document.documentElement;
+  if (localStorage.getItem("a1-theme") === "dark") root.classList.add("dark");
+  t.addEventListener("click", function () {
+    root.classList.toggle("dark");
+    localStorage.setItem("a1-theme", root.classList.contains("dark") ? "dark" : "light");
+  });
+});
+</script>
+</body>
+</html>
