@@ -30,6 +30,9 @@ jobs:
           name: Tutor guide up to date
           command: python _verification/build_tutor_guide.py --check
       - run:
+          name: Skill package up to date
+          command: python _verification/build_skill.py --check
+      - run:
           name: Unit tests
           command: python -m pytest _verification/tests -v
 workflows:
