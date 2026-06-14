@@ -81,7 +81,7 @@ Functions (Unit 4) are a **backbone, not a side topic** — once introduced, nar
 **Unit 8 — Inequalities**
 - 8.1 One-variable inequalities (the sign-flip)
 - 8.2 Compound inequalities
-- 8.3 Absolute value equations & inequalities
+- 8.3 Absolute value: graphs & distance
 - 8.4 Graphing linear inequalities & systems
 
 **Unit 9 — Sequences & Exponential Functions**

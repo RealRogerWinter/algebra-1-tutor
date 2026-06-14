@@ -75,6 +75,10 @@
     {"id": "8.3.w3", "kind": "manual", "answer": "x<-2 or x>8 (outside; two rays, open ends)"},
     {"id": "8.3.w4", "kind": "solve", "eq": "Abs(x+2)=3", "var": "x", "answer": "1,-5"},
     {"id": "8.3.w5", "kind": "manual", "answer": "-2<=x<=2 (within; segment between, filled ends)"},
+    {"id": "8.3.w6", "kind": "manual", "answer": "y=|x|: V with vertex (0,0), arms slope +-1, sits on x-axis; y=|x|-2 vertex (0,-2); y=|x-1| vertex (1,0)"},
+    {"id": "8.3.w7", "kind": "manual", "answer": "x<-2 or x>2 (outside; two rays, open ends)"},
+    {"id": "8.3.w8", "kind": "manual", "answer": "-4<=x<=4 (isolate: divide by 2 -> |x|<=4; segment between, filled ends)"},
+    {"id": "8.3.w9", "kind": "manual", "answer": "|x|=-3 no solution; |x|<-2 no solution; |x|>-1 all real numbers"},
 
     {"id": "8.3.1", "kind": "solve", "eq": "Abs(x)=4", "var": "x", "answer": "4,-4"},
     {"id": "8.3.2", "kind": "solve", "eq": "Abs(x+2)=3", "var": "x", "answer": "1,-5"},
@@ -84,6 +88,11 @@
     {"id": "8.3.6", "kind": "manual", "answer": "-4<x<2 (within 3 of -1; segment between, open ends)"},
     {"id": "8.3.7", "kind": "manual", "answer": "x<=-2 or x>=6 (at least 4 from 2; two rays, filled ends)"},
     {"id": "8.3.8", "kind": "manual", "answer": "-3<x<3 (|2x|<6 => -6<2x<6; segment between, open ends)"},
+    {"id": "8.3.9", "kind": "solve", "eq": "Abs(x)=7", "var": "x", "answer": "7,-7"},
+    {"id": "8.3.10", "kind": "manual", "answer": "x<-5 or x>5 (more than 5 from 0; two rays, open ends)"},
+    {"id": "8.3.11", "kind": "manual", "answer": "-5<=x<=5 (isolate: divide by 2 -> |x|<=5; segment between, filled ends)"},
+    {"id": "8.3.12", "kind": "manual", "answer": "no solution (distance cannot be < -2)"},
+    {"id": "8.3.13", "kind": "manual", "answer": "all real numbers (every distance is > -1)"},
 
     {"id": "8.4.w1", "kind": "eval", "expr": "2*0+1", "answer": "1"},
     {"id": "8.4.w1i", "kind": "manual", "answer": "y>2x+1: dashed boundary; (0,0) gives 0>1 false -> shade side without origin (above)"},
@@ -100,7 +109,7 @@
     {"id": "8.4.3", "kind": "eval", "expr": "-0+4", "answer": "4"},
     {"id": "8.4.3i", "kind": "manual", "answer": "y<-x+4: dashed; (0,0) gives 0<4 true -> shade side with origin (below/left)"},
     {"id": "8.4.4", "kind": "eval", "expr": "3*1", "answer": "3"},
-    {"id": "8.4.4i", "kind": "manual", "answer": "y>=3x: solid through origin; test (1,0): 0>=3 false -> shade other side (below/right)"},
+    {"id": "8.4.4i", "kind": "manual", "answer": "y>=3x: solid through origin; test (1,0): 0>=3 false -> shade side NOT containing (1,0); region holds (0,1) and (-1,0), i.e. above/left of the line"},
     {"id": "8.4.5i", "kind": "manual", "answer": "x+y<5: dashed; (0,0) gives 0<5 true -> shade side with origin (below/left)"},
     {"id": "8.4.6", "kind": "manual", "answer": "system y>x and y<-x+4: both dashed; solution is overlap wedge, e.g. (1,2)"},
     {"id": "8.4.7", "kind": "eval", "expr": "2*2-3", "answer": "1"}

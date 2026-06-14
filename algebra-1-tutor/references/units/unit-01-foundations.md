@@ -4,7 +4,7 @@
 > **By the end, the student can:**
 > - Read = as "the same as" (a balance), and judge whether a number sentence is true, false, or open.
 > - Solve simple one-step equations by inspection and by undoing.
-> - Name the kinds of numbers (natural, whole, integer, rational, decimal) and place them on the number line; recognize that a number's *value*, not its *spelling*, fixes its type.
+> - Name the kinds of numbers (natural, whole, integer, rational, irrational, real) and place them on the number line; recognize that *decimal* and *fraction* are ways of *writing* a number, and that a number's *value*, not its *spelling*, fixes its type.
 > - Apply order of operations as four tiers (P, E, [MD], [AS]), working left to right within a tier.
 > - Add, subtract, multiply, and divide negative numbers fluently, with the sign rules.
 > - Tell an *expression* from an *equation*, and evaluate an expression by substitution.
@@ -96,13 +96,16 @@ Pacing: a fluent adult may blow through 1.2–1.4 — let them; reserve the full
 - **Whole numbers:** the naturals plus 0.
 - **Integers:** whole numbers and their negatives — …, -2, -1, 0, 1, 2, … — no fractional part.
 - **Rational numbers:** any number that can be written as a ratio of two integers a/b (b ≠ 0). This *includes* integers (5 = 5/1), terminating decimals (4.8 = 24/5), and repeating decimals (0.333… = 1/3).
+- **Irrational numbers:** numbers whose decimal *never ends and never repeats*, so they **cannot** be written as a ratio of two integers — for example π = 3.14159… and √2 = 1.41421…. (No radical arithmetic yet; √2 returns in Unit 12. Here, just know it names a real point on the line.)
+- **Real numbers:** every number on the number line — the rationals **and** the irrationals together. Algebra works over the real numbers, so "the whole line" finally has a name.
 - **Decimal:** a way of *writing* a number using a decimal point; the way it's written doesn't change what kind of number it is.
 
 **Teaching arc (concrete → pictorial → symbolic):**
 1. **Layers, like nested boxes.** Start at counting numbers and add one capability at a time: add 0 → whole numbers; add negatives → integers; allow ratios → rationals. Each layer *contains* the previous one (every integer is rational).
 2. **The number line is the map.** Draw it: integers as evenly spaced ticks, with 0 in the middle and negatives to the left. Then the key picture: **between any two integers there are infinitely many numbers** — 3/4, 2.5, 0.333… all live in the gaps. Algebra uses the *whole* line, not just the ticks.
-3. **Same value, many spellings.** Show 5 = 5/1 = 5.0 — one point on the line, three spellings. This is the crux: a number's *type* is set by its *value*, not by how it's written.
-4. **Connect forward.** "When we solve 2x = 7 we get 3.5. That's not an error — it's a perfectly real point on the line, sitting halfway between 3 and 4." Plant that now so it pays off in Unit 2.
+3. **Name the rest of the line (irrational → real).** Most points on the line are rational, but not all: π and √2 are **irrational** — their decimals run forever without repeating, so no fraction a/b equals them exactly. The rationals together with the irrationals are the **real numbers** — *every* point on the line. The "whole line" the picture just promised now has a name, and it's the set algebra works over.
+4. **Same value, many spellings.** Show 5 = 5/1 = 5.0 — one point on the line, three spellings. This is the crux: a number's *type* is set by its *value*, not by how it's written.
+5. **Connect forward.** "When we solve 2x = 7 we get 3.5. That's not an error — it's a perfectly real point on the line, sitting halfway between 3 and 4." Plant that now so it pays off in Unit 2.
 
 **Worked examples:**
 
@@ -111,6 +114,7 @@ Pacing: a fluent adult may blow through 1.2–1.4 — let them; reserve the full
 3. Classify 10/2. Don't be fooled by the fraction bar: 10/2 = 5. Its *value* is 5, so it's an **integer** (and rational). How it's written doesn't fix its type.
 4. Classify 0.333…. The repeating decimal equals 1/3, a ratio of integers — **rational, non-integer**. (Again: spelling vs. value.)
 5. Show three spellings of one number: 5 = 5/1 = 5.0 — all the *same point* on the line.
+6. Classify √2 and π. Neither can be written as a ratio of integers — their decimals never end and never repeat — so both are **irrational** (and therefore **real**, like every point on the line). Contrast √9: it *looks* like a root, but √9 = 3, an **integer** — value, not spelling.
 
 **Watch for:** The belief that a number written as a fraction "must be a fraction" or that a decimal "can't be an integer." Problems 7 (10/2=5) and 8 (0.333… = 1/3) below are the instructive ones — *evaluate first, then classify*. Also pre-empt the negatives-ordering surprise that's coming in 1.4 ("which is farther left?"). Fraction-magnitude care connects to `misconceptions.md` §4.
 
@@ -121,7 +125,7 @@ Pacing: a fluent adult may blow through 1.2–1.4 — let them; reserve the full
 - "Is 12/3 an integer? Convince me using its value, not its appearance."
 - "Roughly where does -2.5 sit relative to -2 and -3 on the line?"
 
-**Practice problems:** Classify each number; label **all** types that apply (integer / rational / non-integer decimal). Evaluate first where needed.
+**Practice problems:** Classify each number; label **all** types that apply (integer / rational / irrational / real — note non-integer where it matters). Evaluate first where needed. Every one of these is a **real** number.
 1. 7
 2. -4
 3. 4.8
@@ -130,8 +134,12 @@ Pacing: a fluent adult may blow through 1.2–1.4 — let them; reserve the full
 6. -2.5
 7. 10/2
 8. 0.333…
+9. √2
+10. π
+11. √16
+12. 0.1010010001… (one more 0 each time — never repeating)
 
-**Answer key:**
+**Answer key:** *(all twelve are **real** numbers; the labels below add the finer type.)*
 1. integer, rational
 2. integer, rational
 3. rational, non-integer decimal
@@ -140,8 +148,12 @@ Pacing: a fluent adult may blow through 1.2–1.4 — let them; reserve the full
 6. rational, non-integer decimal
 7. =5 → integer, rational
 8. =1/3 → rational, non-integer
+9. irrational
+10. irrational
+11. =4 → integer, rational
+12. irrational (never repeats)
 
-*(7 and 8 are the teaching moments: how a number is written doesn't fix its type — its value does.)*
+*(7, 8, and 11 are the teaching moments: how a number is written doesn't fix its type — its value does. 9, 10, and 12 are the new irrationals — real points on the line with no fraction form.)*
 
 ---
 
@@ -207,10 +219,11 @@ Pacing: a fluent adult may blow through 1.2–1.4 — let them; reserve the full
 
 **New terms:**
 - **Opposite (additive inverse):** the same distance from 0 on the other side; the opposite of 5 is -5. Subtracting a number is the same as adding its opposite.
+- **Absolute value |a|:** how far a is from 0 on the number line — a *distance*, so it is **never negative**. |5| = 5 and |-5| = 5 (both sit 5 units from 0); |0| = 0. Opposite and absolute value pair up: opposites share the same absolute value (|5| = |-5|) but have opposite signs.
 - **Sign rules (×, ÷):** same signs → positive; different signs → negative. In a product, an **even** number of negative factors → positive; an **odd** number → negative.
 
 **Teaching arc (concrete → pictorial → symbolic):**
-1. **Order on the number line.** Bigger negative = farther *left*. So -5 < -2 (a common surprise — 5 > 2 tempts the eye). Money framing (`metaphors.md`, Negatives A): owing $5 is worse off than owing $2, so -5 < -2.
+1. **Order on the number line.** Bigger negative = farther *left*. So -5 < -2 (a common surprise — 5 > 2 tempts the eye). Money framing (`metaphors.md`, Negatives A): owing $5 is worse off than owing $2, so -5 < -2. Name the distance: |a| is how far a sits from 0, ignoring direction, so |-5| = 5 > |-2| = 2 — -5 is farther left because its **distance from 0 is larger**, even though as a *value* -5 < -2. Keep **distance** (|a|, always ≥ 0) separate from **value** (which can be negative); blurring the two is what makes ordering negatives feel backwards.
 2. **Add = walk the line.** Add a positive → move right; add a negative → move left (`metaphors.md`, Negatives B; `pedagogy.md` -2+5 script). -3 + (-5): start at -3, move 5 more left → -8.
 3. **Subtract = add the opposite.** 5 - 8 = 5 + (-8) = -3. And the slow, explicit one (see `misconceptions.md` §3): **subtracting a negative is adding** — 3 - (-4) = 3 + 4 = 7. Use the "two about-faces" or "a debt forgiven makes you richer" framing; do it deliberately, one negative at a time.
 4. **Multiply/divide — count the negatives.** Same signs → positive, different → negative: (-6)(3) = -18, (-6)(-3) = 18, -20 ÷ 4 = -5, -20 ÷ (-5) = 4. For chains, count negatives: even → positive, odd → negative.
@@ -226,6 +239,8 @@ Pacing: a fluent adult may blow through 1.2–1.4 — let them; reserve the full
 6. (-6)(-3) = 18 (same signs → positive).
 7. -20 ÷ 4 = -5 (different signs → negative).
 8. -20 ÷ (-5) = 4 (same signs → positive).
+9. Absolute value: |5| = 5, |-5| = 5, |0| = 0 — each is a *distance* from 0, never negative.
+10. Which is farther from 0, -8 or 3? |-8| = 8 and |3| = 3, so -8 is farther — even though -8 < 3 as values. (Distance vs. value, the 1.4 headline.)
 
 **Watch for:** `misconceptions.md` §3 — the negative-number cluster. *Tells:* -3 + (-5) = +8 (applying the multiplication rule to addition), 6 - (-2) = 4 (not seeing subtract-a-negative as adding), -5 > -2 (magnitude mistaken for value). *Repair:* switch representation — number line for add/subtract, money/debt for ordering and for subtracting a negative — never just repeat the rule.
 
@@ -258,10 +273,16 @@ Pacing: a fluent adult may blow through 1.2–1.4 — let them; reserve the full
 15. (-2)(-2)(-2)
 16. (-1)(-1)(-1)(-1)
 
-**Answer key:**
-1. -11 2. -4 3. 5 4. -4 5. -8 6. 7 7. -5 8. 0 9. -20 10. 12 11. -21 12. -4 13. 6 14. -3 15. -8 16. 1
+*Absolute value (distance from 0):*
+17. |-7|
+18. |3|
+19. |0|
+20. |-10|
 
-*(6 and 7 are the subtract-a-negative cases; 15 and 16 are the even/odd-of-negatives chains.)*
+**Answer key:**
+1. -11 2. -4 3. 5 4. -4 5. -8 6. 7 7. -5 8. 0 9. -20 10. 12 11. -21 12. -4 13. 6 14. -3 15. -8 16. 1 17. 7 18. 3 19. 0 20. 10
+
+*(6 and 7 are the subtract-a-negative cases; 15 and 16 are the even/odd-of-negatives chains; 17–20 read absolute value as distance from 0 — always ≥ 0.)*
 
 ---
 

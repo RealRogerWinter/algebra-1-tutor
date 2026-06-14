@@ -6,7 +6,7 @@
 > - Solve a linear inequality like an equation, applying the **sign-flip rule** when multiplying or dividing by a negative — *and explain why it must flip*.
 > - **Graph** an inequality on a number line (open vs. filled circle, shade the ray) and self-check by **testing a point**.
 > - Solve and graph **compound** inequalities (*and* = between; *or* = union).
-> - Solve **absolute-value** equations and inequalities, reading |x| as distance from 0.
+> - Graph y = |x| (the V) and solve the symmetric absolute-value cases |x| = k, |x| < k, |x| > k by reading |x| as distance from 0 (off-center algebraic solving is flagged as Algebra-2 reach).
 > - **Graph a two-variable linear inequality** (dashed/solid boundary, shade the correct half-plane via a test point) and find the solution region of a **system** of inequalities.
 
 ## Teaching this unit (orientation for the tutor)
@@ -18,7 +18,7 @@ Inequalities are "equations with a direction." Almost everything from Unit 2 tra
 
 The second persistent fuzziness is what a **solution set** *means*: an equation usually has one answer; an inequality has infinitely many, which is exactly why we **graph** it (a shaded ray, not a dot). Keep tying the algebra to the number-line picture.
 
-**The arc.** **8.1** builds one-variable solving + number-line graphing + the flip. **8.2** chains two conditions (*and*/*or*). **8.3** reframes through *distance from 0* — absolute value — where "within" becomes an *and* and "outside" becomes an *or* (a direct payoff of 8.2). **8.4** lifts everything into two variables: a line splits the plane, you shade a half, and a **system** is the overlap. Thread **function language** where natural: a boundary like y = 2x+1 *is* the function f(x) = 2x+1; the inequality y > 2x+1 asks "where is the output *above* the line?"
+**The arc.** **8.1** builds one-variable solving + number-line graphing + the flip. **8.2** chains two conditions (*and*/*or*). **8.3** centers on *distance from 0* — graph the V of y = |x|, then solve the symmetric |x| = k / |x| < k / |x| > k cases, where "within" becomes an *and* and "outside" an *or* (a direct payoff of 8.2); off-center algebraic solving is flagged as Algebra-2 reach. **8.4** lifts everything into two variables: a line splits the plane, you shade a half, and a **system** is the overlap. Thread **function language** where natural: a boundary like y = 2x+1 *is* the function f(x) = 2x+1; the inequality y > 2x+1 asks "where is the output *above* the line?"
 
 **Pacing.** Spend real time on the flip in 8.1 until the *test-a-point* habit is automatic — it pays off in 8.2 and 8.3. Don't drill number-line drawing to exhaustion; its job is meaning. In 8.4, precision matters less than three correct decisions: dashed-vs-solid, which side, and stating the test point out loud.
 
@@ -185,78 +185,102 @@ Left: x ≤ -2. Right: x > 5. Graph: filled circle at -2 shading left, open circ
 
 ---
 
-## Lesson 8.3: Absolute-value equations & inequalities
+## Lesson 8.3: Absolute value: graphs & distance
 
-**Goal:** Solve |expression| = k, |expression| < k, and |expression| > k by reading absolute value as **distance from 0**.
-**Why it matters:** Absolute value measures *how far*, regardless of direction — error tolerance ("within 0.5 of target"), distance, magnitude. It's also the cleanest place to *see* why "within" is an *and* and "outside" is an *or* (payoff of 8.2).
+**Goal:** Read |x| as **distance from 0**, graph **y = |x|** (the V) and its simple shifts, and solve the **symmetric** cases |x| = k, |x| < k, |x| > k straight from that distance picture.
+**Why it matters:** Absolute value measures *how far*, ignoring direction — tolerance ("within 0.5 of target"), distance, magnitude. Centering on 0 keeps the algebra light and makes "within → *and* / outside → *or*" visible (the payoff of 8.2). *(Shifting the center off 0 — |x − 3| = 5, |2x − 1| = 7 — needs a two-case algebraic method that belongs to Algebra 2; it's flagged in the Reach note at the end.)*
 **New terms:**
-- **Absolute value |x|:** the distance of x from 0 on the number line. Always ≥ 0. |5| = 5 and |-5| = 5 — both are 5 units from 0.
-- |x - a|: the distance between x and a. So |x - 3| = 5 reads "x is **5 units from 3**."
+- **Absolute value |x|:** the distance of x from 0 on the number line; always ≥ 0. |5| = 5 and |-5| = 5 — both are 5 units from 0 (callback to Unit 1.4).
+- **The graph y = |x|:** a **V** with its vertex at the origin — the right arm rises at slope +1, the left arm at slope -1 — and it never dips below the x-axis, because an output that *is* a distance can't be negative.
+- **Simple shifts of the V:** y = |x| + 2 lifts the whole V up 2; y = |x| − 3 drops it 3; y = |x − 1| slides it right 1 (the vertex moves to where the inside equals 0). These are *graph* moves read off the picture — not algebra to solve.
 
 **Teaching arc (concrete → pictorial → symbolic):**
-- **Concrete / pictorial:** Put it on the number line. |x - 3| = 5: start at 3, step 5 units **each way** → x = 8 or x = -2. *Two* answers, because distance ignores direction. This picture *is* the method.
-- **From the picture to inequalities:**
-  - |x - 3| < 5: "**within** 5 of 3" → the points **between** -2 and 8 → -2 < x < 8. "Within" → an **and** (8.2).
-  - |x - 3| > 5: "**more than** 5 from 3" → the points **outside** that band → x < -2 **or** x > 8. "Outside" → an **or** (8.2).
-- **Symbolic shortcut (after the picture lands):** |A| = k ⇒ A = k or A = -k. |A| < k ⇒ -k < A < k (and). |A| > k ⇒ A < -k or A > k (or). (Requires k > 0; see the watch-for.)
+- **Distance from 0 (concrete).** |x| asks "how far is x from 0?" |3| = 3 and |-3| = 3 — different inputs, same distance.
+- **The V-graph (pictorial).** Plot y = |x| at x = -3…3: (-3,3), (-2,2), (-1,1), (0,0), (1,1), (2,2), (3,3) — a V resting on the origin. Then name the simple shifts above. (Sketch it as a line/curve per `visuals.md`; describe it in words in chat.)
+- **Symmetric solving, read off the distance.** With the center at 0:
+  - **|x| = k → x = k or x = -k** ("k from 0, both ways"). Needs k ≥ 0; at k = 0 the one answer is x = 0; if k < 0 there's **no solution**.
+  - **|x| < k → -k < x < k** ("within k of 0" — an **and**, one segment). Needs k > 0; if k ≤ 0, no solution.
+  - **|x| > k → x < -k or x > k** ("more than k from 0" — an **or**, two rays). Holds for any k ≥ 0; if k < 0 it's **all real numbers**.
+- **Isolate the |·| first (one positive step).** If the absolute value is scaled, divide to get |x| by itself, then read it: 2|x| ≤ 8 → |x| ≤ 4 → -4 ≤ x ≤ 4. (Keep isolation to a *positive* divide here; the sign-flip-during-isolation case is Algebra 2.)
 
-**Worked examples:**
+**Worked examples** (the mastery set — symmetric, centered at 0; quote a code like 8.3.w7 to revisit one):
 
-*Example 1 — equation.* Solve |x - 3| = 5.
-"Distance 5 from 3": x - 3 = 5 ⇒ x = 8, or x - 3 = -5 ⇒ x = -2. Solutions: **x = 8 or x = -2**.
-Check: |8 - 3| = |5| = 5, |-2 - 3| = |-5| = 5.
+*w5 — inclusive "within".* Solve |x| ≤ 2. Within 2 of 0, inclusive → -2 ≤ x ≤ 2. Filled circles at -2 and 2, shade between. Solution: **-2 ≤ x ≤ 2**.
 
-*Example 2 — "within" (and).* Solve |x - 3| < 5.
-Within 5 of 3 → -5 < x - 3 < 5. Add 3 to all parts: -2 < x < 8.
-Graph: open circles at -2 and 8, shade between. Solution: **-2 < x < 8**.
+*w6 — the graph y = |x|.* Plot (-2,2), (-1,1), (0,0), (1,1), (2,2): a **V** with vertex (0,0), arms at slope ±1, resting on the x-axis. y = |x| − 2 is the same V dropped 2 (vertex (0,-2)); y = |x − 1| is it slid right 1 (vertex (1,0)). No solving here — just read the picture.
 
-*Example 3 — "outside" (or).* Solve |x - 3| > 5.
-More than 5 from 3 → x - 3 < -5 **or** x - 3 > 5 → x < -2 **or** x > 8.
-Graph: open circle at -2 shading left, open circle at 8 shading right. Solution: **x < -2 or x > 8**.
+*w7 — "outside" (or).* Solve |x| > 2. More than 2 from 0 → **x < -2 or x > 2**. Open circles at -2 and 2, shade outward (two rays).
 
-*Example 4 — equation, shift inside.* Solve |x + 2| = 3.
-|x + 2| = |x - (-2)|: distance 3 from -2 → x = 1 or x = -5.
-Check: |1 + 2| = 3, |-5 + 2| = |-3| = 3. Solutions: **x = 1 or x = -5**.
+*w8 — isolate first.* Solve 2|x| ≤ 8. Divide by 2 (positive → no flip): |x| ≤ 4. Within 4 of 0 → **-4 ≤ x ≤ 4**. Filled circles at -4 and 4, shade between.
 
-*Example 5 — inclusive "within".* Solve |x| ≤ 2.
-Within 2 of 0 (inclusive) → -2 ≤ x ≤ 2. Filled circles at -2 and 2, shade between. Solution: **-2 ≤ x ≤ 2**.
+*w9 — no solution / all reals.* Distance is never negative, so read these straight off the picture: |x| = -3 has **no solution**; |x| < -2 has **no solution**; |x| > -1 is true for **every** real x (**all real numbers**).
 
 **Watch for:**
-- **Giving only one answer to |A| = k.** Distance goes *both* ways — always two cases (unless k = 0, one answer).
-- **Dropping the negative case** or mishandling its sign: x - 3 = -5 gives x = -2, not x = 8.
-- **Swapping *and*/*or*:** "within / less-than" → **and** (between); "outside / greater-than" → **or** (two rays). Re-derive from the distance picture if unsure.
-- **|A| = negative, or |A| < negative:** distance can't be negative. |x| = -4 has **no solution**; |x| < -3 has **no solution**; |x| > -3 is **all reals**. Reason from the picture, don't apply the shortcut blindly.
+- **Giving only one answer to |x| = k.** Distance goes *both* ways → two answers, x = ±k (unless k = 0, one answer; k < 0, none).
+- **Swapping *and*/*or*:** "within / less-than" → **and** (one segment between -k and k); "outside / greater-than" → **or** (two rays). Re-derive from the distance picture if unsure.
+- **Forgetting to isolate first.** In 2|x| ≤ 8 you must divide by 2 *before* reading the distance — |x| ≤ 8 is a different (wrong) statement.
+- **|x| = negative, or |x| < negative:** distance can't be negative. |x| = -4 → **no solution**; |x| < -3 → **no solution**; |x| > -3 → **all reals**. Reason from the picture, never a blind shortcut.
+- **Graph vs. solve.** y = |x| (and its shifts) is a *picture* to read; |x| = k is an *equation* to solve. Don't try to "solve" the graph.
 
-**Visuals to offer:** A number line is ideal — mark the center (a), step k each way, dot the two solutions; for inequalities show the between-segment (*and*) or two rays (*or*). ASCII in chat, or **Template 1** artifact. Always state the distance interpretation in words.
+**Visuals to offer:** Two pictures carry this lesson — the **V-graph** of y = |x| (vertex at the origin, slope ±1, sits on the axis), and a **number line** for solving (mark 0, step k each way; dot the two solutions, or shade the between-segment for *and* / two rays for *or*). Use `visuals.md` for a clean sketch; always state the distance interpretation in words.
 
 **Check for understanding (transfer):**
-1. "Read |x + 1| = 4 as a distance sentence (from what number, how far?), then give both solutions."
-2. "Why does |x - 2| < 4 become an *and* (a single segment) while |x - 2| > 4 becomes an *or* (two rays)? Use the distance picture."
+1. "Sketch y = |x| in words: where's the vertex, what are the arm slopes, and why does it never go below the x-axis? Then describe y = |x| + 1."
+2. "Why does |x| < 4 become an *and* (a single segment) while |x| > 4 becomes an *or* (two rays)? Use the distance picture."
 3. "What is the solution of |x| = -3? Of |x| > -3? Explain each from ‘distance is never negative.’"
 
-**Practice problems:**
+**Practice problems (core — the mastery path):** symmetric, centered at 0. *(Problems 2, 3, 5, 6, 7 shift the center off 0 — they've moved to the Reach set below.)*
 
-*Set A — equations (give both solutions; check)*
+*Equations (give both solutions; check):*
 1. |x| = 4
-2. |x + 2| = 3
-3. |x - 1| = 4
 4. |2x| = 8
-5. |2x - 1| = 7
+9. |x| = 7
 
-*Set B — inequalities (solve; describe the graph)*
-6. |x + 1| < 3
-7. |x - 2| ≥ 4
+*Inequalities (solve; describe the graph):*
 8. |2x| < 6
+10. |x| > 5
+11. 2|x| ≤ 10
+12. |x| < -2
+13. |x| > -1
 
 **Answer key (all verified):**
-1. x = 4 or x = -4. (|4|=4, |-4|=4.)
-2. x = 1 or x = -5. (|1+2|=3, |-5+2|=3.)
-3. x = 5 or x = -3. (|5-1|=4, |-3-1|=4.)
-4. x = 4 or x = -4. (|2·4|=8, |2·(-4)|=8.)
-5. x = 4 or x = -3. (2x-1=7 ⇒ x=4; 2x-1=-7 ⇒ x=-3. |7|=7, |-7|=7.)
-6. -4 < x < 2 — "within 3 of -1"; open circles at -4 and 2, shade between (*and*).
-7. x ≤ -2 or x ≥ 6 — "at least 4 from 2"; filled circles at -2 and 6, shade outward (*or*).
-8. -3 < x < 3 — |2x|<6 ⇒ -6 < 2x < 6; open circles at -3 and 3, shade between (*and*).
+1. x = 4 or x = -4. (|4| = 4, |-4| = 4.)
+4. x = 4 or x = -4. (|2·4| = 8, |2·(-4)| = 8.)
+9. x = 7 or x = -7. (|7| = 7, |-7| = 7.)
+8. -3 < x < 3 — |2x| < 6 ⇒ -6 < 2x < 6; open circles at -3 and 3, shade between (*and*).
+10. x < -5 or x > 5 — "more than 5 from 0"; open circles at -5 and 5, shade outward (*or*).
+11. -5 ≤ x ≤ 5 — isolate: divide by 2 → |x| ≤ 5; filled circles at -5 and 5, shade between.
+12. **no solution** — a distance can't be less than -2.
+13. **all real numbers** — every distance is more than -1.
+
+---
+
+### Reach beyond Algebra 1 (optional — off the mastery path)
+
+When the center moves off 0 — |x − 3| = 5, |2x − 1| = 7 — you can't just read x = ±k. You split into **two cases** (the inside equals +k *or* −k), solve each, and name the answer set with **interval notation**. That general algebraic method is the standard **Algebra 2 / intermediate-algebra** treatment. It's here so you can see where the idea goes, but it is **not** part of the Algebra-1 mastery target — master the distance-from-0 core above first.
+
+*The general method, one worked example.*
+
+*w1 — |x − 3| = 5.* Two cases: x − 3 = 5 → x = 8, or x − 3 = -5 → x = -2. Solutions: **x = 8 or x = -2**. Check: |8 − 3| = 5, |-2 − 3| = 5. *(Pictured: "distance 5 from 3.")*
+
+*A few more, same idea.*
+*w2 — |x − 3| < 5.* Within 5 of 3 → -5 < x − 3 < 5 → -2 < x < 8 (interval (-2, 8)).
+*w3 — |x − 3| > 5.* More than 5 from 3 → x − 3 < -5 or x − 3 > 5 → x < -2 or x > 8.
+*w4 — |x + 2| = 3.* |x + 2| = |x − (-2)|, distance 3 from -2 → x = 1 or x = -5.
+
+*Reach practice (optional):*
+2. |x + 2| = 3
+3. |x - 1| = 4
+5. |2x - 1| = 7
+6. |x + 1| < 3
+7. |x - 2| ≥ 4
+
+**Reach answer key:**
+2. x = 1 or x = -5. (|1+2| = 3, |-5+2| = 3.)
+3. x = 5 or x = -3. (|5-1| = 4, |-3-1| = 4.)
+5. x = 4 or x = -3. (2x-1 = 7 → x = 4; 2x-1 = -7 → x = -3.)
+6. -4 < x < 2 — "within 3 of -1"; interval (-4, 2).
+7. x ≤ -2 or x ≥ 6 — "at least 4 from 2"; two rays.
 
 ---
 
@@ -330,7 +354,7 @@ Boundary 2: y = -x + 3, **solid**; test (0,0): 0 ≤ 3? **True** → shade the s
 1. Boundary y = x + 2 (e.g. (0,2),(1,3)), **dashed**. Test (0,0): 0 > 2? **false** → shade the side **without** the origin (above the line).
 2. Boundary y = 2x - 1 ((0,-1),(1,1)), **solid**. Test (0,0): 0 ≤ -1? **false** → shade the **other** side (below the line).
 3. Boundary y = -x + 4 ((0,4),(4,0)), **dashed**. Test (0,0): 0 < 4? **true** → shade the side **with** the origin (below/left).
-4. Boundary y = 3x ((0,0),(1,3)), **solid**. Origin is *on* the line — test (1,0): 0 ≥ 3(1)=3? **false** → shade the **other** side (below/right of the line).
+4. Boundary y = 3x ((0,0),(1,3)), **solid**. Origin is *on* the line — test (1,0): 0 ≥ 3(1)=3? **false** → shade the side **not** containing (1,0): the side holding points like (0,1) and (-1,0) — above/left of the steep line. *(For a steep line, locate the region by a true in-region point, not "left/right" — the Watch-for warning in action.)*
 5. Boundary x + y = 5 ((0,5),(5,0)), **dashed**. Test (0,0): 0 + 0 = 0 < 5? **true** → shade the side **with** the origin (below/left).
 6. Boundary 1 y = x, **dashed**, shade above (test (0,1): 1 > 0). Boundary 2 y = -x + 4, **dashed**, shade below (test (0,0): 0 < 4). **Solution = the overlap**, a wedge between the two dashed lines (e.g. (1,2): 2 > 1 and 2 < 3).
 7. y = 2(2) - 3 = 1 → plot (2, 1).
