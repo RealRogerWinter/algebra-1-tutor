@@ -36,6 +36,9 @@ jobs:
           name: Student guide up to date
           command: python _verification/build_student_guide.py --check
       - run:
+          name: Landing page up to date
+          command: python _verification/build_landing.py --check
+      - run:
           name: Integration smoke test (cross-material alignment + code resolution)
           command: python _verification/smoke_test.py
       - run:
