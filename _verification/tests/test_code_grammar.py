@@ -57,5 +57,11 @@ def test_anchor_unknown_lesson():
     assert any("unknown lesson" in i for i in issues)
 
 
+def test_anchor_global_and_refresher_skip_ssot():
+    # bank-scoped (mis/vis/met) and refresher (ref*) codes must not trigger the
+    # lesson-existence check, even against an empty SSOT.
+    assert ca._lint_anchor_list([("met.balance-scale", "m.md"), ("refA.4", "u.md")], set()) == []
+
+
 def test_md_anchor_lint_real_tree_clean():
     assert ca.md_anchor_lint() == []   # holds once banks (PR1) / units (PR2) are tagged

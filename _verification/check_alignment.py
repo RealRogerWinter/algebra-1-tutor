@@ -25,6 +25,8 @@ TRANSFORMS = standard_transformations + (implicit_multiplication_application,)
 #   globals     : mis.N | vis.tN | met.<kebab-slug>               e.g. mis.3, vis.t1, met.balance-scale
 # Tags: w worked example, ex example, (none) practice, d definition, c transfer-check,
 # h how-to/procedure, f figure (reserved for Phase 3; simple fN[part] form only).
+# Note: s5 also lists m/p as lesson tags, but misconceptions/metaphors live in GLOBAL banks
+# (mis.N, met.<slug>) here, so m/p are NOT lesson-scoped tags; 'ex' is kept (real JSON has 6.2.ex1).
 ID_RE = re.compile(
     r"^(?:"
     r"(?:[1-9]|1[0-2]|A)\.\d+\.(?:w|ex|d|c|h|f)?\d+[a-z]?"
@@ -73,8 +75,8 @@ def _scan_anchors():
     out = []
     for fp in files:
         s = open(fp, encoding="utf-8").read()
+        s = re.sub(r"```.*?```", " ", s, flags=re.DOTALL)   # fenced code first (may contain $$)
         s = re.sub(r"\$\$.*?\$\$", " ", s, flags=re.DOTALL)
-        s = re.sub(r"```.*?```", " ", s, flags=re.DOTALL)
         rel = os.path.relpath(fp, root)
         out += [(m.group(1), rel) for m in ANCHOR_RE.finditer(s)]
     return out
