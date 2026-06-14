@@ -32,10 +32,10 @@ Pacing: 5.1 is quick and concrete (most adults half-know the coordinate plane �
 **Goal:** Plot and name ordered pairs (x, y) and identify which of the four quadrants (or axis) a point lies in.
 **Why it matters:** Every graph in the rest of algebra lives here. A function's table of inputs/outputs becomes *points*, and a line is just infinitely many of them.
 **New terms:**
-- **Coordinate plane:** a flat grid made by two number lines crossing at right angles.
-- **x-axis / y-axis:** the horizontal and vertical number lines. They cross at the **origin**, (0,0).
-- **Ordered pair (x, y):** an address for a point — *x first* (how far across, right is +), *then y* (how far up/down, up is +). Order matters: (3,2)≠(2,3).
-- **Quadrant:** one of the four regions the axes cut the plane into, numbered **I, II, III, IV** counter-clockwise starting top-right.
+- {#5.1.d1} **Coordinate plane:** a flat grid made by two number lines crossing at right angles.
+- {#5.1.d2} **x-axis / y-axis:** the horizontal and vertical number lines. They cross at the **origin**, (0,0).
+- {#5.1.d3} **Ordered pair (x, y):** an address for a point — *x first* (how far across, right is +), *then y* (how far up/down, up is +). Order matters: (3,2)≠(2,3).
+- {#5.1.d4} **Quadrant:** one of the four regions the axes cut the plane into, numbered **I, II, III, IV** counter-clockwise starting top-right.
 
 **Teaching arc (concrete → pictorial → symbolic):**
 - **Concrete:** "It's a street map. The x-coordinate is how many blocks east/west; the y-coordinate is how many blocks north/south. You always say the east-west one first." Ask them to give *you* directions to a point before you give them any.
@@ -67,9 +67,9 @@ Offer the artifact (computed screen coords, Template 2 mapping): (3,2)→(170,70
 **Visuals to offer:** `visuals.md` **Template 2** (coordinate plane). Use the axes-only skeleton, then add a small `<circle>` + label per point. Computed, labeled, with the table above.
 
 **Check for understanding (transfer):**
-1. "Without plotting, which quadrant is (-7, -2) in, and how do the signs tell you?"
-2. "I plotted a point in Quadrant IV. What can you say about the signs of its coordinates?"
-3. "Where does (4, 0) live — and why isn't it in a quadrant?"
+1. {#5.1.c1} "Without plotting, which quadrant is (-7, -2) in, and how do the signs tell you?"
+2. {#5.1.c2} "I plotted a point in Quadrant IV. What can you say about the signs of its coordinates?"
+3. {#5.1.c3} "Where does (4, 0) live — and why isn't it in a quadrant?"
 
 **Practice problems:**
 *Name the quadrant (or axis):*
@@ -95,8 +95,8 @@ Offer the artifact (computed screen coords, Template 2 mapping): (3,2)→(170,70
 **Goal:** Build a table of values from a linear equation, plot the points, connect them into a line, and test whether a given point lies *on* the line by substitution.
 **Why it matters:** This is the bridge from "equation" to "picture." It also teaches the meaning of a solution to a two-variable equation — every point on the line is a solution; everything off it is not.
 **New terms:**
-- **Table of values:** a list of x inputs and their computed y outputs — exactly the input→output table from Unit 4.3, now plotted.
-- **"On the line":** a point (a,b) is on the line when its coordinates make the equation true — i.e. substituting x=a gives y=b.
+- {#5.2.d1} **Table of values:** a list of x inputs and their computed y outputs — exactly the input→output table from Unit 4.3, now plotted.
+- {#5.2.d2} **"On the line":** a point (a,b) is on the line when its coordinates make the equation true — i.e. substituting x=a gives y=b.
 
 **Teaching arc (concrete → pictorial → symbolic):**
 - **Concrete / function callback:** "This equation is a function machine (`metaphors.md` → Functions). Feed it x-values, it returns y-values. y = 2x-1 *is* f(x) = 2x-1 — same machine, two names." Have them compute a couple of outputs.
@@ -128,9 +128,9 @@ Membership tests:
 **Visuals to offer:** `visuals.md` **Template 2** — line from two computed endpoints, intercept dotted and labeled, companion table always included.
 
 **Check for understanding (transfer):**
-1. "Without graphing, is (4, 7) on y = 2x - 1? Show me how you know."
-2. "Two of these are on y = 3x + 2: (1, 5), (2, 8), (0, 3). Which one isn't, and why?"
-3. "If (a, b) is on the line and you change only b, is it still on the line? What does that mean about the point?"
+1. {#5.2.c1} "Without graphing, is (4, 7) on y = 2x - 1? Show me how you know."
+2. {#5.2.c2} "Two of these are on y = 3x + 2: (1, 5), (2, 8), (0, 3). Which one isn't, and why?"
+3. {#5.2.c3} "If (a, b) is on the line and you change only b, is it still on the line? What does that mean about the point?"
 
 **Practice problems:**
 *Build the table for y = 3x + 2 (problems 1–4: find y for each x):*
@@ -155,8 +155,8 @@ Membership tests:
 **Goal:** Compute slope as a rate of change, m = rise/run = (y₂ - y₁)/(x₂ - x₁), and recognize the four cases: positive, negative, zero (horizontal), and undefined (vertical).
 **Why it matters:** Slope is the steepness *and direction* of a line, and it's the single number that drives everything in 5.4–5.5. It's also the direct graphical face of the **unit rate** from Unit 3.
 **New terms:**
-- **Slope (m):** how much y changes for each 1-unit increase in x — the line's rate of change.
-- **Rise:** vertical change (y₂ - y₁). **Run:** horizontal change (x₂ - x₁).
+- {#5.3.d1} **Slope (m):** how much y changes for each 1-unit increase in x — the line's rate of change.
+- {#5.3.d2} **Rise:** vertical change (y₂ - y₁). **Run:** horizontal change (x₂ - x₁).
 
 **Teaching arc (concrete → pictorial → symbolic):**
 - **Concrete / Unit 3 callback:** "Slope is a rate. In Unit 3, '60 miles per **1** hour' was a unit rate; on a distance-vs-time graph that *is* the slope (`metaphors.md` → Slope B, speed). Slope is just rise per 1 run." Then the **stairs/ramp** picture (`metaphors.md` → Slope A): steep stairs = big slope, gentle ramp = small, downhill = negative, flat landing = 0, a wall = undefined (you can't go forward at all).
@@ -199,11 +199,11 @@ The slope is **15 dollars per hour** — the cost climbs \$15 for each additiona
 **Visuals to offer:** `visuals.md` **Template 2** with the rise/run right triangle drawn between two computed points; label rise, run, and m. Companion table of the two points always included.
 
 **Check for understanding (transfer):**
-1. "A line goes through (2,3) and (6,11). Find the slope, and tell me in words what it says about how y changes."
-2. "One line has slope 5, another has slope 1/2. Which is steeper, and how do you know?"
-3. "What's the slope of a perfectly horizontal line? A perfectly vertical one? Why is one a number and the other 'undefined'?"
-4. "A savings graph passes through (0, 50) and (4, 90), where x is weeks and y is dollars. What is the slope *with its units*, and what does it tell you about the saving? What does the 50 mean?"
-5. **Spot the error.** A student says: "Line A has slope -3 and line B has slope 2. Since -3 is less than 2, line A is less steep than line B." What did they get wrong, and which line is actually steeper?
+1. {#5.3.c1} "A line goes through (2,3) and (6,11). Find the slope, and tell me in words what it says about how y changes."
+2. {#5.3.c2} "One line has slope 5, another has slope 1/2. Which is steeper, and how do you know?"
+3. {#5.3.c3} "What's the slope of a perfectly horizontal line? A perfectly vertical one? Why is one a number and the other 'undefined'?"
+4. {#5.3.c4} "A savings graph passes through (0, 50) and (4, 90), where x is weeks and y is dollars. What is the slope *with its units*, and what does it tell you about the saving? What does the 50 mean?"
+5. {#5.3.c5} **Spot the error.** A student says: "Line A has slope -3 and line B has slope 2. Since -3 is less than 2, line A is less steep than line B." What did they get wrong, and which line is actually steeper?
 
 **Practice problems (find the slope through the two points):**
 1. (1,2) and (3,8)
@@ -232,9 +232,9 @@ The slope is **15 dollars per hour** — the cost climbs \$15 for each additiona
 **Goal:** Read slope m and y-intercept (0,b) directly from y = mx + b (and the function form f(x) = mx + b), and graph a line fast by plotting b then using rise/run.
 **Why it matters:** This is the workhorse form. Once a line is in it, you can graph it in seconds and read its behavior at a glance — no table needed.
 **New terms:**
-- **Slope-intercept form:** y = mx + b, where m is the slope and b is the **y-intercept** — the y-value where the line crosses the y-axis, at the point (0, b).
-- **Function form:** f(x) = mx + b — the same line, named as a function. "b is the starting output at x=0; m is how fast the output climbs."
-- **Standard form (recognition):** the same line can also be written Ax + By = C (A, B, C integers) — e.g. 2x + y = 5. It hides the slope and intercept, so to read them you solve for y first. Full treatment, plus graphing from intercepts, is Lesson 5.6.
+- {#5.4.d1} **Slope-intercept form:** y = mx + b, where m is the slope and b is the **y-intercept** — the y-value where the line crosses the y-axis, at the point (0, b).
+- {#5.4.d2} **Function form:** f(x) = mx + b — the same line, named as a function. "b is the starting output at x=0; m is how fast the output climbs."
+- {#5.4.d3} **Standard form (recognition):** the same line can also be written Ax + By = C (A, B, C integers) — e.g. 2x + y = 5. It hides the slope and intercept, so to read them you solve for y first. Full treatment, plus graphing from intercepts, is Lesson 5.6.
 
 **Teaching arc (concrete → pictorial → symbolic):**
 - **Concrete:** "b is your *starting point* on the y-axis; m is your *rate* of climbing from there — your Unit-3 rate again." Tie f(0) = b: feeding 0 to the machine returns the intercept. **In a real context each letter has a concrete meaning:** b is the **starting value** (the output before anything happens, at x = 0) and m is the **rate** (how much the output changes per 1 step of input). For a phone bill c = 5t + 30, the 30 is a \$30 base charge and the 5 is \$5 per GB — read m and b as "rate" and "starting amount," not just numbers.
@@ -275,10 +275,10 @@ The slope is **15 dollars per hour** — the cost climbs \$15 for each additiona
 **Visuals to offer:** `visuals.md` **Template 2** — plot the intercept, draw the line through a second computed point, label slope and intercept, table alongside.
 
 **Check for understanding (transfer):**
-1. "In y = -4x + 7, what's the slope and where does the line cross the y-axis? Which way does it tilt?"
-2. "Write the equation of the line with slope 1/3 and y-intercept (0, -5)."
-3. "For f(x) = (1/2)x - 2, what is f(0), and why is that the y-intercept?"
-4. "A pool drains by d = -20t + 300 (gallons after t minutes). What do the -20 and the 300 *mean* about the pool? Is it filling or draining, and how fast?"
+1. {#5.4.c1} "In y = -4x + 7, what's the slope and where does the line cross the y-axis? Which way does it tilt?"
+2. {#5.4.c2} "Write the equation of the line with slope 1/3 and y-intercept (0, -5)."
+3. {#5.4.c3} "For f(x) = (1/2)x - 2, what is f(0), and why is that the y-intercept?"
+4. {#5.4.c4} "A pool drains by d = -20t + 300 (gallons after t minutes). What do the -20 and the 300 *mean* about the pool? Is it filling or draining, and how fast?"
 
 **Practice problems:**
 *Identify slope and y-intercept:*
@@ -308,9 +308,9 @@ The slope is **15 dollars per hour** — the cost climbs \$15 for each additiona
 **Goal:** Write a line's equation from a point and a slope, or from two points; recognize and use parallel (equal slopes) and perpendicular (negative-reciprocal slopes) relationships.
 **Why it matters:** This is "modeling with lines" — given any two facts that pin a line down, produce its equation. It feeds directly into Unit 6 (modeling) and Unit 7 (systems).
 **New terms:**
-- **Point-slope form:** y - y₁ = m(x - x₁) — build a line from one point (x₁,y₁) and a slope m. (Then tidy into y = mx + b if desired.)
-- **Parallel lines:** never meet; **equal slopes** (m₁ = m₂), different intercepts. (Same slope but a *different* y-intercept → parallel; same slope *and* same y-intercept → they're the **same line** (coincident), not two parallel lines — you'll meet this case again in Unit 7 systems.)
-- **Perpendicular lines:** cross at a right angle; slopes are **negative reciprocals** (m₂ = -1/m₁), so their product is -1. (This negative-reciprocal rule is for **nonvertical** lines; separately, any **horizontal** line and any **vertical** line are perpendicular — one has slope 0, the other undefined, so the "product = -1" test doesn't apply to that pair.)
+- {#5.5.d1} **Point-slope form:** y - y₁ = m(x - x₁) — build a line from one point (x₁,y₁) and a slope m. (Then tidy into y = mx + b if desired.)
+- {#5.5.d2} **Parallel lines:** never meet; **equal slopes** (m₁ = m₂), different intercepts. (Same slope but a *different* y-intercept → parallel; same slope *and* same y-intercept → they're the **same line** (coincident), not two parallel lines — you'll meet this case again in Unit 7 systems.)
+- {#5.5.d3} **Perpendicular lines:** cross at a right angle; slopes are **negative reciprocals** (m₂ = -1/m₁), so their product is -1. (This negative-reciprocal rule is for **nonvertical** lines; separately, any **horizontal** line and any **vertical** line are perpendicular — one has slope 0, the other undefined, so the "product = -1" test doesn't apply to that pair.)
 
 **Teaching arc (concrete → pictorial → symbolic):**
 - **Concrete:** "A slope alone gives infinitely many parallel lines; a slope *plus one point it passes through* nails down exactly one." Point-slope is the tool that uses exactly those two facts.
@@ -342,9 +342,9 @@ $$y = -\tfrac12 x$$
 **Visuals to offer:** `visuals.md` **Template 2**. For parallel/perpendicular, graph both lines on one plane (computed endpoints) so the equal tilt / right angle is visible; label each line's equation. Table of the defining points alongside.
 
 **Check for understanding (transfer):**
-1. "Write the equation of the line through (1, 5) with slope -2. Then verify it actually passes through that point."
-2. "A line is perpendicular to y = (1/3)x + 2. What's its slope, and how did you get it?"
-3. "Two lines: y = 5x - 1 and y = 5x + 4. Parallel, perpendicular, or neither? How can you tell without graphing?"
+1. {#5.5.c1} "Write the equation of the line through (1, 5) with slope -2. Then verify it actually passes through that point."
+2. {#5.5.c2} "A line is perpendicular to y = (1/3)x + 2. What's its slope, and how did you get it?"
+3. {#5.5.c3} "Two lines: y = 5x - 1 and y = 5x + 4. Parallel, perpendicular, or neither? How can you tell without graphing?"
 
 **Practice problems:**
 *Write the equation (point + slope):*
@@ -369,8 +369,8 @@ $$y = -\tfrac12 x$$
 **Goal:** Find a line's **x-intercept** by setting y = 0, graph a line from its two intercepts, and work with **standard form Ax + By = C** — convert it to and from slope-intercept form and read both intercepts straight off it.
 **Why it matters:** Two points fix a line, and the two intercepts are usually the easiest two to find — so intercepts are the fastest way to graph a line that arrives in standard form (where no slope or intercept is sitting in plain sight). Standard form is also how lines show up in Unit 7 (systems) and Unit 8 (regions), so meeting it now pays off there.
 **New terms:**
-- **x-intercept:** the point (a, 0) where the line crosses the x-axis. Because every point on the x-axis has y = 0, you find it by setting y = 0 and solving for x. (Mirror of the y-intercept (0, b) from 5.4, where x = 0.)
-- **Standard form:** Ax + By = C, with A, B, C integers (and A ≥ 0 by convention). It treats x and y even-handedly — neither is solved for. To read slope and y-intercept, solve for y; to graph fast, use the two intercepts.
+- {#5.6.d1} **x-intercept:** the point (a, 0) where the line crosses the x-axis. Because every point on the x-axis has y = 0, you find it by setting y = 0 and solving for x. (Mirror of the y-intercept (0, b) from 5.4, where x = 0.)
+- {#5.6.d2} **Standard form:** Ax + By = C, with A, B, C integers (and A ≥ 0 by convention). It treats x and y even-handedly — neither is solved for. To read slope and y-intercept, solve for y; to graph fast, use the two intercepts.
 
 **Teaching arc (concrete → pictorial → symbolic):**
 - **Concrete:** "An intercept is where the line *crosses an axis*. On the x-axis you haven't gone up or down at all, so y = 0 there; on the y-axis you haven't gone across, so x = 0 there. Set the *other* coordinate to 0 and solve for what's left." Tie back to 5.4: they already find the y-intercept by putting x = 0 (that's f(0) = b); the x-intercept is the same move with the roles swapped.
@@ -417,9 +417,9 @@ $$y = \tfrac34 x - 2 \;\Rightarrow\; 4y = 3x - 8 \;\Rightarrow\; 3x - 4y = 8$$
 **Visuals to offer:** `visuals.md` **Template 2** — plot the two intercepts, draw the line, label each intercept, include a companion table (with a third checkpoint row). For standard-form examples, show the converted y = mx + b beside the graph.
 
 **Check for understanding (transfer):**
-1. "For 5x + 2y = 20, find both intercepts and say which two points you'd plot to graph it."
-2. "A classmate sets x = 0 to find the *x*-intercept. What did they actually find, and what should they have done?"
-3. "Put y = (2/3)x - 1 into standard form Ax + By = C with integer coefficients. What are A, B, and C?"
+1. {#5.6.c1} "For 5x + 2y = 20, find both intercepts and say which two points you'd plot to graph it."
+2. {#5.6.c2} "A classmate sets x = 0 to find the *x*-intercept. What did they actually find, and what should they have done?"
+3. {#5.6.c3} "Put y = (2/3)x - 1 into standard form Ax + By = C with integer coefficients. What are A, B, and C?"
 
 **Practice problems:**
 *Find the x-intercept (set y = 0):*

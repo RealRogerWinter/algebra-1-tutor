@@ -29,9 +29,9 @@ The arc is: (4.1) build the *one-output-per-input* idea with the **vending-machi
 **Why it matters:** "Function" is the word the rest of the course is built on. Lines, sequences, and parabolas are all functions; getting the definition clean now pays off in every later unit.
 
 **New terms:**
-- **Function** — a **pairing** (a correspondence) that matches **each input with exactly one output**. The pairing can be given any way at all — a list of (input, output) pairs, a table, a graph, or a formula. What makes it a *function* is the one-output-per-input promise, not the form it comes in. (Heads-up: in 4.2 a *formula* like f(x)=3x−1 is called a **rule** — a rule is one common *way* to give a function's pairing, not the definition itself. A pair-list with no formula is still a function.)
-- **Input / output** — what you feed in, and what comes back, written as a pair (input, output). The inputs form one set and the outputs form another; in 4.2 those sets get the names **domain** and **range**. (Later the input is also called the variable and the output its value.)
-- **Vertical line test** — a graph is a function exactly when **every vertical line** hits it in **at most one point** (one hit, or none). If some vertical line hits the graph twice, that one input has two outputs, so it is not a function.
+- {#4.1.d1} **Function** — a **pairing** (a correspondence) that matches **each input with exactly one output**. The pairing can be given any way at all — a list of (input, output) pairs, a table, a graph, or a formula. What makes it a *function* is the one-output-per-input promise, not the form it comes in. (Heads-up: in 4.2 a *formula* like f(x)=3x−1 is called a **rule** — a rule is one common *way* to give a function's pairing, not the definition itself. A pair-list with no formula is still a function.)
+- {#4.1.d2} **Input / output** — what you feed in, and what comes back, written as a pair (input, output). The inputs form one set and the outputs form another; in 4.2 those sets get the names **domain** and **range**. (Later the input is also called the variable and the output its value.)
+- {#4.1.d3} **Vertical line test** — a graph is a function exactly when **every vertical line** hits it in **at most one point** (one hit, or none). If some vertical line hits the graph twice, that one input has two outputs, so it is not a function.
 
 **Teaching arc (concrete → pictorial → symbolic):**
 - **Concrete (vending machine — `metaphors.md` Functions A):** "Press a button (input), get exactly one snack (output). Press B4 today and tomorrow — same snack both times. That reliable *pairing* of each button with one snack *is* what makes it a function." Then the key asymmetry: "Two different buttons can both give pretzels — two inputs paired to one output, totally fine. But one button can *not* sometimes give pretzels and sometimes give a soda — that machine is broken. One input paired to two outputs = not a function." Note there is no formula here — the machine just *pairs* buttons with snacks, and that is already a function.
@@ -69,9 +69,9 @@ One straight line is the exception: a **vertical** line such as x=3 is *not* a f
 **Visuals to offer:** A clean arrow-map (inputs→outputs) reads fine as plain text or a small table — no artifact needed. For the vertical line test, offer an **SVG artifact** of a line vs. a sideways parabola with a dashed vertical test line (`visuals.md` Template 2 for the line; compute points, label the double-hit). Pair any picture with the one-line rule.
 
 **Check for understanding (transfer):**
-1. "Make me a set of three pairs that is *not* a function, and tell me which input breaks it."
-2. "Here's a table where the output 7 shows up three times — can it still be a function? What would I have to check?"
-3. "Why does the *vertical* line test, and not a horizontal one, decide it?" (Model answer to steer toward: a vertical line gathers all the points that share one *input*; two hits means one input with two outputs = broken. A horizontal line would gather all the points that share one *output* — but two inputs sharing an output is *allowed*, so a horizontal line tests nothing about being a function. This ties straight back to the lesson's asymmetry.)
+1. {#4.1.c1} "Make me a set of three pairs that is *not* a function, and tell me which input breaks it."
+2. {#4.1.c2} "Here's a table where the output 7 shows up three times — can it still be a function? What would I have to check?"
+3. {#4.1.c3} "Why does the *vertical* line test, and not a horizontal one, decide it?" (Model answer to steer toward: a vertical line gathers all the points that share one *input*; two hits means one input with two outputs = broken. A horizontal line would gather all the points that share one *output* — but two inputs sharing an output is *allowed*, so a horizontal line tests nothing about being a function. This ties straight back to the lesson's asymmetry.)
 
 **Practice problems:**
 
@@ -120,14 +120,14 @@ One straight line is the exception: a **vertical** line such as x=3 is *not* a f
 **Why it matters:** f(x) is the standard language for "the output of this rule at this input." Every later unit writes lines, systems, and curves this way, so comfort here removes friction everywhere after.
 
 **New terms:**
-- **Rule** — a **formula** that gives a function's pairing, like f(x)=3x−1. A rule is *one way* to specify a function (the way that comes with a computation); a table or a pair-list is another. So "rule" here means the formula, not the definition of "function" from 4.1.
-- **Function notation f(x)** — a *name* for a rule (f) together with what you fed it (x). Read "f of x." It is **not** "f times x."
-- **Evaluate** — substitute a value for the input and compute. f(2) means "run 2 through the rule f."
-- **Independent / dependent variable** — the input x is the **independent variable** (you pick it freely); the output f(x) is the **dependent variable** (its value *depends* on x). On a graph, the input goes on the horizontal axis and the output on the vertical (pre-loads Unit 5).
-- **Domain** — the set of allowed inputs.
-- **Range** — the set of outputs you actually get.
-- **Discrete domain** — the inputs are *separate* values (a finite list, or counting numbers like 0,1,2,3,…). You plot them as **separate dots** and you list them in braces, e.g. {1,2,3,4}. *Don't connect the dots.*
-- **Continuous domain** — the inputs are *every* real number across a range (no gaps). The graph is an **unbroken** line or curve, so you describe it in words (e.g. "all real numbers") rather than listing them.
+- {#4.2.d1} **Rule** — a **formula** that gives a function's pairing, like f(x)=3x−1. A rule is *one way* to specify a function (the way that comes with a computation); a table or a pair-list is another. So "rule" here means the formula, not the definition of "function" from 4.1.
+- {#4.2.d2} **Function notation f(x)** — a *name* for a rule (f) together with what you fed it (x). Read "f of x." It is **not** "f times x."
+- {#4.2.d3} **Evaluate** — substitute a value for the input and compute. f(2) means "run 2 through the rule f."
+- {#4.2.d4} **Independent / dependent variable** — the input x is the **independent variable** (you pick it freely); the output f(x) is the **dependent variable** (its value *depends* on x). On a graph, the input goes on the horizontal axis and the output on the vertical (pre-loads Unit 5).
+- {#4.2.d5} **Domain** — the set of allowed inputs.
+- {#4.2.d6} **Range** — the set of outputs you actually get.
+- {#4.2.d7} **Discrete domain** — the inputs are *separate* values (a finite list, or counting numbers like 0,1,2,3,…). You plot them as **separate dots** and you list them in braces, e.g. {1,2,3,4}. *Don't connect the dots.*
+- {#4.2.d8} **Continuous domain** — the inputs are *every* real number across a range (no gaps). The graph is an **unbroken** line or curve, so you describe it in words (e.g. "all real numbers") rather than listing them.
 
 **Teaching arc (concrete → pictorial → symbolic):**
 - **Concrete (recipe — `metaphors.md` Functions B):** "f(x)=3x-1 is the recipe *triple it, then subtract one*. The name of the recipe is f. The thing in the parentheses is what you drop into the bowl. f(2) = 'run 2 through the recipe': 3(2)-1=5." Say plainly: "The parentheses here mean *feed this in*, not *multiply*."
@@ -175,9 +175,9 @@ So the form of the answer follows the domain: a discrete domain → list in brac
 **Visuals to offer:** none needed for evaluation. For domain/range of a *line*, a small **SVG line graph** (`visuals.md` Template 2) with a sentence — "the line runs left-to-right forever and up-down forever, so domain and range are all real numbers" — helps the "all reals" idea land.
 
 **Check for understanding (transfer):**
-1. "With h(x)=2x+1, find h(-3), and tell me each step out loud."
-2. "Someone reads f(5) as 'f times 5'. In one sentence, what's wrong?"
-3. "Give me the domain and range of {(0,2),(1,2),(2,8)} — and explain why 2 is written once in the range."
+1. {#4.2.c1} "With h(x)=2x+1, find h(-3), and tell me each step out loud."
+2. {#4.2.c2} "Someone reads f(5) as 'f times 5'. In one sentence, what's wrong?"
+3. {#4.2.c3} "Give me the domain and range of {(0,2),(1,2),(2,8)} — and explain why 2 is written once in the range."
 
 **Practice problems:**
 
@@ -229,9 +229,9 @@ So the form of the answer follows the domain: a discrete domain → list in brac
 **Why it matters:** A function rarely arrives in your preferred form. Reading the *same* relationship as a table, a picture, an equation, or a sentence — and spotting when it's a straight line — is exactly the fluency Unit 5 (graphing, slope) and Unit 9 (linear vs. exponential) build on.
 
 **New terms:**
-- **Linear function** — constant rate of change; its graph is a straight line; its equation has the form y=mx+b (equivalently f(x)=mx+b), where — looking ahead to Unit 5 — m is that constant step (how much the output changes per +1 in x) and b is the starting output at x=0. For now you don't need to manipulate m and b; just recognize the straight-line shape and the constant step.
-- **Constant rate of change** — equal steps in x always produce equal steps in the output. (This *is* the unit rate from Unit 3, and it becomes **slope** in Unit 5.)
-- **Nonlinear function** — rate of change is *not* constant; the graph curves (e.g. y=x²).
+- {#4.3.d1} **Linear function** — constant rate of change; its graph is a straight line; its equation has the form y=mx+b (equivalently f(x)=mx+b), where — looking ahead to Unit 5 — m is that constant step (how much the output changes per +1 in x) and b is the starting output at x=0. For now you don't need to manipulate m and b; just recognize the straight-line shape and the constant step.
+- {#4.3.d2} **Constant rate of change** — equal steps in x always produce equal steps in the output. (This *is* the unit rate from Unit 3, and it becomes **slope** in Unit 5.)
+- {#4.3.d3} **Nonlinear function** — rate of change is *not* constant; the graph curves (e.g. y=x²).
 
 **Teaching arc (concrete → pictorial → symbolic):**
 - **Concrete / words:** "*Start with \$1, add \$2 every step*" is the same relationship as the rule f(x)=2x+1, as a table, and as a straight-line graph. Build the table together to see the words become numbers.
@@ -296,9 +296,9 @@ read the constant step (5−2=3, 8−5=3, 11−8=3 → +3 per step, so 3 sits in
 **Visuals to offer:** **SVG artifacts** — Template 2 for the straight line from Example 1, Template 3 for the y=x² parabola from Example 2 (compute the points, label them). Showing the two side by side makes "straight vs. curved" unmistakable. Pair each with its difference row in words.
 
 **Check for understanding (transfer):**
-1. "Here's a table with x = 0,1,2,3 and y = 2,2,2,2. Linear or not? What's its rate of change?"
-2. "Turn the words *'start at 10 and lose 1 each step'* into an equation and a four-row table."
-3. "A table's outputs go 2, 6, 12, 20 for x=1,2,3,4. Linear or nonlinear — and how can you tell without graphing?"
+1. {#4.3.c1} "Here's a table with x = 0,1,2,3 and y = 2,2,2,2. Linear or not? What's its rate of change?"
+2. {#4.3.c2} "Turn the words *'start at 10 and lose 1 each step'* into an equation and a four-row table."
+3. {#4.3.c3} "A table's outputs go 2, 6, 12, 20 for x=1,2,3,4. Linear or nonlinear — and how can you tell without graphing?"
 
 **Practice problems:**
 

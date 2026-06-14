@@ -28,8 +28,8 @@ The arc is concrete → symbolic three times over. **7.1 graphing** builds the m
 **Goal:** Find the solution of a system by graphing both lines and reading the point where they intersect.
 **Why it matters:** It makes the *meaning* of a system visible — the solution is literally where two relationships meet — and that picture anchors every algebraic method that follows.
 **New terms:**
-- **System of equations:** two (or more) equations considered together, asking for values that satisfy all of them at once.
-- **Solution of a system:** an ordered pair (x, y) that makes **every** equation in the system true. A system may have **one** such pair, **none**, or **infinitely many** (see 7.4) — so don't assume there's exactly one until you've solved it.
+- {#7.1.d1} **System of equations:** two (or more) equations considered together, asking for values that satisfy all of them at once.
+- {#7.1.d2} **Solution of a system:** an ordered pair (x, y) that makes **every** equation in the system true. A system may have **one** such pair, **none**, or **infinitely many** (see 7.4) — so don't assume there's exactly one until you've solved it.
 
 **Teaching arc (concrete → pictorial → symbolic):**
 - **Concrete / motivating:** "Equation one says y = x + 1 — a whole line of possibilities. Equation two says y = -x + 5 — another whole line. A *system* asks: is there a point that lives on **both** lines at once?" Each line is a function (Unit 5); we're hunting the input where the two functions return the same output.
@@ -71,9 +71,9 @@ Check: 3 = 1 + 2 and 3 = -1 + 4.
 **Visuals to offer:** `visuals.md` **Template 2** (coordinate plane + a line), used twice on one plane, as an **SVG artifact** with computed endpoints, the intercepts dotted, the crossing labeled, and the points table beside it. Never paste raw SVG into chat — emit an artifact.
 
 **Check for understanding (transfer):**
-1. "Without graphing yet — what does it *mean*, in words, that (2, 3) is the solution of a system? What two things must be true?"
-2. "Two lines on the same plane never touch. What does that tell you about how many solutions the system has?" (Sets up 7.4.)
-3. "If a system's solution were (1.5, 4.2), why would graphing by hand let you down — and what would you reach for instead?"
+1. {#7.1.c1} "Without graphing yet — what does it *mean*, in words, that (2, 3) is the solution of a system? What two things must be true?"
+2. {#7.1.c2} "Two lines on the same plane never touch. What does that tell you about how many solutions the system has?" (Sets up 7.4.)
+3. {#7.1.c3} "If a system's solution were (1.5, 4.2), why would graphing by hand let you down — and what would you reach for instead?"
 
 **Practice problems** (solve by graphing / finding where the two lines meet; give the ordered pair and check both):
 
@@ -102,7 +102,7 @@ Check: 3 = 1 + 2 and 3 = -1 + 4.
 **Goal:** Solve a system by isolating one variable in one equation and substituting that expression into the other, reducing two equations to a single one-variable equation.
 **Why it matters:** It's exact (no graph-reading guesswork) and it shines when one variable is already alone — common in word problems and in any equation written as y = ...
 **New terms:**
-- **Substitution:** replacing a variable with an expression equal to it. Because each variable denotes the *same* number in both equations, an expression equal to (say) y in one equation may stand in for y in the other.
+- {#7.2.d1} **Substitution:** replacing a variable with an expression equal to it. Because each variable denotes the *same* number in both equations, an expression equal to (say) y in one equation may stand in for y in the other.
 
 **Teaching arc (concrete → pictorial → symbolic):**
 - **Concrete:** "Equation one tells you exactly what y *is* — say y = 2x. The mystery box y is just 2x in disguise. So anywhere the second equation says y, pour in 2x instead." (Mystery-box metaphor, `metaphors.md` Variables A — both equations share the same hidden numbers.)
@@ -139,9 +139,9 @@ Check: 4 + 3 = 7 and 2(4) + 3 = 11. (Note: this same system is a natural fit for
 **Visuals to offer:** None needed; substitution is symbolic. If a student wants to *see* the answer, plot both lines (Template 2) and point to the crossing as confirmation.
 
 **Check for understanding (transfer):**
-1. "In y = 2x and x + y = 9, why is it safe to write x + 2x = 9? What justifies swapping y for 2x?"
-2. "You isolated y in equation one. Into *which* equation do you substitute, and why not the other?"
-3. "Make up a system where substitution is clearly the easier method than elimination, and say why."
+1. {#7.2.c1} "In y = 2x and x + y = 9, why is it safe to write x + 2x = 9? What justifies swapping y for 2x?"
+2. {#7.2.c2} "You isolated y in equation one. Into *which* equation do you substitute, and why not the other?"
+3. {#7.2.c3} "Make up a system where substitution is clearly the easier method than elimination, and say why."
 
 **Practice problems** (solve by substitution; give (x, y) and verify both):
 1. y = 3x and x + y = 8
@@ -170,8 +170,8 @@ Check: 4 + 3 = 7 and 2(4) + 3 = 11. (Note: this same system is a natural fit for
 **Goal:** Solve a system by adding or subtracting the two equations (scaling one or both first when needed) so that one variable cancels, leaving a single one-variable equation.
 **Why it matters:** It's the workhorse for systems written in standard form ax + by = c, where nothing is isolated. Scaling-then-combining is the core skill that carries into later math.
 **New terms:**
-- **Elimination (linear combination):** combining two equations so that one variable's terms sum to zero ("go to zero"), removing it.
-- **Scaling an equation:** multiplying an *entire* equation by a number. Because both sides are multiplied equally, the line — and the solution — is unchanged (balance scale, `metaphors.md` Equations A).
+- {#7.3.d1} **Elimination (linear combination):** combining two equations so that one variable's terms sum to zero ("go to zero"), removing it.
+- {#7.3.d2} **Scaling an equation:** multiplying an *entire* equation by a number. Because both sides are multiplied equally, the line — and the solution — is unchanged (balance scale, `metaphors.md` Equations A).
 
 **Teaching arc (concrete → pictorial → symbolic):**
 - **Concrete:** "If one equation says x + y = 10 and another says x - y = 4, stack them and add. The +y and -y are a debt and an equal cash — they cancel to zero (`misconceptions.md` §3). You're left with 2x = 14, one unknown."
@@ -218,9 +218,9 @@ Check: 3(2) + 2(3) = 12 and 5(2) - 2(3) = 4.
 **Visuals to offer:** None required. Optionally graph (Template 2) to confirm the crossing, especially if a student doubts the algebra.
 
 **Check for understanding (transfer):**
-1. "In 2x + 3y = 12 and 2x - y = 4, why subtract rather than add? What tells you which to do?"
-2. "Why is it legal to multiply x + y = 6 by 2? What stays true after you do?"
-3. "Given 4x + 3y = 10 and 2x + y = 4, which equation would you scale and by what, to eliminate x? (Don't solve — just plan the move.)"
+1. {#7.3.c1} "In 2x + 3y = 12 and 2x - y = 4, why subtract rather than add? What tells you which to do?"
+2. {#7.3.c2} "Why is it legal to multiply x + y = 6 by 2? What stays true after you do?"
+3. {#7.3.c3} "Given 4x + 3y = 10 and 2x + y = 4, which equation would you scale and by what, to eliminate x? (Don't solve — just plan the move.)"
 
 **Practice problems** (solve by elimination; scale first where needed; give (x, y) and verify both):
 
@@ -311,9 +311,9 @@ Check in the story: length 9 is 4 more than width 5, and perimeter 2(9) + 2(5) =
 **Visuals to offer:** For the special cases, a quick **Template 2** artifact showing the two **parallel** lines (no crossing) or the two lines **coincident** (one on top of the other) makes "none" and "infinitely many" visible. Compute endpoints; label slopes/intercepts.
 
 **Check for understanding (transfer):**
-1. "You solve a system and reach 7 = 7. How many solutions, and what do the graphs look like?"
-2. "Two lines have the same slope. What two situations are still possible, and how does the algebra tell them apart?"
-3. "A problem says '30 nickels and dimes worth $2.40.' Name your two variables and write the two equations — don't solve yet."
+1. {#7.4.c1} "You solve a system and reach 7 = 7. How many solutions, and what do the graphs look like?"
+2. {#7.4.c2} "Two lines have the same slope. What two situations are still possible, and how does the algebra tell them apart?"
+3. {#7.4.c3} "A problem says '30 nickels and dimes worth $2.40.' Name your two variables and write the two equations — don't solve yet."
 
 **Practice problems:**
 

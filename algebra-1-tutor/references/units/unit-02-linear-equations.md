@@ -37,9 +37,9 @@ The arc: 2.1 formalizes "same to both sides" on one-step equations; 2.2 stacks t
 **Why it matters:** This is the atom every later equation is built from. Two-step, both-sides, and fraction equations are all just sequences of these single moves.
 
 **New terms:**
-- **Solution:** a value that makes the equation a *true statement* when you substitute it in. (That's exactly why we check by substituting — we're confirming the statement is true.)
-- **Isolate the variable:** get x alone on one side, with a number on the other.
-- **Inverse (opposite) operation:** the operation that undoes another. Addition ↔ subtraction; multiplication ↔ division.
+- {#2.1.d1} **Solution:** a value that makes the equation a *true statement* when you substitute it in. (That's exactly why we check by substituting — we're confirming the statement is true.)
+- {#2.1.d2} **Isolate the variable:** get x alone on one side, with a number on the other.
+- {#2.1.d3} **Inverse (opposite) operation:** the operation that undoes another. Addition ↔ subtraction; multiplication ↔ division.
 
 **Teaching arc (concrete → pictorial → symbolic):**
 - *Concrete (balance scale, metaphors.md):* For x+5=12, picture a covered cup plus 5 coins balancing 12 coins. To find the cup's weight, remove 5 coins from *both* pans — still level. The cup alone balances 7 coins.
@@ -76,9 +76,9 @@ $$x+7=7 \;\xrightarrow{\,-7\,}\; x=0 \qquad \text{Check: } 0+7=7$$
 **Visuals to offer:** A balance-scale sketch or the ASCII cup-and-coins above is plenty; no artifact needed.
 
 **Check for understanding (transfer):**
-1. "Solve x-5=12, and prove it's right without me." (listen for the substitution check)
-2. "In 6x=6, what's the inverse operation, and why does the 6 in front *go to one*?"
-3. "If I change x+9=14 to 9+x=14, does anything about your method change?" (no — addition order doesn't matter)
+1. {#2.1.c1} "Solve x-5=12, and prove it's right without me." (listen for the substitution check)
+2. {#2.1.c2} "In 6x=6, what's the inverse operation, and why does the 6 in front *go to one*?"
+3. {#2.1.c3} "If I change x+9=14 to 9+x=14, does anything about your method change?" (no — addition order doesn't matter)
 
 **Practice problems:**
 
@@ -140,9 +140,9 @@ $$3x+6=6 \;\xrightarrow{\,-6\,}\; 3x=0 \;\xrightarrow{\,\div 3\,}\; x=0 \qquad \
 **Visuals to offer:** none needed; the → step notation is the visual.
 
 **Check for understanding (transfer):**
-1. "Solve 3x+4=19 — and tell me *why* you subtracted before dividing." (pedagogy.md near-twin)
-2. "What would change if it were 2x-5=13 instead of 2x+5=13?"
-3. "In 10=4x-2, the variable's on the right. Does that break anything?"
+1. {#2.2.c1} "Solve 3x+4=19 — and tell me *why* you subtracted before dividing." (pedagogy.md near-twin)
+2. {#2.2.c2} "What would change if it were 2x-5=13 instead of 2x+5=13?"
+3. {#2.2.c3} "In 10=4x-2, the variable's on the right. Does that break anything?"
 
 **Practice problems:**
 
@@ -172,10 +172,10 @@ $$3x+6=6 \;\xrightarrow{\,-6\,}\; 3x=0 \;\xrightarrow{\,\div 3\,}\; x=0 \qquad \
 **Why it matters:** Before you can solve a messier equation you have to *tidy* it. This lesson also seeds the area model that returns for multiplying binomials and factoring (Units 10–11). And distributing a negative is the single most common sign error in all of Algebra 1 — worth real care here.
 
 **New terms:**
-- **Term:** a number, a variable, or numbers and variables multiplied together; in an expression the terms are the parts being *added*. A minus sign belongs to the term that follows it (subtracting is adding a negative), so in 3x − 5 the terms are 3x and **−5** — the sign travels with its term. That's exactly why distributing −2 over (x − 5) has to send −2 to **both** x and −5: the −5 is a term, sign and all.
-- **Coefficient:** the number multiplying the variable (the 3 in 3x).
-- **Like terms:** terms with the **same variable part** — the same variable(s) raised to the same power. Right now that just means the same variable: 3x and 2x are like; 3x and 2 are **not** (one is "boxes," the other is "loose units"). Later, 3x² and 5x² will be like, but 3x and 3x² will not.
-- **Distributive property:** a(b+c)=ab+ac, and likewise a(b−c)=ab−ac. Subtracting is adding a negative, so it's the same rule — just keep the sign. The outside factor multiplies *everything* inside.
+- {#2.3.d1} **Term:** a number, a variable, or numbers and variables multiplied together; in an expression the terms are the parts being *added*. A minus sign belongs to the term that follows it (subtracting is adding a negative), so in 3x − 5 the terms are 3x and **−5** — the sign travels with its term. That's exactly why distributing −2 over (x − 5) has to send −2 to **both** x and −5: the −5 is a term, sign and all.
+- {#2.3.d2} **Coefficient:** the number multiplying the variable (the 3 in 3x).
+- {#2.3.d3} **Like terms:** terms with the **same variable part** — the same variable(s) raised to the same power. Right now that just means the same variable: 3x and 2x are like; 3x and 2 are **not** (one is "boxes," the other is "loose units"). Later, 3x² and 5x² will be like, but 3x and 3x² will not.
+- {#2.3.d4} **Distributive property:** a(b+c)=ab+ac, and likewise a(b−c)=ab−ac. Subtracting is adding a negative, so it's the same rule — just keep the sign. The outside factor multiplies *everything* inside.
 
 **Teaching arc (concrete → pictorial → symbolic):**
 - *Combining like terms (mystery-box picture, metaphors.md → Variables):* 3x is three identical boxes, 2x is two more of the same box — together 5x. But 3x+2 is three boxes plus two loose coins: you can't merge boxes with loose coins, so it **stays** 3x+2 (misconceptions.md §7). Ask: "Can you add boxes to loose units and get one kind of thing?"
@@ -212,9 +212,9 @@ Check at x=1: original 3-2(1-5)=3-2(-4)=3+8=11; rewrite -2(1)+13=11. (Common wro
 **Visuals to offer:** The LaTeX `array` area-model box above (visuals.md → area-model) for any distribution — especially helpful when a negative is involved; show the -1 entering each cell.
 
 **Check for understanding (transfer):**
-1. "Simplify 5x+2-x. Which terms are 'like,' and which loner stays put?"
-2. "Expand -(2x+5) and convince me the signs are right by testing x=1."
-3. "A student writes 4-2(x+3)=4-2x+6. Where exactly did it go wrong?" (the -2×3 should be -6)
+1. {#2.3.c1} "Simplify 5x+2-x. Which terms are 'like,' and which loner stays put?"
+2. {#2.3.c2} "Expand -(2x+5) and convince me the signs are right by testing x=1."
+3. {#2.3.c3} "A student writes 4-2(x+3)=4-2x+6. Where exactly did it go wrong?" (the -2×3 should be -6)
 
 **Practice problems** (mix of combine and distribute; several lead with a negative):
 
@@ -242,9 +242,9 @@ Check at x=1: original 3-2(1-5)=3-2(-4)=3+8=11; rewrite -2(1)+13=11. (Common wro
 **Why it matters:** Real comparisons ("when does plan A cost the same as plan B?") put unknowns on both sides. It's also a direct rehearsal of every habit so far. And it's where a linear equation finally shows all three things it can do — see "The three outcomes" below.
 
 **New terms:**
-- **Conditional equation:** an equation that's true for exactly one value of the variable — the usual case, with a single solution (e.g. 5x+2=3x+10, true only at x=4).
-- **Identity:** an equation that's true for *every* value — both sides are really the same expression. Its solution set is **all real numbers / infinitely many solutions** (e.g. 2x+4=2(x+2)).
-- **Contradiction:** an equation that's true for *no* value — it reduces to a false numeric statement. It has **no solution** (e.g. 2x+3=2x+5).
+- {#2.4.d1} **Conditional equation:** an equation that's true for exactly one value of the variable — the usual case, with a single solution (e.g. 5x+2=3x+10, true only at x=4).
+- {#2.4.d2} **Identity:** an equation that's true for *every* value — both sides are really the same expression. Its solution set is **all real numbers / infinitely many solutions** (e.g. 2x+4=2(x+2)).
+- {#2.4.d3} **Contradiction:** an equation that's true for *no* value — it reduces to a false numeric statement. It has **no solution** (e.g. 2x+3=2x+5).
 
 **Teaching arc (concrete → pictorial → symbolic):**
 - *Balance picture:* 5x+2=3x+10 — both pans have boxes *and* coins. To corner x, remove the same thing from both pans. Take 3x off each side (the 3x on the right **goes to zero**), leaving 2x+2=10. Then it's a familiar two-step.
@@ -320,11 +320,11 @@ Find the line where it breaks. (The distribution: −2 times −1 is **+2**, not
 **Visuals to offer:** none needed; a two-pan balance sketch can help a stuck student *see* boxes coming off both sides.
 
 **Check for understanding (transfer):**
-1. "Solve 6x+1=4x+9. Which side did you move the variable to, and why that one?"
-2. "In 3x+8=7x+20, if you move 3x right you'll hit a negative. Walk me through it and check."
-3. "Why must we distribute 2(x-1) *before* gathering the x's?"
-4. "You solve an equation and the x's disappear, leaving 7=7. What's the solution — and what would it mean instead if you'd been left with 7=2?" (all real numbers; vs. no solution)
-5. "Give me the fewest-steps first move for 4(x+5)=24, and say why dividing by 4 first is cleaner here than distributing."
+1. {#2.4.c1} "Solve 6x+1=4x+9. Which side did you move the variable to, and why that one?"
+2. {#2.4.c2} "In 3x+8=7x+20, if you move 3x right you'll hit a negative. Walk me through it and check."
+3. {#2.4.c3} "Why must we distribute 2(x-1) *before* gathering the x's?"
+4. {#2.4.c4} "You solve an equation and the x's disappear, leaving 7=7. What's the solution — and what would it mean instead if you'd been left with 7=2?" (all real numbers; vs. no solution)
+5. {#2.4.c5} "Give me the fewest-steps first move for 4(x+5)=24, and say why dividing by 4 first is cleaner here than distributing."
 
 **Practice problems:**
 
@@ -428,9 +428,9 @@ Don't "round" 15/2 to 7 or 8 — an exact fraction *is* the answer. Just as zero
 **Visuals to offer:** none needed; an ASCII number line can anchor a magnitude question (3/2 sits past 1) if the student doubts it.
 
 **Check for understanding (transfer):**
-1. "Solve (2/5)x=8 two ways — by reciprocal, and by multiplying through by 5 — and confirm they agree."
-2. "In x/2 + x/4 = 6, what number clears *both* fractions, and why that one?"
-3. "Why does multiplying by 3/2 make (2/3)x *go to one* times x?"
+1. {#2.5.c1} "Solve (2/5)x=8 two ways — by reciprocal, and by multiplying through by 5 — and confirm they agree."
+2. {#2.5.c2} "In x/2 + x/4 = 6, what number clears *both* fractions, and why that one?"
+3. {#2.5.c3} "Why does multiplying by 3/2 make (2/3)x *go to one* times x?"
 
 **Practice problems:**
 

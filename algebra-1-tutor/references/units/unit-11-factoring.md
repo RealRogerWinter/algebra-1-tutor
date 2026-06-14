@@ -39,9 +39,9 @@ The arc: **11.1** pulls a common factor out front (the inverse of single-term di
 **Scope (state this once, up front):** Throughout this unit we **factor over the integers** — every factor we write has whole-number (integer) coefficients. So "factor x²+5x+6" means "write it as a product of pieces with integer coefficients," and a problem that *can't* be done with integers is answered honestly as **prime** (11.2) — not forced. We do **not** use fractions, decimals, square roots, or complex numbers as a factoring method here; those wait for Unit 12.
 
 **New terms:**
-- **Factor (noun):** something multiplied. In 6=2·3, both 2 and 3 are factors of 6. In 3(2x+3), the factors are 3 and (2x+3).
-- **Greatest common factor (GCF):** the *largest* factor — biggest number times the most variables — that divides evenly into **every** term.
-- **Factor (verb):** to rewrite a sum as a product, i.e. to *undo* distributing.
+- {#11.1.d1} **Factor (noun):** something multiplied. In 6=2·3, both 2 and 3 are factors of 6. In 3(2x+3), the factors are 3 and (2x+3).
+- {#11.1.d2} **Greatest common factor (GCF):** the *largest* factor — biggest number times the most variables — that divides evenly into **every** term.
+- {#11.1.d3} **Factor (verb):** to rewrite a sum as a product, i.e. to *undo* distributing.
 
 **Teaching arc (concrete → pictorial → symbolic):**
 - *Concrete (common item in every bag, metaphors.md → Factoring B):* Each term is a gift bag. If *every* bag contains a chocolate, you can take one chocolate out of each and set them in a single pile out front. 6x+9: both terms are divisible by 3, so 3 comes out front and what's left of each bag goes inside: 3(2x+3).
@@ -87,9 +87,9 @@ $$10x^2-25x \;=\; 5x(2x-5) \qquad \text{Check: } 5x\cdot 2x - 5x\cdot 5 = 10x^2-
 **Visuals to offer:** the one-row LaTeX `array` area-model box above (visuals.md → area-model) — show the GCF as the left edge and the inside as the top labels. No artifact needed.
 
 **Check for understanding (transfer):**
-1. "Factor 8x²+12x, then prove it's right without me." (listen for the multiply-back check)
-2. "A student writes 6x+9=3(2x+9). Multiply it back — where did it go wrong?" (3·3=9, so the 9 inside should be 3)
-3. "Why can't you pull x² out of 15x³-10x² as x² *and* also leave an x in the second term?" (the second term *is* the x²; nothing's left of it but the coefficient)
+1. {#11.1.c1} "Factor 8x²+12x, then prove it's right without me." (listen for the multiply-back check)
+2. {#11.1.c2} "A student writes 6x+9=3(2x+9). Multiply it back — where did it go wrong?" (3·3=9, so the 9 inside should be 3)
+3. {#11.1.c3} "Why can't you pull x² out of 15x³-10x² as x² *and* also leave an x in the second term?" (the second term *is* the x²; nothing's left of it but the coefficient)
 
 **Practice problems:**
 
@@ -114,9 +114,9 @@ $$10x^2-25x \;=\; 5x(2x-5) \qquad \text{Check: } 5x\cdot 2x - 5x\cdot 5 = 10x^2-
 **Why it matters:** This is the lesson the whole unit builds toward. It's the reverse of the binomial multiplication from Unit 10, and it's the key that unlocks **solving quadratics by factoring** in Unit 12 — once x²+5x+6=(x+2)(x+3), setting it to zero is one short step away. Invest the most time here.
 
 **New terms:**
-- **Trinomial:** a polynomial with three *unlike* terms (after combining like terms), here x²+bx+c — a squared term, an x term, and a constant.
-- **Prime (irreducible over the integers):** a trinomial that **cannot** be written as a product of two binomials with integer coefficients. When the two-number search comes up empty, the trinomial is prime — that's a real answer, not a failure.
-- **Monic:** leading coefficient 1, i.e. the x² has no number in front (just x², not 3x²). Every trinomial in this lesson is monic. Trinomials like 2x²+7x+3, where the leading coefficient is not 1, factor by an extension of this method covered later.
+- {#11.2.d1} **Trinomial:** a polynomial with three *unlike* terms (after combining like terms), here x²+bx+c — a squared term, an x term, and a constant.
+- {#11.2.d2} **Prime (irreducible over the integers):** a trinomial that **cannot** be written as a product of two binomials with integer coefficients. When the two-number search comes up empty, the trinomial is prime — that's a real answer, not a failure.
+- {#11.2.d3} **Monic:** leading coefficient 1, i.e. the x² has no number in front (just x², not 3x²). Every trinomial in this lesson is monic. Trinomials like 2x²+7x+3, where the leading coefficient is not 1, factor by an extension of this method covered later.
 
 **Teaching arc (concrete → pictorial → symbolic):**
 - *Pictorial (reverse the area box, metaphors.md → Factoring A; visuals.md → area-model):* In Unit 10, (x+2)(x+3) filled a box: corners x² and 6, middle cells 2x and 3x that add to 5x. Factoring runs it **backward** — you're handed the inside and must find the edges:
@@ -195,10 +195,10 @@ A few honest cautions for the tutor:
 **Visuals to offer:** the 2×2 LaTeX `array` area-model box (visuals.md → area-model), filled in *backward* — write the known corners (x² and c) and let the student deduce the edges. Especially useful for a stuck student.
 
 **Check for understanding (transfer):**
-1. "Factor x²+8x+15, and tell me *why* both numbers are positive." (because c>0 and b>0)
-2. "What changes between x²+2x-8 and x²-2x-8? Factor both." (the sign of b flips which number is negative)
-3. "A student says x²-7x+12=(x+3)(x+4). Multiply it back — what's wrong, and what's the fix?" (gives +7x; both factors should be negative: (x-3)(x-4))
-4. "Is x²+3x+5 factorable over the integers? List the pairs out loud and decide." (pairs of 5: 1·5 sums to 6 — that's the only one; no pair sums to 3 ⇒ **prime**)
+1. {#11.2.c1} "Factor x²+8x+15, and tell me *why* both numbers are positive." (because c>0 and b>0)
+2. {#11.2.c2} "What changes between x²+2x-8 and x²-2x-8? Factor both." (the sign of b flips which number is negative)
+3. {#11.2.c3} "A student says x²-7x+12=(x+3)(x+4). Multiply it back — what's wrong, and what's the fix?" (gives +7x; both factors should be negative: (x-3)(x-4))
+4. {#11.2.c4} "Is x²+3x+5 factorable over the integers? List the pairs out loud and decide." (pairs of 5: 1·5 sums to 6 — that's the only one; no pair sums to 3 ⇒ **prime**)
 
 **Practice problems:**
 
@@ -233,9 +233,9 @@ A few honest cautions for the tutor:
 **Why it matters:** These show up constantly (and again in Unit 12). Spotting them saves the whole two-number search — and knowing a²+b² (a sum of squares) does **not** factor over the integers keeps the student from chasing a factorization that isn't there.
 
 **New terms:**
-- **Perfect square:** a quantity that is something squared. 9=3², x²=(x)², 4x²=(2x)² are perfect squares; 7 and x are not.
-- **Difference of squares:** one perfect square *minus* another, a²-b².
-- **Perfect-square trinomial:** a trinomial that is exactly (a±b)² multiplied out.
+- {#11.3.d1} **Perfect square:** a quantity that is something squared. 9=3², x²=(x)², 4x²=(2x)² are perfect squares; 7 and x are not.
+- {#11.3.d2} **Difference of squares:** one perfect square *minus* another, a²-b².
+- {#11.3.d3} **Perfect-square trinomial:** a trinomial that is exactly (a±b)² multiplied out.
 
 **Teaching arc (concrete → pictorial → symbolic):**
 
@@ -297,9 +297,9 @@ Pulling 3 exposes x²-4, a difference of squares. Note neither step was visible 
 **Visuals to offer:** the difference-of-squares area box above (visuals.md → area-model) — the cancelling middle cells make the pattern visible. No artifact needed.
 
 **Check for understanding (transfer):**
-1. "Is x²-16 a difference of squares? Factor it, then multiply back to prove it." ((x+4)(x-4))
-2. "Can x²+16 be factored the same way? Why or why not?" (no — a sum of squares is prime over the integers; (x+4)(x-4) would give x²-16, a minus)
-3. "How do you tell x²+6x+9 (a perfect square) from x²+6x+8 (not one)? Factor each." ((x+3)² vs. (x+2)(x+4) — check the middle against twice the roots)
+1. {#11.3.c1} "Is x²-16 a difference of squares? Factor it, then multiply back to prove it." ((x+4)(x-4))
+2. {#11.3.c2} "Can x²+16 be factored the same way? Why or why not?" (no — a sum of squares is prime over the integers; (x+4)(x-4) would give x²-16, a minus)
+3. {#11.3.c3} "How do you tell x²+6x+9 (a perfect square) from x²+6x+8 (not one)? Factor each." ((x+3)² vs. (x+2)(x+4) — check the middle against twice the roots)
 
 **Practice problems:**
 
