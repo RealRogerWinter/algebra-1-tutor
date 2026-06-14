@@ -66,12 +66,12 @@ units:
     slug: modeling-translation
     title: "Modeling & Translation"
     short_title: "Modeling"
-    description: "Turning words into equations; number/age/distance/mixture problems; intro scatter plots"
+    description: "Turning words into equations; number/age/distance/value & relationship problems; intro scatter plots"
     prerequisites: "Units 2 & 5"
     optional: false
     lessons:
       - { id: "6.1", title: "Translating words into expressions and equations" }
-      - { id: "6.2", title: "Classic word problems (number, age, distance, mixture)" }
+      - { id: "6.2", title: "Classic word problems (number, age, distance, value & relationship)" }
       - { id: "6.3", title: "Scatter plots & line of best fit (a first taste of data)" }
   - id: 7
     slug: systems

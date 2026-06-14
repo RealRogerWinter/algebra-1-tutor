@@ -16,6 +16,11 @@ The full machine-readable map (with the prerequisite graph and a placement check
 - **Statistics promoted to a core unit (Unit A)** — CCSS‑aligned data & statistics on the mastery path, kept trailing after the capstone so the spine numbering stays append‑only.
 - **Prerequisite metadata** on every unit so a student can jump anywhere safely.
 
+## Intentional scope departures (documented choices, not gaps)
+
+- **Rational expressions are omitted** — narrower than a traditional OpenStax Elementary/Intermediate sequence. They sit at the Algebra‑1/Algebra‑2 boundary, so this course holds the Algebra‑1 line and leaves rational *expressions* (and rational *functions*) to a later course.
+- **Proportional reasoning (Unit 3) sits below the Algebra‑1 line** (Grade 6–7 content), kept deliberately as a **bridge/review** unit: a unit rate *is* a constant rate of change *is* slope, so it earns its place as the on‑ramp to linearity rather than as new Algebra‑1 material.
+
 ## Units
 
 | # | Unit | Focus |
@@ -26,7 +31,7 @@ The full machine-readable map (with the prerequisite graph and a placement check
 | 3 | Proportional Reasoning (the bridge to linearity) | Ratios, rates, unit rate, proportions, percents |
 | 4 | Introducing Functions | What a function is, f(x) notation, domain & range, table/graph/equation/words |
 | 5 | Linear Functions & Their Graphs | Coordinate plane, graphing, slope, slope-intercept, writing equations of lines |
-| 6 | Modeling & Translation | Turning words into equations; number/age/distance/mixture problems; intro scatter plots |
+| 6 | Modeling & Translation | Turning words into equations; number/age/distance/value & relationship problems; intro scatter plots |
 | 7 | Systems of Equations | Two equations, two unknowns: graphing, substitution, elimination, special cases |
 | 8 | Inequalities | One-variable, the sign-flip, compound, absolute value, two-variable graphing |
 | 9 | Sequences & Exponential Functions | Arithmetic/geometric sequences as functions, exponential growth & decay, linear vs. exponential |

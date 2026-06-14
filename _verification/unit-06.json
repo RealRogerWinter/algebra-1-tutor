@@ -42,6 +42,8 @@
     {"id": "6.3.4",  "kind": "manual", "answer": "negative association"},
     {"id": "6.3.5",  "kind": "eval",   "expr": "3*4+2",                   "answer": "14"},
     {"id": "6.3.6",  "kind": "eval",   "expr": "-2*15+50",                "answer": "20"},
-    {"id": "6.3.7",  "kind": "eval",   "expr": "0.5*20+60",               "answer": "70"}
+    {"id": "6.3.7",  "kind": "eval",   "expr": "0.5*20+60",               "answer": "70"},
+    {"id": "6.3.8",  "kind": "manual", "answer": "slope 12 = $12 earned per hour worked (a rate); intercept 0 = $0 earned at 0 hours"},
+    {"id": "6.3.9",  "kind": "manual", "answer": "interpolation (x=4 is inside the data range 1-6); interpolation is more trustworthy than extrapolation"}
   ]
 }
