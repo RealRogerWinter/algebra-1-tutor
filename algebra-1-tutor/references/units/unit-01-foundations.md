@@ -25,9 +25,9 @@ Pacing: a fluent adult may blow through 1.2–1.4 — let them; reserve the full
 **Why it matters:** This is the most predictive idea in the whole course. Every equation-solving move — "do the same to both sides" — only makes sense if = means *balance*, not *compute the answer here*.
 
 **New terms:**
-- **Variable:** a letter that stands in for a number we don't know yet (not a label for an object). Every copy of the same letter in one problem holds the *same* hidden number.
-- **Equation:** a sentence claiming two things have the *same value*, joined by =.
-- **Open sentence:** a number sentence with a blank or variable — neither true nor false until the unknown is filled (e.g. x + 3 = 7).
+- {#1.1.d1} **Variable:** a letter that stands in for a number we don't know yet (not a label for an object). Every copy of the same letter in one problem holds the *same* hidden number.
+- {#1.1.d2} **Equation:** a sentence claiming two things have the *same value*, joined by =.
+- {#1.1.d3} **Open sentence:** a number sentence with a blank or variable — neither true nor false until the unknown is filled (e.g. x + 3 = 7).
 
 **Teaching arc (concrete → pictorial → symbolic):**
 1. **Front-load the key idea.** Say it plainly: "= means *the same as* — the two sides balance. It is **not** a button that says 'the answer goes here.'" This reframe is the whole lesson (see `misconceptions.md` §1).
@@ -56,9 +56,9 @@ Pacing: a fluent adult may blow through 1.2–1.4 — let them; reserve the full
 **Visuals to offer:** A simple balance-scale sketch in words usually suffices; no artifact required. A number line can wait for 1.2.
 
 **Check for understanding (transfer):**
-- "Fill the blank so it stays true: 6 + □ = 4 + 5. Walk me through how you know."
-- "Is 9 = 9 a real equation? Why or why not?"
-- "In x - 2 = 5, which operation do we undo, and why does undoing it tell us x?"
+- {#1.1.c1} "Fill the blank so it stays true: 6 + □ = 4 + 5. Walk me through how you know."
+- {#1.1.c2} "Is 9 = 9 a real equation? Why or why not?"
+- {#1.1.c3} "In x - 2 = 5, which operation do we undo, and why does undoing it tell us x?"
 
 **Practice problems:**
 
@@ -92,13 +92,13 @@ Pacing: a fluent adult may blow through 1.2–1.4 — let them; reserve the full
 **Why it matters:** When a student solves 2x = 7 and gets 3.5, they need to *trust* that 3.5 is a real, correct number — not assume they erred. The number line is the unifying picture for the whole course; algebra lives on the *whole* line.
 
 **New terms:**
-- **Natural (counting) numbers:** 1, 2, 3, …
-- **Whole numbers:** the naturals plus 0.
-- **Integers:** whole numbers and their negatives — …, -2, -1, 0, 1, 2, … — no fractional part.
-- **Rational numbers:** any number that can be written as a ratio of two integers a/b (b ≠ 0). This *includes* integers (5 = 5/1), terminating decimals (4.8 = 24/5), and repeating decimals (0.333… = 1/3).
-- **Irrational numbers:** numbers whose decimal *never ends and never repeats*, so they **cannot** be written as a ratio of two integers — for example π = 3.14159… and √2 = 1.41421…. (No radical arithmetic yet; √2 returns in Unit 12. Here, just know it names a real point on the line.)
-- **Real numbers:** every number on the number line — the rationals **and** the irrationals together. Algebra works over the real numbers, so "the whole line" finally has a name.
-- **Decimal:** a way of *writing* a number using a decimal point; the way it's written doesn't change what kind of number it is.
+- {#1.2.d1} **Natural (counting) numbers:** 1, 2, 3, …
+- {#1.2.d2} **Whole numbers:** the naturals plus 0.
+- {#1.2.d3} **Integers:** whole numbers and their negatives — …, -2, -1, 0, 1, 2, … — no fractional part.
+- {#1.2.d4} **Rational numbers:** any number that can be written as a ratio of two integers a/b (b ≠ 0). This *includes* integers (5 = 5/1), terminating decimals (4.8 = 24/5), and repeating decimals (0.333… = 1/3).
+- {#1.2.d5} **Irrational numbers:** numbers whose decimal *never ends and never repeats*, so they **cannot** be written as a ratio of two integers — for example π = 3.14159… and √2 = 1.41421…. (No radical arithmetic yet; √2 returns in Unit 12. Here, just know it names a real point on the line.)
+- {#1.2.d6} **Real numbers:** every number on the number line — the rationals **and** the irrationals together. Algebra works over the real numbers, so "the whole line" finally has a name.
+- {#1.2.d7} **Decimal:** a way of *writing* a number using a decimal point; the way it's written doesn't change what kind of number it is.
 
 **Teaching arc (concrete → pictorial → symbolic):**
 1. **Layers, like nested boxes.** Start at counting numbers and add one capability at a time: add 0 → whole numbers; add negatives → integers; allow ratios → rationals. Each layer *contains* the previous one (every integer is rational).
@@ -121,9 +121,9 @@ Pacing: a fluent adult may blow through 1.2–1.4 — let them; reserve the full
 **Visuals to offer:** A clean **number line** (`visuals.md` Template 1 for a marked point, or a simple ASCII line) showing integers as ticks with 3/4, 2.5, and -2.5 placed in the gaps. Always pair with a one-sentence description.
 
 **Check for understanding (transfer):**
-- "Give me a number that is rational but *not* an integer, and explain how you know it's rational."
-- "Is 12/3 an integer? Convince me using its value, not its appearance."
-- "Roughly where does -2.5 sit relative to -2 and -3 on the line?"
+- {#1.2.c1} "Give me a number that is rational but *not* an integer, and explain how you know it's rational."
+- {#1.2.c2} "Is 12/3 an integer? Convince me using its value, not its appearance."
+- {#1.2.c3} "Roughly where does -2.5 sit relative to -2 and -3 on the line?"
 
 **Practice problems:** Classify each number; label **all** types that apply (integer / rational / irrational / real — note non-integer where it matters). Evaluate first where needed. Every one of these is a **real** number.
 1. 7
@@ -163,7 +163,7 @@ Pacing: a fluent adult may blow through 1.2–1.4 — let them; reserve the full
 **Why it matters:** A reliable, shared order is what lets everyone agree on what an expression means. Most errors here are *systematic* (not random), so naming the trap fixes them.
 
 **New terms:**
-- **Order of operations:** the agreed sequence for evaluating an expression. PEMDAS, but really **four tiers**: **Grouping symbols** (parentheses, brackets [ ], and the fraction bar) — the "P" tier, **E**xponents, **[M**ultiply/**D**ivide**]** (one tier, left to right), **[A**dd/**S**ubtract**]** (one tier, left to right). The "P" in PEMDAS is really *grouping*, not just round parentheses: a fraction bar groups too, meaning "evaluate the whole top and the whole bottom first, then divide."
+- {#1.3.d1} **Order of operations:** the agreed sequence for evaluating an expression. PEMDAS, but really **four tiers**: **Grouping symbols** (parentheses, brackets [ ], and the fraction bar) — the "P" tier, **E**xponents, **[M**ultiply/**D**ivide**]** (one tier, left to right), **[A**dd/**S**ubtract**]** (one tier, left to right). The "P" in PEMDAS is really *grouping*, not just round parentheses: a fraction bar groups too, meaning "evaluate the whole top and the whole bottom first, then divide."
 
 **Teaching arc (concrete → pictorial → symbolic):**
 1. **Four tiers, not six.** The headline (see `misconceptions.md` §5): multiply and divide are *equal-rank partners*, read left to right; same for add and subtract. There is no "M before D" or "A before S."
@@ -188,9 +188,9 @@ Pacing: a fluent adult may blow through 1.2–1.4 — let them; reserve the full
 **Visuals to offer:** None needed; the tier list and worked traps carry it.
 
 **Check for understanding (transfer):**
-- "Without computing fully — in 20 ÷ 4 × 2, which operation happens first and why?"
-- "Why does 2 × 3² come out to 18, not 36?"
-- "Put parentheses into 2 + 3 × 4 to make it equal 20."
+- {#1.3.c1} "Without computing fully — in 20 ÷ 4 × 2, which operation happens first and why?"
+- {#1.3.c2} "Why does 2 × 3² come out to 18, not 36?"
+- {#1.3.c3} "Put parentheses into 2 + 3 × 4 to make it equal 20."
 
 **Practice problems:**
 1. 5 + 2 × 3
@@ -219,9 +219,9 @@ Pacing: a fluent adult may blow through 1.2–1.4 — let them; reserve the full
 **Why it matters:** Negatives appear in nearly every later answer. Making them automatic now means a future problem adds only *one* new difficulty, not two.
 
 **New terms:**
-- **Opposite (additive inverse):** the same distance from 0 on the other side; the opposite of 5 is -5. Subtracting a number is the same as adding its opposite.
-- **Absolute value |a|:** how far a is from 0 on the number line — a *distance*, so it is **never negative**. |5| = 5 and |-5| = 5 (both sit 5 units from 0); |0| = 0. Opposite and absolute value pair up: opposites share the same absolute value (|5| = |-5|) but have opposite signs.
-- **Sign rules (×, ÷):** same signs → positive; different signs → negative. In a product, an **even** number of negative factors → positive; an **odd** number → negative.
+- {#1.4.d1} **Opposite (additive inverse):** the same distance from 0 on the other side; the opposite of 5 is -5. Subtracting a number is the same as adding its opposite.
+- {#1.4.d2} **Absolute value |a|:** how far a is from 0 on the number line — a *distance*, so it is **never negative**. |5| = 5 and |-5| = 5 (both sit 5 units from 0); |0| = 0. Opposite and absolute value pair up: opposites share the same absolute value (|5| = |-5|) but have opposite signs.
+- {#1.4.d3} **Sign rules (×, ÷):** same signs → positive; different signs → negative. In a product, an **even** number of negative factors → positive; an **odd** number → negative.
 
 **Teaching arc (concrete → pictorial → symbolic):**
 1. **Order on the number line.** Bigger negative = farther *left*. So -5 < -2 (a common surprise — 5 > 2 tempts the eye). Money framing (`metaphors.md`, Negatives A): owing $5 is worse off than owing $2, so -5 < -2. Name the distance: |a| is how far a sits from 0, ignoring direction, so |-5| = 5 > |-2| = 2 — -5 is farther left because its **distance from 0 is larger**, even though as a *value* -5 < -2. Keep **distance** (|a|, always ≥ 0) separate from **value** (which can be negative); blurring the two is what makes ordering negatives feel backwards.
@@ -248,9 +248,9 @@ Pacing: a fluent adult may blow through 1.2–1.4 — let them; reserve the full
 **Visuals to offer:** An **ASCII number line** is ideal here (`visuals.md`): show a hop, e.g. start at -3, move 5 left to -8. Pair with a sentence.
 
 **Check for understanding (transfer):**
-- "Which is greater, -7 or -3? Explain using the number line or debt."
-- "Rewrite 6 - (-2) as an addition, then evaluate it."
-- "(-2)(-2)(-2) — is the result positive or negative *before* you multiply? How do you know?"
+- {#1.4.c1} "Which is greater, -7 or -3? Explain using the number line or debt."
+- {#1.4.c2} "Rewrite 6 - (-2) as an addition, then evaluate it."
+- {#1.4.c3} "(-2)(-2)(-2) — is the result positive or negative *before* you multiply? How do you know?"
 
 **Practice problems:**
 
@@ -293,9 +293,9 @@ Pacing: a fluent adult may blow through 1.2–1.4 — let them; reserve the full
 **Why it matters:** These are the two central objects of algebra. An expression *has a value* once you know the variable; an equation *makes a claim*. Confusing them ("solving" an expression, or "evaluating" an equation) derails everything that follows.
 
 **New terms:**
-- **Expression:** a mathematical *phrase* with no equals sign — e.g. 3x + 2. It names a value once you know the variable; you **evaluate** it.
-- **Equation:** a full *sentence* with an = — e.g. 3x + 2 = 14. It *claims* two things are equal; you **solve** it.
-- **Evaluate / substitute:** replace the variable with a given number and compute (use the reserved-seat metaphor — the person finally sits down, `metaphors.md`, Variables B).
+- {#1.5.d1} **Expression:** a mathematical *phrase* with no equals sign — e.g. 3x + 2. It names a value once you know the variable; you **evaluate** it.
+- {#1.5.d2} **Equation:** a full *sentence* with an = — e.g. 3x + 2 = 14. It *claims* two things are equal; you **solve** it.
+- {#1.5.d3} **Evaluate / substitute:** replace the variable with a given number and compute (use the reserved-seat metaphor — the person finally sits down, `metaphors.md`, Variables B).
 
 **Teaching arc (concrete → pictorial → symbolic):**
 1. **Phrase vs. sentence.** An expression is a *noun phrase* ("three more than twice a number"); an equation is a full *sentence* with a verb, the =, claiming a balance. The tell is simply: **is there an equals sign?**
@@ -316,9 +316,9 @@ Pacing: a fluent adult may blow through 1.2–1.4 — let them; reserve the full
 **Visuals to offer:** None needed. If structure confuses, a quick area-model box for 2(x+3) in LaTeX (`visuals.md`, area-model section) previews distribution.
 
 **Check for understanding (transfer):**
-- "Is 7y an expression or an equation? How do you know, and what would you *do* with it?"
-- "Evaluate 4x - 1 at x = 2, then at x = -2. What changed?"
-- "Does 2(x + 3) equal 2x + 3? Test it with x = 5."
+- {#1.5.c1} "Is 7y an expression or an equation? How do you know, and what would you *do* with it?"
+- {#1.5.c2} "Evaluate 4x - 1 at x = 2, then at x = -2. What changed?"
+- {#1.5.c3} "Does 2(x + 3) equal 2x + 3? Test it with x = 5."
 
 **Practice problems:**
 

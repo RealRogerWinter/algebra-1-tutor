@@ -37,12 +37,12 @@ There is no dedicated metaphor entry for sequences in `metaphors.md`; build on t
 **Goal:** Recognize a sequence as a function on the counting numbers (a **discrete** domain), classify it as arithmetic (constant d) or geometric (constant r), write it **recursively and explicitly**, and find any term with the explicit rule a_n = a_1 + (n-1)d or a_n = a_1 · r^(n-1).
 **Why it matters:** Sequences are the gentlest on-ramp to a new function family, and they make the central contrast — *add the same* vs. *multiply the same* — concrete and countable before we dress it up as y = a·bˣ in 9.2.
 **New terms:**
-- **Sequence:** an ordered list of numbers, called **terms**. The 1st term is a_1, the 2nd is a_2, and the nth is a_n.
-- **Term number n:** the position in the list — 1, 2, 3, ... This is the **input**; the term a_n is the **output**. So a sequence *is a function* whose domain is the counting numbers.
-- **Discrete domain:** because the inputs are only the counting numbers 1, 2, 3, … (you can't ask for "term 1.5"), the sequence's graph is a set of **separate dots**, not a connected curve. This is what distinguishes a sequence from the linear/exponential function it resembles (whose domain is *all* real numbers).
-- **Arithmetic sequence:** each term is the previous one **plus a fixed number**, the **common difference d**. (Constant *difference*.)
-- **Geometric sequence:** each term is the previous one **times a fixed number**, the **common ratio r** (with r ≠ 0 and a_1 ≠ 0 — since we're multiplying, a 0 anywhere would kill the pattern). (Constant *ratio*.)
-- **Recursive vs. explicit rule:** a **recursive** rule says how to get each term *from the one before* (you must already know the previous term): arithmetic a_n = a_{n-1} + d, geometric a_n = r·a_{n-1}, with the **first term a_1 stated separately**. An **explicit** rule *jumps straight to term n* from the term number alone: arithmetic a_n = a_1 + (n-1)d, geometric a_n = a_1 · r^(n-1). They describe the *same* sequence — the recursive one is the "step-by-step" view, the explicit one is the "skip ahead" view, and you should be able to translate between them.
+- {#9.1.d1} **Sequence:** an ordered list of numbers, called **terms**. The 1st term is a_1, the 2nd is a_2, and the nth is a_n.
+- {#9.1.d2} **Term number n:** the position in the list — 1, 2, 3, ... This is the **input**; the term a_n is the **output**. So a sequence *is a function* whose domain is the counting numbers.
+- {#9.1.d3} **Discrete domain:** because the inputs are only the counting numbers 1, 2, 3, … (you can't ask for "term 1.5"), the sequence's graph is a set of **separate dots**, not a connected curve. This is what distinguishes a sequence from the linear/exponential function it resembles (whose domain is *all* real numbers).
+- {#9.1.d4} **Arithmetic sequence:** each term is the previous one **plus a fixed number**, the **common difference d**. (Constant *difference*.)
+- {#9.1.d5} **Geometric sequence:** each term is the previous one **times a fixed number**, the **common ratio r** (with r ≠ 0 and a_1 ≠ 0 — since we're multiplying, a 0 anywhere would kill the pattern). (Constant *ratio*.)
+- {#9.1.d6} **Recursive vs. explicit rule:** a **recursive** rule says how to get each term *from the one before* (you must already know the previous term): arithmetic a_n = a_{n-1} + d, geometric a_n = r·a_{n-1}, with the **first term a_1 stated separately**. An **explicit** rule *jumps straight to term n* from the term number alone: arithmetic a_n = a_1 + (n-1)d, geometric a_n = a_1 · r^(n-1). They describe the *same* sequence — the recursive one is the "step-by-step" view, the explicit one is the "skip ahead" view, and you should be able to translate between them.
 
 **Teaching arc (concrete → pictorial → symbolic):**
 - **Concrete / function callback:** "A sequence is the Unit 4 function machine (`metaphors.md` → Functions) fed the counting numbers: input 1 → 1st term, input 2 → 2nd term. The *rule* of the machine is what we're after." Start with the list 3, 7, 11, 15, ... and ask: "what do you do to get from each term to the next?" (add 4). Then 2, 6, 18, 54, ...: "and here?" (times 3). Name the two behaviors: **add the same** = arithmetic, **multiply the same** = geometric. Point out that "each term is the previous one plus/times a fixed number" is *already* the **recursive rule** stated in words — they understand it before they see the symbols; the only catch is you must also state the **first term** to launch it.
@@ -96,10 +96,10 @@ The translation is just reading off the shared a_1 and r: r=2 is both the recurs
 **Visuals to offer:** the **difference/ratio diagnostic table** above (in-chat, always renders). Optionally offer a small **discrete plot** of one arithmetic sequence — dots at (1,3), (2,7), (3,11), (4,15) sitting on the line y = 4n − 1 — captioned "a sequence is a function, but only at whole-number inputs, so it's dots, *not* a line." This is the single best visual for the discrete-domain / restricted-function idea; pair it with a table per `visuals.md` policy. No SVG strictly needed.
 
 **Check for understanding (transfer):**
-1. "Is 1, 5, 25, 125, ... arithmetic or geometric, and how can you *prove* it from the numbers — not just by feel?"
-2. "An arithmetic sequence starts at 6 with d = 4. Without listing all of them, what's the 20th term, and why is it 6 + 19·4 and not 6 + 20·4?"
-3. "Two sequences both start 2, ... — one is arithmetic with d=2, the other geometric with r=2. Write the first four terms of each. Where do they split apart?"
-4. "An arithmetic sequence is given recursively as a_1 = 9, a_n = a_{n-1} − 2. Write its **explicit** rule, and explain how you read d and a_1 straight off the recursive form."
+1. {#9.1.c1} "Is 1, 5, 25, 125, ... arithmetic or geometric, and how can you *prove* it from the numbers — not just by feel?"
+2. {#9.1.c2} "An arithmetic sequence starts at 6 with d = 4. Without listing all of them, what's the 20th term, and why is it 6 + 19·4 and not 6 + 20·4?"
+3. {#9.1.c3} "Two sequences both start 2, ... — one is arithmetic with d=2, the other geometric with r=2. Write the first four terms of each. Where do they split apart?"
+4. {#9.1.c4} "An arithmetic sequence is given recursively as a_1 = 9, a_n = a_{n-1} − 2. Write its **explicit** rule, and explain how you read d and a_1 straight off the recursive form."
 
 **Practice problems:**
 *Find the common difference d or ratio r, and state the type:*
@@ -134,15 +134,15 @@ The translation is just reading off the shared a_1 and r: r=2 is both the recurs
 **Goal:** Evaluate a (well-defined) exponential function y = a·bˣ, read and **interpret** its starting amount a and factor b in context, classify growth (b>1) vs. decay (0<b<1), turn a percent change into a factor, and distinguish linear from exponential from a table.
 **Why it matters:** Exponential models real growth and decay — money at interest, populations, half-lives — and the linear-vs-exponential distinction is one of the most useful "read the situation" skills in all of algebra. It's the **continuous** version of 9.1's geometric sequence: where the geometric sequence is defined only on the counting numbers (separate dots), the exponential function f(x)=a·bˣ fills in every real x between them into one smooth curve.
 **New terms:**
-- **Exponential function (well-defined):**
+- {#9.2.d1} **Exponential function (well-defined):**
   > **f(x) = a·bˣ**, where **a ≠ 0** is the starting amount and **b** is the growth/decay factor, a number with **b > 0 and b ≠ 1**.
   >
   > Each restriction earns its place: **a ≠ 0** (if a = 0 then a·bˣ = 0 for every x — it collapses to the constant 0, not a growth model); **b > 0** (if b ≤ 0 then bˣ isn't a real number for some inputs — e.g. with b = −4 the input x = ½ asks for √(−4), which is not a real number); **b ≠ 1** (if b = 1 then bˣ = 1 always, so f(x) = a — the constant a, with nothing growing or decaying).
   
   The variable is in the **exponent** — that's what makes it exponential, not linear.
-- **Starting amount a:** the value when x=0 (since b⁰=1, f(0)=a). Like the y-intercept's role, but now it's a *multiplier* the growth builds on. **Interpret it in context:** a is the amount you start with *before any growth/decay* — the initial population, the price when new, the deposit before interest.
-- **Growth/decay factor b:** what you **multiply by** each step (the continuous-function analogue of the common ratio r — same role, now allowed at every real x). b>1 → **growth**; 0<b<1 → **decay**. **Interpret it in context:** b is "what fraction of the previous amount you have after one period," so it directly *reads off* the percent change — **b = 1.05 means +5% per period** (you keep 100% and add 5%), **b = 1.20 means +20%**, **b = 0.90 means −10%** (you keep 90%, lose 10%), **b = 0.5 means −50%** (halves). The "+5%" lives in the *digits past the 1*; a b below 1 is a *loss* of (1 − b).
-- **Percent ↔ factor:** "+p%" → b = 1 + p/100 (e.g. +10% → 1.10); "−p%" → b = 1 - p/100 (e.g. −20% → 0.80). Run it backward too: given b, the per-period change is (b − 1)·100% (positive = growth, negative = decay).
+- {#9.2.d2} **Starting amount a:** the value when x=0 (since b⁰=1, f(0)=a). Like the y-intercept's role, but now it's a *multiplier* the growth builds on. **Interpret it in context:** a is the amount you start with *before any growth/decay* — the initial population, the price when new, the deposit before interest.
+- {#9.2.d3} **Growth/decay factor b:** what you **multiply by** each step (the continuous-function analogue of the common ratio r — same role, now allowed at every real x). b>1 → **growth**; 0<b<1 → **decay**. **Interpret it in context:** b is "what fraction of the previous amount you have after one period," so it directly *reads off* the percent change — **b = 1.05 means +5% per period** (you keep 100% and add 5%), **b = 1.20 means +20%**, **b = 0.90 means −10%** (you keep 90%, lose 10%), **b = 0.5 means −50%** (halves). The "+5%" lives in the *digits past the 1*; a b below 1 is a *loss* of (1 − b).
+- {#9.2.d4} **Percent ↔ factor:** "+p%" → b = 1 + p/100 (e.g. +10% → 1.10); "−p%" → b = 1 - p/100 (e.g. −20% → 0.80). Run it backward too: given b, the per-period change is (b − 1)·100% (positive = growth, negative = decay).
 
 **Teaching arc (concrete → pictorial → symbolic):**
 - **Concrete:** "Linear is repeated **addition** — +$5 a week, the same dollars each step (Unit 5's slope). Exponential is repeated **multiplication** — your money grows by *the same percent*, so the dollar amount itself gets bigger each step." Use a doubling story (5 bacteria → 10 → 20 → 40, b=2) and a halving/decay story (an $80 phone losing half its value each year, b=0.5).
@@ -189,9 +189,9 @@ So $133.10. (Note b=1.10, *not* 0.10: you keep your 100% and add 10%.) **Interpr
 **Visuals to offer:** the **linear-vs-exponential side-by-side table** and the **percent→factor** mini-table above (in-chat, always render). A graph isn't required; if offered, reuse `visuals.md` Template 2's mapping and always pair it with the table. If you do graph y=2x vs y=2ˣ, be faithful to the two crossing points: the curve and line meet at x=1 and x=2, the curve dips just *below* the line between them, then overtakes for good from x=3 on — don't draw the curve as always-above.
 
 **Check for understanding (transfer):**
-1. "A $200 laptop loses 20% of its value each year. Write the function y = a·bˣ, and find its value after 2 years. What's b, and why isn't it 0.20?"
-2. "Here are two tables. A: 4, 7, 10, 13. B: 4, 8, 16, 32. Which is linear, which is exponential, and what's the giveaway in each?"
-3. "Linear y = 100x starts way ahead of exponential y = 2ˣ at x=1. Will the line stay ahead forever? Explain what eventually happens."
+1. {#9.2.c1} "A $200 laptop loses 20% of its value each year. Write the function y = a·bˣ, and find its value after 2 years. What's b, and why isn't it 0.20?"
+2. {#9.2.c2} "Here are two tables. A: 4, 7, 10, 13. B: 4, 8, 16, 32. Which is linear, which is exponential, and what's the giveaway in each?"
+3. {#9.2.c3} "Linear y = 100x starts way ahead of exponential y = 2ˣ at x=1. Will the line stay ahead forever? Explain what eventually happens."
 
 **Practice problems:**
 *Evaluate the exponential function:*

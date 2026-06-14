@@ -21,12 +21,12 @@ Keep the standard habits from `SKILL.md` (verify arithmetic, never yes/no checks
 **Goal:** Given a small list of numbers, compute the **mean, median, mode,** and **range**, and judge when the median describes the "typical" value better than the mean.
 **Why it matters:** "What's typical?" and "how spread out is it?" are the two questions you ask of *any* pile of numbers — test scores, prices, wait times. These four numbers are the everyday toolkit.
 **New terms:**
-- **Mean (average):** add all the values, divide by how many there are. The "fair share" if everyone got the same.
-- **Median:** the **middle** value once the data is **put in order**. With an even count, average the two middle ones.
-- **Mode:** the value that appears **most often**. A set can have one mode, two or more, or — when nothing repeats — **none**. (That "nothing repeats → no mode" is a labeling convention; some books instead say *every* value is a mode. We'll use "no mode" here.)
-- **Range:** max - min — how far the biggest is from the smallest. A first measure of **spread**.
-- **Outlier:** a value sitting **far above or below where the rest of the numbers cluster** — an unusually huge or tiny entry compared with its neighbors. Outliers are the reason the mean and median can disagree (see below).
-- **Spread (intuition):** are the numbers **clustered** tightly together or **scattered** widely apart? Range is the quick version; **standard deviation** is just *a single number summarizing the typical distance of values from the mean* (a special kind of averaged distance) — bigger means more spread out. (We name it for vocabulary only; no need to compute it here.)
+- {#A.1.d1} **Mean (average):** add all the values, divide by how many there are. The "fair share" if everyone got the same.
+- {#A.1.d2} **Median:** the **middle** value once the data is **put in order**. With an even count, average the two middle ones.
+- {#A.1.d3} **Mode:** the value that appears **most often**. A set can have one mode, two or more, or — when nothing repeats — **none**. (That "nothing repeats → no mode" is a labeling convention; some books instead say *every* value is a mode. We'll use "no mode" here.)
+- {#A.1.d4} **Range:** max - min — how far the biggest is from the smallest. A first measure of **spread**.
+- {#A.1.d5} **Outlier:** a value sitting **far above or below where the rest of the numbers cluster** — an unusually huge or tiny entry compared with its neighbors. Outliers are the reason the mean and median can disagree (see below).
+- {#A.1.d6} **Spread (intuition):** are the numbers **clustered** tightly together or **scattered** widely apart? Range is the quick version; **standard deviation** is just *a single number summarizing the typical distance of values from the mean* (a special kind of averaged distance) — bigger means more spread out. (We name it for vocabulary only; no need to compute it here.)
 
 **Teaching arc (concrete → pictorial → symbolic):**
 - **Concrete:** "Five friends' quiz scores — what's a typical score, and were they all close or all over the place?" *Typical* = center (mean/median/mode); *all over the place* = spread (range).
@@ -65,10 +65,10 @@ Keep the standard habits from `SKILL.md` (verify arithmetic, never yes/no checks
 **Visuals to offer:** none needed (a number line sketched in ASCII per `visuals.md` can show the balance/middle idea if it helps; keep it light).
 
 **Check for understanding (transfer):**
-1. "A house on your street sells for \$50,000, \$60,000, \$55,000, and one mansion for \$2,000,000. Would you describe 'typical' with the mean or the median, and why?"
-2. "I have five numbers with mean 10. If I add a sixth number equal to 10, does the mean change? What if I add a 40?"
-3. "Two classes both averaged 80 on a test, but one class's scores were all near 80 and the other's ranged from 50 to 100. Which fact is about *center* and which is about *spread*?"
-4. "In the set {3, 4, 5, 6, 30}, which value is the outlier, and what does it do to the mean compared with the median? If you removed it, which of the two would change a lot and which would barely move?"
+1. {#A.1.c1} "A house on your street sells for \$50,000, \$60,000, \$55,000, and one mansion for \$2,000,000. Would you describe 'typical' with the mean or the median, and why?"
+2. {#A.1.c2} "I have five numbers with mean 10. If I add a sixth number equal to 10, does the mean change? What if I add a 40?"
+3. {#A.1.c3} "Two classes both averaged 80 on a test, but one class's scores were all near 80 and the other's ranged from 50 to 100. Which fact is about *center* and which is about *spread*?"
+4. {#A.1.c4} "In the set {3, 4, 5, 6, 30}, which value is the outlier, and what does it do to the mean compared with the median? If you removed it, which of the two would change a lot and which would barely move?"
 
 **Practice problems** (for each set, find the mean, median, mode, and range):
 1. {3, 7, 7, 9, 4}
@@ -105,14 +105,14 @@ Keep the standard habits from `SKILL.md` (verify arithmetic, never yes/no checks
 **Goal:** Read a **scatter plot** of paired data, describe its **association**, use a given **line of best fit** to make a prediction, and explain why **correlation does not prove causation**.
 **Why it matters:** This is where Unit 5's lines earn their keep on **real, messy data**: a line of best fit lets you summarize a cloud of points and predict beyond it. And spotting correlation-vs-causation is one of the most useful thinking skills algebra gives you.
 **New terms:**
-- **Scatter plot:** a coordinate-plane graph of **paired data** — each data point is one (x, y) dot (e.g. hours studied vs. test score).
-- **Association:** the overall trend in the cloud of dots:
+- {#A.2.d1} **Scatter plot:** a coordinate-plane graph of **paired data** — each data point is one (x, y) dot (e.g. hours studied vs. test score).
+- {#A.2.d2} **Association:** the overall trend in the cloud of dots:
   - **Positive** — as x goes up, y tends to go up (dots rise left-to-right).
   - **Negative** — as x goes up, y tends to go down (dots fall).
   - **No association** — no clear up-or-down trend.
-- **Form:** the *shape* of the cloud — does it run roughly along a **straight line** (linear) or does it **curve / bend** (nonlinear)? Form is a separate question from direction, and it's the one that decides whether a *line* is even the right summary.
-- **Line of best fit:** a straight line f(x)=mx+b drawn to pass as close as possible to all the dots — **the same linear function from Unit 5**, now fit to data that doesn't sit perfectly on any line. Used to **predict** a y for a new x. (A line is only appropriate when the form is roughly linear — see the teaching arc.)
-- **Correlation:** a measured tendency for two variables to move together. Read it **qualitatively** here: its **direction** (positive or negative, from which way the cloud leans) and its **strength** — *strong* if the dots hug the line tightly, *weak* if they're loosely scattered around it. **Causation:** one variable actually *makes* the other change. **Correlation and causation are not the same.**
+- {#A.2.d3} **Form:** the *shape* of the cloud — does it run roughly along a **straight line** (linear) or does it **curve / bend** (nonlinear)? Form is a separate question from direction, and it's the one that decides whether a *line* is even the right summary.
+- {#A.2.d4} **Line of best fit:** a straight line f(x)=mx+b drawn to pass as close as possible to all the dots — **the same linear function from Unit 5**, now fit to data that doesn't sit perfectly on any line. Used to **predict** a y for a new x. (A line is only appropriate when the form is roughly linear — see the teaching arc.)
+- {#A.2.d5} **Correlation:** a measured tendency for two variables to move together. Read it **qualitatively** here: its **direction** (positive or negative, from which way the cloud leans) and its **strength** — *strong* if the dots hug the line tightly, *weak* if they're loosely scattered around it. **Causation:** one variable actually *makes* the other change. **Correlation and causation are not the same.**
 
 **Teaching arc (concrete → pictorial → symbolic):**
 - **Concrete:** "Plot every (hours studied, score) pair as a dot. They won't land on one neat line — real data is messy. But you can *see* a trend, and draw the line that best threads through the cloud."
@@ -147,11 +147,11 @@ Keep the standard habits from `SKILL.md` (verify arithmetic, never yes/no checks
 **Visuals to offer:** `visuals.md` **Template 2** (coordinate plane + line). **Compute the plotted points** and the two line endpoints (don't eyeball), emit as an **SVG artifact**, label the axes and the line equation, and always include the companion **table of points** in chat. A scatter is just the plane with several small `<circle>` dots plus the best-fit line drawn through them.
 
 **Check for understanding (transfer):**
-1. "A best-fit line is y = -(1/2)x + 10. Predict y at x = 4, and say whether the association is positive or negative — how can you tell from the equation?"
-2. "Sales of sunglasses and the number of people getting sunburned both rise in July. Are they correlated? Does one cause the other? What's really going on?"
-3. "Two scatter plots: in one the dots rise steadily; in the other they're a shapeless blob. Describe each association in words."
-4. "Before you draw a line of best fit, what should you check about the *shape* of the scatter? Describe a cloud where a straight line would be the **wrong** summary, and say why."
-5. "Two scatters both lean upward, but one is a tight narrow band and the other a loose fat cloud. Which shows the *stronger* correlation, and does 'stronger' change whether it's positive or negative?"
+1. {#A.2.c1} "A best-fit line is y = -(1/2)x + 10. Predict y at x = 4, and say whether the association is positive or negative — how can you tell from the equation?"
+2. {#A.2.c2} "Sales of sunglasses and the number of people getting sunburned both rise in July. Are they correlated? Does one cause the other? What's really going on?"
+3. {#A.2.c3} "Two scatter plots: in one the dots rise steadily; in the other they're a shapeless blob. Describe each association in words."
+4. {#A.2.c4} "Before you draw a line of best fit, what should you check about the *shape* of the scatter? Describe a cloud where a straight line would be the **wrong** summary, and say why."
+5. {#A.2.c5} "Two scatters both lean upward, but one is a tight narrow band and the other a loose fat cloud. Which shows the *stronger* correlation, and does 'stronger' change whether it's positive or negative?"
 
 **Practice problems:**
 *Predict using the given line of best fit. The line in 1–2 was built from data that ran from x = 1 to x = 6:*
@@ -186,13 +186,13 @@ Keep the standard habits from `SKILL.md` (verify arithmetic, never yes/no checks
 **Goal:** Organize **categorical** data (yes/no, type A/type B) in a two-way table, compute **row and column totals**, read off a **count** and a **relative frequency**, and compare **conditional relative frequencies** across groups to decide whether the two variables are **associated**.
 **Why it matters:** Survey and yes/no data ("owns a pet? lives in an apartment?") is everywhere, and a two-way table is the clean way to see how two categories interact, turn raw counts into percentages, and answer the real question: *does one category go with the other?*
 **New terms:**
-- **Categorical data:** data sorted into **groups/labels** (yes/no, apartment/house), not measured numbers.
-- **Two-way table:** a grid with one category across the **rows** and another across the **columns**; each inner cell holds a **count**.
-- **Row total / column total (marginals):** the sum across a row or down a column. The corner **grand total** is everyone.
-- **Relative frequency:** a count expressed as a **fraction or percent of a total** — count/total. Which total you divide by depends on the question:
+- {#A.3.d1} **Categorical data:** data sorted into **groups/labels** (yes/no, apartment/house), not measured numbers.
+- {#A.3.d2} **Two-way table:** a grid with one category across the **rows** and another across the **columns**; each inner cell holds a **count**.
+- {#A.3.d3} **Row total / column total (marginals):** the sum across a row or down a column. The corner **grand total** is everyone.
+- {#A.3.d4} **Relative frequency:** a count expressed as a **fraction or percent of a total** — count/total. Which total you divide by depends on the question:
   - **Joint relative frequency** — a single cell over the **grand total** (e.g. "owns a pet *and* lives in an apartment, out of everyone").
   - **Conditional relative frequency** — a cell over its **row or column total**, i.e. a rate *within one group* (e.g. "of the apartment dwellers, the share who own a pet"). These are the ones you compare to detect association.
-- **Association (for two categories):** two categorical variables are **associated** when a **conditional relative frequency differs across groups** — e.g. if the pet-ownership rate among apartment dwellers is clearly different from the rate among house dwellers, then *where you live* and *owning a pet* are associated. If those rates are about equal, there's little or no association. (This is the categorical-data echo of A.2's positive/negative association for scatter plots.)
+- {#A.3.d5} **Association (for two categories):** two categorical variables are **associated** when a **conditional relative frequency differs across groups** — e.g. if the pet-ownership rate among apartment dwellers is clearly different from the rate among house dwellers, then *where you live* and *owning a pet* are associated. If those rates are about equal, there's little or no association. (This is the categorical-data echo of A.2's positive/negative association for scatter plots.)
 
 **Teaching arc (concrete → pictorial → symbolic):**
 - **Concrete:** "We surveyed 50 people: does each own a pet, and do they live in an apartment? Sort them into four buckets." Each bucket is a cell.
@@ -230,10 +230,10 @@ $$\begin{array}{c|c|c|c}
 **Visuals to offer:** none needed — the LaTeX `array` table above renders cleanly in chat (per `visuals.md`, area-model/table boxes use LaTeX, not an artifact).
 
 **Check for understanding (transfer):**
-1. "Using the table, what fraction of **house** dwellers own a pet? Which total did you divide by, and why?"
-2. "If I told you the four inner counts but no totals, how would you find the grand total two different ways — and what does it mean if they disagree?"
-3. "What's the difference between 'owns a pet *and* lives in a house' (a joint relative frequency) and 'of house dwellers, the share who own a pet' (a conditional one)?"
-4. "The apartment dwellers own pets 30% of the time and the house dwellers 80% of the time. From comparing those two rates, are *owning a pet* and *where you live* associated? How would the rates look if they were **not** associated?"
+1. {#A.3.c1} "Using the table, what fraction of **house** dwellers own a pet? Which total did you divide by, and why?"
+2. {#A.3.c2} "If I told you the four inner counts but no totals, how would you find the grand total two different ways — and what does it mean if they disagree?"
+3. {#A.3.c3} "What's the difference between 'owns a pet *and* lives in a house' (a joint relative frequency) and 'of house dwellers, the share who own a pet' (a conditional one)?"
+4. {#A.3.c4} "The apartment dwellers own pets 30% of the time and the house dwellers 80% of the time. From comparing those two rates, are *owning a pet* and *where you live* associated? How would the rates look if they were **not** associated?"
 
 **Practice problems** — use this table of 50 students, *plays a sport* (rows) × *wears glasses* (columns):
 

@@ -29,9 +29,9 @@ The second persistent fuzziness is what a **solution set** *means*: an equation 
 **Goal:** Solve a linear inequality in one variable (including the negative-coefficient flip) and graph its solution set on a number line.
 **Why it matters:** Real constraints are rarely "exactly equal" — *at least* $20, *no more than* 8 hours, *under* the speed limit. Inequalities are how we solve "how much is enough / too much," and the solution is a whole range of acceptable values.
 **New terms:**
-- **Inequality:** a statement that **compares** two quantities using < (less than), > (greater than), ≤ (less than *or equal to*), or ≥ (greater than or equal to) — saying one is less than, greater than, or at most/at least the other (an *order* relation).
-- **Solution set:** *all* the values that make the inequality true — usually infinitely many, drawn as a shaded ray.
-- **Strict** (<, >) vs. **inclusive** (≤, ≥): whether the boundary value itself counts.
+- {#8.1.d1} **Inequality:** a statement that **compares** two quantities using < (less than), > (greater than), ≤ (less than *or equal to*), or ≥ (greater than or equal to) — saying one is less than, greater than, or at most/at least the other (an *order* relation).
+- {#8.1.d2} **Solution set:** *all* the values that make the inequality true — usually infinitely many, drawn as a shaded ray.
+- {#8.1.d3} **Strict** (<, >) vs. **inclusive** (≤, ≥): whether the boundary value itself counts.
 
 **Teaching arc (concrete → pictorial → symbolic):**
 - **Concrete:** "‘You must be **at least** 13’ — is 13 allowed? Is 20? Is 12? That's age ≥ 13: a whole crowd of allowed numbers, not one." Contrast with an equation (one answer). Anchor ≤/≥ to "*or equal to* = the boundary is invited in."
@@ -71,9 +71,9 @@ Test x = 0: 5 - 0 = 5 > 2; is 0 < 3?. Solution: **x < 3**.
 **Visuals to offer:** ASCII number line in chat for quick feedback (the x>2/x≤-1 sketches in `visuals.md`), or **Template 1** (SVG artifact) for a polished line — open vs. filled endpoint, shaded ray, boundary labeled. Always pair with a sentence.
 
 **Check for understanding (transfer):**
-1. "Solve -3x ≥ 12, then test x = -5 in the *original*. Walk me through how the test confirms (or would catch a mistake in) your answer."
-2. "Two students solve -x < 4. One writes x < -4, the other x > -4. Using x = 0, decide who's right and explain how you know."
-3. "In words, describe the number-line graph of x ≤ 2: which circle, filled or open, and which direction do you shade?"
+1. {#8.1.c1} "Solve -3x ≥ 12, then test x = -5 in the *original*. Walk me through how the test confirms (or would catch a mistake in) your answer."
+2. {#8.1.c2} "Two students solve -x < 4. One writes x < -4, the other x > -4. Using x = 0, decide who's right and explain how you know."
+3. {#8.1.c3} "In words, describe the number-line graph of x ≤ 2: which circle, filled or open, and which direction do you shade?"
 
 **Practice problems** (solve; then describe the number-line graph in words — which circle and which way you shade):
 
@@ -120,10 +120,10 @@ Test x = 0: 5 - 0 = 5 > 2; is 0 < 3?. Solution: **x < 3**.
 **Goal:** Solve and graph compound inequalities joined by **and** (intersection — *between*) or **or** (union — two separate rays).
 **Why it matters:** Real constraints often come in pairs — "between 60 and 80," "older than 12 **or** with a guardian." *And* narrows; *or* widens.
 **New terms:**
-- **Compound inequality:** two inequalities combined into one statement.
-- **And (intersection):** *both* parts must hold. 2 < x ≤ 5 is shorthand for x > 2 **and** x ≤ 5 — the values **between** 2 and 5 (with 5 included). On the line, the **overlap** of the two shaded regions — a single segment.
-- **Double inequality** (a.k.a. **three-part inequality**): the chained form a < x < b. It is only well-formed when **both symbols point the same way**, and it *always* means an **and** (a < x **and** x < b). Never write something like 3 < x > 1 — a chained form with the symbols pointing opposite ways is meaningless.
-- **Or (union):** *at least one* part holds. x < -1 **or** x > 3 — **everything** in either ray; the two pieces don't touch.
+- {#8.2.d1} **Compound inequality:** two inequalities combined into one statement.
+- {#8.2.d2} **And (intersection):** *both* parts must hold. 2 < x ≤ 5 is shorthand for x > 2 **and** x ≤ 5 — the values **between** 2 and 5 (with 5 included). On the line, the **overlap** of the two shaded regions — a single segment.
+- {#8.2.d3} **Double inequality** (a.k.a. **three-part inequality**): the chained form a < x < b. It is only well-formed when **both symbols point the same way**, and it *always* means an **and** (a < x **and** x < b). Never write something like 3 < x > 1 — a chained form with the symbols pointing opposite ways is meaningless.
+- {#8.2.d4} **Or (union):** *at least one* part holds. x < -1 **or** x > 3 — **everything** in either ray; the two pieces don't touch.
 
 **Teaching arc (concrete → pictorial → symbolic):**
 - **Concrete:** *And* = "you must clear **both** bars" (narrows to the overlap). *Or* = "clear **either** bar" (widens to the union). "Temperature between 60 and 80" is an *and*; "under 32 or over 100" is an *or*.
@@ -162,9 +162,9 @@ Test a point — x = 0 (inside): -6 < -2(0) = 0 ≤ 4 ✓. Check the endpoints t
 **Visuals to offer:** ASCII number lines (one segment for *and*, two rays for *or*), or two endpoints on **Template 1**. Show *and* and *or* on stacked lines so the contrast is visible. Pair with words.
 
 **Check for understanding (transfer):**
-1. "Rewrite 2 < x ≤ 5 as two separate inequalities joined by a word. Which word, and why is the graph a single segment instead of two rays?"
-2. "Why does x > 5 **and** x < 1 have no solution, while x > 5 **or** x < 1 has lots? Describe both graphs."
-3. "You solve a three-part inequality and divide all parts by -2. What happens to the two inequality signs, and how would testing a point confirm it?"
+1. {#8.2.c1} "Rewrite 2 < x ≤ 5 as two separate inequalities joined by a word. Which word, and why is the graph a single segment instead of two rays?"
+2. {#8.2.c2} "Why does x > 5 **and** x < 1 have no solution, while x > 5 **or** x < 1 has lots? Describe both graphs."
+3. {#8.2.c3} "You solve a three-part inequality and divide all parts by -2. What happens to the two inequality signs, and how would testing a point confirm it?"
 
 **Practice problems** (solve and describe the graph: segment-between for *and*, two rays for *or*):
 
@@ -201,9 +201,9 @@ Test a point — x = 0 (inside): -6 < -2(0) = 0 ≤ 4 ✓. Check the endpoints t
 **Goal:** Read |x| as **distance from 0**, graph **y = |x|** (the V) and its simple shifts, and solve the **symmetric** cases |x| = k, |x| < k, |x| > k straight from that distance picture.
 **Why it matters:** Absolute value measures *how far*, ignoring direction — tolerance ("within 0.5 of target"), distance, magnitude. Centering on 0 keeps the algebra light and makes "within → *and* / outside → *or*" visible (the payoff of 8.2). *(Shifting the center off 0 — |x − 3| = 5, |2x − 1| = 7 — needs a two-case algebraic method that belongs to Algebra 2; it's flagged in the Reach note at the end.)*
 **New terms:**
-- **Absolute value |x|:** the distance of x from 0 on the number line; always ≥ 0. |5| = 5 and |-5| = 5 — both are 5 units from 0 (callback to Unit 1.4).
-- **The graph y = |x|:** a **V** with its vertex at the origin — the right arm rises at slope +1, the left arm at slope -1 — and it never dips below the x-axis, because an output that *is* a distance can't be negative.
-- **Simple shifts of the V:** y = |x| + 2 lifts the whole V up 2; y = |x| − 3 drops it 3; y = |x − 1| slides it right 1 (the vertex moves to where the inside equals 0). These are *graph* moves read off the picture — not algebra to solve.
+- {#8.3.d1} **Absolute value |x|:** the distance of x from 0 on the number line; always ≥ 0. |5| = 5 and |-5| = 5 — both are 5 units from 0 (callback to Unit 1.4).
+- {#8.3.d2} **The graph y = |x|:** a **V** with its vertex at the origin — the right arm rises at slope +1, the left arm at slope -1 — and it never dips below the x-axis, because an output that *is* a distance can't be negative.
+- {#8.3.d3} **Simple shifts of the V:** y = |x| + 2 lifts the whole V up 2; y = |x| − 3 drops it 3; y = |x − 1| slides it right 1 (the vertex moves to where the inside equals 0). These are *graph* moves read off the picture — not algebra to solve.
 
 **Teaching arc (concrete → pictorial → symbolic):**
 - **Distance from 0 (concrete).** |x| asks "how far is x from 0?" |3| = 3 and |-3| = 3 — different inputs, same distance.
@@ -236,9 +236,9 @@ Test a point — x = 0 (inside): -6 < -2(0) = 0 ≤ 4 ✓. Check the endpoints t
 **Visuals to offer:** Two pictures carry this lesson — the **V-graph** of y = |x| (vertex at the origin, slope ±1, sits on the axis), and a **number line** for solving (mark 0, step k each way; dot the two solutions, or shade the between-segment for *and* / two rays for *or*). Use `visuals.md` for a clean sketch; always state the distance interpretation in words.
 
 **Check for understanding (transfer):**
-1. "Sketch y = |x| in words: where's the vertex, what are the arm slopes, and why does it never go below the x-axis? Then describe y = |x| + 1."
-2. "Why does |x| < 4 become an *and* (a single segment) while |x| > 4 becomes an *or* (two rays)? Use the distance picture."
-3. "What is the solution of |x| = -3? Of |x| > -3? Explain each from ‘distance is never negative.’"
+1. {#8.3.c1} "Sketch y = |x| in words: where's the vertex, what are the arm slopes, and why does it never go below the x-axis? Then describe y = |x| + 1."
+2. {#8.3.c2} "Why does |x| < 4 become an *and* (a single segment) while |x| > 4 becomes an *or* (two rays)? Use the distance picture."
+3. {#8.3.c3} "What is the solution of |x| = -3? Of |x| > -3? Explain each from ‘distance is never negative.’"
 
 **Practice problems (core — the mastery path):** symmetric, centered at 0. *(Problems 2, 3, 5, 6, 7 shift the center off 0 — they've moved to the Reach set below.)*
 
@@ -300,10 +300,10 @@ When the center moves off 0 — |x − 3| = 5, |2x − 1| = 7 — you can't just
 **Goal:** Graph a two-variable linear inequality (boundary line + shaded half-plane) and find the solution region of a system of inequalities (the overlap).
 **Why it matters:** It generalizes "the line is the solution" (Unit 5) to "a whole region is the solution," and it's the picture behind constraints and optimization (which combination of two quantities is *allowed*).
 **New terms:**
-- **Linear inequality in two variables:** e.g. y > 2x + 1 — satisfied not by a line but by a **half-plane** (every point on one side of the boundary).
-- **Boundary line:** the line you get by replacing the inequality with = (here y = 2x + 1, the function f(x) = 2x+1). **Dashed** if strict (<, >) — the line itself is *not* included; **solid** if inclusive (≤, ≥).
-- **Half-plane / test point:** one of the two sides the boundary cuts the plane into. To choose the correct side, **test a point** not on the line — the **origin (0,0)** is easiest — and shade the side that makes the inequality true.
-- **System of inequalities:** two or more inequalities at once; the solution is the **overlap** of their shaded regions.
+- {#8.4.d1} **Linear inequality in two variables:** e.g. y > 2x + 1 — satisfied not by a line but by a **half-plane** (every point on one side of the boundary).
+- {#8.4.d2} **Boundary line:** the line you get by replacing the inequality with = (here y = 2x + 1, the function f(x) = 2x+1). **Dashed** if strict (<, >) — the line itself is *not* included; **solid** if inclusive (≤, ≥).
+- {#8.4.d3} **Half-plane / test point:** one of the two sides the boundary cuts the plane into. To choose the correct side, **test a point** not on the line — the **origin (0,0)** is easiest — and shade the side that makes the inequality true.
+- {#8.4.d4} **System of inequalities:** two or more inequalities at once; the solution is the **overlap** of their shaded regions.
 
 **Teaching arc (concrete → pictorial → symbolic):**
 - **Concrete / symbolic:** y > 2x + 1 asks "where is the output **above** the line y = 2x+1?" The boundary splits "above" from "below."
@@ -342,9 +342,9 @@ Boundary 2: y = -x + 3, **solid**; test (0,0): 0 ≤ 3? **True** → shade the s
 **Visuals to offer:** `visuals.md` **Template 4** as an **SVG artifact** — computed boundary line (dashed/solid), semi-transparent fill on the correct side, the test point and its true/false stated in the caption. For a system, layer the regions and highlight the overlap. Never paste raw SVG into chat — emit an artifact, and pair with a sentence naming the test point.
 
 **Check for understanding (transfer):**
-1. "For y < x + 4: is the boundary dashed or solid, and how do you decide which side to shade? Do the origin test out loud."
-2. "Your boundary line passes through (0,0). Why can't you use the origin as your test point, and what would you use instead?"
-3. "A system is y > x and y < 4. Describe the solution region — which two boundaries, dashed or solid, and roughly where the overlap sits."
+1. {#8.4.c1} "For y < x + 4: is the boundary dashed or solid, and how do you decide which side to shade? Do the origin test out loud."
+2. {#8.4.c2} "Your boundary line passes through (0,0). Why can't you use the origin as your test point, and what would you use instead?"
+3. {#8.4.c3} "A system is y > x and y < 4. Describe the solution region — which two boundaries, dashed or solid, and roughly where the overlap sits."
 
 **Practice problems** (for each: name the boundary line, dashed or solid, the test point with its true/false result, and which side to shade):
 

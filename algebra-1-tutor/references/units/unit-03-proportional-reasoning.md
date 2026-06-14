@@ -30,10 +30,10 @@ Pacing: most adults move briskly through 3.1; spend the real time on the *why* i
 **Goal:** Write and reduce ratios, and find a unit rate by dividing so the second quantity becomes 1.
 **Why it matters:** A unit rate ("per one") is a *constant rate of change* — the literal seed of **slope** (Unit 5). Rates are also how the real world talks: mph, price per item, words per minute.
 **New terms:**
-- **Ratio** — a comparison of two quantities, written 3:2 or 3/2 or "3 to 2." The quantities can be the same kind of thing (dogs to cats).
-- **Part-to-part vs part-to-whole** — "8 dogs to 12 cats" (8:12) compares one part to another part. But "8 dogs out of 20 animals" (8/20) compares a part to the *whole*. Same animals, different comparison. This matters: percents in 3.3 are all part-to-**whole** (part/whole = percent/100), so get comfortable sliding from 8:12 to 8 out of 20 now.
-- **Rate** — a ratio comparing two *unlike* units (120 miles per 2 hours).
-- **Unit rate** — a rate whose second quantity is 1 (60 miles per **1** hour = 60 mph). You get it by dividing.
+- {#3.1.d1} **Ratio** — a comparison of two quantities, written 3:2 or 3/2 or "3 to 2." The quantities can be the same kind of thing (dogs to cats).
+- {#3.1.d2} **Part-to-part vs part-to-whole** — "8 dogs to 12 cats" (8:12) compares one part to another part. But "8 dogs out of 20 animals" (8/20) compares a part to the *whole*. Same animals, different comparison. This matters: percents in 3.3 are all part-to-**whole** (part/whole = percent/100), so get comfortable sliding from 8:12 to 8 out of 20 now.
+- {#3.1.d3} **Rate** — a ratio comparing two *unlike* units (120 miles per 2 hours).
+- {#3.1.d4} **Unit rate** — a rate whose second quantity is 1 (60 miles per **1** hour = 60 mph). You get it by dividing.
 
 **Teaching arc (concrete → pictorial → symbolic):**
 - **Concrete:** "You drove 120 miles in 2 hours. How far in *one* hour, on average?" Most people split it without thinking — that splitting *is* finding the unit rate. Tie to metaphors.md **Slope B**: on a distance-vs-time picture, this number is the speed.
@@ -62,10 +62,10 @@ The value didn't change — 12:18 and 2:3 name the *same* comparison, just with 
 **Visuals to offer:** None needed — a two-row "per 1" table in chat is enough. (If a student wants to *see* the rate as steepness, sketch the tiny rise/run picture from visuals.md and connect it to Slope B; otherwise save graphs for Unit 5.)
 
 **Check for understanding (transfer):**
-- "A printer does 90 pages in 3 minutes. What's the unit rate, and what are its units?"
-- "Two stores: 3 cans for \$4, or 5 cans for \$6. Which is cheaper *per can*, and how did you decide?"
-- "Why does 'unit rate' always have a 1 in it — what is the 1 counting?"
-- "There are 8 dogs and 12 cats. As a *part-to-whole* comparison, what fraction of those 20 animals are dogs?" (8/20 = 2/5 — turns the part-to-part ratio into the part/whole form percents will use.)
+- {#3.1.c1} "A printer does 90 pages in 3 minutes. What's the unit rate, and what are its units?"
+- {#3.1.c2} "Two stores: 3 cans for \$4, or 5 cans for \$6. Which is cheaper *per can*, and how did you decide?"
+- {#3.1.c3} "Why does 'unit rate' always have a 1 in it — what is the 1 counting?"
+- {#3.1.c4} "There are 8 dogs and 12 cats. As a *part-to-whole* comparison, what fraction of those 20 animals are dogs?" (8/20 = 2/5 — turns the part-to-part ratio into the part/whole form percents will use.)
 
 **Practice problems:**
 
@@ -96,10 +96,10 @@ The value didn't change — 12:18 and 2:3 name the *same* comparison, just with 
 **Goal:** Set up a proportion, justify cross-multiplication, solve it with Unit 2 techniques, and distinguish direct from inverse proportion.
 **Why it matters:** Proportions are the workhorse of scaling — recipes, maps, prices, unit conversions. And cross-multiplication, understood (not memorized), is a clean reuse of Unit 2's "do the same to both sides."
 **New terms:**
-- **Proportion** — a statement that two ratios are equal: a/b = c/d (where b and d are not 0, so the fractions are defined).
-- **Cross-multiplication** — for a/b = c/d with b, d ≠ 0, the rule a·d = b·c.
-- **Direct proportion** — as one quantity grows, the other grows in the same ratio (more apples → more cost). The ratios stay equal.
-- **Inverse proportion** — as one quantity grows, the other *shrinks* so that their **product** stays constant (more workers → fewer days; workers × days = total work). The constant product workers × days = k mirrors the constant *ratio* of the direct case; symbolically xy = k (equivalently y = k/x). (Its graph is a curve, not a line — that's out of scope for now; here we only use the constant-product idea to solve.)
+- {#3.2.d1} **Proportion** — a statement that two ratios are equal: a/b = c/d (where b and d are not 0, so the fractions are defined).
+- {#3.2.d2} **Cross-multiplication** — for a/b = c/d with b, d ≠ 0, the rule a·d = b·c.
+- {#3.2.d3} **Direct proportion** — as one quantity grows, the other grows in the same ratio (more apples → more cost). The ratios stay equal.
+- {#3.2.d4} **Inverse proportion** — as one quantity grows, the other *shrinks* so that their **product** stays constant (more workers → fewer days; workers × days = total work). The constant product workers × days = k mirrors the constant *ratio* of the direct case; symbolically xy = k (equivalently y = k/x). (Its graph is a curve, not a line — that's out of scope for now; here we only use the constant-product idea to solve.)
 
 **Teaching arc (concrete → pictorial → symbolic):**
 - **Concrete:** "4 apples cost \$3. At the same rate, what do 10 apples cost?" The phrase *same rate* is the whole idea — the price-per-apple ratio doesn't change, so two ratios are equal.
@@ -129,9 +129,9 @@ The **total work** is fixed: workers × days = 5 × 12 = 60 worker-days. So 3 ×
 **Visuals to offer:** None needed; the stacked-fraction setup in chat carries it. (Save the *graph* of a proportional relationship — a line through the origin whose slope is the unit rate — as a forward pointer to Unit 5.)
 
 **Check for understanding (transfer):**
-- "Re-derive cross-multiplication for a/b = c/d in your own steps — what are you actually doing to both sides?"
-- "A car going 60 mph covers a fixed 120-mile trip; at 40 mph it takes *longer*. Is trip-time-vs-speed direct or inverse? How would you set it up?"
-- "In 2/5 = x/20, without solving, will x be bigger or smaller than 2, and why?"
+- {#3.2.c1} "Re-derive cross-multiplication for a/b = c/d in your own steps — what are you actually doing to both sides?"
+- {#3.2.c2} "A car going 60 mph covers a fixed 120-mile trip; at 40 mph it takes *longer*. Is trip-time-vs-speed direct or inverse? How would you set it up?"
+- {#3.2.c3} "In 2/5 = x/20, without solving, will x be bigger or smaller than 2, and why?"
 
 **Practice problems:**
 
@@ -164,8 +164,8 @@ The **total work** is fixed: workers × days = 5 × 12 = 60 worker-days. So 3 ×
 **Goal:** Convert fluently among fractions, decimals, and percents, and solve all three percent types plus percent change.
 **Why it matters:** Percents are proportions with a fixed denominator of 100 — the everyday face of proportional reasoning (tips, discounts, interest, statistics). Two-step percent problems (problems 9–10) are a first taste of the real-world multi-step modeling that arrives in Unit 6.
 **New terms:**
-- **Percent** — "per hundred"; a ratio out of 100. 25% = 25/100 = 0.25 = 1/4.
-- **Percent change** — how much a quantity grew or shrank *relative to its original value*: ((new − old)/old) × 100%. It's one signed formula: a **positive** result is an increase, a **negative** one a decrease. We report the size with the word that matches the sign — e.g. −25% is "a 25% decrease."
+- {#3.3.d1} **Percent** — "per hundred"; a ratio out of 100. 25% = 25/100 = 0.25 = 1/4.
+- {#3.3.d2} **Percent change** — how much a quantity grew or shrank *relative to its original value*: ((new − old)/old) × 100%. It's one signed formula: a **positive** result is an increase, a **negative** one a decrease. We report the size with the word that matches the sign — e.g. −25% is "a 25% decrease."
 
 **Teaching arc (concrete → pictorial → symbolic):**
 - **Concrete:** "Out of every 100, how many?" A 100-square grid: 25% is 25 shaded squares. Anchor the trio 1/2 = 0.5 = 50% and 1/4 = 0.25 = 25% so conversion is reflexive.
@@ -192,9 +192,9 @@ The **total work** is fixed: workers × days = 5 × 12 = 60 worker-days. So 3 ×
 **Visuals to offer:** None needed — the 100-grid is describable in words, and the part/whole = percent/100 skeleton carries the work.
 
 **Check for understanding (transfer):**
-- "Convert 3/8 to a decimal and a percent." (Forces the trio fluency: 0.375 = 37.5%.)
-- "A price rises 25%, then falls 25%. Back to the start? Explain using the *base* idea." (No — the second base is larger.)
-- "\$50 → \$65 is what percent change, and which value is the base?"
+- {#3.3.c1} "Convert 3/8 to a decimal and a percent." (Forces the trio fluency: 0.375 = 37.5%.)
+- {#3.3.c2} "A price rises 25%, then falls 25%. Back to the start? Explain using the *base* idea." (No — the second base is larger.)
+- {#3.3.c3} "\$50 → \$65 is what percent change, and which value is the base?"
 
 **Practice problems:**
 

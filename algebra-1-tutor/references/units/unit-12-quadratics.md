@@ -34,11 +34,11 @@ This is the capstone — every back-half skill composes here. The arc: **12.1** 
 **Goal:** Take square roots of perfect squares, simplify a radical by pulling out perfect-square factors (√12=2√3), and treat an irrational root as an exact answer; add like radicals, multiply radicals, and lightly rationalize a denominator.
 **Why it matters:** The square root is the *inverse of squaring* — the exact tool we need to undo x² in every later lesson. Without it, the answer to x²=7 has no name.
 **New terms:**
-- **Square root (√( )):** the inverse of squaring. √9=3 because 3²=9. The symbol gives the **principal (non-negative) root** — √9 is 3, not -3. (We restore the second sign by hand in 12.2 with ±.)
-- **Radical / radicand:** the √( ) is the *radical*; the number under it is the *radicand*.
-- **Perfect square:** a number that's some integer squared — 1,4,9,16,25,36,49,...
-- **Simplified radical:** no perfect-square factor left under the root. √12=√(4·3)=2√3 is simplified; √12 is not.
-- **Like radicals:** radicals with the *same* radicand (2√3 and 4√3) — they add like the "boxes" of Unit 2's like terms.
+- {#12.1.d1} **Square root (√( )):** the inverse of squaring. √9=3 because 3²=9. The symbol gives the **principal (non-negative) root** — √9 is 3, not -3. (We restore the second sign by hand in 12.2 with ±.)
+- {#12.1.d2} **Radical / radicand:** the √( ) is the *radical*; the number under it is the *radicand*.
+- {#12.1.d3} **Perfect square:** a number that's some integer squared — 1,4,9,16,25,36,49,...
+- {#12.1.d4} **Simplified radical:** no perfect-square factor left under the root. √12=√(4·3)=2√3 is simplified; √12 is not.
+- {#12.1.d5} **Like radicals:** radicals with the *same* radicand (2√3 and 4√3) — they add like the "boxes" of Unit 2's like terms.
 
 **Teaching arc (concrete → pictorial → symbolic):**
 - **Concrete:** "Squaring asks 'what's the area of a square with this side?' The square root asks the reverse: 'a square has area 9 — what's its side?' Side 3, so √9=3." Tie it to Unit 10 exponents: √( ) undoes the 2 power.
@@ -69,9 +69,9 @@ This "multiply by the radical over itself" trick is for a *single* radical in th
 **Visuals to offer:** none needed (a number line placing √7 between 2 and 3 can help the "it's a real, exact number" point — `visuals.md` Template 1).
 
 **Check for understanding (transfer):**
-1. "Simplify √45, and tell me how you knew which factor to pull out."
-2. "Is √10 a 'finished' answer? How is it like 1/3 and unlike √9?"
-3. "Why can you combine 5√2+3√2 but not 5√2+3√3?"
+1. {#12.1.c1} "Simplify √45, and tell me how you knew which factor to pull out."
+2. {#12.1.c2} "Is √10 a 'finished' answer? How is it like 1/3 and unlike √9?"
+3. {#12.1.c3} "Why can you combine 5√2+3√2 but not 5√2+3√3?"
 
 **Practice problems:**
 *Evaluate (perfect squares & cube root):*
@@ -103,9 +103,9 @@ This "multiply by the radical over itself" trick is for a *single* radical in th
 **Goal:** Solve x²=k by the **Square-Root Property** — isolate x² first, then, when k≥0, take the square root of **both** signs (x=±√k); recognize that when k<0 there is no real solution.
 **Why it matters:** This is the unit's defining idea in its purest form — *two* solutions, and *why*. No factoring or formula yet; just the inverse of squaring done honestly. The conditional on k (≥0 vs <0) is the seed of the discriminant in 12.5.
 **New terms:**
-- **±("plus or minus"):** shorthand for *two* answers at once. x=±3 means x=3 **or** x=-3.
-- **Quadratic equation:** an equation with an x² term (and no higher power). Standard form is ax²+bx+c=0 with a≠0 — these are the special case where b=0.
-- **Square-Root Property (the rule of this lesson — box it):** for x²=k,
+- {#12.2.d1} **±("plus or minus"):** shorthand for *two* answers at once. x=±3 means x=3 **or** x=-3.
+- {#12.2.d2} **Quadratic equation:** an equation with an x² term (and no higher power). Standard form is ax²+bx+c=0 with a≠0 — these are the special case where b=0.
+- {#12.2.d3} **Square-Root Property (the rule of this lesson — box it):** for x²=k,
   - **if k≥0, then x=±√k** (i.e. x=√k or x=-√k — two real solutions, collapsing to the single x=0 when k=0);
   - **if k<0, there is no real solution** (no real number squares to a negative).
 
@@ -137,9 +137,9 @@ When k isn't a perfect square, the answer stays in radical form (12.1): x²=7 �
 **Visuals to offer:** none needed (optionally a parabola preview, `visuals.md` Template 3).
 
 **Check for understanding (transfer):**
-1. "Solve x²=49. How many answers, and why isn't it just one?"
-2. "A classmate says x²=20 has answer x=√20. What did they leave out, and can you simplify the radical too?"
-3. "Solve 3x²=27. What has to happen *before* you take a square root?"
+1. {#12.2.c1} "Solve x²=49. How many answers, and why isn't it just one?"
+2. {#12.2.c2} "A classmate says x²=20 has answer x=√20. What did they leave out, and can you simplify the radical too?"
+3. {#12.2.c3} "Solve 3x²=27. What has to happen *before* you take a square root?"
 
 **Practice problems:**
 *Solve (keep both signs; leave irrationals exact):*
@@ -167,8 +167,8 @@ When k isn't a perfect square, the answer stays in radical form (12.1): x²=7 �
 **Goal:** Solve a quadratic by writing it as (factor)(factor)=0, then setting each factor to zero — the zero-product property.
 **Why it matters:** This is the everyday method for the quadratics that factor (most of the ones you'll meet). It directly cashes in the factoring from Unit 11.
 **New terms:**
-- **Zero-product property:** if a product equals 0, then *at least one* factor is 0. If A·B=0, then A=0 or B=0. (No other number forces a product to zero — this is special to 0.)
-- **Root / solution:** a value of x that makes the equation true — the same "roots" that are x-intercepts in 12.6.
+- {#12.3.d1} **Zero-product property:** if a product equals 0, then *at least one* factor is 0. If A·B=0, then A=0 or B=0. (No other number forces a product to zero — this is special to 0.)
+- {#12.3.d2} **Root / solution:** a value of x that makes the equation true — the same "roots" that are x-intercepts in 12.6.
 
 **Teaching arc (concrete → pictorial → symbolic):**
 - **Concrete:** "If I multiply two numbers and get 0, one of them *had* to be 0 — there's no other way. (Two non-zeros never multiply to zero.) So if (x-2)(x-3)=0, either x-2=0 or x-3=0." Stress this only works against **0** — that's why we move everything to one side first.
@@ -193,9 +193,9 @@ When k isn't a perfect square, the answer stays in radical form (12.1): x²=7 �
 **Visuals to offer:** area-model box for the factoring step (`visuals.md` "Area-model boxes", LaTeX `array`); the parabola preview if they want to *see* the two roots (12.6).
 
 **Check for understanding (transfer):**
-1. "Solve (x+5)(x-1)=0 without expanding. What lets you split it into two easy equations?"
-2. "A student factors x²-2x-8=0 into (x-4)(x+2) and stops at x=4. What did they miss?"
-3. "Why must x²-3x=10 be rewritten as x²-3x-10=0 before factoring to solve?"
+1. {#12.3.c1} "Solve (x+5)(x-1)=0 without expanding. What lets you split it into two easy equations?"
+2. {#12.3.c2} "A student factors x²-2x-8=0 into (x-4)(x+2) and stops at x=4. What did they miss?"
+3. {#12.3.c3} "Why must x²-3x=10 be rewritten as x²-3x-10=0 before factoring to solve?"
 
 **Practice problems:**
 *Solve (already factored):*
@@ -224,8 +224,8 @@ When k isn't a perfect square, the answer stays in radical form (12.1): x²=7 �
 **Goal:** Turn x²+bx into a perfect-square trinomial by adding (b/2)², and use it to solve a quadratic — shown **once**, to build understanding and to set up the quadratic formula.
 **Why it matters:** It's the method that *works even when factoring fails*, and — crucially — it's where the quadratic formula comes from. Seeing it once makes 12.5 feel earned, not handed down.
 **New terms:**
-- **Perfect-square trinomial:** a trinomial that factors as something squared — x²+6x+9=(x+3)² (Unit 11.3).
-- **Completing the square:** adding the exact number, (b/2)², that turns x²+bx into a perfect square.
+- {#12.4.d1} **Perfect-square trinomial:** a trinomial that factors as something squared — x²+6x+9=(x+3)² (Unit 11.3).
+- {#12.4.d2} **Completing the square:** adding the exact number, (b/2)², that turns x²+bx into a perfect square.
 
 **Teaching arc (concrete → pictorial → symbolic):**
 - **Concrete / the key fact:** "(x+3)²=x²+6x+9. Notice the constant 9 is (6/2)² — half the middle coefficient, squared. So to *manufacture* a perfect square from x²+6x, add 9." Have them verify (6/2)²=9 and expand (x+3)² to confirm.
@@ -254,9 +254,9 @@ Check: (-1)²+6(-1)+5=0, (-5)²+6(-5)+5=0.
 **Visuals to offer:** the area "completing the square" picture (a labeled `array`/sketch) helps the name land; otherwise none needed.
 
 **Check for understanding (transfer):**
-1. "To complete the square on x²+10x, what number do you add, and how did you get it?"
-2. "Solve x²+8x+7=0 by completing the square. Show the balanced step on both sides."
-3. "Why does completing the square solve x²-4x+1=0 when factoring can't?"
+1. {#12.4.c1} "To complete the square on x²+10x, what number do you add, and how did you get it?"
+2. {#12.4.c2} "Solve x²+8x+7=0 by completing the square. Show the balanced step on both sides."
+3. {#12.4.c3} "Why does completing the square solve x²-4x+1=0 when factoring can't?"
 
 **Practice problems:**
 *State the number that completes the square for:*
@@ -278,10 +278,10 @@ Check: (-1)²+6(-1)+5=0, (-5)²+6(-5)+5=0.
 **Goal:** Solve any quadratic ax²+bx+c=0 with the quadratic formula, and use the discriminant b²-4ac to predict the number of real solutions.
 **Why it matters:** This is the **universal** method — it solves *every* quadratic, factorable or not, rational or irrational. It is exactly "completing the square, done once in general," so 12.4 was its origin story.
 **New terms:**
-- **Quadratic formula:** for ax²+bx+c=0 (with a≠0),
+- {#12.5.d1} **Quadratic formula:** for ax²+bx+c=0 (with a≠0),
 $$x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}.$$
 The ± is the same two-solutions ± as always — recovering the sign squaring destroyed.
-- **Discriminant:** the inside-the-root part, b²-4ac. For a real quadratic (a≠0, real coefficients) its **sign** counts the real solutions before you finish:
+- {#12.5.d2} **Discriminant:** the inside-the-root part, b²-4ac. For a real quadratic (a≠0, real coefficients) its **sign** counts the real solutions before you finish:
   - b²-4ac>0: **two** real solutions (root of a positive → ± two values).
   - b²-4ac=0: **one** real solution — a **repeated (double) root** (±0 collapses to one; the parabola's vertex sits on the axis).
   - b²-4ac<0: **no real** solution (no real square root of a negative — the parabola misses the axis).
@@ -316,9 +316,9 @@ $$x=\frac{4\pm\sqrt0}{2}=\frac{4}{2}=2.$$
 **Visuals to offer:** the parabola (12.6) makes the three discriminant cases visible — crosses twice / touches once / misses. `visuals.md` Template 3.
 
 **Check for understanding (transfer):**
-1. "Use the formula on x²-2x-5=0. What's the discriminant, and what does its sign tell you before you finish?"
-2. "Without solving, how many real solutions does x²+x+5=0 have? How can you tell?"
-3. "In 2x²-7x+3=0, what are a, b, and c — signs included — and what is -b?"
+1. {#12.5.c1} "Use the formula on x²-2x-5=0. What's the discriminant, and what does its sign tell you before you finish?"
+2. {#12.5.c2} "Without solving, how many real solutions does x²+x+5=0 have? How can you tell?"
+3. {#12.5.c3} "In 2x²-7x+3=0, what are a, b, and c — signs included — and what is -b?"
 
 **Practice problems:**
 *Find the discriminant and state the number of real solutions:*
@@ -344,11 +344,11 @@ $$x=\frac{4\pm\sqrt0}{2}=\frac{4}{2}=2.$$
 **Goal:** Graph a quadratic as a parabola: find its roots (x-intercepts), its vertex and axis of symmetry, and its direction of opening — and explain *why* a quadratic usually has two solutions.
 **Why it matters:** The picture is the payoff. It makes "two solutions" obvious (the U crosses the axis twice), explains the rare one/none cases, and ties the whole unit — radicals, roots, discriminant — into one image.
 **New terms:**
-- **Parabola:** the U-shaped graph of a quadratic y=ax²+bx+c.
-- **Roots / x-intercepts:** where the parabola crosses the x-axis — exactly the solutions of ax²+bx+c=0 (12.3–12.5). This is *why* a quadratic usually has two.
-- **Vertex:** the turning point (bottom of the U if it opens up, top if down). Its x-coordinate is x=-b/2a.
-- **Axis of symmetry:** the vertical line x=-b/2a through the vertex; the parabola is a mirror image across it.
-- **Opens up / down:** **up if a>0**, **down if a<0**.
+- {#12.6.d1} **Parabola:** the U-shaped graph of a quadratic y=ax²+bx+c.
+- {#12.6.d2} **Roots / x-intercepts:** where the parabola crosses the x-axis — exactly the solutions of ax²+bx+c=0 (12.3–12.5). This is *why* a quadratic usually has two.
+- {#12.6.d3} **Vertex:** the turning point (bottom of the U if it opens up, top if down). Its x-coordinate is x=-b/2a.
+- {#12.6.d4} **Axis of symmetry:** the vertical line x=-b/2a through the vertex; the parabola is a mirror image across it.
+- {#12.6.d5} **Opens up / down:** **up if a>0**, **down if a<0**.
 
 **Teaching arc (concrete → pictorial → symbolic):**
 - **Concrete / the unifying picture (`metaphors.md` → Quadratics B):** "A quadratic graphs as a U. The solutions are where it crosses the x-axis — and a U usually crosses *twice* (once going down, once coming back up). That's the two solutions, drawn. One solution = the U just *kisses* the axis at its vertex (discriminant 0); none = it floats entirely above or below (discriminant < 0)." This visually re-explains 12.5.
@@ -390,9 +390,9 @@ $$x=\frac{4\pm\sqrt0}{2}=\frac{4}{2}=2.$$
 **Visuals to offer:** `visuals.md` **Template 3** (parabola) — computed sample points joined by a `<polyline>`, roots and vertex dotted and labeled, companion table always in the chat.
 
 **Check for understanding (transfer):**
-1. "For y=x²-6x+8, find the roots and the vertex. How are the roots and the vertex's x-coordinate related?"
-2. "A parabola opens downward and never touches the x-axis. What can you say about its a and about its discriminant?"
-3. "Why are the x-intercepts of y=x²-9 exactly the solutions of x²-9=0?"
+1. {#12.6.c1} "For y=x²-6x+8, find the roots and the vertex. How are the roots and the vertex's x-coordinate related?"
+2. {#12.6.c2} "A parabola opens downward and never touches the x-axis. What can you say about its a and about its discriminant?"
+3. {#12.6.c3} "Why are the x-intercepts of y=x²-9 exactly the solutions of x²-9=0?"
 
 **Practice problems:**
 *For each, find the roots, the vertex, and the direction it opens (then sketch):*

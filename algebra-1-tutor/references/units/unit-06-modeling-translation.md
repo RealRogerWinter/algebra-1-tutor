@@ -28,8 +28,8 @@ Pacing: 6.1 builds the translation reflex on small pieces. 6.2 applies it to mul
 **Why it matters:** Every word problem, every real application, and every later modeling task (systems in Unit 7, inequalities in Unit 8) begins with this translation. It is the gateway skill; if it's shaky, nothing downstream works.
 
 **New terms:**
-- **Translate (in algebra):** rewrite an English phrase or sentence as an equivalent algebraic expression or equation.
-- **Expression vs. equation (callback to Unit 1):** an *expression* (x + 5) is a quantity with no equals sign — nothing to solve; an *equation* (x + 5 = 12) asserts two quantities are equal and *can* be solved.
+- {#6.1.d1} **Translate (in algebra):** rewrite an English phrase or sentence as an equivalent algebraic expression or equation.
+- {#6.1.d2} **Expression vs. equation (callback to Unit 1):** an *expression* (x + 5) is a quantity with no equals sign — nothing to solve; an *equation* (x + 5 = 12) asserts two quantities are equal and *can* be solved.
 
 **Teaching arc (concrete → pictorial → symbolic):**
 1. **Define the variable first, always.** Before anything: "What is the unknown? Write *let x =* and finish the sentence in words." Make this a non-negotiable ritual. Use the mystery-box metaphor (`metaphors.md`, Variables A): x is a box holding the unknown number; the phrase tells you what to *do* to that box.
@@ -71,9 +71,9 @@ Don't translate left-to-right into 6s = p. Read the structure: students are the 
 **Visuals to offer:** None needed — this lesson is symbolic. The LaTeX area-model boxes from `visuals.md` aren't relevant here.
 
 **Check for understanding (transfer):**
-1. Translate "8 fewer than twice a number," then explain in one sentence why it isn't 8 - 2x.
-2. A sentence translates to x - 5 = 11. Invent an English sentence that would produce it.
-3. "A number divided by 3, then increased by 4, is 10." Set up the equation and say which word told you where the equals sign goes.
+1. {#6.1.c1} Translate "8 fewer than twice a number," then explain in one sentence why it isn't 8 - 2x.
+2. {#6.1.c2} A sentence translates to x - 5 = 11. Invent an English sentence that would produce it.
+3. {#6.1.c3} "A number divided by 3, then increased by 4, is 10." Set up the equation and say which word told you where the equals sign goes.
 
 **Practice problems:**
 
@@ -117,9 +117,9 @@ Don't translate left-to-right into 6s = p. Read the structure: students are the 
 **Why it matters:** These four families cover most of the word problems in Algebra 1 and beyond, and the *method* — not the memorized type — is what transfers to systems (Unit 7) and any real model. A reliable setup routine is the deliverable here.
 
 **New terms:**
-- **Consecutive integers:** integers in a row, each one more than the last: n, n+1, n+2, … For consecutive **even** or **odd** integers, the gap is 2: n, n+2, n+4, … (This same gap-of-2 form fits both even and odd runs; which one you get depends only on the starting value n. So if solving gives a non-integer n — say n = 74/3 — that total simply has *no* such consecutive run, and the fractional answer is the signal.)
-- **Distance–rate–time relationship:** d = rt — distance equals rate (speed) times time. (Slope from Unit 5 *is* a rate; on a distance-vs-time graph the speed is the slope — `metaphors.md`, Slope B.)
-- **Value problem:** total *value* = (value of each item) × (number of items), summed over the kinds of items (e.g. dimes worth $0.10 each).
+- {#6.2.d1} **Consecutive integers:** integers in a row, each one more than the last: n, n+1, n+2, … For consecutive **even** or **odd** integers, the gap is 2: n, n+2, n+4, … (This same gap-of-2 form fits both even and odd runs; which one you get depends only on the starting value n. So if solving gives a non-integer n — say n = 74/3 — that total simply has *no* such consecutive run, and the fractional answer is the signal.)
+- {#6.2.d2} **Distance–rate–time relationship:** d = rt — distance equals rate (speed) times time. (Slope from Unit 5 *is* a rate; on a distance-vs-time graph the speed is the slope — `metaphors.md`, Slope B.)
+- {#6.2.d3} **Value problem:** total *value* = (value of each item) × (number of items), summed over the kinds of items (e.g. dimes worth $0.10 each).
 
 **Teaching arc — the four-step method (use it every time):**
 1. **Define the variable in words.** "Let x = ____." If two quantities are unknown, express the second *in terms of* the first using the relationship in the problem (e.g. "Sam is 3 older than Pat" → Pat = p, Sam = p + 3). This is the heart of the method; don't skip it.
@@ -176,9 +176,9 @@ $$8a + 5(100 - a) = 680 \;\Rightarrow\; 8a + 500 - 5a = 680 \;\Rightarrow\; 3a =
 **Visuals to offer:** For distance problems, a simple labeled sketch (two arrows from a point) clarifies sum-vs-difference — a plain ASCII sketch in chat is enough; no `visuals.md` artifact required. The coordinate-plane artifact belongs in 6.3.
 
 **Check for understanding (transfer):**
-1. In Example 3, suppose instead the ages total 41. Without redoing all the algebra from scratch, what changes and what is Pat's new age?
-2. Why must the *second* unknown be written in terms of the first rather than as a new letter, if we want a single equation?
-3. A value problem gives "0.05n + 0.10(20 − n) = ...". In one sentence, what do n, 20 - n, and the coefficients 0.05 and 0.10 each represent?
+1. {#6.2.c1} In Example 3, suppose instead the ages total 41. Without redoing all the algebra from scratch, what changes and what is Pat's new age?
+2. {#6.2.c2} Why must the *second* unknown be written in terms of the first rather than as a new letter, if we want a single equation?
+3. {#6.2.c3} A value problem gives "0.05n + 0.10(20 − n) = ...". In one sentence, what do n, 20 - n, and the coefficients 0.05 and 0.10 each represent?
 
 **Practice problems:**
 
@@ -219,10 +219,10 @@ $$8a + 5(100 - a) = 680 \;\Rightarrow\; 8a + 500 - 5a = 680 \;\Rightarrow\; 3a =
 **Why it matters:** Real data is messy and rarely sits on a perfect line, yet a *trend* is often clear and useful. A line of best fit is exactly the linear function from Unit 5 — y = mx + b, or f(x) = mx + b — fit to scattered points so we can summarize and predict. This is the everyday face of linear functions. And because it's that same line, its **slope and intercept carry real meaning**: the slope is a *rate* (how much y changes per unit of x — the same rate idea as d = rt in 6.2), and the intercept is the predicted y when x = 0. Reading those in context is what makes a trend line meaningful rather than a black box, and it's exactly what Unit A builds on.
 
 **New terms:**
-- **Scatter plot:** a graph of paired data (x, y) plotted as individual points — no connecting line.
-- **Association / correlation:** the overall trend in the cloud of points. **Positive:** as x goes up, y tends to go up (cloud rises left to right). **Negative:** as x goes up, y tends to go down. **No association:** no clear up-or-down trend.
-- **Line of best fit (trend line):** a single line drawn to pass as close as possible to all the points, summarizing the trend. It *is* a linear function — you evaluate it to predict.
-- **Correlation is not causation:** two quantities trending together does **not** prove one *causes* the other.
+- {#6.3.d1} **Scatter plot:** a graph of paired data (x, y) plotted as individual points — no connecting line.
+- {#6.3.d2} **Association / correlation:** the overall trend in the cloud of points. **Positive:** as x goes up, y tends to go up (cloud rises left to right). **Negative:** as x goes up, y tends to go down. **No association:** no clear up-or-down trend.
+- {#6.3.d3} **Line of best fit (trend line):** a single line drawn to pass as close as possible to all the points, summarizing the trend. It *is* a linear function — you evaluate it to predict.
+- {#6.3.d4} **Correlation is not causation:** two quantities trending together does **not** prove one *causes* the other.
 
 **Teaching arc (concrete → pictorial → symbolic):**
 1. **Start with a story and a table.** E.g. hours studied vs. quiz score for a handful of students. Read two or three rows aloud so the pairs feel concrete.
@@ -277,10 +277,10 @@ The negative slope means a **negative association** — more of x goes with less
 - **Reading association backwards:** calling a falling cloud "positive because the numbers are positive." Repair: association is about *direction of the trend*, not the sign of the values — does the cloud rise or fall left to right?
 
 **Check for understanding (transfer):**
-1. Sketch in words what a scatter plot with **no association** looks like, and give a real pair of quantities you'd expect to show it.
-2. A town finds shoe size and reading level are positively associated in children. Does bigger feet cause better reading? Explain in one sentence what's really going on.
-3. A best-fit line is f(x) = 0.5x + 60. Predict y when x = 20, and say whether the association is positive or negative.
-4. For the same best-fit line f(x) = 0.5x + 60 modeling (minutes of exercise x, resting heart-rate-recovery score y), explain in context what the **0.5** and the **60** each tell you. (One sentence each.)
+1. {#6.3.c1} Sketch in words what a scatter plot with **no association** looks like, and give a real pair of quantities you'd expect to show it.
+2. {#6.3.c2} A town finds shoe size and reading level are positively associated in children. Does bigger feet cause better reading? Explain in one sentence what's really going on.
+3. {#6.3.c3} A best-fit line is f(x) = 0.5x + 60. Predict y when x = 20, and say whether the association is positive or negative.
+4. {#6.3.c4} For the same best-fit line f(x) = 0.5x + 60 modeling (minutes of exercise x, resting heart-rate-recovery score y), explain in context what the **0.5** and the **60** each tell you. (One sentence each.)
 
 **Practice problems:**
 

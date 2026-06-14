@@ -33,9 +33,9 @@ The arc: **10.1** establishes the exponent rules — and treats x⁰ and x⁻ᵃ
 **Why it matters:** These rules are the grammar of every expression to come — scientific notation (10.2), polynomial multiplication (10.4), and all of Units 11–12 lean on them. A student who memorizes them backwards will multiply exponents that should add for the rest of the course.
 
 **New terms:**
-- **Base** and **exponent:** in x⁵, x is the base, 5 is the exponent; x⁵ means x multiplied by itself 5 times.
-- **Zero exponent:** x⁰=1 (for x≠0).
-- **Negative exponent:** x⁻ᵃ=1/(xᵃ) — a negative exponent means "reciprocal," *not* a negative number.
+- {#10.1.d1} **Base** and **exponent:** in x⁵, x is the base, 5 is the exponent; x⁵ means x multiplied by itself 5 times.
+- {#10.1.d2} **Zero exponent:** x⁰=1 (for x≠0).
+- {#10.1.d3} **Negative exponent:** x⁻ᵃ=1/(xᵃ) — a negative exponent means "reciprocal," *not* a negative number.
 
 **Teaching arc (concrete → pictorial → symbolic):**
 - *Concrete — count the factors.* Don't lead with the rule; lead with expansion. x²·x³ = (x·x)(x·x·x) — line up the x's and *count*: five of them, so x⁵. The student should **see** that multiplying like bases just pools the factors, so the exponents **add**. This single picture inoculates against the x²·x³=x⁶ trap.
@@ -84,9 +84,9 @@ $$\frac{x^3}{x^5}=x^{3-5}=x^{-2}=\frac{1}{x^2}$$
 **Visuals to offer:** none needed — the "write out the factors and count" expansion *is* the visual; do it in line.
 
 **Check for understanding (transfer):**
-1. "Why does x²·x³ add the exponents but (x²)³ multiplies them? Convince me by counting x's."
-2. "Use the quotient rule on x⁴/x⁴ two different ways to explain why x⁰=1."
-3. "A student says x⁻³ is a negative number. What would you show them to fix that?"
+1. {#10.1.c1} "Why does x²·x³ add the exponents but (x²)³ multiplies them? Convince me by counting x's."
+2. {#10.1.c2} "Use the quotient rule on x⁴/x⁴ two different ways to explain why x⁰=1."
+3. {#10.1.c3} "A student says x⁻³ is a negative number. What would you show them to fix that?"
 
 **Practice problems:**
 
@@ -119,8 +119,8 @@ $$\frac{x^3}{x^5}=x^{3-5}=x^{-2}=\frac{1}{x^2}$$
 **Why it matters:** It's how science and engineering write the very big (distances, populations) and the very small (atom sizes), and it's a clean, motivating use of 10.1's exponent rules — multiplying powers of ten *adds* the exponents.
 
 **New terms:**
-- **Scientific notation:** a number written as a×10ⁿ, where a (the **coefficient**) satisfies 1≤|a|<10 and n is an integer. (Plain English: exactly one nonzero digit before the decimal point. The absolute-value bars let the coefficient be negative for a negative number — e.g. -5300 = -5.3×10³, where |-5.3|=5.3 is in range. Every example in this lesson is positive, so 1≤a<10 is the working form here, but state the rule with |a| so it stays true for negatives.)
-- **Standard form** (here): the ordinary way to write the number, e.g. 5300.
+- {#10.2.d1} **Scientific notation:** a number written as a×10ⁿ, where a (the **coefficient**) satisfies 1≤|a|<10 and n is an integer. (Plain English: exactly one nonzero digit before the decimal point. The absolute-value bars let the coefficient be negative for a negative number — e.g. -5300 = -5.3×10³, where |-5.3|=5.3 is in range. Every example in this lesson is positive, so 1≤a<10 is the working form here, but state the rule with |a| so it stays true for negatives.)
+- {#10.2.d2} **Standard form** (here): the ordinary way to write the number, e.g. 5300.
 
 **Teaching arc (concrete → pictorial → symbolic):**
 - *Concrete — the decimal slides.* Multiplying by 10 moves the decimal point one place right; dividing by 10 moves it one place left. So 10ⁿ just records *how many places* the point moved. For 5300: start at 5.3, the point must slide **3 places right** to rebuild 5300, so 5300=5.3×10³.
@@ -168,9 +168,9 @@ The convention that forces all of this: a proper scientific-notation coefficient
 **Visuals to offer:** none needed; an ASCII note of the decimal sliding (5.3→53.→530.→5300.) can anchor a stuck student.
 
 **Check for understanding (transfer):**
-1. "Is 42×10³ in proper scientific notation? If not, fix it and explain the rule." (No → 4.2×10⁴.)
-2. "Without computing the full number, what's (2×10⁵)(4×10³)? Which exponent rule did you just use?"
-3. "Why does a number *smaller* than 1 get a *negative* power of ten?"
+1. {#10.2.c1} "Is 42×10³ in proper scientific notation? If not, fix it and explain the rule." (No → 4.2×10⁴.)
+2. {#10.2.c2} "Without computing the full number, what's (2×10⁵)(4×10³)? Which exponent rule did you just use?"
+3. {#10.2.c3} "Why does a number *smaller* than 1 get a *negative* power of ten?"
 
 **Practice problems:**
 
@@ -198,12 +198,12 @@ The convention that forces all of this: a proper scientific-notation coefficient
 **Why it matters:** "Polynomial" is the noun the next three units are about. Adding and subtracting them is Unit 2's combining-like-terms with new vocabulary — and subtraction is where the §3 sign trap returns in force.
 
 **New terms:**
-- **Polynomial:** a sum of terms, each a real number (the coefficient) times a whole-number power of a variable (e.g. 3x²+2x-1). The "whole-number power" part is what matters most: it rules out negative and fractional exponents, which is exactly what separates a polynomial from the rational/radical expressions seen in 10.1.
-- **Term / coefficient:** a single piece separated by + or -; the coefficient is its number part (in 3x², the coefficient is 3).
-- **Monomial / binomial / trinomial:** a polynomial with 1 / 2 / 3 terms.
-- **Degree:** the highest exponent in the polynomial (3x²+2x-1 has degree 2). The degree of a single term is its exponent; a nonzero constant has degree 0 (read it as cx⁰, since x⁰=1 — so the 2 in 3x²+2x-1 is a degree-0 term, and a lone "7" has degree 0). This is *why* the constant sits last in standard form: it's the lowest-degree (x⁰) term.
-- **Standard form:** terms written in **descending** order of degree (highest power first).
-- **Leading coefficient:** the coefficient of the highest-degree term (once in standard form).
+- {#10.3.d1} **Polynomial:** a sum of terms, each a real number (the coefficient) times a whole-number power of a variable (e.g. 3x²+2x-1). The "whole-number power" part is what matters most: it rules out negative and fractional exponents, which is exactly what separates a polynomial from the rational/radical expressions seen in 10.1.
+- {#10.3.d2} **Term / coefficient:** a single piece separated by + or -; the coefficient is its number part (in 3x², the coefficient is 3).
+- {#10.3.d3} **Monomial / binomial / trinomial:** a polynomial with 1 / 2 / 3 terms.
+- {#10.3.d4} **Degree:** the highest exponent in the polynomial (3x²+2x-1 has degree 2). The degree of a single term is its exponent; a nonzero constant has degree 0 (read it as cx⁰, since x⁰=1 — so the 2 in 3x²+2x-1 is a degree-0 term, and a lone "7" has degree 0). This is *why* the constant sits last in standard form: it's the lowest-degree (x⁰) term.
+- {#10.3.d5} **Standard form:** terms written in **descending** order of degree (highest power first).
+- {#10.3.d6} **Leading coefficient:** the coefficient of the highest-degree term (once in standard form).
 
 **Teaching arc (concrete → pictorial → symbolic):**
 - *Vocabulary first, on one example.* Take 5x²-3x+2: three terms → **trinomial**; highest power 2 → **degree 2**; leading coefficient 5; already in standard form. Have the student name the parts of a fresh one before any arithmetic.
@@ -240,9 +240,9 @@ $$(5x^2-2x+1)-(2x^2+3x-4) = 3x^2-5x+5$$
 **Visuals to offer:** none needed; vertical alignment by degree (line up the x² terms, the x terms, the constants) is the helpful "picture" — show it for a stuck student.
 
 **Check for understanding (transfer):**
-1. "Name the type, degree, and leading coefficient of 4x³-x+9, then put 7-2x² in standard form."
-2. "Subtract (x²-4x+5)-(2x²-4x-1) and prove the signs are right by testing x=1."
-3. "Why can't 3x² and 3x be combined, even though both have a 3 and an x?"
+1. {#10.3.c1} "Name the type, degree, and leading coefficient of 4x³-x+9, then put 7-2x² in standard form."
+2. {#10.3.c2} "Subtract (x²-4x+5)-(2x²-4x-1) and prove the signs are right by testing x=1."
+3. {#10.3.c3} "Why can't 3x² and 3x be combined, even though both have a 3 and an x?"
 
 **Practice problems:**
 
@@ -312,9 +312,9 @@ Stress: (x+3)²≠x²+9. The middle 6x is the whole point (misconceptions.md §7
 **Visuals to offer:** the LaTeX `array` area-model box (visuals.md → area-model) for any binomial × binomial — show all four cells, then collect the two middle ones into the single middle term. This is *the* visual to make automatic, because it's the same box Unit 11 fills in reverse.
 
 **Check for understanding (transfer):**
-1. "Expand (x+2)(x+5) with the area box, and point to where the middle term 7x comes from."
-2. "Why does (x-5)(x+5) have *no* middle term, but (x-5)(x-5) does?"
-3. "A student writes (x+4)²=x²+16. Show them — with the box — exactly what they dropped." (the 8x)
+1. {#10.4.c1} "Expand (x+2)(x+5) with the area box, and point to where the middle term 7x comes from."
+2. {#10.4.c2} "Why does (x-5)(x+5) have *no* middle term, but (x-5)(x-5) does?"
+3. {#10.4.c3} "A student writes (x+4)²=x²+16. Show them — with the box — exactly what they dropped." (the 8x)
 
 **Practice problems:**
 
