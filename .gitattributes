@@ -3,3 +3,7 @@
 # don't show spurious whole-file CRLF diffs after running the generator.
 algebra-1-tutor/references/curriculum-map.md text eol=lf
 docs/CURRICULUM.md text eol=lf
+
+# Figures are generated LF-only by _verification/figures.py; pin so regeneration
+# doesn't show spurious CRLF diffs on Windows checkouts.
+algebra-1-tutor/figures/*.svg text eol=lf
