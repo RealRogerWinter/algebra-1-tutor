@@ -96,7 +96,7 @@ Compute each point with this, then drop the numbers into the templates below. **
 
 ---
 
-## Template 1 — Number line with a marked point (SVG artifact)
+## Template 1 — Number line with a marked point (SVG artifact) {#vis.t1}
 
 Maps value v to x = 60 + v·30. Filled dot = included; for an open endpoint use `fill="white" stroke="#c0392b" stroke-width="2"`. For an interval/ray, add a thick colored segment.
 
@@ -122,7 +122,7 @@ Maps value v to x = 60 + v·30. Filled dot = included; for an open endpoint use 
 </svg>
 ```
 
-## Template 2 — Coordinate plane + a line y = mx + b (SVG artifact)
+## Template 2 — Coordinate plane + a line y = mx + b (SVG artifact) {#vis.t2}
 
 Compute two convenient points from the equation, map them, draw a line between. Mark the y-intercept. Example shown: y = 2x - 1 (points (-2,-5) and (3,5) → screen (70,210) and (170,10)).
 
@@ -141,7 +141,7 @@ Compute two convenient points from the equation, map them, draw a line between. 
 ```
 General recipe: choose two x-values that keep both points on-screen, compute y=mx+b for each, map with `screenX=110+x*20`, `screenY=110-y*20`, draw the `<line>`, and dot the intercept.
 
-## Template 3 — Parabola y = ax² + bx + c (SVG artifact)
+## Template 3 — Parabola y = ax² + bx + c (SVG artifact) {#vis.t3}
 
 Sample x in unit steps, compute y for each (use the code tool), map each point, and join with a `<polyline>`. Mark roots and the vertex. Example: y = x² - 4, points (-3,5)(-2,0)(-1,-3)(0,-4)(1,-3)(2,0)(3,5); origin (110,150), 20 px/unit (widen the viewBox height so the vertex shows).
 
@@ -160,7 +160,7 @@ Sample x in unit steps, compute y for each (use the code tool), map each point, 
 </svg>
 ```
 
-## Template 4 — Inequality region (2-D shading)
+## Template 4 — Inequality region (2-D shading) {#vis.t4}
 
 Draw the boundary line (dashed if `<` or `>`, solid if `≤` or `≥`), then fill the satisfying side with a semi-transparent `<polygon>` or a `rect` with `fill-opacity="0.2"`. Always test one point (e.g. the origin) to decide which side to shade, and say so in words.
 

@@ -156,6 +156,36 @@ The student can **go in order** or **jump anywhere**. The full map, with what ea
 
 ---
 
+## Reference codes
+
+Every worked example, practice problem, definition, transfer-check, and figure in this course carries a short **reference code**, so a student can point to one exact thing ("can you explain 12.5.w2?") instead of describing it. The same codes are the anchors the HTML textbook links to, so they're worth knowing and saying back to the student.
+
+**How a code reads:** `scope.lesson.item`.
+- *Scope* is a unit (`1`–`12`, or `A` for the statistics unit) or a shared bank (`mis` for misconceptions, `vis` for visuals, `met` for metaphors).
+- *Item* is a number, sometimes led by a letter that names the kind of item. A bare number is a practice problem; `w` is a worked example, `d` a definition (new term), `c` a transfer-check, `h` a how-to, `f` a figure.
+
+```
+12.5.7              practice problem 7 in lesson 12.5
+12.5.w2             worked example 2 in lesson 12.5
+1.1.d3              definition 3 in lesson 1.1
+1.1.c1              transfer-check 1 in lesson 1.1
+8.2.5b              part b of practice problem 5 in lesson 8.2
+1.2.f1              figure 1 in lesson 1.2  (figures arrive in a later release)
+mis.3               misconception bank, section 3
+vis.t1              visuals bank, template 1
+met.balance-scale   metaphor bank, the balance-scale entry
+```
+
+**Resolving a code a student quotes** (written as `#12.5.w2`, case-insensitive, or spoken as "worked example 2 of lesson 12.5"):
+1. See which file it points to: the unit file for a `1`–`12` or `A` code, or the named bank for `mis`, `vis`, or `met`. Open that file.
+2. Find the item. Definitions, transfer-checks, how-tos, figures, and bank entries carry an inline `{#code}` anchor you can search for; worked examples and practice problems are found by their number, counted in order.
+3. Re-verify before you show. For anything computational, check it by substitution or the code tool, against the bundled answer key and from scratch, before you present it. A code is a promise to show the right thing.
+4. Show it, then say the code back ("Here is 12.5.w2:"), so the student picks up the shorthand for next time.
+
+If a student gives a figure code (`f…`), the picture isn't drawn yet in this release. Say so, then describe or compute it from `visuals.md` rather than inventing one.
+
+---
+
 ## Tracking progress across sessions (the Progress Card)
 
 Each Claude conversation starts fresh with no memory of the last one. So the student carries their own progress between sessions as a **Progress Card** — a short, human-readable block they copy at the end of a session and paste at the start of the next.

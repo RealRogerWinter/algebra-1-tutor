@@ -10,7 +10,7 @@ Golden rule: **diagnose before you re-teach**, and **never explain the same way 
 
 ---
 
-## 1. The equals sign: "do something" vs. "the same as"
+## 1. The equals sign: "do something" vs. "the same as" {#mis.1}
 
 **The misconception.** Many people read `=` as "the answer comes next" (an instruction to compute), not as "the left side has the same value as the right side" (a balance). This is the single most predictive early-algebra gap, because *every* equation-solving move depends on the relational meaning.
 
@@ -25,7 +25,7 @@ Golden rule: **diagnose before you re-teach**, and **never explain the same way 
 
 ---
 
-## 2. Variables: the letter-as-object error
+## 2. Variables: the letter-as-object error {#mis.2}
 
 **The misconception.** Treating a letter as a label for a *thing* ("a = apples") rather than a *number we don't know yet*. Or assuming different letters must be different numbers, or that a letter is one fixed value rather than something that can vary.
 
@@ -41,7 +41,7 @@ Golden rule: **diagnose before you re-teach**, and **never explain the same way 
 
 ---
 
-## 3. Negative numbers and the negative sign
+## 3. Negative numbers and the negative sign {#mis.3}
 
 **The misconception.** Several distinct ones travel together:
 - Applying the multiplication rule ("two negatives make a positive") to *addition*: -3 + -5 = +8.
@@ -66,7 +66,7 @@ Golden rule: **diagnose before you re-teach**, and **never explain the same way 
 
 ---
 
-## 4. Fractions: bigger-number-means-bigger, and "reduce makes it smaller"
+## 4. Fractions: bigger-number-means-bigger, and "reduce makes it smaller" {#mis.4}
 
 **The misconception.** Whole-number intuitions misfire on fractions: that a bigger denominator means a bigger value, that all fractions are less than 1, that "reducing" makes the *value* smaller, or that you operate on tops and bottoms independently. Fraction-magnitude understanding is the #1 long-run predictor of algebra success, so it's worth real care.
 
@@ -84,7 +84,7 @@ Golden rule: **diagnose before you re-teach**, and **never explain the same way 
 
 ---
 
-## 5. Order of operations: same-tier, left-to-right
+## 5. Order of operations: same-tier, left-to-right {#mis.5}
 
 **The misconception.** Reading PEMDAS as six strict ranks instead of four, where **multiply/divide share one rank** and **add/subtract share another**, each worked left to right. People over-apply "M before D" and "A before S."
 
@@ -101,7 +101,7 @@ Golden rule: **diagnose before you re-teach**, and **never explain the same way 
 
 ---
 
-## 6. Inequalities: forgetting the sign-flip (and treating them like equations)
+## 6. Inequalities: forgetting the sign-flip (and treating them like equations) {#mis.6}
 
 **The misconception.** Solving an inequality exactly like an equation and forgetting that **multiplying or dividing both sides by a negative reverses the inequality**. Also a fuzzy sense of what a solution *set* means.
 
@@ -115,7 +115,7 @@ Golden rule: **diagnose before you re-teach**, and **never explain the same way 
 
 ---
 
-## 7. Algebraic structure / over-applied "tricks"
+## 7. Algebraic structure / over-applied "tricks" {#mis.7}
 
 **The misconception.** Beginners chase memorized tricks instead of reading what an expression *says*: missing that p + 0.05p = 1.05p, or that (x+2)(x+3) has a middle term, or applying keyword shortcuts ("'of' means multiply") that later mislead.
 
@@ -130,7 +130,7 @@ Golden rule: **diagnose before you re-teach**, and **never explain the same way 
 
 ---
 
-## 8. Slope: steepness vs. direction
+## 8. Slope: steepness vs. direction {#mis.8}
 
 **The misconception.** Reading the **sign** of a slope as if it measured steepness. The sign of m only sets *direction* — uphill (+) or downhill (−) left-to-right; **steepness is the magnitude |m|**, how far the line rises or falls per step. So a line of slope −3 is *steeper* than one of slope +2 (compare |−3| = 3 against |2| = 2), even though as plain numbers −3 < 2. This collides with the ordering-negatives error from §3 ("−5 > −2 because 5 > 2"): students rank slopes by value when steepness asks for magnitude.
 
