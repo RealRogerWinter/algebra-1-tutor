@@ -20,19 +20,21 @@ The full machine-readable map (with the prerequisite graph and a placement check
 
 | # | Unit | Focus |
 |---|------|-------|
-| 1 | Foundations & the Language of Algebra | variables, the equals sign as a balance, number system & number line, order of operations, negative numbers, expressions vs. equations |
-| 2 | Solving Linear Equations | one/two‑step, like terms, distributive property, variables on both sides, fractions in equations (with fraction refreshers) |
-| 3 | Proportional Reasoning | ratios, rates, unit rate, proportions, percents — framed as the bridge to slope |
-| 4 | Introducing Functions | definition (one output per input), `f(x)`, domain & range, multiple representations, linear vs. nonlinear |
-| 5 | Linear Functions & Their Graphs | coordinate plane, graphing, slope, slope‑intercept, writing equations of lines |
-| 6 | Modeling & Translation | words → equations; number/age/distance/mixture problems; intro scatter plots & line of best fit |
-| 7 | Systems of Equations | graphing, substitution, elimination, special cases & applications |
-| 8 | Inequalities | one‑variable (the sign‑flip), compound, absolute value, two‑variable graphing |
-| 9 | Sequences & Exponential Functions | arithmetic/geometric sequences as functions, exponential growth & decay, linear vs. exponential |
-| 10 | Exponents & Polynomials | exponent rules, scientific notation, polynomial operations, FOIL/area model |
-| 11 | Factoring | GCF, trinomials, special patterns |
-| 12 | Quadratic Functions & Equations (capstone) | square roots & radicals, `x² = 9`, factoring, completing the square, quadratic formula, parabolas |
-| A | Data & Statistics (optional) | one/two‑variable stats, line of best fit, correlation vs. causation, two‑way tables |
+<!-- BEGIN GENERATED: units-table -->
+| 1 | Foundations & the Language of Algebra | Variables, the equals sign as a balance, the number system & number line, order of operations, negative numbers, expressions vs. equations |
+| 2 | Solving Linear Equations | One- and two-step equations, like terms, distributive property, variables on both sides, fractions in equations |
+| 3 | Proportional Reasoning (the bridge to linearity) | Ratios, rates, unit rate, proportions, percents |
+| 4 | Introducing Functions | What a function is, f(x) notation, domain & range, table/graph/equation/words |
+| 5 | Linear Functions & Their Graphs | Coordinate plane, graphing, slope, slope-intercept, writing equations of lines |
+| 6 | Modeling & Translation | Turning words into equations; number/age/distance/mixture problems; intro scatter plots |
+| 7 | Systems of Equations | Two equations, two unknowns: graphing, substitution, elimination, special cases |
+| 8 | Inequalities | One-variable, the sign-flip, compound, absolute value, two-variable graphing |
+| 9 | Sequences & Exponential Functions | Arithmetic/geometric sequences as functions, exponential growth & decay, linear vs. exponential |
+| 10 | Exponents & Polynomials | Exponent rules, scientific notation, polynomial operations, FOIL/area model |
+| 11 | Factoring | GCF, factoring trinomials, special patterns |
+| 12 | Quadratic Functions & Equations (the capstone) | Square roots & radicals, x²=9, factoring, completing the square, quadratic formula, parabolas |
+| A | Data & Statistics (optional) | One/two-variable statistics, line of best fit, correlation vs. causation, two-way tables |
+<!-- END GENERATED: units-table -->
 
 ## Two dependency chains to keep solid
 

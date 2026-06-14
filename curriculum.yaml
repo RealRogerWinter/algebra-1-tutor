@@ -1,0 +1,156 @@
+course: "Algebra 1"
+units:
+  - id: 1
+    slug: foundations
+    title: "Foundations & the Language of Algebra"
+    short_title: "Foundations"
+    description: "Variables, the equals sign as a balance, the number system & number line, order of operations, negative numbers, expressions vs. equations"
+    prerequisites: "Arithmetic only"
+    optional: false
+    lessons:
+      - { id: "1.1", title: "Variables and the meaning of equations" }
+      - { id: "1.2", title: "The number system & the number line" }
+      - { id: "1.3", title: "Order of operations" }
+      - { id: "1.4", title: "Negative numbers" }
+      - { id: "1.5", title: "Expressions vs. equations; evaluating expressions" }
+  - id: 2
+    slug: linear-equations
+    title: "Solving Linear Equations"
+    short_title: "Linear Equations"
+    description: "One- and two-step equations, like terms, distributive property, variables on both sides, fractions in equations"
+    prerequisites: "Unit 1 (esp. negatives, order of operations)"
+    optional: false
+    lessons:
+      - { id: "2.1", title: "Inverse operations & one-step equations" }
+      - { id: "2.2", title: "Two-step equations" }
+      - { id: "2.3", title: "Combining like terms & the distributive property" }
+      - { id: "2.4", title: "Variables on both sides" }
+      - { id: "2.5", title: "Equations with fractions (with two Fraction Refreshers)" }
+  - id: 3
+    slug: proportional-reasoning
+    title: "Proportional Reasoning (the bridge to linearity)"
+    short_title: "Proportional Reasoning"
+    description: "Ratios, rates, unit rate, proportions, percents"
+    prerequisites: "Unit 2 (solving), fraction comfort"
+    optional: false
+    lessons:
+      - { id: "3.1", title: "Ratios and rates" }
+      - { id: "3.2", title: "Proportions & cross-multiplication" }
+      - { id: "3.3", title: "Percents" }
+  - id: 4
+    slug: functions
+    title: "Introducing Functions"
+    short_title: "Functions"
+    description: "What a function is, f(x) notation, domain & range, table/graph/equation/words"
+    prerequisites: "Unit 2; helped by Unit 3 (rates)"
+    optional: false
+    lessons:
+      - { id: "4.1", title: "What is a function" }
+      - { id: "4.2", title: "Function notation f(x), domain & range" }
+      - { id: "4.3", title: "Multiple representations; linear vs. nonlinear" }
+  - id: 5
+    slug: linear-functions-graphs
+    title: "Linear Functions & Their Graphs"
+    short_title: "Linear Functions"
+    description: "Coordinate plane, graphing, slope, slope-intercept, writing equations of lines"
+    prerequisites: "Units 3 & 4 (rate, functions)"
+    optional: false
+    lessons:
+      - { id: "5.1", title: "The coordinate plane" }
+      - { id: "5.2", title: "Graphing linear equations from a table" }
+      - { id: "5.3", title: "Slope" }
+      - { id: "5.4", title: "Slope-intercept form y = mx + b" }
+      - { id: "5.5", title: "Writing equations of lines" }
+  - id: 6
+    slug: modeling-translation
+    title: "Modeling & Translation"
+    short_title: "Modeling"
+    description: "Turning words into equations; number/age/distance/mixture problems; intro scatter plots"
+    prerequisites: "Units 2 & 5"
+    optional: false
+    lessons:
+      - { id: "6.1", title: "Translating words into expressions and equations" }
+      - { id: "6.2", title: "Classic word problems (number, age, distance, mixture)" }
+      - { id: "6.3", title: "Scatter plots & line of best fit (a first taste of data)" }
+  - id: 7
+    slug: systems
+    title: "Systems of Equations"
+    short_title: "Systems"
+    description: "Two equations, two unknowns: graphing, substitution, elimination, special cases"
+    prerequisites: "Units 5 & 6"
+    optional: false
+    lessons:
+      - { id: "7.1", title: "Solving by graphing" }
+      - { id: "7.2", title: "Substitution" }
+      - { id: "7.3", title: "Elimination" }
+      - { id: "7.4", title: "Special cases & applications" }
+  - id: 8
+    slug: inequalities
+    title: "Inequalities"
+    short_title: "Inequalities"
+    description: "One-variable, the sign-flip, compound, absolute value, two-variable graphing"
+    prerequisites: "Units 2 & 5"
+    optional: false
+    lessons:
+      - { id: "8.1", title: "One-variable inequalities" }
+      - { id: "8.2", title: "Compound inequalities" }
+      - { id: "8.3", title: "Absolute-value equations & inequalities" }
+      - { id: "8.4", title: "Graphing linear inequalities (two variables) & systems" }
+  - id: 9
+    slug: sequences-exponentials
+    title: "Sequences & Exponential Functions"
+    short_title: "Sequences & Exponentials"
+    description: "Arithmetic/geometric sequences as functions, exponential growth & decay, linear vs. exponential"
+    prerequisites: "Unit 4 (functions); some Unit 5"
+    optional: false
+    lessons:
+      - { id: "9.1", title: "Arithmetic & geometric sequences as functions" }
+      - { id: "9.2", title: "Exponential growth & decay; linear vs. exponential" }
+  - id: 10
+    slug: exponents-polynomials
+    title: "Exponents & Polynomials"
+    short_title: "Exponents & Polynomials"
+    description: "Exponent rules, scientific notation, polynomial operations, FOIL/area model"
+    prerequisites: "Unit 1 (exponents), Unit 2 (distributive)"
+    optional: false
+    lessons:
+      - { id: "10.1", title: "Exponent rules (including zero & negative exponents)" }
+      - { id: "10.2", title: "Scientific notation" }
+      - { id: "10.3", title: "Polynomials — terms, degree, standard form; add & subtract" }
+      - { id: "10.4", title: "Multiplying polynomials" }
+  - id: 11
+    slug: factoring
+    title: "Factoring"
+    short_title: "Factoring"
+    description: "GCF, factoring trinomials, special patterns"
+    prerequisites: "Unit 10 (multiplying polynomials)"
+    optional: false
+    lessons:
+      - { id: "11.1", title: "Greatest common factor (GCF)" }
+      - { id: "11.2", title: "Factoring trinomials x²+bx+c" }
+      - { id: "11.3", title: "Special patterns" }
+  - id: 12
+    slug: quadratics
+    title: "Quadratic Functions & Equations (the capstone)"
+    short_title: "Quadratics"
+    description: "Square roots & radicals, x²=9, factoring, completing the square, quadratic formula, parabolas"
+    prerequisites: "Units 10 & 11; Unit 5 (graphing)"
+    optional: false
+    lessons:
+      - { id: "12.1", title: "Square roots & simplifying radicals" }
+      - { id: "12.2", title: "The simplest quadratics (x²=9 → two solutions)" }
+      - { id: "12.3", title: "Solving by factoring (zero-product property)" }
+      - { id: "12.4", title: "Completing the square" }
+      - { id: "12.5", title: "The quadratic formula & the discriminant" }
+      - { id: "12.6", title: "Graphing parabolas" }
+  - id: "A"
+    slug: statistics
+    title: "Data & Statistics"
+    short_title: "Statistics"
+    description: "One/two-variable statistics, line of best fit, correlation vs. causation, two-way tables"
+    prerequisites: "Unit 5 (graphing lines)"
+    optional: true
+    lessons:
+      - { id: "A.1", title: "One-variable statistics — center & spread" }
+      - { id: "A.2", title: "Two-variable data — line of best fit, correlation vs. causation" }
+      - { id: "A.3", title: "Two-way tables" }
