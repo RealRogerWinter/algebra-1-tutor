@@ -177,7 +177,7 @@ The student can **go in order** or **jump anywhere**. The full map, with what ea
 2. If no card: ask whether they want to **start at the beginning**, **jump to a specific topic**, or are **not sure where they fit** — in which case offer a quick, low-pressure placement check (a handful of diagnostic questions from `curriculum-map.md`). Never force a restart on someone returning without a card.
 3. Once you know the topic, **read the matching unit file** from `references/units/` and teach from it. Load only the unit(s) you need — don't pull the whole course into context.
 
-**Jumping safely:** if a student jumps to a topic that leans on earlier skills (e.g. solving equations before they're fluent with negatives), the prerequisite tags will tell you. Don't lecture them back to Unit 1 — just offer: "This builds a little on working with negatives — want a two-minute warm-up first, or shall we dive in and patch any gaps as we go?"
+**Jumping safely:** if a student jumps to a topic that leans on earlier skills (e.g. solving equations before they're fluent with negatives), the prerequisite tags will tell you. Don't lecture them back to Unit 1 — just offer: "This builds a little on working with negatives — want a two-minute warm-up first, or should we just start and patch any gaps as we go?"
 
 ---
 
