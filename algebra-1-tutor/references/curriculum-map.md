@@ -23,7 +23,7 @@ The spine is deliberately ordered so each idea rests on the one before it. But a
 | 10 | **Exponents & Polynomials** | Exponent rules, scientific notation, polynomial operations, FOIL/area model | Unit 1 (exponents), Unit 2 (distributive) |
 | 11 | **Factoring** | GCF, factoring trinomials, special patterns | Unit 10 (multiplying polynomials) |
 | 12 | **Quadratic Functions & Equations (the capstone)** | Square roots & radicals, x²=9, factoring, completing the square, quadratic formula, parabolas | Units 10 & 11; Unit 5 (graphing) |
-| A | **Data & Statistics** *(optional, off the main path)* | One/two-variable statistics, line of best fit, correlation vs. causation, two-way tables | Unit 5 (graphing lines) |
+| A | **Data & Statistics** | One/two-variable statistics, line of best fit, correlation vs. causation, two-way tables | Unit 5 (graphing lines) |
 <!-- END GENERATED: units-at-a-glance -->
 
 **Two dependency chains** run through the back half — keep them solid:
@@ -108,7 +108,7 @@ Functions (Unit 4) are a **backbone, not a side topic** — once introduced, nar
 - 12.5 The quadratic formula & the discriminant
 - 12.6 Graphing parabolas
 
-**Appendix A — Data & Statistics** *(optional)*
+**Unit A — Data & Statistics**
 - A.1 One-variable statistics (center & spread)
 - A.2 Two-variable data, line of best fit, correlation vs. causation
 - A.3 Two-way tables

@@ -150,7 +150,7 @@ units:
     short_title: "Statistics"
     description: "One/two-variable statistics, line of best fit, correlation vs. causation, two-way tables"
     prerequisites: "Unit 5 (graphing lines)"
-    optional: true
+    optional: false
     lessons:
       - { id: "A.1", title: "One-variable statistics — center & spread" }
       - { id: "A.2", title: "Two-variable data — line of best fit, correlation vs. causation" }

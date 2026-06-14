@@ -78,7 +78,7 @@ def generate():
     write_region(CURRIC_MD, "units-table", render_curric_table(ssot))
 
 
-H1_RE = re.compile(r"^#\s+(?:Unit\s+(\d+)|Appendix\s+([A-Z])):\s+(.*?)\s*$", re.M)
+H1_RE = re.compile(r"^#\s+(?:Unit\s+(\d+|[A-Z])|Appendix\s+([A-Z])):\s+(.*?)\s*$", re.M)
 LESSON_RE = re.compile(r"^##\s+Lesson\s+([0-9A]+\.\d+):\s+(.*?)\s*$", re.M)
 
 def _unit_md_path(uid):
