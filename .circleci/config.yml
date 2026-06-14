@@ -15,8 +15,14 @@ jobs:
           name: SSOT generation up to date
           command: python _verification/generate.py --check
       - run:
-          name: Alignment guard (alignment + notation + point-on-line + code-grammar)
+          name: Alignment guard (alignment + notation + point-on-line + code-grammar + md-anchor + figure)
           command: python _verification/check_alignment.py
+      - run:
+          name: Figures accurate + current
+          command: python _verification/figures.py --check
+      - run:
+          name: HTML textbook up to date
+          command: python _verification/build_textbook.py --check
       - run:
           name: Unit tests
           command: python -m pytest _verification/tests -v

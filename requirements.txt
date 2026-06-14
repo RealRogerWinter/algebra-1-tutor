@@ -1,3 +1,4 @@
 sympy>=1.14
 PyYAML>=6.0
 pytest>=8.0
+markdown==3.7  # build-only: HTML textbook generator (Phase 4)
