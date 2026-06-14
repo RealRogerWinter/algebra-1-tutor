@@ -53,6 +53,81 @@ def code_grammar_lint():
     return bad
 
 
+# --- .md reference-code anchors ({#code}) ---------------------------------------------------
+ANCHOR_RE = re.compile(r"\{#([^}\s]+)\}")
+_LESSON_SCOPE_RE = re.compile(r"^((?:[1-9]|1[0-2]|A)\.\d+)\.")
+
+
+def _shipped_md_for_anchors():
+    """Shipped .md under algebra-1-tutor/ except SKILL.md, which documents the convention by
+    example (its sample codes must not be linted as if they were real anchors)."""
+    root = os.path.join(REPO_ROOT, "algebra-1-tutor")
+    files = sorted(glob.glob(os.path.join(root, "**", "*.md"), recursive=True))
+    return [f for f in files if os.path.basename(f) != "SKILL.md"], root
+
+
+def _scan_anchors():
+    """Return [(code, relpath), ...] for every {#code}, document order. $$ blocks and fenced
+    code are stripped first (anchors never live inside math/code)."""
+    files, root = _shipped_md_for_anchors()
+    out = []
+    for fp in files:
+        s = open(fp, encoding="utf-8").read()
+        s = re.sub(r"\$\$.*?\$\$", " ", s, flags=re.DOTALL)
+        s = re.sub(r"```.*?```", " ", s, flags=re.DOTALL)
+        rel = os.path.relpath(fp, root)
+        out += [(m.group(1), rel) for m in ANCHOR_RE.finditer(s)]
+    return out
+
+
+def _group_key_and_index(code):
+    """For the density check: (group_key, index_int) for index-grouped codes, else None.
+    met.<slug> has no index -> None (its uniqueness is covered by the collision check)."""
+    m = re.match(r"^((?:[1-9]|1[0-2]|A)\.\d+)\.(w|ex|d|c|h|f)?(\d+)[a-z]?$", code)
+    if m:
+        return (f"{m.group(1)}.{m.group(2) or ''}", int(m.group(3)))
+    m = re.match(r"^mis\.(\d+)$", code)
+    if m:
+        return ("mis", int(m.group(1)))
+    m = re.match(r"^vis\.t(\d+)$", code)
+    if m:
+        return ("vis.t", int(m.group(1)))
+    return None
+
+
+def _lint_anchor_list(anchors, ssot_ids):
+    """Pure linter over [(code, relpath), ...]: grammar + collision + density + SSOT existence."""
+    issues, seen, groups = [], {}, {}
+    for code, rel in anchors:
+        if not ID_RE.match(code):
+            issues.append(f"{rel}: anchor {{#{code}}} violates grammar")
+            continue
+        if code in seen:
+            issues.append(f"{rel}: anchor {{#{code}}} duplicates {seen[code]} (collision)")
+        else:
+            seen[code] = rel
+        m = _LESSON_SCOPE_RE.match(code)
+        if m and m.group(1) not in ssot_ids:
+            issues.append(f"{rel}: anchor {{#{code}}} -> unknown lesson {m.group(1)}")
+        gk = _group_key_and_index(code)
+        if gk:
+            groups.setdefault(gk[0], []).append(gk[1])
+    for key, idxs in sorted(groups.items()):
+        dist = sorted(set(idxs))
+        if dist != list(range(1, len(dist) + 1)):
+            issues.append(f"group {key}: indices {sorted(idxs)} not dense 1..N "
+                          f"(gap/append-only violation)")
+    return issues
+
+
+def md_anchor_lint():
+    """Lint every {#code} anchor across the shipped .md files (SKILL.md excluded)."""
+    sys.path.insert(0, HERE)
+    import generate
+    ssot_ids = {l.id for u in generate.load_ssot().units for l in u.lessons}
+    return _lint_anchor_list(_scan_anchors(), ssot_ids)
+
+
 def _line_eq_template(prob):
     """True if this solve entry is a line-intercept problem: '<m>*<x0>+b=<y0>', var b."""
     return (prob.get("kind") == "solve" and prob.get("var") == "b"
@@ -248,10 +323,13 @@ def main():
     g = code_grammar_lint()
     if g:
         failures += [f"code-grammar: bad id {i}" for i in g]
+    md = md_anchor_lint()
+    if md:
+        failures += [f"md-anchor: {i}" for i in md]
     if failures:
         print("FAIL:\n  " + "\n  ".join(failures))
         return 1
-    print("check_alignment: alignment + notation + point-on-line + code-grammar all green.")
+    print("check_alignment: alignment + notation + point-on-line + code-grammar + md-anchor all green.")
     return 0
 
 
