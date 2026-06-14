@@ -16,6 +16,16 @@ The unit file is **read by the tutor (an AI), not shown directly to students**. 
 - Reference the right misconception section (e.g. "see misconceptions.md §3 negatives") and the right visual template (e.g. "visuals.md Template 3 — parabola") rather than re-explaining them.
 - If your unit introduces or uses functions, thread **function language** (e.g. "this line *is* a function; f(x)=2x+1 names it") per the course design.
 
+## Reference-code anchors
+
+Referenceable items carry an inline **reference code** so a student (and the HTML textbook) can point to one exact thing (see `SKILL.md` → "Reference codes"; full grammar in `RESEARCH_REDTEAM_HANDOFF.md` §5). Add anchors as you author, in document order.
+
+- **Syntax:** `{#code}`. Trailing on a heading (`## Template 1 — … {#vis.t1}`); leading on a list item or bold-led paragraph, right after the marker (`- {#1.1.d1} **Variable:** …`). Plain text, no backslashes, so `check_notation.py` stays clean. **Never** anchor the `# Unit N:` H1 or a `## Lesson N.M:` header — `generate.py` parses those lines.
+- **Tags:** `scope.lesson.tag+index`. `d` definition (new term), `c` transfer-check, `h` how-to/procedure, `f` figure (reserve the anchor where a figure will live — do not draw it; figures are Phase 3). `w` worked example and bare-number practice already exist as JSON ids.
+- **What to anchor:** every **New terms** definition (`d1`, `d2`, … in order) and every **Check for understanding** prompt (`c1`, `c2`, …). Add an `h` only where the lesson states an explicit, reusable, multi-step method; add an `f` only where **Visuals to offer** names a real figure.
+- **What needs no anchor:** worked examples (`wK`) and practice problems (`K`) are found by their visible number — leave them un-anchored.
+- **Append-only:** a code is a stable reference. Assign the next free index in document order; never renumber an existing one. `md_anchor_lint` (in `check_alignment.py`) enforces grammar, global uniqueness, and dense per-group indices.
+
 ## Required structure of the unit `.md`
 
 ```
