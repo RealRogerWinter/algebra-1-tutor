@@ -12,6 +12,9 @@ jobs:
           name: Answer-key verifier (sympy)
           command: python _verification/verify_answers.py
       - run:
+          name: Complementary problem verifier (sympy)
+          command: python _verification/verify_complementary.py
+      - run:
           name: SSOT generation up to date
           command: python _verification/generate.py --check
       - run:
@@ -23,6 +26,9 @@ jobs:
       - run:
           name: HTML textbook up to date
           command: python _verification/build_textbook.py --check
+      - run:
+          name: Tutor guide up to date
+          command: python _verification/build_tutor_guide.py --check
       - run:
           name: Unit tests
           command: python -m pytest _verification/tests -v

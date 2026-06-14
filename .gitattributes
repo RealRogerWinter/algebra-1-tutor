@@ -10,3 +10,6 @@ algebra-1-tutor/figures/*.svg text eol=lf
 
 # The HTML textbook is generated LF-only by _verification/build_textbook.py.
 docs/textbook/** text eol=lf
+
+# The tutor guide is generated LF-only by _verification/build_tutor_guide.py.
+docs/tutor-guide/** text eol=lf
