@@ -46,9 +46,10 @@ def _problem_html(p):
     sol = _render_text(str(p.get("solution", "")))
     ans = _html.escape(str(p.get("answer", "")))
     return (f'<div class="tproblem" id="{code}">\n'
-            f'<a class="refcode" href="#{code}">#{code}</a>\n{prompt}\n'
-            f'<details><summary>Worked solution</summary>\n{sol}\n'
-            f'<p class="ans"><b>Answer:</b> {ans}</p></details>\n</div>')
+            f'<a class="refcode" href="#{code}">{code}</a>\n{prompt}\n'
+            f'<details class="answers"><summary><span class="tw"></span>'
+            f'<span class="eyebrow">Worked solution</span></summary>\n'
+            f'<div class="ak-body">\n{sol}\n<p class="ans"><b>Answer:</b> {ans}</p></div></details>\n</div>')
 
 
 def _unit_page(bt, u, prev_link, next_link):
@@ -70,7 +71,7 @@ def _unit_page(bt, u, prev_link, next_link):
                         + "\n".join(_problem_html(p) for p in review) + "</section>")
     body = "\n".join(sections) or "<p>(No complementary problems yet.)</p>"
     return bt._page(f"Unit {u.id}: {u.title} — Complementary problems", body, prev_link, next_link,
-                    "Tutor guide: fresh, parallel problems with full worked solutions.")
+                    "Tutor guide: fresh, parallel problems with full worked solutions.", surface="tutor")
 
 
 def build_site(ssot):
@@ -87,7 +88,7 @@ def build_site(ssot):
     idx_body = ('<p class="subtitle">Complementary problem sets for the tutor — original parallel-form '
                 'problems (separate from the textbook) with full worked solutions, plus a mixed-review '
                 'set per unit for interleaving.</p><ul class="units">' + "\n".join(items) + "</ul>")
-    files["index.html"] = bt._page("Algebra 1 — Tutor Guide (Complementary Problems)", idx_body, None, None)
+    files["index.html"] = bt._page("Algebra 1 — Tutor Guide (Complementary Problems)", idx_body, None, None, surface="tutor")
     for i, u in enumerate(order):
         fname = "appendix.html" if u.id == "A" else f"unit-{int(u.id):02d}.html"
         prev_u = order[i - 1] if i > 0 else None

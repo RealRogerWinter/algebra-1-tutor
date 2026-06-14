@@ -23,5 +23,5 @@ def test_every_unit_has_a_set():
 
 def test_tutor_guide_renders_problem_and_solution():
     s = open(os.path.join(tg.OUT_DIR, "unit-05.html"), encoding="utf-8").read()
-    assert 'class="tproblem"' in s and "<summary>Worked solution</summary>" in s
+    assert 'class="tproblem"' in s and '<span class="eyebrow">Worked solution</span>' in s
     assert 'id="5.4.T1"' in s          # a per-lesson T code is a deep-link target

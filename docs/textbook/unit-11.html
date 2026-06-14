@@ -3,18 +3,22 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Unit 11: Factoring — Algebra 1</title>
+<title>Factoring — Algebra 1</title>
+<script>try{if(localStorage.getItem("a1-theme")==="dark")document.documentElement.classList.add("dark");}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..40,500..600&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="textbook.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous">
 </head>
-<body>
+<body data-surface="textbook">
 <header class="topbar">
-  <nav><a href="index.html">Contents</a> &nbsp;·&nbsp; <a href="unit-10.html">&larr; Unit 10</a> &nbsp;·&nbsp; <a href="unit-12.html">Unit 12 &rarr;</a></nav>
-  <button id="theme" type="button" aria-label="Toggle dark mode">◐</button>
+  <nav><a class="home" href="index.html">Algebra&nbsp;1</a> &nbsp;·&nbsp; <a href="unit-10.html">&larr;&nbsp;Unit 10</a> &nbsp;·&nbsp; <a href="unit-12.html">Unit 12&nbsp;&rarr;</a></nav>
+  <span class="sp"></span>
+  <button id="theme" type="button" aria-label="Toggle light or dark theme">◐ Theme</button>
 </header>
 <main>
-<h1>Unit 11: Factoring</h1>
-<p class="subtitle">GCF, factoring trinomials, special patterns</p>
+<div class="hero"><div class="hero-text"><div class="kicker">Unit 11</div><h1>Factoring</h1><p class="lede">GCF, factoring trinomials, special patterns</p></div><img class="hero-art" src="../assets/factoring.jpg" alt=""></div>
 
 <blockquote>
 <p><strong>Prerequisites:</strong> Unit 10 (multiplying polynomials — the area box and distribution), the distributive property and combining like terms (Unit 2.3), and comfort with negatives (Unit 1.4 / misconceptions.md §3).
@@ -42,18 +46,26 @@
 <li><strong>Combining-unlike-terms relapse</strong> when checking by multiplying back (misconceptions.md §7) — watch the expansion step itself.</li>
 </ul>
 <p><strong>Pacing:</strong> 11.1 is usually quick — use it to cement the "multiply-back" check. Slow down at 11.2 and give it the most time; cover <em>all four sign cases</em> deliberately. 11.3 is pattern-recognition drill — fast once the eye is trained. Interleave Unit 10 throughout: every check <em>is</em> a Unit 10 expansion, so the two units reinforce each other (pedagogy.md → interleaving). Where natural, narrate in function language: "factoring x²+5x+6 finds where the function f(x)=x²+5x+6 will equal zero — that's Unit 12, and it starts here."</p>
-<hr>
+<div class="ldiv" aria-hidden="true"><i></i><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3.5 20.5 12 12 20.5 3.5 12Z"/></svg><i></i></div>
 <h2 id="lesson-111-greatest-common-factor-gcf">Lesson 11.1: Greatest common factor (GCF)</h2>
-<p><strong>Goal:</strong> Find the largest factor (numbers <em>and</em> variables) shared by <strong>every</strong> term and pull it out front, leaving the rest in parentheses.</p>
-<p><strong>Why it matters:</strong> GCF is the <em>first</em> thing to try on any factoring problem — pulling it out often shrinks a scary expression into something simple, and it's the inverse of the single-term distribution from Unit 2/10. It also sets up the multiply-back check the rest of the unit depends on.</p>
+<div class="cl-goal">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/></svg>What you'll learn</span></p>
+<p>Find the largest factor (numbers <em>and</em> variables) shared by <strong>every</strong> term and pull it out front, leaving the rest in parentheses.</p>
+</div>
+<div class="cl-why">
+<p>GCF is the <em>first</em> thing to try on any factoring problem — pulling it out often shrinks a scary expression into something simple, and it's the inverse of the single-term distribution from Unit 2/10. It also sets up the multiply-back check the rest of the unit depends on.</p>
 <p><strong>Scope (state this once, up front):</strong> Throughout this unit we <strong>factor over the integers</strong> — every factor we write has whole-number (integer) coefficients. So "factor x²+5x+6" means "write it as a product of pieces with integer coefficients," and a problem that <em>can't</em> be done with integers is answered honestly as <strong>prime</strong> (11.2) — not forced. We do <strong>not</strong> use fractions, decimals, square roots, or complex numbers as a factoring method here; those wait for Unit 12.</p>
-<p><strong>New terms:</strong></p>
+</div>
+<div class="cl-terms">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6.5C9.5 5 6 5 3.5 6.5V18C6 16.5 9.5 16.5 12 18C14.5 16.5 18 16.5 20.5 18V6.5C18 5 14.5 5 12 6.5Z"/><path d="M12 6.5V18"/></svg>New words</span></p>
 <ul>
-<li><a class="refcode" id="11.1.d1" href="#11.1.d1">#11.1.d1</a> <strong>Factor (noun):</strong> something multiplied. In 6=2·3, both 2 and 3 are factors of 6. In 3(2x+3), the factors are 3 and (2x+3).</li>
-<li><a class="refcode" id="11.1.d2" href="#11.1.d2">#11.1.d2</a> <strong>Greatest common factor (GCF):</strong> the <em>largest</em> factor — biggest number times the most variables — that divides evenly into <strong>every</strong> term.</li>
-<li><a class="refcode" id="11.1.d3" href="#11.1.d3">#11.1.d3</a> <strong>Factor (verb):</strong> to rewrite a sum as a product, i.e. to <em>undo</em> distributing.</li>
+<li><a class="refcode" id="11.1.d1" href="#11.1.d1">11.1.d1</a> <strong>Factor (noun):</strong> something multiplied. In 6=2·3, both 2 and 3 are factors of 6. In 3(2x+3), the factors are 3 and (2x+3).</li>
+<li><a class="refcode" id="11.1.d2" href="#11.1.d2">11.1.d2</a> <strong>Greatest common factor (GCF):</strong> the <em>largest</em> factor — biggest number times the most variables — that divides evenly into <strong>every</strong> term.</li>
+<li><a class="refcode" id="11.1.d3" href="#11.1.d3">11.1.d3</a> <strong>Factor (verb):</strong> to rewrite a sum as a product, i.e. to <em>undo</em> distributing.</li>
 </ul>
-<p><strong>Teaching arc (concrete → pictorial → symbolic):</strong></p>
+</div>
+<div class="cl-note">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 11V16"/><circle cx="12" cy="8" r=".9" fill="currentColor" stroke="none"/></svg>How this builds</span></p>
 <ul>
 <li><em>Concrete (common item in every bag, metaphors.md → Factoring B):</em> Each term is a gift bag. If <em>every</em> bag contains a chocolate, you can take one chocolate out of each and set them in a single pile out front. 6x+9: both terms are divisible by 3, so 3 comes out front and what's left of each bag goes inside: 3(2x+3).</li>
 <li>
@@ -72,7 +84,10 @@ $$\begin{array}{c|c|c}
 </ul>
 <p>Lead Socratically (SKILL.md): "What's the biggest number that divides <em>both</em> 15 and 10? ... And what's the most x's that <em>every</em> term has?" Then <strong>always</strong> close with the check: "Multiply 5x²(3x-2) back out — do we get 15x³-10x²? Then it's right."</p>
 <p><strong>Naming the move honestly:</strong> dividing 8x by 4x leaves 2, not 0 — the term doesn't disappear, it gets <em>smaller</em> by the factor we removed. (Heads off the "things vanish by magic" idea, misconceptions.md §1.)</p>
-<p><strong>Worked examples</strong> (each pulls the GCF, then checks by multiplying back):</p>
+</div>
+<section class="worked">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19.5V15L15.5 4.5 19.5 8.5 9 19Z"/><path d="M13.5 6.5 17.5 10.5"/></svg>Worked example</span></p>
+<p>(each pulls the GCF, then checks by multiplying back):</p>
 <p><em>Numbers only:</em>
 $$6x+9 \;=\; 3(2x+3) \qquad \text{Check: } 3\cdot 2x + 3\cdot 3 = 6x+9$$</p>
 <p><em>Number and a variable:</em>
@@ -85,46 +100,68 @@ $$12x+18 \;=\; 6(2x+3) \qquad \text{Check: } 6\cdot 2x + 6\cdot 3 = 12x+18$$
 Note: 2(6x+9) and 3(4x+6) are common factors but <strong>not the greatest</strong> — the inside still shares a factor. Only 6 leaves an inside (2x+3) with nothing left to pull.</p>
 <p><em>Variable factor with a negative inside:</em>
 $$10x^2-25x \;=\; 5x(2x-5) \qquad \text{Check: } 5x\cdot 2x - 5x\cdot 5 = 10x^2-25x$$</p>
-<p><strong>Watch for:</strong></p>
+</section>
+<div class="cl-watch">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9H17"/><path d="M14.5 6.5 17 9 14.5 11.5"/><path d="M18 15H7"/><path d="M9.5 12.5 7 15 9.5 17.5"/></svg>A common mix-up</span></p>
 <ul>
 <li><strong>Not pulling the <em>greatest</em> factor</strong> — 12x+18=2(6x+9) and stopping. Tell: the parentheses still share a factor. Repair: "Look inside — do 6x and 9 <em>still</em> have something in common? Then we didn't take it all." (misconceptions.md §7)</li>
 <li><strong>Forgetting the variable part</strong> — 4x²+8x=4(x²+2x), leaving an x behind. Repair: "Does <em>every</em> bag have at least one x? Then the x comes out too."</li>
 <li><strong>Taking too high a power</strong> — 15x³-10x²=5x³(...). Repair: "The second term only has x²; you can't pull an x³ out of it. Take the <em>lowest</em> power present."</li>
 <li><strong>Sign slip on the inside</strong> when a term is subtracted — 10x²-25x=5x(2x+5). The multiply-back check catches it instantly.</li>
 </ul>
-<p><strong>Visuals to offer:</strong> the one-row LaTeX <code>array</code> area-model box above (visuals.md → area-model) — show the GCF as the left edge and the inside as the top labels. No artifact needed.</p>
-<p><strong>Check for understanding (transfer):</strong></p>
+</div>
+<div class="cl-note">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 11V16"/><circle cx="12" cy="8" r=".9" fill="currentColor" stroke="none"/></svg>Figures to use</span></p>
+<p>the one-row LaTeX <code>array</code> area-model box above (visuals.md → area-model) — show the GCF as the left edge and the inside as the top labels. No artifact needed.</p>
+</div>
+<div class="cl-check">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M9.6 9.6a2.6 2.6 0 1 1 3.3 2.5c-.9.3-1.4.9-1.4 1.8"/><circle cx="11.5" cy="16.6" r=".9" fill="currentColor" stroke="none"/></svg>Check yourself</span></p>
 <ol>
-<li><a class="refcode" id="11.1.c1" href="#11.1.c1">#11.1.c1</a> "Factor 8x²+12x, then prove it's right without me." (listen for the multiply-back check)</li>
-<li><a class="refcode" id="11.1.c2" href="#11.1.c2">#11.1.c2</a> "A student writes 6x+9=3(2x+9). Multiply it back — where did it go wrong?" (3·3=9, so the 9 inside should be 3)</li>
-<li><a class="refcode" id="11.1.c3" href="#11.1.c3">#11.1.c3</a> "Why can't you pull x² out of 15x³-10x² as x² <em>and</em> also leave an x in the second term?" (the second term <em>is</em> the x²; nothing's left of it but the coefficient)</li>
+<li><a class="refcode" id="11.1.c1" href="#11.1.c1">11.1.c1</a> "Factor 8x²+12x, then prove it's right without me." (listen for the multiply-back check)</li>
+<li><a class="refcode" id="11.1.c2" href="#11.1.c2">11.1.c2</a> "A student writes 6x+9=3(2x+9). Multiply it back — where did it go wrong?" (3·3=9, so the 9 inside should be 3)</li>
+<li><a class="refcode" id="11.1.c3" href="#11.1.c3">11.1.c3</a> "Why can't you pull x² out of 15x³-10x² as x² <em>and</em> also leave an x in the second term?" (the second term <em>is</em> the x²; nothing's left of it but the coefficient)</li>
 </ol>
-<p><strong>Practice problems:</strong></p>
+</div>
+<section class="practice">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4.5" width="15.5" height="15.5" rx="2.5"/><path d="M7.5 10 9 11.5 12 8.5"/><path d="M14 10H16.5"/><path d="M7.5 15H16.5"/></svg>Practice</span></p>
 <p><em>Numbers only:</em></p>
 <ol>
-<li><a class="refcode" id="11.1.1" href="#11.1.1">#11.1.1</a> 2x+6  2. 5x+15  3. 6x+9  4. 4x-12  5. 8x+20  6. 9x-6</li>
+<li><a class="refcode" id="11.1.1" href="#11.1.1">11.1.1</a> 2x+6  2. 5x+15  3. 6x+9  4. 4x-12  5. 8x+20  6. 9x-6</li>
 </ol>
 <p><em>With a variable:</em></p>
 <ol start="7">
-<li><a class="refcode" id="11.1.2" href="#11.1.2">#11.1.2</a> x²+7x  8. 3x²+6x  9. 10x²-15x  10. 4x²+8x</li>
+<li><a class="refcode" id="11.1.2" href="#11.1.2">11.1.2</a> x²+7x  8. 3x²+6x  9. 10x²-15x  10. 4x²+8x</li>
 </ol>
 <p><em>Higher powers (take the lowest power):</em></p>
 <ol start="11">
-<li><a class="refcode" id="11.1.3" href="#11.1.3">#11.1.3</a> 6x³-9x²  12. 14x²+21x  13. 12x³+8x²  14. 18x²-12x</li>
+<li><a class="refcode" id="11.1.3" href="#11.1.3">11.1.3</a> 6x³-9x²  12. 14x²+21x  13. 12x³+8x²  14. 18x²-12x</li>
 </ol>
-<p><strong>Answer key (all verified — multiply each back to confirm):</strong>
-1) 2(x+3)  2) 5(x+3)  3) 3(2x+3)  4) 4(x-3)  5) 4(2x+5)  6) 3(3x-2)  7) x(x+7)  8) 3x(x+2)  9) 5x(2x-3)  10) 4x(x+2)  11) 3x²(2x-3)  12) 7x(2x+3)  13) 4x²(3x+2)  14) 6x(3x-2)</p>
-<hr>
+</section>
+<details class="answers">
+<summary><span class="tw"></span><span class="eyebrow">Answers</span><span class="hint">Try each one yourself first, then open to check.</span></summary>
+<div class="ak-body">
+<p>1) 2(x+3)  2) 5(x+3)  3) 3(2x+3)  4) 4(x-3)  5) 4(2x+5)  6) 3(3x-2)  7) x(x+7)  8) 3x(x+2)  9) 5x(2x-3)  10) 4x(x+2)  11) 3x²(2x-3)  12) 7x(2x+3)  13) 4x²(3x+2)  14) 6x(3x-2)</p>
+</div>
+</details>
+<div class="ldiv" aria-hidden="true"><i></i><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3.5 20.5 12 12 20.5 3.5 12Z"/></svg><i></i></div>
 <h2 id="lesson-112-factoring-trinomials-x2bxc">Lesson 11.2: Factoring trinomials x²+bx+c</h2>
-<p><strong>Goal:</strong> Factor x²+bx+c into (x+m)(x+n) by finding two numbers that <strong>multiply to c</strong> and <strong>add to b</strong> — with the signs reasoned, not guessed.</p>
-<p><strong>Why it matters:</strong> This is the lesson the whole unit builds toward. It's the reverse of the binomial multiplication from Unit 10, and it's the key that unlocks <strong>solving quadratics by factoring</strong> in Unit 12 — once x²+5x+6=(x+2)(x+3), setting it to zero is one short step away. Invest the most time here.</p>
-<p><strong>New terms:</strong></p>
+<div class="cl-goal">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/></svg>What you'll learn</span></p>
+<p>Factor x²+bx+c into (x+m)(x+n) by finding two numbers that <strong>multiply to c</strong> and <strong>add to b</strong> — with the signs reasoned, not guessed.</p>
+</div>
+<div class="cl-why">
+<p>This is the lesson the whole unit builds toward. It's the reverse of the binomial multiplication from Unit 10, and it's the key that unlocks <strong>solving quadratics by factoring</strong> in Unit 12 — once x²+5x+6=(x+2)(x+3), setting it to zero is one short step away. Invest the most time here.</p>
+</div>
+<div class="cl-terms">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6.5C9.5 5 6 5 3.5 6.5V18C6 16.5 9.5 16.5 12 18C14.5 16.5 18 16.5 20.5 18V6.5C18 5 14.5 5 12 6.5Z"/><path d="M12 6.5V18"/></svg>New words</span></p>
 <ul>
-<li><a class="refcode" id="11.2.d1" href="#11.2.d1">#11.2.d1</a> <strong>Trinomial:</strong> a polynomial with three <em>unlike</em> terms (after combining like terms), here x²+bx+c — a squared term, an x term, and a constant.</li>
-<li><a class="refcode" id="11.2.d2" href="#11.2.d2">#11.2.d2</a> <strong>Prime (irreducible over the integers):</strong> a trinomial that <strong>cannot</strong> be written as a product of two binomials with integer coefficients. When the two-number search comes up empty, the trinomial is prime — that's a real answer, not a failure.</li>
-<li><a class="refcode" id="11.2.d3" href="#11.2.d3">#11.2.d3</a> <strong>Monic:</strong> leading coefficient 1, i.e. the x² has no number in front (just x², not 3x²). Every trinomial in this lesson is monic. Trinomials like 2x²+7x+3, where the leading coefficient is not 1, factor by an extension of this method covered later.</li>
+<li><a class="refcode" id="11.2.d1" href="#11.2.d1">11.2.d1</a> <strong>Trinomial:</strong> a polynomial with three <em>unlike</em> terms (after combining like terms), here x²+bx+c — a squared term, an x term, and a constant.</li>
+<li><a class="refcode" id="11.2.d2" href="#11.2.d2">11.2.d2</a> <strong>Prime (irreducible over the integers):</strong> a trinomial that <strong>cannot</strong> be written as a product of two binomials with integer coefficients. When the two-number search comes up empty, the trinomial is prime — that's a real answer, not a failure.</li>
+<li><a class="refcode" id="11.2.d3" href="#11.2.d3">11.2.d3</a> <strong>Monic:</strong> leading coefficient 1, i.e. the x² has no number in front (just x², not 3x²). Every trinomial in this lesson is monic. Trinomials like 2x²+7x+3, where the leading coefficient is not 1, factor by an extension of this method covered later.</li>
 </ul>
-<p><strong>Teaching arc (concrete → pictorial → symbolic):</strong></p>
+</div>
+<div class="cl-note">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 11V16"/><circle cx="12" cy="8" r=".9" fill="currentColor" stroke="none"/></svg>How this builds</span></p>
 <ul>
 <li>
 <p><em>Pictorial (reverse the area box, metaphors.md → Factoring A; visuals.md → area-model):</em> In Unit 10, (x+2)(x+3) filled a box: corners x² and 6, middle cells 2x and 3x that add to 5x. Factoring runs it <strong>backward</strong> — you're handed the inside and must find the edges:
@@ -184,7 +221,10 @@ The two unknown edges must <strong>multiply to 6</strong> (the corner) and their
 </tbody>
 </table>
 <p>Lead Socratically: "We need two numbers. Their product is c=6 — same sign or opposite? Their sum is b=5. Which pair fits?" Then <strong>check by multiplying back</strong> every time (this is also a Unit 10 rep).</p>
-<p><strong>Worked examples</strong> (covering all sign cases; each checked by expanding back):</p>
+</div>
+<section class="worked">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19.5V15L15.5 4.5 19.5 8.5 9 19Z"/><path d="M13.5 6.5 17.5 10.5"/></svg>Worked example</span></p>
+<p>(covering all sign cases; each checked by expanding back):</p>
 <p><em>Both positive (c&gt;0, b&gt;0):</em>
 $$x^2+5x+6=(x+2)(x+3) \qquad \text{Check: } x^2+3x+2x+6 = x^2+5x+6$$
 (2·3=6, 2+3=5.)</p>
@@ -220,7 +260,9 @@ c=1, b=1. The only integer pair multiplying to 1 is 1·1 (sum 2) or (-1)(-1) (su
 <li><strong>Don't reach for non-integers.</strong> A learner might notice x²+5x+9 "almost" works and try fractions or decimals — hold the line: over the integers it's prime, full stop. Other tools (the quadratic formula, the discriminant) come in Unit 12.</li>
 <li><strong>GCF can hide a prime.</strong> 2x²+4x+10 is <em>not</em> prime as written — pull the 2 first: 2(x²+2x+5), and <em>then</em> the inside (x²+2x+5) is prime. So "factor completely" here means 2(x²+2x+5), GCF out front, prime factor left intact.</li>
 </ul>
-<p><strong>Watch for:</strong></p>
+</section>
+<div class="cl-watch">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9H17"/><path d="M14.5 6.5 17 9 14.5 11.5"/><path d="M18 15H7"/><path d="M9.5 12.5 7 15 9.5 17.5"/></svg>A common mix-up</span></p>
 <ul>
 <li><strong>Sign reasoning backward</strong> (misconceptions.md §3) — e.g. writing x²-5x+6=(x+2)(x+3) (forgot both must be negative) or x²+x-6=(x-3)(x+2) (put the sign on the wrong number). Tell: the multiply-back gives the wrong middle term. Repair: "Is c positive or negative? Same sign or opposite? Now which sign does b force?"</li>
 <li><strong>Product/sum swapped</strong> — finding numbers that <em>add</em> to c and <em>multiply</em> to b. Repair: "Which one is the constant on its own — that's the product target."</li>
@@ -228,51 +270,71 @@ c=1, b=1. The only integer pair multiplying to 1 is 1·1 (sum 2) or (-1)(-1) (su
 <li><strong>Declaring "prime" too soon</strong> — quitting after one or two pairs instead of <em>all</em> of them, or forgetting the negative pairs when c&gt;0 and b&lt;0. Repair: "List every pair, including negatives where the signs call for it; only an <em>exhausted</em> list earns the word prime." (misconceptions.md §7)</li>
 <li><strong>No middle-term check</strong> — accepting (x+2)(x+3) for x²+6x+6 without expanding. Repair: always multiply back; the middle term is where errors surface (misconceptions.md §7). (And note: x²+6x+6 is in fact prime — no integer pair multiplies to 6 and adds to 6.)</li>
 </ul>
-<p><strong>Visuals to offer:</strong> the 2×2 LaTeX <code>array</code> area-model box (visuals.md → area-model), filled in <em>backward</em> — write the known corners (x² and c) and let the student deduce the edges. Especially useful for a stuck student.</p>
-<p><strong>Check for understanding (transfer):</strong></p>
+</div>
+<div class="cl-note">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 11V16"/><circle cx="12" cy="8" r=".9" fill="currentColor" stroke="none"/></svg>Figures to use</span></p>
+<p>the 2×2 LaTeX <code>array</code> area-model box (visuals.md → area-model), filled in <em>backward</em> — write the known corners (x² and c) and let the student deduce the edges. Especially useful for a stuck student.</p>
+</div>
+<div class="cl-check">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M9.6 9.6a2.6 2.6 0 1 1 3.3 2.5c-.9.3-1.4.9-1.4 1.8"/><circle cx="11.5" cy="16.6" r=".9" fill="currentColor" stroke="none"/></svg>Check yourself</span></p>
 <ol>
-<li><a class="refcode" id="11.2.c1" href="#11.2.c1">#11.2.c1</a> "Factor x²+8x+15, and tell me <em>why</em> both numbers are positive." (because c&gt;0 and b&gt;0)</li>
-<li><a class="refcode" id="11.2.c2" href="#11.2.c2">#11.2.c2</a> "What changes between x²+2x-8 and x²-2x-8? Factor both." (the sign of b flips which number is negative)</li>
-<li><a class="refcode" id="11.2.c3" href="#11.2.c3">#11.2.c3</a> "A student says x²-7x+12=(x+3)(x+4). Multiply it back — what's wrong, and what's the fix?" (gives +7x; both factors should be negative: (x-3)(x-4))</li>
-<li><a class="refcode" id="11.2.c4" href="#11.2.c4">#11.2.c4</a> "Is x²+3x+5 factorable over the integers? List the pairs out loud and decide." (pairs of 5: 1·5 sums to 6 — that's the only one; no pair sums to 3 ⇒ <strong>prime</strong>)</li>
+<li><a class="refcode" id="11.2.c1" href="#11.2.c1">11.2.c1</a> "Factor x²+8x+15, and tell me <em>why</em> both numbers are positive." (because c&gt;0 and b&gt;0)</li>
+<li><a class="refcode" id="11.2.c2" href="#11.2.c2">11.2.c2</a> "What changes between x²+2x-8 and x²-2x-8? Factor both." (the sign of b flips which number is negative)</li>
+<li><a class="refcode" id="11.2.c3" href="#11.2.c3">11.2.c3</a> "A student says x²-7x+12=(x+3)(x+4). Multiply it back — what's wrong, and what's the fix?" (gives +7x; both factors should be negative: (x-3)(x-4))</li>
+<li><a class="refcode" id="11.2.c4" href="#11.2.c4">11.2.c4</a> "Is x²+3x+5 factorable over the integers? List the pairs out loud and decide." (pairs of 5: 1·5 sums to 6 — that's the only one; no pair sums to 3 ⇒ <strong>prime</strong>)</li>
 </ol>
-<p><strong>Practice problems:</strong></p>
+</div>
+<section class="practice">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4.5" width="15.5" height="15.5" rx="2.5"/><path d="M7.5 10 9 11.5 12 8.5"/><path d="M14 10H16.5"/><path d="M7.5 15H16.5"/></svg>Practice</span></p>
 <p><em>Both positive (c&gt;0, b&gt;0):</em></p>
 <ol>
-<li><a class="refcode" id="11.2.1" href="#11.2.1">#11.2.1</a> x²+5x+6  2. x²+7x+10  3. x²+8x+15  4. x²+9x+20</li>
+<li><a class="refcode" id="11.2.1" href="#11.2.1">11.2.1</a> x²+5x+6  2. x²+7x+10  3. x²+8x+15  4. x²+9x+20</li>
 </ol>
 <p><em>Both negative (c&gt;0, b&lt;0):</em></p>
 <ol start="5">
-<li><a class="refcode" id="11.2.2" href="#11.2.2">#11.2.2</a> x²-5x+6  6. x²-7x+12  7. x²-8x+15  8. x²-6x+8</li>
+<li><a class="refcode" id="11.2.2" href="#11.2.2">11.2.2</a> x²-5x+6  6. x²-7x+12  7. x²-8x+15  8. x²-6x+8</li>
 </ol>
 <p><em>Opposite signs, sum positive (c&lt;0, b&gt;0):</em></p>
 <ol start="9">
-<li><a class="refcode" id="11.2.3" href="#11.2.3">#11.2.3</a> x²+x-6  10. x²+2x-8  11. x²+3x-10</li>
+<li><a class="refcode" id="11.2.3" href="#11.2.3">11.2.3</a> x²+x-6  10. x²+2x-8  11. x²+3x-10</li>
 </ol>
 <p><em>Opposite signs, sum negative (c&lt;0, b&lt;0):</em></p>
 <ol start="12">
-<li><a class="refcode" id="11.2.4" href="#11.2.4">#11.2.4</a> x²-x-6  13. x²-2x-15  14. x²-4x-12</li>
+<li><a class="refcode" id="11.2.4" href="#11.2.4">11.2.4</a> x²-x-6  13. x²-2x-15  14. x²-4x-12</li>
 </ol>
 <p><em>Factorable </em><em>or</em><em> prime? (decide for each — some don't factor over the integers):</em></p>
 <ol start="15">
-<li><a class="refcode" id="11.2.5" href="#11.2.5">#11.2.5</a> x²+10x+21  16. x²+x+1  17. x²-x-12  18. x²+2x+5  19. x²+4x+3  20. x²+3x+5  21. x²-9x+18  22. x²-3x+10</li>
+<li><a class="refcode" id="11.2.5" href="#11.2.5">11.2.5</a> x²+10x+21  16. x²+x+1  17. x²-x-12  18. x²+2x+5  19. x²+4x+3  20. x²+3x+5  21. x²-9x+18  22. x²-3x+10</li>
 </ol>
-<p><strong>Answer key (all verified — multiply each back; watch the middle term):</strong>
-1) (x+2)(x+3)  2) (x+2)(x+5)  3) (x+3)(x+5)  4) (x+4)(x+5)  5) (x-2)(x-3)  6) (x-3)(x-4)  7) (x-3)(x-5)  8) (x-2)(x-4)  9) (x+3)(x-2)  10) (x+4)(x-2)  11) (x+5)(x-2)  12) (x-3)(x+2)  13) (x-5)(x+3)  14) (x-6)(x+2)
+</section>
+<details class="answers">
+<summary><span class="tw"></span><span class="eyebrow">Answers</span><span class="hint">Try each one yourself first, then open to check.</span></summary>
+<div class="ak-body">
+<p>1) (x+2)(x+3)  2) (x+2)(x+5)  3) (x+3)(x+5)  4) (x+4)(x+5)  5) (x-2)(x-3)  6) (x-3)(x-4)  7) (x-3)(x-5)  8) (x-2)(x-4)  9) (x+3)(x-2)  10) (x+4)(x-2)  11) (x+5)(x-2)  12) (x-3)(x+2)  13) (x-5)(x+3)  14) (x-6)(x+2)
 15) (x+3)(x+7)  16) <strong>prime (irreducible over the integers)</strong>  17) (x-4)(x+3)  18) <strong>prime (irreducible over the integers)</strong>  19) (x+1)(x+3)  20) <strong>prime (irreducible over the integers)</strong>  21) (x-3)(x-6)  22) <strong>prime (irreducible over the integers)</strong></p>
 <p><em>Sign spot-checks:</em> #5: (-2)(-3)=6, (-2)+(-3)=-5. #11: (+5)(-2)=-10, 5+(-2)=+3. #14: (-6)(+2)=-12, -6+2=-4.
 <em>Prime spot-checks (show the search is exhausted):</em> #16 pairs of 1: 1+1=2, (-1)+(-1)=-2 — neither is 1. #18 pairs of 5: 1+5=6 — not 2. #20 pairs of 5: 1+5=6 — not 3. #22 c=10, b=-3 needs a negative pair: -1-10=-11, -2-5=-7 — neither is -3.</p>
-<hr>
+</div>
+</details>
+<div class="ldiv" aria-hidden="true"><i></i><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3.5 20.5 12 12 20.5 3.5 12Z"/></svg><i></i></div>
 <h2 id="lesson-113-special-patterns">Lesson 11.3: Special patterns</h2>
-<p><strong>Goal:</strong> Recognize two patterns on sight and factor them instantly: <strong>difference of squares</strong> a²-b²=(a+b)(a-b) and <strong>perfect-square trinomials</strong> a²±2ab+b²=(a±b)².</p>
-<p><strong>Why it matters:</strong> These show up constantly (and again in Unit 12). Spotting them saves the whole two-number search — and knowing a²+b² (a sum of squares) does <strong>not</strong> factor over the integers keeps the student from chasing a factorization that isn't there.</p>
-<p><strong>New terms:</strong></p>
+<div class="cl-goal">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/></svg>What you'll learn</span></p>
+<p>Recognize two patterns on sight and factor them instantly: <strong>difference of squares</strong> a²-b²=(a+b)(a-b) and <strong>perfect-square trinomials</strong> a²±2ab+b²=(a±b)².</p>
+</div>
+<div class="cl-why">
+<p>These show up constantly (and again in Unit 12). Spotting them saves the whole two-number search — and knowing a²+b² (a sum of squares) does <strong>not</strong> factor over the integers keeps the student from chasing a factorization that isn't there.</p>
+</div>
+<div class="cl-terms">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6.5C9.5 5 6 5 3.5 6.5V18C6 16.5 9.5 16.5 12 18C14.5 16.5 18 16.5 20.5 18V6.5C18 5 14.5 5 12 6.5Z"/><path d="M12 6.5V18"/></svg>New words</span></p>
 <ul>
-<li><a class="refcode" id="11.3.d1" href="#11.3.d1">#11.3.d1</a> <strong>Perfect square:</strong> a quantity that is something squared. 9=3², x²=(x)², 4x²=(2x)² are perfect squares; 7 and x are not.</li>
-<li><a class="refcode" id="11.3.d2" href="#11.3.d2">#11.3.d2</a> <strong>Difference of squares:</strong> one perfect square <em>minus</em> another, a²-b².</li>
-<li><a class="refcode" id="11.3.d3" href="#11.3.d3">#11.3.d3</a> <strong>Perfect-square trinomial:</strong> a trinomial that is exactly (a±b)² multiplied out.</li>
+<li><a class="refcode" id="11.3.d1" href="#11.3.d1">11.3.d1</a> <strong>Perfect square:</strong> a quantity that is something squared. 9=3², x²=(x)², 4x²=(2x)² are perfect squares; 7 and x are not.</li>
+<li><a class="refcode" id="11.3.d2" href="#11.3.d2">11.3.d2</a> <strong>Difference of squares:</strong> one perfect square <em>minus</em> another, a²-b².</li>
+<li><a class="refcode" id="11.3.d3" href="#11.3.d3">11.3.d3</a> <strong>Perfect-square trinomial:</strong> a trinomial that is exactly (a±b)² multiplied out.</li>
 </ul>
-<p><strong>Teaching arc (concrete → pictorial → symbolic):</strong></p>
+</div>
+<div class="cl-note">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 11V16"/><circle cx="12" cy="8" r=".9" fill="currentColor" stroke="none"/></svg>How this builds</span></p>
 <p><em>Difference of squares</em> — derive it, don't just state it. Multiply (a+b)(a-b) with the area box (Unit 10): the middle terms +ab and -ab <strong>add to zero</strong>, leaving a²-b²:
 $$\begin{array}{c|c|c}
  &amp; a &amp; -b \\ \hline
@@ -285,7 +347,10 @@ $$x^2-9=(x)^2-(3)^2=(x+3)(x-3)$$
 <p><em>Perfect-square trinomials</em> — these are (x+k)² expanded: (x+3)²=x²+6x+9. <em>Recognizing one:</em> the <strong>first and last terms are perfect squares</strong>, and the <strong>middle term equals 2·√first·√last</strong>. For x²+6x+9: √(x²)=x, √9=3, and 2·x·3=6x — matches, so it's (x+3)². The middle sign becomes the sign inside: x²-10x+25=(x-5)².</p>
 <p>These are really <em>special cases</em> of Lesson 11.2 (the two numbers are equal for a perfect square; opposite for difference of squares), so the multiply-back check is identical — and still mandatory.</p>
 <p>Lead Socratically: "Are both ends perfect squares? Is there a minus between them, or a middle term? ... If a middle term, does it equal twice the roots multiplied?" Then <strong>check by expanding</strong>.</p>
-<p><strong>Worked examples</strong> (each checked by multiplying back):</p>
+</div>
+<section class="worked">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19.5V15L15.5 4.5 19.5 8.5 9 19Z"/><path d="M13.5 6.5 17.5 10.5"/></svg>Worked example</span></p>
+<p>(each checked by multiplying back):</p>
 <p><em>Difference of squares — basic:</em>
 $$x^2-9=(x+3)(x-3) \qquad \text{Check: } x^2-3x+3x-9 = x^2-9$$</p>
 <p><em>Difference of squares — larger:</em>
@@ -307,40 +372,56 @@ Pull the 2 (every coefficient is even); the inside x²+6x+9 is now a perfect squ
 $$3x^2-12 \;=\; 3(x^2-4) \;=\; 3(x+2)(x-2) \qquad \text{Check: } 3(x+2)(x-2)=3(x^2-4)=3x^2-12$$
 Pulling 3 exposes x²-4, a difference of squares. Note neither step was visible <em>before</em> the GCF came out — that's why GCF goes first.</p>
 <p><strong>Factor completely — the endpoint.</strong> A factorization is finished only when <strong>no piece can be factored again</strong>. After each split, ask of every factor: <em>can this one be factored?</em> (a leftover difference of squares, a trinomial that still factors, a GCF you missed). Stop only when each piece is either a single term, a prime trinomial, or an irreducible binomial.</p>
-<p><strong>Watch for:</strong></p>
+</section>
+<div class="cl-watch">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9H17"/><path d="M14.5 6.5 17 9 14.5 11.5"/><path d="M18 15H7"/><path d="M9.5 12.5 7 15 9.5 17.5"/></svg>A common mix-up</span></p>
 <ul>
 <li><strong>Trying to factor a²+b²</strong> — e.g. "x²+9=(x+3)(x-3)?" No: that multiplies back to x²-9. A sum of squares doesn't factor over the integers; it's <strong>prime</strong>. Repair: "Multiply your answer back — do you get a plus or a minus?"</li>
 <li><strong>Mistaking a near-miss for a perfect square</strong> — x²+5x+9 has square ends but 2·x·3=6x≠5x, so it is <strong>not</strong> (x+3)². Repair: "Check the middle: does it equal twice the roots multiplied? If not, fall back to the 11.2 two-number search — and here that search comes up empty, so x²+5x+9 is <strong>prime</strong> (pairs of 9: 1+9=10, 3+3=6 — neither is 5)."</li>
 <li><strong>Dropping the coefficient's square root</strong> — 4x²-1=(4x+1)(4x-1). Repair: "√(4x²) is 2x, not 4x — multiply back to see." (misconceptions.md §3/§7)</li>
 <li><strong>Sign of the middle ignored</strong> in a perfect square — calling x²-10x+25 a (x+5)². The middle sign carries inside.</li>
 </ul>
-<p><strong>Visuals to offer:</strong> the difference-of-squares area box above (visuals.md → area-model) — the cancelling middle cells make the pattern visible. No artifact needed.</p>
-<p><strong>Check for understanding (transfer):</strong></p>
+</div>
+<div class="cl-note">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 11V16"/><circle cx="12" cy="8" r=".9" fill="currentColor" stroke="none"/></svg>Figures to use</span></p>
+<p>the difference-of-squares area box above (visuals.md → area-model) — the cancelling middle cells make the pattern visible. No artifact needed.</p>
+</div>
+<div class="cl-check">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M9.6 9.6a2.6 2.6 0 1 1 3.3 2.5c-.9.3-1.4.9-1.4 1.8"/><circle cx="11.5" cy="16.6" r=".9" fill="currentColor" stroke="none"/></svg>Check yourself</span></p>
 <ol>
-<li><a class="refcode" id="11.3.c1" href="#11.3.c1">#11.3.c1</a> "Is x²-16 a difference of squares? Factor it, then multiply back to prove it." ((x+4)(x-4))</li>
-<li><a class="refcode" id="11.3.c2" href="#11.3.c2">#11.3.c2</a> "Can x²+16 be factored the same way? Why or why not?" (no — a sum of squares is prime over the integers; (x+4)(x-4) would give x²-16, a minus)</li>
-<li><a class="refcode" id="11.3.c3" href="#11.3.c3">#11.3.c3</a> "How do you tell x²+6x+9 (a perfect square) from x²+6x+8 (not one)? Factor each." ((x+3)² vs. (x+2)(x+4) — check the middle against twice the roots)</li>
+<li><a class="refcode" id="11.3.c1" href="#11.3.c1">11.3.c1</a> "Is x²-16 a difference of squares? Factor it, then multiply back to prove it." ((x+4)(x-4))</li>
+<li><a class="refcode" id="11.3.c2" href="#11.3.c2">11.3.c2</a> "Can x²+16 be factored the same way? Why or why not?" (no — a sum of squares is prime over the integers; (x+4)(x-4) would give x²-16, a minus)</li>
+<li><a class="refcode" id="11.3.c3" href="#11.3.c3">11.3.c3</a> "How do you tell x²+6x+9 (a perfect square) from x²+6x+8 (not one)? Factor each." ((x+3)² vs. (x+2)(x+4) — check the middle against twice the roots)</li>
 </ol>
-<p><strong>Practice problems:</strong></p>
+</div>
+<section class="practice">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4.5" width="15.5" height="15.5" rx="2.5"/><path d="M7.5 10 9 11.5 12 8.5"/><path d="M14 10H16.5"/><path d="M7.5 15H16.5"/></svg>Practice</span></p>
 <p><em>Difference of squares:</em></p>
 <ol>
-<li><a class="refcode" id="11.3.1" href="#11.3.1">#11.3.1</a> x²-9  2. x²-16  3. x²-25  4. x²-49  5. x²-1  6. 4x²-9  7. 9x²-1</li>
+<li><a class="refcode" id="11.3.1" href="#11.3.1">11.3.1</a> x²-9  2. x²-16  3. x²-25  4. x²-49  5. x²-1  6. 4x²-9  7. 9x²-1</li>
 </ol>
 <p><em>Perfect-square trinomials:</em></p>
 <ol start="8">
-<li><a class="refcode" id="11.3.2" href="#11.3.2">#11.3.2</a> x²+6x+9  9. x²-10x+25  10. x²+8x+16  11. x²-4x+4  12. x²+2x+1</li>
+<li><a class="refcode" id="11.3.2" href="#11.3.2">11.3.2</a> x²+6x+9  9. x²-10x+25  10. x²+8x+16  11. x²-4x+4  12. x²+2x+1</li>
 </ol>
 <p><em>GCF first, then factor completely (each needs a common factor pulled before the pattern shows):</em></p>
 <ol start="13">
-<li><a class="refcode" id="11.3.3" href="#11.3.3">#11.3.3</a> 2x²+12x+18  14. 3x²-12  15. 2x²+10x+12</li>
+<li><a class="refcode" id="11.3.3" href="#11.3.3">11.3.3</a> 2x²+12x+18  14. 3x²-12  15. 2x²+10x+12</li>
 </ol>
-<p><strong>Answer key (all verified — multiply each back):</strong>
-1) (x+3)(x-3)  2) (x+4)(x-4)  3) (x+5)(x-5)  4) (x+7)(x-7)  5) (x+1)(x-1)  6) (2x+3)(2x-3)  7) (3x+1)(3x-1)  8) (x+3)²  9) (x-5)²  10) (x+4)²  11) (x-2)²  12) (x+1)²
+</section>
+<details class="answers">
+<summary><span class="tw"></span><span class="eyebrow">Answers</span><span class="hint">Try each one yourself first, then open to check.</span></summary>
+<div class="ak-body">
+<p>1) (x+3)(x-3)  2) (x+4)(x-4)  3) (x+5)(x-5)  4) (x+7)(x-7)  5) (x+1)(x-1)  6) (2x+3)(2x-3)  7) (3x+1)(3x-1)  8) (x+3)²  9) (x-5)²  10) (x+4)²  11) (x-2)²  12) (x+1)²
 13) 2(x+3)²  14) 3(x+2)(x-2)  15) 2(x+2)(x+3)</p>
 <p><em>Spot-checks:</em> #6: (2x+3)(2x-3)=4x²-9. #10: 2·x·4=8x, so (x+4)². #11: middle -4x=2·x·(-2), so (x-2)². #13: 2(x+3)²=2(x²+6x+9)=2x²+12x+18 (keep the 2!). #14: 3(x²-4)=3x²-12.</p>
-<hr>
+</div>
+</details>
+<div class="ldiv" aria-hidden="true"><i></i><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3.5 20.5 12 12 20.5 3.5 12Z"/></svg><i></i></div>
 <h2 id="wrap-up-interleaving">Wrap-up &amp; interleaving</h2>
-<p><strong>Consolidate:</strong> The student should leave with a reliable <strong>order of attack</strong> (this <em>is</em> the strategy-choice skill — knowing which tool to reach for, not just how to use each):</p>
+<div class="cl-wrap">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5 3.5 8 12 12.5 20.5 8Z"/><path d="M5.5 11.5 12 15 18.5 11.5"/></svg>Putting it together</span></p>
+<p>The student should leave with a reliable <strong>order of attack</strong> (this <em>is</em> the strategy-choice skill — knowing which tool to reach for, not just how to use each):</p>
 <ol>
 <li><strong>GCF first — always.</strong> Pull any common factor before anything else (11.1). It often turns a messy expression into a clean pattern, and skipping it is the #1 source of "not fully factored" and false "prime" calls.</li>
 <li><strong>Count the terms.</strong>
@@ -350,14 +431,18 @@ Pulling 3 exposes x²-4, a difference of squares. Note neither step was visible 
 <li><strong>Multiply back to check — every time.</strong> A factorization that doesn't expand to the original is wrong; and remember a prime answer has nothing to multiply back — the <em>exhausted pair list</em> is its proof.</li>
 </ol>
 <p>The unifying idea: <em>factoring is multiplying backward,</em> so Unit 10 <em>is</em> the answer key. That makes the check feel natural, not like extra work.</p>
-<p><strong>Mix back in (interleaving, pedagogy.md):</strong></p>
+</div>
+<div class="cl-note">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 11V16"/><circle cx="12" cy="8" r=".9" fill="currentColor" stroke="none"/></svg>Mix back in</span></p>
 <ul>
 <li>Every multiply-back check is a <strong>Unit 10 expansion</strong> — keep both skills sharp by alternating "factor this" with "now expand it back."</li>
 <li>Re-run the <strong>sign-reasoning</strong> of 11.2 inside 11.3 problems (it's the same logic specialized).</li>
 <li>Warm up sessions with a quick GCF pull or a one-line trinomial before new material.</li>
 <li><strong>Function-language bridge to Unit 12:</strong> "We just factored x²+5x+6 into (x+2)(x+3). Next unit, setting f(x)=0 and reading off x=-2, -3 is one step away — you've already done the hard part."</li>
 </ul>
-<p><strong>Progress Card should note:</strong></p>
+</div>
+<div class="cl-note">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 11V16"/><circle cx="12" cy="8" r=".9" fill="currentColor" stroke="none"/></svg>Progress card</span></p>
 <ul>
 <li>Which lessons are mastered (e.g. "11.1–11.2 solid").</li>
 <li>Whether the <strong>multiply-back check</strong> is automatic yet.</li>
@@ -374,6 +459,7 @@ Last problem: x^2 - 2x - 15  →  (x-5)(x+3)
 Next up: finish 11.2, then 11.3 (special patterns) — sets up Unit 12
 Tone preference: medium detail
 </code></pre>
+</div>
 </main>
 <footer><p>Generated from the unit source by <code>_verification/build_textbook.py</code>. Math by KaTeX.</p></footer>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
@@ -382,7 +468,6 @@ Tone preference: medium detail
 document.addEventListener("DOMContentLoaded", function () {
   renderMathInElement(document.body, {delimiters: [{left: "$$", right: "$$", display: true}], throwOnError: false});
   var t = document.getElementById("theme"), root = document.documentElement;
-  if (localStorage.getItem("a1-theme") === "dark") root.classList.add("dark");
   t.addEventListener("click", function () {
     root.classList.toggle("dark");
     localStorage.setItem("a1-theme", root.classList.contains("dark") ? "dark" : "light");
