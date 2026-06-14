@@ -1,0 +1,10 @@
+<svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+  <line x1="18.0" y1="120.0" x2="222.0" y2="120.0" stroke="#888"/>
+  <text x="216.0" y="116.0" font-size="10" fill="#888">x</text>
+  <line x1="86.0" y1="18.0" x2="86.0" y2="222.0" stroke="#888"/>
+  <text x="90.0" y="26.0" font-size="10" fill="#888">y</text>
+  <line x1="18.0" y1="222.0" x2="222.0" y2="-7.5" stroke="#2980b9" stroke-width="2.5"/>
+  <circle cx="86.0" cy="145.5" r="3.5" fill="#c0392b"/>
+  <text x="91.0" y="139.5" font-size="10" fill="#c0392b">y-int (0,-2)</text>
+  <text x="144.4" y="80.3" font-size="10" fill="#2980b9">y = 3x - 2</text>
+</svg>

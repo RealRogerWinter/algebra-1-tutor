@@ -293,7 +293,7 @@ read the constant step (5−2=3, 8−5=3, 11−8=3 → +3 per step, so 3 sits in
 - **"Curved means broken/not a function."** Nonlinear is still a function (callback to 4.1's vertical line test) — it just isn't a straight line.
 - **Sign slips filling x² at negatives** (`misconceptions.md` §3) if you extend the parabola table leftward.
 
-**Visuals to offer:** **SVG artifacts** — Template 2 for the straight line from Example 1, Template 3 for the y=x² parabola from Example 2 (compute the points, label them). Showing the two side by side makes "straight vs. curved" unmistakable. Pair each with its difference row in words.
+**Visuals to offer:** {#4.3.f1} {#4.3.f2} **SVG artifacts** — Template 2 for the straight line from Example 1, Template 3 for the y=x² parabola from Example 2 (compute the points, label them). Showing the two side by side makes "straight vs. curved" unmistakable. Pair each with its difference row in words.
 
 **Check for understanding (transfer):**
 1. {#4.3.c1} "Here's a table with x = 0,1,2,3 and y = 2,2,2,2. Linear or not? What's its rate of change?"

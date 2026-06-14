@@ -387,7 +387,7 @@ $$x=\frac{4\pm\sqrt0}{2}=\frac{4}{2}=2.$$
 - **Vertex-x sign slip** in -b/2a, especially when b<0: for b=-2, -(-2)/2=+1. `misconceptions.md §3`.
 - **Confusing roots with the vertex**, or thinking the y-intercept (0,c) is a root. Roots are where y=0; the vertex is the turn; (0,c) is where it meets the y-axis.
 
-**Visuals to offer:** `visuals.md` **Template 3** (parabola) — computed sample points joined by a `<polyline>`, roots and vertex dotted and labeled, companion table always in the chat.
+**Visuals to offer:** {#12.6.f1} `visuals.md` **Template 3** (parabola) — computed sample points joined by a `<polyline>`, roots and vertex dotted and labeled, companion table always in the chat.
 
 **Check for understanding (transfer):**
 1. {#12.6.c1} "For y=x²-6x+8, find the roots and the vertex. How are the roots and the vertex's x-coordinate related?"

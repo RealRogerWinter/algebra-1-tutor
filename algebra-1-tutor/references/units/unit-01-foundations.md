@@ -118,7 +118,7 @@ Pacing: a fluent adult may blow through 1.2–1.4 — let them; reserve the full
 
 **Watch for:** The belief that a number written as a fraction "must be a fraction" or that a decimal "can't be an integer." Problems 7 (10/2=5) and 8 (0.333… = 1/3) below are the instructive ones — *evaluate first, then classify*. Also pre-empt the negatives-ordering surprise that's coming in 1.4 ("which is farther left?"). Fraction-magnitude care connects to `misconceptions.md` §4.
 
-**Visuals to offer:** A clean **number line** (`visuals.md` Template 1 for a marked point, or a simple ASCII line) showing integers as ticks with 3/4, 2.5, and -2.5 placed in the gaps. Always pair with a one-sentence description.
+**Visuals to offer:** {#1.2.f1} A clean **number line** (`visuals.md` Template 1 for a marked point, or a simple ASCII line) showing integers as ticks with 3/4, 2.5, and -2.5 placed in the gaps. Always pair with a one-sentence description.
 
 **Check for understanding (transfer):**
 - {#1.2.c1} "Give me a number that is rational but *not* an integer, and explain how you know it's rational."

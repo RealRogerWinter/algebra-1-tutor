@@ -125,7 +125,7 @@ Membership tests:
 - **Thinking "close" counts** for membership. It's exact: the substitution either matches or it doesn't.
 - **Connecting points in the wrong order / freehand bowing** — for a *linear* equation the points are collinear; if one is off the line, recheck its arithmetic, don't bend the line to fit.
 
-**Visuals to offer:** `visuals.md` **Template 2** — line from two computed endpoints, intercept dotted and labeled, companion table always included.
+**Visuals to offer:** {#5.2.f1} `visuals.md` **Template 2** — line from two computed endpoints, intercept dotted and labeled, companion table always included.
 
 **Check for understanding (transfer):**
 1. {#5.2.c1} "Without graphing, is (4, 7) on y = 2x - 1? Show me how you know."
@@ -196,7 +196,7 @@ The slope is **15 dollars per hour** — the cost climbs \$15 for each additiona
 - **Zero ↔ undefined swap.** Tell: they call a vertical line "slope 0" or a horizontal line "undefined." Repair with the wall (can't move forward → undefined) vs. flat landing (no rise → 0).
 - **The ambiguous phrase "no slope."** Avoid it for vertical lines — some students hear "no slope" as "slope 0." Say **"undefined slope"** for vertical and **"zero slope"** for horizontal, so the two never blur.
 
-**Visuals to offer:** `visuals.md` **Template 2** with the rise/run right triangle drawn between two computed points; label rise, run, and m. Companion table of the two points always included.
+**Visuals to offer:** {#5.3.f1} `visuals.md` **Template 2** with the rise/run right triangle drawn between two computed points; label rise, run, and m. Companion table of the two points always included.
 
 **Check for understanding (transfer):**
 1. {#5.3.c1} "A line goes through (2,3) and (6,11). Find the slope, and tell me in words what it says about how y changes."
@@ -272,7 +272,7 @@ The slope is **15 dollars per hour** — the cost climbs \$15 for each additiona
 - **Forgetting the intercept is a *point* (0,b)**, not just a number — matters when they plot.
 - **Form not solved for y yet:** if it's 2x + y = 5, they must isolate y first (y = -2x + 5) — callback to Unit 2 solving.
 
-**Visuals to offer:** `visuals.md` **Template 2** — plot the intercept, draw the line through a second computed point, label slope and intercept, table alongside.
+**Visuals to offer:** {#5.4.f1} `visuals.md` **Template 2** — plot the intercept, draw the line through a second computed point, label slope and intercept, table alongside.
 
 **Check for understanding (transfer):**
 1. {#5.4.c1} "In y = -4x + 7, what's the slope and where does the line cross the y-axis? Which way does it tilt?"
@@ -414,7 +414,7 @@ $$y = \tfrac34 x - 2 \;\Rightarrow\; 4y = 3x - 8 \;\Rightarrow\; 3x - 4y = 8$$
 - **Sign of A/B/C when rearranging.** Moving the x-term across flips its sign (Unit 2). Have them substitute an intercept back to confirm, and keep A ≥ 0 so different students land on the *same* standard form.
 - **A line through the origin has both intercepts at one point.** y = 2x crosses both axes at (0, 0); the two-intercept method then gives only one point, so pick a second point another way (plug in any x). Tell: they're stuck because "both intercepts are the same."
 
-**Visuals to offer:** `visuals.md` **Template 2** — plot the two intercepts, draw the line, label each intercept, include a companion table (with a third checkpoint row). For standard-form examples, show the converted y = mx + b beside the graph.
+**Visuals to offer:** {#5.6.f1} `visuals.md` **Template 2** — plot the two intercepts, draw the line, label each intercept, include a companion table (with a third checkpoint row). For standard-form examples, show the converted y = mx + b beside the graph.
 
 **Check for understanding (transfer):**
 1. {#5.6.c1} "For 5x + 2y = 20, find both intercepts and say which two points you'd plot to graph it."

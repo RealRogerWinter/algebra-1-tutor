@@ -130,6 +130,28 @@ def md_anchor_lint():
     return _lint_anchor_list(_scan_anchors(), ssot_ids)
 
 
+_FIG_CODE_RE = re.compile(r"^(?:[1-9]|1[0-2]|A)\.\d+\.f\d+[a-z]?$")
+
+
+def figure_lint():
+    """Bidirectional f-anchor <-> bundled SVG, plus figure registry accuracy + staleness.
+
+    Every f-anchor in a unit must have a bundled figures/<code>.svg, and every bundled SVG must
+    be referenced by an f-anchor (no orphans). figures.check() adds the sympy accuracy gate and
+    the staleness gate (regenerating matches the committed SVG)."""
+    sys.path.insert(0, HERE)
+    import figures as figmod
+    issues = list(figmod.check())
+    anchor_f = {c for c, _ in _scan_anchors() if _FIG_CODE_RE.match(c)}
+    svg_files = {os.path.splitext(os.path.basename(p))[0]
+                 for p in glob.glob(os.path.join(REPO_ROOT, "algebra-1-tutor", "figures", "*.svg"))}
+    for c in sorted(anchor_f - svg_files):
+        issues.append(f"f-anchor {{#{c}}} has no bundled figures/{c}.svg")
+    for f in sorted(svg_files - anchor_f):
+        issues.append(f"figure SVG {f}.svg has no f-anchor in any unit")
+    return issues
+
+
 def _line_eq_template(prob):
     """True if this solve entry is a line-intercept problem: '<m>*<x0>+b=<y0>', var b."""
     return (prob.get("kind") == "solve" and prob.get("var") == "b"
@@ -328,10 +350,13 @@ def main():
     md = md_anchor_lint()
     if md:
         failures += [f"md-anchor: {i}" for i in md]
+    fl = figure_lint()
+    if fl:
+        failures += [f"figure: {i}" for i in fl]
     if failures:
         print("FAIL:\n  " + "\n  ".join(failures))
         return 1
-    print("check_alignment: alignment + notation + point-on-line + code-grammar + md-anchor all green.")
+    print("check_alignment: alignment + notation + point-on-line + code-grammar + md-anchor + figure all green.")
     return 0
 
 

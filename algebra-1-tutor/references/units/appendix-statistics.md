@@ -144,7 +144,7 @@ Keep the standard habits from `SKILL.md` (verify arithmetic, never yes/no checks
 - **Confusing strength with direction** — "strong" is *how tightly* the dots hug the line; "positive/negative" is *which way* it leans. A weak positive and a strong positive both lean up.
 - **Over-trusting predictions far outside the data** — a best-fit line predicts best *near* the data it came from (a within-range prediction is safer than one reaching far past the data).
 
-**Visuals to offer:** `visuals.md` **Template 2** (coordinate plane + line). **Compute the plotted points** and the two line endpoints (don't eyeball), emit as an **SVG artifact**, label the axes and the line equation, and always include the companion **table of points** in chat. A scatter is just the plane with several small `<circle>` dots plus the best-fit line drawn through them.
+**Visuals to offer:** {#A.2.f1} `visuals.md` **Template 2** (coordinate plane + line). **Compute the plotted points** and the two line endpoints (don't eyeball), emit as an **SVG artifact**, label the axes and the line equation, and always include the companion **table of points** in chat. A scatter is just the plane with several small `<circle>` dots plus the best-fit line drawn through them.
 
 **Check for understanding (transfer):**
 1. {#A.2.c1} "A best-fit line is y = -(1/2)x + 10. Predict y at x = 4, and say whether the association is positive or negative — how can you tell from the equation?"
