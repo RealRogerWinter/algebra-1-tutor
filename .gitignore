@@ -4,6 +4,7 @@ algebra-1-tutor.skill
 # Python
 __pycache__/
 *.pyc
+.pytest_cache/
 
 # OS
 .DS_Store
