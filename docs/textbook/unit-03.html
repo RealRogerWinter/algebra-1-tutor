@@ -3,18 +3,22 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Unit 3: Proportional Reasoning (the bridge to linearity) — Algebra 1</title>
+<title>Proportional Reasoning (the bridge to linearity) — Algebra 1</title>
+<script>try{if(localStorage.getItem("a1-theme")==="dark")document.documentElement.classList.add("dark");}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..40,500..600&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="textbook.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous">
 </head>
-<body>
+<body data-surface="textbook">
 <header class="topbar">
-  <nav><a href="index.html">Contents</a> &nbsp;·&nbsp; <a href="unit-02.html">&larr; Unit 2</a> &nbsp;·&nbsp; <a href="unit-04.html">Unit 4 &rarr;</a></nav>
-  <button id="theme" type="button" aria-label="Toggle dark mode">◐</button>
+  <nav><a class="home" href="index.html">Algebra&nbsp;1</a> &nbsp;·&nbsp; <a href="unit-02.html">&larr;&nbsp;Unit 2</a> &nbsp;·&nbsp; <a href="unit-04.html">Unit 4&nbsp;&rarr;</a></nav>
+  <span class="sp"></span>
+  <button id="theme" type="button" aria-label="Toggle light or dark theme">◐ Theme</button>
 </header>
 <main>
-<h1>Unit 3: Proportional Reasoning (the bridge to linearity)</h1>
-<p class="subtitle">Ratios, rates, unit rate, proportions, percents</p>
+<div class="hero"><div class="hero-text"><div class="kicker">Unit 3</div><h1>Proportional Reasoning (the bridge to linearity)</h1><p class="lede">Ratios, rates, unit rate, proportions, percents</p></div><img class="hero-art" src="../assets/steps.jpg" alt=""></div>
 
 <blockquote>
 <p><strong>Prerequisites:</strong> Unit 2 (solving one- and two-step equations, isolating a variable), and comfort with fractions — reducing, multiplying, and reading them as values on the number line.
@@ -38,72 +42,94 @@
 <li><strong>3.3:</strong> percent-of vs. what-percent confusion, and forgetting that percent change is measured against the <strong>original</strong> (the denominator is always the <em>old</em> value).</li>
 </ul>
 <p>Pacing: most adults move briskly through 3.1; spend the real time on the <em>why</em> in 3.2 and on conversion fluency in 3.3. Reinforce fraction↔decimal↔percent fluency in every lesson, not just the last. Interleave a Unit 2 solve whenever a proportion bottoms out into an equation — that is the payoff of having done Unit 2 first.</p>
-<hr>
+<div class="ldiv" aria-hidden="true"><i></i><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3.5 20.5 12 12 20.5 3.5 12Z"/></svg><i></i></div>
 <h2 id="lesson-31-ratios-and-rates">Lesson 3.1: Ratios and rates</h2>
-<p><strong>Goal:</strong> Write and reduce ratios, and find a unit rate by dividing so the second quantity becomes 1.
-<strong>Why it matters:</strong> A unit rate ("per one") is a <em>constant rate of change</em> — the literal seed of <strong>slope</strong> (Unit 5). Rates are also how the real world talks: mph, price per item, words per minute.
-<strong>New terms:</strong></p>
+<div class="cl-goal">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/></svg>What you'll learn</span></p>
+<p>Write and reduce ratios, and find a unit rate by dividing so the second quantity becomes 1.</p>
+</div>
+<div class="cl-why">
+<p>A unit rate ("per one") is a <em>constant rate of change</em> — the literal seed of <strong>slope</strong> (Unit 5). Rates are also how the real world talks: mph, price per item, words per minute.</p>
+</div>
+<div class="cl-terms">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6.5C9.5 5 6 5 3.5 6.5V18C6 16.5 9.5 16.5 12 18C14.5 16.5 18 16.5 20.5 18V6.5C18 5 14.5 5 12 6.5Z"/><path d="M12 6.5V18"/></svg>New words</span></p>
 <ul>
-<li><a class="refcode" id="3.1.d1" href="#3.1.d1">#3.1.d1</a> <strong>Ratio</strong> — a comparison of two quantities, written 3:2 or 3/2 or "3 to 2." The quantities can be the same kind of thing (dogs to cats).</li>
-<li><a class="refcode" id="3.1.d2" href="#3.1.d2">#3.1.d2</a> <strong>Part-to-part vs part-to-whole</strong> — "8 dogs to 12 cats" (8:12) compares one part to another part. But "8 dogs out of 20 animals" (8/20) compares a part to the <em>whole</em>. Same animals, different comparison. This matters: percents in 3.3 are all part-to-<strong>whole</strong> (part/whole = percent/100), so get comfortable sliding from 8:12 to 8 out of 20 now.</li>
-<li><a class="refcode" id="3.1.d3" href="#3.1.d3">#3.1.d3</a> <strong>Rate</strong> — a ratio comparing two <em>unlike</em> units (120 miles per 2 hours).</li>
-<li><a class="refcode" id="3.1.d4" href="#3.1.d4">#3.1.d4</a> <strong>Unit rate</strong> — a rate whose second quantity is 1 (60 miles per <strong>1</strong> hour = 60 mph). You get it by dividing.</li>
+<li><a class="refcode" id="3.1.d1" href="#3.1.d1">3.1.d1</a> <strong>Ratio</strong> — a comparison of two quantities, written 3:2 or 3/2 or "3 to 2." The quantities can be the same kind of thing (dogs to cats).</li>
+<li><a class="refcode" id="3.1.d2" href="#3.1.d2">3.1.d2</a> <strong>Part-to-part vs part-to-whole</strong> — "8 dogs to 12 cats" (8:12) compares one part to another part. But "8 dogs out of 20 animals" (8/20) compares a part to the <em>whole</em>. Same animals, different comparison. This matters: percents in 3.3 are all part-to-<strong>whole</strong> (part/whole = percent/100), so get comfortable sliding from 8:12 to 8 out of 20 now.</li>
+<li><a class="refcode" id="3.1.d3" href="#3.1.d3">3.1.d3</a> <strong>Rate</strong> — a ratio comparing two <em>unlike</em> units (120 miles per 2 hours).</li>
+<li><a class="refcode" id="3.1.d4" href="#3.1.d4">3.1.d4</a> <strong>Unit rate</strong> — a rate whose second quantity is 1 (60 miles per <strong>1</strong> hour = 60 mph). You get it by dividing.</li>
 </ul>
-<p><strong>Teaching arc (concrete → pictorial → symbolic):</strong></p>
+</div>
+<div class="cl-note">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 11V16"/><circle cx="12" cy="8" r=".9" fill="currentColor" stroke="none"/></svg>How this builds</span></p>
 <ul>
 <li><strong>Concrete:</strong> "You drove 120 miles in 2 hours. How far in <em>one</em> hour, on average?" Most people split it without thinking — that splitting <em>is</em> finding the unit rate. Tie to metaphors.md <strong>Slope B</strong>: on a distance-vs-time picture, this number is the speed.</li>
 <li><strong>Pictorial:</strong> a simple two-column table — 2 hr → 120 mi, so 1 hr → 60 mi. "Per one" is the bottom row.</li>
 <li><strong>Symbolic:</strong> a rate is a fraction; divide top by bottom to make the denominator 1. 120 mi / 2 hr = 60 mi / 1 hr = 60 mph. <strong>Reduce a ratio exactly like a fraction:</strong> divide both parts by their common factor. Foreshadow explicitly: "Hold onto '60 miles per 1 hour' — in Unit 5 that <em>same</em> number is the slope of the line."</li>
 </ul>
-<p><strong>Worked examples:</strong></p>
+</div>
+<section class="worked">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19.5V15L15.5 4.5 19.5 8.5 9 19Z"/><path d="M13.5 6.5 17.5 10.5"/></svg>Worked example</span></p>
 <ol>
 <li>
-<p><a class="refcode" id="3.1.w1" href="#3.1.w1">#3.1.w1</a> <em>Unit rate (distance).</em> 150 miles in 3 hours.
+<p><a class="refcode" id="3.1.w1" href="#3.1.w1">3.1.w1</a> <em>Unit rate (distance).</em> 150 miles in 3 hours.
 $$\frac{150 \text{ mi}}{3 \text{ hr}} = \frac{150 \div 3}{3 \div 3}\,\frac{\text{mi}}{\text{hr}} = 50 \text{ mph}.$$
 Divide to land on "per 1 hour."</p>
 </li>
 <li>
-<p><a class="refcode" id="3.1.w2" href="#3.1.w2">#3.1.w2</a> <em>Unit price.</em> \$6 for 4 apples. Keep the units attached — a rate compares two <em>unlike</em> units, so they stay in the numerator and denominator (just like WE1's mi/hr):
+<p><a class="refcode" id="3.1.w2" href="#3.1.w2">3.1.w2</a> <em>Unit price.</em> \$6 for 4 apples. Keep the units attached — a rate compares two <em>unlike</em> units, so they stay in the numerator and denominator (just like WE1's mi/hr):
 $$\frac{\$6}{4 \text{ apples}} = \frac{\$6 \div 4}{4 \text{ apples} \div 4} = \frac{\$1.50}{1 \text{ apple}} = \$1.50 \text{ per apple}.$$
 "Per apple" means the bottom must be 1 — so divide by 4. (Don't cancel the apples away: \$6 over 4 apples is a <em>rate</em> with units, not a bare number.)</p>
 </li>
 <li>
-<p><a class="refcode" id="3.1.w3" href="#3.1.w3">#3.1.w3</a> <em>Reduce a ratio.</em> 12:18. Both share a factor of 6:
+<p><a class="refcode" id="3.1.w3" href="#3.1.w3">3.1.w3</a> <em>Reduce a ratio.</em> 12:18. Both share a factor of 6:
 $$12:18 = \frac{12 \div 6}{18 \div 6} = 2:3.$$
 The value didn't change — 12:18 and 2:3 name the <em>same</em> comparison, just with smaller numbers (misconceptions.md §4: reducing renames, it doesn't shrink).</p>
 </li>
 </ol>
-<p><strong>Watch for:</strong></p>
+</section>
+<div class="cl-watch">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9H17"/><path d="M14.5 6.5 17 9 14.5 11.5"/><path d="M18 15H7"/><path d="M9.5 12.5 7 15 9.5 17.5"/></svg>A common mix-up</span></p>
 <ul>
 <li><strong>Ratio reversal</strong> — writing "8 dogs to 12 cats" as 12:8. The first thing named goes first. (misconceptions.md §2, the "6s = p" reversal family.)</li>
 <li><strong>Bigger-denominator-is-bigger</strong> — surfaces when comparing rates; "\$1.50/apple vs \$2/apple, which is the better deal?" Tie value to size, not to digit count (misconceptions.md §4).</li>
 <li><strong>Forgetting to make the denominator 1</strong> — reporting "150 mi per 3 hr" as if it were already a unit rate. The <em>unit</em> in unit rate means <em>per one</em>.</li>
 </ul>
-<p><strong>Visuals to offer:</strong> None needed — a two-row "per 1" table in chat is enough. (If a student wants to <em>see</em> the rate as steepness, sketch the tiny rise/run picture from visuals.md and connect it to Slope B; otherwise save graphs for Unit 5.)</p>
-<p><strong>Check for understanding (transfer):</strong></p>
+</div>
+<div class="cl-note">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 11V16"/><circle cx="12" cy="8" r=".9" fill="currentColor" stroke="none"/></svg>Figures to use</span></p>
+<p>None needed — a two-row "per 1" table in chat is enough. (If a student wants to <em>see</em> the rate as steepness, sketch the tiny rise/run picture from visuals.md and connect it to Slope B; otherwise save graphs for Unit 5.)</p>
+</div>
+<div class="cl-check">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M9.6 9.6a2.6 2.6 0 1 1 3.3 2.5c-.9.3-1.4.9-1.4 1.8"/><circle cx="11.5" cy="16.6" r=".9" fill="currentColor" stroke="none"/></svg>Check yourself</span></p>
 <ul>
-<li><a class="refcode" id="3.1.c1" href="#3.1.c1">#3.1.c1</a> "A printer does 90 pages in 3 minutes. What's the unit rate, and what are its units?"</li>
-<li><a class="refcode" id="3.1.c2" href="#3.1.c2">#3.1.c2</a> "Two stores: 3 cans for \$4, or 5 cans for \$6. Which is cheaper <em>per can</em>, and how did you decide?"</li>
-<li><a class="refcode" id="3.1.c3" href="#3.1.c3">#3.1.c3</a> "Why does 'unit rate' always have a 1 in it — what is the 1 counting?"</li>
-<li><a class="refcode" id="3.1.c4" href="#3.1.c4">#3.1.c4</a> "There are 8 dogs and 12 cats. As a <em>part-to-whole</em> comparison, what fraction of those 20 animals are dogs?" (8/20 = 2/5 — turns the part-to-part ratio into the part/whole form percents will use.)</li>
+<li><a class="refcode" id="3.1.c1" href="#3.1.c1">3.1.c1</a> "A printer does 90 pages in 3 minutes. What's the unit rate, and what are its units?"</li>
+<li><a class="refcode" id="3.1.c2" href="#3.1.c2">3.1.c2</a> "Two stores: 3 cans for \$4, or 5 cans for \$6. Which is cheaper <em>per can</em>, and how did you decide?"</li>
+<li><a class="refcode" id="3.1.c3" href="#3.1.c3">3.1.c3</a> "Why does 'unit rate' always have a 1 in it — what is the 1 counting?"</li>
+<li><a class="refcode" id="3.1.c4" href="#3.1.c4">3.1.c4</a> "There are 8 dogs and 12 cats. As a <em>part-to-whole</em> comparison, what fraction of those 20 animals are dogs?" (8/20 = 2/5 — turns the part-to-part ratio into the part/whole form percents will use.)</li>
 </ul>
-<p><strong>Practice problems:</strong></p>
+</div>
+<section class="practice">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4.5" width="15.5" height="15.5" rx="2.5"/><path d="M7.5 10 9 11.5 12 8.5"/><path d="M14 10H16.5"/><path d="M7.5 15H16.5"/></svg>Practice</span></p>
 <p><em>Reduce ratios to lowest terms:</em></p>
 <ol>
-<li><a class="refcode" id="3.1.1" href="#3.1.1">#3.1.1</a> Write the ratio of 8 dogs to 12 cats in lowest terms.</li>
-<li><a class="refcode" id="3.1.2" href="#3.1.2">#3.1.2</a> Reduce 15:25.</li>
+<li><a class="refcode" id="3.1.1" href="#3.1.1">3.1.1</a> Write the ratio of 8 dogs to 12 cats in lowest terms.</li>
+<li><a class="refcode" id="3.1.2" href="#3.1.2">3.1.2</a> Reduce 15:25.</li>
 </ol>
 <p><em>Find the unit rate / unit price:</em></p>
 <ol start="2">
-<li><a class="refcode" id="3.1.3" href="#3.1.3">#3.1.3</a> A car travels 180 miles in 4 hours. Find the unit rate (mph).</li>
-<li><a class="refcode" id="3.1.4" href="#3.1.4">#3.1.4</a> \$20 buys 5 notebooks. What does each notebook cost?</li>
-<li><a class="refcode" id="3.1.5" href="#3.1.5">#3.1.5</a> A typist writes 240 words in 6 minutes. Find the rate in words per minute (wpm).</li>
+<li><a class="refcode" id="3.1.3" href="#3.1.3">3.1.3</a> A car travels 180 miles in 4 hours. Find the unit rate (mph).</li>
+<li><a class="refcode" id="3.1.4" href="#3.1.4">3.1.4</a> \$20 buys 5 notebooks. What does each notebook cost?</li>
+<li><a class="refcode" id="3.1.5" href="#3.1.5">3.1.5</a> A typist writes 240 words in 6 minutes. Find the rate in words per minute (wpm).</li>
 </ol>
 <p><em>Rate as a fraction (think before reducing):</em></p>
 <ol start="6">
-<li><a class="refcode" id="3.1.6" href="#3.1.6">#3.1.6</a> A recipe uses 6 eggs for 24 pancakes. How many eggs per pancake? (Give a fraction.)</li>
+<li><a class="refcode" id="3.1.6" href="#3.1.6">3.1.6</a> A recipe uses 6 eggs for 24 pancakes. How many eggs per pancake? (Give a fraction.)</li>
 </ol>
-<p><strong>Answer key:</strong></p>
+</section>
+<details class="answers">
+<summary><span class="tw"></span><span class="eyebrow">Answers</span><span class="hint">Try each one yourself first, then open to check.</span></summary>
+<div class="ak-body">
 <ol>
 <li>8:12 = 2:3.</li>
 <li>180 ÷ 4 = 45 mph.</li>
@@ -112,18 +138,28 @@ The value didn't change — 12:18 and 2:3 name the <em>same</em> comparison, jus
 <li>240 ÷ 6 = 40 wpm.</li>
 <li>6 eggs / 24 pancakes = 1 egg / 4 pancakes = 1/4 egg per pancake — keep the units on the simplified rate (it's a <em>rate</em>, two unlike units, not a bare 1/4). (Fewer than one egg per pancake — a fine, real fraction; misconceptions.md §4 if "less than 1" feels strange.)</li>
 </ol>
-<hr>
+</div>
+</details>
+<div class="ldiv" aria-hidden="true"><i></i><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3.5 20.5 12 12 20.5 3.5 12Z"/></svg><i></i></div>
 <h2 id="lesson-32-proportions-cross-multiplication">Lesson 3.2: Proportions &amp; cross-multiplication</h2>
-<p><strong>Goal:</strong> Set up a proportion, justify cross-multiplication, solve it with Unit 2 techniques, and distinguish direct from inverse proportion.
-<strong>Why it matters:</strong> Proportions are the workhorse of scaling — recipes, maps, prices, unit conversions. And cross-multiplication, understood (not memorized), is a clean reuse of Unit 2's "do the same to both sides."
-<strong>New terms:</strong></p>
+<div class="cl-goal">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/></svg>What you'll learn</span></p>
+<p>Set up a proportion, justify cross-multiplication, solve it with Unit 2 techniques, and distinguish direct from inverse proportion.</p>
+</div>
+<div class="cl-why">
+<p>Proportions are the workhorse of scaling — recipes, maps, prices, unit conversions. And cross-multiplication, understood (not memorized), is a clean reuse of Unit 2's "do the same to both sides."</p>
+</div>
+<div class="cl-terms">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6.5C9.5 5 6 5 3.5 6.5V18C6 16.5 9.5 16.5 12 18C14.5 16.5 18 16.5 20.5 18V6.5C18 5 14.5 5 12 6.5Z"/><path d="M12 6.5V18"/></svg>New words</span></p>
 <ul>
-<li><a class="refcode" id="3.2.d1" href="#3.2.d1">#3.2.d1</a> <strong>Proportion</strong> — a statement that two ratios are equal: a/b = c/d (where b and d are not 0, so the fractions are defined).</li>
-<li><a class="refcode" id="3.2.d2" href="#3.2.d2">#3.2.d2</a> <strong>Cross-multiplication</strong> — for a/b = c/d with b, d ≠ 0, the rule a·d = b·c.</li>
-<li><a class="refcode" id="3.2.d3" href="#3.2.d3">#3.2.d3</a> <strong>Direct proportion</strong> — as one quantity grows, the other grows in the same ratio (more apples → more cost). The ratios stay equal.</li>
-<li><a class="refcode" id="3.2.d4" href="#3.2.d4">#3.2.d4</a> <strong>Inverse proportion</strong> — as one quantity grows, the other <em>shrinks</em> so that their <strong>product</strong> stays constant (more workers → fewer days; workers × days = total work). The constant product workers × days = k mirrors the constant <em>ratio</em> of the direct case; symbolically xy = k (equivalently y = k/x). (Its graph is a curve, not a line — that's out of scope for now; here we only use the constant-product idea to solve.)</li>
+<li><a class="refcode" id="3.2.d1" href="#3.2.d1">3.2.d1</a> <strong>Proportion</strong> — a statement that two ratios are equal: a/b = c/d (where b and d are not 0, so the fractions are defined).</li>
+<li><a class="refcode" id="3.2.d2" href="#3.2.d2">3.2.d2</a> <strong>Cross-multiplication</strong> — for a/b = c/d with b, d ≠ 0, the rule a·d = b·c.</li>
+<li><a class="refcode" id="3.2.d3" href="#3.2.d3">3.2.d3</a> <strong>Direct proportion</strong> — as one quantity grows, the other grows in the same ratio (more apples → more cost). The ratios stay equal.</li>
+<li><a class="refcode" id="3.2.d4" href="#3.2.d4">3.2.d4</a> <strong>Inverse proportion</strong> — as one quantity grows, the other <em>shrinks</em> so that their <strong>product</strong> stays constant (more workers → fewer days; workers × days = total work). The constant product workers × days = k mirrors the constant <em>ratio</em> of the direct case; symbolically xy = k (equivalently y = k/x). (Its graph is a curve, not a line — that's out of scope for now; here we only use the constant-product idea to solve.)</li>
 </ul>
-<p><strong>Teaching arc (concrete → pictorial → symbolic):</strong></p>
+</div>
+<div class="cl-note">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 11V16"/><circle cx="12" cy="8" r=".9" fill="currentColor" stroke="none"/></svg>How this builds</span></p>
 <ul>
 <li><strong>Concrete:</strong> "4 apples cost \$3. At the same rate, what do 10 apples cost?" The phrase <em>same rate</em> is the whole idea — the price-per-apple ratio doesn't change, so two ratios are equal.</li>
 <li><strong>Pictorial:</strong> stack the two ratios as equal fractions: (4 apples)/(\$3) = (10 apples)/(\$x). (Keep units in the <em>same position</em> top and bottom — apples over dollars on both sides.)</li>
@@ -131,53 +167,67 @@ The value didn't change — 12:18 and 2:3 name the <em>same</em> comparison, jus
 $$\frac{a}{b} = \frac{c}{d} \;\xrightarrow{\times b}\; a = \frac{bc}{d} \;\xrightarrow{\times d}\; a\cdot d = b\cdot c.$$
 "All we did was clear each denominator by multiplying both sides — first by b, then by d. The 'X' is the <em>result</em>, not a magic move." (This works because b and d are nonzero, so multiplying by them is reversible — multiplying an equation by something that could be 0 is not safe.) Then the leftover equation is a Unit 2 one-step solve. <strong>Flag clearly:</strong> cross-multiplication is for <em>direct</em> proportions (two equal ratios). For an <strong>inverse</strong> relationship you set the <em>products</em> equal instead — see practice problem 7.</li>
 </ul>
-<p><strong>Worked examples:</strong></p>
+</div>
+<section class="worked">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19.5V15L15.5 4.5 19.5 8.5 9 19Z"/><path d="M13.5 6.5 17.5 10.5"/></svg>Worked example</span></p>
 <ol>
 <li>
-<p><a class="refcode" id="3.2.w1" href="#3.2.w1">#3.2.w1</a> <em>Solve a basic proportion.</em> x/4 = 6/8. Cross-multiply: 8x = 24, so x = 3. (Check: 3/4 = 6/8.)</p>
+<p><a class="refcode" id="3.2.w1" href="#3.2.w1">3.2.w1</a> <em>Solve a basic proportion.</em> x/4 = 6/8. Cross-multiply: 8x = 24, so x = 3. (Check: 3/4 = 6/8.)</p>
 </li>
 <li>
-<p><a class="refcode" id="3.2.w2" href="#3.2.w2">#3.2.w2</a> <em>Variable in a denominator.</em> 3/x = 9/15. Here x ≠ 0, since 3/x must be defined. Cross-multiply: 9x = 45, so x = 5. (Check: 3/5 = 9/15.)</p>
+<p><a class="refcode" id="3.2.w2" href="#3.2.w2">3.2.w2</a> <em>Variable in a denominator.</em> 3/x = 9/15. Here x ≠ 0, since 3/x must be defined. Cross-multiply: 9x = 45, so x = 5. (Check: 3/5 = 9/15.)</p>
 </li>
 <li>
-<p><a class="refcode" id="3.2.w3" href="#3.2.w3">#3.2.w3</a> <em>Word problem (direct).</em> 4 apples cost \$3; what do 10 apples cost? Write it with the units inline so the "same unit on top on both sides" rule is visible — apples over dollars on both sides:
+<p><a class="refcode" id="3.2.w3" href="#3.2.w3">3.2.w3</a> <em>Word problem (direct).</em> 4 apples cost \$3; what do 10 apples cost? Write it with the units inline so the "same unit on top on both sides" rule is visible — apples over dollars on both sides:
 $$\frac{4 \text{ apples}}{\$3} = \frac{10 \text{ apples}}{\$x} \;\Rightarrow\; 4x = 30 \;\Rightarrow\; x = \$7.50.$$
 (Check: 4/3 = 10/7.5.)</p>
 </li>
 <li>
-<p><a class="refcode" id="3.2.w4" href="#3.2.w4">#3.2.w4</a> <em>Inverse — the trap.</em> 5 workers build a wall in 12 days. How long for 3 workers (same total work)?
+<p><a class="refcode" id="3.2.w4" href="#3.2.w4">3.2.w4</a> <em>Inverse — the trap.</em> 5 workers build a wall in 12 days. How long for 3 workers (same total work)?
 The <strong>total work</strong> is fixed: workers × days = 5 × 12 = 60 worker-days. So 3 × t = 60, giving t = 20 days. <em>Fewer</em> workers → <em>more</em> days — a direct-style proportion 5/3 = 12/t would be <strong>wrong</strong> here.</p>
 </li>
 </ol>
-<p><strong>Watch for:</strong></p>
+</section>
+<div class="cl-watch">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9H17"/><path d="M14.5 6.5 17 9 14.5 11.5"/><path d="M18 15H7"/><path d="M9.5 12.5 7 15 9.5 17.5"/></svg>A common mix-up</span></p>
 <ul>
 <li><strong>Cross-multiply as a magic X</strong> — the tell is a student who can do it but can't say <em>why</em>, and who then misapplies it (e.g., to a sum or to an inverse case). Repair by re-deriving it as "clear both denominators" (misconceptions.md §1: the relational meaning of =; misconceptions.md §7: trick-chasing).</li>
 <li><strong>Inverted/mismatched units</strong> — putting apples over dollars on one side and dollars over apples on the other. Keep the <em>same</em> unit on top on both sides.</li>
 <li><strong>Assuming everything is direct</strong> — the deep one. Before cross-multiplying, ask: "when this quantity goes <em>up</em>, does the other go up (direct) or down (inverse)?" Problem 7 trains this.</li>
 </ul>
-<p><strong>Visuals to offer:</strong> None needed; the stacked-fraction setup in chat carries it. (Save the <em>graph</em> of a proportional relationship — a line through the origin whose slope is the unit rate — as a forward pointer to Unit 5.)</p>
-<p><strong>Check for understanding (transfer):</strong></p>
+</div>
+<div class="cl-note">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 11V16"/><circle cx="12" cy="8" r=".9" fill="currentColor" stroke="none"/></svg>Figures to use</span></p>
+<p>None needed; the stacked-fraction setup in chat carries it. (Save the <em>graph</em> of a proportional relationship — a line through the origin whose slope is the unit rate — as a forward pointer to Unit 5.)</p>
+</div>
+<div class="cl-check">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M9.6 9.6a2.6 2.6 0 1 1 3.3 2.5c-.9.3-1.4.9-1.4 1.8"/><circle cx="11.5" cy="16.6" r=".9" fill="currentColor" stroke="none"/></svg>Check yourself</span></p>
 <ul>
-<li><a class="refcode" id="3.2.c1" href="#3.2.c1">#3.2.c1</a> "Re-derive cross-multiplication for a/b = c/d in your own steps — what are you actually doing to both sides?"</li>
-<li><a class="refcode" id="3.2.c2" href="#3.2.c2">#3.2.c2</a> "A car going 60 mph covers a fixed 120-mile trip; at 40 mph it takes <em>longer</em>. Is trip-time-vs-speed direct or inverse? How would you set it up?"</li>
-<li><a class="refcode" id="3.2.c3" href="#3.2.c3">#3.2.c3</a> "In 2/5 = x/20, without solving, will x be bigger or smaller than 2, and why?"</li>
+<li><a class="refcode" id="3.2.c1" href="#3.2.c1">3.2.c1</a> "Re-derive cross-multiplication for a/b = c/d in your own steps — what are you actually doing to both sides?"</li>
+<li><a class="refcode" id="3.2.c2" href="#3.2.c2">3.2.c2</a> "A car going 60 mph covers a fixed 120-mile trip; at 40 mph it takes <em>longer</em>. Is trip-time-vs-speed direct or inverse? How would you set it up?"</li>
+<li><a class="refcode" id="3.2.c3" href="#3.2.c3">3.2.c3</a> "In 2/5 = x/20, without solving, will x be bigger or smaller than 2, and why?"</li>
 </ul>
-<p><strong>Practice problems:</strong></p>
+</div>
+<section class="practice">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4.5" width="15.5" height="15.5" rx="2.5"/><path d="M7.5 10 9 11.5 12 8.5"/><path d="M14 10H16.5"/><path d="M7.5 15H16.5"/></svg>Practice</span></p>
 <p><em>Solve the proportion (direct):</em></p>
 <ol>
-<li><a class="refcode" id="3.2.1" href="#3.2.1">#3.2.1</a> x/3 = 10/15</li>
-<li><a class="refcode" id="3.2.2" href="#3.2.2">#3.2.2</a> 2/5 = x/20</li>
-<li><a class="refcode" id="3.2.3" href="#3.2.3">#3.2.3</a> 6/x = 3/4</li>
-<li><a class="refcode" id="3.2.4" href="#3.2.4">#3.2.4</a> x/8 = 9/12</li>
-<li><a class="refcode" id="3.2.5" href="#3.2.5">#3.2.5</a> 7/2 = 21/x</li>
+<li><a class="refcode" id="3.2.1" href="#3.2.1">3.2.1</a> x/3 = 10/15</li>
+<li><a class="refcode" id="3.2.2" href="#3.2.2">3.2.2</a> 2/5 = x/20</li>
+<li><a class="refcode" id="3.2.3" href="#3.2.3">3.2.3</a> 6/x = 3/4</li>
+<li><a class="refcode" id="3.2.4" href="#3.2.4">3.2.4</a> x/8 = 9/12</li>
+<li><a class="refcode" id="3.2.5" href="#3.2.5">3.2.5</a> 7/2 = 21/x</li>
 </ol>
 <p><em>Word problems (set up, then solve):</em></p>
 <ol start="6">
-<li><a class="refcode" id="3.2.6" href="#3.2.6">#3.2.6</a> On a map, 1 inch represents 50 miles. How many miles is 3.5 inches?</li>
-<li><a class="refcode" id="3.2.7" href="#3.2.7">#3.2.7</a> 5 workers build a wall in 12 days. <strong>Is this direct or inverse?</strong> Set it up and solve for how long 3 workers take at the same total work.</li>
-<li><a class="refcode" id="3.2.8" href="#3.2.8">#3.2.8</a> 9 lb of apples cost \$18. What do 4 lb cost?</li>
+<li><a class="refcode" id="3.2.6" href="#3.2.6">3.2.6</a> On a map, 1 inch represents 50 miles. How many miles is 3.5 inches?</li>
+<li><a class="refcode" id="3.2.7" href="#3.2.7">3.2.7</a> 5 workers build a wall in 12 days. <strong>Is this direct or inverse?</strong> Set it up and solve for how long 3 workers take at the same total work.</li>
+<li><a class="refcode" id="3.2.8" href="#3.2.8">3.2.8</a> 9 lb of apples cost \$18. What do 4 lb cost?</li>
 </ol>
-<p><strong>Answer key:</strong></p>
+</section>
+<details class="answers">
+<summary><span class="tw"></span><span class="eyebrow">Answers</span><span class="hint">Try each one yourself first, then open to check.</span></summary>
+<div class="ak-body">
 <ol>
 <li>15x = 30 ⇒ x = 2.</li>
 <li>40 = 5x ⇒ x = 8.</li>
@@ -188,16 +238,26 @@ The <strong>total work</strong> is fixed: workers × days = 5 × 12 = 60 worker-
 <li><strong>Inverse.</strong> Total work = 5 × 12 = 60 worker-days, so 3 × t = 60, giving t = 20 days. (Not 5/3 = 12/t — fewer workers means <em>more</em> time.)</li>
 <li>Unit price \$18 ÷ 9 = \$2/lb, so 4 × \$2 = \$8. (Or 9/18 = 4/x ⇒ x = 8.)</li>
 </ol>
-<hr>
+</div>
+</details>
+<div class="ldiv" aria-hidden="true"><i></i><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3.5 20.5 12 12 20.5 3.5 12Z"/></svg><i></i></div>
 <h2 id="lesson-33-percents">Lesson 3.3: Percents</h2>
-<p><strong>Goal:</strong> Convert fluently among fractions, decimals, and percents, and solve all three percent types plus percent change.
-<strong>Why it matters:</strong> Percents are proportions with a fixed denominator of 100 — the everyday face of proportional reasoning (tips, discounts, interest, statistics). Two-step percent problems (problems 9–10) are a first taste of the real-world multi-step modeling that arrives in Unit 6.
-<strong>New terms:</strong></p>
+<div class="cl-goal">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/></svg>What you'll learn</span></p>
+<p>Convert fluently among fractions, decimals, and percents, and solve all three percent types plus percent change.</p>
+</div>
+<div class="cl-why">
+<p>Percents are proportions with a fixed denominator of 100 — the everyday face of proportional reasoning (tips, discounts, interest, statistics). Two-step percent problems (problems 9–10) are a first taste of the real-world multi-step modeling that arrives in Unit 6.</p>
+</div>
+<div class="cl-terms">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6.5C9.5 5 6 5 3.5 6.5V18C6 16.5 9.5 16.5 12 18C14.5 16.5 18 16.5 20.5 18V6.5C18 5 14.5 5 12 6.5Z"/><path d="M12 6.5V18"/></svg>New words</span></p>
 <ul>
-<li><a class="refcode" id="3.3.d1" href="#3.3.d1">#3.3.d1</a> <strong>Percent</strong> — "per hundred"; a ratio out of 100. 25% = 25/100 = 0.25 = 1/4.</li>
-<li><a class="refcode" id="3.3.d2" href="#3.3.d2">#3.3.d2</a> <strong>Percent change</strong> — how much a quantity grew or shrank <em>relative to its original value</em>: ((new − old)/old) × 100%. It's one signed formula: a <strong>positive</strong> result is an increase, a <strong>negative</strong> one a decrease. We report the size with the word that matches the sign — e.g. −25% is "a 25% decrease."</li>
+<li><a class="refcode" id="3.3.d1" href="#3.3.d1">3.3.d1</a> <strong>Percent</strong> — "per hundred"; a ratio out of 100. 25% = 25/100 = 0.25 = 1/4.</li>
+<li><a class="refcode" id="3.3.d2" href="#3.3.d2">3.3.d2</a> <strong>Percent change</strong> — how much a quantity grew or shrank <em>relative to its original value</em>: ((new − old)/old) × 100%. It's one signed formula: a <strong>positive</strong> result is an increase, a <strong>negative</strong> one a decrease. We report the size with the word that matches the sign — e.g. −25% is "a 25% decrease."</li>
 </ul>
-<p><strong>Teaching arc (concrete → pictorial → symbolic):</strong></p>
+</div>
+<div class="cl-note">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 11V16"/><circle cx="12" cy="8" r=".9" fill="currentColor" stroke="none"/></svg>How this builds</span></p>
 <ul>
 <li><strong>Concrete:</strong> "Out of every 100, how many?" A 100-square grid: 25% is 25 shaded squares. Anchor the trio 1/2 = 0.5 = 50% and 1/4 = 0.25 = 25% so conversion is reflexive.</li>
 <li><strong>Pictorial:</strong> the proportion skeleton — part/whole = percent/100. A percent is just a <strong>part-to-whole</strong> ratio (the 3.1 distinction) rescaled so the whole is 100. Every percent question fills in two of the three slots (part, whole, percent) and solves for the third with Unit 2 / 3.2 tools.</li>
@@ -207,55 +267,70 @@ The <strong>total work</strong> is fixed: workers × days = 5 × 12 = 60 worker-
 <li><strong>Find the whole:</strong> 12 is 30% of what? 0.30 × w = 12 ⇒ w = 40.
   Then <strong>percent change</strong> uses the <em>old</em> value as the whole: a rise \$40 → \$50 is (50-40)/40 = 25% increase; \$80 → \$60 is (80-60)/80 = 25% decrease. Keep converting between fraction/decimal/percent the entire lesson.</li>
 </ul>
-<p><strong>Worked examples:</strong></p>
+</div>
+<section class="worked">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19.5V15L15.5 4.5 19.5 8.5 9 19Z"/><path d="M13.5 6.5 17.5 10.5"/></svg>Worked example</span></p>
 <ol>
-<li><a class="refcode" id="3.3.w1" href="#3.3.w1">#3.3.w1</a> <em>Find the part.</em> 20% of 80: 0.20 × 80 = 16.</li>
-<li><a class="refcode" id="3.3.w2" href="#3.3.w2">#3.3.w2</a> <em>Find the percent.</em> 15 is what % of 60? 15/60 = 1/4 = 0.25 = 25%.</li>
-<li><a class="refcode" id="3.3.w3" href="#3.3.w3">#3.3.w3</a> <em>Find the whole.</em> 12 is 30% of what? 0.30 · w = 12 ⇒ w = 12/0.30 = 40.</li>
-<li><a class="refcode" id="3.3.w4" href="#3.3.w4">#3.3.w4</a> <em>Percent increase.</em> \$40 → \$50: (50-40)/40 = 10/40 = 25% increase.</li>
-<li><a class="refcode" id="3.3.w5" href="#3.3.w5">#3.3.w5</a> <em>Percent decrease.</em> \$80 → \$60: (80-60)/80 = 20/80 = 25% decrease.</li>
+<li><a class="refcode" id="3.3.w1" href="#3.3.w1">3.3.w1</a> <em>Find the part.</em> 20% of 80: 0.20 × 80 = 16.</li>
+<li><a class="refcode" id="3.3.w2" href="#3.3.w2">3.3.w2</a> <em>Find the percent.</em> 15 is what % of 60? 15/60 = 1/4 = 0.25 = 25%.</li>
+<li><a class="refcode" id="3.3.w3" href="#3.3.w3">3.3.w3</a> <em>Find the whole.</em> 12 is 30% of what? 0.30 · w = 12 ⇒ w = 12/0.30 = 40.</li>
+<li><a class="refcode" id="3.3.w4" href="#3.3.w4">3.3.w4</a> <em>Percent increase.</em> \$40 → \$50: (50-40)/40 = 10/40 = 25% increase.</li>
+<li><a class="refcode" id="3.3.w5" href="#3.3.w5">3.3.w5</a> <em>Percent decrease.</em> \$80 → \$60: (80-60)/80 = 20/80 = 25% decrease.</li>
 </ol>
-<p><strong>Watch for:</strong></p>
+</section>
+<div class="cl-watch">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9H17"/><path d="M14.5 6.5 17 9 14.5 11.5"/><path d="M18 15H7"/><path d="M9.5 12.5 7 15 9.5 17.5"/></svg>A common mix-up</span></p>
 <ul>
 <li><strong>"of" auto-means-multiply, applied blindly</strong> — fine for "find the part," but a keyword reflex misfires on "what percent of" or "is 30% of <em>what</em>." Read the sentence, identify which slot is missing (misconceptions.md §7, keyword shortcuts).</li>
 <li><strong>Wrong base for percent change</strong> — dividing by the <em>new</em> value instead of the <em>old</em>. The denominator is always where you started. (\$40 → \$50 is a 25% rise; reversing, \$50 → \$40 is a 20% drop — different bases give different percents.)</li>
 <li><strong>Decimal-point slips in conversion</strong> — 7% = 0.07, not 0.7. Sanity-check against the fraction (7/100).</li>
 </ul>
-<p><strong>Visuals to offer:</strong> None needed — the 100-grid is describable in words, and the part/whole = percent/100 skeleton carries the work.</p>
-<p><strong>Check for understanding (transfer):</strong></p>
+</div>
+<div class="cl-note">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 11V16"/><circle cx="12" cy="8" r=".9" fill="currentColor" stroke="none"/></svg>Figures to use</span></p>
+<p>None needed — the 100-grid is describable in words, and the part/whole = percent/100 skeleton carries the work.</p>
+</div>
+<div class="cl-check">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M9.6 9.6a2.6 2.6 0 1 1 3.3 2.5c-.9.3-1.4.9-1.4 1.8"/><circle cx="11.5" cy="16.6" r=".9" fill="currentColor" stroke="none"/></svg>Check yourself</span></p>
 <ul>
-<li><a class="refcode" id="3.3.c1" href="#3.3.c1">#3.3.c1</a> "Convert 3/8 to a decimal and a percent." (Forces the trio fluency: 0.375 = 37.5%.)</li>
-<li><a class="refcode" id="3.3.c2" href="#3.3.c2">#3.3.c2</a> "A price rises 25%, then falls 25%. Back to the start? Explain using the <em>base</em> idea." (No — the second base is larger.)</li>
-<li><a class="refcode" id="3.3.c3" href="#3.3.c3">#3.3.c3</a> "\$50 → \$65 is what percent change, and which value is the base?"</li>
+<li><a class="refcode" id="3.3.c1" href="#3.3.c1">3.3.c1</a> "Convert 3/8 to a decimal and a percent." (Forces the trio fluency: 0.375 = 37.5%.)</li>
+<li><a class="refcode" id="3.3.c2" href="#3.3.c2">3.3.c2</a> "A price rises 25%, then falls 25%. Back to the start? Explain using the <em>base</em> idea." (No — the second base is larger.)</li>
+<li><a class="refcode" id="3.3.c3" href="#3.3.c3">3.3.c3</a> "\$50 → \$65 is what percent change, and which value is the base?"</li>
 </ul>
-<p><strong>Practice problems:</strong></p>
+</div>
+<section class="practice">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4.5" width="15.5" height="15.5" rx="2.5"/><path d="M7.5 10 9 11.5 12 8.5"/><path d="M14 10H16.5"/><path d="M7.5 15H16.5"/></svg>Practice</span></p>
 <p><em>Find the part:</em></p>
 <ol>
-<li><a class="refcode" id="3.3.1" href="#3.3.1">#3.3.1</a> What is 25% of 60?</li>
-<li><a class="refcode" id="3.3.2" href="#3.3.2">#3.3.2</a> What is 40% of 150?</li>
+<li><a class="refcode" id="3.3.1" href="#3.3.1">3.3.1</a> What is 25% of 60?</li>
+<li><a class="refcode" id="3.3.2" href="#3.3.2">3.3.2</a> What is 40% of 150?</li>
 </ol>
 <p><em>Find the percent:</em></p>
 <ol start="3">
-<li><a class="refcode" id="3.3.3" href="#3.3.3">#3.3.3</a> 18 is what percent of 72?</li>
-<li><a class="refcode" id="3.3.4" href="#3.3.4">#3.3.4</a> 9 is what percent of 25?</li>
-<li><a class="refcode" id="3.3.5" href="#3.3.5">#3.3.5</a> 2 is what percent of 3? (The answer doesn't terminate — decide how to report it.)</li>
+<li><a class="refcode" id="3.3.3" href="#3.3.3">3.3.3</a> 18 is what percent of 72?</li>
+<li><a class="refcode" id="3.3.4" href="#3.3.4">3.3.4</a> 9 is what percent of 25?</li>
+<li><a class="refcode" id="3.3.5" href="#3.3.5">3.3.5</a> 2 is what percent of 3? (The answer doesn't terminate — decide how to report it.)</li>
 </ol>
 <p><em>Find the whole:</em></p>
 <ol start="5">
-<li><a class="refcode" id="3.3.6" href="#3.3.6">#3.3.6</a> 21 is 70% of what number?</li>
-<li><a class="refcode" id="3.3.7" href="#3.3.7">#3.3.7</a> 15 is 25% of what number?</li>
+<li><a class="refcode" id="3.3.6" href="#3.3.6">3.3.6</a> 21 is 70% of what number?</li>
+<li><a class="refcode" id="3.3.7" href="#3.3.7">3.3.7</a> 15 is 25% of what number?</li>
 </ol>
 <p><em>Percent change:</em></p>
 <ol start="7">
-<li><a class="refcode" id="3.3.8" href="#3.3.8">#3.3.8</a> A \$50 shirt goes up to \$65. What is the percent increase?</li>
-<li><a class="refcode" id="3.3.9" href="#3.3.9">#3.3.9</a> A town's population falls from 200 to 170. What is the percent decrease?</li>
+<li><a class="refcode" id="3.3.8" href="#3.3.8">3.3.8</a> A \$50 shirt goes up to \$65. What is the percent increase?</li>
+<li><a class="refcode" id="3.3.9" href="#3.3.9">3.3.9</a> A town's population falls from 200 to 170. What is the percent decrease?</li>
 </ol>
 <p><em>Two-step (real-world — preview of Unit 6):</em></p>
 <ol start="9">
-<li><a class="refcode" id="3.3.10" href="#3.3.10">#3.3.10</a> An \$80 item is 15% off. What is the sale price?</li>
-<li><a class="refcode" id="3.3.11" href="#3.3.11">#3.3.11</a> A \$40 restaurant bill plus a 20% tip — what is the total?</li>
+<li><a class="refcode" id="3.3.10" href="#3.3.10">3.3.10</a> An \$80 item is 15% off. What is the sale price?</li>
+<li><a class="refcode" id="3.3.11" href="#3.3.11">3.3.11</a> A \$40 restaurant bill plus a 20% tip — what is the total?</li>
 </ol>
-<p><strong>Answer key:</strong> <em>(percents reported with their % sign; dollar answers with \$)</em></p>
+</section>
+<details class="answers">
+<summary><span class="tw"></span><span class="eyebrow">Answers</span><span class="hint">Try each one yourself first, then open to check.</span></summary>
+<div class="ak-body">
+<p><em>(percents reported with their % sign; dollar answers with \$)</em></p>
 <ol>
 <li>0.25 × 60 = 15.</li>
 <li>0.40 × 150 = 60.</li>
@@ -269,12 +344,21 @@ The <strong>total work</strong> is fixed: workers × days = 5 × 12 = 60 worker-
 <li>Tip 0.20 × 40 = 8, so 40 + 8 = \$48 (or 1.20 × 40). Two steps: find the part, then add.</li>
 <li>2/3 = 0.6666… = 66.66…%. Report it as <strong>66.7%</strong> (rounded to a tenth) or exactly <strong>66⅔%</strong> — both are acceptable; just don't write a clipped "66%" without saying you rounded. (A repeating decimal is a real answer; the choice is how precisely to report it.)</li>
 </ol>
-<hr>
+</div>
+</details>
+<div class="ldiv" aria-hidden="true"><i></i><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3.5 20.5 12 12 20.5 3.5 12Z"/></svg><i></i></div>
 <h2 id="wrap-up-interleaving">Wrap-up &amp; interleaving</h2>
-<p><strong>Consolidate:</strong> unit rate = "per one" = a <strong>constant rate of change</strong> = the seed of <strong>slope</strong> (Unit 5) — make sure this one sentence has landed; it is the reason this unit exists. Also lock in the <em>why</em> of cross-multiplication (clear both denominators) and the fraction ↔ decimal ↔ percent trio.</p>
-<p><strong>Mix back in:</strong> every proportion ends in a Unit 2 solve — keep cashing that in. Slip in a proportion that lands on a non-integer or a fraction (callback to Unit 2's fraction work and misconceptions.md §4). When a student finishes, throw one <em>inverse</em> problem back among direct ones so "is this even direct?" stays a live question, not a one-time lesson — and tie it to its constant: the direct case holds a constant <em>ratio</em> (y = kx, the seed of slope), the inverse case a constant <em>product</em> (xy = k).</p>
+<div class="cl-wrap">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5 3.5 8 12 12.5 20.5 8Z"/><path d="M5.5 11.5 12 15 18.5 11.5"/></svg>Putting it together</span></p>
+<p>unit rate = "per one" = a <strong>constant rate of change</strong> = the seed of <strong>slope</strong> (Unit 5) — make sure this one sentence has landed; it is the reason this unit exists. Also lock in the <em>why</em> of cross-multiplication (clear both denominators) and the fraction ↔ decimal ↔ percent trio.</p>
+</div>
+<div class="cl-note">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 11V16"/><circle cx="12" cy="8" r=".9" fill="currentColor" stroke="none"/></svg>Mix back in</span></p>
+<p>every proportion ends in a Unit 2 solve — keep cashing that in. Slip in a proportion that lands on a non-integer or a fraction (callback to Unit 2's fraction work and misconceptions.md §4). When a student finishes, throw one <em>inverse</em> problem back among direct ones so "is this even direct?" stays a live question, not a one-time lesson — and tie it to its constant: the direct case holds a constant <em>ratio</em> (y = kx, the seed of slope), the inverse case a constant <em>product</em> (xy = k).</p>
 <p><strong>Foreshadow:</strong> in Unit 4 (functions), a proportional relationship y = kx is the first clean function, and its constant k is the unit rate; in Unit 5 that same k is the slope of a line through the origin. Tell the student the bridge is built — they'll walk across it next.</p>
-<p><strong>Progress Card should note:</strong></p>
+</div>
+<div class="cl-note">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 11V16"/><circle cx="12" cy="8" r=".9" fill="currentColor" stroke="none"/></svg>Progress card</span></p>
 <ul>
 <li>Solid on unit rate / unit price? Can they state it as a rate of change?</li>
 <li>Do they explain cross-multiplication, or only execute it?</li>
@@ -282,6 +366,7 @@ The <strong>total work</strong> is fixed: workers × days = 5 × 12 = 60 worker-
 <li>Fraction ↔ decimal ↔ percent fluency: fluent, or still computing each conversion from scratch?</li>
 <li>Percent change with the correct <strong>base</strong>?</li>
 </ul>
+</div>
 </main>
 <footer><p>Generated from the unit source by <code>_verification/build_textbook.py</code>. Math by KaTeX.</p></footer>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
@@ -290,7 +375,6 @@ The <strong>total work</strong> is fixed: workers × days = 5 × 12 = 60 worker-
 document.addEventListener("DOMContentLoaded", function () {
   renderMathInElement(document.body, {delimiters: [{left: "$$", right: "$$", display: true}], throwOnError: false});
   var t = document.getElementById("theme"), root = document.documentElement;
-  if (localStorage.getItem("a1-theme") === "dark") root.classList.add("dark");
   t.addEventListener("click", function () {
     root.classList.toggle("dark");
     localStorage.setItem("a1-theme", root.classList.contains("dark") ? "dark" : "light");

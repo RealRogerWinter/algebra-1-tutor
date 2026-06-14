@@ -57,7 +57,7 @@ Work with the tutor, read the textbook, and practice — in order, or jump to wh
 <h2>The roadmap</h2>
 {_roadmap(ssot)}
 """
-    return {"index.html": bt._page("Algebra 1 — Student Guide", body, None, None),
+    return {"index.html": bt._page("Algebra 1 — Student Guide", body, None, None, surface="guide"),
             "textbook.css": bt.CSS}
 
 
