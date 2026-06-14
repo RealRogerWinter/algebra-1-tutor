@@ -16,3 +16,7 @@ docs/tutor-guide/** text eol=lf
 
 # The student guide is generated LF-only by _verification/build_student_guide.py.
 docs/student-guide/** text eol=lf
+
+# The GitHub Pages landing page is generated LF-only by _verification/build_landing.py.
+docs/index.html text eol=lf
+docs/textbook.css text eol=lf

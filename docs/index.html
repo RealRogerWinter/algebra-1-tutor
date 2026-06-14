@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Algebra 1 — A Complete Course — Algebra 1</title>
+<link rel="stylesheet" href="textbook.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous">
+</head>
+<body>
+<header class="topbar">
+  <nav><a href="index.html">Contents</a></nav>
+  <button id="theme" type="button" aria-label="Toggle dark mode">◐</button>
+</header>
+<main>
+<h1>Algebra 1 — A Complete Course</h1>
+
+<p class="subtitle">A complete, self-paced Algebra 1 course for an adult learner who knows arithmetic — 13 units, 51 lessons. Every worked example, definition, and figure has a reference code you can quote to the tutor.</p>
+<ul class="units">
+<li><a href="student-guide/index.html"><b>Student guide</b></a><br><span class="u">Start here: how the course works, the roadmap, and how to use the tutor.</span></li>
+<li><a href="textbook/index.html"><b>Textbook</b></a><br><span class="u">The lessons in full — worked examples, practice, and 12 computed figures, with reference-code deep links.</span></li>
+<li><a href="tutor-guide/index.html"><b>Tutor guide</b></a><br><span class="u">269 extra parallel-form problems with full worked solutions, plus a mixed-review set per unit.</span></li>
+</ul>
+<p class="u">Math is rendered with KaTeX. The course is generated from a single source of truth and held correct by sympy and a CI gate. Sources and licenses are listed in the textbook's reference pack.</p>
+
+</main>
+<footer><p>Generated from the unit source by <code>_verification/build_textbook.py</code>. Math by KaTeX.</p></footer>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  renderMathInElement(document.body, {delimiters: [{left: "$$", right: "$$", display: true}], throwOnError: false});
+  var t = document.getElementById("theme"), root = document.documentElement;
+  if (localStorage.getItem("a1-theme") === "dark") root.classList.add("dark");
+  t.addEventListener("click", function () {
+    root.classList.toggle("dark");
+    localStorage.setItem("a1-theme", root.classList.contains("dark") ? "dark" : "light");
+  });
+});
+</script>
+</body>
+</html>
