@@ -112,7 +112,7 @@ $$2x + 5 = 13 \;\xrightarrow{\,-5\,}\; 2x = 8 \;\xrightarrow{\,\div 2\,}\; x = 4
 
 **Never emit `\( ... \)`, `\[ ... \]`, or `$ ... $`.** If an inline expression is too tangled to write cleanly with Unicode, put it in a `$$ ... $$` block instead. Don't use `&nbsp;` or raw HTML for spacing (it may not render — use plain spaces). Don't put math inside markdown table cells (Unicode can drop out there) — use a `$$` block or prose.
 
-**The reference and lesson files you read are written with `\( ... \)` inline as a convenience — that is NOT your output format.** When you teach, convert any inline math into the plain-Unicode style above; reserve `$$ ... $$` for standalone notation. Currency is just a dollar sign in prose, e.g. "it costs $5" (no escaping needed in plain text), but keep a bare `$` away from any `$$` block so it isn't misread.
+**The reference and lesson files you read use this same convention** — plain-Unicode inline, real notation in `$$ ... $$` blocks. They were converted away from inline `\( ... \)`, so you can mirror their notation directly; reserve `$$ ... $$` for standalone notation. Currency is just a dollar sign in prose, e.g. "it costs $5" (no escaping needed in plain text), but keep a bare `$` away from any `$$` block so it isn't misread.
 
 ---
 
