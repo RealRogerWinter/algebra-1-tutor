@@ -43,6 +43,7 @@ The arc: **10.1** establishes the exponent rules — and treats x⁰ and x⁻ᵃ
 - *Power of a power.* (x²)³=x²·x²·x² — three copies of x², so 2+2+2=6: exponents **multiply**. Contrast deliberately with the product rule so the student feels *when* you add and *when* you multiply.
 - *Symbolic — the five rules:*
 $$x^a\cdot x^b=x^{a+b}\quad\frac{x^a}{x^b}=x^{a-b}\quad (x^a)^b=x^{ab}\quad (xy)^a=x^a y^a\quad x^0=1$$
+The power-of-a-product rule has a quotient twin: (x/y)ᵃ = xᵃ/yᵃ — the exponent reaches numerator and denominator alike, just as it reaches every factor in a product. (Optional to show; the unit's quotient problems stay monomial-over-monomial, so it never bites, but it's the natural companion if a student asks.)
 
 **Deriving the surprising two (this is the lesson's core — don't skip):**
 - *Why x⁰=1:* Apply the quotient rule to (x³)/(x³). By the rule it's x³⁻³=x⁰. But anything over itself is 1. So x⁰=1 — *forced*, not invented.
@@ -76,6 +77,7 @@ $$\frac{x^3}{x^5}=x^{3-5}=x^{-2}=\frac{1}{x^2}$$
 **Watch for:**
 - **Multiplying exponents that should add** (and vice versa): x²·x³=x⁶, or (x²)³=x⁵. Tell: the student applied the wrong rule. Repair: go back to *counting factors* — write the x's out. Hinge: "Is x²·x³ the same as (x²)³? Count the x's in each." (x⁵ vs. x⁶.) (misconceptions.md §7 — structure over memorized tricks.)
 - **Power not reaching the coefficient:** (2x)³=2x³ (forgot to cube the 2). Repair: the exponent greets *every* factor inside, the 2 included — 2³x³.
+- **5x⁰ vs (5x)⁰ (the zero-exponent twin of the above):** without parentheses the exponent touches only x, so 5x⁰=5·1=5; with parentheses the whole 5x is the base, so (5x)⁰=1. A student who answers practice #13 with "1" grouped the 5 into the base. Repair: ask "what is the base the 0 is sitting on — just the x, or the whole 5x?" — same parenthesis question as (2x)³.
 - **Negative exponent read as a negative number:** thinking x⁻² is negative or equals -x². Repair: re-derive from x²/x⁴ — it's a *reciprocal*, always positive for positive x.
 - **x⁰=0** instead of 1. Repair: the x³/x³ derivation — anything over itself is 1.
 
@@ -101,10 +103,12 @@ $$\frac{x^3}{x^5}=x^{3-5}=x^{-2}=\frac{1}{x^2}$$
 12. x⁰  13. 5x⁰  14. x⁻²  15. (x³)/(x⁵)
 
 *Mixed (combine rules):*
-16. (x²·x⁴)/(x³)  17. (3x²)(4x⁵)
+16. (x²·x⁴)/(x³)  17. (3x²)(4x⁵)  18. x⁵·x⁻²
+
+(Item 18 exercises a negative exponent as an *input*: x⁵·x⁻²=x⁵⁺⁽⁻²⁾=x³ — the product rule with a negative exponent, the reverse of items 14–15 where the negative exponent was the *answer*. The result is positive because 5+(-2)=3.)
 
 **Answer key (all verified):**
-1) x⁷  2) x⁵  3) y⁶  4) a⁹  5) x⁵  6) y²  7) a⁴  8) x⁶  9) y¹²  10) x³y³  11) 8x³  12) 1  13) 5  14) 1/(x²)  15) 1/(x²)  16) x³  17) 12x⁷
+1) x⁷  2) x⁵  3) y⁶  4) a⁹  5) x⁵  6) y²  7) a⁴  8) x⁶  9) y¹²  10) x³y³  11) 8x³  12) 1  13) 5  14) 1/(x²)  15) 1/(x²)  16) x³  17) 12x⁷  18) x³
 
 ---
 
@@ -115,7 +119,7 @@ $$\frac{x^3}{x^5}=x^{3-5}=x^{-2}=\frac{1}{x^2}$$
 **Why it matters:** It's how science and engineering write the very big (distances, populations) and the very small (atom sizes), and it's a clean, motivating use of 10.1's exponent rules — multiplying powers of ten *adds* the exponents.
 
 **New terms:**
-- **Scientific notation:** a number written as a×10ⁿ, where a (the **coefficient**) satisfies 1≤a<10 and n is an integer.
+- **Scientific notation:** a number written as a×10ⁿ, where a (the **coefficient**) satisfies 1≤|a|<10 and n is an integer. (Plain English: exactly one nonzero digit before the decimal point. The absolute-value bars let the coefficient be negative for a negative number — e.g. -5300 = -5.3×10³, where |-5.3|=5.3 is in range. Every example in this lesson is positive, so 1≤a<10 is the working form here, but state the rule with |a| so it stays true for negatives.)
 - **Standard form** (here): the ordinary way to write the number, e.g. 5300.
 
 **Teaching arc (concrete → pictorial → symbolic):**
@@ -140,10 +144,25 @@ $$\frac{8\times 10^5}{2\times 10^2} = \frac{8}{2}\times 10^{5-2} = 4\times 10^3$
 *Mixed signs in the exponent (callback to 10.1):*
 $$(4\times 10^6)(2\times 10^{-2}) = 8\times 10^{6+(-2)} = 8\times 10^4$$
 
+*Renormalize UP — the coefficient product reaches 10 or more (the most common operations slip):*
+$$(6\times 10^4)(5\times 10^3) = (6\cdot 5)\times 10^{4+3} = 30\times 10^7$$
+Stop — 30 is **not** in [1,10), so 30×10⁷ is not yet scientific notation. Renormalize: write 30 as 3.0×10¹, then fold that extra power of ten into the exponent (the product rule again):
+$$30\times 10^7 = 3.0\times 10^1\times 10^7 = 3\times 10^8$$
+The decimal slid one place left (30→3.0), so the exponent went **up** by 1 (7→8). Sanity check: bigger coefficient shrunk ⇒ exponent must grow to keep the value the same. (Verify: 30×10⁷ = 300,000,000 = 3×10⁸.)
+
+*Renormalize DOWN — a division coefficient drops below 1:*
+$$\frac{2\times 10^3}{8\times 10^5} = \frac{2}{8}\times 10^{3-5} = 0.25\times 10^{-2}$$
+Stop — 0.25 is **below** 1, so this isn't scientific notation either. Renormalize the other way: 0.25 = 2.5×10⁻¹, and folding in that 10⁻¹ drops the exponent by 1:
+$$0.25\times 10^{-2} = 2.5\times 10^{-1}\times 10^{-2} = 2.5\times 10^{-3}$$
+The decimal slid one place right (0.25→2.5), so the exponent went **down** by 1 (-2→-3). Same sanity check, reversed: coefficient grew ⇒ exponent must shrink. (Verify: 0.25×10⁻² = 0.0025 = 2.5×10⁻³.)
+
+The convention that forces all of this: a proper scientific-notation coefficient c satisfies 1≤|c|<10 — exactly one nonzero digit before the decimal. If your arithmetic lands outside that window, slide the decimal back into it and adjust the power of ten by the number of places you slid (left slide ⇒ exponent up; right slide ⇒ exponent down).
+
 **Watch for:**
 - **Coefficient out of range:** writing 53×10² or 0.53×10⁴ for 5300. Repair: "a must be at least 1 and under 10 — exactly one nonzero digit before the decimal." (Both are *equal* to 5300 but not in scientific notation.)
 - **Wrong sign on the exponent for small numbers:** 0.00042=4.2×10⁴. Repair: "Is this number bigger or smaller than 1? Smaller → the exponent is negative." Tie to 10.1's negative-exponent meaning.
 - **Adding the coefficients instead of multiplying**, or multiplying the exponents instead of adding. Repair: separate the two jobs out loud — "the a's multiply; the tens follow the *product rule* and add."
+- **Leaving the result un-renormalized:** stopping at 30×10⁷ or 0.25×10⁻² and calling it scientific notation. This is the operations version of the "coefficient out of range" error above — the answer is *correct in value* but not in form. Repair: "Is your coefficient at least 1 and under 10? 30 isn't; 0.25 isn't. Slide the decimal back into range and move the exponent to match — left slide bumps the exponent up, right slide drops it down." Tie to 10.1's product rule: the power of ten you peel off the coefficient just adds to the exponent.
 - **Off-by-one place counting.** Repair: write the number and count the slides deliberately; verify by sliding back.
 
 **Visuals to offer:** none needed; an ASCII note of the decimal sliding (5.3→53.→530.→5300.) can anchor a stuck student.
@@ -164,8 +183,11 @@ $$(4\times 10^6)(2\times 10^{-2}) = 8\times 10^{6+(-2)} = 8\times 10^4$$
 *Multiply or divide (leave in scientific notation):*
 7. (3×10⁴)(2×10³)  8. (8×10⁵)/(2×10²)  9. (4×10⁶)(2×10⁻²)  10. (9×10⁸)/(3×10⁵)
 
+*Multiply or divide, then renormalize so 1≤coefficient<10:*
+11. (4×10⁵)(5×10⁶)  12. (7×10²)(8×10³)  13. (3×10⁵)/(6×10²)
+
 **Answer key (all verified):**
-1) 5300  2) 67,000  3) 0.00042  4) 0.0091  5) 7.2×10⁵  6) 3.05×10⁻²  7) 6×10⁷  8) 4×10³  9) 8×10⁴  10) 3×10³
+1) 5300  2) 67,000  3) 0.00042  4) 0.0091  5) 7.2×10⁵  6) 3.05×10⁻²  7) 6×10⁷  8) 4×10³  9) 8×10⁴  10) 3×10³  11) 2×10¹² (from 20×10¹¹ — slide left, exponent +1)  12) 5.6×10⁶ (from 56×10⁵ — slide left, exponent +1)  13) 5×10² (from 0.5×10³ — slide right, exponent −1)
 
 ---
 
@@ -176,10 +198,10 @@ $$(4\times 10^6)(2\times 10^{-2}) = 8\times 10^{6+(-2)} = 8\times 10^4$$
 **Why it matters:** "Polynomial" is the noun the next three units are about. Adding and subtracting them is Unit 2's combining-like-terms with new vocabulary — and subtraction is where the §3 sign trap returns in force.
 
 **New terms:**
-- **Polynomial:** a sum of terms, each a number times a whole-number power of a variable (e.g. 3x²+2x-1).
+- **Polynomial:** a sum of terms, each a real number (the coefficient) times a whole-number power of a variable (e.g. 3x²+2x-1). The "whole-number power" part is what matters most: it rules out negative and fractional exponents, which is exactly what separates a polynomial from the rational/radical expressions seen in 10.1.
 - **Term / coefficient:** a single piece separated by + or -; the coefficient is its number part (in 3x², the coefficient is 3).
 - **Monomial / binomial / trinomial:** a polynomial with 1 / 2 / 3 terms.
-- **Degree:** the highest exponent in the polynomial (3x²+2x-1 has degree 2). The degree of a single term is its exponent.
+- **Degree:** the highest exponent in the polynomial (3x²+2x-1 has degree 2). The degree of a single term is its exponent; a nonzero constant has degree 0 (read it as cx⁰, since x⁰=1 — so the 2 in 3x²+2x-1 is a degree-0 term, and a lone "7" has degree 0). This is *why* the constant sits last in standard form: it's the lowest-degree (x⁰) term.
 - **Standard form:** terms written in **descending** order of degree (highest power first).
 - **Leading coefficient:** the coefficient of the highest-degree term (once in standard form).
 
