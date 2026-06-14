@@ -31,6 +31,12 @@ def test_catches_inequality_shading_flip():
     assert F.accuracy_issues(bad)
 
 
+def test_catches_absurd_scatter_fit():
+    bad = {"code": "x", "type": "scatter", "points": [(1, 2), (2, 3), (3, 3), (4, 5), (5, 6)],
+           "fit": {"m": -10, "b": 50}, "caption": "absurd"}   # upward points, wrong-sign steep fit
+    assert F.accuracy_issues(bad)
+
+
 def test_render_valid_xml():
     for s in F.FIGURES:
         minidom.parseString(F.render(s))   # raises if not well-formed

@@ -189,10 +189,26 @@ def accuracy_issues(spec):
             if not bool(sat):
                 iss.append(f"{code}: test point {tp} not in the shaded (satisfying) region for y {op} {m}x+{b}")
     elif t == "scatter":
-        fm, fb = sp.Rational(str(spec["fit"]["m"])), sp.Rational(str(spec["fit"]["b"]))
-        # nothing to satisfy beyond a well-formed fit; ensure >=3 points
-        if len(spec["points"]) < 3:
+        pts = spec["points"]
+        if len(pts) < 3:
             iss.append(f"{code}: scatter needs >=3 points")
+        else:
+            # the stated best-fit line must roughly match the least-squares fit of the points,
+            # so an absurd fit (wrong sign / far-off slope or intercept) is caught.
+            fm, fb = sp.Rational(str(spec["fit"]["m"])), sp.Rational(str(spec["fit"]["b"]))
+            n = len(pts)
+            xs = [sp.Rational(str(p[0])) for p in pts]; ys = [sp.Rational(str(p[1])) for p in pts]
+            xbar, ybar = sum(xs) / n, sum(ys) / n
+            sxx = sum((x - xbar) ** 2 for x in xs)
+            sxy = sum((x - xbar) * (y - ybar) for x, y in zip(xs, ys))
+            if sxx == 0:
+                iss.append(f"{code}: scatter x-values are all equal (no fit)")
+            else:
+                ms = sxy / sxx; bs = ybar - ms * xbar
+                if ms != 0 and (fm == 0 or fm * ms < 0 or not (abs(ms) / 2 <= abs(fm) <= 2 * abs(ms))):
+                    iss.append(f"{code}: fit slope {fm} far from least-squares {ms}")
+                if abs(fb - bs) > sp.Rational(3, 2):
+                    iss.append(f"{code}: fit intercept {fb} far from least-squares {bs}")
     elif t == "number_line":
         for p in spec.get("points", []):
             if not (spec["min"] <= p["x"] <= spec["max"]):
