@@ -18,6 +18,7 @@
     {"id": "10.1.15", "kind": "simplify", "expr": "x**3/x**5",          "answer": "1/x**2"},
     {"id": "10.1.16", "kind": "simplify", "expr": "(x**2*x**4)/x**3",   "answer": "x**3"},
     {"id": "10.1.17", "kind": "simplify", "expr": "(3*x**2)*(4*x**5)",  "answer": "12*x**7"},
+    {"id": "10.1.18", "kind": "simplify", "expr": "x**5*x**(-2)",       "answer": "x**3"},
 
     {"id": "10.2.1",  "kind": "eval", "expr": "5.3*10**3",   "answer": "5300"},
     {"id": "10.2.2",  "kind": "eval", "expr": "6.7*10**4",   "answer": "67000"},
@@ -29,6 +30,9 @@
     {"id": "10.2.8",  "kind": "eval", "expr": "(8*10**5)/(2*10**2)", "answer": "4000"},
     {"id": "10.2.9",  "kind": "eval", "expr": "(4*10**6)*(2*10**(-2))", "answer": "80000"},
     {"id": "10.2.10", "kind": "eval", "expr": "(9*10**8)/(3*10**5)", "answer": "3000"},
+    {"id": "10.2.11", "kind": "eval", "expr": "(4*10**5)*(5*10**6)", "answer": "2*10**12"},
+    {"id": "10.2.12", "kind": "eval", "expr": "(7*10**2)*(8*10**3)", "answer": "5600000"},
+    {"id": "10.2.13", "kind": "eval", "expr": "(3*10**5)/(6*10**2)", "answer": "500"},
 
     {"id": "10.3.1",  "kind": "manual", "answer": "binomial; degree 1; leading coefficient 3"},
     {"id": "10.3.2",  "kind": "manual", "answer": "trinomial; degree 2; leading coefficient 1"},
