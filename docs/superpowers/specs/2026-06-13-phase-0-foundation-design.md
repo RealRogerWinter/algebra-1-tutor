@@ -126,9 +126,11 @@ Against the SSOT, verify:
   versa (no missing/extra lessons);
 - per-unit lesson **counts** match;
 - the `curriculum-map.md` lesson-level **outline** lists exactly the SSOT lesson ids (strict
-  set-equality) with counts matching; lesson titles checked by **normalized containment** (canonical
-  title, lowercased and dash/paren-normalized, must appear in the outline entry) so curated glosses
-  are allowed but drift is caught;
+  set-equality), with per-unit counts matching. Outline lesson *titles* are **not** fuzzy-matched —
+  they are curated prose whose wording legitimately differs from the `.md` headers in both directions
+  (8.4's `.md` title carries "(two variables)" the outline omits; 5.3's outline carries a gloss the
+  `.md` omits), so any containment test would false-positive. The strict title guarantee lives at the
+  `.md`-header level (next bullet); the outline is held honest structurally by its id-set + counts;
 - every JSON answer-key `id` belongs to a unit/lesson that exists in the SSOT.
 
 ### 4.3 CLI
@@ -180,8 +182,9 @@ derive `m,b` from the points and assert collinearity; with 1 point, use `slope`.
 
 **Witness B — `.md` answer-key cross-check.** Independently recover the canonical line from the unit
 `.md`:
-1. Resolve the entry to its unit `.md` and lesson; pick the section by tag — `**Worked examples:**`
-   for `w`-tagged ids, `**Answer key:**` for practice ids.
+1. Resolve the **practice** entry to its unit `.md` and lesson; find its `**Answer key:**` block.
+   (Worked-example `w`-tagged entries are validated by witness A only — their results sit in
+   multi-line `$$…$$` blocks, not a clean numbered answer key.)
 2. Split that section into numbered segments (`1.`, `2.`, …) and select the segment matching the
    entry's index.
 3. Extract the **last** `y = <expr>` in the segment; sympy-parse `<expr>` as linear in `x` →
