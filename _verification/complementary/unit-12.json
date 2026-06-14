@@ -1,0 +1,259 @@
+{
+  "unit": "12",
+  "problems": [
+    {
+      "id": "12.1.T1",
+      "kind": "eval",
+      "expr": "sqrt(64)",
+      "answer": "8",
+      "prompt": "Evaluate √64.",
+      "solution": "Ask: what number squared gives 64? 8·8=64, so √64=8. (The √ symbol gives the principal, non-negative root.)"
+    },
+    {
+      "id": "12.1.T2",
+      "kind": "simplify",
+      "expr": "sqrt(28)",
+      "answer": "2*sqrt(7)",
+      "prompt": "Simplify √28.",
+      "solution": "Split the radicand into a perfect-square factor times the rest: 28=4·7, and 4 is a perfect square. √28=√(4·7)=√4·√7=2√7. There is no perfect-square factor left in 7, so 2√7 is fully simplified. (√7 is irrational — an exact answer, not 'unfinished.')"
+    },
+    {
+      "id": "12.1.T3",
+      "kind": "simplify",
+      "expr": "sqrt(98)",
+      "answer": "7*sqrt(2)",
+      "prompt": "Simplify √98. (Pull out the largest perfect-square factor so you finish in one step.)",
+      "solution": "Hunt for the largest perfect square dividing 98. Since 98=49·2 and 49=7², √98=√(49·2)=√49·√2=7√2. If you only spotted 98=4·24 you'd get 2√24 and have to keep going (√24 still hides a 4); the largest-square route, 49, gets there in one step. Final: 7√2."
+    },
+    {
+      "id": "12.1.T4",
+      "kind": "simplify",
+      "expr": "sqrt(3)*sqrt(12)",
+      "answer": "6",
+      "prompt": "Multiply and simplify: √3 · √12.",
+      "solution": "Use the product rule √a·√b=√(a·b): √3·√12=√(3·12)=√36. And 36 is a perfect square, so √36=6. (A stretch because two ideas combine — the multiply rule, then a perfect square emerges — and the radical disappears entirely.)"
+    },
+
+    {
+      "id": "12.2.T1",
+      "kind": "solve",
+      "eq": "x**2=36",
+      "var": "x",
+      "answer": "6,-6",
+      "prompt": "Solve x²=36. Keep both signs.",
+      "solution": "By the Square-Root Property, x²=k with k≥0 gives x=±√k. Here k=36≥0, so x=±√36=±6, i.e. x=6 or x=-6. Both check: 6²=36 and (-6)²=36 — squaring lost the sign, so two starts land on 36. Don't drop the -6."
+    },
+    {
+      "id": "12.2.T2",
+      "kind": "solve",
+      "eq": "x**2-13=0",
+      "var": "x",
+      "answer": "sqrt(13),-sqrt(13)",
+      "prompt": "Solve x²-13=0. Leave any irrational answer exact.",
+      "solution": "First isolate x²: x²-13=0 ⇒ x²=13. Then x=±√13. Since 13 is not a perfect square, √13 is irrational and stays in radical form: x=√13 or x=-√13. The exact radical is the answer; resist rounding."
+    },
+    {
+      "id": "12.2.T3",
+      "kind": "solve",
+      "eq": "3*x**2=75",
+      "var": "x",
+      "answer": "5,-5",
+      "prompt": "Solve 3x²=75. (Isolate x² before you take a square root.)",
+      "solution": "Isolate x² first — divide both sides by 3: x²=25. Now apply the Square-Root Property: x=±√25=±5, so x=5 or x=-5. (If you rooted before dividing you'd mishandle the 3 — get x² by itself first.)"
+    },
+    {
+      "id": "12.2.T4",
+      "kind": "solve",
+      "eq": "(x+1)**2=5",
+      "var": "x",
+      "answer": "-1+sqrt(5),-1-sqrt(5)",
+      "prompt": "Solve (x+1)²=5. Leave the answer exact.",
+      "solution": "The left side is already a single square, so the Square-Root Property applies directly to the binomial: x+1=±√5. Then subtract 1 from both sides: x=-1±√5, i.e. x=-1+√5 or x=-1-√5. (Stretch: the ± attaches to the whole binomial, and 5 isn't a perfect square so √5 stays exact.)"
+    },
+
+    {
+      "id": "12.3.T1",
+      "kind": "solve",
+      "eq": "(x+6)*(x-1)=0",
+      "var": "x",
+      "answer": "-6,1",
+      "prompt": "Solve (x+6)(x-1)=0 without expanding.",
+      "solution": "By the zero-product property, a product is 0 only if a factor is 0. So x+6=0 or x-1=0. Solve each little equation: x+6=0 ⇒ x=-6; x-1=0 ⇒ x=1. Answer: x=-6 or x=1. (Note x+6=0 gives -6, not +6.) Check: (-6+6)(-6-1)=0·(-7)=0. ✓"
+    },
+    {
+      "id": "12.3.T2",
+      "kind": "factor_check",
+      "expr": "x**2+9*x+20",
+      "answer": "(x+4)*(x+5)",
+      "prompt": "Factor x²+9x+20, then check by expanding.",
+      "solution": "Find two numbers that multiply to +20 and add to +9: 4 and 5 (4·5=20, 4+5=9). So x²+9x+20=(x+4)(x+5). Check by expanding (FOIL): (x+4)(x+5)=x²+5x+4x+20=x²+9x+20. ✓ (This is the factoring step that 12.3 solving relies on; to solve x²+9x+20=0 you'd then set each factor to 0, giving x=-4 or x=-5.)"
+    },
+    {
+      "id": "12.3.T3",
+      "kind": "solve",
+      "eq": "x**2-4*x-21=0",
+      "var": "x",
+      "answer": "7,-3",
+      "prompt": "Solve x²-4x-21=0 by factoring.",
+      "solution": "It's already set equal to 0. Find two numbers that multiply to -21 and add to -4: -7 and +3 (-7·3=-21, -7+3=-4). Factor: (x-7)(x+3)=0. Zero-product property: x-7=0 ⇒ x=7; x+3=0 ⇒ x=-3. Answer: x=7 or x=-3. Watch the signs — x+3=0 gives -3. Check x=7: 49-28-21=0. ✓"
+    },
+    {
+      "id": "12.3.T4",
+      "kind": "solve",
+      "eq": "x**2-25=0",
+      "var": "x",
+      "answer": "5,-5",
+      "prompt": "Solve x²-25=0 by factoring. (Notice the special pattern.)",
+      "solution": "This is a difference of squares: x²-25=x²-5²=(x-5)(x+5). Set the product to 0: x-5=0 ⇒ x=5; x+5=0 ⇒ x=-5. Answer: x=±5. (Stretch: recognizing the difference-of-squares pattern is faster than searching for two numbers — and it gives the same x=±5 the Square-Root Property would, two routes to one truth.)"
+    },
+
+    {
+      "id": "12.4.T1",
+      "kind": "eval",
+      "expr": "(12/2)**2",
+      "answer": "36",
+      "prompt": "What number completes the square for x²+12x? Show how you got it.",
+      "solution": "To turn x²+bx into a perfect square you add (b/2)². Here b=12, so the number is (12/2)²=6²=36. Adding it gives x²+12x+36=(x+6)². (Halve b first, then square — not 12² but (12/2)².)"
+    },
+    {
+      "id": "12.4.T2",
+      "kind": "solve",
+      "eq": "x**2+10*x+21=0",
+      "var": "x",
+      "answer": "-3,-7",
+      "prompt": "Solve x²+10x+21=0 by completing the square.",
+      "solution": "Move the constant: x²+10x=-21. Add (10/2)²=25 to BOTH sides (keep the balance): x²+10x+25=-21+25, so (x+5)²=4. Take ±√ of both sides: x+5=±2. Then x=-5±2, giving x=-3 or x=-7. Check x=-3: 9-30+21=0. ✓"
+    },
+    {
+      "id": "12.4.T3",
+      "kind": "solve",
+      "eq": "x**2-8*x+12=0",
+      "var": "x",
+      "answer": "2,6",
+      "prompt": "Solve x²-8x+12=0 by completing the square.",
+      "solution": "Move the constant: x²-8x=-12. Add (-8/2)²=(-4)²=16 to both sides: x²-8x+16=-12+16, so (x-4)²=4. (The sign of b/2 matters: half of -8 is -4, so the square is (x-4)², not (x+4)².) Then x-4=±2 ⇒ x=4±2 ⇒ x=2 or x=6. Check x=6: 36-48+12=0. ✓"
+    },
+    {
+      "id": "12.4.T4",
+      "kind": "solve",
+      "eq": "x**2-6*x+2=0",
+      "var": "x",
+      "answer": "3+sqrt(7),3-sqrt(7)",
+      "prompt": "Solve x²-6x+2=0 by completing the square. Leave the answer exact.",
+      "solution": "Move the constant: x²-6x=-2. Add (-6/2)²=9 to both sides: x²-6x+9=-2+9, so (x-3)²=7. Take ±√: x-3=±√7, so x=3±√7, i.e. x=3+√7 or x=3-√7. (Stretch / where completing the square earns its keep: 7 isn't a perfect square, so no integer factoring could find these — but completing the square does, and the answer stays exact.)"
+    },
+
+    {
+      "id": "12.5.T1",
+      "kind": "eval",
+      "expr": "(-7)**2-4*1*12",
+      "answer": "1",
+      "prompt": "For x²-7x+12=0, compute the discriminant b²-4ac and state how many real solutions there are (and whether they're rational or irrational).",
+      "solution": "Identify a=1, b=-7, c=12 (signs included). Discriminant b²-4ac=(-7)²-4(1)(12)=49-48=1. Since 1>0 there are two real solutions, and because 1 is a perfect square the roots are rational (the equation factors over the rationals). Note (-7)²=49 — square first, the result is positive (the -3² vs (-3)² trap)."
+    },
+    {
+      "id": "12.5.T2",
+      "kind": "solve",
+      "eq": "2*x**2-5*x-3=0",
+      "var": "x",
+      "answer": "3,-1/2",
+      "prompt": "Solve 2x²-5x-3=0 with the quadratic formula.",
+      "solution": "Read off a=2, b=-5, c=-3. Note -b=-(-5)=+5. Discriminant: (-5)²-4(2)(-3)=25+24=49 (the -4ac term adds because c is negative). x=(5±√49)/(2·2)=(5±7)/4. The two values: (5+7)/4=12/4=3 and (5-7)/4=-2/4=-1/2. Answer: x=3 or x=-1/2. The whole 5±√49 sits over 4."
+    },
+    {
+      "id": "12.5.T3",
+      "kind": "solve",
+      "eq": "3*x**2+5*x-2=0",
+      "var": "x",
+      "answer": "1/3,-2",
+      "prompt": "Solve 3x²+5x-2=0 with the quadratic formula.",
+      "solution": "Here a=3, b=5, c=-2, so -b=-5. Discriminant: 5²-4(3)(-2)=25+24=49 (positive, perfect square ⇒ two rational roots). x=(-5±√49)/(2·3)=(-5±7)/6. The values: (-5+7)/6=2/6=1/3 and (-5-7)/6=-12/6=-2. Answer: x=1/3 or x=-2."
+    },
+    {
+      "id": "12.5.T4",
+      "kind": "solve",
+      "eq": "x**2-4*x-1=0",
+      "var": "x",
+      "answer": "2+sqrt(5),2-sqrt(5)",
+      "prompt": "Solve x²-4x-1=0 with the quadratic formula. Leave the answer exact (irrational roots).",
+      "solution": "a=1, b=-4, c=-1, so -b=+4. Discriminant: (-4)²-4(1)(-1)=16+4=20>0, and 20 is not a perfect square ⇒ two irrational roots. x=(4±√20)/2. Simplify √20=√(4·5)=2√5: x=(4±2√5)/2=2±√5. Answer: x=2+√5 or x=2-√5 (exact). (Stretch: the formula's payoff — a quadratic that won't factor over the integers still solves cleanly, and the radical simplifies.)"
+    },
+
+    {
+      "id": "12.6.T1",
+      "kind": "solve",
+      "eq": "x**2-16=0",
+      "var": "x",
+      "answer": "4,-4",
+      "prompt": "Find the roots (x-intercepts) of the parabola y=x²-16.",
+      "solution": "The roots are where y=0, i.e. where x²-16=0. This is a difference of squares: (x-4)(x+4)=0 ⇒ x=4 or x=-4. So the parabola crosses the x-axis at (4,0) and (-4,0). (These x-intercepts are exactly the solutions of x²-16=0 — that is why the parabola has two of them.)"
+    },
+    {
+      "id": "12.6.T2",
+      "kind": "eval",
+      "expr": "-6/(2*1)",
+      "answer": "-3",
+      "prompt": "Find the x-coordinate of the vertex of y=x²+6x+5 using x=-b/2a.",
+      "solution": "For y=x²+6x+5, a=1 and b=6. The vertex's x-coordinate is x=-b/(2a)=-6/(2·1)=-3. (To get the full vertex you'd plug back: y=(-3)²+6(-3)+5=9-18+5=-4, so the vertex is (-3,-4). The roots are x=-1 and x=-5, and -3 is exactly midway between them — the axis of symmetry.)"
+    },
+    {
+      "id": "12.6.T3",
+      "kind": "manual",
+      "answer": "y=x^2-2x-8: opens up (a=1>0); roots (x-4)(x+2)=0 -> x=4,-2 so (4,0),(-2,0); vertex x=-(-2)/(2*1)=1, y=1-2-8=-9 -> (1,-9); axis x=1 (midway between -2 and 4). Two real roots because the U crosses the x-axis twice.",
+      "prompt": "For y=x²-2x-8, find the direction it opens, the roots, and the vertex; then explain why it has two solutions. (Sketch the U through those points.)",
+      "solution": "Direction: a=1>0, so it opens UP. Roots (set y=0): x²-2x-8=0 ⇒ (x-4)(x+2)=0 ⇒ x=4 or x=-2, so it crosses at (4,0) and (-2,0). Vertex: x=-b/2a=-(-2)/(2·1)=1; plug back y=1²-2(1)-8=-9, so the vertex is (1,-9). The axis of symmetry is x=1 — exactly midway between the roots -2 and 4 (their average), a fast check on -b/2a. Why two solutions: the parabola is a U that opens upward from its low point (1,-9) and rises back up, so it crosses the x-axis twice — once on the way down, once on the way up. That is 'squaring loses the sign,' drawn. Sketch: a smooth U through (-2,0), (0,-8), (1,-9), (4,0)."
+    },
+    {
+      "id": "12.6.T4",
+      "kind": "solve",
+      "eq": "-x**2+9=0",
+      "var": "x",
+      "answer": "3,-3",
+      "prompt": "Find the roots of y=-x²+9, and say which way the parabola opens.",
+      "solution": "Direction: a=-1<0, so this parabola opens DOWN. Roots (set y=0): -x²+9=0 ⇒ x²=9 ⇒ x=±3, so it crosses at (-3,0) and (3,0). (Stretch: the leading sign flips the opening direction — a downward U with its high point at the vertex (0,9) — but the roots are still found by setting y=0.)"
+    },
+
+    {
+      "id": "12.R.T1",
+      "kind": "simplify",
+      "expr": "sqrt(108)",
+      "answer": "6*sqrt(3)",
+      "prompt": "Simplify √108.",
+      "solution": "Largest perfect-square factor of 108: 108=36·3 and 36=6². So √108=√(36·3)=√36·√3=6√3. No perfect square remains in 3, so 6√3 is fully simplified. (Lesson 12.1.)"
+    },
+    {
+      "id": "12.R.T2",
+      "kind": "solve",
+      "eq": "x**2-50=0",
+      "var": "x",
+      "answer": "5*sqrt(2),-5*sqrt(2)",
+      "prompt": "Solve x²-50=0. Leave the answer as a simplified exact radical.",
+      "solution": "Isolate x²: x²=50. Square-Root Property: x=±√50. Simplify the radical (12.1): √50=√(25·2)=5√2. So x=±5√2, i.e. x=5√2 or x=-5√2. (Interleaves 12.2's ± with 12.1's radical simplification — keep both signs AND simplify.)"
+    },
+    {
+      "id": "12.R.T3",
+      "kind": "solve",
+      "eq": "x**2+2*x-35=0",
+      "var": "x",
+      "answer": "5,-7",
+      "prompt": "Solve x²+2x-35=0 by factoring.",
+      "solution": "Two numbers multiplying to -35 and adding to +2: +7 and -5 (7·(-5)=-35, 7+(-5)=2). Factor: (x+7)(x-5)=0. Zero-product property: x+7=0 ⇒ x=-7; x-5=0 ⇒ x=5. Answer: x=5 or x=-7. (Lesson 12.3.) Check x=5: 25+10-35=0. ✓"
+    },
+    {
+      "id": "12.R.T4",
+      "kind": "solve",
+      "eq": "2*x**2-x-6=0",
+      "var": "x",
+      "answer": "2,-3/2",
+      "prompt": "Solve 2x²-x-6=0 with the quadratic formula.",
+      "solution": "a=2, b=-1, c=-6, so -b=+1. Discriminant: (-1)²-4(2)(-6)=1+48=49 (perfect square ⇒ rational roots). x=(1±√49)/(2·2)=(1±7)/4. Values: (1+7)/4=8/4=2 and (1-7)/4=-6/4=-3/2. Answer: x=2 or x=-3/2. (Lesson 12.5 — non-monic; the formula reads a,b,c straight off.)"
+    },
+    {
+      "id": "12.R.T5",
+      "kind": "manual",
+      "answer": "w(w+5)=66 -> w^2+5w-66=0 -> (w-6)(w+11)=0 -> w=6 or w=-11; reject w=-11 (a width can't be negative), so width=6, length=11. Rectangle is 6 by 11.",
+      "prompt": "A rectangle's length is 5 more than its width, and its area is 66. Let the width be w. Set up an equation, solve it, and explain why one root is rejected. (Word problem — model it, then reject the impossible root.)",
+      "solution": "Model: length = w+5, area = w(w+5)=66. Expand to standard form: w²+5w-66=0. Factor (multiply to -66, add to +5: +11 and -6): (w-6)(w+11)=0 ⇒ w=6 or w=-11. Both are real algebraic roots, but a width cannot be negative, so reject w=-11. Keep w=6: the width is 6 and the length is 6+5=11 — a 6 by 11 rectangle (area 66 ✓). This is the 'reject the impossible root' move: the algebra gives two roots; the context decides which one answers the question. (Interleaves modeling + 12.3 factoring + reading the answer back into the situation.)"
+    }
+  ]
+}
