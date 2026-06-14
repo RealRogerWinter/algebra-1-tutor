@@ -182,9 +182,12 @@ derive `m,b` from the points and assert collinearity; with 1 point, use `slope`.
 
 **Witness B — `.md` answer-key cross-check.** Independently recover the canonical line from the unit
 `.md`:
-1. Resolve the **practice** entry to its unit `.md` and lesson; find its `**Answer key:**` block.
-   (Worked-example `w`-tagged entries are validated by witness A only — their results sit in
-   multi-line `$$…$$` blocks, not a clean numbered answer key.)
+1. Resolve the entry to its unit `.md` and lesson; read its `**Answer key:**` block (practice
+   entries — one `·`-separated line, inline `N.` split) or its `**Worked examples:**` block
+   (worked-example `w` entries — multi-line, items at line starts so a mid-line `"= 3. Then"` in
+   the prose isn't mistaken for an item boundary; the `$$…$$` result line is parsed). Witness B
+   runs on worked examples too: it is the *only* witness that can catch a self-consistent-but-wrong
+   `w` entry, since the geometric witness is internally tautological there.
 2. Split that section into numbered segments (`1.`, `2.`, …) and select the segment matching the
    entry's index.
 3. Extract the **last** `y = <expr>` in the segment; sympy-parse `<expr>` as linear in `x` →

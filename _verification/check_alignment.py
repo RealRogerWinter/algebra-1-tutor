@@ -7,16 +7,21 @@ Composes four checks; exits non-zero if any fails:
   4. code-grammar lint  (every JSON id matches the backward-compatible grammar)
 """
 import glob, json, os, re, sys
+import sympy as sp
+from sympy.parsing.sympy_parser import (parse_expr, standard_transformations,
+                                        implicit_multiplication_application)
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO_ROOT = os.path.dirname(HERE)
+UNIT_MD = os.path.join(REPO_ROOT, "algebra-1-tutor", "references", "units")
+TRANSFORMS = standard_transformations + (implicit_multiplication_application,)
 
 # Backward-compatible id grammar (RESEARCH_REDTEAM_HANDOFF.md s5), restricted to the
 # forms present in the answer-key JSON this phase:
 #   standard : (1-12 | A) . lesson . [w|ex]index [part]  e.g. 5.5.6, 12.1.w1, 6.2.ex1, A.2.3, 8.2.5b
 #   refresher: ref[AB] . index                           e.g. refA.4, refB.10
 # (the 'w' worked-example and 'ex' example tags are the only alpha tag prefixes present this phase)
-ID_RE = re.compile(r"^(?:(?:[1-9]|1[0-2]|A)\.\d+\.(?:w|ex)?\d+[a-z]?|ref[AB]\.\d+)$")
+ID_RE = re.compile(r"^(?:(?:[1-9]|1[0-2]|A)\.\d+\.(?:w|ex)?\d+[a-z]?|ref[AB]\.\d+)\Z")
 
 
 def _json_files():
@@ -35,8 +40,6 @@ def code_grammar_lint():
                 bad.append((os.path.basename(fp), pid))
     return bad
 
-
-import sympy as sp
 
 def _line_eq_template(prob):
     """True if this solve entry is a line-intercept problem: '<m>*<x0>+b=<y0>', var b."""
@@ -99,11 +102,6 @@ def point_on_line_geometric(prob):
     return issues
 
 
-UNIT_MD = os.path.join(REPO_ROOT, "algebra-1-tutor", "references", "units")
-from sympy.parsing.sympy_parser import (parse_expr, standard_transformations,
-                                        implicit_multiplication_application)
-TRANSFORMS = standard_transformations + (implicit_multiplication_application,)
-
 def _md_path_for(pid):
     scope = pid.split(".")[0]
     if scope == "A":
@@ -123,13 +121,18 @@ def _lesson_section(text, lesson_id, heading):
     if not h:
         return None
     rest = section[h.end():]
-    end = re.search(r"^\*\*[A-Z]", rest, re.M)   # next bold label
+    end = re.search(r"(?m)^(?:\*\*[A-Z]|---|##\s)", rest)   # next bold label / rule / heading
     return rest[: end.start() if end else len(rest)]
 
-def _segment_for_index(block, idx):
-    """Within a numbered block, return the segment for item number `idx`."""
-    # segments start with 'N.' at a line start or after ' · '
-    parts = re.split(r"(?:^|\s)(\d+)\.\s", block)
+def _segment_for_index(block, idx, line_start=False):
+    """Within a numbered block, return the segment for item number `idx`.
+
+    Practice answer keys are one '·'-separated line (split on inline ' N. '); worked-example
+    blocks are multi-line with items at line starts (split on '^N. ' so a mid-line number like
+    '= 3. Then' in the prose is not mistaken for an item boundary).
+    """
+    pat = r"(?m)^(\d+)\.\s" if line_start else r"(?:^|\s)(\d+)\.\s"
+    parts = re.split(pat, block)
     # parts = [pre, '1', seg1, '2', seg2, ...]
     for i in range(1, len(parts) - 1, 2):
         if parts[i] == str(idx):
@@ -165,33 +168,39 @@ def _last_line_eq(segment):
     return sp.Rational(poly.coeff_monomial(x)), sp.Rational(poly.coeff_monomial(1))
 
 def point_on_line_md(prob):
-    """`.md` answer-key cross-check (practice line-intercept entries). [] if matches, else [issue].
+    """`.md` cross-check for a line-intercept entry. [] if it matches, else [issue].
 
-    Scoped to practice problems: their numbered '**Answer key:**' segments are single-line and
-    clean. Worked-example (wN) results live in multi-line $$...$$ blocks and are validated by the
-    geometric witness instead, so this is not called for them.
+    Recovers the canonical line independently from the unit `.md`: the numbered
+    '**Answer key:**' list for a practice entry, or the '**Worked examples:**' block for a
+    worked-example (wN) entry (multi-line, items at line starts). This is the only witness that
+    can catch a self-consistent-but-wrong entry, so it runs on worked examples too.
     """
     pid = str(prob["id"])
     if "on_line" not in prob:                 # geometric witness owns the missing-annotation error
         return []
     scope, lesson_n, tail = pid.split(".")
     lesson_id = f"{scope}.{lesson_n}"
-    idx = int(re.match(r"\d+", tail).group())
+    is_worked = tail.startswith("w")
+    idx = int(re.search(r"\d+", tail).group())
+    heading = "Worked examples:" if is_worked else "Answer key:"
     path = _md_path_for(pid)
     if not path:
         return [f"{pid}: no unit .md found"]
-    block = _lesson_section(open(path, encoding="utf-8").read(), lesson_id, "Answer key:")
-    md = _last_line_eq(_segment_for_index(block, idx) if block else None)
+    block = _lesson_section(open(path, encoding="utf-8").read(), lesson_id, heading)
+    seg = _segment_for_index(block, idx, line_start=is_worked) if block else None
+    md = _last_line_eq(seg)
     if md is None:
-        return [f"{pid}: no parseable 'y = ...' in .md Answer key item {idx}"]
+        return [f"{pid}: no parseable 'y = ...' in .md {heading} item {idx}"]
     m_md, b_md = md
     b_json = sp.Rational(str(prob["answer"]))
+    pts = prob["on_line"]
     if "slope" in prob:
         m_json = sp.Rational(str(prob["slope"]))
-    else:
-        (x1, y1), (x2, y2) = [(sp.Rational(str(a)), sp.Rational(str(c)))
-                              for a, c in prob["on_line"][:2]]
+    elif len(pts) >= 2:                       # two points determine the slope
+        (x1, y1), (x2, y2) = [(sp.Rational(str(a)), sp.Rational(str(c))) for a, c in pts[:2]]
         m_json = (y2 - y1) / (x2 - x1)
+    else:                                     # one point and no slope: report, don't crash
+        return [f"{pid}: needs 'slope' for .md cross-check (one point, no slope)"]
     if sp.simplify(m_md - m_json) != 0 or sp.simplify(b_md - b_json) != 0:
         return [f"{pid}: .md line y={m_md}x+{b_md} != JSON line y={m_json}x+{b_json}"]
     return []
@@ -200,14 +209,13 @@ def _load_problems(fp):
     return json.load(open(fp, encoding="utf-8"))
 
 def point_on_line_lint():
-    """Geometric witness on every line-intercept entry; .md cross-check on practice ones."""
+    """Both witnesses (geometric + .md cross-check) on every line-intercept entry."""
     issues = []
     for fp in _json_files():
         for prob in _load_problems(fp)["problems"]:
             if _line_eq_template(prob):
                 issues += point_on_line_geometric(prob)
-                if not str(prob["id"]).rsplit(".", 1)[-1].startswith("w"):
-                    issues += point_on_line_md(prob)
+                issues += point_on_line_md(prob)
     return issues
 
 

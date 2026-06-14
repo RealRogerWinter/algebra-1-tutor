@@ -68,7 +68,7 @@ def write_region(path, region_id, body):
     pat = re.compile(re.escape(begin) + r".*?" + re.escape(end), re.DOTALL)
     if not pat.search(text):
         raise ValueError(f"missing marker pair for region '{region_id}' in {path}")
-    new = pat.sub(begin + "\n" + body + "\n" + end, text)
+    new = pat.sub(lambda _m: begin + "\n" + body + "\n" + end, text)  # function repl: body stays literal
     if new != text:
         open(path, "w", encoding="utf-8", newline="\n").write(new)
 
