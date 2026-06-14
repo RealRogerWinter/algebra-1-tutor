@@ -29,7 +29,7 @@ The skill triggers on algebra topics even when the word "algebra" isn't used (e.
 - **Go in order or jump anywhere** — every unit declares its prerequisites, so jumping to "slope" is safe; the tutor patches gaps instead of forcing a restart.
 - **Diagnoses misconceptions** — reads the *specific* wrong answer (e.g. inverting rise/run, dropping a negative, reading `=` as "compute") and repairs it with a targeted question and a fresh representation, rather than just marking it wrong.
 - **Verifies before asserting** — checks every answer by substitution or the code sandbox before calling it right or wrong, and assumes the *student* may be right on a disagreement. No confidently mis-graded correct answers.
-- **Shows the math** — LaTeX notation (`$$…$$` / `\(…\)`) and graphs (number lines, lines, parabolas, inequality regions) as **computed SVG/HTML artifacts** with labeled axes and a companion table.
+- **Shows the math** — notation via `$$…$$` LaTeX blocks plus plain Unicode (x², √12, ½) for inline bits, and graphs (number lines, lines, parabolas, inequality regions) as **computed SVG/HTML artifacts** with labeled axes and a companion table.
 - **Remembers across sessions** — emits a Progress Card you paste back next time, since Claude conversations are otherwise stateless.
 
 ---
@@ -95,7 +95,7 @@ See [docs/DEVELOPMENT.md](docs/DEVELOPMENT.md) for how to edit content, re‑ver
 The design works around verified constraints of the Claude.ai / app surface:
 
 - **No native image generation**, and raw SVG in a chat message doesn't render → graphs are emitted as **Artifacts** with computed coordinates.
-- **LaTeX renders** with `$$…$$` and `\(…\)` (avoid lone `$…$`; escape currency `\$`).
+- **Only `$$…$$` LaTeX renders dependably** on Claude.ai; inline `\(…\)` and `$…$` often show as raw text → real notation goes in `$$…$$` blocks, inline math is written in plain Unicode (x², √12, ½, ±, ≤).
 - **Conversations are stateless** across chats → the **Progress Card** carries progress.
 - **A 12-unit course can't live in one file** → a lean `SKILL.md` plus per‑unit reference files loaded on demand (progressive disclosure).
 

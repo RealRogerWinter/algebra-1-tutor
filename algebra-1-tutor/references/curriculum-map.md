@@ -13,7 +13,7 @@ The spine is deliberately ordered so each idea rests on the one before it. But a
 | 1 | **Foundations & the Language of Algebra** | Variables, the equals sign as a balance, the number system & number line, order of operations, negative numbers, expressions vs. equations | Arithmetic only |
 | 2 | **Solving Linear Equations** | One- and two-step equations, like terms, distributive property, variables on both sides, fractions in equations | Unit 1 (esp. negatives, order of operations) |
 | 3 | **Proportional Reasoning** (bridge to linearity) | Ratios, rates, unit rate, proportions, percents | Unit 2 (solving), fraction comfort |
-| 4 | **Introducing Functions** | What a function is, \(f(x)\) notation, domain & range, table/graph/equation/words | Unit 2; helped by Unit 3 (rates) |
+| 4 | **Introducing Functions** | What a function is, f(x) notation, domain & range, table/graph/equation/words | Unit 2; helped by Unit 3 (rates) |
 | 5 | **Linear Functions & Their Graphs** | Coordinate plane, graphing, slope, slope-intercept, writing equations of lines | Units 3 & 4 (rate, functions) |
 | 6 | **Modeling & Translation** | Turning words into equations; number/age/distance/mixture problems; intro scatter plots | Units 2 & 5 |
 | 7 | **Systems of Equations** | Two equations, two unknowns: graphing, substitution, elimination, special cases | Units 5 & 6 |
@@ -21,14 +21,14 @@ The spine is deliberately ordered so each idea rests on the one before it. But a
 | 9 | **Sequences & Exponential Functions** | Arithmetic/geometric sequences as functions, exponential growth & decay, linear vs. exponential | Unit 4 (functions); some Unit 5 |
 | 10 | **Exponents & Polynomials** | Exponent rules, scientific notation, polynomial operations, FOIL/area model | Unit 1 (exponents), Unit 2 (distributive) |
 | 11 | **Factoring** | GCF, factoring trinomials, special patterns | Unit 10 (multiplying polynomials) |
-| 12 | **Quadratic Functions & Equations** (capstone) | Square roots & radicals, \(x^2=9\), factoring, completing the square, quadratic formula, parabolas | Units 10 & 11; Unit 5 (graphing) |
+| 12 | **Quadratic Functions & Equations** (capstone) | Square roots & radicals, x^2=9, factoring, completing the square, quadratic formula, parabolas | Units 10 & 11; Unit 5 (graphing) |
 | A | **Appendix: Data & Statistics** *(optional, off the main path)* | One/two-variable statistics, line of best fit, correlation vs. causation, two-way tables | Unit 5 (graphing lines) |
 
 **Two dependency chains** run through the back half — keep them solid:
 - distributive property → multiplying binomials (FOIL) → factoring → solving by factoring
 - exponents → square roots → simplest quadratics → quadratic formula
 
-Functions (Unit 4) are a **backbone, not a side topic** — once introduced, narrate later ideas in function language ("this line *is* a function; \(f(x)=2x+1\) just names it").
+Functions (Unit 4) are a **backbone, not a side topic** — once introduced, narrate later ideas in function language ("this line *is* a function; f(x)=2x+1 just names it").
 
 ---
 
@@ -55,14 +55,14 @@ Functions (Unit 4) are a **backbone, not a side topic** — once introduced, nar
 
 **Unit 4 — Introducing Functions**
 - 4.1 What is a function (input → one output; vertical line test)
-- 4.2 Function notation \(f(x)\), domain & range
+- 4.2 Function notation f(x), domain & range
 - 4.3 Multiple representations; linear vs. nonlinear
 
 **Unit 5 — Linear Functions & Their Graphs**
 - 5.1 The coordinate plane
 - 5.2 Graphing linear equations from a table
 - 5.3 Slope (rate of change, rise/run, from two points)
-- 5.4 Slope-intercept form \(y = mx + b\)
+- 5.4 Slope-intercept form y = mx + b
 - 5.5 Writing equations of lines (point-slope, parallel & perpendicular)
 
 **Unit 6 — Modeling & Translation**
@@ -99,7 +99,7 @@ Functions (Unit 4) are a **backbone, not a side topic** — once introduced, nar
 
 **Unit 12 — Quadratic Functions & Equations (capstone)**
 - 12.1 Square roots & simplifying radicals
-- 12.2 The simplest quadratics (\(x^2 = 9\) → two solutions)
+- 12.2 The simplest quadratics (x² = 9 → two solutions)
 - 12.3 Solving by factoring (zero-product property)
 - 12.4 Completing the square
 - 12.5 The quadratic formula & the discriminant
@@ -116,12 +116,12 @@ Functions (Unit 4) are a **backbone, not a side topic** — once introduced, nar
 
 Keep it light and low-pressure — frame it as "let me find the right starting point for you, not a test." Ask a few, stop early once you see the level. After each, you're listening for *how* they think, not just the answer. Verify their answers before responding.
 
-1. **Negatives (Unit 1):** "What is \(3 - (-4)\)?" *(Expected 7. If they say −1 or −7, start at 1.4.)*
-2. **Order of operations (Unit 1):** "What is \(8 - 3 + 2\)?" *(Expected 7. If they say 3, the same-tier left-to-right idea needs work — 1.3.)*
-3. **One/two-step solving (Unit 2):** "Solve \(2x + 3 = 11\)." *(Expected \(x=4\). Smooth? They're past Unit 2's start.)*
-4. **Fractions in equations (Unit 2):** "Solve \(\tfrac{2}{3}x = 6\)." *(Expected \(x=9\). Hesitation points to the fraction refreshers in 2.5.)*
-5. **Slope/lines (Unit 5):** "In \(y = 2x + 1\), what's the slope and where does it cross the y-axis?" *(Slope 2, y-intercept \((0,1)\). Confident? They may start around Unit 6–7.)*
-6. **Functions (Unit 4):** "If \(f(x) = 3x - 1\), what is \(f(2)\)?" *(Expected 5. Blank look at the notation → start at Unit 4.)*
-7. **Factoring/quadratics (Units 11–12):** "Can you factor \(x^2 + 5x + 6\)?" *(\((x+2)(x+3)\). For students aiming at the back half.)*
+1. **Negatives (Unit 1):** "What is 3 - (-4)?" *(Expected 7. If they say −1 or −7, start at 1.4.)*
+2. **Order of operations (Unit 1):** "What is 8 - 3 + 2?" *(Expected 7. If they say 3, the same-tier left-to-right idea needs work — 1.3.)*
+3. **One/two-step solving (Unit 2):** "Solve 2x + 3 = 11." *(Expected x=4. Smooth? They're past Unit 2's start.)*
+4. **Fractions in equations (Unit 2):** "Solve (2/3)x = 6." *(Expected x=9. Hesitation points to the fraction refreshers in 2.5.)*
+5. **Slope/lines (Unit 5):** "In y = 2x + 1, what's the slope and where does it cross the y-axis?" *(Slope 2, y-intercept (0,1). Confident? They may start around Unit 6–7.)*
+6. **Functions (Unit 4):** "If f(x) = 3x - 1, what is f(2)?" *(Expected 5. Blank look at the notation → start at Unit 4.)*
+7. **Factoring/quadratics (Units 11–12):** "Can you factor x² + 5x + 6?" *((x+2)(x+3). For students aiming at the back half.)*
 
 **Reading the result:** start them at the **earliest** lesson where they stumbled, but tell them why and frame it as efficient, not remedial: "You're clearly solid on the solving — the place that'll pay off most to shore up is fractions, so let's start there and then move fast." Then load that unit file and begin.

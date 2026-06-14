@@ -30,7 +30,7 @@ algebra-1-tutor/
 
 ## Notation and visuals (platform‑shaped)
 
-- **LaTeX** with `$$…$$` (display) and `\(…\)` (inline). Lone `$…$` is avoided; currency is escaped `\$`. Inline math **must** use backslash‑parens — plain `( … )` is not a math delimiter and renders the raw LaTeX as literal text.
+- **Notation.** On Claude.ai only `$$…$$` display LaTeX renders dependably; inline `\(…\)` and single‑`$…$` frequently show as raw, unrendered text. So the skill puts all real notation in `$$…$$` blocks and writes inline math as **plain Unicode** (x², √12, ½, ±, ≤). The reference/unit files are authored the same way so the model isn't tempted to mimic inline LaTeX. (This was the fix for a real "broken output" report; verified by research into current Claude.ai rendering behavior.)
 - **Graphs are Artifacts.** There is no image generator on Claude.ai, and raw SVG in a chat message doesn't render. Graphs are emitted as SVG/HTML artifacts with **computed** coordinates (never freehanded — an eyeballed curve is wrong), labeled axes/intercepts/vertex, and a companion point table. Simple number lines may use ASCII/Unicode in‑chat. Recipes and the coordinate‑mapping rule live in `visuals.md`.
 
 ## Statelessness → the Progress Card

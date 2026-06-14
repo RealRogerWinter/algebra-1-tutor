@@ -8,30 +8,30 @@
 
 Each new idea lands better when it starts physical, becomes a picture, then becomes symbols. Narrate the transitions ("let's start with a picture, then write it in algebra").
 
-### Solving \(x + 3 = 7\)
-- **Concrete:** a covered cup (that's \(x\)) plus 3 coins sits balanced against 7 coins. Remove 3 coins from *both* sides — still balanced. The cup alone balances 4 coins.
+### Solving x + 3 = 7
+- **Concrete:** a covered cup (that's x) plus 3 coins sits balanced against 7 coins. Remove 3 coins from *both* sides — still balanced. The cup alone balances 4 coins.
 - **Pictorial:** `[cup] + ● ● ●  =  ● ● ● ● ● ● ●` → cross out three coins on each side → `[cup] = ● ● ● ●`.
-- **Symbolic:** \(x + 3 = 7 \rightarrow x + 3 - 3 = 7 - 3 \rightarrow x = 4\). Then check: \(4 + 3 = 7\).
+- **Symbolic:** x + 3 = 7 → x + 3 - 3 = 7 - 3 → x = 4. Then check: 4 + 3 = 7.
 
-### \(-2 + 5\) (adding with a negative)
+### -2 + 5 (adding with a negative)
 - **Concrete:** 2 red "debt" chips and 5 yellow "cash" chips on the table. Pair each red with a yellow — each pair cancels to zero. 3 yellow chips are left.
-- **Pictorial:** number line — start at \(-2\), hop 5 units right, land on \(3\).
-- **Symbolic:** \(-2 + 5 = 3\). Generalize: "adding a positive moves right; a debt and an equal cash cancel."
+- **Pictorial:** number line — start at -2, hop 5 units right, land on 3.
+- **Symbolic:** -2 + 5 = 3. Generalize: "adding a positive moves right; a debt and an equal cash cancel."
 
-### Multiplying \((x+2)(x+3)\)
-- **Concrete:** algebra tiles — build a rectangle \((x+2)\) wide and \((x+3)\) tall; it fills with one \(x^2\) tile, five \(x\) tiles, and six unit tiles.
-- **Pictorial:** the 2×2 area box (see `visuals.md`): cells \(x^2,\ 3x,\ 2x,\ 6\).
-- **Symbolic:** \((x+2)(x+3) = x^2 + 3x + 2x + 6 = x^2 + 5x + 6\). The box's four cells *are* the four products — and it makes the middle term impossible to forget.
+### Multiplying (x+2)(x+3)
+- **Concrete:** algebra tiles — build a rectangle (x+2) wide and (x+3) tall; it fills with one x² tile, five x tiles, and six unit tiles.
+- **Pictorial:** the 2×2 area box (see `visuals.md`): cells x², 3x, 2x, 6.
+- **Symbolic:** (x+2)(x+3) = x² + 3x + 2x + 6 = x² + 5x + 6. The box's four cells *are* the four products — and it makes the middle term impossible to forget.
 
 ---
 
 ## Backward-faded worked examples
 
-Show one fully, then hand back more and more of the work — peeling from the **last** step first, which is gentler than a blank problem. Target here: solve \(2x + 5 = 13\).
+Show one fully, then hand back more and more of the work — peeling from the **last** step first, which is gentler than a blank problem. Target here: solve 2x + 5 = 13.
 
 **Stage 0 — fully worked (study this one together):**
 $$2x + 5 = 13 \;\xrightarrow{-5}\; 2x = 8 \;\xrightarrow{\div 2}\; x = 4$$
-"We undo the \(+5\) first because it's the outermost layer, then undo the \(\times 2\)."
+"We undo the +5 first because it's the outermost layer, then undo the ×2."
 
 **Stage 1 — last step faded (they finish it):**
 ```
@@ -61,9 +61,9 @@ Keep the **check line** at every stage — self-verification should feel automat
 ## Checking understanding by transfer (not "make sense?")
 
 Replace yes/no confirmation with a small *do-something* check at each concept boundary:
-- "Here's a fresh one — your turn: solve \(3x + 4 = 19\)." (a near-twin)
+- "Here's a fresh one — your turn: solve 3x + 4 = 19." (a near-twin)
 - "Walk me back through *why* we subtracted before dividing."
-- "What would change if the sign were \(2x - 5 = 13\) instead?"
+- "What would change if the sign were 2x - 5 = 13 instead?"
 
 A student who handles a *variation* understands; one who can only repeat the exact example doesn't yet. If they stumble, that's the signal to diagnose (see `misconceptions.md`), not to repeat the same explanation.
 

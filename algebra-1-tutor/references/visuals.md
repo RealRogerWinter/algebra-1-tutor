@@ -16,10 +16,10 @@ Three rules that never change:
 
 | Situation | Best medium |
 |-----------|-------------|
-| A single point or interval on a number line; an inequality solution like \(x>2\) | **ASCII/Unicode in chat** (fast, friendly, no panel needed) |
+| A single point or interval on a number line; an inequality solution like x>2 | **ASCII/Unicode in chat** (fast, friendly, no panel needed) |
 | A clean labeled number line you want to look polished | **SVG artifact** |
 | A coordinate plane with plotted points | **SVG artifact** |
-| A graphed line \(y = mx+b\) | **SVG artifact** (two computed endpoints) |
+| A graphed line y = mx+b | **SVG artifact** (two computed endpoints) |
 | A parabola or any curve | **SVG artifact** (many computed sample points) |
 | A 2-D inequality region (shading) | **SVG artifact** (boundary line + semi-transparent fill) |
 | Something the student should *drag/tweak* to build intuition | **HTML/React artifact** with a slider (only when interactivity truly helps) |
@@ -35,12 +35,12 @@ Number line with a point at 3:
 ──┼────┼────┼────┼────●────┼────┼──
  -1    0    1    2    3    4    5
 ```
-Inequality \(x > 2\) (open circle = "not equal to 2", ray to the right):
+Inequality x > 2 (open circle = "not equal to 2", ray to the right):
 ```
 ──┼────┼────○━━━━━━━━━━━━▶
   0    1    2    3    4
 ```
-Inequality \(x \le -1\) (filled circle = "or equal to", ray left):
+Inequality x ≤ -1 (filled circle = "or equal to", ray left):
 ```
 ◀━━━━━━━●────┼────┼────┼──
        -1    0    1    2
@@ -53,7 +53,7 @@ y
 │    ╱
 └────────── x
 ```
-Always say in words what the picture shows ("filled circle means \(-1\) is included").
+Always say in words what the picture shows ("filled circle means -1 is included").
 
 ---
 
@@ -61,7 +61,7 @@ Always say in words what the picture shows ("filled circle means \(-1\) is inclu
 
 Pick a viewBox and an origin, then map math coordinates to screen coordinates. SVG's y-axis points **down**, so y is *subtracted*.
 
-For a plane showing roughly \(-5\) to \(5\) on both axes at 20 px per unit, origin at screen \((110, 110)\):
+For a plane showing roughly -5 to 5 on both axes at 20 px per unit, origin at screen (110, 110):
 
 ```
 screenX = 110 + x * 20
@@ -74,7 +74,7 @@ Compute each point with this, then drop the numbers into the templates below. **
 
 ## Template 1 — Number line with a marked point (SVG artifact)
 
-Maps value \(v\) to \(x = 60 + v\cdot 30\). Filled dot = included; for an open endpoint use `fill="white" stroke="#c0392b" stroke-width="2"`. For an interval/ray, add a thick colored segment.
+Maps value v to x = 60 + v·30. Filled dot = included; for an open endpoint use `fill="white" stroke="#c0392b" stroke-width="2"`. For an interval/ray, add a thick colored segment.
 
 ```svg
 <svg viewBox="0 0 320 60" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif" font-size="12">
@@ -98,9 +98,9 @@ Maps value \(v\) to \(x = 60 + v\cdot 30\). Filled dot = included; for an open e
 </svg>
 ```
 
-## Template 2 — Coordinate plane + a line \(y = mx + b\) (SVG artifact)
+## Template 2 — Coordinate plane + a line y = mx + b (SVG artifact)
 
-Compute two convenient points from the equation, map them, draw a line between. Mark the y-intercept. Example shown: \(y = 2x - 1\) (points \((-2,-5)\) and \((3,5)\) → screen \((70,210)\) and \((170,10)\)).
+Compute two convenient points from the equation, map them, draw a line between. Mark the y-intercept. Example shown: y = 2x - 1 (points (-2,-5) and (3,5) → screen (70,210) and (170,10)).
 
 ```svg
 <svg viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif" font-size="11">
@@ -115,11 +115,11 @@ Compute two convenient points from the equation, map them, draw a line between. 
   <text x="150" y="40" fill="#2980b9">y = 2x - 1</text>
 </svg>
 ```
-General recipe: choose two x-values that keep both points on-screen, compute \(y=mx+b\) for each, map with `screenX=110+x*20`, `screenY=110-y*20`, draw the `<line>`, and dot the intercept.
+General recipe: choose two x-values that keep both points on-screen, compute y=mx+b for each, map with `screenX=110+x*20`, `screenY=110-y*20`, draw the `<line>`, and dot the intercept.
 
-## Template 3 — Parabola \(y = ax^2 + bx + c\) (SVG artifact)
+## Template 3 — Parabola y = ax² + bx + c (SVG artifact)
 
-Sample x in unit steps, compute \(y\) for each (use the code tool), map each point, and join with a `<polyline>`. Mark roots and the vertex. Example: \(y = x^2 - 4\), points \((-3,5)(-2,0)(-1,-3)(0,-4)(1,-3)(2,0)(3,5)\); origin \((110,150)\), 20 px/unit (widen the viewBox height so the vertex shows).
+Sample x in unit steps, compute y for each (use the code tool), map each point, and join with a `<polyline>`. Mark roots and the vertex. Example: y = x² - 4, points (-3,5)(-2,0)(-1,-3)(0,-4)(1,-3)(2,0)(3,5); origin (110,150), 20 px/unit (widen the viewBox height so the vertex shows).
 
 ```svg
 <svg viewBox="0 0 220 240" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif" font-size="11">
@@ -142,11 +142,13 @@ Draw the boundary line (dashed if `<` or `>`, solid if `≤` or `≥`), then fil
 
 ---
 
-## Area-model boxes (no artifact needed — use LaTeX)
+## Area-model boxes (no artifact needed — use a `$$` display block)
 
-For distribution and factoring, a LaTeX `array` renders a clean labeled box right in chat:
+Notation convention: write **inline** math as Unicode plain text (x², 1/2, ≤, ±, √, →) — inline `\( \)` does not render reliably. Reserve `$$ ... $$` **display** blocks for things that genuinely need them, like the `array` boxes below. (SKILL.md holds the authoritative rule.)
 
-Distribution \(3(x+4)\):
+For distribution and factoring, a `$$` `array` renders a clean labeled box right in chat:
+
+Distribution 3(x+4):
 ```latex
 $$\begin{array}{c|c|c}
  & x & 4 \\ \hline
@@ -154,7 +156,7 @@ $$\begin{array}{c|c|c}
 \end{array}\qquad\Rightarrow\qquad 3x + 12$$
 ```
 
-Multiplying / factoring \((x+4)(x+3)\):
+Multiplying / factoring (x+4)(x+3):
 ```latex
 $$\begin{array}{c|c|c}
  & x & 3 \\ \hline
@@ -168,7 +170,7 @@ x & x^2 & 3x \\ \hline
 
 ## HTML / React interactive (only when interaction is the point)
 
-When a student would benefit from *dragging* (e.g. watching how changing \(m\) tilts a line, or how \(a\) widens a parabola), make a small self-contained HTML artifact with a `<input type="range">` slider that recomputes and redraws an SVG on change. Keep it tiny and label everything. Don't reach for this for a static graph — an SVG artifact is simpler and less likely to break.
+When a student would benefit from *dragging* (e.g. watching how changing m tilts a line, or how a widens a parabola), make a small self-contained HTML artifact with a `<input type="range">` slider that recomputes and redraws an SVG on change. Keep it tiny and label everything. Don't reach for this for a static graph — an SVG artifact is simpler and less likely to break.
 
 ---
 
