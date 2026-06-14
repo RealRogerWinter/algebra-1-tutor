@@ -64,6 +64,10 @@
     {"id": "7.4.w4a", "kind": "solve", "eq": "3*a=300", "var": "a", "answer": "100"},
     {"id": "7.4.w5", "kind": "manual", "answer": "8 quarters, 7 dimes -> (q,d)=(8,7)"},
     {"id": "7.4.w5a", "kind": "solve", "eq": "15*q=120", "var": "q", "answer": "8"},
+    {"id": "7.4.w6", "kind": "manual", "answer": "20 L of 20% and 10 L of 50% -> (x,y)=(20,10)"},
+    {"id": "7.4.w6a", "kind": "solve", "eq": "3*y=30", "var": "y", "answer": "10"},
+    {"id": "7.4.w7", "kind": "manual", "answer": "width 5, length 9 -> (l,w)=(9,5)"},
+    {"id": "7.4.w7a", "kind": "solve", "eq": "4*w+8=28", "var": "w", "answer": "5"},
 
     {"id": "7.4.1", "kind": "manual", "answer": "no solution (parallel; same slope 3, different intercepts)"},
     {"id": "7.4.2", "kind": "manual", "answer": "infinitely many (same line)"},
@@ -73,6 +77,10 @@
     {"id": "7.4.5", "kind": "manual", "answer": "burger $4, fries $3 -> (b,f)=(4,3)"},
     {"id": "7.4.5a", "kind": "solve", "eq": "3*f=9", "var": "f", "answer": "3"},
     {"id": "7.4.6", "kind": "manual", "answer": "boat 12 mph, current 8 mph -> (b,c)=(12,8)"},
-    {"id": "7.4.6a", "kind": "solve", "eq": "2*b=24", "var": "b", "answer": "12"}
+    {"id": "7.4.6a", "kind": "solve", "eq": "2*b=24", "var": "b", "answer": "12"},
+    {"id": "7.4.7", "kind": "manual", "answer": "20 mL of 10% and 20 mL of 40% -> (x,y)=(20,20)"},
+    {"id": "7.4.7a", "kind": "solve", "eq": "3*y=60", "var": "y", "answer": "20"},
+    {"id": "7.4.8", "kind": "manual", "answer": "width 5, length 7 -> (l,w)=(7,5)"},
+    {"id": "7.4.8a", "kind": "solve", "eq": "4*w+4=24", "var": "w", "answer": "5"}
   ]
 }

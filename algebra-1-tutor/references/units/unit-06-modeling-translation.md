@@ -4,8 +4,8 @@
 > **By the end, the student can:**
 > - Translate phrases into algebraic expressions and full sentences into equations, defining the variable in words first.
 > - Read the *structure* of a situation rather than chasing keyword tricks.
-> - Set up and solve classic word problems (number, age, distance, mixture/value) with a repeatable method, and check the answer against the *original* wording.
-> - Plot paired data, name the association (positive / negative / none), use a line of best fit to predict, and state that correlation is not causation.
+> - Set up and solve classic word problems (number, age, distance, value & relationship) with a repeatable method, and check the answer against the *original* wording.
+> - Plot paired data, name the association (positive / negative / none), use a line of best fit to predict, interpret its slope and intercept in context, distinguish interpolation from extrapolation, and state that correlation is not causation — a first taste of Unit A (Data & Statistics).
 
 ## Teaching this unit (orientation for the tutor)
 
@@ -17,7 +17,7 @@ The single biggest trap is **keyword tricks** — "'of' means multiply," "'more 
 
 The antidote is the same every lesson and you should enforce it relentlessly: **define the variable in words first** — literally have the student write or say "let x = the number of dimes" before any symbol gets written. A variable with no English definition is the root of most setup errors. Then read the situation's *structure* (what equals what, what's being combined, what's the total) instead of word-by-word substitution.
 
-Pacing: 6.1 builds the translation reflex on small pieces. 6.2 applies it to multi-sentence problems with a fixed four-step method. 6.3 is a deliberately light first taste of data that connects back to Unit 5 — a best-fit line *is* a linear function (`f(x) = mx + b`) fit to messy points; don't let it balloon into a statistics unit. Thread function language throughout 6.3: the prediction line is a function you evaluate. Interleave Unit 2 solving (every setup ends in a solve) and Unit 5 graphing (6.3) so those skills stay warm.
+Pacing: 6.1 builds the translation reflex on small pieces. 6.2 applies it to multi-sentence problems with a fixed four-step method. 6.3 is a deliberately light first taste of data that connects back to Unit 5 — a best-fit line *is* a linear function (`f(x) = mx + b`) fit to messy points. It's the on-ramp to **Unit A (Data & Statistics)**, which is a **core unit of this course, not an optional appendix** — 6.3 previews its line-of-best-fit lesson (Unit A, Lesson A.2), so keep 6.3 light and let Unit A carry the full data treatment (form, correlation strength, two-way tables). Don't try to teach all of statistics here, but *do* point forward: the ideas you plant in 6.3 (association, predicting from a trend line, correlation ≠ causation) get developed in Unit A. Thread function language throughout 6.3: the prediction line is a function you evaluate. Interleave Unit 2 solving (every setup ends in a solve) and Unit 5 graphing (6.3) so those skills stay warm.
 
 ---
 
@@ -36,7 +36,7 @@ Pacing: 6.1 builds the translation reflex on small pieces. 6.2 applies it to mul
 2. **Build phrases as actions on the box.** "Twice a number" = two of the box = 2x. "5 more than a number" = the box plus 5 = x + 5. Say the action aloud, then write it.
 3. **Confront order directly.** For "3 less than a number," ask: "Start with the number — the box. Now take 3 *away from it*. What's left?" → x - 3. Then show the trap: 3 - x would be "3, with the number taken away from *it*" — a different quantity. Test with a number: if the number is 10, "3 less than 10" is 7, and x - 3 = 7 while 3 - x = -7. The substitution check (`misconceptions.md §7`) settles it every time.
 4. **Sentences → equations.** The verb *is / equals / will be / results in* is the =. Everything before it is the left expression, everything after is the right. Translate each side as an expression, join with =, then solve with Unit 2 tools.
-5. **Warn off keywords out loud.** "I'm not going to give you a list of 'these words mean these operations' — that backfires. We read what the sentence is *doing*." (`misconceptions.md §7`.)
+5. **Warn off keywords out loud.** "I'm not going to give you a list of 'these words mean these operations' — that backfires. We read what the sentence is *doing*." (`misconceptions.md §7`.) If a student has met a keyword table elsewhere (many textbooks list them — sum → +, "less than" → reverse-order subtraction): acknowledge it rather than contradict it. "Those tables are fine as a memory aid, but they fail on comparisons and reversals (the exact traps below), which is why we read structure first and use the words only as a backstop." This frames our approach as a refinement of the common advice, not a flat rejection of it.
 
 **Worked examples:**
 
@@ -110,14 +110,14 @@ Don't translate left-to-right into 6s = p. Read the structure: students are the 
 
 ---
 
-## Lesson 6.2: Classic word problems (number, age, distance, mixture)
+## Lesson 6.2: Classic word problems (number, age, distance, value & relationship)
 
-**Goal:** Solve number, age, distance, and mixture/value problems with one repeatable method, and check the answer against the original words.
+**Goal:** Solve number, age, distance, and value/relationship problems with one repeatable method, and check the answer against the original words. (Percent-*concentration* mixtures — "blend 20% and 50% to get 30%" — are a two-variable *systems* topic and are deferred to Unit 7; here "value" means coins/tickets and the like.)
 
 **Why it matters:** These four families cover most of the word problems in Algebra 1 and beyond, and the *method* — not the memorized type — is what transfers to systems (Unit 7) and any real model. A reliable setup routine is the deliverable here.
 
 **New terms:**
-- **Consecutive integers:** integers in a row, each one more than the last: n, n+1, n+2, … For consecutive **even** or **odd** integers, the gap is 2: n, n+2, n+4, …
+- **Consecutive integers:** integers in a row, each one more than the last: n, n+1, n+2, … For consecutive **even** or **odd** integers, the gap is 2: n, n+2, n+4, … (This same gap-of-2 form fits both even and odd runs; which one you get depends only on the starting value n. So if solving gives a non-integer n — say n = 74/3 — that total simply has *no* such consecutive run, and the fractional answer is the signal.)
 - **Distance–rate–time relationship:** d = rt — distance equals rate (speed) times time. (Slope from Unit 5 *is* a rate; on a distance-vs-time graph the speed is the slope — `metaphors.md`, Slope B.)
 - **Value problem:** total *value* = (value of each item) × (number of items), summed over the kinds of items (e.g. dimes worth $0.10 each).
 
@@ -156,7 +156,7 @@ Let t = the time in hours. Distance apart = sum of the two distances = 50t + 70t
 $$50t + 70t = 360 \;\Rightarrow\; 120t = 360 \;\Rightarrow\; t = 3$$
 3 hours. Check: in 3 hours one goes 150 mi, the other 210 mi; 150 + 210 = 360.
 
-*Example 6 — mixture / value (coins).* "A jar has 15 coins, all dimes and quarters, worth $2.55 total. How many of each?"
+*Example 6 — value (coins).* "A jar has 15 coins, all dimes and quarters, worth $2.55 total. How many of each?"
 Let d = the number of dimes. Then the number of quarters = 15 - d (the rest of the 15). Value in dollars:
 $$0.10d + 0.25(15 - d) = 2.55$$
 $$0.10d + 3.75 - 0.25d = 2.55 \;\Rightarrow\; -0.15d = -1.20 \;\Rightarrow\; d = 8$$
@@ -194,8 +194,10 @@ $$8a + 5(100 - a) = 680 \;\Rightarrow\; 8a + 500 - 5a = 680 \;\Rightarrow\; 3a =
 5. A cyclist rides at 45 mph (assume) for some hours and covers 225 miles. How many hours?
 6. A train covers 220 miles in 4 hours. What is its speed?
 
-*Mixture / value:*
+*Value (coins):*
 7. A purse holds 20 coins, all nickels and dimes, worth $1.55. How many of each?
+
+*Geometry / relationship:*
 8. A rectangle's length is 5 more than its width, and its perimeter is 46. Find the width and length.
 
 **Answer key:**
@@ -212,9 +214,9 @@ $$8a + 5(100 - a) = 680 \;\Rightarrow\; 8a + 500 - 5a = 680 \;\Rightarrow\; 3a =
 
 ## Lesson 6.3: Scatter plots & line of best fit (a first taste of data)
 
-**Goal:** Plot paired data, name the association, use a line of best fit to predict, and recognize that correlation is not causation. Keep it light — this is an appetizer, not the data unit.
+**Goal:** Plot paired data, name the association, use a line of best fit to predict (and read what its slope and intercept *mean* in context), and recognize that correlation is not causation. Keep it light — this is the **first taste** of data that previews **Unit A (Data & Statistics)**, the course's core data unit; Unit A is where these ideas get the full treatment.
 
-**Why it matters:** Real data is messy and rarely sits on a perfect line, yet a *trend* is often clear and useful. A line of best fit is exactly the linear function from Unit 5 — y = mx + b, or f(x) = mx + b — fit to scattered points so we can summarize and predict. This is the everyday face of linear functions.
+**Why it matters:** Real data is messy and rarely sits on a perfect line, yet a *trend* is often clear and useful. A line of best fit is exactly the linear function from Unit 5 — y = mx + b, or f(x) = mx + b — fit to scattered points so we can summarize and predict. This is the everyday face of linear functions. And because it's that same line, its **slope and intercept carry real meaning**: the slope is a *rate* (how much y changes per unit of x — the same rate idea as d = rt in 6.2), and the intercept is the predicted y when x = 0. Reading those in context is what makes a trend line meaningful rather than a black box, and it's exactly what Unit A builds on.
 
 **New terms:**
 - **Scatter plot:** a graph of paired data (x, y) plotted as individual points — no connecting line.
@@ -227,10 +229,11 @@ $$8a + 5(100 - a) = 680 \;\Rightarrow\; 8a + 500 - 5a = 680 \;\Rightarrow\; 3a =
 2. **Plot the points** on a coordinate plane (callback to Unit 5.1) — offer the SVG artifact below (coordinates **computed**, never eyeballed, per `visuals.md`). Each dot is one student; no line connecting dots.
 3. **Name the association** by eye: does the cloud rise, fall, or drift? Here it rises → positive.
 4. **Lay a line of best fit through the cloud** — "the line that best summarizes the trend." Emphasize it won't hit every point, and that's the *point*: it's a model of messy data. This is Unit 5's y = mx + b again.
-5. **Predict by evaluating the function.** Given a best-fit line like f(x) = 3x + 2, predicting at x = 10 is just f(10) = 32 — the same evaluation skill from Unit 4/5. Note predictions far outside the data are shakier.
-6. **One cautionary sentence on causation:** "Ice-cream sales and drownings both rise in summer — but ice cream doesn't cause drownings; hot weather drives both. A trend is not proof of cause."
+5. **Predict by evaluating the function.** Given a best-fit line like f(x) = 3x + 2, predicting at x = 10 is just f(10) = 32 — the same evaluation skill from Unit 4/5. Name the two prediction zones once: predicting *inside* the data's x-range is **interpolation** (more trustworthy); predicting *outside* it is **extrapolation** (riskier the farther out you reach). Both terms come back in Unit A.
+6. **Read the slope and intercept in context.** Don't stop at the number — say what the line *means*. For f(x) = 3x + 2 (hours practiced → free throws made): the **slope 3** means about 3 more free throws for each extra hour of practice (a rate, just like 6.2's d = rt); the **intercept 2** is the predicted makes with zero practice. This is the most useful thing a trend line tells you, and Unit A leans on it.
+7. **One cautionary sentence on causation:** "Ice-cream sales and drownings both rise in summer — but ice cream doesn't cause drownings; hot weather drives both. A trend is not proof of cause."
 
-**Visuals to offer:** `visuals.md` — coordinate plane with plotted points (SVG artifact). Below is a ready scatter plot with **computed** screen coordinates (hours studied x vs. quiz score y; map sₓ = 40 + 30x, s_y = 170 - 1.4y), including a best-fit line y = 7x + 50 drawn from its computed endpoints (0,50) and (6,92). Always pair it with the table of points in chat.
+**Visuals to offer:** `visuals.md` — coordinate plane with plotted points (SVG artifact). Below is a ready scatter plot with **computed** screen coordinates (hours studied x vs. quiz score y; map sₓ = 40 + 30x, s_y = 170 - 1.4y), including a best-fit line y = 7x + 50 drawn from its computed endpoints (0,50) and (6,92). Always pair it with the table of points in chat. Tell the student this trend line is **an estimate sketched by eye to run through the middle of the cloud** — a different reasonable person might draw a slightly different one, and that's fine. (A calculator's line-of-best-fit tool finds the single optimal one; ours is close. Computing it by formula is a Unit A / technology job, not something to do here.)
 
 ```svg
 <svg viewBox="0 0 250 200" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif" font-size="10">
@@ -259,13 +262,13 @@ Point table to show alongside it: (1,55),(2,60),(2,68),(3,70),(4,80),(5,86),(6,9
 
 *Example 1 — read the trend.* The scatter plot above (hours studied vs. quiz score) rises from lower-left to upper-right. **Association: positive** — more study hours tend to go with higher scores. (Tend to — not every point obeys; that's why it's a trend, not a rule.)
 
-*Example 2 — predict from a best-fit line.* A study finds the best-fit line f(x) = 3x + 2 for (hours practiced, free throws made). Predict the makes for someone who practices x = 10 hours:
+*Example 2 — predict, then interpret slope and intercept.* A study finds the best-fit line f(x) = 3x + 2 for (hours practiced, free throws made). Predict the makes for someone who practices x = 10 hours:
 $$f(10) = 3(10) + 2 = 32 \text{ free throws.}$$
-This is just evaluating the linear function from Unit 5 — the line *is* the model.
+This is just evaluating the linear function from Unit 5 — the line *is* the model. Now read the parts in context: the **slope 3** says about 3 more makes per extra hour practiced (a rate); the **intercept 2** is the predicted makes with no practice. And note the x = 10 prediction is likely an **extrapolation** — if the data only ran up to a few practice hours, x = 10 reaches past it, so trust it less than a within-range prediction.
 
 *Example 3 — negative association + prediction + causation caution.* A best-fit line for (daily screen-time hours x, hours of sleep y) is f(x) = -0.5x + 9. Predict the sleep for someone with x = 6 hours of screen time:
 $$f(6) = -0.5(6) + 9 = 6 \text{ hours of sleep.}$$
-The negative slope means a **negative association** — more of x goes with less of y. But caution: a downward trend doesn't *prove* screen time *causes* less sleep — some other factor could drive both. Correlation is not causation.
+The negative slope means a **negative association** — more of x goes with less of y. In context: the **slope −0.5** says roughly half an hour less sleep per extra hour of screen time; the **intercept 9** is the predicted sleep with zero screen time. But caution: a downward trend doesn't *prove* screen time *causes* less sleep — some other factor could drive both. Correlation is not causation.
 
 **Watch for:**
 - **Connecting the dots:** drawing a zig-zag through every point instead of one straight trend line. Repair: "we want *one* line that summarizes all of them, not a path that visits each."
@@ -277,6 +280,7 @@ The negative slope means a **negative association** — more of x goes with less
 1. Sketch in words what a scatter plot with **no association** looks like, and give a real pair of quantities you'd expect to show it.
 2. A town finds shoe size and reading level are positively associated in children. Does bigger feet cause better reading? Explain in one sentence what's really going on.
 3. A best-fit line is f(x) = 0.5x + 60. Predict y when x = 20, and say whether the association is positive or negative.
+4. For the same best-fit line f(x) = 0.5x + 60 modeling (minutes of exercise x, resting heart-rate-recovery score y), explain in context what the **0.5** and the **60** each tell you. (One sentence each.)
 
 **Practice problems:**
 
@@ -291,6 +295,10 @@ The negative slope means a **negative association** — more of x goes with less
 6. Best-fit line f(x) = -2x + 50. Predict y at x = 15.
 7. Best-fit line f(x) = 0.5x + 60. Predict y at x = 20.
 
+*Interpret & range (in context):*
+8. A best-fit line for (hours worked x, dollars earned y) is f(x) = 12x + 0. In context, what does the **slope 12** mean, and what does the **intercept 0** mean?
+9. The line in problems 5 was built from data running from x = 1 to x = 6. Is predicting at x = 4 an **interpolation** or an **extrapolation**, and which kind of prediction is more trustworthy?
+
 **Answer key:**
 1. (a) **negative** (more exercise tends to lower resting heart rate); (b) **negative** (older car, lower price); (c) **none** (height and phone number are unrelated).
 2. It draws a single straight line that best summarizes the overall trend so you can describe it and predict; it won't hit every point because real data scatters — the line is a model of messy data, not a connect-the-dots path.
@@ -299,6 +307,8 @@ The negative slope means a **negative association** — more of x goes with less
 5. f(4) = 3(4) + 2 = 14.
 6. f(15) = -2(15) + 50 = 20.
 7. f(20) = 0.5(20) + 60 = 70.
+8. **Slope 12:** each extra hour worked adds about \$12 to earnings (a rate, \$12 per hour); **intercept 0:** with 0 hours worked, predicted earnings are \$0.
+9. **Interpolation** — x = 4 sits inside the data's range (1 to 6), so it's the more trustworthy kind of prediction; an extrapolation reaches outside the data and is riskier.
 
 ---
 
@@ -306,10 +316,10 @@ The negative slope means a **negative association** — more of x goes with less
 
 **Consolidate:** the order of this unit is the lesson — *define the variable in words → read the structure → write the equation → solve → check in the original words.* Reinforce that translation is its own skill, separate from (and harder than) solving, and that keyword tricks are a trap to read *structure* instead (`misconceptions.md §7`, §2). 6.3 lands the idea that a line of best fit is just a Unit 5 linear function fit to real, messy data — and that a trend never proves a cause.
 
-**Mix back in:** every 6.2 setup ends in a Unit 2 solve (two-step, distributive, variables on both sides) — keep those reps live. 6.3 reuses Unit 5 (plotting points, y = mx + b, evaluating a function) and Unit 4 function notation. When the student is fluent here, they're ready for Unit 7 (systems), where defining a *second* unknown in terms of the first matures into two equations in two variables.
+**Mix back in:** every 6.2 setup ends in a Unit 2 solve (two-step, distributive, variables on both sides) — keep those reps live. 6.3 reuses Unit 5 (plotting points, y = mx + b, evaluating a function) and Unit 4 function notation, and it **feeds Unit A (Data & Statistics)** — the association/best-fit/correlation ideas planted here are picked up and extended there (form, correlation strength, two-way tables). When the student is fluent here, they're ready for Unit 7 (systems), where defining a *second* unknown in terms of the first matures into two equations in two variables.
 
 **Progress Card should note:**
 - Does the student **define the variable in words** unprompted? (The key habit of this unit.)
 - Can they avoid the **order-reversal** ("3 less than x" = x - 3) and **relationship-reversal** (s = 6p) traps?
-- Which word-problem families are solid vs. shaky (number / age / distance / mixture)?
-- Can they name an association and predict from a best-fit line, and do they correctly say **correlation ≠ causation**?
+- Which word-problem families are solid vs. shaky (number / age / distance / value & relationship)?
+- Can they name an association, predict from a best-fit line, **interpret its slope and intercept in context**, tell **interpolation from extrapolation**, and correctly say **correlation ≠ causation**? (These preview Unit A.)

@@ -55,6 +55,30 @@ y
 ```
 Always say in words what the picture shows ("filled circle means -1 is included").
 
+### Balance scale (for "do the same to both sides")
+
+The balance-scale picture is how Units 1–2 make the equals sign *mean* something: the two pans hold equal weight, so whatever you do to one pan you must do to the other or the scale tips. Sketch it in chat as Unicode; it always renders. (The metaphor itself lives in metaphors.md — Equations A, the balance scale; this is just the drawing recipe.)
+
+A balanced equation x + 3 = 5 — equal pans, fulcrum (△) underneath:
+```
+   x + 3   │   5
+  ┌─────┐  │  ┌─────┐
+  │ x ◯◯◯│ = │◯◯◯◯◯│
+  └──┬──┘  │  └──┬──┘
+─────┴──────────┴─────
+          △
+```
+"Do the same to both sides" = take the same off (or put the same on) **both** pans so it stays level. Subtract 3 from each pan:
+```
+   x       │   2
+  ┌─────┐  │  ┌─────┐
+  │ x   │ = │ ◯◯  │     (took 3 ◯ off EACH pan; still balanced → x = 2)
+  └──┬──┘  │  └──┬──┘
+─────┴──────────┴─────
+          △
+```
+Always pair it with the symbolic step (x + 3 = 5 → x = 2) and say in words what kept it balanced ("3 off the left, so 3 off the right"). Tips to flag: removing from only one side tips the scale (the classic "did it to one side only" error), and multiplying both sides by a *negative* has no clean weight picture — switch metaphors there (see misconceptions.md §6 for the inequality-flip demonstration).
+
 ---
 
 ## The coordinate-mapping rule (use for every SVG graph)
@@ -142,11 +166,13 @@ Draw the boundary line (dashed if `<` or `>`, solid if `≤` or `≥`), then fil
 
 ---
 
-## Area-model boxes (no artifact needed — use a `$$` display block)
+## Area-model boxes / algebra tiles (no artifact needed — use a `$$` display block)
+
+These labeled boxes are the **area model**, also called **algebra tiles** — the same partition-into-rectangles picture, whether you call the cells "area-model boxes" or "tiles." Use them for distribution, multiplying binomials, and factoring.
 
 Notation convention: write **inline** math as Unicode plain text (x², 1/2, ≤, ±, √, →) — inline `\( \)` does not render reliably. Reserve `$$ ... $$` **display** blocks for things that genuinely need them, like the `array` boxes below. (SKILL.md holds the authoritative rule.)
 
-For distribution and factoring, a `$$` `array` renders a clean labeled box right in chat:
+For distribution and factoring, a `$$` `array` renders a clean labeled box (an area-model / algebra-tile grid) right in chat:
 
 Distribution 3(x+4):
 ```latex

@@ -16,7 +16,7 @@ The spine is deliberately ordered so each idea rests on the one before it. But a
 | 3 | **Proportional Reasoning (the bridge to linearity)** | Ratios, rates, unit rate, proportions, percents | Unit 2 (solving), fraction comfort |
 | 4 | **Introducing Functions** | What a function is, f(x) notation, domain & range, table/graph/equation/words | Unit 2; helped by Unit 3 (rates) |
 | 5 | **Linear Functions & Their Graphs** | Coordinate plane, graphing, slope, slope-intercept, writing equations of lines | Units 3 & 4 (rate, functions) |
-| 6 | **Modeling & Translation** | Turning words into equations; number/age/distance/mixture problems; intro scatter plots | Units 2 & 5 |
+| 6 | **Modeling & Translation** | Turning words into equations; number/age/distance/value & relationship problems; intro scatter plots | Units 2 & 5 |
 | 7 | **Systems of Equations** | Two equations, two unknowns: graphing, substitution, elimination, special cases | Units 5 & 6 |
 | 8 | **Inequalities** | One-variable, the sign-flip, compound, absolute value, two-variable graphing | Units 2 & 5 |
 | 9 | **Sequences & Exponential Functions** | Arithmetic/geometric sequences as functions, exponential growth & decay, linear vs. exponential | Unit 4 (functions); some Unit 5 |
@@ -70,7 +70,7 @@ Functions (Unit 4) are a **backbone, not a side topic** — once introduced, nar
 
 **Unit 6 — Modeling & Translation**
 - 6.1 Translating words into expressions and equations
-- 6.2 Classic word problems (number, age, distance, mixture)
+- 6.2 Classic word problems (number, age, distance, value & relationship)
 - 6.3 Scatter plots & line of best fit (a first taste of data)
 
 **Unit 7 — Systems of Equations**

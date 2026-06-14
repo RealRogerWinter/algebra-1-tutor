@@ -29,7 +29,7 @@ The arc is concrete → symbolic three times over. **7.1 graphing** builds the m
 **Why it matters:** It makes the *meaning* of a system visible — the solution is literally where two relationships meet — and that picture anchors every algebraic method that follows.
 **New terms:**
 - **System of equations:** two (or more) equations considered together, asking for values that satisfy all of them at once.
-- **Solution of a system:** the ordered pair (x, y) that makes **every** equation in the system true.
+- **Solution of a system:** an ordered pair (x, y) that makes **every** equation in the system true. A system may have **one** such pair, **none**, or **infinitely many** (see 7.4) — so don't assume there's exactly one until you've solved it.
 
 **Teaching arc (concrete → pictorial → symbolic):**
 - **Concrete / motivating:** "Equation one says y = x + 1 — a whole line of possibilities. Equation two says y = -x + 5 — another whole line. A *system* asks: is there a point that lives on **both** lines at once?" Each line is a function (Unit 5); we're hunting the input where the two functions return the same output.
@@ -102,7 +102,7 @@ Check: 3 = 1 + 2 and 3 = -1 + 4.
 **Goal:** Solve a system by isolating one variable in one equation and substituting that expression into the other, reducing two equations to a single one-variable equation.
 **Why it matters:** It's exact (no graph-reading guesswork) and it shines when one variable is already alone — common in word problems and in any equation written as y = ...
 **New terms:**
-- **Substitution:** replacing a variable with an equal expression. Because x means the *same* number in both equations, an expression equal to y in one equation can stand in for y in the other.
+- **Substitution:** replacing a variable with an expression equal to it. Because each variable denotes the *same* number in both equations, an expression equal to (say) y in one equation may stand in for y in the other.
 
 **Teaching arc (concrete → pictorial → symbolic):**
 - **Concrete:** "Equation one tells you exactly what y *is* — say y = 2x. The mystery box y is just 2x in disguise. So anywhere the second equation says y, pour in 2x instead." (Mystery-box metaphor, `metaphors.md` Variables A — both equations share the same hidden numbers.)
@@ -175,7 +175,7 @@ Check: 4 + 3 = 7 and 2(4) + 3 = 11. (Note: this same system is a natural fit for
 
 **Teaching arc (concrete → pictorial → symbolic):**
 - **Concrete:** "If one equation says x + y = 10 and another says x - y = 4, stack them and add. The +y and -y are a debt and an equal cash — they cancel to zero (`misconceptions.md` §3). You're left with 2x = 14, one unknown."
-- **Pictorial:** Adding two equations produces a *third* true equation (a new line through the same crossing point). Choosing the right multiplier aims that new line to be horizontal or vertical in one variable — i.e., to kill a variable.
+- **Pictorial:** Adding two equations produces a *third* true equation — and **when the system has one solution**, that's a new line through the same crossing point. Choosing the right multiplier aims to kill a variable (make its terms go to zero). When **no single crossing point exists**, the combination that kills a variable doesn't leave a line at all — it collapses to a bare *numeric* statement: a **false** one (e.g. 0 = 5) when the lines are parallel, or an always-**true** one (0 = 0) when they're secretly the same line. That leftover statement is exactly the signal we exploit in 7.4, so don't be surprised when the variables vanish there.
 - **Symbolic:** (1) line both equations up in ax + by = c form; (2) if neither variable's coefficients match, **scale** one or both so a pair matches; (3) add (to cancel opposite signs) or subtract (to cancel equal signs); (4) solve the one-variable result; (5) back-substitute; (6) **check both**.
 
 Avoid the word "cancel" as magic — say the terms **go to zero** (what literally happens), per `misconceptions.md` §1.
@@ -252,9 +252,16 @@ Check: 3(2) + 2(3) = 12 and 5(2) - 2(3) = 4.
 
 **Goal:** Recognize when a system has **no solution** or **infinitely many**, and use systems to solve two-variable word problems.
 **Why it matters:** Not every pair of lines crosses once. And the real payoff of systems is modeling: two unknowns tied by two facts — tickets, coins, mixtures — solved exactly.
-**New terms:**
-- **No solution (inconsistent system):** the two equations are **parallel lines** — same slope, different intercept. They never meet. Algebra produces a **false statement** like 0 = 5.
-- **Infinitely many solutions (dependent system):** the two equations are the **same line** in disguise — identical after simplifying. Every point on the line works. Algebra produces an always-**true statement** like 0 = 0.
+**New terms / the three outcomes:** every pair of lines does exactly one of three things. Teach it as this clean 3-row summary, not as a single either/or label:
+
+| The two lines… | How many solutions | What the algebra leaves |
+|---|---|---|
+| **cross once** (different slopes) | **one** solution — the (x, y) where they meet | a normal value, e.g. x = 4 |
+| **are parallel** (same slope, different intercept) | **no solution** — they never meet | a **false** statement, e.g. 0 = 5 |
+| **are the same line** (identical after simplifying) | **infinitely many** — every point on the line works | an always-**true** statement, e.g. 0 = 0 |
+
+- **No solution:** the parallel-lines case. Whatever method you use, the variables vanish and you're left with something **false** (like 0 = 5) — nothing can make it true, so nothing solves the system.
+- **Infinitely many solutions:** the same-line case (one equation is just a multiple of the other). The variables vanish and you're left with something always **true** (like 0 = 0) — every point on the shared line works.
 
 **Teaching arc (concrete → pictorial → symbolic):**
 - **Concrete / pictorial:** "Two lines on a plane do one of three things: cross once (one solution), run parallel forever (none), or sit exactly on top of each other (infinitely many)." Tie slopes to Unit 5: *same slope, different intercept → parallel → no solution; same slope, same intercept → identical → infinitely many.*
@@ -270,7 +277,7 @@ Substitute: 2x + 1 = 2x - 3. Subtract 2x from both sides: 1 = -3 — **false**. 
 Scale eq.1 by 2: 4x - 2y = 6. Subtract eq.2: (4x - 2y) - (4x - 2y) = 6 - 1 ⇒ 0 = 5 — **false**. **No solution.**
 
 *Example 3 — infinitely many (same line).* Solve x + y = 4 and 2x + 2y = 8.
-Eq.2 is just eq.1 times 2. Scale eq.1 by 2: 2x + 2y = 8. Subtract eq.2: 0 = 0 — always **true**. The two equations are the same line; **infinitely many solutions** (every point on x + y = 4, e.g. (0,4), (1,3), (4,0)).
+Eq.2 is just eq.1 times 2. Scale eq.1 by 2: 2x + 2y = 8. Subtract eq.2: 0 = 0 — always **true**. The two equations are the same line; **infinitely many solutions** (every point on x + y = 4, e.g. (0,4), (1,3), (4,0)). "Infinitely many" isn't vague — it's a *precise* set: **all (x, y) with x + y = 4**. (For a stronger student you can write that as {(x, y) | x + y = 4}, but the plain-English description is enough.)
 
 *Example 4 — application (tickets).* A theater sells adult tickets at $8 and child tickets at $5. One night it sold **200 tickets** for **$1300** total. How many of each?
 Let a = adult tickets, c = child tickets.
@@ -283,6 +290,18 @@ Let q = quarters, d = dimes.
 $$q + d = 15 \qquad 25q + 10d = 270.$$
 Eliminate d: scale eq.1 by 10 → 10q + 10d = 150; subtract from eq.2 → 15q = 120 ⇒ q = 8. Then d = 7.
 Check: 8 + 7 = 15 and 25(8) + 10(7) = 200 + 70 = 270. **8 quarters, 7 dimes.**
+
+*Example 6 — application (mixture).* This is the true *mixture* the objectives promise — two strengths blended to a target strength. "How many liters of a **20%** salt solution and a **50%** salt solution should you mix to make **30 liters** of a **30%** solution?"
+Let x = liters of 20% solution, y = liters of 50% solution. One equation counts **liters**, the other counts **salt** (the 30 L of 30% holds 0.30 · 30 = 9 L of salt):
+$$x + y = 30 \qquad 0.20x + 0.50y = 9.$$
+Elimination is cleanest if you first clear decimals — multiply the salt equation by 10: 2x + 5y = 90. Scale the liter equation by 2: 2x + 2y = 60. Subtract: (2x + 5y) − (2x + 2y) = 90 − 60 ⇒ 3y = 30 ⇒ y = 10. Then x = 30 − 10 = 20.
+Check in the story: 20 + 10 = 30 liters, and salt 0.20(20) + 0.50(10) = 4 + 5 = 9 L = 30% of 30. **20 L of the 20% solution, 10 L of the 50%.** (Same structure as a coin problem: one equation counts the *amount*, one counts the *active ingredient*.)
+
+*Example 7 — application (perimeter).* A rectangle's **length is 4 more than its width**, and its **perimeter is 28**. Find the length and width as a system.
+Let l = length, w = width. The two facts give two equations:
+$$l = w + 4 \qquad 2l + 2w = 28.$$
+Length is already isolated, so **substitute** (l = w + 4) into the perimeter equation: 2(w + 4) + 2w = 28 ⇒ 4w + 8 = 28 ⇒ 4w = 20 ⇒ w = 5. Then l = 5 + 4 = 9.
+Check in the story: length 9 is 4 more than width 5, and perimeter 2(9) + 2(5) = 18 + 10 = 28. **Width 5, length 9.**
 
 **Watch for:**
 - **Calling 0 = 0 "no solution" or 0 = 5 "infinitely many."** They're swapped constantly. Anchor it: a **true** leftover means *everything* works (infinite); a **false** leftover means *nothing* works (none).
@@ -306,7 +325,9 @@ Check: 8 + 7 = 15 and 25(8) + 10(7) = 200 + 70 = 270. **8 quarters, 7 dimes.**
 *Set B — applications (set up two equations, solve, check the story)*
 4. Two numbers add to 30, and one is 6 more than the other. Find the numbers.
 5. A snack stand: 2 burgers and 1 fries cost $11; 1 burger and 2 fries cost $10. Find the price of a burger and of fries.
-6. A boat travels so that (its speed with the current) + (its speed against) relationships give: downstream effective sum is 20 mph and the difference is 4 mph; i.e. b + c = 20, b - c = 4, where b = boat speed, c = current. Find b and c.
+6. A boat goes **20 mph downstream** (with the current) and **4 mph upstream** (against it). Find the boat's speed in still water and the speed of the current. (Hint: with the current the speeds add, against it they subtract.)
+7. *(mixture)* How many milliliters of a **10%** acid solution and a **40%** acid solution make **40 mL** of a **25%** solution?
+8. *(perimeter)* A rectangle's length is **2 more than its width** and its perimeter is **24**. Find the width and length.
 
 **Answer key (all verified):**
 1. **No solution** — same slope 3, different intercepts (parallel); substituting gives 2 = -5, false.
@@ -314,18 +335,24 @@ Check: 8 + 7 = 15 and 25(8) + 10(7) = 200 + 70 = 270. **8 quarters, 7 dimes.**
 3. **One solution, (3, 4)** — 4 = 3 + 1, 4 = -3 + 7.
 4. x + y = 30, x = y + 6 → (y + 6) + y = 30 ⇒ y = 12, x = 18. The numbers are **18 and 12** (18 + 12 = 30, 18 = 12 + 6).
 5. 2b + f = 11, b + 2f = 10 → eliminate: scale eq.2 by 2 → 2b + 4f = 20, subtract eq.1 → 3f = 9, f = 3, then b = 4. **Burger $4, fries $3** (2(4)+3 = 11, 4 + 2(3) = 10).
-6. b + c = 20, b - c = 4 → add → 2b = 24, b = 12, then c = 8. **Boat 12 mph, current 8 mph** (12 + 8 = 20, 12 - 8 = 4).
+6. Let b = boat speed in still water, c = current. Downstream the speeds add, upstream they subtract: b + c = 20, b − c = 4 → add → 2b = 24, b = 12, then c = 8. **Boat 12 mph, current 8 mph** (12 + 8 = 20, 12 − 8 = 4).
+7. Let x = mL of 10%, y = mL of 40%; one equation counts mL, one counts acid (25% of 40 = 10 mL): x + y = 40, 0.10x + 0.40y = 10. Clear decimals (×10): x + 4y = 100; subtract x + y = 40 → 3y = 60 ⇒ y = 20, then x = 20. **20 mL of each** (20 + 20 = 40; 0.10(20) + 0.40(20) = 2 + 8 = 10 mL acid).
+8. Let l = length, w = width: l = w + 2, 2l + 2w = 24. Substitute → 2(w + 2) + 2w = 24 ⇒ 4w + 4 = 24 ⇒ w = 5, then l = 7. **Width 5, length 7** (perimeter 2(7) + 2(5) = 24, and 7 = 5 + 2).
 
 ---
 
 ## Wrap-up & interleaving
 
-**Consolidate:** A system is two relationships at once; its solution is the single (x, y) that satisfies **both** — the crossing point of two lines/functions. Three methods, each exact except graphing: **graph** (best for meaning and integer crossings), **substitution** (best when a variable is isolated), **elimination** (best for standard form, with scaling as the key move). Two special cases: **parallel → no solution → false statement**; **same line → infinitely many → true statement**. The non-negotiable habit: **substitute the final pair back into both equations.**
+**Consolidate:** A system is two relationships at once; in the usual case its solution is the single (x, y) that satisfies **both** — the crossing point of two lines/functions (and sometimes there's none, or infinitely many — the 7.4 special cases). Three methods, each exact except graphing: **graph** (best for meaning and integer crossings), **substitution** (best when a variable is isolated), **elimination** (best for standard form, with scaling as the key move). Two special cases: **parallel → no solution → false statement**; **same line → infinitely many → true statement**. The non-negotiable habit: **substitute the final pair back into both equations.**
 
 **Mix back in (spaced review, per `pedagogy.md`):**
 - **Unit 5** — read off slope and intercept to *predict* before solving: "same slope? then expect parallel or identical." Graphing a system is pure Unit 5 graphing, twice.
 - **Unit 6** — every application is a Unit 6 translation with *two* unknowns and *two* facts; warm up with one-variable translation before a two-variable one.
 - **Unit 2** — the one-variable equation left after substitution/elimination is exactly a Unit 2 solve; slip in a two-step solve as a warm-up.
-- Choosing a *method* is itself a skill — give a mixed set and ask "graph, substitution, or elimination, and why?" before solving.
+- Choosing a *method* is itself a skill — give a mixed set and ask "graph, substitution, or elimination, and why?" before solving. Teach the read explicitly:
+  - **A variable is already isolated** (y = …, x = …) or trivially isolatable (coefficient 1, like x + y = 7) → **substitution** is cleaner — pour the expression straight in.
+  - **Both equations are in standard form** ax + by = c, **especially with a matching or opposite coefficient pair** (e.g. both 2x, or +3y and −3y) → **elimination** is cleaner — add or subtract to kill that variable on sight; if coefficients don't line up, scale one equation first.
+  - **You only need to *see* / estimate the crossing, or to confirm a special case visually** → **graph** — but switch to algebra the moment the answer isn't a clean integer pair.
+  - Worth a 10-second look before committing: e.g. y = 2x + 1 with 3x + y = 11 *screams* substitution (y is alone), while 3x + 2y = 12 with 5x − 2y = 4 *screams* elimination (the +2y/−2y add away).
 
 **Progress Card should note:** which methods are fluent vs. shaky (especially the **scaling** step in elimination); whether the student reliably **finishes to the ordered pair** rather than stopping at one variable; whether they **check in both equations** automatically; and whether they correctly read 0 = 0 vs. 0 = 5 for the special cases. Flag any lingering sign slips during subtraction-elimination (`misconceptions.md` §3) for targeted warm-ups.
