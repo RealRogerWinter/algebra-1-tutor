@@ -186,6 +186,20 @@ When you subtract 5 from x + 5, the +5 goes to zero, and x is left standing alon
       background:var(--rose);opacity:.9}
     .div-controls{display:flex;gap:.6rem;justify-content:center;
       flex-wrap:wrap}
+    .div-prog{height:7px;width:min(20rem,86%);margin:.1rem auto .35rem;
+      background:var(--card-2);border:1px solid var(--rule);
+      border-radius:999px;overflow:hidden;opacity:0;
+      transition:opacity .25s ease}
+    .div-prog.on{opacity:1}
+    .div-bar{height:100%;width:0;border-radius:999px;
+      background:linear-gradient(90deg,var(--blue),var(--violet))}
+    .div-prog.on .div-bar.run{width:100%;transition:width 5s linear}
+    .div-count{color:var(--ink-soft);font-size:.8rem;
+      min-height:1.1em;margin:0 0 .7rem}
+    @media (prefers-reduced-motion:reduce){
+      .div-prog{transition:none}
+      .div-prog.on .div-bar.run{transition:none;width:100%}
+    }
   </style>
 
   <p class="div-eq" aria-live="polite"></p>
@@ -203,6 +217,9 @@ When you subtract 5 from x + 5, the +5 goes to zero, and x is left standing alon
       <span class="lab">right side</span>
     </div>
   </div>
+
+  <div class="div-prog" aria-hidden="true"><div class="div-bar"></div></div>
+  <p class="div-count" aria-hidden="true"></p>
 
   <div class="div-controls">
     <button type="button" class="iq-btn primary" data-act="div">
@@ -222,15 +239,21 @@ When you subtract 5 from x + 5, the +5 goes to zero, and x is left standing alon
   if (!root) return;
   root.dataset.iqReady = "1";
 
-  var eqEl   = root.querySelector('.'+slug+'-eq');
-  var noteEl = root.querySelector('.'+slug+'-note');
-  var leftG  = root.querySelector('.'+slug+'-left');
-  var rightG = root.querySelector('.'+slug+'-right');
-  var btnDiv = root.querySelector('[data-act="div"]');
-  var btnRst = root.querySelector('[data-act="reset"]');
+  var eqEl    = root.querySelector('.'+slug+'-eq');
+  var noteEl  = root.querySelector('.'+slug+'-note');
+  var leftG   = root.querySelector('.'+slug+'-left');
+  var rightG  = root.querySelector('.'+slug+'-right');
+  var progEl  = root.querySelector('.'+slug+'-prog');
+  var progBar = root.querySelector('.'+slug+'-bar');
+  var countEl = root.querySelector('.'+slug+'-count');
+  var btnDiv  = root.querySelector('[data-act="div"]');
+  var btnRst  = root.querySelector('[data-act="reset"]');
 
-  // state: coef * x = total.  Start 4x = 20, split into `groups` equal columns.
-  var coef, total, groups;
+  var HOLD = 5000;          // leave the equal groups on screen this long, then solve
+  var SPLIT_DELAY = 550;    // a brief "working" beat before the split appears
+
+  // state: coef * x = total.  Start 4x = 12, split into `groups` equal columns.
+  var coef, total, groups, busy, timers = [], ticker = null;
 
   function chip(){ var d = document.createElement("div");
     d.className = slug + "-xchip"; d.textContent = "x"; return d; }
@@ -239,6 +262,13 @@ When you subtract 5 from x + 5, the +5 goes to zero, and x is left standing alon
 
   function clear(g){ while (g.firstChild) g.removeChild(g.firstChild); }
 
+  function note(txt, win){
+    noteEl.textContent = txt;
+    if (win) noteEl.classList.add("win"); else noteEl.classList.remove("win");
+  }
+
+  // Draw the current state only (chips/units/equation); messaging is set by the
+  // phase that calls it, so the timed animation can stay in control of the note.
   function render(){
     clear(leftG); clear(rightG);
     var ring = groups > 1;             // show the equal-share grouping
@@ -255,37 +285,72 @@ When you subtract 5 from x + 5, the +5 goes to zero, and x is left standing alon
       for (var b = 0; b < perR; b++) gr.appendChild(unit());
       rightG.appendChild(gr);
     }
-
     var leftStr = (coef === 1 ? "x" : coef + "x");
     eqEl.innerHTML = leftStr + " = <span class=\"v\">" + total + "</span>";
+  }
 
-    if (coef === 1) {
-      noteEl.textContent = "One x equals " + total + ".  x = " + total
-        + ".  Solved!";
-      noteEl.classList.add("win");
-      btnDiv.disabled = true;
-    } else {
-      noteEl.textContent = coef + " equal x's share " + total + " equally "
-        + "\u2014 split both sides into " + coef + " matching groups.";
-      noteEl.classList.remove("win");
-      btnDiv.disabled = false;
-    }
+  // progress bar: appears when work starts, fills across the 5s hold.
+  function progReset(){ progBar.classList.remove("run"); void progBar.offsetWidth; }
+  function progShow(){ progReset(); progEl.classList.add("on"); }
+  function progRun(){ progBar.classList.add("run"); }
+  function progHide(){ progEl.classList.remove("on"); progReset(); countEl.textContent = ""; }
+
+  function clearTimers(){
+    for (var t = 0; t < timers.length; t++) clearTimeout(timers[t]);
+    timers = [];
+    if (ticker) { clearInterval(ticker); ticker = null; }
   }
 
   function reset(){
+    clearTimers();
+    busy = false;
     coef = 4; total = 12; groups = 1;   // 4x = 12
-    btnDiv.disabled = false;
     render();
+    note(coef + " equal x's share " + total + " \u2014 press the button to "
+      + "split both sides into " + coef + " matching groups.", false);
+    btnDiv.disabled = false;
+    progHide();
   }
 
   btnDiv.addEventListener("click", function(){
-    if (coef === 1) return;
-    var k = coef;                      // show the k equal shares first...
-    groups = k;
-    render();
-    // ...then settle to one group => x = total / k
-    total = total / k; coef = 1; groups = 1;
-    setTimeout(render, 480);
+    if (busy || coef === 1) return;
+    var k = coef;
+    busy = true;
+    btnDiv.disabled = true;
+
+    // Phase 1 -- show that work is happening, before anything moves.
+    note("Sharing " + total + " equally among " + k + " x's\u2026", false);
+    progShow();
+
+    // Phase 2 -- split each side into k equal groups, then hold them on screen.
+    timers.push(setTimeout(function(){
+      groups = k;
+      render();                          // the dashed equal-share groups appear
+      progRun();                         // the bar fills across the 5s hold
+      var share = total / k;             // units per group (verified: 12 / 4 = 3)
+      note(k + " equal groups \u2014 one x lines up with " + share
+        + " on each side.", false);
+      var left = Math.round(HOLD / 1000);
+      function tick(){
+        countEl.textContent = "Solving in " + left + "s\u2026";
+        left--;
+      }
+      tick();
+      ticker = setInterval(function(){
+        if (left < 1) { clearInterval(ticker); ticker = null; return; }
+        tick();
+      }, 1000);
+    }, SPLIT_DELAY));
+
+    // Phase 3 -- after the hold, settle to a single group => x is alone.
+    timers.push(setTimeout(function(){
+      total = total / k; coef = 1; groups = 1;
+      busy = false;
+      render();
+      note("One x equals " + total + ".  x = " + total + ".  Solved!", true);
+      btnDiv.disabled = true;
+      progHide();
+    }, SPLIT_DELAY + HOLD));
   });
   btnRst.addEventListener("click", reset);
 
