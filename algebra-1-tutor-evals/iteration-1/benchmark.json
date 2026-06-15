@@ -1,0 +1,48 @@
+{
+  "iteration": 1,
+  "design": {
+    "cells": 13,
+    "models_compared": ["opus", "sonnet"],
+    "transcripts_per_model": 13,
+    "tutor_turns_per_conversation": 4,
+    "student_model": "sonnet",
+    "judge_models": ["opus", "sonnet"],
+    "judge_passes_per_model": 26,
+    "scale": "1-5 per dimension, mean of the 2 judges then mean over transcripts",
+    "blind": true
+  },
+  "inter_judge_abs_diff": 0.46,
+  "overall": {
+    "opus": {
+      "transcripts": 13, "judge_passes": 26,
+      "dims": { "accuracy": 4.81, "friendliness": 4.23, "source_fidelity": 3.96, "on_topic": 4.85, "pedagogy": 4.38 },
+      "flag_votes": { "taught_wrong_math": 1, "gushed_or_ai_cliche": 9, "broke_notation": 2, "veered_off_topic": 1, "invented_or_contradicted_source": 3, "ignored_just_tell_me": 0, "dumped_answer_no_ask": 4 }
+    },
+    "sonnet": {
+      "transcripts": 13, "judge_passes": 26,
+      "dims": { "accuracy": 4.65, "friendliness": 4.04, "source_fidelity": 3.92, "on_topic": 4.58, "pedagogy": 3.96 },
+      "flag_votes": { "taught_wrong_math": 0, "gushed_or_ai_cliche": 8, "broke_notation": 0, "veered_off_topic": 3, "invented_or_contradicted_source": 4, "ignored_just_tell_me": 0, "dumped_answer_no_ask": 6 }
+    }
+  },
+  "per_unit": [
+    { "unit": "1", "lessonId": "1.4", "persona": "error_prone", "code": "1.4.6", "accuracy": { "opus": 5, "sonnet": 4 }, "friendliness": { "opus": 4, "sonnet": 4.5 }, "source_fidelity": { "opus": 4.5, "sonnet": 3.5 }, "on_topic": { "opus": 5, "sonnet": 5 }, "pedagogy": { "opus": 4, "sonnet": 4 } },
+    { "unit": "2", "lessonId": "2.2", "persona": "impatient", "code": "2.2.2", "accuracy": { "opus": 5, "sonnet": 5 }, "friendliness": { "opus": 4.5, "sonnet": 4.5 }, "source_fidelity": { "opus": 4, "sonnet": 4.5 }, "on_topic": { "opus": 5, "sonnet": 5 }, "pedagogy": { "opus": 5, "sonnet": 4.5 } },
+    { "unit": "3", "lessonId": "3.2", "persona": "anxious", "code": "3.2.w1", "accuracy": { "opus": 4.5, "sonnet": 5 }, "friendliness": { "opus": 4, "sonnet": 4 }, "source_fidelity": { "opus": 4.5, "sonnet": 4 }, "on_topic": { "opus": 5, "sonnet": 5 }, "pedagogy": { "opus": 3.5, "sonnet": 3.5 } },
+    { "unit": "4", "lessonId": "4.2", "persona": "tangent_goer", "code": "4.2.w4", "accuracy": { "opus": 5, "sonnet": 5 }, "friendliness": { "opus": 4, "sonnet": 3.5 }, "source_fidelity": { "opus": 4.5, "sonnet": 5 }, "on_topic": { "opus": 5, "sonnet": 4.5 }, "pedagogy": { "opus": 4.5, "sonnet": 4 } },
+    { "unit": "5", "lessonId": "5.3", "persona": "error_prone", "code": "5.3.3", "accuracy": { "opus": 4.5, "sonnet": 4 }, "friendliness": { "opus": 4, "sonnet": 4.5 }, "source_fidelity": { "opus": 3.5, "sonnet": 4.5 }, "on_topic": { "opus": 5, "sonnet": 5 }, "pedagogy": { "opus": 4.5, "sonnet": 4 } },
+    { "unit": "6", "lessonId": "6.2", "persona": "anxious", "code": "6.2.ex6", "accuracy": { "opus": 5, "sonnet": 5 }, "friendliness": { "opus": 4.5, "sonnet": 4.5 }, "source_fidelity": { "opus": 4.5, "sonnet": 3.5 }, "on_topic": { "opus": 5, "sonnet": 5 }, "pedagogy": { "opus": 4.5, "sonnet": 4.5 } },
+    { "unit": "7", "lessonId": "7.3", "persona": "impatient", "code": "7.3.1", "accuracy": { "opus": 5, "sonnet": 4 }, "friendliness": { "opus": 4, "sonnet": 3.5 }, "source_fidelity": { "opus": 3, "sonnet": 3.5 }, "on_topic": { "opus": 5, "sonnet": 5 }, "pedagogy": { "opus": 5, "sonnet": 2 } },
+    { "unit": "8", "lessonId": "8.1", "persona": "error_prone", "code": "8.1.8", "accuracy": { "opus": 5, "sonnet": 5 }, "friendliness": { "opus": 4.5, "sonnet": 4 }, "source_fidelity": { "opus": 2.5, "sonnet": 4.5 }, "on_topic": { "opus": 5, "sonnet": 5 }, "pedagogy": { "opus": 4.5, "sonnet": 4.5 } },
+    { "unit": "9", "lessonId": "9.2", "persona": "tangent_goer", "code": "9.2.w1", "accuracy": { "opus": 5, "sonnet": 4 }, "friendliness": { "opus": 4, "sonnet": 2.5 }, "source_fidelity": { "opus": 4.5, "sonnet": 3 }, "on_topic": { "opus": 3.5, "sonnet": 2 }, "pedagogy": { "opus": 3.5, "sonnet": 3.5 } },
+    { "unit": "10", "lessonId": "10.4", "persona": "error_prone", "code": "10.4.8", "accuracy": { "opus": 4, "sonnet": 5 }, "friendliness": { "opus": 4.5, "sonnet": 4 }, "source_fidelity": { "opus": 3, "sonnet": 2.5 }, "on_topic": { "opus": 5, "sonnet": 5 }, "pedagogy": { "opus": 4, "sonnet": 4 } },
+    { "unit": "11", "lessonId": "11.2", "persona": "anxious", "code": "11.2.w1", "accuracy": { "opus": 5, "sonnet": 4.5 }, "friendliness": { "opus": 4.5, "sonnet": 4 }, "source_fidelity": { "opus": 4.5, "sonnet": 4.5 }, "on_topic": { "opus": 5, "sonnet": 5 }, "pedagogy": { "opus": 4.5, "sonnet": 4.5 } },
+    { "unit": "12", "lessonId": "12.3", "persona": "impatient", "code": "12.3.5", "accuracy": { "opus": 5, "sonnet": 5 }, "friendliness": { "opus": 4, "sonnet": 4.5 }, "source_fidelity": { "opus": 4, "sonnet": 4 }, "on_topic": { "opus": 5, "sonnet": 4.5 }, "pedagogy": { "opus": 5, "sonnet": 4.5 } },
+    { "unit": "A", "lessonId": "A.2", "persona": "tangent_goer", "code": "A.2.w1", "accuracy": { "opus": 4.5, "sonnet": 5 }, "friendliness": { "opus": 4.5, "sonnet": 4.5 }, "source_fidelity": { "opus": 4.5, "sonnet": 4 }, "on_topic": { "opus": 4.5, "sonnet": 3.5 }, "pedagogy": { "opus": 4.5, "sonnet": 4 } }
+  ],
+  "per_persona": [
+    { "persona": "error_prone", "opus": { "accuracy": 4.63, "friendliness": 4.25, "source_fidelity": 3.38, "on_topic": 5, "pedagogy": 4.25 }, "sonnet": { "accuracy": 4.5, "friendliness": 4.25, "source_fidelity": 3.75, "on_topic": 5, "pedagogy": 4.13 } },
+    { "persona": "anxious", "opus": { "accuracy": 4.83, "friendliness": 4.33, "source_fidelity": 4.5, "on_topic": 5, "pedagogy": 4.17 }, "sonnet": { "accuracy": 4.83, "friendliness": 4.17, "source_fidelity": 4, "on_topic": 5, "pedagogy": 4.17 } },
+    { "persona": "tangent_goer", "opus": { "accuracy": 4.83, "friendliness": 4.17, "source_fidelity": 4.5, "on_topic": 4.33, "pedagogy": 4.17 }, "sonnet": { "accuracy": 4.67, "friendliness": 3.5, "source_fidelity": 4, "on_topic": 3.33, "pedagogy": 3.83 } },
+    { "persona": "impatient", "opus": { "accuracy": 5, "friendliness": 4.17, "source_fidelity": 3.67, "on_topic": 5, "pedagogy": 5 }, "sonnet": { "accuracy": 4.67, "friendliness": 4.17, "source_fidelity": 4, "on_topic": 4.83, "pedagogy": 3.67 } }
+  ]
+}

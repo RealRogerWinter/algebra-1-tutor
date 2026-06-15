@@ -1,0 +1,37 @@
+{
+  "iteration": 2,
+  "scope": "7 defect-exposing cells (U4,U7,U8,U9,U10,U12,A), edited SKILL.md, identical harness to iteration-1",
+  "caveat": "n=1 conversation per cell; aggregate deltas are noisy. Trust per-cell targeted behavior change and judge-independent counts over the means. See LIFT.md.",
+  "inter_judge_abs_diff": 0.57,
+  "overall": {
+    "opus": {
+      "transcripts": 7, "judge_passes": 14,
+      "dims": { "accuracy": 4.07, "friendliness": 4.29, "source_fidelity": 3.71, "on_topic": 4.36, "pedagogy": 3.93 },
+      "flag_votes": { "taught_wrong_math": 2, "gushed_or_ai_cliche": 3, "broke_notation": 0, "veered_off_topic": 4, "invented_or_contradicted_source": 5, "ignored_just_tell_me": 0, "dumped_answer_no_ask": 3 }
+    },
+    "sonnet": {
+      "transcripts": 7, "judge_passes": 14,
+      "dims": { "accuracy": 4.79, "friendliness": 3.64, "source_fidelity": 4.21, "on_topic": 4.36, "pedagogy": 3.64 },
+      "flag_votes": { "taught_wrong_math": 0, "gushed_or_ai_cliche": 9, "broke_notation": 1, "veered_off_topic": 2, "invented_or_contradicted_source": 0, "ignored_just_tell_me": 0, "dumped_answer_no_ask": 4 }
+    }
+  },
+  "iter1_same7cells_baseline": {
+    "opus": { "accuracy": 4.79, "friendliness": 4.21, "source_fidelity": 3.71, "on_topic": 4.71, "pedagogy": 4.43,
+      "flag_votes": { "taught_wrong_math": 1, "gushed_or_ai_cliche": 7, "broke_notation": 2, "veered_off_topic": 1, "invented_or_contradicted_source": 3, "dumped_answer_no_ask": 3 } },
+    "sonnet": { "accuracy": 4.71, "friendliness": 3.79, "source_fidelity": 3.79, "on_topic": 4.21, "pedagogy": 3.79,
+      "flag_votes": { "gushed_or_ai_cliche": 8, "broke_notation": 0, "veered_off_topic": 3, "invented_or_contradicted_source": 4, "dumped_answer_no_ask": 5 } }
+  },
+  "judge_independent": {
+    "checkmark_glyph_tutor_turns": { "opus": "2 -> 1 (of 28)", "sonnet": "3 -> 3 (of 28)" },
+    "meta_leak_tutor_turns_harness_artifact": { "opus": "0 -> 1", "sonnet": "2 -> 0" }
+  },
+  "per_unit": [
+    { "unit": "4", "persona": "tangent_goer", "accuracy": { "opus": 4.5, "sonnet": 5 }, "friendliness": { "opus": 4, "sonnet": 4 }, "source_fidelity": { "opus": 3, "sonnet": 4.5 }, "on_topic": { "opus": 4, "sonnet": 5 }, "pedagogy": { "opus": 3.5, "sonnet": 3 } },
+    { "unit": "7", "persona": "impatient", "accuracy": { "opus": 1, "sonnet": 5 }, "friendliness": { "opus": 4, "sonnet": 5 }, "source_fidelity": { "opus": 2.5, "sonnet": 4.5 }, "on_topic": { "opus": 5, "sonnet": 5 }, "pedagogy": { "opus": 3, "sonnet": 4.5 } },
+    { "unit": "8", "persona": "error_prone", "accuracy": { "opus": 4.5, "sonnet": 5 }, "friendliness": { "opus": 5, "sonnet": 3 }, "source_fidelity": { "opus": 3.5, "sonnet": 4.5 }, "on_topic": { "opus": 5, "sonnet": 5 }, "pedagogy": { "opus": 4.5, "sonnet": 4 } },
+    { "unit": "9", "persona": "tangent_goer", "accuracy": { "opus": 4.5, "sonnet": 4.5 }, "friendliness": { "opus": 4, "sonnet": 4 }, "source_fidelity": { "opus": 4, "sonnet": 4 }, "on_topic": { "opus": 3.5, "sonnet": 4 }, "pedagogy": { "opus": 4, "sonnet": 3 } },
+    { "unit": "10", "persona": "error_prone", "accuracy": { "opus": 4, "sonnet": 5 }, "friendliness": { "opus": 5, "sonnet": 4.5 }, "source_fidelity": { "opus": 4.5, "sonnet": 4.5 }, "on_topic": { "opus": 5, "sonnet": 5 }, "pedagogy": { "opus": 4.5, "sonnet": 4 } },
+    { "unit": "12", "persona": "impatient", "accuracy": { "opus": 5, "sonnet": 4 }, "friendliness": { "opus": 4, "sonnet": 3 }, "source_fidelity": { "opus": 4.5, "sonnet": 4 }, "on_topic": { "opus": 5, "sonnet": 5 }, "pedagogy": { "opus": 4.5, "sonnet": 4 } },
+    { "unit": "A", "persona": "tangent_goer", "accuracy": { "opus": 5, "sonnet": 5 }, "friendliness": { "opus": 4, "sonnet": 2 }, "source_fidelity": { "opus": 4, "sonnet": 3.5 }, "on_topic": { "opus": 3, "sonnet": 1.5 }, "pedagogy": { "opus": 3.5, "sonnet": 3 } }
+  ]
+}
