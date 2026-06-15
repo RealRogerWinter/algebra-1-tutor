@@ -294,19 +294,19 @@ The set below is deliberately mixed, and several problems lead with a negative s
 
 ## Lesson 2.4: Variables on both sides
 
-Some questions naturally put the unknown on both sides at once. "When does plan A cost the same as plan B?" puts x in both prices. Solving these uses nothing new; it's a rehearsal of every habit so far, with one added first move. It's also where you'll see all three things a linear equation can turn out to be: one solution, no solution, or true for every number.
+Some questions put the unknown on both sides at once. "When does plan A cost the same as plan B?" puts x in both prices. You already know almost all the moves for this. There's just one new first step: get all the x's onto one side. After that, it's the same kind of equation you've already solved.
 
-Picture the balance scale again, but now both pans hold boxes *and* coins. Take 5x + 2 = 3x + 10: the left pan has five boxes and 2 coins, the right has three boxes and 10 coins. To corner x, get all the boxes onto one pan by removing the same thing from both. Take 3x off each side, so the 3x on the right goes to zero, and you're left with 2x + 2 = 10, a familiar two-step equation:
+Picture the balance scale again, but now both pans hold boxes *and* coins. Take 5x + 2 = 3x + 10: the left pan has five boxes and 2 coins, the right has three boxes and 10 coins. Your goal is to get all the boxes onto one pan. Do it by taking the same thing off both pans. Take 3x off each side. Now the right side has no boxes left. You're left with 2x + 2 = 10, a two-step equation you already know how to solve:
 $$5x+2=3x+10 \;\xrightarrow{\,-3x\,}\; 2x+2=10 \;\xrightarrow{\,-2\,}\; 2x=8 \;\xrightarrow{\,\div 2\,}\; x=4$$
 $$\text{Check: } 5(4)+2=22 \;\text{ and }\; 3(4)+10=22$$
-A small thing makes the numbers kinder: move the *smaller* variable term, so you don't end up with a negative coefficient. Either choice is correct, though; the answer comes out the same.
+A tip: move the *smaller* x-term first (here the 3x, not the 5x). That keeps the number in front of x positive, which is easier to work with. Moving the other one also works. You get the same answer either way.
 
 <!--illus:2-4-both-pans-->
 
 **New terms:**
-- {#2.4.d1} **Conditional equation:** an equation that's true for exactly one value of the variable, the usual case, with a single solution (e.g. 5x+2=3x+10, true only at x=4).
-- {#2.4.d2} **Identity:** an equation that's true for *every* value. Both sides are really the same expression. Its solution set is **all real numbers / infinitely many solutions** (e.g. 2x+4=2(x+2)).
-- {#2.4.d3} **Contradiction:** an equation that's true for *no* value. It reduces to a false numeric statement. It has **no solution** (e.g. 2x+3=2x+5).
+- {#2.4.d1} **Conditional equation:** an equation that's true for only one value of x. This is the usual case. It has one solution (e.g. 5x+2=3x+10, true only at x=4).
+- {#2.4.d2} **Identity:** an equation that's true for *every* value. Both sides are really the same thing. Every number works. We say the answer is **all real numbers** (or **infinitely many solutions**) (e.g. 2x+4=2(x+2)).
+- {#2.4.d3} **Contradiction:** an equation that's true for *no* value. When you solve it, the x disappears and what's left is just false, like 3 = 5. So no number works. It has **no solution** (e.g. 2x+3=2x+5).
 
 **Worked examples:**
 
@@ -324,19 +324,19 @@ $$\text{Check: } 4(-4)+1=-15 \;\text{ and }\; 6(-4)+9=-15$$
 $$2(x-1)=x+5 \xrightarrow{\text{distribute}} 2x-2=x+5 \xrightarrow{-x} x-2=5 \xrightarrow{+2} x=7$$
 $$\text{Check: } 2(7-1)=12 \;\text{ and }\; 7+5=12$$
 
-In the third one the variable terms don't subtract away cleanly to a positive, so the answer is −4. That's a real solution, and the check confirms it on both sides. In the fourth, the left side has parentheses, so you tidy first, distributing the 2 across (x − 1) to get 2x − 2, and only then gather the x's. Tidy each side before you move terms across, and the rest is the two-step move you already know.
+In the third example the answer is negative: x = −4. A negative answer is fine. The check shows both sides equal −15, so it's correct. The fourth example has parentheses on the left. Clear them first. The 2 times (x − 1) becomes 2x − 2. Now gather the x's. Always clean up each side first. After that, it's just the two-step move you already know.
 
-**The substitution check, when it doesn't match.** You'll lean on the check hard in this lesson, because there are more steps for a sign to slip in. As back in 2.1, a check that doesn't match is the check working, not a verdict on you. Here the likeliest culprit is a sign lost when you took a variable term off both pans, so re-run that subtraction first; the method itself is almost never the problem.
+**The substitution check, when it doesn't match.** This lesson has more steps than before. More steps means more chances to drop a minus sign. So check your answer every time. If your check doesn't match, that's good news. It means the check caught a mistake. The most common cause is a dropped minus sign when you took the x-term off both sides. Go back and redo that step first.
 
 ### The three outcomes
 
-So far every equation has had **exactly one** solution. That's the common case, but it isn't the only one. Once the variable is on both sides, the *same procedure* can land in one of three places. The tell is what happens to the variable when you gather terms:
+So far every equation has had **exactly one** solution. That's the common case, but it isn't the only one. Now that x is on both sides, the same steps can lead to three different results. You can tell which one it is by watching what happens to x as you gather terms:
 
-- **Conditional: exactly one solution.** The variable terms *don't* go away; you isolate x and get one value. This is everything in Lessons 2.1 to 2.4 so far.
-- **Identity: infinitely many solutions (all real numbers).** When you gather, the variable terms go to zero on both sides **and** the leftover numeric statement is **true** (like 4=4). The two sides were the same expression all along, so *every* number works.
-- **Contradiction: no solution.** The variable terms go to zero **and** the leftover statement is **false** (like 3=5). No number can make a false statement true, so nothing works.
+- **Conditional: exactly one solution.** The x's *don't* cancel out. You get x by itself and one value for it. This is what you've been doing all along.
+- **Identity: infinitely many solutions (all real numbers).** The x's cancel out on both sides, and what's left is **true** (like 4=4). That means the two sides were equal the whole time. So *every* number works.
+- **Contradiction: no solution.** The x's cancel out, and what's left is **false** (like 3=5). Nothing you plug in can make 3 equal 5, so there's no answer.
 
-You don't decide which outcome it is up front. Run the usual procedure, and if the x's disappear, stop and ask one question: is what's left actually true? In balance terms, if both pans were secretly identical, the scale stays level no matter what the box holds, and that's an identity. If the pans can never match, no box-weight will balance them, and that's a contradiction.
+You don't need to guess the answer type ahead of time. Just solve as usual. If the x's disappear, stop. Then ask: is what's left true or false? Think of the scale. If both pans hold the exact same thing, it stays balanced for any value of x. That's an identity. If the pans can never match, nothing balances them. That's a contradiction.
 
 <!--viz:flowcharts#1-->
 
@@ -350,34 +350,34 @@ $$\text{Check: } 3(2-2)+4=4 \;\text{ and }\; 2(2+1)-2=4$$
 
 {#2.4.w6} *Identity, the x's go to zero, true statement, so all real numbers:*
 $$2x+4=2(x+2) \xrightarrow{\text{distribute}} 2x+4=2x+4 \xrightarrow{-2x} 4=4 \;\text{ (always true)}$$
-The variable went to zero and left **4=4**, a true statement, so the answer is **infinitely many solutions (all real numbers).** You can sanity-check with two different numbers: at x = 0 both sides are 4; at x = 5 both sides are 14. They match for any x.
+The x's canceled out and left **4=4**. That's always true, so EVERY number works. We say the answer is **infinitely many solutions (all real numbers).** Want to test it? Try x = 0: both sides equal 4. Try x = 5: both sides equal 14. It works no matter what you pick.
 
 {#2.4.w7} *Contradiction, the x's go to zero, false statement, so no solution:*
 $$2x+3=2x+5 \xrightarrow{-2x} 3=5 \;\text{(false)}$$
-The variable went to zero and left **3=5**, which is never true, so there's **no solution.** Sanity-check: at x = 0 the sides are 3 and 5; at x = 10 they're 23 and 25. The right side is always 2 bigger, so they can never be equal.
+The x's canceled out and left **3=5**, which is never true, so there's **no solution.** Want to test it? Try x = 0: the sides are 3 and 5. Try x = 10: they're 23 and 25. The right side is always 2 bigger, so the two sides can never be equal.
 
-If the x's vanish, that isn't an error and it isn't x = 0. There's simply no x left to report. Read the leftover statement instead. For an identity, write **all real numbers** (or "infinitely many solutions"); for a contradiction, write **no solution**. Don't write "x = 4 = 4" or "x = 3 = 5"; once the variable is gone, you're only reading whether what remains is true or false.
+If the x's disappear, that's not a mistake, and it does NOT mean x = 0. There's just no x left to solve for. Instead, look at the line you're left with: is it true or false? For an identity, write **all real numbers** (or "infinitely many solutions"). For a contradiction, write **no solution**. Don't write "x = 4 = 4" or "x = 3 = 5". Once the x is gone, you only have to say whether what's left is true or false.
 
 ### Two valid solving orders (which is cleaner, and when)
 
-For a multi-step equation there's often more than one correct first move. Take 3(x+2)=18. Both of these are right:
+Often there's more than one good way to start. Both ways give the right answer, so you can't go wrong. Take 3(x+2)=18. Both of these are right:
 
 {#2.4.w8}
 $$\textbf{Distribute first:}\quad 3(x+2)=18 \xrightarrow{\text{distribute}} 3x+6=18 \xrightarrow{-6} 3x=12 \xrightarrow{\div 3} x=4$$
 
 $$\textbf{Divide first:}\quad 3(x+2)=18 \xrightarrow{\div 3} x+2=6 \xrightarrow{-2} x=4$$
 
-Same answer (x = 4, and 3(4 + 2) = 18 checks). When the whole left side is multiplied by a number that divides the right side cleanly, as 3 goes into 18 evenly, dividing first is fewer steps and smaller numbers. But if the right side *weren't* a clean multiple, say 3(x + 2) = 20, dividing first gives x + 2 = 20/3 and drags a fraction through every later step, so distributing first keeps things whole longer. Both orders are valid. The skill is glancing ahead to pick the cleaner one for the equation in front of you, and which to use is your call.
+Same answer (x = 4, and 3(4 + 2) = 18 checks). 3 goes into 18 evenly (18 / 3 = 6). When the number out front divides the other side evenly like that, divide first. It takes fewer steps and keeps the numbers small. But sometimes the number doesn't divide evenly. Take 3(x + 2) = 20. If you divide first, you get x + 2 = 20/3, and that fraction follows you through every step. In that case, distribute first to avoid fractions. With practice you'll start to spot which way is quicker. Until then, either one is fine.
 
-{#2.4.w9} **One spot-the-error to read.** Here's a worked solution to 5 − 2(x − 1) = 9 with one broken line, shown beside the correct version so you can see exactly where they part ways. This is the distributing-a-negative trap from Lesson 2.3, now hiding inside a both-sides solve:
+{#2.4.w9} **One spot-the-error to read.** Below is a solution to 5 − 2(x − 1) = 9. One line in it is wrong. Watch what happens when you distribute a negative number. Find the line where it goes wrong:
 $$5-2(x-1)=9 \;\to\; 5-2x-2=9 \;\to\; 3-2x=9 \;\to\; -2x=6 \;\to\; x=-3$$
-The break is in the very first move. The −2 reaches the −1 inside as −2 × −1 = **+2**, not −2, so the correct second line is 5 − 2x **+ 2** = 9, which becomes 7 − 2x = 9, then −2x = 2, and **x = −1**. If you didn't spot it, that's fine. The fix is right here. Confirm x = −1 in the original: 5 − 2(−1 − 1) = 5 − 2(−2) = 5 + 4 = 9, which matches.
+The break is in the very first move. The −2 multiplies the −1 inside. −2 × −1 = **+2**, not −2. So the correct second line is 5 − 2x **+ 2** = 9. That becomes 7 − 2x = 9. Then −2x = 2. So **x = −1**. If you didn't spot it, that's fine. The fix is right here. Confirm x = −1 in the original: 5 − 2(−1 − 1) = 5 − 2(−2) = 5 + 4 = 9, which matches.
 
-A couple of slips worth naming, now that you've had a clean success at each. When you subtract a variable term, it has to come off *both* pans; subtracting 3x from the left only is the most common way a both-sides solve goes wrong.
+Two common mistakes to watch for. When you subtract an x-term, take it off *both* pans. Taking 3x off only the left side is the most common mistake here.
 
-And watch the sign when you distribute a positive number over a subtraction: in 2(x − 1), the result is 2x − 2, not 2x − 1 or 2x + 2, because the 2 reaches the −1 and gives −2. Let the substitution check settle any doubt.
+Watch the sign when you multiply into a subtraction. In 2(x − 1), the answer is 2x − 2. It's not 2x − 1 or 2x + 2. The 2 times the −1 gives −2. If you're not sure, check your answer by plugging it back in.
 
-If this lesson is getting heavy, that's reasonable. It folds together every move so far. It's fine to leave a problem and come back to it tomorrow; a break genuinely helps, and you haven't lost anything. When you return, re-read the balance-scale picture at the top first, since every move here is still just taking the same thing off both pans.
+If this lesson feels like a lot, that's okay, it really is a lot. It uses everything from the earlier lessons at once. It's fine to leave a problem and come back to it tomorrow. A break really does help, and you haven't lost anything. When you come back, re-read the balance-scale part at the top first. Remember: every move is still just taking the same thing off both pans.
 
 **Check for understanding (transfer):**
 1. {#2.4.c1} Solve 6x + 1 = 4x + 9. Which side did you move the variable to, and why that one? (Subtract the smaller term, 4x, from both sides to keep the coefficient positive: 2x + 1 = 9, then 2x = 8, so x = 4. Check: both sides equal 25.)
