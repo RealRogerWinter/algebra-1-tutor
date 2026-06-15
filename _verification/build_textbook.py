@@ -973,7 +973,7 @@ _REFCODE_JS = """
 # --- HTML template ------------------------------------------------------------------------------
 def _lesson_page(title, body, model, cur, prev_link=None, next_link=None, *, subtitle="",
                  surface="textbook", hero=None, kicker="", home_href="index.html",
-                 home_label="Algebra&nbsp;1", sidebar_prefix="", sidebar_top=None):
+                 home_label="Algebra&nbsp;1", sidebar_prefix="", sidebar_top=None, brand_prefix="../"):
     kick = f'<div class="kicker">{_html.escape(kicker)}</div>' if kicker else ""
     if hero:
         lede = f'<p class="lede">{_html.escape(subtitle)}</p>' if subtitle else ""
@@ -999,7 +999,7 @@ def _lesson_page(title, body, model, cur, prev_link=None, next_link=None, *, sub
 <body data-surface="{surface}">
 <header class="topbar">
   <button id="menu" class="menu" type="button" aria-label="Open or close the contents menu" aria-expanded="false">☰&nbsp;Contents</button>
-  <a class="home" href="{home_href}">{home_label}</a>
+  <a class="home" href="{home_href}"><img class="brandmark" src="{brand_prefix}assets/logo.png" alt="" width="26" height="26" decoding="async">{home_label}</a>
   <span class="sp"></span>
   <button id="theme" type="button" aria-label="Toggle light or dark theme">◐&nbsp;Theme</button>
 </header>
@@ -1167,7 +1167,9 @@ hr{border:0; border-top:1px solid var(--rule); margin:var(--s6) 0}
 @supports not (background:color-mix(in srgb,red,blue)){ .topbar{background:var(--paper)} }
 .topbar nav{display:flex; gap:.9rem; flex-wrap:wrap; align-items:baseline}
 .topbar a{color:var(--link); text-decoration:none} .topbar a:hover{text-decoration:underline}
-.topbar .home{font-family:"Fraunces",serif; font-weight:600; font-size:var(--step-0); color:var(--ink)}
+.topbar .home{display:inline-flex; align-items:center; gap:.45rem; font-family:"Fraunces",serif; font-weight:600; font-size:var(--step-0); color:var(--ink)}
+.topbar .home:hover{text-decoration:none}
+.topbar .home .brandmark{width:1.55em; height:1.55em; flex:none; display:block}
 .topbar .sp{margin-left:auto}
 #theme,.menu{background:none; border:1px solid var(--rule); border-radius:999px; color:var(--ink-soft);
   cursor:pointer; padding:.3rem .7rem; font:inherit; font-size:var(--step--1)}
@@ -1441,10 +1443,11 @@ def _index_html(ssot, model):
         label = "Appendix" if str(u.id) == "A" else f"Unit {u.id}"
         items.append(f'<li><a href="{href}"><b>{label}</b> · {_html.escape(u.title)}</a>{opt}'
                      f'<br><span class="u">{_html.escape(u.description)}</span></li>')
-    body = ('<p class="subtitle">A complete, friendly Algebra 1 course you can read at your own pace. '
-            'New here? Start with <a href="how-to-use.html">how to use this book</a>.</p>'
+    body = ('<p class="subtitle">New here? Start with <a href="how-to-use.html">how to use this book</a>.</p>'
             '<ul class="units">' + "\n".join(items) + "</ul>")
-    return _lesson_page("Algebra 1", body, model, "index.html", None, ("how-to-use.html", "How to use this book"))
+    return _lesson_page("Algebra 1", body, model, "index.html", None, ("how-to-use.html", "How to use this book"),
+                        subtitle="A complete, friendly Algebra 1 course you can read at your own pace.",
+                        hero="../assets/index-hero.jpg")
 
 
 def _intro_page(model, next_link):

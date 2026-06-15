@@ -62,7 +62,9 @@ hr{border:0; border-top:1px solid var(--rule); margin:var(--s6) 0}
 @supports not (background:color-mix(in srgb,red,blue)){ .topbar{background:var(--paper)} }
 .topbar nav{display:flex; gap:.9rem; flex-wrap:wrap; align-items:baseline}
 .topbar a{color:var(--link); text-decoration:none} .topbar a:hover{text-decoration:underline}
-.topbar .home{font-family:"Fraunces",serif; font-weight:600; font-size:var(--step-0); color:var(--ink)}
+.topbar .home{display:inline-flex; align-items:center; gap:.45rem; font-family:"Fraunces",serif; font-weight:600; font-size:var(--step-0); color:var(--ink)}
+.topbar .home:hover{text-decoration:none}
+.topbar .home .brandmark{width:1.55em; height:1.55em; flex:none; display:block}
 .topbar .sp{margin-left:auto}
 #theme,.menu{background:none; border:1px solid var(--rule); border-radius:999px; color:var(--ink-soft);
   cursor:pointer; padding:.3rem .7rem; font:inherit; font-size:var(--step--1)}
