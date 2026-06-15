@@ -1138,7 +1138,7 @@ html.dark .hero-art{filter:brightness(.9) saturate(.92)}
   border:1px solid var(--leaf); border-radius:999px; padding:.28rem .7rem; background:var(--tint-leaf, transparent)}
 .qcheck[open] .qc-label{color:var(--ink-soft); border-color:var(--rule)}
 .qcheck .qa{align-items:center; gap:.4rem; margin-left:.55rem; font-weight:600; color:var(--leaf)}
-.qcheck .qa::before{content:"\2713"; font-weight:700}
+.qcheck .qa::before{content:"\u2713"; font-weight:700}
 .qcheck:not([open]) .qa{display:none} .qcheck[open] .qa{display:inline-flex}
 @media (prefers-reduced-motion:no-preference){ .prow{transition:border-color .15s ease} }
 /* print: show every answer (even un-opened reveals) and hide the toggle. The screen rule
