@@ -246,10 +246,30 @@ def _viz_module(name):
     return _VIZ_CACHE[name]
 
 
+_VIZ_CODE_MAP = None
+
+
+def _viz_code(module, index):
+    """The SSOT figure code for a viz sample, from figures.VIZ_FIGURES (None if unregistered)."""
+    global _VIZ_CODE_MAP
+    if _VIZ_CODE_MAP is None:
+        _VIZ_CODE_MAP = {}
+        try:
+            import viz_figures as _figmod
+            for f in getattr(_figmod, "VIZ_FIGURES", []):
+                _VIZ_CODE_MAP[(f["module"], int(f["index"]))] = f["code"]
+        except Exception:
+            pass
+    return _VIZ_CODE_MAP.get((module, int(index)))
+
+
 def _convert_viz(text):
     """Swap each `<!--viz:module#index-->` marker for that module's sample, wrapped in a figure.
-    Fence-aware; a missing module/index drops the marker (keeping any other text on the line)."""
-    out, infence = [], False
+    Fence-aware; a missing module/index drops the marker. The figure HTML is STASHED behind a
+    sentinel and restored AFTER markdown (see md_to_body + _restore_viz): viz HTML contains $$ math
+    and \\textcolor{#hex}{...} whose `{#hex}` would otherwise be eaten by the {#code} anchor pass and
+    mangled by markdown. Returns (text_with_sentinels, blocks)."""
+    blocks, out, infence = [], [], False
     for ln in text.split("\n"):
         if ln.lstrip().startswith("```"):
             infence = not infence; out.append(ln); continue
@@ -263,13 +283,25 @@ def _convert_viz(text):
                 except Exception:
                     sample = None
             if sample is not None:
+                code = _viz_code(m.group(1), int(m.group(2)))
                 cap = _html.escape(sample.get("caption", ""))
-                out += ["", f'<figure class="viz">{sample["html"]}<figcaption>{cap}</figcaption></figure>', ""]
+                figcap = (f'<b>Figure {code}</b> &mdash; {cap}' if code else cap)
+                fid = f' id="fig-{code}"' if code else ""
+                fig = (f'<figure class="fig viz"{fid}>{sample["html"]}'
+                       f'<figcaption>{figcap}</figcaption></figure>')
+                out += ["", f"\x00V{len(blocks)}\x00", ""]
+                blocks.append(fig)
             else:
                 out.append(_VIZ_RE.sub("", ln))
         else:
             out.append(ln)
-    return "\n".join(out)
+    return "\n".join(out), blocks
+
+
+def _restore_viz(htmltext, blocks):
+    for i, b in enumerate(blocks):
+        htmltext = htmltext.replace(f"<p>\x00V{i}\x00</p>", b).replace(f"\x00V{i}\x00", b)
+    return htmltext
 
 
 _LIST_RE = re.compile(r"^\s*(?:[-*+]|\d+\.)\s")
@@ -671,7 +703,7 @@ def _pair_practice_answers(text):
 def md_to_body(text, launcher=False):
     text, math = _protect_math(text)
     text = _convert_illus(text)
-    text = _convert_viz(text)
+    text, vizblocks = _convert_viz(text)
     text = _id_worked_practice(text)
     text = _convert_anchors(text, launcher)
     text = _pair_practice_answers(text)
@@ -684,6 +716,7 @@ def md_to_body(text, launcher=False):
     body = body.replace(' markdown="1"', '')
     body = body.replace("<hr />", _DIVIDER).replace("<hr>", _DIVIDER)  # decorative lesson dividers
     body = body.replace(chr(92) + "$", "$")  # python-markdown leaves \$ literal; show currency as $ (math $$ stays protected)
+    body = _restore_viz(body, vizblocks)
     return _restore_math(body, math)
 
 

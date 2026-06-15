@@ -20,8 +20,6 @@ Start with the equals sign, because almost everything ahead leans on reading it 
 
 Here's a picture for it. Imagine an old balance scale with two pans. If the two pans rest level, the weights on them are equal; that's all "=" claims, that the two sides weigh the same.
 
-<!--illus:1-1-mystery-box-->
-
 So read x + 3 = 7 as that scale resting level: the left pan holds x and 3, the right pan holds 7, and they balance. Here is the one rule to remember: whatever you do to one pan, you do to the other, or it tips.
 
 Reading "=" this way turns a string of symbols into a sentence. On its own, "4 + 3" is just a phrase, the name of a number, the way "the cost of two coffees" names an amount; it doesn't say anything yet. Drop an "=" in and you get a full sentence, with "=" acting as the verb: "4 + 3 = 7" claims the left side and the right side have the same value. A claim like that can be true, false, or, when a piece is still hidden, neither yet. Try reading each of these as a balance and saying which it is:
@@ -32,6 +30,8 @@ Reading "=" this way turns a string of symbols into a sentence. On its own, "4 +
 - □ + 3 = 5 + 7. The right pan is 12, and the left pan won't balance it until the box holds 9. Until you fill the box, it's neither true nor false. It's **open**.
 
 That box is where algebra begins. Instead of an empty box we usually write a letter, say x, and call it a **variable**: a closed box with a number hidden inside that we don't know yet.
+
+<!--illus:1-1-mystery-box-->
 
 So "3 + x = 7" asks the balance question again: what number in the box keeps the two sides equal?
 
@@ -117,8 +117,6 @@ The line is not only the evenly spaced ticks. Look between two ticks, say betwee
 
 Now give the points on the line their names, building up the same picture one step at a time. The **counting numbers** are 1, 2, 3, and so on. Add 0 and you have the **whole numbers**. Add the negatives and you have the **integers**: …, −2, −1, 0, 1, 2, …, with no fractional part. The gap-fillers you can write as one whole number over another, like 3/4, are the **rational numbers**, and the integers are part of this group too, since 5 is just 5/1. Each name builds on the last, all on the one line.
 
-<!--viz:anatomy#1-->
-
 Most points on that line are rational, but not all of them. A few numbers have decimals that run on forever *without* ever settling into a repeating pattern, so no fraction a/b ever lands exactly on them. Two famous ones are π = 3.14159… and √2 = 1.41421…. These are the **irrational numbers**.
 
 The rationals and the irrationals together, every single point on the line with no gaps, are the **real numbers**. The "whole line" the picture just promised now has a proper name, and it's the ground algebra stands on.
@@ -198,8 +196,6 @@ Here's the order, top to bottom:
 4. Add and subtract, equally important, done left to right
 
 <!--viz:flowcharts#0-->
-
-<!--illus:1-3-tiers-->
 
 Within the bottom two lines you work in reading order, left to right, the way you read a sentence. Multiply and divide aren't ranked against each other; they're equal, so you just take them in the order they come. Same for add and subtract.
 
@@ -363,19 +359,17 @@ When a set switches between adding, subtracting, multiplying, and dividing signs
 
 Algebra has two main characters, and a lot of early confusion comes from mixing them up. One is an *expression*, a phrase that names a value, like 3x + 2. The other is an *equation*, a full sentence making a claim, like 3x + 2 = 14.
 
-<!--viz:anatomy#5-->
-
 You *evaluate* an expression; you *solve* an equation. Trying to "solve" an expression, or "evaluate" an equation, is like trying to answer a noun, and it derails what comes next.
 
 To tell them apart, look for an equals sign. An expression is a noun phrase, like "three more than twice a number," with no verb and no =. An equation is a full sentence, with the = acting as the verb that claims a balance. No equals sign, it's an expression; equals sign present, it's an equation.
 
 Evaluating an expression is where the mystery box pays off. Picture 3x + 2 as a row of seats reserved for a guest who hasn't arrived; x is the empty chair. "Evaluate at x = 4" is the guest sitting down: every x becomes a 4. So 3x + 2 at x = 4 is 3(4) + 2.
 
-<!--viz:interactive_equation#1-->
-
 <!--illus:1-5-empty-chair-->
 
 Now just follow order of operations from Lesson 1.3: 3(4) is 12, then 12 + 2 is 14. Write the steps out, 3(4) + 2 = 12 + 2 = 14, rather than jumping straight to 14, because the careful-substitution habit is what keeps signs and order from slipping.
+
+<!--viz:interactive_equation#1-->
 
 And signs will show up, so here's one with a negative. Evaluate 5 − 2x at x = −1. Drop −1 into the seat, keeping it in parentheses so the signs stay visible: 5 − 2(−1). That's 5 − (−2), and subtracting a negative adds (straight from Lesson 1.4), so 5 + 2 = 7.
 

@@ -140,7 +140,7 @@ def _one_step():
     return _render(
         "awe-twostep",
         "two-step equation",
-        r"Solve for \(x\):  \(2x + 3 = 11\).",
+        "Solve for x:  2x + 3 = 11.",
         steps, ops,
     )
 
@@ -161,7 +161,7 @@ def _distribute():
     return _render(
         "awe-distrib",
         "distribute, then solve",
-        r"Solve for \(x\):  \(2(x + 4) = 18\).",
+        "Solve for x:  2(x + 4) = 18.",
         steps, ops,
     )
 
@@ -182,7 +182,7 @@ def _clear_fractions():
     return _render(
         "awe-fractions",
         "clear the fractions",
-        r"Solve for \(x\):  \(\dfrac{x}{2} + \dfrac{x}{3} = 5\).",
+        "Solve for x:  x/2 + x/3 = 5.",
         steps, ops,
     )
 

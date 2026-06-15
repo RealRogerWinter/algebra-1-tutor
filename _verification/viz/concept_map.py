@@ -230,9 +230,9 @@ def _full_map():
 
     caption_math = (
         '<div style="text-align:center;margin-top:.5rem;color:var(--ink-soft);'
-        'font-size:.95rem">Follow the gold path in order; the blue units branch '
-        'off once their feeder units are done. '
-        '$$\\text{Unit }1 \\to 2 \\to 3 \\to 4 \\to 5 \\to 6 \\to 7$$</div>'
+        'font-size:.95rem">Follow the gold path in order &mdash; Unit 1 &rarr; '
+        '2 &rarr; 3 &rarr; 4 &rarr; 5 &rarr; 6 &rarr; 7 &mdash; and the blue '
+        'units branch off once their feeder units are done.</div>'
     )
     return {
         "caption": "the whole course as a learning path — gold main road, blue side branches",
@@ -247,35 +247,34 @@ def _unit5_neighborhood():
     slug = "cmap-u5"
     W, H = 930, 500
     NW, NH = 152, 54
+    cx = W / 2.0
     cy = H / 2.0
 
-    # Four calm columns, left to right:
-    #   col 1,2  -> the lead-in chain 3 -> 4
-    #   col 3    -> Unit 5 itself (centered, gold)
-    #   col 4    -> the units Unit 5 unlocks (6, 8, Appendix A)
-    # Unit 7 sits just below Unit 6 in that last column, because Unit 7 is
-    # reached *through* Unit 6 (7 needs 6, and 6 needs 5) rather than straight
-    # from Unit 5.
-    pad = 70
-    c1 = pad + NW / 2.0
-    c2 = c1 + NW + 55
-    c3 = c2 + NW + 72
-    c4 = c3 + NW + 80
+    # A "hub" picture: Unit 5 sits in the dead center (gold). Its
+    # prerequisites (Units 3 and 4) stack on the LEFT with arrows pointing IN;
+    # the units it unlocks (6, 7, 8, Appendix A) fan out on the RIGHT with
+    # arrows pointing OUT. No set-notation text -- the geometry tells the story.
+    left_x = NW / 2.0 + 60          # column for the "comes before" nodes
+    right_x = W - NW / 2.0 - 60     # column for the "unlocks" nodes
+    # vertical slots so the side cards never collide with the centered hub
+    pre_ys = [cy - 95.0, cy + 95.0]            # Units 3, 4
+    post_ys = [86.0, cy - 36.0, cy + 36.0, H - 86.0]  # Units 6, 7, 8, A
+
     pos = {
-        3: (c1, cy),
-        4: (c2, cy),
-        5: (c3, cy),
-        6: (c4, 88.0),
-        7: (c4, 200.0),       # next hop, directly under Unit 6
-        8: (c4, cy + 25.0),
-        "A": (c4, H - 70.0),
+        5: (cx, cy),
+        3: (left_x, pre_ys[0]),
+        4: (left_x, pre_ys[1]),
+        6: (right_x, post_ys[0]),
+        7: (right_x, post_ys[1]),
+        8: (right_x, post_ys[2]),
+        "A": (right_x, post_ys[3]),
     }
 
     def box(p):
         x, y = p
         return (x - NW / 2.0, y - NH / 2.0, x + NW / 2.0, y + NH / 2.0)
 
-    # geometry self-check
+    # geometry self-check: no two cards overlap
     ids = list(pos)
     for i in range(len(ids)):
         for j in range(i + 1, len(ids)):
@@ -291,41 +290,43 @@ def _unit5_neighborhood():
         _defs(slug, AXIS),
     ]
 
-    def edge_between(p, n, bow=0.0):
-        sb, db = box(pos[p]), box(pos[n])
-        sx, sy = pos[p]
-        dx, dy = pos[n]
-        if abs(sx - dx) < 1:
-            # vertical hop (Unit 6 -> Unit 7): bottom edge -> top edge
-            x1, y1, x2, y2 = sx, sb[3], dx, db[1]
-        else:
-            # rightward: leave the right edge, arrive at the left edge
-            x1, y1, x2, y2 = sb[2], sy, db[0], dy
-        parts.append(_edge(slug, x1, y1, x2, y2, AXIS, bow=bow))
+    hub = box(pos[5])
 
-    # lead-in chain
-    edge_between(3, 4)
-    edge_between(4, 5)
-    # what Unit 5 unlocks directly (bow the top/bottom ones so the fan is tidy)
-    edge_between(5, 6, bow=-18)
-    edge_between(5, 8)
-    edge_between(5, "A", bow=18)
-    # Unit 7 chains off Unit 6 (honest: 7 needs 6, which needs 5)
-    edge_between(6, 7)
+    def edge_in(p):
+        """Arrow from a prerequisite (left) pointing IN to the hub's left edge."""
+        sb = box(pos[p])
+        sx, sy = pos[p]
+        x1, y1 = sb[2], sy                 # leave the right edge of the prereq
+        x2, y2 = hub[0], cy                # arrive at the hub's left edge
+        parts.append(_edge(slug, x1, y1, x2, y2, AXIS))
+
+    def edge_out(n):
+        """Arrow from the hub's right edge pointing OUT to an unlocked unit."""
+        db = box(pos[n])
+        dx, dy = pos[n]
+        x1, y1 = hub[2], cy                # leave the hub's right edge
+        x2, y2 = db[0], dy                 # arrive at the left edge of the unit
+        parts.append(_edge(slug, x1, y1, x2, y2, AXIS))
+
+    # prerequisites point IN; unlocks point OUT
+    for p in (3, 4):
+        edge_in(p)
+    for n in (6, 7, 8, "A"):
+        edge_out(n)
 
     # gentle labels for the two halves of the story
-    mid_left = (pos[3][0] + pos[5][0]) / 2.0
     parts.append(
-        f'<text x="{_n(mid_left)}" y="{_n(cy - NH/2 - 18)}" text-anchor="middle" '
-        f'font-size="13" font-style="italic" fill="{AXIS}">comes after</text>'
+        f'<text x="{_n(left_x)}" y="{_n(box(pos[3])[1] - 16)}" '
+        f'text-anchor="middle" font-size="13" font-style="italic" '
+        f'fill="{AXIS}">comes after</text>'
     )
     parts.append(
-        f'<text x="{_n(pos[8][0])}" y="{_n(box(pos[6])[1] - 16)}" '
+        f'<text x="{_n(right_x)}" y="{_n(box(pos[6])[1] - 16)}" '
         f'text-anchor="middle" font-size="13" font-style="italic" '
         f'fill="{AXIS}">opens the door to</text>'
     )
 
-    order = [3, 4, 6, 7, 8, "A", 5]  # draw 5 last so it sits on top, centered
+    order = [3, 4, 6, 7, 8, "A", 5]  # draw 5 last so the hub sits on top
     for n in order:
         x, y = pos[n]
         if n == 5:
@@ -340,15 +341,14 @@ def _unit5_neighborhood():
     parts.append("</svg>")
     svg = "".join(parts)
 
-    caption_math = (
+    caption = (
         '<div style="text-align:center;margin-top:.5rem;color:var(--ink-soft);'
-        'font-size:.95rem">Once Unit 5 clicks, four doors open '
-        '(Unit 7 is just past Unit 6). '
-        '$$5 \\;\\Rightarrow\\; \\{\\,6,\\ 7,\\ 8,\\ \\text{A}\\,\\}$$</div>'
+        'font-size:.95rem">Units 3 and 4 lead into Unit 5; once it clicks, four '
+        'more doors open &mdash; Units 6, 7, 8 and Appendix A.</div>'
     )
     return {
         "caption": "the Unit 5 neighborhood — what comes before it, and what it unlocks",
-        "html": svg + caption_math,
+        "html": svg + caption,
     }
 
 

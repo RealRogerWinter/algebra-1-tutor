@@ -6,9 +6,9 @@ This unit pulls together most of what came before. It rests on one small, steady
 
 Those surprises are that a squared equation usually has two answers, that a little ± sign shows up in every method, and that the graph is a U shape. They are one idea, not three separate rules.
 
-A word before you start, and it holds for every lesson here. You don't have to finish a lesson in one sitting. If a page stops landing, take a break and come back. A rest helps, and you lose nothing. And when you return for a new lesson, redo two or three problems from a lesson or two back from memory first. That small warm-up is one of the most useful habits you can keep.
-
 <!--viz:reference_cards#1-->
+
+A word before you start, and it holds for every lesson here. You don't have to finish a lesson in one sitting. If a page stops landing, take a break and come back. A rest helps, and you lose nothing. And when you return for a new lesson, redo two or three problems from a lesson or two back from memory first. That small warm-up is one of the most useful habits you can keep.
 
 ---
 
@@ -232,11 +232,9 @@ Mixed practice feels harder, and that's what makes it last. Every problem's answ
 
 Start with a fact you can check by hand: (x + 3)² = x² + 6x + 9. Look at that constant, the 9. It's exactly (6/2)², half of the middle coefficient, squared. That's not a coincidence, and it's the lever for this whole lesson. If you're handed x² + 6x and want to *make* it into a perfect square, you now know precisely what to add: 9. Adding the right number to turn x² + bx into something-squared is called **completing the square**.
 
-<!--viz:area_models#4-->
-
 There's a literal picture behind the name. Think of x² + 6x as an x-by-x square sitting next to two strips, each 3 by x (the 6x split into two 3x pieces laid along two sides). Those pieces almost form a bigger square, but there's a corner missing: a 3-by-3 block, area 9. Drop that block in and the figure becomes a complete square, (x + 3) on each side. The algebra is doing the same thing the picture is: filling in the missing corner.
 
-<!--illus:12-4-complete-square-->
+<!--viz:area_models#4-->
 
 Why bother? Two reasons. It solves quadratics that won't factor with nice integers, and it's where the quadratic formula in the next lesson actually comes from. Seeing it once makes that formula feel earned instead of dropped on you.
 

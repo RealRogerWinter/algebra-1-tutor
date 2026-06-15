@@ -6,11 +6,11 @@
 
 This is where a function becomes a picture you can read. The one idea threading through every lesson: a line *is* a linear function. The y = mx + b you'll meet and the f(x) = mx + b from Unit 4 are the same thing under two names. It's that same function machine, now drawn as a straight line.
 
+<!--viz:concept_map#1-->
+
 Here's the reassuring part up front. Slope, the main idea of this unit, isn't new. It's the rate of change, which is the unit rate you met in Unit 3: "how much y changes for each 1 step in x." So when slope shows up, you're meeting something you already know under a new name.
 
 Before each new lesson, redo two or three problems from a lesson or two back from memory first. That small warm-up keeps the earlier moves sharp. In this unit the earlier moves are substituting and signed arithmetic, and those are exactly what trips people up if they've gone rusty.
-
-<!--viz:concept_map#1-->
 
 <!--viz:reference_cards#0-->
 
