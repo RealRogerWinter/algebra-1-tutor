@@ -362,12 +362,13 @@ FIGURES = [
 
     # --- Additional deterministic figures: math-bearing, reuse/extend existing renderers ----------
     # Unit 1 — negatives as distance on the line
-    {"code": "1.4.f1", "lesson": "1.4", "type": "number_line", "min": -6, "max": 6,
+    # Unit 1 — negatives as distance on the line (Lesson 1.5 after the factors lesson was inserted at 1.4)
+    {"code": "1.5.f1", "lesson": "1.5", "type": "number_line", "min": -6, "max": 6,
      "ticks": [-6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6],
      "points": [{"x": -5, "label": "-5"}, {"x": -2, "label": "-2"}],
      "caption": "-5 sits farther left (a bigger debt) than -2"},
     # Unit 1 — factors: 12 as its rectangles (1x12, 2x6, 3x4); side lengths are the factor pairs
-    {"code": "1.4.f2", "lesson": "1.4", "type": "factor_array", "num": 12,
+    {"code": "1.4.f1", "lesson": "1.4", "type": "factor_array", "num": 12,
      "pairs": [[1, 12], [2, 6], [3, 4]], "caption": "the factors of 12 as rectangles: 1x12, 2x6, 3x4"},
     # Unit 5 — the coordinate plane; writing a line from a point + slope
     {"code": "5.1.f1", "lesson": "5.1", "type": "plane", "xwindow": [-5, 5], "ywindow": [-5, 5],

@@ -1,6 +1,6 @@
 # Unit 11: Factoring
 
-> **Prerequisites:** Unit 10 (multiplying polynomials — the area box and distribution), the distributive property and combining like terms (Unit 2.3), and comfort with negatives (Unit 1.4 / misconceptions.md §3).
+> **Prerequisites:** Unit 10 (multiplying polynomials — the area box and distribution), the distributive property and combining like terms (Unit 2.3), and comfort with negatives (Unit 1.5 / misconceptions.md §3).
 > **By the end, the student can:**
 > - Factor out the greatest common factor (GCF) — numbers *and* variables — from any polynomial, e.g. 15x³-10x²=5x²(3x-2).
 > - Factor a trinomial x²+bx+c by finding two numbers that multiply to c and add to b, reasoning correctly about signs.

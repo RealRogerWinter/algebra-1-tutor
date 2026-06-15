@@ -4,15 +4,16 @@ units:
     slug: foundations
     title: "Foundations & the Language of Algebra"
     short_title: "Foundations"
-    description: "Variables, the equals sign as a balance, the number system & number line, order of operations, negative numbers, expressions vs. equations"
+    description: "Variables, the equals sign as a balance, the number system & number line, order of operations, factors & exponents, negative numbers, expressions vs. equations"
     prerequisites: "Arithmetic only"
     optional: false
     lessons:
       - { id: "1.1", title: "Variables and the meaning of equations" }
       - { id: "1.2", title: "The number system & the number line" }
       - { id: "1.3", title: "Order of operations" }
-      - { id: "1.4", title: "Negative numbers" }
-      - { id: "1.5", title: "Expressions vs. equations; evaluating expressions" }
+      - { id: "1.4", title: "Factors and exponents" }
+      - { id: "1.5", title: "Negative numbers" }
+      - { id: "1.6", title: "Expressions vs. equations; evaluating expressions" }
   - id: 2
     slug: linear-equations
     title: "Solving Linear Equations"
