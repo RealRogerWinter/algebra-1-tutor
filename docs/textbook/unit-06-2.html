@@ -283,8 +283,11 @@ document.addEventListener("DOMContentLoaded", function () {
 (function () {
   var tip = document.getElementById("rc-tip"), toast = document.getElementById("rc-toast");
   if (!tip || !toast) return;
-  var toastT = 0;
-  function hideTip() { tip.classList.remove("show"); tip.setAttribute("aria-hidden", "true"); }
+  var toastT = 0, active = null;
+  function hideTip() {
+    tip.classList.remove("show"); tip.setAttribute("aria-hidden", "true");
+    if (active) { active.removeAttribute("aria-describedby"); active = null; }
+  }
   function showTip(a) {
     var p = a.getAttribute("data-prompt"); if (!p) return;
     tip.textContent = "";
@@ -293,8 +296,14 @@ document.addEventListener("DOMContentLoaded", function () {
     var q = document.createElement("span"); q.className = "rc-tip-q"; q.textContent = p;
     tip.appendChild(h); tip.appendChild(q);
     tip.setAttribute("aria-hidden", "false"); tip.classList.add("show");
+    if (active && active !== a) active.removeAttribute("aria-describedby");
+    active = a; a.setAttribute("aria-describedby", "rc-tip");  // expose the prompt text to screen readers
     var r = a.getBoundingClientRect(), t = tip.getBoundingClientRect();
-    var top = r.top - t.height - 8; if (top < 8) top = r.bottom + 8;
+    var top = r.top - t.height - 8;
+    if (top < 8) {                                  // no room above: place below, then clamp to the viewport
+      top = r.bottom + 8;
+      if (top + t.height > window.innerHeight - 8) top = Math.max(8, window.innerHeight - t.height - 8);
+    }
     var left = Math.max(8, Math.min(r.left + r.width / 2 - t.width / 2, window.innerWidth - t.width - 8));
     tip.style.top = top + "px"; tip.style.left = left + "px";
   }

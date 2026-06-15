@@ -49,27 +49,38 @@ def _built():
 
 def test_label_for_kinds():
     assert bt._label_for("12.5.w2") == "worked example 2 in Lesson 12.5"
+    assert bt._label_for("6.2.ex1") == "worked example 1 in Lesson 6.2"   # 'ex' form; really shipped (e.g. {#6.2.ex1})
     assert bt._label_for("12.5.7") == "practice problem 7 in Lesson 12.5"
-    assert bt._label_for("8.2.5b") == "practice problem 5, part b in Lesson 8.2"
     assert bt._label_for("1.1.d1") == "a key term in Lesson 1.1"
     assert bt._label_for("1.1.c1") == "a check-for-understanding question in Lesson 1.1"
     assert bt._label_for("12.6.f1") == "the figure in Lesson 12.6"
-    assert bt._label_for("A.2.f1") == "the figure in Lesson A.2"
-    assert bt._label_for("mis.3") == "reference mis.3"          # bank code -> fallback
+    assert bt._label_for("3.1.h1") == "a how-to in Lesson 3.1"            # h branch
+    assert bt._label_for("12.5.x9") == "reference 12.5.x9 in Lesson 12.5"  # 3-part unknown kind -> fallback WITH lesson clause
+    assert bt._label_for("mis.3") == "reference mis.3"                    # 2-part bank code -> bare fallback
     assert bt._label_for("vis.t1") == "reference vis.t1"
+    # Pure-function coverage of the ", part" / A-scope branches. The current generator never emits a
+    # lettered part (_id_worked_practice writes f"{lid}.{pk}") nor an A.* f-code, so these inputs are
+    # defensive, not drawn from shipping output:
+    assert bt._label_for("8.2.5b") == "practice problem 5, part b in Lesson 8.2"
+    assert bt._label_for("A.2.f1") == "the figure in Lesson A.2"
+
+
+def test_attr_escaping():
+    assert bt._attr('a & "b"') == 'a &amp; &quot;b&quot;'   # & and double-quote escaped for the attribute
+    assert bt._attr("I'd") == "I'd"                         # apostrophe stays literal (no entity)
 
 
 def test_prompt_for_shape():
-    p = bt._prompt_for("12.5.w2")
-    assert p.startswith("Use the Algebra 1 tutor skill to help me with worked example 2 in Lesson 12.5")
-    assert "(reference 12.5.w2)" in p
-    assert "explain it, work through it together, or answer a specific question." in p
+    assert bt._prompt_for("12.5.w2") == (
+        "Use the Algebra 1 tutor skill to help me with worked example 2 in Lesson 12.5 "
+        "(reference 12.5.w2). Pull it up, then ask whether I'd like you to explain it, "
+        "work through it together, or answer a specific question.")
 
 
 def test_badge_launcher_attrs():
     html = bt.md_to_body("See {#12.5.w2} here.", launcher=True)
     assert 'class="refcode" id="12.5.w2" href="#12.5.w2"' in html
-    assert 'data-prompt="Use the Algebra 1 tutor skill to help me with worked example 2' in html
+    assert ('data-prompt="' + bt._attr(bt._prompt_for("12.5.w2")) + '"') in html   # full prompt, exact
     assert 'aria-label="Copy a tutor prompt for worked example 2 in Lesson 12.5"' in html
     assert "whether I'd like you" in html          # apostrophe stays literal (no entity)
 
@@ -84,7 +95,9 @@ def test_shared_elements_once_per_textbook_page():
     files = _built()
     page = files["unit-12-5.html"]
     assert page.count('id="rc-tip"') == 1 and page.count('id="rc-toast"') == 1
-    assert "data-prompt=" in page                   # lesson badges carry the prompt
+    # a real badge's data-prompt equals _prompt_for(code) (12.5.w1 is a known badge on this page)
+    code = "12.5.w1"
+    assert ('id="' + code + '" href="#' + code + '" data-prompt="' + bt._attr(bt._prompt_for(code)) + '"') in page
     assert files["index.html"].count('id="rc-toast"') == 1   # index also routes through _lesson_page
 
 
