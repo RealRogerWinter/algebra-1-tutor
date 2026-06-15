@@ -170,6 +170,28 @@ html.dark .hero-art{filter:brightness(.9) saturate(.92)}
 .answers .hint{color:var(--ink-soft); font-size:var(--step--1)} .answers[open] .hint{display:none}
 .answers .ak-body{padding:.1rem 1.4rem 1.1rem; overflow-wrap:break-word} .answers .ak-body > :last-child{margin-bottom:0}
 
+/* ---- per-question answer reveal (textbook practice) ---- */
+.vh{position:absolute!important; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden;
+  clip:rect(0 0 0 0); white-space:nowrap; border:0}
+.practice-intro{color:var(--ink-soft); font-size:var(--step--1); margin:.2rem 0 .7rem}
+.practice-sub{font-weight:600; font-size:var(--step--1); color:var(--ink-soft); margin:1.3rem 0 .5rem}
+.prow{display:flex; gap:.5rem .9rem; align-items:baseline; flex-wrap:wrap; background:var(--card);
+  border:1px solid var(--rule); border-radius:var(--radius); padding:.7rem .9rem; margin:.6rem 0}
+.prow .prob{flex:1 1 60%; min-width:0; overflow-wrap:break-word}
+.prow .pnum{color:var(--ink-soft); margin-right:.3rem}
+.prow .katex{white-space:normal} .prow .katex-display{overflow-x:auto; margin:.3rem 0}
+.qcheck{margin-left:auto; flex:0 0 auto}
+.qcheck > summary{cursor:pointer; list-style:none; display:inline-flex; align-items:center}
+.qcheck > summary::-webkit-details-marker{display:none}
+.qcheck .qc-label{font-size:var(--step--1); font-weight:600; color:var(--leaf);
+  border:1px solid var(--leaf); border-radius:999px; padding:.28rem .7rem; background:var(--tint-leaf, transparent)}
+.qcheck[open] .qc-label{color:var(--ink-soft); border-color:var(--rule)}
+.qcheck .qa{align-items:center; gap:.4rem; margin-left:.55rem; font-weight:600; color:var(--leaf)}
+.qcheck .qa::before{content:"¹3"; font-weight:700}
+.qcheck:not([open]) .qa{display:none} .qcheck[open] .qa{display:inline-flex}
+@media (prefers-reduced-motion:no-preference){ .prow{transition:border-color .15s ease} }
+@media print{ .qcheck .qa{display:inline-flex} .qcheck > summary{display:none} }
+
 /* ---- prev / next page nav ---- */
 .pagenav{display:flex; gap:1rem; justify-content:space-between; align-items:stretch;
   margin:var(--s7) auto 0; padding-top:var(--s5); border-top:1px solid var(--rule)}
