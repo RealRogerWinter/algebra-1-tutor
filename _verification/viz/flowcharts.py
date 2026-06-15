@@ -48,7 +48,7 @@ def _svg(slug, w, h, body):
     )
 
 
-def _box(x, y, w, h, lines, color, slug, idx, fill_opacity=0.10, accent=True):
+def _box(x, y, w, h, lines, color, slug, idx, fill_opacity=0.10, accent=True, text_scale=1.0):
     """A soft rounded box, left-accent bar, centered short text label(s).
 
     `lines` is a list of plain strings (flowchart node text -- short labels are allowed).
@@ -71,13 +71,17 @@ def _box(x, y, w, h, lines, color, slug, idx, fill_opacity=0.10, accent=True):
         )
     # vertically center the block of lines
     cx = x + w / 2 + (5 if accent else 0)
-    line_h = 17
+    # text_scale == 1.0 keeps the original int sizes/line-height byte-for-byte
+    # (so the other flowcharts don't churn); only a scaled box renders floats.
+    line_h = 17 * text_scale if text_scale != 1.0 else 17
     total = line_h * len(lines)
     start = y + h / 2 - total / 2 + 12
     for i, ln in enumerate(lines):
         weight = "600" if i == 0 else "400"
         col = color if i == 0 else "#555"
         size = 13 if i == 0 else 11.5
+        if text_scale != 1.0:
+            size = size * text_scale
         parts.append(
             f'<text x="{round(cx, 1)}" y="{round(start + i * line_h, 1)}" '
             f'text-anchor="middle" font-size="{size}" font-weight="{weight}" '
@@ -198,7 +202,7 @@ def _solve_linear():
 
     parts, anchors = [], []
     for (lines, color), top in zip(steps, tops):
-        svg, a = _box(bx, top, bw, bh, lines, color, slug, len(anchors))
+        svg, a = _box(bx, top, bw, bh, lines, color, slug, len(anchors), text_scale=1.25)
         parts.append(svg)
         anchors.append(a)
 
