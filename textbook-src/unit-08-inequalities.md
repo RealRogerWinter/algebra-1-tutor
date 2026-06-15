@@ -151,7 +151,7 @@ Picture two bars you might have to clear. *And* is "you must clear **both** bars
 
 *Or* is "clear **either** bar," so a number gets in if it passes even one condition, and you end up with everything either condition allows. "Water under 32 degrees or over 100" is an *or*: freezing *or* boiling, with the whole comfortable middle left out.
 
-On a number line, you shade each condition and then read off the combination. For an *and*, you keep only the part where the two shadings **overlap**, typically a single segment between two endpoints. For an *or*, you keep **everything** that either shading covered, often two separate rays heading opposite ways with a gap between them. The endpoints follow the same open/filled rule from Lesson 8.1: each boundary is open or filled according to its own sign.
+On a number line, you shade each condition and then read off the combination. For an *and*, you keep only the part where the two shadings **overlap**, typically a single segment between two endpoints {#8.2.f1}. For an *or*, you keep **everything** that either shading covered, often two separate rays heading opposite ways with a gap between them. The endpoints follow the same open/filled rule from Lesson 8.1: each boundary is open or filled according to its own sign.
 
 In symbols, an *and* often gets written as one chained statement. "x > 2 and x ≤ 5," the numbers between 2 and 5 with 5 included, can be squeezed into 2 < x ≤ 5, read as a single sentence: x is bigger than 2 *and* at most 5.
 

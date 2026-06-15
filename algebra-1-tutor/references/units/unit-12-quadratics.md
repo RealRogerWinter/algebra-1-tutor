@@ -112,7 +112,7 @@ This "multiply by the radical over itself" trick is for a *single* radical in th
   Stated once, conditional and complete: *x²=k ⇒ x=±√k when k≥0; no real solution when k<0.* The k<0 branch is not a side-exception to patch later — it is half of the rule, and it returns in 12.5 as the discriminant's sign.
 
 **Teaching arc (concrete → pictorial → symbolic):**
-- **Concrete — the core metaphor:** "x²=9 asks: *what number, squared, gives 9?* Try 3: yes. But try -3: (-3)²=9 — also yes! Squaring **lost the sign** (`metaphors.md` → Quadratics A), so two different starts land on 9. We have to report both." This is the whole unit in one sentence.
+- **Concrete — the core metaphor:** "x²=9 asks: *what number, squared, gives 9?* Try 3: yes. But try -3: (-3)²=9 — also yes! Squaring **lost the sign** (`metaphors.md` → Quadratics A), so two different starts land on 9 {#12.2.f1}. We have to report both." This is the whole unit in one sentence.
 - **Pictorial (optional):** the parabola y=x²-9 crosses the x-axis at -3 *and* 3 (preview of 12.6, `metaphors.md` → Quadratics B).
 - **Symbolic — the Square-Root Property:** isolate x², check the sign of k, then (if k≥0) apply ±√( ):
 $$x^2=9\;\Rightarrow\; x=\pm\sqrt9=\pm3.$$
@@ -190,7 +190,7 @@ When k isn't a perfect square, the answer stays in radical form (12.1): x²=7 �
 - **Factoring errors from Unit 11** (sign of the constants). Repair at the factoring step, and **check by expanding** back (`factor_check` habit) or substituting the root.
 - **Confusing "set factor to 0" with the answer's sign:** x+3=0 gives x=-3, not +3. `misconceptions.md §3`.
 
-**Visuals to offer:** area-model box for the factoring step (`visuals.md` "Area-model boxes", LaTeX `array`); the parabola preview if they want to *see* the two roots (12.6).
+**Visuals to offer:** area-model box for the factoring step (`visuals.md` "Area-model boxes", LaTeX `array`); the parabola preview if they want to *see* the two roots (12.6) {#12.3.f1}.
 
 **Check for understanding (transfer):**
 1. {#12.3.c1} "Solve (x+5)(x-1)=0 without expanding. What lets you split it into two easy equations?"
@@ -313,7 +313,7 @@ $$x=\frac{4\pm\sqrt0}{2}=\frac{4}{2}=2.$$
 - **Dividing only part of the numerator by 2a** — the whole -b±√( ) is over 2a. Keep the fraction bar full-width.
 - **Calling "no real solution" a mistake.** A negative discriminant is a *real, correct finding* (the parabola doesn't cross — 12.6), not an error to fix.
 
-**Visuals to offer:** the parabola (12.6) makes the three discriminant cases visible — crosses twice / touches once / misses. `visuals.md` Template 3.
+**Visuals to offer:** the parabola (12.6) makes the three discriminant cases visible — crosses twice / touches once / misses {#12.5.f1}. `visuals.md` Template 3.
 
 **Check for understanding (transfer):**
 1. {#12.5.c1} "Use the formula on x²-2x-5=0. What's the discriminant, and what does its sign tell you before you finish?"

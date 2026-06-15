@@ -20,6 +20,8 @@ Every equation you'll ever solve is built from one move, repeated. Once you can 
 
 Here's the idea, in something you can picture. Imagine a covered cup on a balance scale, sitting next to 5 coins, and the whole thing balancing 12 coins on the other pan. You want to know how much the cup weighs.
 
+<!--illus:2-1-cup-coins-->
+
 If you lift 5 coins off the left pan, the scale tips. To keep it level, you also lift 5 coins off the right. Do both, and it stays balanced: now the cup alone balances 7 coins. The cup weighs 7.
 
 That's the same thing this equation says:
@@ -129,6 +131,8 @@ Most equations that come up in real life take two moves, not one. There's nothin
 
 Think about getting dressed. You put your socks on first, then your shoes. To get undressed you reverse that, taking the shoes off first, then the socks.
 
+<!--illus:2-2-dressing-->
+
 Building 2x + 3 from x works the same way: you multiply by 2 (the sock), then add 3 (the shoe). So to get back to x, undo the last thing first. Take off the shoe by subtracting 3, then take off the sock by dividing by 2. That's why you strip away the +3 before you touch the ×2: it's the outermost layer.
 
 Here's that in symbols, with the check built in, so you can see each layer come off:
@@ -212,12 +216,16 @@ Start with combining, using the picture of a box that holds a hidden number. Pic
 
 But 3x + 2 is different. That's three boxes plus two loose coins. There's no way to fold loose coins into boxes and call it one thing, so 3x + 2 simply stays as it is. Only matching kinds combine.
 
+<!--illus:2-3-boxes-coins-->
+
 Now distributing. The number outside a set of parentheses has to reach *everyone* inside. Picture handing a flyer to every person in a room, skipping no one. So in 2(x + 4), the 2 greets the x and the 4 both. A clean way to see why is to draw it as the area of a rectangle, 2 tall and (x + 4) wide, split into two cells:
 $$\begin{array}{c|c|c}
  & x & 4 \\ \hline
 2 & 2x & 8
 \end{array}\qquad\Rightarrow\qquad 2(x+4)=2x+8$$
 The two cells are the two products, 2x and 8, and together they're the whole area: 2x + 8.
+
+<!--illus:2-3-area-distribute-->
 
 Then the one that bites. When the thing out front is a minus sign, it's really a −1, and it shakes hands with every term inside, including their signs. Take −(x − 4). The −1 meets the x and gives −x. Then it meets the −4, and −1 times −4 is +4. So −(x − 4) is −x + 4.
 
@@ -300,6 +308,8 @@ Picture the balance scale again, but now both pans hold boxes *and* coins. Take 
 $$5x+2=3x+10 \;\xrightarrow{\,-3x\,}\; 2x+2=10 \;\xrightarrow{\,-2\,}\; 2x=8 \;\xrightarrow{\,\div 2\,}\; x=4$$
 $$\text{Check: } 5(4)+2=22 \;\text{ and }\; 3(4)+10=22$$
 A small thing makes the numbers kinder: move the *smaller* variable term, so you don't end up with a negative coefficient. Either choice is correct, though; the answer comes out the same.
+
+<!--illus:2-4-both-pans-->
 
 **New terms:**
 - {#2.4.d1} **Conditional equation:** an equation that's true for exactly one value of the variable, the usual case, with a single solution (e.g. 5x+2=3x+10, true only at x=4).
@@ -446,6 +456,8 @@ If fractions already feel solid, you can move through this quickly. A good way t
 ### Fraction Refresher A: Common Denominators
 
 The one rule under all fraction addition is that you can only add **same-sized pieces**. Thirds and quarters aren't the same size, so you can't just add them as they sit. You first rename both as a common size, then add the numerators, which are the counts of pieces. This is also why a bigger bottom number can mean a *smaller* piece: split one pizza among 6 people instead of 4, and each slice is smaller, so 1/6 is less than 1/4 even though 6 is the bigger number. And you can never add across the top and bottom: 1/2 + 1/3 is not 2/5.
+
+<!--illus:2-5-pizza-fractions-->
 
 To find a common denominator, you have two options:
 - *Bulletproof:* multiply the denominators (4 and 6 → 24). This always works, though the answer may need reducing.

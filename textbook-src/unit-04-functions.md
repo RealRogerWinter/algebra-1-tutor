@@ -16,6 +16,8 @@ Think about a vending machine for a moment. You press a button and you get exact
 
 That reliable matching of each button to one snack is the whole idea behind a function. A function is a dependable pairing: each thing you put in comes back matched to exactly one thing.
 
+<!--illus:4-1-input-output-->
+
 Notice what the machine does *not* promise. It doesn't promise that every snack has its own button. Two different buttons can both dispense pretzels, and that's a perfectly good machine. Annoying, maybe, but not broken.
 
 What *would* count as broken is a button that gives pretzels sometimes and a soda other times. Press B4 and you can't tell what you'll get. That machine you'd kick.
@@ -31,6 +33,8 @@ The reading rule follows the vending machine exactly: it's a function when every
 Now the same idea on a graph, which is where you'll meet it most often. On a graph, an input is an x-value: a spot along the horizontal direction. "All the points sharing one input" is a single vertical line standing at that x.
 
 So sweep a vertical line slowly across the graph, left to right, and watch how many times it touches. If it never touches the graph in more than one place, every input has at most one output, and you've got a function. If a vertical line ever hits the graph in two places at once, that one input has two outputs, and it isn't.
+
+<!--illus:4-1-vertical-line-test-->
 
 This sweep has a name: the **vertical line test**. Walking your finger across the page as the imaginary line is a fine way to do it.
 
@@ -148,6 +152,8 @@ Start with something homier than symbols: a recipe. Suppose the recipe is *tripl
 Here's the one thing to nail down right away, because the parentheses are doing something unusual. In f(2), the parentheses do not mean multiply. They mean *feed this in*. So f(2) is not f times 2. It's "the output of recipe f when you put in 2." Read it out loud as "f of 2," and that misreading mostly takes care of itself.
 
 You can picture the same thing as a little machine with a readout. A number goes in the top, the rule runs inside, and the answer lights up on the display: drop in 2, and f(2) = 5 shows on the screen. That picture also gives you two words you'll need. Every input the machine is willing to accept is its **domain**. Every output that can ever light up on the display is its **range**.
+
+<!--illus:4-2-trays-->
 
 Now to the symbols themselves. The habit that will save you again and again is to write the input inside parentheses when you substitute, like this:
 $$f(2) = 3(2) - 1 = 6 - 1 = 5$$

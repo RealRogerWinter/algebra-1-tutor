@@ -146,8 +146,60 @@ def _r_number_line(s):
             out.append(f'<text x="{x}" y="18" font-size="10" text-anchor="middle" fill="#c0392b">{p["label"]}</text>')
     return f'<svg viewBox="0 0 320 60" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">\n  ' + "\n  ".join(out) + "\n</svg>\n"
 
+def _r_plane(s):
+    """Four-quadrant coordinate plane with quadrant sign labels and a plotted point (dashed guides
+    to each axis). 5.1: the plane itself is the lesson."""
+    xmin, xmax = s["xwindow"]; ymin, ymax = s["ywindow"]
+    M = _mapper(xmin, xmax, ymin, ymax)
+    out = [_axes(M, xmin, xmax, ymin, ymax)]
+    for (qx, qy, lab) in s.get("quadrants", []):
+        sx, sy = M(qx, qy)
+        out.append(f'<text x="{sx}" y="{sy}" font-size="9" fill="#888" text-anchor="middle">{lab}</text>')
+    for (x, y, lab) in s.get("marks", []):
+        px, py = M(x, y); ax0, _ = M(0, y); _, ay0 = M(x, 0)
+        out.append(f'<line x1="{ax0}" y1="{py}" x2="{px}" y2="{py}" stroke="#c0392b" stroke-width="1" stroke-dasharray="3 3"/>')
+        out.append(f'<line x1="{px}" y1="{ay0}" x2="{px}" y2="{py}" stroke="#c0392b" stroke-width="1" stroke-dasharray="3 3"/>')
+        out.append(_dot(M, x, y)); out.append(_label(M, x, y, lab))
+    return _svg("\n  ".join(out))
+
+def _r_lines2(s):
+    """Two lines on one axis, with their intersection (the solution of the system) marked. 7.1."""
+    xmin, xmax = s["xwindow"]; ymin, ymax = s["ywindow"]
+    M = _mapper(xmin, xmax, ymin, ymax)
+    out = [_axes(M, xmin, xmax, ymin, ymax)]
+    cols = ["#2980b9", "#8e44ad"]
+    for i, ln in enumerate(s["lines"]):
+        m, b = sp.Rational(str(ln["m"])), sp.Rational(str(ln["b"]))
+        (x1, y1), (x2, y2) = M(xmin, float(m * xmin + b)), M(xmax, float(m * xmax + b))
+        out.append(f'<line x1="{x1}" y1="{y1}" x2="{x2}" y2="{y2}" stroke="{cols[i % len(cols)]}" stroke-width="2.5"/>')
+    ix, iy = s["intersect"]
+    out.append(_dot(M, ix, iy)); out.append(_label(M, ix, iy, f"({ix}, {iy})"))
+    return _svg("\n  ".join(out))
+
+def _r_growth(s):
+    """A straight line vs a bending exponential curve on one axis (same start). 9.2: linear vs
+    exponential is the unit's punchline; 'straight vs bending' must be seen."""
+    xmin, xmax = s["xwindow"]; ymin, ymax = s["ywindow"]
+    M = _mapper(xmin, xmax, ymin, ymax)
+    out = [_axes(M, xmin, xmax, ymin, ymax)]
+    m, b = sp.Rational(str(s["line"]["m"])), sp.Rational(str(s["line"]["b"]))
+    (lx1, ly1), (lx2, ly2) = M(xmin, float(m * xmin + b)), M(xmax, float(m * xmax + b))
+    out.append(f'<line x1="{lx1}" y1="{ly1}" x2="{lx2}" y2="{ly2}" stroke="#2980b9" stroke-width="2.5"/>')
+    base = float(sp.Rational(str(s["exp"]["base"])))
+    pts, x = [], xmin
+    while x <= xmax + 1e-9:
+        y = base ** x
+        if ymin - 1 <= y <= ymax + 1:
+            sx, sy = M(x, y); pts.append(f"{sx},{sy}")
+        x += (xmax - xmin) / 80.0
+    out.append(f'<polyline fill="none" stroke="#8e44ad" stroke-width="2.5" points="{" ".join(pts)}"/>')
+    for (x, y, lab) in s.get("marks", []):
+        out.append(_dot(M, x, y)); out.append(_label(M, x, y, lab))
+    return _svg("\n  ".join(out))
+
 RENDERERS = {"line": _r_line, "parabola": _r_parabola, "vgraph": _r_vgraph,
-             "inequality_region": _r_inequality, "scatter": _r_scatter, "number_line": _r_number_line}
+             "inequality_region": _r_inequality, "scatter": _r_scatter, "number_line": _r_number_line,
+             "plane": _r_plane, "lines2": _r_lines2, "growth": _r_growth}
 
 def render(spec):
     return RENDERERS[spec["type"]](spec)
@@ -213,6 +265,24 @@ def accuracy_issues(spec):
         for p in spec.get("points", []):
             if not (spec["min"] <= p["x"] <= spec["max"]):
                 iss.append(f"{code}: point {p['x']} out of range [{spec['min']},{spec['max']}]")
+    elif t == "plane":
+        xw, yw = spec["xwindow"], spec["ywindow"]
+        for (mx, my, lab) in spec.get("marks", []):
+            if not (xw[0] <= mx <= xw[1] and yw[0] <= my <= yw[1]):
+                iss.append(f"{code}: plotted point ({mx},{my}) outside the window")
+    elif t == "lines2":
+        ix, iy = sp.nsimplify(spec["intersect"][0]), sp.nsimplify(spec["intersect"][1])
+        for ln in spec["lines"]:
+            m, b = sp.Rational(str(ln["m"])), sp.Rational(str(ln["b"]))
+            if iy != m * ix + b:
+                iss.append(f"{code}: stated intersection {spec['intersect']} not on y={m}x+{b}")
+    elif t == "growth":
+        m, b = sp.Rational(str(spec["line"]["m"])), sp.Rational(str(spec["line"]["b"]))
+        base = sp.Rational(str(spec["exp"]["base"]))
+        for (mx, my, lab) in spec.get("marks", []):
+            mxs, mys = sp.nsimplify(mx), sp.nsimplify(my)
+            if not (mys == m * mxs + b or mys == base ** mxs):
+                iss.append(f"{code}: mark ({mx},{my}) '{lab}' on neither y={m}x+{b} nor y={base}^x")
     return iss
 
 # --- registry -----------------------------------------------------------------------------------
@@ -258,6 +328,50 @@ FIGURES = [
     {"code": "A.2.f1", "lesson": "A.2", "type": "scatter",
      "points": [(1, 2), (2, 3), (3, 3), (4, 5), (5, 6)], "fit": {"m": 1, "b": 1},
      "caption": "scatter + best fit y = x + 1"},
+
+    # --- New deterministic figures (IMAGE_PLAN.md §3b): math-bearing, reuse/extend renderers ------
+    # Unit 1 — negatives as distance on the line
+    {"code": "1.4.f1", "lesson": "1.4", "type": "number_line", "min": -6, "max": 6,
+     "ticks": [-6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6],
+     "points": [{"x": -5, "label": "-5"}, {"x": -2, "label": "-2"}],
+     "caption": "-5 sits farther left (a bigger debt) than -2"},
+    # Unit 5 — the coordinate plane; writing a line from a point + slope
+    {"code": "5.1.f1", "lesson": "5.1", "type": "plane", "xwindow": [-5, 5], "ywindow": [-5, 5],
+     "quadrants": [(2.7, 2.7, "(+, +)"), (-2.7, 2.7, "(-, +)"), (-2.7, -2.7, "(-, -)"), (2.7, -2.7, "(+, -)")],
+     "marks": [(3, 2, "(3, 2)")], "caption": "the coordinate plane: plotting (3, 2)"},
+    {"code": "5.5.f1", "lesson": "5.5", "type": "line", "m": 4, "b": -5,
+     "xwindow": [-1, 4], "ywindow": [-9, 11], "marks": [(0, -5, "(0, -5)"), (2, 3, "(2, 3)")],
+     "caption": "y = 4x - 5 through (2, 3)"},
+    # Unit 6 — scatter + best fit (a distinct cloud from A.2)
+    {"code": "6.3.f1", "lesson": "6.3", "type": "scatter",
+     "points": [(1, 3), (2, 2), (3, 4), (4, 5), (5, 4), (6, 6)], "fit": {"m": 0.6, "b": 2},
+     "caption": "a scatter plot with its line of best fit"},
+    # Unit 7 — a system solved by graphing: two lines meet at the solution
+    {"code": "7.1.f1", "lesson": "7.1", "type": "lines2",
+     "lines": [{"m": 1, "b": 1}, {"m": -1, "b": 5}], "intersect": [2, 3],
+     "xwindow": [-1, 5], "ywindow": [-1, 7], "caption": "two lines meet at the solution (2, 3)"},
+    # Unit 8 — a compound 'and' inequality on the line
+    {"code": "8.2.f1", "lesson": "8.2", "type": "number_line", "min": -4, "max": 5,
+     "ticks": [-4, -3, -2, -1, 0, 1, 2, 3, 4, 5],
+     "points": [{"x": -1, "label": "-1", "filled": True}, {"x": 3, "label": "3", "filled": False}],
+     "segments": [{"from": -1, "to": 3}], "caption": "-1 <= x < 3 (a compound 'and')"},
+    # Unit 9 — linear vs exponential
+    {"code": "9.2.f1", "lesson": "9.2", "type": "growth", "line": {"m": 2, "b": 0}, "exp": {"base": 2},
+     "xwindow": [0, 4], "ywindow": [0, 16], "marks": [(1, 2, "(1, 2)"), (3, 8, "(3, 8)")],
+     "caption": "straight line y = 2x vs bending curve y = 2^x"},
+    # Unit 12 — quadratics: two solutions, factoring roots, formula roots
+    {"code": "12.2.f1", "lesson": "12.2", "type": "number_line", "min": -5, "max": 5,
+     "ticks": [-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5],
+     "points": [{"x": -3, "label": "-3"}, {"x": 3, "label": "3"}],
+     "caption": "x^2 = 9 has two solutions, x = -3 and x = 3"},
+    {"code": "12.3.f1", "lesson": "12.3", "type": "parabola", "a": 1, "b": -1, "c": -6,
+     "xwindow": [-4, 5], "ywindow": [-7, 8],
+     "marks": [(-2, 0, "(-2, 0)"), (3, 0, "(3, 0)"), (0.5, -6.25, "vertex")],
+     "roots": [-2, 3], "caption": "y = x^2 - x - 6 = (x-3)(x+2)"},
+    {"code": "12.5.f1", "lesson": "12.5", "type": "parabola", "a": 1, "b": -4, "c": 3,
+     "xwindow": [-1, 5], "ywindow": [-3, 6],
+     "marks": [(1, 0, "(1, 0)"), (3, 0, "(3, 0)"), (2, -1, "vertex")],
+     "roots": [1, 3], "caption": "y = x^2 - 4x + 3: discriminant 4 > 0, two roots"},
 ]
 
 def _svg_path(code):

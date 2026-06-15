@@ -11,5 +11,5 @@ def test_zip_has_key_content():
     names = {n.replace("\\", "/") for n in z.namelist()}
     assert "algebra-1-tutor/SKILL.md" in names
     assert "algebra-1-tutor/references/sources.md" in names      # bundled reference pack
-    assert sum(1 for n in names if "/figures/" in n) == 12       # bundled figures
+    assert sum(1 for n in names if "/figures/" in n) == 22       # bundled figures (12 original + 10 new §3b)
     assert z.testzip() is None
