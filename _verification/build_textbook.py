@@ -20,6 +20,7 @@ UNIT_MD = os.path.join(REPO_ROOT, "algebra-1-tutor", "references", "units")
 TEXTBOOK_SRC = os.path.join(REPO_ROOT, "textbook-src")
 FIG_DIR = os.path.join(REPO_ROOT, "algebra-1-tutor", "figures")
 OUT_DIR = os.path.join(REPO_ROOT, "docs", "textbook")
+ASSETS_DIR = os.path.join(REPO_ROOT, "docs", "assets")
 KATEX = "0.16.11"
 ANCHOR_RE = re.compile(r"\{#([^}\s]+)\}")
 FCODE_RE = re.compile(r"^(?:[1-9]|1[0-2]|A)\.\d+\.f\d+[a-z]?$")
@@ -267,6 +268,14 @@ def _overview_fname(uid):
 def _lesson_fname(lesson_id):
     scope, sub = lesson_id.split(".")
     return f"appendix-{sub}.html" if scope == "A" else f"unit-{int(scope):02d}-{sub}.html"
+
+
+def _lesson_hero(lesson_id):
+    """A per-lesson hero illustration lives at docs/assets/hero-<id>.jpg (lesson dots -> dashes).
+    Auto-wired when the asset exists, so a lesson without one simply renders no hero art (and the
+    build stays deterministic on the committed asset set)."""
+    name = "hero-" + lesson_id.replace(".", "-")
+    return f"../assets/{name}.jpg" if os.path.exists(os.path.join(ASSETS_DIR, name + ".jpg")) else None
 
 
 def _split_unit(md):
@@ -785,7 +794,8 @@ def build_site(ssot):
             fn = _lesson_fname(lid)
             lbody = _strip_lead(md_to_body(chunk), "h2")
             pl2, nl2 = around(fn)
-            files[fn] = _lesson_page(lt, lbody, model, fn, pl2, nl2, kicker=f"{kicker} · Lesson {lid}")
+            files[fn] = _lesson_page(lt, lbody, model, fn, pl2, nl2, kicker=f"{kicker} · Lesson {lid}",
+                                     hero=_lesson_hero(lid))
     return files
 
 
