@@ -252,6 +252,7 @@ def md_to_body(text):
     # others (e.g. CPython 3.11.9 vs 3.11.15) — remove any residue so the output is byte-identical everywhere.
     body = body.replace(' markdown="1"', '')
     body = body.replace("<hr />", _DIVIDER).replace("<hr>", _DIVIDER)  # decorative lesson dividers
+    body = body.replace(chr(92) + "$", "$")  # python-markdown leaves \$ literal; show currency as $ (math $$ stays protected)
     return _restore_math(body, math)
 
 
