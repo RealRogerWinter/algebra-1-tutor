@@ -28,7 +28,7 @@ VIZ_FIGURES = [
     {"code": "1.1.f1", "module": "interactive_equation", "index": 0, "facts": [("4+3", "7")]},
     {"code": "1.3.f1", "module": "flowcharts", "index": 0, "facts": [("8-2*3+4", "6")]},
     {"code": "1.5.f1", "module": "interactive_equation", "index": 1, "facts": [("3*4+2", "14")]},
-    {"code": "2.1.f1", "module": "interactive_equation", "index": 2, "facts": [("4*5", "20")]},
+    {"code": "2.1.f1", "module": "interactive_equation", "index": 2, "facts": [("4*3", "12")]},
     {"code": "2.2.f1", "module": "bar_models", "index": 2, "facts": [("2*4+3", "11")]},
     {"code": "2.2.f2", "module": "annotated_examples", "index": 0, "facts": [("2*4+3", "11")]},
     {"code": "2.3.f1", "module": "area_models", "index": 3, "facts": [("3*x+2*x", "5*x")]},
