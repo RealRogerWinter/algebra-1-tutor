@@ -215,8 +215,8 @@ def _solve_linear():
         '<figure style="margin:0;text-align:center">'
         + svg
         + '<figcaption style="margin-top:.6rem;font-size:.95em;color:#555">'
-        'Same path every time. For example $$3(x+2) = x + 10$$ becomes '
-        '$$3x + 6 = x + 10,\\ \\ 2x = 4,\\ \\ x = 2.$$'
+        'Same path every time. For example $$3(x-2)+4 = 2(x+1)-x$$ becomes '
+        '$$3x - 2 = x + 2,\\ \\ 2x = 4,\\ \\ x = 2.$$'
         '</figcaption></figure>'
     )
     return html
@@ -287,13 +287,13 @@ def _verify_math():
     # Sample 1: 8 - 2*3 + 4 == 6, evaluated by true order of operations.
     assert sp.sympify("8 - 2*3 + 4") == 6, "order-of-operations example wrong"
 
-    # Sample 2: 3(x+2) = x+10  ->  x = 2, and each printed step is an equivalent equation.
-    eq = sp.Eq(3 * (x + 2), x + 10)
+    # Sample 2: 3(x-2)+4 = 2(x+1)-x  ->  x = 2, and each printed step is an equivalent equation.
+    eq = sp.Eq(3 * (x - 2) + 4, 2 * (x + 1) - x)
     sol = sp.solve(eq, x)
     assert sol == [2], f"linear solution wrong: {sol}"
     # printed intermediate forms must be equivalent to the original equation
-    assert sp.simplify((3 * (x + 2)) - (x + 10)) == sp.simplify((3 * x + 6) - (x + 10))
-    assert sp.simplify((3 * x + 6 - (x + 10)) - (2 * x - 4)) == 0
+    assert sp.simplify((3 * (x - 2) + 4) - (2 * (x + 1) - x)) == sp.simplify((3 * x - 2) - (x + 2))
+    assert sp.simplify((3 * x - 2 - (x + 2)) - (2 * x - 4)) == 0
     # final value satisfies the equation
     assert eq.subs(x, 2)
 
@@ -319,7 +319,7 @@ def samples():
             "html": _order_of_operations(),
         },
         {
-            "caption": "Solve a linear equation: the same five steps every time (lesson 2.1)",
+            "caption": "Solve a linear equation: the same five steps every time (lesson 2.4)",
             "html": _solve_linear(),
         },
         {

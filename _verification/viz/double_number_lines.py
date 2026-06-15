@@ -9,7 +9,7 @@ pixels-per-unit on each line), so equal ratios always land in the same
 column. The numbers printed are verified with plain arithmetic:
 
   (1) 60 mi : 1 hr   ->  60/1 = 120/2 = 180/3 = 60 mi per hr
-  (2) 3 apples : 2 dollars -> 3/2 = 6/4 = 9/6 = 1.5 apples per dollar
+  (2) 4 apples : 3 dollars -> 4/3 = 8/6 = 12/9 apples per dollar
   (3) percent        ->  10/40 = 25%, 20/40 = 50%, 40/40 = 100%
 """
 
@@ -181,22 +181,22 @@ def _miles_hours():
 # Sample 2 — ratio 3 apples : 2 dollars, scaled to 6:4 and 9:6
 # ---------------------------------------------------------------------------
 def _apples_dollars():
-    pairs = [(3, 2), (6, 4), (9, 6)]
+    pairs = [(4, 3), (8, 6), (12, 9)]
     from fractions import Fraction as F
     rates = {F(a, d) for a, d in pairs}
-    assert rates == {F(3, 2)}, "ratio not constant"
+    assert rates == {F(4, 3)}, "ratio not constant"
 
     svg = _diagram(
         top_label="apples",
         bottom_label="dollars",
         top_color=GREEN,
         bottom_color=GOLD,
-        top_max=9,        # right edge = 9 apples
-        bottom_max=6,     # right edge = 6 dollars (9/6 = 3/2)
+        top_max=12,       # right edge = 12 apples
+        bottom_max=9,     # right edge = 9 dollars (12/9 = 4/3)
         pairs=pairs,
-        title="Double number line: 3 apples for 2 dollars",
+        title="Double number line: 4 apples for 3 dollars",
     )
-    math = r"$$\frac{3\text{ apples}}{2\text{ dollars}}=\frac{6\text{ apples}}{4\text{ dollars}}=\frac{9\text{ apples}}{6\text{ dollars}}=\tfrac{3}{2}$$"
+    math = r"$$\frac{4\text{ apples}}{3\text{ dollars}}=\frac{8\text{ apples}}{6\text{ dollars}}=\frac{12\text{ apples}}{9\text{ dollars}}=\tfrac{4}{3}$$"
     return svg + math
 
 
@@ -231,7 +231,7 @@ def samples():
             "html": _miles_hours(),
         },
         {
-            "caption": "3 apples for 2 dollars, scaled up to 6 : 4 and 9 : 6",
+            "caption": "4 apples for 3 dollars, scaled up to 8 : 6 and 12 : 9",
             "html": _apples_dollars(),
         },
         {

@@ -261,28 +261,29 @@ def _histogram():
 # ================================================================================================
 # (3) TWO-WAY TABLE (2x2 with totals + highlighted cell)
 # ================================================================================================
-# Rows: where people live (apartment / house). Columns: owns a pet / no pet.
-# Counts chosen so apartment pet-rate = 30%, house pet-rate = 80%, overall = 60% -> a real
-# association. The high-rate cell (house & pet) is highlighted.
+# Matches the Lesson A.3 worked-example table exactly (n = 50): rows = owns a pet (Yes / No),
+# columns = where they live (Apartment / House). Comparing DOWN the columns, the apartment
+# pet-rate is 6/20 = 30% and the house pet-rate is 24/30 = 80% -> a real association. The
+# high-rate cell (pet & house) is highlighted as the "busy corner".
 _TW = {
-    "apt_pet": 3, "apt_no": 7,
-    "house_pet": 12, "house_no": 3,
+    "pet_apt": 6, "pet_house": 24,
+    "no_apt": 14, "no_house": 6,
 }
 
 
 def _two_way():
-    apt_pet = _TW["apt_pet"]
-    apt_no = _TW["apt_no"]
-    house_pet = _TW["house_pet"]
-    house_no = _TW["house_no"]
-    row_apt = apt_pet + apt_no
-    row_house = house_pet + house_no
-    col_pet = apt_pet + house_pet
-    col_no = apt_no + house_no
-    grand = row_apt + row_house
+    pet_apt = _TW["pet_apt"]
+    pet_house = _TW["pet_house"]
+    no_apt = _TW["no_apt"]
+    no_house = _TW["no_house"]
+    row_pet = pet_apt + pet_house
+    row_no = no_apt + no_house
+    col_apt = pet_apt + no_apt
+    col_house = pet_house + no_house
+    grand = row_pet + row_no
 
-    apt_rate = F(apt_pet, row_apt)
-    house_rate = F(house_pet, row_house)
+    apt_rate = F(pet_apt, col_apt)        # of apartment dwellers, the share with a pet
+    house_rate = F(pet_house, col_house)  # of house dwellers, the share with a pet
 
     hi = (f"background:rgba(169,116,15,0.16);"
           f"outline:2px solid {GOLD};outline-offset:-2px;font-weight:700;color:{GOLD}")
@@ -291,41 +292,41 @@ def _two_way():
     # Plain HTML table styled to lean on the book's own table CSS + variables.
     return f"""<div style="max-width:440px;margin:0 auto">
   <table style="border-collapse:collapse;width:100%;background:var(--card);border-radius:var(--radius-sm);overflow:hidden;font-size:.95em">
-    <caption style="{cap}">Where people live vs. owning a pet (n = {grand})</caption>
+    <caption style="{cap}">Owning a pet vs. where people live (n = {grand})</caption>
     <thead>
       <tr>
         <th style="border:1px solid var(--rule);padding:.45rem .6rem;background:var(--card-2)"></th>
-        <th style="border:1px solid var(--rule);padding:.45rem .6rem;background:var(--card-2);text-align:center">Has a pet</th>
-        <th style="border:1px solid var(--rule);padding:.45rem .6rem;background:var(--card-2);text-align:center">No pet</th>
+        <th style="border:1px solid var(--rule);padding:.45rem .6rem;background:var(--card-2);text-align:center">Apartment</th>
+        <th style="border:1px solid var(--rule);padding:.45rem .6rem;background:var(--card-2);text-align:center">House</th>
         <th style="border:1px solid var(--rule);padding:.45rem .6rem;background:var(--card-2);text-align:center">Total</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <th style="border:1px solid var(--rule);padding:.45rem .6rem;background:var(--card-2);text-align:left">Apartment</th>
-        <td style="border:1px solid var(--rule);padding:.45rem .6rem;text-align:center">{apt_pet}</td>
-        <td style="border:1px solid var(--rule);padding:.45rem .6rem;text-align:center">{apt_no}</td>
-        <td style="border:1px solid var(--rule);padding:.45rem .6rem;text-align:center;color:var(--ink-soft)">{row_apt}</td>
+        <th style="border:1px solid var(--rule);padding:.45rem .6rem;background:var(--card-2);text-align:left">Pet: Yes</th>
+        <td style="border:1px solid var(--rule);padding:.45rem .6rem;text-align:center">{pet_apt}</td>
+        <td style="border:1px solid var(--rule);padding:.45rem .6rem;text-align:center;{hi}">{pet_house}</td>
+        <td style="border:1px solid var(--rule);padding:.45rem .6rem;text-align:center;color:var(--ink-soft)">{row_pet}</td>
       </tr>
       <tr>
-        <th style="border:1px solid var(--rule);padding:.45rem .6rem;background:var(--card-2);text-align:left">House</th>
-        <td style="border:1px solid var(--rule);padding:.45rem .6rem;text-align:center;{hi}">{house_pet}</td>
-        <td style="border:1px solid var(--rule);padding:.45rem .6rem;text-align:center">{house_no}</td>
-        <td style="border:1px solid var(--rule);padding:.45rem .6rem;text-align:center;color:var(--ink-soft)">{row_house}</td>
+        <th style="border:1px solid var(--rule);padding:.45rem .6rem;background:var(--card-2);text-align:left">Pet: No</th>
+        <td style="border:1px solid var(--rule);padding:.45rem .6rem;text-align:center">{no_apt}</td>
+        <td style="border:1px solid var(--rule);padding:.45rem .6rem;text-align:center">{no_house}</td>
+        <td style="border:1px solid var(--rule);padding:.45rem .6rem;text-align:center;color:var(--ink-soft)">{row_no}</td>
       </tr>
       <tr>
         <th style="border:1px solid var(--rule);padding:.45rem .6rem;background:var(--card-2);text-align:left">Total</th>
-        <td style="border:1px solid var(--rule);padding:.45rem .6rem;text-align:center;color:var(--ink-soft)">{col_pet}</td>
-        <td style="border:1px solid var(--rule);padding:.45rem .6rem;text-align:center;color:var(--ink-soft)">{col_no}</td>
+        <td style="border:1px solid var(--rule);padding:.45rem .6rem;text-align:center;color:var(--ink-soft)">{col_apt}</td>
+        <td style="border:1px solid var(--rule);padding:.45rem .6rem;text-align:center;color:var(--ink-soft)">{col_house}</td>
         <td style="border:1px solid var(--rule);padding:.45rem .6rem;text-align:center;color:var(--ink-soft);font-weight:700">{grand}</td>
       </tr>
     </tbody>
   </table>
   <p style="margin:.7rem 0 0;color:var(--ink-soft);font-size:.92em;line-height:1.5">
-    The gold cell is the busy corner. Comparing across rows:
+    The gold cell is the busy corner. Comparing down the columns (within each place):
   </p>
-  $$\\text{{apartment}}:\\ \\frac{{{apt_pet}}}{{{row_apt}}}={_num(apt_rate)}={_pct(apt_rate)}\\%
-     \\qquad \\text{{house}}:\\ \\frac{{{house_pet}}}{{{row_house}}}={_num(house_rate)}={_pct(house_rate)}\\%$$
+  $$\\text{{apartment}}:\\ \\frac{{{pet_apt}}}{{{col_apt}}}={_num(apt_rate)}={_pct(apt_rate)}\\%
+     \\qquad \\text{{house}}:\\ \\frac{{{pet_house}}}{{{col_house}}}={_num(house_rate)}={_pct(house_rate)}\\%$$
   <p style="margin:.4rem 0 0;color:var(--ink-soft);font-size:.92em;line-height:1.5">
     {_pct(house_rate)}% of house-dwellers have a pet versus {_pct(apt_rate)}% in apartments,
     so where you live and owning a pet are <strong style="color:var(--ink)">associated</strong>.
@@ -358,13 +359,13 @@ def _selftest():
     assert sum(counts) == len(_HIST_DATA)
 
     # (3) two-way table: margins are internally consistent; the association is real
-    apt_pet, apt_no = _TW["apt_pet"], _TW["apt_no"]
-    house_pet, house_no = _TW["house_pet"], _TW["house_no"]
-    grand = apt_pet + apt_no + house_pet + house_no
-    assert (apt_pet + house_pet) + (apt_no + house_no) == grand
-    assert F(apt_pet, apt_pet + apt_no) == F(3, 10)        # 30%
-    assert F(house_pet, house_pet + house_no) == F(4, 5)   # 80%
-    assert F(apt_pet + house_pet, grand) == F(3, 5)        # 60% overall
+    pet_apt, pet_house = _TW["pet_apt"], _TW["pet_house"]
+    no_apt, no_house = _TW["no_apt"], _TW["no_house"]
+    grand = pet_apt + pet_house + no_apt + no_house
+    assert (pet_apt + no_apt) + (pet_house + no_house) == grand
+    assert F(pet_apt, pet_apt + no_apt) == F(3, 10)        # apartment: 6/20 = 30%
+    assert F(pet_house, pet_house + no_house) == F(4, 5)   # house: 24/30 = 80%
+    assert F(pet_apt + pet_house, grand) == F(3, 5)        # overall pet rate 30/50 = 60%
     return True
 
 
@@ -397,8 +398,8 @@ def samples():
         },
         {
             "caption": (
-                "Two-way table with row and column totals; the highlighted cell and the "
-                "two row percentages reveal an association."
+                "Two-way table (pets vs. housing, n = 50) with row and column totals; the "
+                "highlighted cell and the two column percentages reveal an association."
             ),
             "html": _two_way(),
         },
