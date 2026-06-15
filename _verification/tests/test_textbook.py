@@ -287,6 +287,15 @@ def test_pair_does_not_append_later_key_to_last_answer():
     assert "4) D" in html                             # the 4-6 key still renders (its own box)
 
 
+def test_practice_instr_preserves_inline_bold():
+    # the caption must keep inline markdown (only the '**Practice problems**' wrapper is stripped)
+    assert bt._practice_instr("**Practice problems:** label **all** types") == "label **all** types"
+    assert bt._practice_instr("**Practice problems** (solve by graphing):") == "(solve by graphing)"
+    html = bt.md_to_body("## Lesson 9.1: D\n\n**Practice problems:** label **all** types\n\n"
+                         "1. a  2. b\n\n**Answer key:**\n1) A  2) B\n\n---\n")
+    assert '<p class="practice-intro">label <strong>all</strong> types</p>' in html
+
+
 def test_pair_falls_back_on_preamble_table():
     # a shared $$ table/array before problem 1 (appendix A.3) can't live in per-problem rows, so the
     # lesson must fall back (keeping the table), not silently drop it.

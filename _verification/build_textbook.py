@@ -401,8 +401,11 @@ def _hdr_kind(line):
 
 def _practice_instr(header_line):
     """The instructional remainder of a practice header, e.g. '**Practice problems** (solve by
-    graphing …):' -> '(solve by graphing …)'. Empty for a plain '**Practice problems:**'."""
-    t = re.sub(r'^\s*Practice problems?\b', '', header_line.replace("**", " ")).strip()
+    graphing …):' -> '(solve by graphing …)'. Empty for a plain '**Practice problems:**'. Removes
+    only the leading '**Practice problems**' wrapper and surrounding separator punctuation, so inline
+    markdown inside the instruction (e.g. 'label **all** types') is preserved for _md_inline."""
+    m = re.match(r'^\*\*Practice problems?[^*]*\*\*\s*(.*)$', header_line)
+    t = (m.group(1) if m else "").strip()
     t = re.sub(r'^[\s.:•·–—-]+', '', t)        # drop leading separator punctuation ('**…**. Use …')
     t = re.sub(r'[\s:]+$', '', t)              # and a trailing colon ('(solve …):' -> '(solve …)')
     return re.sub(r'\s+', ' ', t).strip()
@@ -447,21 +450,21 @@ def _scan_pa_blocks(lines):
         i = j
 
 
-def _detect_delim(s):
-    """The marker delimiter a key uses ('.' or ')'), from its first token-start marker, or None."""
+def _normalize_key(key_text):
+    """Flatten an answer-key block, drop a leading italic '*(note)*', and detect its marker delimiter.
+    -> (flattened_string, delim) with delim '.' or ')' (or None if the block has no marker)."""
+    s = re.sub(r'^\*\([^)]*\)\*\s*', '', _flatten(key_text))
     m = re.search(r'(?:^|(?<=\s))\d+([).])\s', s)
-    return m.group(1) if m else None
+    return s, (m.group(1) if m else None)
 
 
 def _answers_for(key_text, nums):
-    """Extract answers for the ordered problem numbers `nums`. Detect the key's marker delimiter and
-    locate each expected number's '<n><delim> ' in sequence (token-start). Searching for the specific
-    expected number with the key's own delimiter makes it immune to the other delimiter inside a value
-    (e.g. 'is 4)' / '(9, 3)' in a '.'-keyed list) and to ')'/'.' inside parenthesised values. Strips a
-    trailing ' · ' item separator. Returns {n: answer}, or None if a marker is missing OR a value is
-    empty or is itself a swallowed next-marker (forcing graceful fallback)."""
-    s = re.sub(r'^\*\([^)]*\)\*\s*', '', _flatten(key_text))
-    delim = _detect_delim(s)
+    """Extract answers for the ordered problem numbers `nums`. Using the key's own marker delimiter
+    and searching for each expected number's '<n><delim> ' in sequence (token-start) makes it immune
+    to the OTHER delimiter inside a value (e.g. 'is 4)' / '(9, 3)' in a '.'-keyed list) and to ')'/'.'
+    inside parenthesised values. Strips a trailing ' · ' item separator. Returns {n: answer}, or None
+    if a marker is missing OR a value is empty or is itself a swallowed next-marker (-> fallback)."""
+    s, delim = _normalize_key(key_text)
     if not delim:
         return None
     d = re.escape(delim)
@@ -486,8 +489,7 @@ def _key_numbers(key_text, universe):
     using the key's own delimiter. Used only to decide whether a key is fully consumed and can be
     dropped; restricting to real problem numbers keeps a residual key (answers to non-practice
     prompts) from being dropped."""
-    s = re.sub(r'^\*\([^)]*\)\*\s*', '', _flatten(key_text))
-    delim = _detect_delim(s)
+    s, delim = _normalize_key(key_text)
     if not delim:
         return set()
     d = re.escape(delim)
