@@ -49,6 +49,17 @@ def check():
         if os.path.exists(p) and f'id="fig-{s["code"]}"' not in open(p, encoding="utf-8").read():
             issues.append(f'figure {s["code"]} not embedded in {os.path.basename(p)}')
 
+    # 2b. every viz figure resolves to a bundled .html artifact AND is embedded in its lesson page
+    vfmod = _imp("viz_figures")
+    for e in vfmod.VIZ_FIGURES:
+        code = e["code"]
+        if not os.path.exists(os.path.join(REPO_ROOT, "algebra-1-tutor", "figures", code + ".html")):
+            issues.append(f"viz figure {code} has no bundled .html artifact")
+        lesson = code.rsplit(".f", 1)[0]            # "3.2.f1" -> "3.2"; "5.0.f1" -> "5.0"
+        p = os.path.join(tb.OUT_DIR, tb._lesson_fname(lesson))
+        if os.path.exists(p) and f'id="fig-{code}"' not in open(p, encoding="utf-8").read():
+            issues.append(f"viz figure {code} not embedded in {os.path.basename(p)}")
+
     # 3. reference-code resolution spot-checks across materials (code lookup)
     spot = [
         (_has(os.path.join(tb.OUT_DIR, tb._lesson_fname("1.1")), 'id="1.1.d1"'), "definition 1.1.d1 -> textbook lesson 1.1"),
