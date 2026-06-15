@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Unit 4: Introducing Functions — Complementary problems — Algebra 1</title>
+<title>Introducing Functions — Algebra 1</title>
 <script>try{if(localStorage.getItem("a1-theme")==="dark")document.documentElement.classList.add("dark");}catch(e){}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,18 +13,67 @@
 </head>
 <body data-surface="tutor">
 <header class="topbar">
-  <nav><a class="home" href="index.html">Algebra&nbsp;1</a> &nbsp;·&nbsp; <a href="unit-03.html">&larr;&nbsp;Unit 3</a> &nbsp;·&nbsp; <a href="unit-05.html">Unit 5&nbsp;&rarr;</a></nav>
+  <button id="menu" class="menu" type="button" aria-label="Open or close the contents menu" aria-expanded="false">☰&nbsp;Contents</button>
+  <a class="home" href="../index.html">Algebra&nbsp;1</a>
   <span class="sp"></span>
-  <button id="theme" type="button" aria-label="Toggle light or dark theme">◐ Theme</button>
+  <button id="theme" type="button" aria-label="Toggle light or dark theme">◐&nbsp;Theme</button>
 </header>
+<div class="shell">
+<aside class="sidenav" id="sidenav">
+<nav class="snav" aria-label="Contents">
+<a class="snav-top" href="how-to-use.html">How to use this guide</a>
+<a class="snav-top" href="index.html">All units</a>
+<ol class="snav-units">
+<li class="">
+<a class="snav-unit" href="unit-01.html">Unit 1. Foundations &amp; the Language of Algebra</a>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-02.html">Unit 2. Solving Linear Equations</a>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-03.html">Unit 3. Proportional Reasoning (the bridge to linearity)</a>
+</li>
+<li class="active">
+<a class="snav-unit cur" href="unit-04.html">Unit 4. Introducing Functions</a>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-05.html">Unit 5. Linear Functions &amp; Their Graphs</a>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-06.html">Unit 6. Modeling &amp; Translation</a>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-07.html">Unit 7. Systems of Equations</a>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-08.html">Unit 8. Inequalities</a>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-09.html">Unit 9. Sequences &amp; Exponential Functions</a>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-10.html">Unit 10. Exponents &amp; Polynomials</a>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-11.html">Unit 11. Factoring</a>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-12.html">Unit 12. Quadratic Functions &amp; Equations (the capstone)</a>
+</li>
+<li class="">
+<a class="snav-unit" href="appendix.html">Appendix. Data &amp; Statistics</a>
+</li>
+</ol></nav>
+</aside>
+<div class="content">
 <main>
-<h1>Unit 4: Introducing Functions — Complementary problems</h1>
-<p class="subtitle">Tutor guide: fresh, parallel problems with full worked solutions.</p>
-<section><h2>Lesson 4.1: What is a function</h2>
+<div class="hero"><div class="hero-text"><div class="kicker">Tutor guide · Unit 4</div><h1>Introducing Functions</h1><p class="lede">Fresh, parallel-form problems with full worked solutions — more reps for the skills in this unit, kept separate from the textbook&#x27;s own problems.</p></div><img class="hero-art" src="../assets/machine.jpg" alt=""></div>
+<p class="tset"><a class="xref" href="../textbook/unit-04.html">Read Unit 4 in the textbook &rarr;</a></p>
+<section class="tset"><h2>Lesson 4.1: What is a function</h2>
 <div class="tproblem" id="4.1.T1">
 <a class="refcode" href="#4.1.T1">4.1.T1</a>
 <p>Is {(3,9),(6,9),(9,9)} a function? Say yes or no, and name the reason.</p>
-<details class="answers"><summary><span class="tw"></span><span class="eyebrow">Worked solution</span></summary>
+<details class="answers"><summary><span class="tw"></span><span class="eyebrow">Worked solution</span><span class="hint">Try it first, then open.</span></summary>
 <div class="ak-body">
 <p>Look only at the inputs: 3, 6, 9 — each appears once, so each input is paired with exactly one output. The output 9 repeating is fine (that's the "different buttons, same snack" case — repeats are only a problem on the input side). Yes, it is a function.</p>
 <p class="ans"><b>Answer:</b> Function — outputs repeat (all 9) but the inputs 3, 6, 9 are distinct, so each input has exactly one output.</p></div></details>
@@ -32,7 +81,7 @@
 <div class="tproblem" id="4.1.T2">
 <a class="refcode" href="#4.1.T2">4.1.T2</a>
 <p>Is {(7,2),(8,4),(7,5)} a function? Say yes or no, and name the input that breaks it.</p>
-<details class="answers"><summary><span class="tw"></span><span class="eyebrow">Worked solution</span></summary>
+<details class="answers"><summary><span class="tw"></span><span class="eyebrow">Worked solution</span><span class="hint">Try it first, then open.</span></summary>
 <div class="ak-body">
 <p>Scan the inputs: 7 shows up twice — once paired with 2 and once with 5. That's one input with two different outputs, which is exactly what a function may not do. The input 7 breaks it, so this is not a function. (Contrast: a repeated output would have been fine; it's the repeated input with conflicting outputs that fails.)</p>
 <p class="ans"><b>Answer:</b> Not a function — input 7 is paired with both 2 and 5 (one input, two outputs).</p></div></details>
@@ -40,7 +89,7 @@
 <div class="tproblem" id="4.1.T3">
 <a class="refcode" href="#4.1.T3">4.1.T3</a>
 <p>A table has inputs 5, 6, 5, 7 and outputs 0, 1, 8, 1. Is it a function? Explain.</p>
-<details class="answers"><summary><span class="tw"></span><span class="eyebrow">Worked solution</span></summary>
+<details class="answers"><summary><span class="tw"></span><span class="eyebrow">Worked solution</span><span class="hint">Try it first, then open.</span></summary>
 <div class="ak-body">
 <p>Line the pairs up: (5,0), (6,1), (5,8), (7,1). The input 5 appears twice and gives two different outputs, 0 and 8 — one input, two outputs. So it is not a function. The repeated output 1 (from inputs 6 and 7) is allowed; only the split input 5 matters.</p>
 <p class="ans"><b>Answer:</b> Not a function — input 5 appears twice with outputs 0 and 8.</p></div></details>
@@ -48,16 +97,16 @@
 <div class="tproblem" id="4.1.T4">
 <a class="refcode" href="#4.1.T4">4.1.T4</a>
 <p>A graph is the horizontal line y=4 (flat, going left to right). Is it a function? Use the vertical line test to explain — and say what its one output always is.</p>
-<details class="answers"><summary><span class="tw"></span><span class="eyebrow">Worked solution</span></summary>
+<details class="answers"><summary><span class="tw"></span><span class="eyebrow">Worked solution</span><span class="hint">Try it first, then open.</span></summary>
 <div class="ak-body">
 <p>Sweep an imaginary vertical line across the graph. At every position it crosses the flat line y=4 in exactly one point, so each input x has exactly one output. The vertical line test passes, so it is a function. Its output is always 4, no matter the input — this is a constant function. (Don't confuse it with the vertical line x=4, which is NOT a function: there a single input has infinitely many outputs.)</p>
 <p class="ans"><b>Answer:</b> Yes, it is a function. The vertical line test passes: every vertical line hits a horizontal line in exactly one point, so each input has exactly one output.</p></div></details>
 </div></section>
-<section><h2>Lesson 4.2: Function notation f(x), domain &amp; range</h2>
+<section class="tset"><h2>Lesson 4.2: Function notation f(x), domain &amp; range</h2>
 <div class="tproblem" id="4.2.T1">
 <a class="refcode" href="#4.2.T1">4.2.T1</a>
 <p>With f(x)=4x−3, find f(3).</p>
-<details class="answers"><summary><span class="tw"></span><span class="eyebrow">Worked solution</span></summary>
+<details class="answers"><summary><span class="tw"></span><span class="eyebrow">Worked solution</span><span class="hint">Try it first, then open.</span></summary>
 <div class="ak-body">
 <p>Substitute 3 for x, keeping it in parentheses: f(3)=4(3)−3. Multiply first: 4(3)=12. Then subtract: 12−3=9. So f(3)=9. (Remember f(3) means "run 3 through the rule f," not f times 3.)</p>
 <p class="ans"><b>Answer:</b> 9</p></div></details>
@@ -65,7 +114,7 @@
 <div class="tproblem" id="4.2.T2">
 <a class="refcode" href="#4.2.T2">4.2.T2</a>
 <p>With g(x)=x²−2, find g(−3).</p>
-<details class="answers"><summary><span class="tw"></span><span class="eyebrow">Worked solution</span></summary>
+<details class="answers"><summary><span class="tw"></span><span class="eyebrow">Worked solution</span><span class="hint">Try it first, then open.</span></summary>
 <div class="ak-body">
 <p>Substitute with parentheses around the input: g(−3)=(−3)²−2. Square the whole input: (−3)²=9 (a negative times a negative is positive — not −9). Then 9−2=7. So g(−3)=7.</p>
 <p class="ans"><b>Answer:</b> 7</p></div></details>
@@ -73,7 +122,7 @@
 <div class="tproblem" id="4.2.T3">
 <a class="refcode" href="#4.2.T3">4.2.T3</a>
 <p>With q(x)=2−5x, find q(−2).</p>
-<details class="answers"><summary><span class="tw"></span><span class="eyebrow">Worked solution</span></summary>
+<details class="answers"><summary><span class="tw"></span><span class="eyebrow">Worked solution</span><span class="hint">Try it first, then open.</span></summary>
 <div class="ak-body">
 <p>Substitute −2 in parentheses: q(−2)=2−5(−2). Multiply first: −5(−2)=+10 (negative times negative is positive). Then 2+10=12. So q(−2)=12. The parentheses are what keep the sign honest.</p>
 <p class="ans"><b>Answer:</b> 12</p></div></details>
@@ -81,16 +130,16 @@
 <div class="tproblem" id="4.2.T4">
 <a class="refcode" href="#4.2.T4">4.2.T4</a>
 <p>With f(x)=4x−3, evaluate at the expression 2x: find f(2x). (Light stretch — feed an expression into the rule.)</p>
-<details class="answers"><summary><span class="tw"></span><span class="eyebrow">Worked solution</span></summary>
+<details class="answers"><summary><span class="tw"></span><span class="eyebrow">Worked solution</span><span class="hint">Try it first, then open.</span></summary>
 <div class="ak-body">
 <p>Whatever sits in the parentheses goes everywhere x was. So f(2x)=4(2x)−3. Multiply the constants: 4·2x=8x. That leaves f(2x)=8x−3. Nothing else combines, so the answer is 8x−3.</p>
 <p class="ans"><b>Answer:</b> 8*x-3</p></div></details>
 </div></section>
-<section><h2>Lesson 4.3: Multiple representations; linear vs. nonlinear</h2>
+<section class="tset"><h2>Lesson 4.3: Multiple representations; linear vs. nonlinear</h2>
 <div class="tproblem" id="4.3.T1">
 <a class="refcode" href="#4.3.T1">4.3.T1</a>
 <p>Build the table for f(x)=6x at x=0,1,2,3,4. What is the last output, f(4)? (Also: is the table linear?)</p>
-<details class="answers"><summary><span class="tw"></span><span class="eyebrow">Worked solution</span></summary>
+<details class="answers"><summary><span class="tw"></span><span class="eyebrow">Worked solution</span><span class="hint">Try it first, then open.</span></summary>
 <div class="ak-body">
 <p>Plug in each input: f(0)=0, f(1)=6, f(2)=12, f(3)=18, f(4)=6(4)=24. So the last output is f(4)=24. The outputs step up by a constant +6 each time (6−0, 12−6, 18−12, 24−18 are all 6), so the table is linear with rate of change +6.</p>
 <p class="ans"><b>Answer:</b> 24</p></div></details>
@@ -98,7 +147,7 @@
 <div class="tproblem" id="4.3.T2">
 <a class="refcode" href="#4.3.T2">4.3.T2</a>
 <p>For the table x: 0,1,2,3 → y: 7,4,1,−2, the inputs step evenly. Is it linear or nonlinear, and what is its rate of change?</p>
-<details class="answers"><summary><span class="tw"></span><span class="eyebrow">Worked solution</span></summary>
+<details class="answers"><summary><span class="tw"></span><span class="eyebrow">Worked solution</span><span class="hint">Try it first, then open.</span></summary>
 <div class="ak-body">
 <p>First confirm the inputs step evenly: 0,1,2,3 go up by +1 each time. Now check the output differences: 4−7=−3, 1−4=−3, −2−1=−3 — all the same. Equal x-steps give equal output steps, so it is linear, with a constant rate of change of −3. (As a preview of Unit 5, that constant −3 is the slope, and the value 7 at x=0 gives the equation y=−3x+7.)</p>
 <p class="ans"><b>Answer:</b> Linear. Equal x-steps of +1 give equal output steps of −3 (4−7, 1−4, −2−1 are all −3), so the rate of change is constant at −3.</p></div></details>
@@ -106,7 +155,7 @@
 <div class="tproblem" id="4.3.T3">
 <a class="refcode" href="#4.3.T3">4.3.T3</a>
 <p>From g(x)=4x−5, build the table at x=0,1,2,3. What is g(3)?</p>
-<details class="answers"><summary><span class="tw"></span><span class="eyebrow">Worked solution</span></summary>
+<details class="answers"><summary><span class="tw"></span><span class="eyebrow">Worked solution</span><span class="hint">Try it first, then open.</span></summary>
 <div class="ak-body">
 <p>Run each input through the rule: g(0)=4(0)−5=−5, g(1)=4(1)−5=−1, g(2)=4(2)−5=3, g(3)=4(3)−5=12−5=7. So g(3)=7. The outputs −5,−1,3,7 climb by a constant +4 each step, matching the 4 in front of x — linear.</p>
 <p class="ans"><b>Answer:</b> 7</p></div></details>
@@ -114,17 +163,17 @@
 <div class="tproblem" id="4.3.T4">
 <a class="refcode" href="#4.3.T4">4.3.T4</a>
 <p>A table's outputs go 1, 6, 13, 22 for x = 1, 2, 3, 4. Linear or nonlinear? Tell how you know without graphing. (Light stretch.)</p>
-<details class="answers"><summary><span class="tw"></span><span class="eyebrow">Worked solution</span></summary>
+<details class="answers"><summary><span class="tw"></span><span class="eyebrow">Worked solution</span><span class="hint">Try it first, then open.</span></summary>
 <div class="ak-body">
 <p>The inputs 1,2,3,4 step evenly by +1, so it's fair to compare output differences. Those differences are 6−1=5, 13−6=7, 22−13=9 — the steps 5,7,9 are not equal, they keep growing. Since equal x-steps do not give equal output steps, the rate of change is not constant, so the function is nonlinear; its graph would curve upward rather than be a straight line. (It is still a function — nonlinear just means "not a straight line," not "broken.")</p>
 <p class="ans"><b>Answer:</b> Nonlinear. Output steps are 5, 7, 9 (not constant), so the rate of change changes — the graph curves rather than forming a straight line.</p></div></details>
 </div></section>
-<section><h2>Mixed review (interleaving)</h2>
-<p class="subtitle">Problems that mix skills from across the unit.</p>
+<section class="tset"><h2>Mixed review</h2>
+<p class="subtitle">Problems that mix skills from across the unit — good for spacing earlier work back in.</p>
 <div class="tproblem" id="4.R.T1">
 <a class="refcode" href="#4.R.T1">4.R.T1</a>
 <p>With h(x)=2x+5, find h(−4).</p>
-<details class="answers"><summary><span class="tw"></span><span class="eyebrow">Worked solution</span></summary>
+<details class="answers"><summary><span class="tw"></span><span class="eyebrow">Worked solution</span><span class="hint">Try it first, then open.</span></summary>
 <div class="ak-body">
 <p>Substitute with parentheses: h(−4)=2(−4)+5. Multiply first: 2(−4)=−8. Then −8+5=−3. So h(−4)=−3. (This is lesson 4.2's evaluate-at-a-negative skill — and a free negatives + order-of-operations callback to Units 1–2.)</p>
 <p class="ans"><b>Answer:</b> -3</p></div></details>
@@ -132,7 +181,7 @@
 <div class="tproblem" id="4.R.T2">
 <a class="refcode" href="#4.R.T2">4.R.T2</a>
 <p>Is {(0,5),(1,5),(2,8),(0,9)} a function? Say yes or no, name the input that breaks it, and say why the repeated output is not a problem.</p>
-<details class="answers"><summary><span class="tw"></span><span class="eyebrow">Worked solution</span></summary>
+<details class="answers"><summary><span class="tw"></span><span class="eyebrow">Worked solution</span><span class="hint">Try it first, then open.</span></summary>
 <div class="ak-body">
 <p>Check the inputs: 0 appears twice, paired with 5 and with 9 — one input giving two outputs, which a function may not do, so it is not a function and input 0 is the culprit. The output 5 showing up for both 0 and 1 is allowed, because repeats are only a problem on the input side (two buttons can give the same snack). This interleaves lesson 4.1's one-output-per-input rule with the repeated-output trap.</p>
 <p class="ans"><b>Answer:</b> Not a function — input 0 is paired with both 5 and 9 (one input, two outputs). The output 5 repeating across inputs 0 and 1 is fine; the split input 0 is what breaks it.</p></div></details>
@@ -140,7 +189,7 @@
 <div class="tproblem" id="4.R.T3">
 <a class="refcode" href="#4.R.T3">4.R.T3</a>
 <p>With g(x)=x²+x, find g(−3).</p>
-<details class="answers"><summary><span class="tw"></span><span class="eyebrow">Worked solution</span></summary>
+<details class="answers"><summary><span class="tw"></span><span class="eyebrow">Worked solution</span><span class="hint">Try it first, then open.</span></summary>
 <div class="ak-body">
 <p>Substitute −3 in parentheses everywhere x appears: g(−3)=(−3)²+(−3). Square the whole input: (−3)²=9. Then add the second term: 9+(−3)=6. So g(−3)=6. Watch the squared term — (−3)²=9, not −9. (Lesson 4.2 sign care, with a quadratic rule.)</p>
 <p class="ans"><b>Answer:</b> 6</p></div></details>
@@ -148,7 +197,7 @@
 <div class="tproblem" id="4.R.T4">
 <a class="refcode" href="#4.R.T4">4.R.T4</a>
 <p>A table has x: 0,1,2,3 → y: 1,3,7,15. The inputs step evenly. Linear or nonlinear, and how can you tell?</p>
-<details class="answers"><summary><span class="tw"></span><span class="eyebrow">Worked solution</span></summary>
+<details class="answers"><summary><span class="tw"></span><span class="eyebrow">Worked solution</span><span class="hint">Try it first, then open.</span></summary>
 <div class="ak-body">
 <p>Inputs 0,1,2,3 step by +1 each time, so compare output differences: 3−1=2, 7−3=4, 15−7=8. The steps 2,4,8 are not equal (they double), so the rate of change is not constant and the function is nonlinear — its graph curves. (This doubling previews exponential growth in Unit 9.) This mixes lesson 4.3's linear-vs-nonlinear test with the "check x-steps are even first" habit.</p>
 <p class="ans"><b>Answer:</b> Nonlinear. With even x-steps of +1, the output steps are 2, 4, 8 (a doubling pattern), which are not constant — so the rate of change is not constant and the graph is not a straight line.</p></div></details>
@@ -156,23 +205,36 @@
 <div class="tproblem" id="4.R.T5">
 <a class="refcode" href="#4.R.T5">4.R.T5</a>
 <p>The linear table x: 0,1,2,3 → y: −1,3,7,11 has even x-steps. Read off its equation, then use the equation to confirm the output at x=3. (Light stretch — table → equation → check.)</p>
-<details class="answers"><summary><span class="tw"></span><span class="eyebrow">Worked solution</span></summary>
+<details class="answers"><summary><span class="tw"></span><span class="eyebrow">Worked solution</span><span class="hint">Try it first, then open.</span></summary>
 <div class="ak-body">
-<p>Find the constant step: 3−(−1)=4, 7−3=4, 11−7=4 → +4 per step, so 4 sits in front of x. The value at x=0 is −1, the constant added. That gives the equation y=4x−1. Now confirm against the last row using the equation: at x=3, 4(3)−1=12−1=11, which matches the table's y=11. ✓ This interleaves lesson 4.3's table→equation move with evaluating to check (lesson 4.2).</p>
+<p>Find the constant step: 3−(−1)=4, 7−3=4, 11−7=4 → +4 per step, so 4 sits in front of x. The value at x=0 is −1, the constant added. That gives the equation y=4x−1. Now confirm against the last row using the equation: at x=3, 4(3)−1=12−1=11, which matches the table's y=11. This interleaves lesson 4.3's table→equation move with evaluating to check (lesson 4.2).</p>
 <p class="ans"><b>Answer:</b> 11</p></div></details>
 </div></section>
+<nav class="pagenav" aria-label="Previous and next page">
+<a class="pn-prev" href="unit-03.html"><span class="pn-dir">&larr;&nbsp;Back</span><span class="pn-title">Unit 3</span></a>
+<a class="pn-next" href="unit-05.html"><span class="pn-dir">Next&nbsp;&rarr;</span><span class="pn-title">Unit 5</span></a>
+</nav>
 </main>
-<footer><p>Generated from the unit source by <code>_verification/build_textbook.py</code>. Math by KaTeX.</p></footer>
+<footer><p>A friendly Algebra 1 textbook, made to be read alongside the Claude tutor. Math by KaTeX.</p></footer>
+</div>
+</div>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
 <script>
 document.addEventListener("DOMContentLoaded", function () {
   renderMathInElement(document.body, {delimiters: [{left: "$$", right: "$$", display: true}], throwOnError: false});
-  var t = document.getElementById("theme"), root = document.documentElement;
-  t.addEventListener("click", function () {
+  var root = document.documentElement, body = document.body;
+  document.getElementById("theme").addEventListener("click", function () {
     root.classList.toggle("dark");
     localStorage.setItem("a1-theme", root.classList.contains("dark") ? "dark" : "light");
   });
+  var menu = document.getElementById("menu");
+  menu.addEventListener("click", function () {
+    var open = body.classList.toggle("nav-open");
+    menu.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+  var sn = document.getElementById("sidenav");
+  if (sn) sn.addEventListener("click", function (e) { if (e.target.closest("a")) body.classList.remove("nav-open"); });
 });
 </script>
 </body>

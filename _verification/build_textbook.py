@@ -269,6 +269,15 @@ def _lesson_fname(lesson_id):
     return f"appendix-{sub}.html" if scope == "A" else f"unit-{int(scope):02d}-{sub}.html"
 
 
+def _ssot_model(ssot):
+    """Sidebar model (unit + lesson tree) straight from the SSOT — no unit .md reading needed. The
+    guides feed this to _sidebar (with a prefix) to render the textbook's exact left rail, pointed
+    into ../textbook/."""
+    return [{"id": str(u.id), "title": u.title, "overview": _overview_fname(u.id),
+             "lessons": [{"id": l.id, "title": l.title, "fname": _lesson_fname(l.id)} for l in u.lessons]}
+            for u in ssot.units]
+
+
 def _split_unit(md):
     """Split a unit's markdown into the intro (everything before the first lesson) and a list of
     (lesson_id, lesson_title, chunk). Each chunk keeps its '## Lesson' header so the deep-link code
@@ -287,23 +296,27 @@ def _strip_lead(html, tag):
     return re.sub(rf"^\s*<{tag}[^>]*>.*?</{tag}>", "", html, count=1, flags=re.DOTALL)
 
 
-def _sidebar(model, cur):
-    """The persistent left index: How-to-use / All-units, then every unit (current expanded)."""
-    out = ['<nav class="snav" aria-label="Contents">',
-           f'<a class="snav-top{" cur" if cur == "how-to-use.html" else ""}" href="how-to-use.html">How to use this book</a>',
-           f'<a class="snav-top{" cur" if cur == "index.html" else ""}" href="index.html">All units</a>',
-           '<ol class="snav-units">']
+def _sidebar(model, cur, *, prefix="", top_links=None):
+    """The persistent left index: How-to-use / All-units, then every unit (current expanded).
+    `prefix` is prepended to every href so a guide can point the same rail into ../textbook/;
+    `top_links` (a list of (href, label) pairs) overrides the two default top entries."""
+    if top_links is None:
+        top_links = [("how-to-use.html", "How to use this book"), ("index.html", "All units")]
+    out = ['<nav class="snav" aria-label="Contents">']
+    for href, label in top_links:
+        out.append(f'<a class="snav-top{" cur" if cur == href else ""}" href="{prefix}{href}">{label}</a>')
+    out.append('<ol class="snav-units">')
     for unit in model:
         active = cur == unit["overview"] or any(cur == l["fname"] for l in unit["lessons"])
         ucur = " cur" if cur == unit["overview"] else ""
         label = "Appendix" if unit["id"] == "A" else f"Unit {unit['id']}"
         out.append(f'<li class="{"active" if active else ""}">')
-        out.append(f'<a class="snav-unit{ucur}" href="{unit["overview"]}">{label}. {_html.escape(unit["title"])}</a>')
+        out.append(f'<a class="snav-unit{ucur}" href="{prefix}{unit["overview"]}">{label}. {_html.escape(unit["title"])}</a>')
         if unit["lessons"]:
             out.append('<ol class="snav-lessons">')
             for l in unit["lessons"]:
                 lc = " cur" if cur == l["fname"] else ""
-                out.append(f'<li><a class="snav-lesson{lc}" href="{l["fname"]}">'
+                out.append(f'<li><a class="snav-lesson{lc}" href="{prefix}{l["fname"]}">'
                            f'<span class="ln">{_html.escape(l["id"])}</span> {_html.escape(l["title"])}</a></li>')
             out.append('</ol>')
         out.append('</li>')
@@ -329,7 +342,8 @@ def _pagenav(prev_link, next_link):
 
 # --- HTML template ------------------------------------------------------------------------------
 def _lesson_page(title, body, model, cur, prev_link=None, next_link=None, *, subtitle="",
-                 surface="textbook", hero=None, kicker=""):
+                 surface="textbook", hero=None, kicker="", home_href="index.html",
+                 home_label="Algebra&nbsp;1", sidebar_prefix="", sidebar_top=None):
     kick = f'<div class="kicker">{_html.escape(kicker)}</div>' if kicker else ""
     if hero:
         lede = f'<p class="lede">{_html.escape(subtitle)}</p>' if subtitle else ""
@@ -355,13 +369,13 @@ def _lesson_page(title, body, model, cur, prev_link=None, next_link=None, *, sub
 <body data-surface="{surface}">
 <header class="topbar">
   <button id="menu" class="menu" type="button" aria-label="Open or close the contents menu" aria-expanded="false">☰&nbsp;Contents</button>
-  <a class="home" href="index.html">Algebra&nbsp;1</a>
+  <a class="home" href="{home_href}">{home_label}</a>
   <span class="sp"></span>
   <button id="theme" type="button" aria-label="Toggle light or dark theme">◐&nbsp;Theme</button>
 </header>
 <div class="shell">
 <aside class="sidenav" id="sidenav">
-{_sidebar(model, cur)}
+{_sidebar(model, cur, prefix=sidebar_prefix, top_links=sidebar_top)}
 </aside>
 <div class="content">
 <main>
@@ -397,8 +411,9 @@ document.addEventListener("DOMContentLoaded", function () {{
 
 
 def _page(title, body, prev_link, next_link, subtitle="", *, surface="textbook", hero=None, kicker=""):
-    """Original single-column layout (topbar nav, no rail). Shared by the student guide, tutor
-    guide, and landing; the textbook itself uses _lesson_page (with the left index rail)."""
+    """DEPRECATED, unused. The original single-column layout (topbar nav, no rail). The textbook,
+    student guide, tutor guide, and landing now all render through _lesson_page (left index rail +
+    hero); kept only for reference and safe to delete."""
     nav = ['<a class="home" href="index.html">Algebra&nbsp;1</a>']
     if prev_link:
         nav.append(f'<a href="{prev_link[0]}">&larr;&nbsp;{prev_link[1]}</a>')
@@ -549,7 +564,7 @@ hr{border:0; border-top:1px solid var(--rule); margin:var(--s6) 0}
 main{max-width:var(--wide); margin:0 auto; padding:1rem 1.3rem 4rem}
 main > *{max-width:var(--measure); margin-inline:auto}
 main > figure.fig, main > .worked, main > .practice, main > .answers, main > .hero,
-main > table, main > .katex-display, main > .lesson-list, main > .pagenav{max-width:var(--wide)}
+main > table, main > .katex-display, main > .lesson-list, main > .pagenav, main > .tset{max-width:var(--wide)}
 footer{max-width:var(--measure); margin:var(--s7) auto 0; padding:1.1rem 1.3rem; color:var(--ink-soft);
   font-size:var(--step--1); border-top:1px solid var(--rule)}
 
@@ -569,6 +584,12 @@ html.dark .hero-art{filter:brightness(.9) saturate(.92)}
   background:var(--card-2); border:1px solid var(--rule); border-radius:999px; padding:.08em .55em; white-space:nowrap}
 .refcode:hover,.refcode:focus-visible{color:var(--link); border-color:var(--blue)}
 :target{scroll-margin-top:5rem}
+
+/* ---- cross-material link (a guide pointing into the textbook, and back) ---- */
+.xref{display:inline-flex; align-items:center; gap:.4rem; font-size:var(--step--1); font-weight:600;
+  color:var(--link); text-decoration:none; background:var(--card-2); border:1px solid var(--rule);
+  border-radius:999px; padding:.3rem .8rem}
+.xref:hover,.xref:focus-visible{border-color:var(--blue); color:var(--link)}
 
 /* ---- callout family (plain-language labels) ---- */
 .cl-goal,.cl-terms,.cl-watch,.cl-note,.cl-check,.cl-wrap{background:var(--card); border-radius:var(--radius);
@@ -696,7 +717,7 @@ section.ug h3{margin:.1rem 0 .4rem} section.ug :last-child{margin-bottom:0}
 
 /* ---- motion (reduced-motion safe) ---- */
 @media (prefers-reduced-motion:no-preference){
-  .practice li,.worked,figure.fig,#theme,.menu,ul.units li,.refcode,.lesson-list a,.pagenav a{transition:border-color .15s ease, box-shadow .15s ease, color .15s ease, transform .15s ease}
+  .practice li,.worked,figure.fig,#theme,.menu,ul.units li,.refcode,.xref,.lesson-list a,.pagenav a{transition:border-color .15s ease, box-shadow .15s ease, color .15s ease, transform .15s ease}
   ul.units li:hover,.lesson-list a:hover,.pagenav a:hover{transform:translateY(-1px)}
   :target{animation:flash 1.4s ease-out 1} @keyframes flash{0%{background:var(--tint-honey)}100%{background:transparent}}
 }

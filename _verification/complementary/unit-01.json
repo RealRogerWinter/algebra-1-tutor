@@ -8,7 +8,7 @@
       "var": "x",
       "answer": "7",
       "prompt": "Solve by undoing (show the undo step): x + 5 = 12.",
-      "solution": "The 5 is added on, so undo it by subtracting 5 from both sides to keep the balance: x + 5 - 5 = 12 - 5, which gives x = 7. Check: 7 + 5 = 12. ✓"
+      "solution": "The 5 is added on, so undo it by subtracting 5 from both sides to keep the balance: x + 5 - 5 = 12 - 5, which gives x = 7. Check: 7 + 5 = 12."
     },
     {
       "id": "1.1.T2",
@@ -17,7 +17,7 @@
       "var": "x",
       "answer": "7",
       "prompt": "Solve by undoing (show the undo step): 3x = 21.",
-      "solution": "The x is multiplied by 3, so undo by dividing both sides by 3: (3x)/3 = 21/3, which gives x = 7. Check: 3·7 = 21. ✓"
+      "solution": "The x is multiplied by 3, so undo by dividing both sides by 3: (3x)/3 = 21/3, which gives x = 7. Check: 3·7 = 21."
     },
     {
       "id": "1.1.T3",
@@ -26,14 +26,14 @@
       "var": "x",
       "answer": "24",
       "prompt": "Solve by undoing (show the undo step): x/4 = 6.",
-      "solution": "The x is divided by 4, so undo by multiplying both sides by 4: (x/4)·4 = 6·4, which gives x = 24. Check: 24/4 = 6. ✓ (Multiplying undoes dividing — the opposite move.)"
+      "solution": "The x is divided by 4, so undo by multiplying both sides by 4: (x/4)·4 = 6·4, which gives x = 24. Check: 24/4 = 6. (Multiplying undoes dividing — the opposite move.)"
     },
     {
       "id": "1.1.T4",
       "kind": "manual",
       "answer": "11",
       "prompt": "Fill the blank so the sentence stays true: 9 + 6 = □ + 4. (Read = as \"the same as\" — both sides must balance.)",
-      "solution": "Remember = means \"the same as,\" not \"compute here.\" The left side is 9 + 6 = 15, so the right side must also equal 15: □ + 4 = 15, which means □ = 11. Check: 9 + 6 = 11 + 4 → 15 = 15. ✓ (Filling 15 is the \"compute here\" misread — it ignores the + 4 still sitting on the right pan.)"
+      "solution": "Remember = means \"the same as,\" not \"compute here.\" The left side is 9 + 6 = 15, so the right side must also equal 15: □ + 4 = 15, which means □ = 11. Check: 9 + 6 = 11 + 4 → 15 = 15. (Filling 15 is the \"compute here\" misread — it ignores the + 4 still sitting on the right pan.)"
     },
 
     {
@@ -170,7 +170,7 @@
       "var": "x",
       "answer": "7",
       "prompt": "Solve by undoing (show the undo step): 4x = 28.",
-      "solution": "The x is multiplied by 4, so undo by dividing both sides by 4: (4x)/4 = 28/4, giving x = 7. Check: 4·7 = 28. ✓ (Lesson 1.1: undo the operation attached to the variable, same move to both sides.)"
+      "solution": "The x is multiplied by 4, so undo by dividing both sides by 4: (4x)/4 = 28/4, giving x = 7. Check: 4·7 = 28. (Lesson 1.1: undo the operation attached to the variable, same move to both sides.)"
     },
     {
       "id": "1.R.T2",

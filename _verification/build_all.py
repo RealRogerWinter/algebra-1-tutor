@@ -1,5 +1,5 @@
 """Regenerate every generated material (textbook, student guide, tutor guide, landing) and gate them
-together — the design lives in build_textbook.CSS/_page, shared by all four, so they move in lockstep.
+together — the design lives in build_textbook.CSS/_lesson_page, shared by all four, so they move in lockstep.
 
   python _verification/build_all.py            # regenerate all four
   python _verification/build_all.py --check    # verify all four are current + smoke aligned

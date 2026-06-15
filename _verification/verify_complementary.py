@@ -16,6 +16,7 @@ import glob, json, os, re, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 COMP_DIR = os.path.join(HERE, "complementary")
 TID_RE = re.compile(r"^(?:[1-9]|1[0-2]|A)\.(?:\d+|R)\.T\d+$")
+GLYPH_RE = re.compile("[✓✗✅❌]")  # decorative check/cross marks, banned in course copy (SKILL.md house style)
 
 
 def main():
@@ -48,6 +49,9 @@ def main():
                 issues.append(f"{pid}: missing prompt")
             if not str(prob.get("solution", "")).strip():
                 issues.append(f"{pid}: missing solution")
+            for field in ("prompt", "solution", "answer"):
+                if GLYPH_RE.search(str(prob.get(field, ""))):
+                    issues.append(f"{pid}: decorative check/cross mark in {field} (house style: write it out)")
             kind = prob.get("kind")
             if kind == "manual":
                 manual += 1; continue
