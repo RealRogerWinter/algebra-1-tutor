@@ -251,6 +251,10 @@ html.dark figure.fig text[fill="#c0392b"],html.dark figure.fig [fill="#c0392b"]{
 html.dark figure.fig text[fill="#2980b9"],html.dark figure.fig [fill="#2980b9"]:not(line){fill:#6fb0e8}
 html.dark figure.fig text[fill="#27ae60"]{fill:#69cf97} html.dark figure.fig text[fill="#8e44ad"]{fill:#c3a4e6}
 html.dark figure.fig line[stroke="#2980b9"]{stroke:#6fb0e8} html.dark figure.fig line[stroke="#8e44ad"]{stroke:#c3a4e6}
+/* #555 is a neutral gray hardcoded inline by the flowchart figures (sub-labels + an inner caption);
+   lighten it in dark mode so the prose + equations stay legible. !important beats the inline style. */
+html.dark figure.fig text[fill="#555"]{fill:#a7adb4}
+html.dark figure.fig [style*="color:#555"]{color:#a7adb4 !important}
 
 /* ---- inline metaphor illustration (raster; warm, decorative but meaningful) ---- */
 figure.illus{margin:var(--s5) auto; max-width:30rem; text-align:center}
