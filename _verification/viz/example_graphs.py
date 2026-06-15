@@ -176,17 +176,17 @@ def _line_slope():
 def _parabola():
     slug = "wex-parab"
     x = _sp.Symbol("x")
-    f = x**2 - x - 6
-    fr = _Frame(-4, 5, -8, 6)
+    f = x**2 - 5 * x + 6
+    fr = _Frame(-1, 6, -2, 8)
 
     # Smooth polyline of the curve (deterministic sampling, fine step).
     pts_path = []
     n = 90
     for i in range(n + 1):
-        xv = -4 + (5 - (-4)) * i / n
+        xv = -1 + (6 - (-1)) * i / n
         yv = float(f.subs(x, xv))
         # clamp drawing to the window so it does not spill past the frame
-        yv = max(min(yv, 6.0), -8.0)
+        yv = max(min(yv, 8.0), -2.0)
         pts_path.append(f"{round(fr.px(xv),2)},{round(fr.py(yv),2)}")
     curve = (
         f'<polyline points="{" ".join(pts_path)}" fill="none" '
@@ -195,24 +195,24 @@ def _parabola():
     )
 
     # Roots and vertex (sympy-exact values converted to float for pixels).
-    roots = _sp.solve(f, x)            # [-2, 3]
-    vx = _sp.Rational(1, 2)
-    vy = f.subs(x, vx)                 # -25/4 = -6.25
+    roots = _sp.solve(f, x)            # [2, 3]
+    vx = _sp.Rational(5, 2)
+    vy = f.subs(x, vx)                 # -1/4 = -0.25
 
     rmark = "".join(fr.point(float(r), 0, _RED) for r in roots)
     vmark = fr.point(float(vx), float(vy), _GREEN)
 
-    rlab1 = fr.label(-2, 0, "(-2, 0)", _RED, dx=-6, dy=-9, anchor="end", size=11.5)
+    rlab1 = fr.label(2, 0, "(2, 0)", _RED, dx=-6, dy=-9, anchor="end", size=11.5)
     rlab2 = fr.label(3, 0, "(3, 0)", _RED, dx=6, dy=-9, anchor="start", size=11.5)
     vlab = fr.label(
-        float(vx), float(vy), "vertex (0.5, -6.25)", _GREEN,
-        dx=8, dy=5, anchor="start", size=11.5,
+        float(vx), float(vy), "vertex (2.5, -0.25)", _GREEN,
+        dx=0, dy=18, anchor="middle", size=11.5,
     )
 
     svg = (
         _open(slug)
-        + f'<title id="{slug}-t">The parabola y = x squared minus x minus 6, '
-        f'with roots at minus 2 and 3 and a vertex at 0.5, minus 6.25.</title>'
+        + f'<title id="{slug}-t">The parabola y = x squared minus 5 x plus 6, '
+        f'with roots at 2 and 3 and a vertex at 2.5, minus 0.25.</title>'
         + fr.grid_and_axes(slug)
         + curve
         + rmark + vmark
@@ -222,7 +222,7 @@ def _parabola():
     html = (
         '<div style="text-align:center">'
         + svg
-        + '<div style="margin-top:.3rem">$$x^2 - x - 6 = (x-3)(x+2)$$</div>'
+        + '<div style="margin-top:.3rem">$$x^2 - 5x + 6 = (x-2)(x-3)$$</div>'
         + "</div>"
     )
     return html
@@ -293,13 +293,13 @@ def _verify():
     assert f1.subs(x, 1) == 1, "line through (1,1)"
     assert (f1.subs(x, 1) - f1.subs(x, 0)) == 2, "rise == 2"
     # (2) parabola
-    f2 = x**2 - x - 6
-    assert sorted(_sp.solve(f2, x)) == [-2, 3], "roots are -2, 3"
-    assert _sp.factor(f2) == (x - 3) * (x + 2), "factors to (x-3)(x+2)"
-    assert _sp.expand((x - 3) * (x + 2)) == f2, "expansion matches"
-    vy = f2.subs(x, _sp.Rational(1, 2))
-    assert vy == _sp.Rational(-25, 4), "vertex y == -6.25"
-    assert float(vy) == -6.25
+    f2 = x**2 - 5 * x + 6
+    assert sorted(_sp.solve(f2, x)) == [2, 3], "roots are 2, 3"
+    assert _sp.factor(f2) == (x - 2) * (x - 3), "factors to (x-2)(x-3)"
+    assert _sp.expand((x - 2) * (x - 3)) == f2, "expansion matches"
+    vy = f2.subs(x, _sp.Rational(5, 2))
+    assert vy == _sp.Rational(-1, 4), "vertex y == -0.25"
+    assert float(vy) == -0.25
     # (3) intersection
     s = _sp.solve(_sp.Eq(x + 1, -x + 5), x)[0]
     assert s == 2 and (x + 1).subs(x, s) == 3 and (-x + 5).subs(x, s) == 3
@@ -316,7 +316,7 @@ def samples():
             "html": _line_slope(),
         },
         {
-            "caption": "y = x^2 - x - 6: roots (-2,0) and (3,0), vertex (0.5, -6.25)",
+            "caption": "y = x^2 - 5x + 6: roots (2,0) and (3,0), vertex (2.5, -0.25)",
             "html": _parabola(),
         },
         {

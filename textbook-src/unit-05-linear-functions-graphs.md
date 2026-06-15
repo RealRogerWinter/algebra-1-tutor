@@ -32,8 +32,6 @@ $$\text{I: }(+,+)\qquad \text{II: }(-,+)\qquad \text{III: }(-,-)\qquad \text{IV:
 
 A useful habit: before you plot a point, read its two signs and predict the quadrant from them alone. The signs are the address; the picture just confirms it.
 
-<!--viz:interactive_graph#1-->
-
 One case sits outside this scheme. If either coordinate is 0, the point isn't in any quadrant. It's sitting right *on* an axis. A point like (0, −3) hasn't gone left or right at all, so it rests on the y-axis, on the border between two quadrants rather than inside one. That's worth flagging now, because it's easy to feel you must name a quadrant for every point and force one where there isn't any.
 
 **New terms:**
@@ -105,6 +103,8 @@ Hold on to this: the line is *all* the points that work, not just the four you h
 Once the line is drawn, you can ask a sharp question about any point: is it **on the line** or not? A point is on the line exactly when its coordinates make the equation true.
 
 To test (3, 5) on y = 2x − 1, substitute x = 3 and see what y the equation gives: 2(3) − 1 = 5. The equation says y should be 5, and the point's y is 5, so they agree. The point is on the line. This is the same substitute-and-check habit from solving equations, pointed at a new question.
+
+<!--viz:interactive_graph#1-->
 
 **New terms:**
 - {#5.2.d1} **Table of values:** a list of x inputs and their computed y outputs, exactly the input→output table from Unit 4.3, now plotted.

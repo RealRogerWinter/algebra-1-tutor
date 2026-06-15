@@ -9,8 +9,8 @@ Verified identities (sympy):
   (1) 2(x+4)            = 2x + 8                       [cells 2x, 8]
   (2) (x+2)(x+3)        = x^2 + 5x + 6                 [cells x^2, 3x, 2x, 6]
   (3) x^2 + 5x + 6      = (x+2)(x+3)                   [factoring, sides recovered]
-  (4) 2x + 3x           = 5x   ;  2x + 3 stays 2x + 3  [like vs unlike terms]
-  (5) x^2 + 6x          = (x+3)^2 - 9                  [completing the square]
+  (4) 3x + 2x           = 5x   ;  3x + 2 stays 3x + 2  [like vs unlike terms]
+  (5) x^2 + 6x + 9      = (x+3)^2                      [completing the square]
 """
 
 TITLE = "Area models & algebra tiles"
@@ -219,15 +219,15 @@ def _tiles():
     body = []
     gap = 8
     top = 30
-    # --- like terms: 2 x-tiles + 3 x-tiles -> 5 x-tiles
+    # --- like terms: 3 x-tiles + 2 x-tiles -> 5 x-tiles
     x = 24
-    for _ in range(2):
+    for _ in range(3):
         s, w = _tile_x(x, top, BLUE)
         body.append(s)
         x += w + gap
     body.append(_label(x + 6, top + 46, "+", AXIS, size="20"))
     x += 22
-    for _ in range(3):
+    for _ in range(2):
         s, w = _tile_x(x, top, VIOLET)
         body.append(s)
         x += w + gap
@@ -241,24 +241,24 @@ def _tiles():
     width1 = x + 8
     svg_like = _svg("tilesA", width1, 150, "".join(body))
 
-    # --- unlike terms: 2 x-tiles + 3 unit-tiles -> stays as-is
+    # --- unlike terms: 3 x-tiles + 2 unit-tiles -> stays as-is
     body2 = []
     top2 = 30
     x = 24
-    for _ in range(2):
+    for _ in range(3):
         s, w = _tile_x(x, top2, BLUE)
         body2.append(s)
         x += w + gap
     body2.append(_label(x + 6, top2 + 46, "+", AXIS, size="20"))
     x += 22
-    # three unit tiles share the bottom line (different shape => can't merge)
+    # two unit tiles share the bottom line (different shape => can't merge)
     base = top2 + 92 - 26
-    for _ in range(3):
+    for _ in range(2):
         s, w = _tile_one(x, base, RED)
         body2.append(s)
         x += w + gap
     body2.append(
-        _label(x + 30, top2 + 46, "stays 2x + 3", RED, size="16", anchor="middle")
+        _label(x + 30, top2 + 46, "stays 3x + 2", RED, size="16", anchor="middle")
     )
     width2 = x + 90
     svg_unlike = _svg("tilesB", width2, 150, "".join(body2))
@@ -267,10 +267,10 @@ def _tiles():
         '<div style="display:flex;flex-direction:column;gap:1rem;align-items:center">'
         + '<div style="color:var(--ink-soft);font-size:.95em">Same shape (same size) tiles combine:</div>'
         + svg_like
-        + "<div>$$2x+3x=5x$$</div>"
+        + "<div>$$3x+2x=5x$$</div>"
         + '<div style="color:var(--ink-soft);font-size:.95em;margin-top:.3rem">Different shapes can’t merge into one number:</div>'
         + svg_unlike
-        + '<div>$$2x+3\\ \\text{is already simplest}$$</div>'
+        + '<div>$$3x+2\\ \\text{is already simplest}$$</div>'
         + "</div>"
     )
 
@@ -316,8 +316,8 @@ def _complete_square():
         '<div style="display:flex;flex-direction:column;gap:.5rem;align-items:center">'
         + '<div style="color:var(--ink-soft);font-size:.95em">Split 6x into two 3-wide strips; the dashed corner is what completes the big square:</div>'
         + svg
-        + '<div>$$x^2+6x=(x+3)^2-9$$</div>'
-        + '<div style="color:var(--ink-soft);font-size:.9em">filled square is (x+3)²; we added 9, so we subtract it back.</div>'
+        + '<div>$$x^2+6x+9=(x+3)^2$$</div>'
+        + '<div style="color:var(--ink-soft);font-size:.9em">add the 3×3 corner (area 9) and the whole figure is the square (x+3)².</div>'
         + "</div>"
     )
 
@@ -337,11 +337,11 @@ def samples():
             "html": _factoring(),
         },
         {
-            "caption": "Algebra tiles: like x-tiles combine (2x+3x=5x); an x-tile and unit tiles cannot.",
+            "caption": "Algebra tiles: like x-tiles combine (3x+2x=5x); an x-tile and unit tiles cannot.",
             "html": _tiles(),
         },
         {
-            "caption": "Completing the square: x²+6x plus the missing 3×3 corner makes (x+3)² − 9.",
+            "caption": "Completing the square: x²+6x plus the missing 3×3 corner (area 9) makes (x+3)².",
             "html": _complete_square(),
         },
     ]
@@ -363,8 +363,8 @@ if __name__ == "__main__":
             sp.expand(x**2 + 3 * x + 2 * x + 6) == sp.expand(x**2 + 5 * x + 6),
         ),
         ("factor(x^2+5x+6) == (x+2)(x+3)", sp.factor(x**2 + 5 * x + 6) == (x + 2) * (x + 3)),
-        ("2x+3x == 5x", sp.simplify(2 * x + 3 * x) == 5 * x),
-        ("2x+3 stays 2x+3", sp.simplify(2 * x + 3) == 2 * x + 3),
+        ("3x+2x == 5x", sp.simplify(3 * x + 2 * x) == 5 * x),
+        ("3x+2 stays 3x+2", sp.simplify(3 * x + 2) == 3 * x + 2),
         ("x^2+6x == (x+3)^2-9", sp.expand(x**2 + 6 * x) == sp.expand((x + 3) ** 2 - 9)),
         ("strips 3x+3x == 6x", sp.expand(3 * x + 3 * x) == sp.expand(6 * x)),
         ("corner 3*3 == 9", 3 * 3 == 9),
