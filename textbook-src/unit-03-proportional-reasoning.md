@@ -20,6 +20,9 @@ Suppose you drove 120 miles in 2 hours. How far did you go in *one* hour, on ave
 
 You took a comparison of two amounts and boiled it down to "per one hour." That per-one number, 60 miles per hour, is what the real world runs on: price per item, words per minute.
 
+<!--viz:double_number_lines#0-->
+
+
 <!--illus:3-1-unit-rate-->
 
 Here's the idea built up slowly, because the "per one" move is the one to get solid.
@@ -110,6 +113,9 @@ Say 4 apples cost \$3. At that same price, what do 10 apples cost? The two words
 
 The price-per-apple doesn't change just because you bought more, so the comparison "apples to dollars" stays equal even as both numbers grow. Two equal comparisons like that, set side by side, are a proportion. Most of scaling, from recipes to map distances, is exactly this move.
 
+<!--viz:double_number_lines#1-->
+
+
 Start with the picture: stack the two comparisons as equal fractions, keeping the same unit on top on both sides.
 
 $$\frac{4 \text{ apples}}{\$3} = \frac{10 \text{ apples}}{\$x}$$
@@ -198,6 +204,9 @@ A percent is a count out of 100. Picture a 10-by-10 grid of 100 little squares: 
 <!--illus:3-3-percent-triangle-->
 
 Once you see it as a part out of 100, percents stop being a separate topic and become the proportions you just practiced, with the bottom always set to 100.
+
+<!--viz:double_number_lines#2-->
+
 
 It helps to have a few conversions so automatic you don't compute them: 1/2 is 0.5 is 50%, and 1/4 is 0.25 is 25%. Anchor those, and the rest follow by the same logic.
 

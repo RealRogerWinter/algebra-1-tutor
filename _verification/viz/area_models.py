@@ -113,7 +113,7 @@ def _distributive():
     return (
         '<div style="display:flex;flex-direction:column;gap:.5rem;align-items:center">'
         + svg
-        + '<div>$$2(x+4)=\\underbrace{2x}_{\\text{width }x}+\\underbrace{8}_{\\text{width }4}$$</div>'
+        + '<div>$$2(x+4) = 2x + 8$$</div>'
         + "</div>"
     )
 

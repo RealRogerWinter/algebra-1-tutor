@@ -14,6 +14,8 @@ Before each new lesson, redo two or three problems from a lesson or two earlier 
 
 Exponents are just a shorthand for "multiply this by itself a few times." That's the whole idea, and every rule in this lesson comes straight out of it. The trick is to never let the shorthand pull you away from what it's counting.
 
+<!--viz:anatomy#2-->
+
 <!--illus:10-1-repeated-mult-->
 
 When you're unsure what a rule should be, you can always write the factors out and count them. That habit, more than any memorized rule, is what keeps you out of trouble here.
@@ -339,6 +341,8 @@ There they are: four cells, x², 3x, 2x, and 6. The two in the middle, 3x and 2x
 <!--illus:10-4-area-grid-->
 
 These same four products, taken in a fixed order, are sometimes called FOIL. The box is worth preferring, because it *shows you why a middle term exists* and keeps working when the pieces get bigger, where that shortcut runs out.
+
+<!--viz:area_models#1-->
 
 If the grid isn't your thing, there's a second way to see the same thing: distribute twice. First the x greets both terms in the second parentheses, then the 2 greets both:
 $$x(x+3)+2(x+3)=x^2+3x+2x+6=x^2+5x+6$$

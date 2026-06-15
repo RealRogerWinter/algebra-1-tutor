@@ -13,6 +13,7 @@ CLI:
 """
 import argparse, glob, html as _html, os, re, sys
 import markdown as mdlib
+import importlib.util
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO_ROOT = os.path.dirname(HERE)
@@ -223,6 +224,54 @@ def _convert_illus(text):
     return "\n".join(out)
 
 
+# --- viz: embed a candidate visual element from _verification/viz/<module>.py -------------------
+_VIZ_DIR = os.path.join(HERE, "viz")
+_VIZ_RE = re.compile(r"<!--\s*viz:([a-z0-9_]+)#(\d+)\s*-->")
+_VIZ_CACHE = {}
+
+
+def _viz_module(name):
+    """Import a viz module by file path (cached). Returns the module, or None if missing/broken."""
+    if name not in _VIZ_CACHE:
+        fp = os.path.join(_VIZ_DIR, name + ".py")
+        mod = None
+        if os.path.exists(fp):
+            try:
+                spec = importlib.util.spec_from_file_location("viz_" + name, fp)
+                mod = importlib.util.module_from_spec(spec)
+                spec.loader.exec_module(mod)
+            except Exception:
+                mod = None
+        _VIZ_CACHE[name] = mod
+    return _VIZ_CACHE[name]
+
+
+def _convert_viz(text):
+    """Swap each `<!--viz:module#index-->` marker for that module's sample, wrapped in a figure.
+    Fence-aware; a missing module/index drops the marker (keeping any other text on the line)."""
+    out, infence = [], False
+    for ln in text.split("\n"):
+        if ln.lstrip().startswith("```"):
+            infence = not infence; out.append(ln); continue
+        m = None if infence else _VIZ_RE.search(ln)
+        if m:
+            mod = _viz_module(m.group(1))
+            sample = None
+            if mod is not None:
+                try:
+                    sample = mod.samples()[int(m.group(2))]
+                except Exception:
+                    sample = None
+            if sample is not None:
+                cap = _html.escape(sample.get("caption", ""))
+                out += ["", f'<figure class="viz">{sample["html"]}<figcaption>{cap}</figcaption></figure>', ""]
+            else:
+                out.append(_VIZ_RE.sub("", ln))
+        else:
+            out.append(ln)
+    return "\n".join(out)
+
+
 _LIST_RE = re.compile(r"^\s*(?:[-*+]|\d+\.)\s")
 _BQ_LIST_RE = re.compile(r"^>\s*(?:[-*+]|\d+\.)\s")
 
@@ -363,6 +412,7 @@ _DIVIDER = ('<div class="ldiv" aria-hidden="true"><i></i>'
 def md_to_body(text, launcher=False):
     text, math = _protect_math(text)
     text = _convert_illus(text)
+    text = _convert_viz(text)
     text = _id_worked_practice(text)
     text = _convert_anchors(text, launcher)
     text = _space_subheads(text)
@@ -775,7 +825,7 @@ hr{border:0; border-top:1px solid var(--rule); margin:var(--s6) 0}
 main{max-width:var(--wide); margin:0 auto; padding:1rem 1.3rem 4rem}
 main > *{max-width:var(--measure); margin-inline:auto}
 main > figure.fig, main > .worked, main > .practice, main > .answers, main > .hero,
-main > table, main > .katex-display, main > .lesson-list, main > .pagenav, main > .tset{max-width:var(--wide)}
+main > table, main > .katex-display, main > .lesson-list, main > .pagenav, main > .tset, main > figure.viz{max-width:var(--wide)}
 footer{max-width:var(--measure); margin:var(--s7) auto 0; padding:1.1rem 1.3rem; color:var(--ink-soft);
   font-size:var(--step--1); border-top:1px solid var(--rule)}
 
@@ -902,6 +952,14 @@ html.dark figure.fig line[stroke="#2980b9"]{stroke:#6fb0e8} html.dark figure.fig
 figure.illus{margin:var(--s5) auto; max-width:30rem; text-align:center}
 figure.illus img.illus-art{width:100%; height:auto; border-radius:var(--radius); box-shadow:var(--shadow); display:block}
 html.dark figure.illus img.illus-art{filter:brightness(.92) saturate(.94)}
+
+/* ---- viz: candidate visual elements embedded in lessons (svg / html / interactive) ---- */
+figure.viz{margin:var(--s6) auto; max-width:var(--wide); background:var(--card); border:1px solid var(--rule);
+  border-radius:var(--radius); padding:1.1rem 1.2rem .8rem; box-shadow:var(--shadow); overflow:hidden}
+figure.viz figcaption{color:var(--ink-soft); font-size:var(--step--1); margin-top:.7rem; text-align:center}
+figure.viz svg{max-width:100%; height:auto}
+figure.viz .katex-display{overflow-x:auto}
+figure.viz input[type=range]{width:100%; max-width:24rem}
 
 /* ---- objectives blockquote & tables ---- */
 blockquote{margin:var(--s5) auto; padding:1rem 1.25rem; background:var(--tint-blue); border:1px solid var(--rule);

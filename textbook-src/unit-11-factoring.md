@@ -120,6 +120,8 @@ The two unknown edges have to multiply to 6 (that's the corner cell), and their 
 
 So the method is a search for two numbers. List the pairs that multiply to c, and pick the pair that adds to b. For x²+5x+6, the pairs multiplying to 6 are 1·6 and 2·3; only 2 + 3 gives 5. So the factors are (x+2)(x+3).
 
+<!--viz:area_models#2-->
+
 The part that takes real care is the signs, and they aren't a guess: the signs of c and b *tell* you the signs of the two numbers. Here's how to read them. Look first at c.
 
 When c is positive, the two numbers have the *same* sign, because their product came out positive. Then b breaks the tie: if b is positive too, both numbers are positive, and if b is negative, both are negative.

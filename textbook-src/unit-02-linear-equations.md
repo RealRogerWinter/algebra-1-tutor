@@ -38,6 +38,8 @@ That check is your safety net for the whole book. If the two sides ever *don't* 
 
 The same move handles every one-step equation; only the operation you undo changes. If x has something subtracted, add it back. If x is multiplied, divide. If x is divided, multiply. The picture stays the balance scale: whatever you do, do it to both pans.
 
+<!--viz:interactive_equation#2-->
+
 **New terms:**
 - {#2.1.d1} **Solution:** a value that makes the equation a *true statement* when you substitute it in. (That's exactly why we check by substituting. We're confirming the statement is true.)
 - {#2.1.d2} **Isolate the variable:** get x alone on one side, with a number on the other.
@@ -64,6 +66,8 @@ $$4x=20 \;\xrightarrow{\,\div 4\,}\; x=5 \qquad \text{Check: } 4(5)=20$$
 $$\frac{x}{2}=6 \;\xrightarrow{\,\times 2\,}\; x=12 \qquad \text{Check: } \frac{12}{2}=6$$
 
 In the multiplication one, dividing both sides by 4 makes the 4 in front go to one, since 4/4 is 1 and 1x is just x. That's the same "goes to one" idea you'll use any time a number is multiplying the variable.
+
+<!--viz:bar_models#1-->
 
 Here's a clean case to get the method moving before the practice mixes things up:
 {#2.1.w5}
@@ -135,9 +139,13 @@ Think about getting dressed. You put your socks on first, then your shoes. To ge
 
 Building 2x + 3 from x works the same way: you multiply by 2 (the sock), then add 3 (the shoe). So to get back to x, undo the last thing first. Take off the shoe by subtracting 3, then take off the sock by dividing by 2. That's why you strip away the +3 before you touch the ×2: it's the outermost layer.
 
+<!--viz:bar_models#2-->
+
 Here's that in symbols, with the check built in, so you can see each layer come off:
 $$2x+3=11 \;\xrightarrow{\,-3\,}\; 2x=8 \;\xrightarrow{\,\div 2\,}\; x=4 \qquad \text{Check: } 2(4)+3=11$$
 First subtract 3 from both sides; the +3 goes to zero and the equation reads 2x = 8. Now you're back to a one-step equation, the kind you've just been solving. Divide both sides by 2; the 2 in front goes to one and x = 4. Then check it in the original: 2(4) + 3 is 8 + 3, which is 11, matching the right side.
+
+<!--viz:annotated_examples#0-->
 
 Read each step and ask why it follows from the one above before you go on.
 
@@ -216,6 +224,8 @@ Start with combining, using the picture of a box that holds a hidden number. Pic
 
 But 3x + 2 is different. That's three boxes plus two loose coins. There's no way to fold loose coins into boxes and call it one thing, so 3x + 2 simply stays as it is. Only matching kinds combine.
 
+<!--viz:area_models#3-->
+
 <!--illus:2-3-boxes-coins-->
 
 Now distributing. The number outside a set of parentheses has to reach *everyone* inside. Picture handing a flyer to every person in a room, skipping no one. So in 2(x + 4), the 2 greets the x and the 4 both. A clean way to see why is to draw it as the area of a rectangle, 2 tall and (x + 4) wide, split into two cells:
@@ -224,6 +234,8 @@ $$\begin{array}{c|c|c}
 2 & 2x & 8
 \end{array}\qquad\Rightarrow\qquad 2(x+4)=2x+8$$
 The two cells are the two products, 2x and 8, and together they're the whole area: 2x + 8.
+
+<!--viz:area_models#0-->
 
 <!--illus:2-3-area-distribute-->
 
@@ -402,6 +414,8 @@ If this lesson is getting heavy, that's reasonable. It folds together every move
 
 You can now solve an equation with variables on both sides by gathering the boxes onto one pan and the numbers onto the other, recognize when the variable going to zero means all real numbers or no solution, and choose the cleaner of two valid first moves.
 
+<!--viz:flowcharts#1-->
+
 Several of these land on a negative, and several are an identity or a contradiction rather than the usual one solution.
 
 **Practice problems:**
@@ -522,6 +536,8 @@ $$\frac23 x=6 \;\xrightarrow{\,\times \frac32\,}\; x=9 \qquad \text{Check: } \fr
 $$\frac{x}{2}+\frac{x}{3}=5 \;\xrightarrow{\,\times 6\text{ (the LCM)}\,}\; 6\cdot\frac{x}{2}+6\cdot\frac{x}{3}=6\cdot 5 \;\Rightarrow\; 3x+2x=30 \;\Rightarrow\; 5x=30 \;\Rightarrow\; x=6$$
 $$\text{Check: } \frac{6}{2}+\frac{6}{3}=3+2=5$$
 The one thing to hold onto: every term gets multiplied, including the right side. It's the flyers idea again. The ×6 has to reach everyone, or the scale stops balancing.
+
+<!--viz:annotated_examples#2-->
 
 <!--illus:2-6-clear-fractions-->
 
