@@ -14,7 +14,7 @@ It helps to have your work with single equations fresh. Before each new lesson, 
 
 Start with what a single equation already gives you. Write y = x + 1, and you don't get one answer. You get a whole line of them: (0, 1), (1, 2), (2, 3), and on forever. Write y = −x + 5, and that's a second line, its own endless list of points. Now ask a fair question: is there a single point that lives on *both* lines at the same time?
 
-That question is what a **system** asks. Two relationships, both true at once. The answer, when there is one, is the point where the two lines cross. It's the one (x, y) that satisfies both equations together.
+That question is what a **system** asks. Two relationships, both true at once. The answer, when there is one, is the point where the two lines cross {#7.1.f1}. It's the one (x, y) that satisfies both equations together.
 
 The way to *see* it is to graph both lines on one plane and look for where they meet. One caution before you draw, though: don't trust your eye to read a crossing point off the picture. Compute the points instead. Pick a few x-values, run each through both equations, and watch for the row where the two outputs match. That row is the crossing.
 

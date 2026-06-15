@@ -182,7 +182,7 @@ The clearest way to feel the difference between the two families is to set them 
 
 Read down the columns. The line adds 2 every row, a constant difference. The exponential *doubles* every row, a constant ratio. They're equal in two places, at x = 1 and again at x = 2 (the rows where both read 2, and both read 4). Between those two points the curve actually dips a hair below the line. At x = 1.5 the line is at 3 but 2^1.5 is about 2.83. You can't see that in a whole-number table, but it's real if you graph it.
 
-Then from x = 3 onward the exponential pulls ahead and never looks back: 8 beats 6, and the gap only widens after that. That's the headline about growth: an *increasing* exponential (b > 1) eventually overtakes *any* straight line, no matter how steep the line is. A *decaying* exponential (0 < b < 1) does the reverse: it sinks toward 0 and overtakes nothing that's rising.
+Then from x = 3 onward the exponential pulls ahead and never looks back: 8 beats 6, and the gap only widens after that. That's the headline about growth: an *increasing* exponential (b > 1) eventually overtakes *any* straight line, no matter how steep the line is {#9.2.f1}. A *decaying* exponential (0 < b < 1) does the reverse: it sinks toward 0 and overtakes nothing that's rising.
 
 To classify a table on your own, use the exact tool from the last lesson, now with family names attached. Check whether consecutive outputs share a constant *difference* (that's linear) or a constant *ratio* (that's exponential). Same diagnostic, new vocabulary.
 

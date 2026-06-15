@@ -254,7 +254,7 @@ A set that jumps between tiers asks more of you than a row of look-alikes, and t
 
 Negatives turn up in almost every answer from here on. Getting comfortable with them now means a later problem adds only one new wrinkle at a time, instead of two at once. The friendliest way in is to think of a negative as a debt: −5 means you owe $5.
 
-Start with which negative is *bigger*, because that's where the eye gets fooled. Would you rather owe $5 or owe $2? Owing less leaves you better off, so −2 is the bigger number and −5 is the smaller one, even though 5 is bigger than 2. On the number line it's the same story: the bigger the debt, the farther *left* you sit, and farther left means smaller.
+Start with which negative is *bigger*, because that's where the eye gets fooled. Would you rather owe $5 or owe $2? Owing less leaves you better off, so −2 is the bigger number and −5 is the smaller one, even though 5 is bigger than 2. On the number line it's the same story: the bigger the debt, the farther *left* you sit, and farther left means smaller {#1.4.f1}.
 
 There are really two separate facts about −5 here, and keeping them apart is what makes negatives stop feeling backwards. One is its **value** (−5, which can be negative). The other is its **distance from 0**: how far it sits from 0, ignoring direction, which is 5, and a distance is never negative.
 

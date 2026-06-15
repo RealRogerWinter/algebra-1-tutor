@@ -97,7 +97,7 @@ So to solve x² = 9 you take the square root of both sides, but you write the ±
 
 $$x^2=9\;\Rightarrow\; x=\pm\sqrt9=\pm3.$$
 
-That ± is just shorthand for "two answers at once": x = ±3 means x = 3 or x = −3. This whole move has a name, the **Square-Root Property**, and it has two branches, depending on the sign of the number you're taking the root of.
+That ± is just shorthand for "two answers at once": x = ±3 means x = 3 or x = −3 {#12.2.f1}. This whole move has a name, the **Square-Root Property**, and it has two branches, depending on the sign of the number you're taking the root of.
 
 When that number is zero or positive, you get the two roots (collapsing to a single x = 0 when the number is 0). When it's negative, there's no real solution at all, because no real number squared can land on a negative. That second branch isn't a special exception to patch over later. It's half of the rule, and you'll lean on it again before the unit is out.
 
@@ -163,7 +163,7 @@ Mixed practice feels harder, and that's the point. It's what makes this stick. E
 
 Start with something you already trust about multiplying. If you multiply two numbers and the result is 0, one of them *had* to be 0. There's no other way to reach zero. Two non-zero numbers never multiply to zero. That small, obvious fact is the engine of this lesson.
 
-Turn it on an equation. Suppose (x − 2)(x − 3) = 0. You've got two things multiplied together giving 0, so one of them must be 0: either x − 2 = 0 or x − 3 = 0. Each of those is a little one-step equation you can solve: x = 2 from the first, x = 3 from the second. So the quadratic has two solutions, 2 and 3, and you found them by reading off the factors. This is the **zero-product property**, and it's the everyday method for the many quadratics that factor.
+Turn it on an equation. Suppose (x − 2)(x − 3) = 0. You've got two things multiplied together giving 0, so one of them must be 0: either x − 2 = 0 or x − 3 = 0. Each of those is a little one-step equation you can solve: x = 2 from the first, x = 3 from the second. So the quadratic has two solutions, 2 and 3, and you found them by reading off the factors {#12.3.f1}. This is the **zero-product property**, and it's the everyday method for the many quadratics that factor.
 
 The one thing to hold onto: this trick works *only against zero*. Zero is special. It's the single value a product can reach only by one of its parts being zero. A product equal to 8 tells you nothing useful about the factors, because lots of pairs multiply to 8. So the first move, always, is to get the equation into the form (something) = 0, with everything on one side.
 
@@ -295,7 +295,7 @@ Here's where the 2a on the bottom comes from, if you're curious. The general der
 
 There's a bonus tucked inside the formula. The part under the root, b² − 4ac, is the **discriminant**, and its *sign* tells you how many real solutions you'll get before you finish the arithmetic.
 
-If it's positive, the root of a positive number gives two different values, so two real solutions. If it's zero, the ± adds and subtracts nothing, so the two solutions collapse into one (a repeated root). If it's negative, there's no real square root to take, so no real solution. That negative case is the same "no real solution" branch you met in Lesson 12.2, now showing up as the sign of the discriminant.
+If it's positive, the root of a positive number gives two different values, so two real solutions {#12.5.f1}. If it's zero, the ± adds and subtracts nothing, so the two solutions collapse into one (a repeated root). If it's negative, there's no real square root to take, so no real solution. That negative case is the same "no real solution" branch you met in Lesson 12.2, now showing up as the sign of the discriminant.
 
 One refinement when the discriminant is positive, worth knowing because it explains a pattern you've already seen. If b² − 4ac is itself a perfect square, the root comes out whole and the two answers are *rational*, which means the quadratic would have factored over the integers (the Lesson 12.3 case). If it's positive but not a perfect square, the answers keep a radical and are *irrational*.
 

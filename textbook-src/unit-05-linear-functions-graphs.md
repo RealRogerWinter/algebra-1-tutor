@@ -20,7 +20,7 @@ Start with something you read every day: a street map. Picture a city laid out i
 
 Now strip the map down to its bones. Draw a horizontal number line and a vertical number line crossing at right angles. The horizontal one is the **x-axis**, and the vertical one is the **y-axis**. The spot where they cross, the town center, is the **origin**, (0, 0).
 
-Every point gets an address written (x, y). The first number is how far across (right is positive, left is negative). The second is how far up or down (up is positive, down is negative). That across-then-up order is the whole game, and it's why (3, 2) and (2, 3) are two different points, not the same one written two ways.
+Every point gets an address written (x, y). The first number is how far across (right is positive, left is negative). The second is how far up or down (up is positive, down is negative). That across-then-up order is the whole game, and it's why (3, 2) and (2, 3) are two different points, not the same one written two ways {#5.1.f1}.
 
 The two axes cut the flat grid into four regions, called **quadrants**. They're numbered with Roman numerals I, II, III, IV, starting in the top-right and going counter-clockwise. You don't have to memorize a chart for them, because the signs tell you everything. In the top-right, both coordinates are positive: (+, +). Move counter-clockwise and one sign flips at a time:
 
@@ -338,7 +338,7 @@ When you build a line from two points, do it in two stages: first find the slope
 
 1. Through (2,3) with slope 4:
 $$y - 3 = 4(x - 2) \;\Rightarrow\; y - 3 = 4x - 8 \;\Rightarrow\; y = 4x - 5$$
-We started from point-slope, distributed the 4 to *both* terms inside (4x and −8, not just the x), then added 3 to both sides. Check: at x = 2, 4(2) − 5 = 3, the point we were given.
+We started from point-slope, distributed the 4 to *both* terms inside (4x and −8, not just the x), then added 3 to both sides. Check: at x = 2, 4(2) − 5 = 3, the point we were given {#5.5.f1}.
 
 2. Through (1,2) and (3,8): first find the slope, m = (8-2)/(3-1) = 3. Then feed m = 3 and the point (1,2) into point-slope:
 $$y - 2 = 3(x - 1) \;\Rightarrow\; y = 3x - 1$$

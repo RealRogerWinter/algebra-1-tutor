@@ -45,7 +45,7 @@ x & y = x+1 & y = -x+5 \\ \hline
 4 & 5 & 1
 \end{array}$$
 
-Both lines pass through (2, 3) — that shared row *is* the solution.
+Both lines pass through (2, 3) — that shared row *is* the solution {#7.1.f1}.
 
 **Worked examples:**
 
