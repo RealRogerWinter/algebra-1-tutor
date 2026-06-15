@@ -116,35 +116,35 @@ The problems below mix the phrase and sentence types on purpose, which is harder
 
 ## Lesson 6.2: Classic word problems (number, age, distance, value & relationship)
 
-The four families in this lesson are number, age, distance, and value problems. Together they cover most of the word problems you'll meet in Algebra 1 and well past it. The four labels matter less than the one method that handles all of them, the same setup routine you'll reuse for systems in Unit 7 and for any real model. (One note on scope: percent-concentration mixtures, the "blend 20% and 50% to get 30%" kind, need two variables and wait for Unit 7. Here "value" means coins, tickets, and the like.)
+Word problems can feel different every time, but most of them follow one simple routine. This lesson covers four kinds: number, age, distance, and value problems. The good news is that all four use the same four steps. Learn the steps once and they work every time.
 
 <!--viz:bar_models#3-->
 
 The method is four steps, and you use it every single time:
 
-1. **Define the variable in words.** Write "let x = ____" and finish the sentence. If two things are unknown, write the second *in terms of* the first, using the relationship the problem gives you. This is the step everything else rests on; don't skip it.
-2. **Write the equation** from the structure: what totals to what, what equals what.
-3. **Solve** with your Unit 2 tools.
-4. **Check in the original words,** not just in your equation. Re-read the problem and confirm the numbers fit the story.
+1. **Define the variable in words.** Write "let x = ____" and finish the sentence. If a second thing is unknown too, describe it using the first one. For example, if Sam is 3 years older than Pat and you call Pat's age x, then Sam's age is x + 3. This is the most important step. Don't skip it.
+2. **Write the equation.** Find the sentence in the problem that says two things are equal or add up to a total, and turn it into math.
+3. **Solve for x** the way you already practiced.
+4. **Check your answer against the word problem itself.** Re-read it and make sure your numbers really make sense in the story.
 
-That fourth step matters more than it looks. An answer can perfectly satisfy an equation you built *wrong*, and only re-reading the story catches that. The move in step 1, writing the second unknown in terms of the first, is what keeps everything to one variable and one equation, so a single solve does the whole job.
+Step 4 catches a common trap. If you set up the equation wrong, the math can still give a tidy answer. But it will be the wrong answer. Re-reading the story is the only way to catch that.
 
 <!--viz:bar_models#0-->
 
 **New terms:**
-- {#6.2.d1} **Consecutive integers:** integers in a row, each one more than the last: n, n+1, n+2, … For consecutive **even** or **odd** integers, the gap is 2: n, n+2, n+4, … (This same gap-of-2 form fits both even and odd runs; which one you get depends only on the starting value n. So if solving gives a non-integer n, say n = 74/3, that total simply has *no* such consecutive run, and the fractional answer is the signal.)
-- {#6.2.d2} **Distance-rate-time relationship:** d = rt, where distance equals rate (speed) times time. (Slope from Unit 5 *is* a rate; on a distance-vs-time graph the speed is the slope.)
+- {#6.2.d1} **Consecutive integers:** integers in a row, each one more than the last: n, n+1, n+2, … For consecutive **even** or **odd** integers, you skip by 2: n, n+2, n+4, …
+- {#6.2.d2} **Distance-rate-time relationship:** d = rt, where distance equals rate (speed) times time.
 
 <!--illus:6-2-drt-->
 
-- {#6.2.d3} **Value problem:** total *value* = (value of each item) × (number of items), summed over the kinds of items (e.g. dimes worth $0.10 each).
+- {#6.2.d3} **Value problem:** these are about things worth a fixed amount each, like coins or tickets. For each kind of item, multiply how much one is worth by how many you have, then add those amounts together. For example, 8 dimes at $0.10 each are worth $0.80.
 
-As you work through the examples below, watch how every one runs the same four steps even as the stories change. That sameness is the thing you're learning to see.
+In each example below, notice it is the same four steps. Only the story changes.
 
 **Worked examples:**
 
 {#6.2.ex1}
-*Example 1: number (consecutive integers).* "Three consecutive integers sum to 33. Find them." First name the unknown: let n = the smallest. Since each is one more than the last, the next two are n + 1 and n + 2. That's the second and third written in terms of the first. Now the structure: the three sum to 33.
+*Example 1: number (consecutive integers).* "Three consecutive integers sum to 33. Find them." First name the unknown: let n = the smallest. Since each is one more than the last, the next two are n + 1 and n + 2. So all three are built from n. Now the equation: the three add up to 33.
 $$n + (n + 1) + (n + 2) = 33 \;\Rightarrow\; 3n + 3 = 33 \;\Rightarrow\; 3n = 30 \;\Rightarrow\; n = 10$$
 So the integers are 10, 11, 12. Check in words: 10 + 11 + 12 = 33. The story holds.
 
@@ -154,7 +154,7 @@ $$n + (n + 2) + (n + 4) = 78 \;\Rightarrow\; 3n + 6 = 78 \;\Rightarrow\; n = 24$
 Integers: 24, 26, 28. Check: 24 + 26 + 28 = 78, and all three are even.
 
 {#6.2.ex3}
-*Example 3: age.* "Sam is 3 years older than Pat. Together their ages total 27. How old is each?" Two unknowns, so define one and write the other in terms of it: let p = Pat's age, then Sam's age is p + 3. Keeping it to one variable is what lets a single equation do the work.
+*Example 3: age.* "Sam is 3 years older than Pat. Together their ages total 27. How old is each?" Two unknowns, so define one and describe the other with it: let p = Pat's age, then Sam's age is p + 3. Now everything is in one letter, p.
 $$p + (p + 3) = 27 \;\Rightarrow\; 2p + 3 = 27 \;\Rightarrow\; 2p = 24 \;\Rightarrow\; p = 12$$
 Pat is 12, and Sam is 12 + 3 = 15. Check in words: Sam (15) is 3 more than Pat (12), and 12 + 15 = 27. Both parts of the story check out.
 
@@ -169,7 +169,7 @@ $$50t + 70t = 360 \;\Rightarrow\; 120t = 360 \;\Rightarrow\; t = 3$$
 3 hours. Check: in 3 hours one car goes 150 miles, the other 210; 150 + 210 = 360.
 
 {#6.2.ex6}
-*Example 6: value (coins).* "A jar has 15 coins, all dimes and quarters, worth $2.55 total. How many of each?" Let d = the number of dimes. The rest of the 15 coins are quarters, so that's 15 − d, the second unknown written in terms of the first. Each dime is worth $0.10 and each quarter $0.25, so the total value in dollars is:
+*Example 6: value (coins).* "A jar has 15 coins, all dimes and quarters, worth $2.55 total. How many of each?" Let d = the number of dimes. The rest of the 15 coins are quarters, so that's 15 − d. Each dime is worth $0.10 and each quarter $0.25, so the total value in dollars is:
 $$0.10d + 0.25(15 - d) = 2.55$$
 $$0.10d + 3.75 - 0.25d = 2.55 \;\Rightarrow\; -0.15d = -1.20 \;\Rightarrow\; d = 8$$
 So 8 dimes and 15 − 8 = 7 quarters. Notice everything stayed in dollars from the start; mixing in cents partway is where value problems usually go wrong. Check in words: that's 15 coins, worth 8(0.10) + 7(0.25) = 0.80 + 1.75 = $2.55.
@@ -179,18 +179,18 @@ So 8 dimes and 15 − 8 = 7 quarters. Notice everything stayed in dollars from t
 $$8a + 5(100 - a) = 680 \;\Rightarrow\; 8a + 500 - 5a = 680 \;\Rightarrow\; 3a = 180 \;\Rightarrow\; a = 60$$
 So 60 adult and 40 child. Check: 60(8) + 40(5) = 480 + 200 = $680.
 
-After a few of these, the place that stays tricky is the second unknown. The natural instinct is to reach for a fresh letter, like q for quarters or s for Sam, and then you're stuck with two letters and one equation. The fix is the relationship already in the problem: "3 older than" or "the rest of the 15" tells you how to write the second quantity in terms of the first.
+The hard part is the second unknown. It is tempting to give it a new letter, like q for quarters or s for Sam. But then you have two letters and only one equation, which you cannot solve. Instead, use the clue in the problem. "3 older than" means + 3, and "the rest of the 15" means 15 − d.
 
-One more to keep an eye on in distance problems: opposite directions add the distances, the same direction subtracts them, and in both cases the two objects share one time t. A quick sketch of two arrows from a point makes which-is-which obvious.
+In distance problems with two things moving, watch the direction. If they go opposite ways, add their distances. If they go the same way, subtract them. Either way, both travel for the same amount of time, so use one t for both. A quick sketch of two arrows from a point makes which-is-which obvious.
 
-Walk one short problem before the practice set. "Two consecutive integers sum to 11." Let n = the smaller, so the next is n + 1; then n + (n + 1) = 11, which gives 2n + 1 = 11, so n = 5. The integers are 5 and 6, and 5 + 6 = 11. Same four steps, friendly numbers.
+Here is one short example to try before the practice problems. "Two consecutive integers sum to 11." Let n = the smaller, so the next is n + 1; then n + (n + 1) = 11, which gives 2n + 1 = 11, so n = 5. The integers are 5 and 6, and 5 + 6 = 11. The numbers are small, but the steps are the same as every example above.
 
 **Check for understanding (transfer):**
 1. {#6.2.c1} In Example 3, suppose instead the ages total 41. Without redoing all the algebra from scratch, what changes and what is Pat's new age? (Only the total changes: 2p + 3 = 41, so 2p = 38 and p = 19. Pat is now 19, Sam 22.)
 2. {#6.2.c2} Why must the *second* unknown be written in terms of the first rather than as a new letter, if we want a single equation? (A new letter gives two unknowns, which needs two equations; writing it in terms of the first keeps one variable, so one equation solves it.)
 3. {#6.2.c3} A value problem gives "0.05n + 0.10(20 − n) = ...". In one sentence, what do n, 20 − n, and the coefficients 0.05 and 0.10 each represent? (n is the number of nickels, 20 − n the number of dimes, which is the rest of 20 coins, and 0.05 and 0.10 are the dollar value of one nickel and one dime.)
 
-The families come shuffled below, so each problem asks you to spot its type before you set it up. Answers are at the end of the lesson. When one stalls you, find the worked example from the same family and compare.
+The practice problems below are mixed up, so first figure out which kind each one is. Answers are at the end of the lesson. When one stalls you, find the worked example of the same kind and compare.
 
 **Practice problems:**
 
