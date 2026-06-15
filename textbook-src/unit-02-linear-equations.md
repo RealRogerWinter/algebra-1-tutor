@@ -523,6 +523,8 @@ $$\frac{x}{2}+\frac{x}{3}=5 \;\xrightarrow{\,\times 6\text{ (the LCM)}\,}\; 6\cd
 $$\text{Check: } \frac{6}{2}+\frac{6}{3}=3+2=5$$
 The one thing to hold onto: every term gets multiplied, including the right side. It's the flyers idea again. The ×6 has to reach everyone, or the scale stops balancing.
 
+<!--illus:2-6-clear-fractions-->
+
 **Worked examples:**
 
 *Reciprocal method:*

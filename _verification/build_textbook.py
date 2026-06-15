@@ -172,6 +172,7 @@ _ILLUS = {
     "2-3-area-distribute": "A rectangle split into two cells, picturing a factor distributed across a sum.",
     "2-4-both-pans": "Identical boxes removed from both pans of a balance scale by the same amount.",
     "2-5-pizza-fractions": "A smaller one-sixth slice beside a larger one-quarter slice: more sharers means smaller pieces.",
+    "2-6-clear-fractions": "A fraction circle with an arrow to a solid whole circle, picturing clearing the fractions to get a whole-number equation.",
     "3-1-unit-rate": "A speedometer beside a car at a steady speed, picturing a unit rate like miles in one hour.",
     "3-2-cross-multiply": "Two fractions linked by a crossing X, picturing cross-multiplication.",
     "3-3-percent-triangle": "A 10-by-10 grid of 100 small squares with 25 of them shaded, picturing a percent as a count per hundred.",
