@@ -191,7 +191,18 @@ Here's the order, top to bottom:
 3. Multiply and divide, equally important, done left to right
 4. Add and subtract, equally important, done left to right
 
-Within the bottom two lines you work in reading order, left to right, the way you read a sentence. Multiply and divide aren't ranked against each other; they're equal, so you just take them in the order they come. Same for add and subtract. If you already know PEMDAS, you can keep it; just write it stacked, with MD on one line and AS on the next, so each of those pairs is read left to right.
+Within the bottom two lines you work in reading order, left to right, the way you read a sentence. Multiply and divide aren't ranked against each other; they're equal, so you just take them in the order they come. Same for add and subtract.
+
+There's a short word that holds this whole order in your head: PEMDAS. It's a memory hook, one letter for each operation in the order you handle them. P is for Parentheses, E for Exponents, M for Multiplication, D for Division, A for Addition, and S for Subtraction. Say it once or twice and it sticks, and then the letters remind you what comes before what.
+
+The one thing to know about PEMDAS is that the six letters aren't six separate steps. M and D are a single step, and so are A and S, exactly like the four-line list above. The clearest way to hold that is to stack the letters in four rows, one row per line of the list:
+
+- P
+- E
+- MD
+- AS
+
+You read the rows top to bottom: parentheses first, then exponents, then the MD row, then the AS row. Inside the MD row, multiply and divide are equal, so you take them left to right; inside the AS row, add and subtract are equal, so you take those left to right too. Stacking it this way is what keeps PEMDAS from looking like six ranked steps, when it's really four.
 
 Now watch the order work on the spots that trip people, reading each one left to right within its line:
 
