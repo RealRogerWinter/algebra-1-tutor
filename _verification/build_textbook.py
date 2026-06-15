@@ -16,6 +16,7 @@ import markdown as mdlib
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO_ROOT = os.path.dirname(HERE)
 UNIT_MD = os.path.join(REPO_ROOT, "algebra-1-tutor", "references", "units")
+TEXTBOOK_SRC = os.path.join(REPO_ROOT, "textbook-src")
 FIG_DIR = os.path.join(REPO_ROOT, "algebra-1-tutor", "figures")
 OUT_DIR = os.path.join(REPO_ROOT, "docs", "textbook")
 KATEX = "0.16.11"
@@ -30,9 +31,14 @@ def _ssot():
 
 
 def _md_path(uid):
+    """Prefer the student-facing textbook source (textbook-src/); fall back to the tutor lesson
+    source for any unit not yet rewritten, so the site always builds completely. The SSOT-verified
+    math is kept identical between the two by check_textbook_src.py."""
     if uid == "A":
-        return os.path.join(UNIT_MD, "appendix-statistics.md")
-    return glob.glob(os.path.join(UNIT_MD, f"unit-{int(uid):02d}-*.md"))[0]
+        cand = os.path.join(TEXTBOOK_SRC, "appendix-statistics.md")
+        return cand if os.path.exists(cand) else os.path.join(UNIT_MD, "appendix-statistics.md")
+    hits = glob.glob(os.path.join(TEXTBOOK_SRC, f"unit-{int(uid):02d}-*.md"))
+    return hits[0] if hits else glob.glob(os.path.join(UNIT_MD, f"unit-{int(uid):02d}-*.md"))[0]
 
 
 # --- preprocessing (operates on the raw markdown before conversion) ------------------------------
