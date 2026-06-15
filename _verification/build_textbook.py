@@ -93,6 +93,74 @@ def _restore_math(htmltext, blocks):
     return htmltext
 
 
+# Typeset numeric set-literals like {3, 7, 9} as inline math. Runs on the math-protected text (so it
+# never sees a $$ block's internals) and BEFORE the anchor/practice passes (so a set is an opaque
+# sentinel by the time those parse). The wrapped \(\{...\}\) form is parked in the same `blocks` table
+# _restore_math reads, so it survives markdown verbatim and KaTeX renders it inline. The source .md
+# stays plain text (no inline-math tokens), so check_notation.py still passes. Only digit/separator
+# braces match, so {#code} anchors (a '#') and prose braces containing letters are left alone.
+_SET_RE = re.compile(r"(?<!\$)\{[\d\s.,()+−-]*\d[\d\s.,()+−-]*\}")   # (?<!\$) leaves currency ${..} alone
+_CODESPAN_RE = re.compile(r"(```.*?```|`[^`\n]+`)", re.DOTALL)       # capture code spans/fences (kept literal)
+
+
+def _protect_sets(text, blocks):
+    def repl(m):
+        inner = m.group(0)[1:-1].replace("−", "-")   # ASCII minus renders in KaTeX math mode
+        blocks.append(r"\(\{" + inner + r"\}\)")
+        return f"\x00M{len(blocks) - 1}\x00"
+    # apply only outside code spans/fences, so a numeric set/dict literal in a code example stays literal
+    parts = _CODESPAN_RE.split(text)
+    for k in range(0, len(parts), 2):                # even segments are the non-code text (odd = code)
+        parts[k] = _SET_RE.sub(repl, parts[k])
+    return "".join(parts)
+
+
+# A single-line $$ chain of steps joined by arrow connectors overflows a narrow column. Restack it as
+# a left-aligned \begin{aligned} block (one step per row) so it wraps to the column on any screen.
+# Only \begin{aligned}, row breaks and '&' marks are inserted — every math token is preserved
+# verbatim, so values never change and the build stays byte-deterministic. Arrays, already-stacked
+# (\\) and other \begin{} blocks are left untouched; short single-connector steps stay inline.
+_CHAIN_CONN = {"xrightarrow", "longrightarrow", "Longrightarrow", "rightarrow",
+               "Rightarrow", "implies", "mapsto", "to"}
+_MACRO_RE = re.compile(r"\\[a-zA-Z]+|\\.", re.DOTALL)
+_ROW_TAIL_RE = re.compile(r"(?:\\q?quad|\\[;,:!]|\\ |\s)+$")
+
+
+def _stack_chain(block):
+    if not (block.startswith("$$") and block.endswith("$$")):
+        return block
+    inner = block[2:-2]
+    if "\n" in inner.strip() or "\\begin{" in inner or "\\\\" in inner or "&" in inner:
+        return block   # arrays / already-stacked / blocks already using alignment cells: leave as-is
+    breaks, depth, i, n, nconn = [], 0, 0, len(inner), 0
+    while i < n:
+        ch = inner[i]
+        if ch == "\\":
+            m = _MACRO_RE.match(inner, i)
+            tok = m.group(0) if m else ch
+            if depth == 0 and tok[1:] in _CHAIN_CONN:
+                breaks.append(i); nconn += 1
+            elif depth == 0 and tok == "\\text" and re.match(r"\{\s*Check", inner[i + 5:]):
+                breaks.append(i)
+            i += len(tok); continue
+        if ch in "{[":           # track [] too, so a connector inside \xrightarrow[..]{..} isn't a break
+            depth += 1
+        elif ch in "}]":
+            depth -= 1
+        i += 1
+    if not breaks or (nconn < 2 and not (nconn == 1 and len(inner.strip()) > 60)):
+        return block
+    cuts = [0] + breaks + [n]
+    rows = [_ROW_TAIL_RE.sub("", inner[cuts[k]:cuts[k + 1]].strip()).strip()
+            for k in range(len(cuts) - 1)]
+    rows = [r for r in rows if r]
+    # need >=2 rows AND every step row an equation, so a term-by-term sequence walk (4 -> 9 -> 14 ...,
+    # no '=' on the step rows) stays inline rather than exploding into a tall ladder.
+    if len(rows) < 2 or any("=" not in r for r in rows[1:]):
+        return block
+    return "$$\\begin{aligned}\n&" + " \\\\\n&".join(rows) + "\n\\end{aligned}$$"
+
+
 def _id_worked_practice(text):
     """Insert {#code} markers after each Worked-example and Practice-problem number, lesson-aware,
     so they become deep-link targets like the explicit anchors. (In-memory only; not the source.)"""
@@ -115,11 +183,16 @@ def _id_worked_practice(text):
             if ln.startswith("**") or ln.startswith("## "):
                 block = None; continue
             if block and re.match(r"^\d+\. ", ln):
-                if block == "w":
-                    wk += 1; code = f"{lid}.w{wk}"
-                else:
-                    pk += 1; code = f"{lid}.{pk}"
-                lines[j] = re.sub(r"^(\d+)\. ", r"\g<0>{#%s} " % code, ln, count=1)
+                # code EVERY problem marker on the line, so several packed one-per-line (e.g.
+                # "1. a  2. b  3. c") each get their own sequential code, not just the line-leading one.
+                def _inject(m, _b=block, _l=lid):
+                    nonlocal wk, pk
+                    if _b == "w":
+                        wk += 1; c = f"{_l}.w{wk}"
+                    else:
+                        pk += 1; c = f"{_l}.{pk}"
+                    return f"{m.group(0)}{{#{c}}} "
+                lines[j] = _PROB_MARK.sub(_inject, ln)
     return "\n".join(lines)
 
 
@@ -443,9 +516,13 @@ def _render_practice(items, instr=""):
             out.append(f'<p class="practice-sub">{_md_inline(it[1])}</p>')
         else:
             _, num, ptext, ans = it
+            prob_html = _md_inline(ptext)
+            # the reference-code badge already carries the number, so drop the plain "N." where a badge
+            # is present; keep it only for rows that have no badge (so every problem keeps an identifier).
+            lead = "" if 'class="refcode"' in prob_html else f'<span class="pnum">{num}.</span> '
             out.append(
                 f'<div class="prow">'
-                f'<span class="prob"><span class="pnum">{num}.</span> {_md_inline(ptext)}</span>'
+                f'<span class="prob">{lead}{prob_html}</span>'
                 f'<details class="qcheck"><summary>'
                 f'<span class="qc-label">Reveal answer</span>'
                 f'<span class="vh"> to problem {num}</span></summary>'
@@ -621,6 +698,8 @@ def _pair_practice_answers(text):
 
 def md_to_body(text, launcher=False):
     text, math = _protect_math(text)
+    math = [_stack_chain(b) for b in math]   # stack long solve-chains so they wrap (no h-scroll)
+    text = _protect_sets(text, math)         # typeset numeric set-literals {..} as inline math
     text = _convert_illus(text)
     text = _id_worked_practice(text)
     text = _convert_anchors(text, launcher)
@@ -860,7 +939,7 @@ def _lesson_page(title, body, model, cur, prev_link=None, next_link=None, *, sub
 <script defer src="https://cdn.jsdelivr.net/npm/katex@{KATEX}/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
 <script>
 document.addEventListener("DOMContentLoaded", function () {{
-  renderMathInElement(document.body, {{delimiters: [{{left: "$$", right: "$$", display: true}}], throwOnError: false}});
+  renderMathInElement(document.body, {{delimiters: [{{left: "$$", right: "$$", display: true}}, {{left: "\\\\(", right: "\\\\)", display: false}}], throwOnError: false}});
   var root = document.documentElement, body = document.body;
   document.getElementById("theme").addEventListener("click", function () {{
     root.classList.toggle("dark");
@@ -928,7 +1007,7 @@ def _page(title, body, prev_link, next_link, subtitle="", *, surface="textbook",
 <script defer src="https://cdn.jsdelivr.net/npm/katex@{KATEX}/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
 <script>
 document.addEventListener("DOMContentLoaded", function () {{
-  renderMathInElement(document.body, {{delimiters: [{{left: "$$", right: "$$", display: true}}], throwOnError: false}});
+  renderMathInElement(document.body, {{delimiters: [{{left: "$$", right: "$$", display: true}}, {{left: "\\\\(", right: "\\\\)", display: false}}], throwOnError: false}});
   var t = document.getElementById("theme"), root = document.documentElement;
   t.addEventListener("click", function () {{
     root.classList.toggle("dark");
@@ -975,7 +1054,7 @@ html.dark body[data-surface="guide"]{--paper:#141a20; --card:#1c232b; --card-2:#
 html.dark body[data-surface="tutor"]{--paper:#1b1a16; --card:#24221c; --card-2:#1f1d18;}
 
 *{box-sizing:border-box}
-html{font-size:112.5%}
+html{font-size:112.5%; overflow-x:clip}   /* durable guard: a too-wide block can never scroll the page sideways */
 body{margin:0; background:var(--paper); color:var(--ink);
   font:var(--step-0)/var(--lh) "Source Serif 4",var(--serif-math),Georgia,serif;
   -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility; text-wrap:pretty;}
@@ -1129,7 +1208,7 @@ html.dark .hero-art{filter:brightness(.9) saturate(.92)}
 .prow{display:flex; gap:.5rem .9rem; align-items:baseline; flex-wrap:wrap; background:var(--card);
   border:1px solid var(--rule); border-radius:var(--radius); padding:.7rem .9rem; margin:.6rem 0}
 .prow .prob{flex:1 1 60%; min-width:0; overflow-wrap:break-word}
-.prow .pnum{color:var(--ink-soft); margin-right:.3rem}
+.prow .pnum{color:var(--ink-soft); margin-right:.3rem}   /* shown only on rows without a refcode badge */
 .prow .katex{white-space:normal} .prow .katex-display{overflow-x:auto; margin:.3rem 0}
 .qcheck{margin-left:auto; flex:0 0 auto}
 .qcheck > summary{cursor:pointer; list-style:none; display:inline-flex; align-items:center}
@@ -1209,7 +1288,7 @@ section.ug h3{margin:.1rem 0 .4rem} section.ug :last-child{margin-bottom:0}
 
 /* ---- mobile: the rail slides in over the page ---- */
 @media (max-width:62rem){
-  .shell{grid-template-columns:1fr}
+  .shell{grid-template-columns:minmax(0,1fr)}
   .menu{display:inline-flex; order:-1}
   .sidenav{position:fixed; top:0; left:0; height:100dvh; width:17rem; max-height:none; z-index:60;
     transform:translateX(-100%); transition:transform .2s ease; box-shadow:0 0 40px rgba(0,0,0,.3)}
@@ -1226,6 +1305,7 @@ section.ug h3{margin:.1rem 0 .4rem} section.ug :last-child{margin-bottom:0}
 
 /* ---- print (courtesy) ---- */
 @media print{
+  html{overflow-x:visible}   /* reset the screen-only clip guard so paged media can't drop content */
   .topbar,.sidenav,.pagenav{display:none} .shell{display:block} a{color:inherit; text-decoration:none}
   body,figure.fig{background-image:none}
   .answers[open] .ak-body, details > *{display:revert} details{display:block} .answers summary{display:none}

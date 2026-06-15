@@ -153,7 +153,11 @@
 <p>$$\frac{4 \text{ apples}}{\$3} = \frac{10 \text{ apples}}{\$x}$$</p>
 <p>Apples are on top on the left, so apples go on top on the right; dollars sit underneath on both. That lines the two ratios up to be equal, which is what "same price" means.</p>
 <p>Now for the move that solves a proportion. It has a name, cross-multiplication, and it isn't a magic X. It's the same habit from Unit 2 of doing the same thing to both sides, used twice to clear the fractions. Start from two equal ratios and clear each bottom in turn:</p>
-<p>$$\frac{a}{b} = \frac{c}{d} \;\xrightarrow{\times b}\; a = \frac{bc}{d} \;\xrightarrow{\times d}\; a\cdot d = b\cdot c.$$</p>
+<p>$$\begin{aligned}
+&amp;\frac{a}{b} = \frac{c}{d} \\
+&amp;\xrightarrow{\times b}\; a = \frac{bc}{d} \\
+&amp;\xrightarrow{\times d}\; a\cdot d = b\cdot c.
+\end{aligned}$$</p>
 <p>All that happened: you multiplied both sides by b to clear the first bottom, then by d to clear the second. The crossed product a·d = b·c is the <em>result</em> of those two clearings, not a trick you have to take on faith. (This is safe because b and d aren't zero. Multiplying both sides by something that might be zero isn't a reversible move, which is why proportions keep their bottoms nonzero.)</p>
 <figure class="illus"><img class="illus-art" src="../assets/illus-3-2-cross-multiply.jpg" alt="Two fractions linked by a crossing X, picturing cross-multiplication." loading="lazy"></figure>
 
@@ -180,7 +184,11 @@
 </li>
 <li>
 <p><a class="refcode" id="3.2.w3" href="#3.2.w3" data-prompt="Use the Algebra 1 tutor skill to help me with worked example 3 in Lesson 3.2 (reference 3.2.w3). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for worked example 3 in Lesson 3.2">3.2.w3</a> <em>Word problem (direct).</em> 4 apples cost $3; what do 10 apples cost? Write it with the units inline so the "same unit on top on both sides" rule stays visible, apples over dollars on both sides:
-$$\frac{4 \text{ apples}}{\$3} = \frac{10 \text{ apples}}{\$x} \;\Rightarrow\; 4x = 30 \;\Rightarrow\; x = \$7.50.$$
+$$\begin{aligned}
+&amp;\frac{4 \text{ apples}}{\$3} = \frac{10 \text{ apples}}{\$x} \\
+&amp;\Rightarrow\; 4x = 30 \\
+&amp;\Rightarrow\; x = \$7.50.
+\end{aligned}$$
 Cross-multiplying clears the bottoms to give 4x = 30, then dividing by 4 gives x = 7.5. Check: 4/3 = 10/7.5, the same price per apple on both sides.</p>
 </li>
 <li>
@@ -248,7 +256,7 @@ Cross-multiplying clears the bottoms to give 4x = 30, then dividing by 4 gives x
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-  renderMathInElement(document.body, {delimiters: [{left: "$$", right: "$$", display: true}], throwOnError: false});
+  renderMathInElement(document.body, {delimiters: [{left: "$$", right: "$$", display: true}, {left: "\\(", right: "\\)", display: false}], throwOnError: false});
   var root = document.documentElement, body = document.body;
   document.getElementById("theme").addEventListener("click", function () {
     root.classList.toggle("dark");
