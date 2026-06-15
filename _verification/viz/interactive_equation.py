@@ -9,8 +9,8 @@ algebra with their hands instead of just reading it:
      sides keeps the equation balanced. A button takes 3 away from both
      sides until x sits alone, then a calm success state appears.
   2. An "evaluate" slider: drag x from -5..5 and watch 3x + 2 compute live.
-  3. A "do the same to both sides" stepper for ``4x = 20`` whose button
-     divides both sides by 4 and lands on x = 5.
+  3. A "do the same to both sides" stepper for ``4x = 12`` whose button
+     divides both sides by 4 and lands on x = 3.
 
 Every displayed number is computed (and double-checked against sympy in the
 module's verification), so a learner never reads a false value.
@@ -32,7 +32,7 @@ LESSONS = ["1.1", "1.5", "2.1"]
 
 # --------------------------------------------------------------------------
 # Verified facts (computed, not hand-typed). Cross-checked with sympy:
-#   solve(x + 3 = 7) -> 4 ;  solve(4x = 20) -> 5 ;  (3*x + 2) over -5..5
+#   solve(x + 3 = 7) -> 4 ;  solve(4x = 12) -> 3 ;  (3*x + 2) over -5..5
 # --------------------------------------------------------------------------
 def _eval_table():
     """3*x + 2 for x in -5..5, as a JS-ready list of [x, y] pairs."""
@@ -441,7 +441,7 @@ def _divide():
   }}
 
   function reset(){{
-    coef = 4; total = 20; groups = 1;   // 4x = 20
+    coef = 4; total = 12; groups = 1;   // 4x = 12
     btnDiv.disabled = false;
     render();
   }}
@@ -461,8 +461,8 @@ def _divide():
 }})();
 </script>'''
     return {
-        "caption": "Divide-both-sides stepper for 4x = 20: split each side into "
-                   "4 equal shares to reach x = 5.",
+        "caption": "Divide-both-sides stepper for 4x = 12: split each side into "
+                   "4 equal shares to reach x = 3.",
         "html": html,
     }
 
