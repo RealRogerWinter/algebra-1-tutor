@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What is a function — Algebra 1</title>
+<script>try{if(localStorage.getItem("a1-theme")==="dark")document.documentElement.classList.add("dark");}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..40,500..600&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="textbook.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous">
+</head>
+<body data-surface="textbook">
+<header class="topbar">
+  <button id="menu" class="menu" type="button" aria-label="Open or close the contents menu" aria-expanded="false">☰&nbsp;Contents</button>
+  <a class="home" href="index.html">Algebra&nbsp;1</a>
+  <span class="sp"></span>
+  <button id="theme" type="button" aria-label="Toggle light or dark theme">◐&nbsp;Theme</button>
+</header>
+<div class="shell">
+<aside class="sidenav" id="sidenav">
+<nav class="snav" aria-label="Contents">
+<a class="snav-top" href="how-to-use.html">How to use this book</a>
+<a class="snav-top" href="index.html">All units</a>
+<ol class="snav-units">
+<li class="">
+<a class="snav-unit" href="unit-01.html">Unit 1. Foundations &amp; the Language of Algebra</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-01-1.html"><span class="ln">1.1</span> Variables and the meaning of equations</a></li>
+<li><a class="snav-lesson" href="unit-01-2.html"><span class="ln">1.2</span> The number system &amp; the number line</a></li>
+<li><a class="snav-lesson" href="unit-01-3.html"><span class="ln">1.3</span> Order of operations</a></li>
+<li><a class="snav-lesson" href="unit-01-4.html"><span class="ln">1.4</span> Negative numbers</a></li>
+<li><a class="snav-lesson" href="unit-01-5.html"><span class="ln">1.5</span> Expressions vs. equations; evaluating expressions</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-02.html">Unit 2. Solving Linear Equations</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-02-1.html"><span class="ln">2.1</span> Inverse operations &amp; one-step equations</a></li>
+<li><a class="snav-lesson" href="unit-02-2.html"><span class="ln">2.2</span> Two-step equations</a></li>
+<li><a class="snav-lesson" href="unit-02-3.html"><span class="ln">2.3</span> Combining like terms &amp; the distributive property</a></li>
+<li><a class="snav-lesson" href="unit-02-4.html"><span class="ln">2.4</span> Variables on both sides</a></li>
+<li><a class="snav-lesson" href="unit-02-5.html"><span class="ln">2.5</span> Equations with fractions (with two Fraction Refreshers)</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-03.html">Unit 3. Proportional Reasoning (the bridge to linearity)</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-03-1.html"><span class="ln">3.1</span> Ratios and rates</a></li>
+<li><a class="snav-lesson" href="unit-03-2.html"><span class="ln">3.2</span> Proportions &amp; cross-multiplication</a></li>
+<li><a class="snav-lesson" href="unit-03-3.html"><span class="ln">3.3</span> Percents</a></li>
+</ol>
+</li>
+<li class="active">
+<a class="snav-unit" href="unit-04.html">Unit 4. Introducing Functions</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson cur" href="unit-04-1.html"><span class="ln">4.1</span> What is a function</a></li>
+<li><a class="snav-lesson" href="unit-04-2.html"><span class="ln">4.2</span> Function notation f(x), domain &amp; range</a></li>
+<li><a class="snav-lesson" href="unit-04-3.html"><span class="ln">4.3</span> Multiple representations; linear vs. nonlinear</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-05.html">Unit 5. Linear Functions &amp; Their Graphs</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-05-1.html"><span class="ln">5.1</span> The coordinate plane</a></li>
+<li><a class="snav-lesson" href="unit-05-2.html"><span class="ln">5.2</span> Graphing linear equations from a table</a></li>
+<li><a class="snav-lesson" href="unit-05-3.html"><span class="ln">5.3</span> Slope</a></li>
+<li><a class="snav-lesson" href="unit-05-4.html"><span class="ln">5.4</span> Slope-intercept form y = mx + b</a></li>
+<li><a class="snav-lesson" href="unit-05-5.html"><span class="ln">5.5</span> Writing equations of lines</a></li>
+<li><a class="snav-lesson" href="unit-05-6.html"><span class="ln">5.6</span> x-intercepts, graphing by intercepts &amp; standard form</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-06.html">Unit 6. Modeling &amp; Translation</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-06-1.html"><span class="ln">6.1</span> Translating words into expressions and equations</a></li>
+<li><a class="snav-lesson" href="unit-06-2.html"><span class="ln">6.2</span> Classic word problems (number, age, distance, value &amp; relationship)</a></li>
+<li><a class="snav-lesson" href="unit-06-3.html"><span class="ln">6.3</span> Scatter plots &amp; line of best fit (a first taste of data)</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-07.html">Unit 7. Systems of Equations</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-07-1.html"><span class="ln">7.1</span> Solving by graphing</a></li>
+<li><a class="snav-lesson" href="unit-07-2.html"><span class="ln">7.2</span> Substitution</a></li>
+<li><a class="snav-lesson" href="unit-07-3.html"><span class="ln">7.3</span> Elimination</a></li>
+<li><a class="snav-lesson" href="unit-07-4.html"><span class="ln">7.4</span> Special cases &amp; applications</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-08.html">Unit 8. Inequalities</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-08-1.html"><span class="ln">8.1</span> One-variable inequalities</a></li>
+<li><a class="snav-lesson" href="unit-08-2.html"><span class="ln">8.2</span> Compound inequalities</a></li>
+<li><a class="snav-lesson" href="unit-08-3.html"><span class="ln">8.3</span> Absolute value: graphs &amp; distance</a></li>
+<li><a class="snav-lesson" href="unit-08-4.html"><span class="ln">8.4</span> Graphing linear inequalities (two variables) &amp; systems</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-09.html">Unit 9. Sequences &amp; Exponential Functions</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-09-1.html"><span class="ln">9.1</span> Arithmetic &amp; geometric sequences as functions</a></li>
+<li><a class="snav-lesson" href="unit-09-2.html"><span class="ln">9.2</span> Exponential growth &amp; decay; linear vs. exponential</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-10.html">Unit 10. Exponents &amp; Polynomials</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-10-1.html"><span class="ln">10.1</span> Exponent rules (including zero &amp; negative exponents)</a></li>
+<li><a class="snav-lesson" href="unit-10-2.html"><span class="ln">10.2</span> Scientific notation</a></li>
+<li><a class="snav-lesson" href="unit-10-3.html"><span class="ln">10.3</span> Polynomials — terms, degree, standard form; add &amp; subtract</a></li>
+<li><a class="snav-lesson" href="unit-10-4.html"><span class="ln">10.4</span> Multiplying polynomials</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-11.html">Unit 11. Factoring</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-11-1.html"><span class="ln">11.1</span> Greatest common factor (GCF)</a></li>
+<li><a class="snav-lesson" href="unit-11-2.html"><span class="ln">11.2</span> Factoring trinomials x²+bx+c</a></li>
+<li><a class="snav-lesson" href="unit-11-3.html"><span class="ln">11.3</span> Special patterns</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-12.html">Unit 12. Quadratic Functions &amp; Equations (the capstone)</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-12-1.html"><span class="ln">12.1</span> Square roots &amp; simplifying radicals</a></li>
+<li><a class="snav-lesson" href="unit-12-2.html"><span class="ln">12.2</span> The simplest quadratics (x²=9 → two solutions)</a></li>
+<li><a class="snav-lesson" href="unit-12-3.html"><span class="ln">12.3</span> Solving by factoring (zero-product property)</a></li>
+<li><a class="snav-lesson" href="unit-12-4.html"><span class="ln">12.4</span> Completing the square</a></li>
+<li><a class="snav-lesson" href="unit-12-5.html"><span class="ln">12.5</span> The quadratic formula &amp; the discriminant</a></li>
+<li><a class="snav-lesson" href="unit-12-6.html"><span class="ln">12.6</span> Graphing parabolas</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="appendix.html">Appendix. Data &amp; Statistics</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="appendix-1.html"><span class="ln">A.1</span> One-variable statistics — center &amp; spread</a></li>
+<li><a class="snav-lesson" href="appendix-2.html"><span class="ln">A.2</span> Two-variable data — line of best fit, correlation vs. causation</a></li>
+<li><a class="snav-lesson" href="appendix-3.html"><span class="ln">A.3</span> Two-way tables</a></li>
+</ol>
+</li>
+</ol></nav>
+</aside>
+<div class="content">
+<main>
+<div class="kicker">Unit 4 · Lesson 4.1</div><h1>What is a function</h1>
+
+
+<p>Think about a vending machine for a moment. You press a button and you get exactly one snack. Press B4 today, you get pretzels. Press B4 tomorrow, you get pretzels again. Same button, same snack, every time.</p>
+<p>That reliable matching of each button to one snack is the whole idea behind a function. A function is a dependable pairing: each thing you put in comes back matched to exactly one thing.</p>
+<p>Notice what the machine does <em>not</em> promise. It doesn't promise that every snack has its own button. Two different buttons can both dispense pretzels, and that's a perfectly good machine. Annoying, maybe, but not broken.</p>
+<p>What <em>would</em> count as broken is a button that gives pretzels sometimes and a soda other times. Press B4 and you can't tell what you'll get. That machine you'd kick.</p>
+<p>That asymmetry is the entire lesson, so say it slowly. Two inputs landing on the same output is fine. One input giving two different outputs is the thing a function never does. Repeats are only a problem on the input side.</p>
+<p>There's no formula anywhere in that vending machine, just a list of which button gives which snack. Hold onto that, because it's easy to assume a function has to be an equation. It doesn't. The pairing itself is the function, however it's written down.</p>
+<p>Here's that idea as a picture you can draw. Put the inputs in a column on the left, the outputs in a column on the right, and draw an arrow from each input to the output it's matched with.</p>
+<p>The reading rule follows the vending machine exactly: it's a function when every input on the left has exactly one arrow leaving it. Two arrows landing on the same right-hand value (two buttons, same snack) is fine. But two arrows <em>leaving</em> one left-hand value means that single input has two outputs, and that breaks it.</p>
+<p>Now the same idea on a graph, which is where you'll meet it most often. On a graph, an input is an x-value: a spot along the horizontal direction. "All the points sharing one input" is a single vertical line standing at that x.</p>
+<p>So sweep a vertical line slowly across the graph, left to right, and watch how many times it touches. If it never touches the graph in more than one place, every input has at most one output, and you've got a function. If a vertical line ever hits the graph in two places at once, that one input has two outputs, and it isn't.</p>
+<p>This sweep has a name: the <strong>vertical line test</strong>. Walking your finger across the page as the imaginary line is a fine way to do it.</p>
+<p>A quick way to carry this in your pocket: <em>each input is paired with exactly one output, and repeats are only a problem on the input side.</em> Say it back to yourself; you'll use it constantly.</p>
+<div class="cl-terms">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6.5C9.5 5 6 5 3.5 6.5V18C6 16.5 9.5 16.5 12 18C14.5 16.5 18 16.5 20.5 18V6.5C18 5 14.5 5 12 6.5Z"/><path d="M12 6.5V18"/></svg>New words</span></p>
+<ul>
+<li><a class="refcode" id="4.1.d1" href="#4.1.d1">4.1.d1</a> <strong>Function:</strong> a <strong>pairing</strong> (a correspondence) that matches <strong>each input with exactly one output</strong>. The pairing can be given any way at all: a list of (input, output) pairs, a table, a graph, or a formula. What makes it a <em>function</em> is the one-output-per-input promise, not the form it comes in. (Heads-up: in 4.2 a <em>formula</em> like f(x)=3x−1 is called a <strong>rule</strong>. A rule is one common <em>way</em> to give a function's pairing, not the definition itself. A pair-list with no formula is still a function.)</li>
+<li><a class="refcode" id="4.1.d2" href="#4.1.d2">4.1.d2</a> <strong>Input / output:</strong> what you feed in, and what comes back, written as a pair (input, output). The inputs form one set and the outputs form another; in 4.2 those sets get the names <strong>domain</strong> and <strong>range</strong>. (Later the input is also called the variable and the output its value.)</li>
+<li><a class="refcode" id="4.1.d3" href="#4.1.d3">4.1.d3</a> <strong>Vertical line test:</strong> a graph is a function exactly when <strong>every vertical line</strong> hits it in <strong>at most one point</strong> (one hit, or none). If some vertical line hits the graph twice, that one input has two outputs, so it is not a function.</li>
+</ul>
+<p>Read these next examples slowly, one at a time, and decide the answer in your head before you read the verdict. The whole skill is checking the input side, so practice spotting where to look.</p>
+</div>
+<section class="worked">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19.5V15L15.5 4.5 19.5 8.5 9 19Z"/><path d="M13.5 6.5 17.5 10.5"/></svg>Worked example</span></p>
+<p><em>Example 1: a set of pairs (no formula needed).</em> Is {(1,2),(2,4),(3,6),(4,8)} a function?
+This is just a pairing, a list matching inputs to outputs, with no rule or formula written anywhere. That's allowed, because the pairing itself is the function. The inputs are 1, 2, 3, 4. Each one is different, each appears once, so each input is matched with exactly one output. <strong>Yes, a function.</strong></p>
+<p><em>Example 2: a repeated output (still fine).</em> Is {(1,5),(2,5),(3,5)} a function?
+The output 5 shows up three times, which can look suspicious at first. But check the <em>inputs</em>: 1, 2, 3, each appearing once, each with a single output. A repeated output is allowed. This is the "two buttons, same snack" case, so it's <strong>yes, a function.</strong></p>
+<p><em>Example 3: a split input (broken).</em> Is {(1,2),(1,3),(2,4)} a function?
+Look at the input 1: it's paired with 2 and also with 3. One input, two outputs, the broken-button case. <strong>No, not a function.</strong></p>
+<p><em>Example 4: a table.</em></p>
+<table>
+<thead>
+<tr>
+<th>input x</th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+<th>0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>output</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>9</td>
+</tr>
+</tbody>
+</table>
+<p>A table is read the same way; just scan the input row for a repeat. Input 0 appears twice, giving 4 once and 9 once. That's two outputs for one input. <strong>No, not a function.</strong></p>
+<p><em>Example 5: a graph (vertical line test).</em> Take a non-vertical straight line such as y=2x+1. Sweep a vertical line across it and it touches in exactly one spot everywhere you put it. <strong>Function.</strong> Now take a circle centered at the origin, or a sideways "U" (a parabola opening to the right): a vertical line through the middle cuts across it in <strong>two</strong> places at once. <strong>Not a function.</strong>
+One straight line is the exception worth knowing. A <em>vertical</em> line such as x=3 is <strong>not</strong> a function: every point on it sits at the same input, x=3, so that single input is paired with infinitely many outputs. It's the cleanest possible example of one input with many outputs.</p>
+<p>Now that you've seen the right reading a few times, here's the slip that snares almost everyone at first. It's natural to decide that <em>any</em> repeat at all kills a function, a sensible-sounding "no repeats allowed" rule. But go back to the machine: two buttons giving the same snack doesn't break anything.</p>
+<p>So when a number repeats, don't reject it on sight. Look only at the input side, and ask whether one input is trying to give two different outputs. That, and only that, is what breaks a function.</p>
+<p>One more place to be careful, and it's about direction. The test line is <em>vertical</em>, not horizontal. An input is an x, and the line that gathers all the points sharing one x stands straight up and down. If you find yourself sliding a line up and down the page instead of across it, you're testing the wrong thing.</p>
+</section>
+<div class="cl-check">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M9.6 9.6a2.6 2.6 0 1 1 3.3 2.5c-.9.3-1.4.9-1.4 1.8"/><circle cx="11.5" cy="16.6" r=".9" fill="currentColor" stroke="none"/></svg>Check yourself</span></p>
+<ol>
+<li><a class="refcode" id="4.1.c1" href="#4.1.c1">4.1.c1</a> Make a set of three pairs that is <em>not</em> a function, and say which input breaks it. (One answer: {(2,1),(2,5),(3,9)}. The input 2 is paired with both 1 and 5, so that's the one that breaks it.)</li>
+<li><a class="refcode" id="4.1.c2" href="#4.1.c2">4.1.c2</a> Here's a table where the output 7 shows up three times. Can it still be a function, and what would you have to check? (Yes, it can: a repeated output is fine. Check the <em>inputs</em>: as long as no input appears twice with different outputs, it's a function.)</li>
+<li><a class="refcode" id="4.1.c3" href="#4.1.c3">4.1.c3</a> Why does the <em>vertical</em> line test, and not a horizontal one, decide it? (A vertical line gathers all the points that share one <em>input</em>; two hits means one input with two outputs, which is broken. A horizontal line would gather points that share one <em>output</em>, but two inputs sharing an output is allowed, so a horizontal line tests nothing about being a function.)</li>
+</ol>
+<p>Mixing the kinds of problem feels harder than repeating one kind, and that's the point: switching between them is what makes the idea stick to next week. Every problem below has its answer at the end of the lesson, and if one stalls you, look back at the worked example it matches.</p>
+</div>
+<section class="practice">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4.5" width="15.5" height="15.5" rx="2.5"/><path d="M7.5 10 9 11.5 12 8.5"/><path d="M14 10H16.5"/><path d="M7.5 15H16.5"/></svg>Practice</span></p>
+<p><em>A. Sets of pairs — function or not? (give the reason)</em></p>
+<ol>
+<li><a class="refcode" id="4.1.1" href="#4.1.1">4.1.1</a> {(0,1),(1,2),(2,3)}</li>
+<li><a class="refcode" id="4.1.2" href="#4.1.2">4.1.2</a> {(2,4),(3,4),(5,4)}</li>
+<li><a class="refcode" id="4.1.3" href="#4.1.3">4.1.3</a> {(1,1),(1,2),(3,4)}</li>
+<li><a class="refcode" id="4.1.4" href="#4.1.4">4.1.4</a> {(-1,0),(0,1),(1,0)}</li>
+<li><a class="refcode" id="4.1.5" href="#4.1.5">4.1.5</a> {(5,5),(5,6)}</li>
+</ol>
+<p><em>B. Tables — function or not?</em></p>
+<ol start="6">
+<li><a class="refcode" id="4.1.6" href="#4.1.6">4.1.6</a> inputs 1,2,3,4 → outputs 2,2,2,2</li>
+<li><a class="refcode" id="4.1.7" href="#4.1.7">4.1.7</a> inputs 3,4,3 → outputs 1,2,8</li>
+<li><a class="refcode" id="4.1.8" href="#4.1.8">4.1.8</a> inputs -2,-1,0,1 → outputs 4,1,0,1</li>
+</ol>
+<p><em>C. Descriptions / graphs — function or not?</em></p>
+<ol start="9">
+<li><a class="refcode" id="4.1.9" href="#4.1.9">4.1.9</a> "Each person is matched to their birth year." (input = person)</li>
+<li><a class="refcode" id="4.1.10" href="#4.1.10">4.1.10</a> "Each birth year is matched to a person born then." (input = year)</li>
+<li><a class="refcode" id="4.1.11" href="#4.1.11">4.1.11</a> The graph of a single non-vertical straight line.</li>
+<li><a class="refcode" id="4.1.12" href="#4.1.12">4.1.12</a> The graph of a circle.</li>
+<li><a class="refcode" id="4.1.13" href="#4.1.13">4.1.13</a> The graph of the vertical line x=3.</li>
+<li><a class="refcode" id="4.1.14" href="#4.1.14">4.1.14</a> "Each student is paired with the one chair they sit in." (input = student)</li>
+</ol>
+</section>
+<details class="answers">
+<summary><span class="tw"></span><span class="eyebrow">Answers</span><span class="hint">Try each one yourself first, then open to check.</span></summary>
+<div class="ak-body">
+<ol>
+<li><strong>Function</strong> — inputs 0,1,2 all distinct.</li>
+<li><strong>Function</strong> — output 4 repeats, but inputs 2,3,5 are distinct (two buttons, same snack).</li>
+<li><strong>Not a function</strong> — input 1 gives both 1 and 2.</li>
+<li><strong>Function</strong> — output 0 repeats, but inputs -1,0,1 are distinct.</li>
+<li><strong>Not a function</strong> — input 5 gives both 5 and 6.</li>
+<li><strong>Function</strong> — inputs all distinct; identical outputs are allowed.</li>
+<li><strong>Not a function</strong> — input 3 appears twice with outputs 1 and 8.</li>
+<li><strong>Function</strong> — inputs -2,-1,0,1 distinct; repeated output 1 is fine.</li>
+<li><strong>Function</strong> — each person has exactly one birth year.</li>
+<li><strong>Not a function</strong> — a year can match many people (one input → many outputs).</li>
+<li><strong>Function</strong> — a non-vertical line passes the vertical line test (each x has exactly one y).</li>
+<li><strong>Not a function</strong> — a vertical line through it hits twice.</li>
+<li><strong>Not a function</strong> — every point shares the input x=3, so that one input has infinitely many outputs; it fails the vertical line test.</li>
+<li><strong>Function</strong> — each input (a student) is paired with exactly one output (a chair). It's a plain pairing, no formula needed.</li>
+</ol>
+</div>
+</details>
+<nav class="pagenav" aria-label="Previous and next page">
+<a class="pn-prev" href="unit-04.html"><span class="pn-dir">&larr;&nbsp;Back</span><span class="pn-title">Unit 4</span></a>
+<a class="pn-next" href="unit-04-2.html"><span class="pn-dir">Next&nbsp;&rarr;</span><span class="pn-title">Lesson 4.2</span></a>
+</nav>
+</main>
+<footer><p>A friendly Algebra 1 textbook, made to be read alongside the Claude tutor. Math by KaTeX.</p></footer>
+</div>
+</div>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  renderMathInElement(document.body, {delimiters: [{left: "$$", right: "$$", display: true}], throwOnError: false});
+  var root = document.documentElement, body = document.body;
+  document.getElementById("theme").addEventListener("click", function () {
+    root.classList.toggle("dark");
+    localStorage.setItem("a1-theme", root.classList.contains("dark") ? "dark" : "light");
+  });
+  var menu = document.getElementById("menu");
+  menu.addEventListener("click", function () {
+    var open = body.classList.toggle("nav-open");
+    menu.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+  var sn = document.getElementById("sidenav");
+  if (sn) sn.addEventListener("click", function (e) { if (e.target.closest("a")) body.classList.remove("nav-open"); });
+});
+</script>
+</body>
+</html>

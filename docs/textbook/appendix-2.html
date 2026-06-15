@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Two-variable data — line of best fit, correlation vs. causation — Algebra 1</title>
+<script>try{if(localStorage.getItem("a1-theme")==="dark")document.documentElement.classList.add("dark");}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..40,500..600&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="textbook.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous">
+</head>
+<body data-surface="textbook">
+<header class="topbar">
+  <button id="menu" class="menu" type="button" aria-label="Open or close the contents menu" aria-expanded="false">☰&nbsp;Contents</button>
+  <a class="home" href="index.html">Algebra&nbsp;1</a>
+  <span class="sp"></span>
+  <button id="theme" type="button" aria-label="Toggle light or dark theme">◐&nbsp;Theme</button>
+</header>
+<div class="shell">
+<aside class="sidenav" id="sidenav">
+<nav class="snav" aria-label="Contents">
+<a class="snav-top" href="how-to-use.html">How to use this book</a>
+<a class="snav-top" href="index.html">All units</a>
+<ol class="snav-units">
+<li class="">
+<a class="snav-unit" href="unit-01.html">Unit 1. Foundations &amp; the Language of Algebra</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-01-1.html"><span class="ln">1.1</span> Variables and the meaning of equations</a></li>
+<li><a class="snav-lesson" href="unit-01-2.html"><span class="ln">1.2</span> The number system &amp; the number line</a></li>
+<li><a class="snav-lesson" href="unit-01-3.html"><span class="ln">1.3</span> Order of operations</a></li>
+<li><a class="snav-lesson" href="unit-01-4.html"><span class="ln">1.4</span> Negative numbers</a></li>
+<li><a class="snav-lesson" href="unit-01-5.html"><span class="ln">1.5</span> Expressions vs. equations; evaluating expressions</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-02.html">Unit 2. Solving Linear Equations</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-02-1.html"><span class="ln">2.1</span> Inverse operations &amp; one-step equations</a></li>
+<li><a class="snav-lesson" href="unit-02-2.html"><span class="ln">2.2</span> Two-step equations</a></li>
+<li><a class="snav-lesson" href="unit-02-3.html"><span class="ln">2.3</span> Combining like terms &amp; the distributive property</a></li>
+<li><a class="snav-lesson" href="unit-02-4.html"><span class="ln">2.4</span> Variables on both sides</a></li>
+<li><a class="snav-lesson" href="unit-02-5.html"><span class="ln">2.5</span> Equations with fractions (with two Fraction Refreshers)</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-03.html">Unit 3. Proportional Reasoning (the bridge to linearity)</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-03-1.html"><span class="ln">3.1</span> Ratios and rates</a></li>
+<li><a class="snav-lesson" href="unit-03-2.html"><span class="ln">3.2</span> Proportions &amp; cross-multiplication</a></li>
+<li><a class="snav-lesson" href="unit-03-3.html"><span class="ln">3.3</span> Percents</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-04.html">Unit 4. Introducing Functions</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-04-1.html"><span class="ln">4.1</span> What is a function</a></li>
+<li><a class="snav-lesson" href="unit-04-2.html"><span class="ln">4.2</span> Function notation f(x), domain &amp; range</a></li>
+<li><a class="snav-lesson" href="unit-04-3.html"><span class="ln">4.3</span> Multiple representations; linear vs. nonlinear</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-05.html">Unit 5. Linear Functions &amp; Their Graphs</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-05-1.html"><span class="ln">5.1</span> The coordinate plane</a></li>
+<li><a class="snav-lesson" href="unit-05-2.html"><span class="ln">5.2</span> Graphing linear equations from a table</a></li>
+<li><a class="snav-lesson" href="unit-05-3.html"><span class="ln">5.3</span> Slope</a></li>
+<li><a class="snav-lesson" href="unit-05-4.html"><span class="ln">5.4</span> Slope-intercept form y = mx + b</a></li>
+<li><a class="snav-lesson" href="unit-05-5.html"><span class="ln">5.5</span> Writing equations of lines</a></li>
+<li><a class="snav-lesson" href="unit-05-6.html"><span class="ln">5.6</span> x-intercepts, graphing by intercepts &amp; standard form</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-06.html">Unit 6. Modeling &amp; Translation</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-06-1.html"><span class="ln">6.1</span> Translating words into expressions and equations</a></li>
+<li><a class="snav-lesson" href="unit-06-2.html"><span class="ln">6.2</span> Classic word problems (number, age, distance, value &amp; relationship)</a></li>
+<li><a class="snav-lesson" href="unit-06-3.html"><span class="ln">6.3</span> Scatter plots &amp; line of best fit (a first taste of data)</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-07.html">Unit 7. Systems of Equations</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-07-1.html"><span class="ln">7.1</span> Solving by graphing</a></li>
+<li><a class="snav-lesson" href="unit-07-2.html"><span class="ln">7.2</span> Substitution</a></li>
+<li><a class="snav-lesson" href="unit-07-3.html"><span class="ln">7.3</span> Elimination</a></li>
+<li><a class="snav-lesson" href="unit-07-4.html"><span class="ln">7.4</span> Special cases &amp; applications</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-08.html">Unit 8. Inequalities</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-08-1.html"><span class="ln">8.1</span> One-variable inequalities</a></li>
+<li><a class="snav-lesson" href="unit-08-2.html"><span class="ln">8.2</span> Compound inequalities</a></li>
+<li><a class="snav-lesson" href="unit-08-3.html"><span class="ln">8.3</span> Absolute value: graphs &amp; distance</a></li>
+<li><a class="snav-lesson" href="unit-08-4.html"><span class="ln">8.4</span> Graphing linear inequalities (two variables) &amp; systems</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-09.html">Unit 9. Sequences &amp; Exponential Functions</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-09-1.html"><span class="ln">9.1</span> Arithmetic &amp; geometric sequences as functions</a></li>
+<li><a class="snav-lesson" href="unit-09-2.html"><span class="ln">9.2</span> Exponential growth &amp; decay; linear vs. exponential</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-10.html">Unit 10. Exponents &amp; Polynomials</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-10-1.html"><span class="ln">10.1</span> Exponent rules (including zero &amp; negative exponents)</a></li>
+<li><a class="snav-lesson" href="unit-10-2.html"><span class="ln">10.2</span> Scientific notation</a></li>
+<li><a class="snav-lesson" href="unit-10-3.html"><span class="ln">10.3</span> Polynomials — terms, degree, standard form; add &amp; subtract</a></li>
+<li><a class="snav-lesson" href="unit-10-4.html"><span class="ln">10.4</span> Multiplying polynomials</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-11.html">Unit 11. Factoring</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-11-1.html"><span class="ln">11.1</span> Greatest common factor (GCF)</a></li>
+<li><a class="snav-lesson" href="unit-11-2.html"><span class="ln">11.2</span> Factoring trinomials x²+bx+c</a></li>
+<li><a class="snav-lesson" href="unit-11-3.html"><span class="ln">11.3</span> Special patterns</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-12.html">Unit 12. Quadratic Functions &amp; Equations (the capstone)</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-12-1.html"><span class="ln">12.1</span> Square roots &amp; simplifying radicals</a></li>
+<li><a class="snav-lesson" href="unit-12-2.html"><span class="ln">12.2</span> The simplest quadratics (x²=9 → two solutions)</a></li>
+<li><a class="snav-lesson" href="unit-12-3.html"><span class="ln">12.3</span> Solving by factoring (zero-product property)</a></li>
+<li><a class="snav-lesson" href="unit-12-4.html"><span class="ln">12.4</span> Completing the square</a></li>
+<li><a class="snav-lesson" href="unit-12-5.html"><span class="ln">12.5</span> The quadratic formula &amp; the discriminant</a></li>
+<li><a class="snav-lesson" href="unit-12-6.html"><span class="ln">12.6</span> Graphing parabolas</a></li>
+</ol>
+</li>
+<li class="active">
+<a class="snav-unit" href="appendix.html">Appendix. Data &amp; Statistics</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="appendix-1.html"><span class="ln">A.1</span> One-variable statistics — center &amp; spread</a></li>
+<li><a class="snav-lesson cur" href="appendix-2.html"><span class="ln">A.2</span> Two-variable data — line of best fit, correlation vs. causation</a></li>
+<li><a class="snav-lesson" href="appendix-3.html"><span class="ln">A.3</span> Two-way tables</a></li>
+</ol>
+</li>
+</ol></nav>
+</aside>
+<div class="content">
+<main>
+<div class="kicker">Appendix · Lesson A.2</div><h1>Two-variable data — line of best fit, correlation vs. causation</h1>
+
+
+<p>So far each data point has been a single number. Now each point pairs two numbers: hours studied <em>and</em> the score that went with them, for one student. Plot every such pair as a dot on the coordinate plane and you get a <strong>scatter plot</strong>, a cloud of dots, one per student.</p>
+<p>Real data never lands on a neat line, but you can usually <em>see</em> a trend in the cloud, and you can draw the straight line that threads through it best. That line is the payoff of this lesson, because it's the same f(x) = mx + b from Unit 5, now earning its keep on messy, real data, where you use it to predict.</p>
+<p>Picture that cloud and a line drawn through the middle of it. The line doesn't have to touch a single dot; it captures the <em>overall</em> direction the dots lean. While the picture is in front of you, you can read two different things off it by eye.</p>
+<p>The first is the <strong>direction</strong> of the lean, which has a name: the <strong>association</strong>. If the dots rise from left to right, meaning more hours and higher scores, that's a <strong>positive</strong> association. If they fall from left to right, that's <strong>negative</strong>. If there's no clear up-or-down lean at all, there's <strong>no association</strong>. Here's a scatter of (hours studied, score) with a best-fit line running through it, climbing to the right <a class="refcode" id="A.2.f1" href="#A.2.f1">A.2.f1</a>; that upward lean is a positive association.</p>
+<figure class="fig" id="fig-A.2.f1"><svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+  <line x1="18.0" y1="196.5" x2="222.0" y2="196.5" stroke="#888"/>
+  <text x="216.0" y="192.5" font-size="10" fill="#888">x</text>
+  <line x1="47.14" y1="18.0" x2="47.14" y2="222.0" stroke="#888"/>
+  <text x="51.14" y="26.0" font-size="10" fill="#888">y</text>
+  <line x1="18.0" y1="196.5" x2="222.0" y2="18.0" stroke="#c0392b" stroke-width="2"/>
+  <circle cx="76.29" cy="145.5" r="3" fill="#2980b9"/>
+  <circle cx="105.43" cy="120.0" r="3" fill="#2980b9"/>
+  <circle cx="134.57" cy="120.0" r="3" fill="#2980b9"/>
+  <circle cx="163.71" cy="69.0" r="3" fill="#2980b9"/>
+  <circle cx="192.86" cy="43.5" r="3" fill="#2980b9"/>
+</svg><figcaption><b>Figure A.2.f1</b></figcaption></figure>
+
+<p>The second thing you can read is how <em>tightly</em> the dots hug that line: the <strong>strength</strong> of the correlation. A narrow band of dots pressed close to the line is a <strong>strong</strong> correlation; a loose, fat scatter around it is a <strong>weak</strong> one. Strength and direction are separate questions: a weak positive and a strong positive both lean up; they just differ in how tightly the dots cling. You read both of these by eye here. You don't compute a number for either.</p>
+<p>There's one check to do <em>before</em> you trust any line, and it's the move people skip. Glance at the cloud and ask: <strong>is this roughly straight?</strong> A line of best fit only makes sense when the dots actually run along a line. If the cloud bends, curving like a U or an arch, or if it's a shapeless blob, then a straight line is the wrong model, and forcing one through would summarize and predict badly no matter how carefully you draw it.</p>
+<p>This shape question has its own name, the <strong>form</strong>, and it's separate from direction. So the order is always: see the dots, check the form is linear, <em>then</em> fit or use a line. (While you're looking, scan for an outlier too. A single dot sitting far off the trend can tilt the whole line.)</p>
+<p>Once you've confirmed a line is appropriate and you have f(x) = mx + b, predicting is nothing new. It's just <strong>evaluating the function</strong> from Unit 5.4: plug in an x, read off the predicted y. Same machine, pointed at data.</p>
+<div class="cl-terms">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6.5C9.5 5 6 5 3.5 6.5V18C6 16.5 9.5 16.5 12 18C14.5 16.5 18 16.5 20.5 18V6.5C18 5 14.5 5 12 6.5Z"/><path d="M12 6.5V18"/></svg>New words</span></p>
+<ul>
+<li><a class="refcode" id="A.2.d1" href="#A.2.d1">A.2.d1</a> <strong>Scatter plot:</strong> a coordinate-plane graph of <strong>paired data</strong>, where each data point is one (x, y) dot (e.g. hours studied vs. test score).</li>
+<li><a class="refcode" id="A.2.d2" href="#A.2.d2">A.2.d2</a> <strong>Association:</strong> the overall trend in the cloud of dots:</li>
+<li><strong>Positive:</strong> as x goes up, y tends to go up (dots rise left-to-right).</li>
+<li><strong>Negative:</strong> as x goes up, y tends to go down (dots fall).</li>
+<li><strong>No association:</strong> no clear up-or-down trend.</li>
+<li><a class="refcode" id="A.2.d3" href="#A.2.d3">A.2.d3</a> <strong>Form:</strong> the <em>shape</em> of the cloud. Does it run roughly along a <strong>straight line</strong> (linear) or does it <strong>curve / bend</strong> (nonlinear)? Form is a separate question from direction, and it's the one that decides whether a <em>line</em> is even the right summary.</li>
+<li><a class="refcode" id="A.2.d4" href="#A.2.d4">A.2.d4</a> <strong>Line of best fit:</strong> a straight line f(x)=mx+b drawn to pass as close as possible to all the dots. It's <strong>the same linear function from Unit 5</strong>, now fit to data that doesn't sit perfectly on any line. Used to <strong>predict</strong> a y for a new x. (A line is only appropriate when the form is roughly linear, so check that first.)</li>
+<li><a class="refcode" id="A.2.d5" href="#A.2.d5">A.2.d5</a> <strong>Correlation:</strong> a measured tendency for two variables to move together. Read it <strong>qualitatively</strong> here: its <strong>direction</strong> (positive or negative, from which way the cloud leans) and its <strong>strength</strong>, which is <em>strong</em> if the dots hug the line tightly, <em>weak</em> if they're loosely scattered around it. <strong>Causation:</strong> one variable actually <em>makes</em> the other change. <strong>Correlation and causation are not the same.</strong></li>
+</ul>
+<p>Now the idea this whole unit is built around. Two things can move together for a reason that has nothing to do with one causing the other. In summer, ice cream sales and drowning incidents both climb. They're correlated: they really do rise together. But ice cream doesn't cause drownings.</p>
+<p>A hidden third cause, hot weather, drives both: heat sends people out for ice cream <em>and</em> into the water. Statisticians have a name for that hidden third factor, a <strong>lurking</strong> (or <strong>confounding</strong>) <strong>variable</strong>, but the everyday idea is what matters. Two things moving together never, on its own, proves one causes the other. The question to ask every time is: could some third factor explain both? Could it just be coincidence?</p>
+<p>The worked examples below put each of these moves into practice: predicting from a line, naming an association, catching a false cause, checking the form, and reading strength.</p>
+</div>
+<section class="worked">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19.5V15L15.5 4.5 19.5 8.5 9 19Z"/><path d="M13.5 6.5 17.5 10.5"/></svg>Worked example</span></p>
+<ol>
+<li>
+<p><a class="refcode" id="A.2.w1" href="#A.2.w1">A.2.w1</a> A line of best fit for some data is y = 2x + 3. Predict y when x = 5. This is just evaluating the function at x = 5, written out:
+   $$y = 2(5) + 3 = 10 + 3 = 13.$$
+   So we'd predict about 13, and "about" is the honest word, because a best-fit prediction is an estimate, not a guarantee. (It's the same as finding f(5) for f(x) = 2x + 3, the move from Unit 5.4.)</p>
+</li>
+<li>
+<p><a class="refcode" id="A.2.w2" href="#A.2.w2">A.2.w2</a> Describing the association. A scatter of (hours studied, test score) shows dots that climb left-to-right, since students who studied more generally scored higher, so that's a <strong>positive</strong> association. A scatter of (hours of TV, test score) whose dots drift downward would be a <strong>negative</strong> association. And a scatter of (shoe size, test score) with dots flung every which way, no lean at all, shows <strong>no</strong> association. The single question each time: as x increases, does y tend to go up, go down, or do neither?</p>
+</li>
+<li><a class="refcode" id="A.2.w3" href="#A.2.w3">A.2.w3</a> Correlation versus causation. "Towns with more firefighters at a blaze tend to have more fire damage." Does sending more firefighters <em>cause</em> more damage? No. The <strong>lurking variable</strong> is the size of the fire. A bigger fire causes <em>both</em> more firefighters being called <em>and</em> more damage. The two move together, but neither one causes the other; the third factor drives both.</li>
+<li><a class="refcode" id="A.2.w4" href="#A.2.w4">A.2.w4</a> Checking the form before fitting a line. Compare two scatters. In the first, (hours studied, score) dots run in a roughly straight, rising band, so the form is <strong>linear</strong> and a line of best fit is a sensible summary; go ahead and fit it. In the second, (hours of practice, score) dots rise quickly and then <em>level off</em>, bending into an arch, so the form is <strong>nonlinear</strong>. A straight line is the wrong model here: it would overshoot the part that flattens out and predict badly. A shapeless blob is the same story; no line summarizes it. The move is always: look at the form first, and only fit a line when the cloud is roughly straight.</li>
+<li><a class="refcode" id="A.2.w5" href="#A.2.w5">A.2.w5</a> Reading a correlation by eye. Two scatters both lean upward, so both are positive. In the first, the dots sit in a tight, narrow band right along the trend; in the second, they're loosely scattered in a fat cloud around it. Both are positive, but the first shows a <strong>strong</strong> correlation and the second a <strong>weak</strong> one. Strength is simply how tightly the dots hug the line. You read this by eye; you don't compute a number for it at this level.</li>
+</ol>
+<p>It's easy to read "two things are correlated" as "one causes the other"; the mind reaches for a cause automatically. But correlation only says they move together. Before you believe a cause, ask whether a third factor could be driving both (heat behind the ice cream and the drownings; fire size behind the firefighters and the damage), or whether it's coincidence. If a lurking variable fits, the correlation isn't evidence of cause.</p>
+<p>One smaller point, too: real data doesn't sit <em>on</em> the line. The dots scatter around it, and the best-fit line is a summary of the crowd, not a promise about any one dot.</p>
+<p>And a prediction from that line is most trustworthy <em>near</em> the data it came from. Reaching far past the data, like predicting a score for 20 hours of study when nobody studied more than 6, stretches the line into territory it never saw, so trust those far-out predictions less.</p>
+<p><strong>Visuals reminder for this lesson:</strong> if it helps, sketch the scatter and run a straight line through the middle of the cloud, then read its lean and how tightly the dots hug it.</p>
+</section>
+<div class="cl-check">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M9.6 9.6a2.6 2.6 0 1 1 3.3 2.5c-.9.3-1.4.9-1.4 1.8"/><circle cx="11.5" cy="16.6" r=".9" fill="currentColor" stroke="none"/></svg>Check yourself</span></p>
+<ol>
+<li><a class="refcode" id="A.2.c1" href="#A.2.c1">A.2.c1</a> A best-fit line is y = −(1/2)x + 10. Predict y at x = 4, and say whether the association is positive or negative. How can you tell from the equation? (y = −(1/2)(4) + 10 = −2 + 10 = 8. The association is <strong>negative</strong>, because the slope −1/2 is negative: as x rises, y falls.)</li>
+<li><a class="refcode" id="A.2.c2" href="#A.2.c2">A.2.c2</a> Sales of sunglasses and the number of people getting sunburned both rise in July. Are they correlated? Does one cause the other? What's really going on? (They're correlated, since they rise together, but neither causes the other. The lurking variable is sunny, hot weather, which drives both more sunglasses sales and more time outdoors getting burned.)</li>
+<li><a class="refcode" id="A.2.c3" href="#A.2.c3">A.2.c3</a> Two scatter plots: in one the dots rise steadily; in the other they're a shapeless blob. Describe each association. (The rising one is a <strong>positive</strong> association; the shapeless blob shows <strong>no</strong> association.)</li>
+<li><a class="refcode" id="A.2.c4" href="#A.2.c4">A.2.c4</a> Before you draw a line of best fit, what should you check about the <em>shape</em> of the scatter? Describe a cloud where a straight line would be the wrong summary, and say why. (Check the form. Is the cloud roughly straight? A cloud that curves, like an arch that rises then levels off, is the wrong fit for a line: the line would overshoot the flat part and predict badly.)</li>
+<li><a class="refcode" id="A.2.c5" href="#A.2.c5">A.2.c5</a> Two scatters both lean upward, but one is a tight narrow band and the other a loose fat cloud. Which shows the <em>stronger</em> correlation, and does "stronger" change whether it's positive or negative? (The tight narrow band shows the stronger correlation. "Stronger" is about how tightly the dots hug the line. It doesn't change the direction; both are still positive.)</li>
+</ol>
+<p>You can now read a scatter plot, check its form before trusting a line, describe its association and strength by eye, predict from a best-fit line, and keep correlation and causation apart.</p>
+<p>Mixed practice feels harder, and that's the point. Every problem has its answer at the end of the lesson, and the worked example it's based on is right above if one stalls you.</p>
+</div>
+<section class="practice">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4.5" width="15.5" height="15.5" rx="2.5"/><path d="M7.5 10 9 11.5 12 8.5"/><path d="M14 10H16.5"/><path d="M7.5 15H16.5"/></svg>Practice</span></p>
+<p><em>Predict using the given line of best fit. The line in problems 1 and 2 was built from data that ran from x = 1 to x = 6:</em></p>
+<ol>
+<li><a class="refcode" id="A.2.1" href="#A.2.1">A.2.1</a> y = 2x + 3; predict y at x = 5. Is this prediction inside the data range or outside it?</li>
+<li><a class="refcode" id="A.2.2" href="#A.2.2">A.2.2</a> y = 2x + 3; predict y at x = 10. Inside or outside the data range, and which of 1 or 2 is the more trustworthy prediction, and why?</li>
+<li><a class="refcode" id="A.2.3" href="#A.2.3">A.2.3</a> y = 3x - 1; predict y at x = 4.</li>
+<li><a class="refcode" id="A.2.4" href="#A.2.4">A.2.4</a> y = -2x + 10; predict y at x = 3. Then say whether the association is <strong>positive or negative</strong>, and how the equation tells you.</li>
+<li><a class="refcode" id="A.2.5" href="#A.2.5">A.2.5</a> y = (1/2)x + 1; predict y at x = 6.</li>
+</ol>
+<p><em>Conceptual (describe / explain):</em></p>
+<ol start="6">
+<li><a class="refcode" id="A.2.6" href="#A.2.6">A.2.6</a> A scatter of (hours studied, score) has dots climbing left-to-right. Positive, negative, or no association?</li>
+<li><a class="refcode" id="A.2.7" href="#A.2.7">A.2.7</a> A scatter of (hours of TV, score) has dots drifting downward left-to-right. Which association is that?</li>
+<li><a class="refcode" id="A.2.8" href="#A.2.8">A.2.8</a> "Children with bigger feet tend to read better." Is bigger feet <em>causing</em> better reading? Name a likely third factor (the lurking variable).</li>
+<li><a class="refcode" id="A.2.9" href="#A.2.9">A.2.9</a> A scatter's dots rise steeply, then flatten out into an arch; they clearly <em>curve</em> rather than run straight. Should you summarize this with a line of best fit? Why or why not?</li>
+<li><a class="refcode" id="A.2.10" href="#A.2.10">A.2.10</a> Two scatters both lean upward; in one the dots sit in a tight narrow band, in the other a loose fat cloud. Which has the <strong>stronger</strong> correlation? Are both still <strong>positive</strong>?</li>
+</ol>
+</section>
+<details class="answers">
+<summary><span class="tw"></span><span class="eyebrow">Answers</span><span class="hint">Try each one yourself first, then open to check.</span></summary>
+<div class="ak-body">
+<ol>
+<li>2(5)+3 = <strong>13</strong>. <strong>Inside</strong> the data range (x = 5 is within 1–6) — an interpolation.</li>
+<li>2(10)+3 = <strong>23</strong>. <strong>Outside</strong> the range (x = 10 is past 6) — an extrapolation. <strong>Problem 1 is more trustworthy</strong>: a best-fit line predicts best near the data it came from; x = 10 reaches well beyond it.</li>
+<li>3(4)-1 = <strong>11</strong>.</li>
+<li>-2(3)+10 = <strong>4</strong>. <strong>Negative</strong> association — the slope is <strong>negative</strong> (-2), so as x rises, y falls.</li>
+<li>1/2(6)+1 = <strong>4</strong>.</li>
+<li><strong>Positive</strong> association (as x rises, y rises).</li>
+<li><strong>Negative</strong> association (as x rises, y falls).</li>
+<li><strong>No</strong> — correlation, not causation. The hidden third factor (lurking variable) is <strong>age</strong>: older children have bigger feet <em>and</em> read better.</li>
+<li><strong>No</strong> — the form is <strong>nonlinear</strong> (it curves), so a straight line is the wrong model; it would fit and predict poorly. Check the form is roughly straight <em>before</em> fitting a line.</li>
+<li>The <strong>tight narrow band</strong> shows the <strong>stronger</strong> correlation. <strong>Yes, both are still positive</strong> — strength (tight vs. loose) is a separate question from direction (up vs. down).</li>
+</ol>
+</div>
+</details>
+<nav class="pagenav" aria-label="Previous and next page">
+<a class="pn-prev" href="appendix-1.html"><span class="pn-dir">&larr;&nbsp;Back</span><span class="pn-title">Lesson A.1</span></a>
+<a class="pn-next" href="appendix-3.html"><span class="pn-dir">Next&nbsp;&rarr;</span><span class="pn-title">Lesson A.3</span></a>
+</nav>
+</main>
+<footer><p>A friendly Algebra 1 textbook, made to be read alongside the Claude tutor. Math by KaTeX.</p></footer>
+</div>
+</div>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  renderMathInElement(document.body, {delimiters: [{left: "$$", right: "$$", display: true}], throwOnError: false});
+  var root = document.documentElement, body = document.body;
+  document.getElementById("theme").addEventListener("click", function () {
+    root.classList.toggle("dark");
+    localStorage.setItem("a1-theme", root.classList.contains("dark") ? "dark" : "light");
+  });
+  var menu = document.getElementById("menu");
+  menu.addEventListener("click", function () {
+    var open = body.classList.toggle("nav-open");
+    menu.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+  var sn = document.getElementById("sidenav");
+  if (sn) sn.addEventListener("click", function (e) { if (e.target.closest("a")) body.classList.remove("nav-open"); });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Slope — Algebra 1</title>
+<script>try{if(localStorage.getItem("a1-theme")==="dark")document.documentElement.classList.add("dark");}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..40,500..600&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="textbook.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous">
+</head>
+<body data-surface="textbook">
+<header class="topbar">
+  <button id="menu" class="menu" type="button" aria-label="Open or close the contents menu" aria-expanded="false">☰&nbsp;Contents</button>
+  <a class="home" href="index.html">Algebra&nbsp;1</a>
+  <span class="sp"></span>
+  <button id="theme" type="button" aria-label="Toggle light or dark theme">◐&nbsp;Theme</button>
+</header>
+<div class="shell">
+<aside class="sidenav" id="sidenav">
+<nav class="snav" aria-label="Contents">
+<a class="snav-top" href="how-to-use.html">How to use this book</a>
+<a class="snav-top" href="index.html">All units</a>
+<ol class="snav-units">
+<li class="">
+<a class="snav-unit" href="unit-01.html">Unit 1. Foundations &amp; the Language of Algebra</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-01-1.html"><span class="ln">1.1</span> Variables and the meaning of equations</a></li>
+<li><a class="snav-lesson" href="unit-01-2.html"><span class="ln">1.2</span> The number system &amp; the number line</a></li>
+<li><a class="snav-lesson" href="unit-01-3.html"><span class="ln">1.3</span> Order of operations</a></li>
+<li><a class="snav-lesson" href="unit-01-4.html"><span class="ln">1.4</span> Negative numbers</a></li>
+<li><a class="snav-lesson" href="unit-01-5.html"><span class="ln">1.5</span> Expressions vs. equations; evaluating expressions</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-02.html">Unit 2. Solving Linear Equations</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-02-1.html"><span class="ln">2.1</span> Inverse operations &amp; one-step equations</a></li>
+<li><a class="snav-lesson" href="unit-02-2.html"><span class="ln">2.2</span> Two-step equations</a></li>
+<li><a class="snav-lesson" href="unit-02-3.html"><span class="ln">2.3</span> Combining like terms &amp; the distributive property</a></li>
+<li><a class="snav-lesson" href="unit-02-4.html"><span class="ln">2.4</span> Variables on both sides</a></li>
+<li><a class="snav-lesson" href="unit-02-5.html"><span class="ln">2.5</span> Equations with fractions (with two Fraction Refreshers)</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-03.html">Unit 3. Proportional Reasoning (the bridge to linearity)</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-03-1.html"><span class="ln">3.1</span> Ratios and rates</a></li>
+<li><a class="snav-lesson" href="unit-03-2.html"><span class="ln">3.2</span> Proportions &amp; cross-multiplication</a></li>
+<li><a class="snav-lesson" href="unit-03-3.html"><span class="ln">3.3</span> Percents</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-04.html">Unit 4. Introducing Functions</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-04-1.html"><span class="ln">4.1</span> What is a function</a></li>
+<li><a class="snav-lesson" href="unit-04-2.html"><span class="ln">4.2</span> Function notation f(x), domain &amp; range</a></li>
+<li><a class="snav-lesson" href="unit-04-3.html"><span class="ln">4.3</span> Multiple representations; linear vs. nonlinear</a></li>
+</ol>
+</li>
+<li class="active">
+<a class="snav-unit" href="unit-05.html">Unit 5. Linear Functions &amp; Their Graphs</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-05-1.html"><span class="ln">5.1</span> The coordinate plane</a></li>
+<li><a class="snav-lesson" href="unit-05-2.html"><span class="ln">5.2</span> Graphing linear equations from a table</a></li>
+<li><a class="snav-lesson cur" href="unit-05-3.html"><span class="ln">5.3</span> Slope</a></li>
+<li><a class="snav-lesson" href="unit-05-4.html"><span class="ln">5.4</span> Slope-intercept form y = mx + b</a></li>
+<li><a class="snav-lesson" href="unit-05-5.html"><span class="ln">5.5</span> Writing equations of lines</a></li>
+<li><a class="snav-lesson" href="unit-05-6.html"><span class="ln">5.6</span> x-intercepts, graphing by intercepts &amp; standard form</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-06.html">Unit 6. Modeling &amp; Translation</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-06-1.html"><span class="ln">6.1</span> Translating words into expressions and equations</a></li>
+<li><a class="snav-lesson" href="unit-06-2.html"><span class="ln">6.2</span> Classic word problems (number, age, distance, value &amp; relationship)</a></li>
+<li><a class="snav-lesson" href="unit-06-3.html"><span class="ln">6.3</span> Scatter plots &amp; line of best fit (a first taste of data)</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-07.html">Unit 7. Systems of Equations</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-07-1.html"><span class="ln">7.1</span> Solving by graphing</a></li>
+<li><a class="snav-lesson" href="unit-07-2.html"><span class="ln">7.2</span> Substitution</a></li>
+<li><a class="snav-lesson" href="unit-07-3.html"><span class="ln">7.3</span> Elimination</a></li>
+<li><a class="snav-lesson" href="unit-07-4.html"><span class="ln">7.4</span> Special cases &amp; applications</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-08.html">Unit 8. Inequalities</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-08-1.html"><span class="ln">8.1</span> One-variable inequalities</a></li>
+<li><a class="snav-lesson" href="unit-08-2.html"><span class="ln">8.2</span> Compound inequalities</a></li>
+<li><a class="snav-lesson" href="unit-08-3.html"><span class="ln">8.3</span> Absolute value: graphs &amp; distance</a></li>
+<li><a class="snav-lesson" href="unit-08-4.html"><span class="ln">8.4</span> Graphing linear inequalities (two variables) &amp; systems</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-09.html">Unit 9. Sequences &amp; Exponential Functions</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-09-1.html"><span class="ln">9.1</span> Arithmetic &amp; geometric sequences as functions</a></li>
+<li><a class="snav-lesson" href="unit-09-2.html"><span class="ln">9.2</span> Exponential growth &amp; decay; linear vs. exponential</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-10.html">Unit 10. Exponents &amp; Polynomials</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-10-1.html"><span class="ln">10.1</span> Exponent rules (including zero &amp; negative exponents)</a></li>
+<li><a class="snav-lesson" href="unit-10-2.html"><span class="ln">10.2</span> Scientific notation</a></li>
+<li><a class="snav-lesson" href="unit-10-3.html"><span class="ln">10.3</span> Polynomials — terms, degree, standard form; add &amp; subtract</a></li>
+<li><a class="snav-lesson" href="unit-10-4.html"><span class="ln">10.4</span> Multiplying polynomials</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-11.html">Unit 11. Factoring</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-11-1.html"><span class="ln">11.1</span> Greatest common factor (GCF)</a></li>
+<li><a class="snav-lesson" href="unit-11-2.html"><span class="ln">11.2</span> Factoring trinomials x²+bx+c</a></li>
+<li><a class="snav-lesson" href="unit-11-3.html"><span class="ln">11.3</span> Special patterns</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-12.html">Unit 12. Quadratic Functions &amp; Equations (the capstone)</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-12-1.html"><span class="ln">12.1</span> Square roots &amp; simplifying radicals</a></li>
+<li><a class="snav-lesson" href="unit-12-2.html"><span class="ln">12.2</span> The simplest quadratics (x²=9 → two solutions)</a></li>
+<li><a class="snav-lesson" href="unit-12-3.html"><span class="ln">12.3</span> Solving by factoring (zero-product property)</a></li>
+<li><a class="snav-lesson" href="unit-12-4.html"><span class="ln">12.4</span> Completing the square</a></li>
+<li><a class="snav-lesson" href="unit-12-5.html"><span class="ln">12.5</span> The quadratic formula &amp; the discriminant</a></li>
+<li><a class="snav-lesson" href="unit-12-6.html"><span class="ln">12.6</span> Graphing parabolas</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="appendix.html">Appendix. Data &amp; Statistics</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="appendix-1.html"><span class="ln">A.1</span> One-variable statistics — center &amp; spread</a></li>
+<li><a class="snav-lesson" href="appendix-2.html"><span class="ln">A.2</span> Two-variable data — line of best fit, correlation vs. causation</a></li>
+<li><a class="snav-lesson" href="appendix-3.html"><span class="ln">A.3</span> Two-way tables</a></li>
+</ol>
+</li>
+</ol></nav>
+</aside>
+<div class="content">
+<main>
+<div class="kicker">Unit 5 · Lesson 5.3</div><h1>Slope</h1>
+
+
+<p>This is the heart of the unit, so give it the most time. Slope is the one number that captures how a line behaves, how steep it is and which way it tilts, and it's the number that drives everything in the next two lessons. The good news, again: slope isn't new. It's the rate of change, the graphical face of the <strong>unit rate</strong> you already met in Unit 3.</p>
+<p>Start there. In Unit 3, "60 miles per 1 hour" was a unit rate. Draw a graph of distance against time and that rate <em>is</em> the slope of the line: the miles you gain for each single hour. Slope is just rise per 1 of run: how much the output climbs for each 1 step you take across.</p>
+<p>Now a picture for steepness: stairs and ramps. A gentle wheelchair ramp barely rises as you walk along it, a small slope. A steep staircase climbs a lot for each step forward, a big slope. Walk <em>downhill</em> and the slope is negative. Stand on a flat landing, going forward but not up at all, and the slope is zero. And a wall going straight up has no "forward" to speak of: you can't move across at all, so its slope is undefined. Those are the four cases, and they're just descriptions of how steep and which way.</p>
+<p>To put a number on it, you compare two points on the line. Going from one point to the other, the <strong>rise</strong> is the vertical change and the <strong>run</strong> is the horizontal change. Slope is rise over run:</p>
+<p>$$m = \frac{y_2 - y_1}{x_2 - x_1}$$</p>
+<p>The one discipline that keeps this honest: subtract the two y's and the two x's <em>in the same order</em>. Whichever point you call "first," use it first on the top and the bottom both. Mixing the order flips a sign and hands you the wrong tilt.</p>
+<p>There's a deeper reason this single number describes the whole line, and it's better seen than taken on faith. What makes a linear function linear is that its rate of change is <strong>constant</strong>: pick <em>any</em> two points on the line and the slope comes out the same. Said another way, equal steps in x always produce equal steps in y.</p>
+<p>For y = 2x − 1, step x along 0, 1, 2, 3 and y runs −1, 1, 3, 5, up 2 every single time. That fixed "+2 for each +1" <em>is</em> the slope, and it's exactly why the points fell in a straight row back in Lesson 5.2. A curve is what you get when the rate keeps changing instead.</p>
+<div class="cl-terms">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6.5C9.5 5 6 5 3.5 6.5V18C6 16.5 9.5 16.5 12 18C14.5 16.5 18 16.5 20.5 18V6.5C18 5 14.5 5 12 6.5Z"/><path d="M12 6.5V18"/></svg>New words</span></p>
+<ul>
+<li><a class="refcode" id="5.3.d1" href="#5.3.d1">5.3.d1</a> <strong>Slope (m):</strong> how much y changes for each 1-unit increase in x; the line's rate of change.</li>
+<li><a class="refcode" id="5.3.d2" href="#5.3.d2">5.3.d2</a> <strong>Rise:</strong> vertical change (y₂ - y₁). <strong>Run:</strong> horizontal change (x₂ - x₁).</li>
+</ul>
+</div>
+<section class="worked">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19.5V15L15.5 4.5 19.5 8.5 9 19Z"/><path d="M13.5 6.5 17.5 10.5"/></svg>Worked example</span></p>
+<ol>
+<li>
+<p><a class="refcode" id="5.3.w1" href="#5.3.w1">5.3.w1</a> Through (1,2) and (3,8):
+$$m = \frac{8 - 2}{3 - 1} = \frac{6}{2} = 3$$
+The slope is positive, so the line runs uphill from left to right. Read each line above and ask why it follows before moving on. That habit is what makes a worked example teach.</p>
+</li>
+<li>
+<p><a class="refcode" id="5.3.w2" href="#5.3.w2">5.3.w2</a> Through (0,5) and (2,1):
+$$m = \frac{1 - 5}{2 - 0} = \frac{-4}{2} = -2$$
+The slope is negative, so this line runs downhill. Notice the top is 1 − 5, not 5 − 1: we used the second point first on top <em>and</em> bottom, keeping the order matched.</p>
+</li>
+<li>
+<p><a class="refcode" id="5.3.w3" href="#5.3.w3">5.3.w3</a> Horizontal line y = 4: every point has y = 4, so there's no rise at all, and rise = 0 means m = 0/run = 0. <strong>Slope 0</strong>, the flat landing.</p>
+</li>
+<li>
+<p><a class="refcode" id="5.3.w4" href="#5.3.w4">5.3.w4</a> Vertical line x = 3: every point has x = 3, so there's no run at all, and m = rise/0 is division by zero, which has no value, so the slope is <strong>undefined</strong>, the wall.</p>
+</li>
+</ol>
+<p>Those last two are the pair people swap, so pin them to the picture: a flat landing has no rise, giving slope 0, while a wall has no forward run, leaving the slope undefined.</p>
+<p>It also helps to say them in full: "zero slope" for horizontal, "undefined slope" for vertical. Try to avoid the phrase "no slope," which some people hear as "slope zero" and others as "undefined." The two full names never blur.</p>
+<ol start="5">
+<li>
+<p><a class="refcode" id="5.3.w5" href="#5.3.w5">5.3.w5</a> Slope in context, with units. A line on a cost (in dollars) versus time (in hours) graph passes through (0, 20) and (4, 80). Find the slope and say what it <em>means</em>.
+$$m = \frac{80 - 20}{4 - 0} = \frac{60}{4} = 15$$
+The slope is 15 dollars per hour: the cost climbs $15 for each additional hour. You read its units straight off the axes: dollars on top, hours on the bottom, so dollars per hour. The intercept carries meaning too: the point (0, 20) says the cost is already $20 at 0 hours, a $20 starting charge. Constant-rate check: at (2, 50), (50 − 20)/(2 − 0) = 15 as well, so the rate really is steady. Naming the units is what turns a bare number into a rate you can read aloud, "$15 per hour," exactly the rate-of-change idea made concrete.</p>
+</li>
+<li>
+<p><a class="refcode" id="5.3.w6" href="#5.3.w6">5.3.w6</a> Slope two ways, graph versus formula. For the line through (1, 2) and (4, 8), compute the slope both ways and compare. <em>From the graph (rise/run):</em> draw the right triangle between the points, going <strong>up 6</strong> (from y = 2 to y = 8) and <strong>across 3</strong> (from x = 1 to x = 4), so m = rise/run = 6/3 = <strong>2</strong>. <em>From the formula:</em> $$m = \frac{8 - 2}{4 - 1} = \frac{6}{3} = 2$$ Same answer, as it has to be: rise/run and (y₂ − y₁)/(x₂ − x₁) are the <em>same</em> subtraction, one read off a picture and one off the coordinates. When is each handier? Rise/run is quickest when you already have a graph and can count boxes; the formula is safer when the points are given as numbers, especially negatives or fractions, where counting on a grid invites mistakes. Both are correct, so use the one that fits what you're handed, and the choice is yours.</p>
+</li>
+</ol>
+<p>Here's a graph with that rise/run right triangle drawn in between two points, so you can see where the rise and the run come from <a class="refcode" id="5.3.f1" href="#5.3.f1">5.3.f1</a>.</p>
+<figure class="fig" id="fig-5.3.f1"><svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+  <line x1="18.0" y1="171.0" x2="222.0" y2="171.0" stroke="#888"/>
+  <text x="216.0" y="167.0" font-size="10" fill="#888">x</text>
+  <line x1="86.0" y1="18.0" x2="86.0" y2="222.0" stroke="#888"/>
+  <text x="90.0" y="26.0" font-size="10" fill="#888">y</text>
+  <line x1="18.0" y1="196.5" x2="222.0" y2="43.5" stroke="#2980b9" stroke-width="2.5"/>
+  <circle cx="86.0" cy="145.5" r="3.5" fill="#c0392b"/>
+  <text x="91.0" y="139.5" font-size="10" fill="#c0392b">(0,1)</text>
+  <circle cx="154.0" cy="94.5" r="3.5" fill="#c0392b"/>
+  <text x="159.0" y="88.5" font-size="10" fill="#c0392b">(3,3)</text>
+  <text x="144.4" y="100.7" font-size="10" fill="#2980b9">slope 2/3</text>
+</svg><figcaption><b>Figure 5.3.f1</b></figcaption></figure>
+<p>Here's a place people slip: reading the <em>sign</em> of a slope as its <em>steepness</em>. Slope packs two facts. The sign says which way the line tilts (minus is downhill), and the size says how steep. So a slope of −3 is <em>steeper</em> than a slope of 2, because 3 is the bigger size, even though −3 is the smaller number. To compare steepness, strip the signs and compare the sizes; bring the signs back only to say uphill or downhill.</p>
+<p>And when you compute a slope, give your subtraction a quick sanity check: if you find yourself with y₂ − y₁ on top but x₁ − x₂ on the bottom, the orders don't match and the sign will come out wrong. Label your two points and subtract the same way on top and bottom. If a check ever disagrees with your answer, that mismatch is the check doing its job. Go back and re-run the subtraction slowly; it's almost always one order or one sign that slipped, not the whole method.</p>
+</section>
+<div class="cl-check">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M9.6 9.6a2.6 2.6 0 1 1 3.3 2.5c-.9.3-1.4.9-1.4 1.8"/><circle cx="11.5" cy="16.6" r=".9" fill="currentColor" stroke="none"/></svg>Check yourself</span></p>
+<ol>
+<li><a class="refcode" id="5.3.c1" href="#5.3.c1">5.3.c1</a> A line goes through (2,3) and (6,11). Find the slope, and say in words what it tells you about how y changes. (m = (11 − 3)/(6 − 2) = 8/4 = 2; y goes up 2 for every 1 step x takes to the right.)</li>
+<li><a class="refcode" id="5.3.c2" href="#5.3.c2">5.3.c2</a> One line has slope 5, another has slope 1/2. Which is steeper, and how do you know? (Slope 5 is steeper: compare the sizes, and 5 is much bigger than 1/2, so that line climbs faster per step across.)</li>
+<li><a class="refcode" id="5.3.c3" href="#5.3.c3">5.3.c3</a> What's the slope of a perfectly horizontal line? A perfectly vertical one? Why is one a number and the other "undefined"? (Horizontal is slope 0, since there's no rise. Vertical is undefined, since the run is 0, and dividing rise by 0 has no value.)</li>
+<li><a class="refcode" id="5.3.c4" href="#5.3.c4">5.3.c4</a> A savings graph passes through (0, 50) and (4, 90), where x is weeks and y is dollars. What is the slope <em>with its units</em>, and what does it tell you about the saving? What does the 50 mean? (m = (90 − 50)/(4 − 0) = 40/4 = 10 dollars per week, so $10 saved each week; the 50 is the starting balance, $50 at week 0.)</li>
+<li><a class="refcode" id="5.3.c5" href="#5.3.c5">5.3.c5</a> Spot the error. Someone says: "Line A has slope -3 and line B has slope 2. Since -3 is less than 2, line A is less steep than line B." What's wrong, and which line is actually steeper? (They compared the <em>signed</em> numbers, but steepness is the size: |−3| = 3 is bigger than |2| = 2, so line A is the steeper one. The minus only means it tilts downhill.)</li>
+</ol>
+<p>You can now compute slope from two points, name all four cases from the steepness-and-direction picture, keep your subtraction order consistent, and read a slope in context as a rate with units.</p>
+<p>Here's a clean one to get the method moving before the set mixes things up: through (0, 0) and (3, 6), m = (6 − 0)/(3 − 0) = 6/3 = 2, a tidy positive slope, with no signs to track and no order to second-guess.</p>
+<p>The set below mixes the four cases with a couple of context problems, so consecutive ones often need a different first thought. Having to switch gears like that is harder in the moment and is what builds a skill you keep. Answers are at the end, and the worked examples above cover every type if one stalls you.</p>
+<p><strong>Practice problems (find the slope through the two points):</strong></p>
+<ol>
+<li><a class="refcode" id="5.3.1" href="#5.3.1">5.3.1</a> (1,2) and (3,8)</li>
+<li><a class="refcode" id="5.3.2" href="#5.3.2">5.3.2</a> (0,5) and (2,1)</li>
+<li><a class="refcode" id="5.3.3" href="#5.3.3">5.3.3</a> (2,3) and (6,11)</li>
+<li><a class="refcode" id="5.3.4" href="#5.3.4">5.3.4</a> (-1,4) and (2,-2)</li>
+<li><a class="refcode" id="5.3.5" href="#5.3.5">5.3.5</a> (0,0) and (4,8)</li>
+<li><a class="refcode" id="5.3.6" href="#5.3.6">5.3.6</a> (1,1) and (5,3)</li>
+<li><a class="refcode" id="5.3.7" href="#5.3.7">5.3.7</a> (-2,-3) and (2,5)</li>
+<li><a class="refcode" id="5.3.8" href="#5.3.8">5.3.8</a> (3,7) and (3,2)</li>
+<li><a class="refcode" id="5.3.9" href="#5.3.9">5.3.9</a> (-1,2) and (4,2)</li>
+<li><a class="refcode" id="5.3.10" href="#5.3.10">5.3.10</a> (2,5) and (6,5)</li>
+<li><a class="refcode" id="5.3.11" href="#5.3.11">5.3.11</a> (1,6) and (4,0)</li>
+<li><a class="refcode" id="5.3.12" href="#5.3.12">5.3.12</a> (1,-1) and (3,-7)</li>
+</ol>
+<p><em>In context (give the slope with its meaning):</em></p>
+<ol start="13">
+<li><a class="refcode" id="5.3.13" href="#5.3.13">5.3.13</a> A distance(miles)-vs-time(hours) graph passes through (1, 30) and (3, 150). Find the slope and state what it means in words.</li>
+<li><a class="refcode" id="5.3.14" href="#5.3.14">5.3.14</a> A candle's height(cm)-vs-time(min) graph passes through (0, 20) and (10, 15). Find the slope and say what it means (mind the sign).</li>
+</ol>
+</div>
+<details class="answers">
+<summary><span class="tw"></span><span class="eyebrow">Answers</span><span class="hint">Try each one yourself first, then open to check.</span></summary>
+<div class="ak-body">
+<ol>
+<li>(8-2)/(3-1)=3 · 2. (1-5)/(2-0)=-2 · 3. (11-3)/(6-2)=2 · 4. (-2-4)/(2-(-1))=-6/3=-2 · 5. (8-0)/(4-0)=2 · 6. (3-1)/(5-1)=1/2 · 7. (5-(-3))/(2-(-2))=8/4=2 · 8. run =3-3=0 → <strong>undefined</strong> (vertical) · 9. (2-2)/(4-(-1))=0 (horizontal) · 10. (5-5)/(6-2)=0 (horizontal) · 11. (0-6)/(4-1)=-6/3=-2 · 12. (-7-(-1))/(3-1)=-6/2=-3 · 13. (150-30)/(3-1)=120/2=<strong>60 miles per hour</strong> — the distance grows 60 miles each hour (a speed of 60 mph) · 14. (15-20)/(10-0)=-5/10=<strong>-1/2 cm per minute</strong> — the candle <em>shrinks</em> half a centimeter each minute (negative = decreasing).</li>
+</ol>
+</div>
+</details>
+<nav class="pagenav" aria-label="Previous and next page">
+<a class="pn-prev" href="unit-05-2.html"><span class="pn-dir">&larr;&nbsp;Back</span><span class="pn-title">Lesson 5.2</span></a>
+<a class="pn-next" href="unit-05-4.html"><span class="pn-dir">Next&nbsp;&rarr;</span><span class="pn-title">Lesson 5.4</span></a>
+</nav>
+</main>
+<footer><p>A friendly Algebra 1 textbook, made to be read alongside the Claude tutor. Math by KaTeX.</p></footer>
+</div>
+</div>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  renderMathInElement(document.body, {delimiters: [{left: "$$", right: "$$", display: true}], throwOnError: false});
+  var root = document.documentElement, body = document.body;
+  document.getElementById("theme").addEventListener("click", function () {
+    root.classList.toggle("dark");
+    localStorage.setItem("a1-theme", root.classList.contains("dark") ? "dark" : "light");
+  });
+  var menu = document.getElementById("menu");
+  menu.addEventListener("click", function () {
+    var open = body.classList.toggle("nav-open");
+    menu.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+  var sn = document.getElementById("sidenav");
+  if (sn) sn.addEventListener("click", function (e) { if (e.target.closest("a")) body.classList.remove("nav-open"); });
+});
+</script>
+</body>
+</html>

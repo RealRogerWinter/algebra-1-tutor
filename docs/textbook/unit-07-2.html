@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Substitution — Algebra 1</title>
+<script>try{if(localStorage.getItem("a1-theme")==="dark")document.documentElement.classList.add("dark");}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..40,500..600&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="textbook.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous">
+</head>
+<body data-surface="textbook">
+<header class="topbar">
+  <button id="menu" class="menu" type="button" aria-label="Open or close the contents menu" aria-expanded="false">☰&nbsp;Contents</button>
+  <a class="home" href="index.html">Algebra&nbsp;1</a>
+  <span class="sp"></span>
+  <button id="theme" type="button" aria-label="Toggle light or dark theme">◐&nbsp;Theme</button>
+</header>
+<div class="shell">
+<aside class="sidenav" id="sidenav">
+<nav class="snav" aria-label="Contents">
+<a class="snav-top" href="how-to-use.html">How to use this book</a>
+<a class="snav-top" href="index.html">All units</a>
+<ol class="snav-units">
+<li class="">
+<a class="snav-unit" href="unit-01.html">Unit 1. Foundations &amp; the Language of Algebra</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-01-1.html"><span class="ln">1.1</span> Variables and the meaning of equations</a></li>
+<li><a class="snav-lesson" href="unit-01-2.html"><span class="ln">1.2</span> The number system &amp; the number line</a></li>
+<li><a class="snav-lesson" href="unit-01-3.html"><span class="ln">1.3</span> Order of operations</a></li>
+<li><a class="snav-lesson" href="unit-01-4.html"><span class="ln">1.4</span> Negative numbers</a></li>
+<li><a class="snav-lesson" href="unit-01-5.html"><span class="ln">1.5</span> Expressions vs. equations; evaluating expressions</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-02.html">Unit 2. Solving Linear Equations</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-02-1.html"><span class="ln">2.1</span> Inverse operations &amp; one-step equations</a></li>
+<li><a class="snav-lesson" href="unit-02-2.html"><span class="ln">2.2</span> Two-step equations</a></li>
+<li><a class="snav-lesson" href="unit-02-3.html"><span class="ln">2.3</span> Combining like terms &amp; the distributive property</a></li>
+<li><a class="snav-lesson" href="unit-02-4.html"><span class="ln">2.4</span> Variables on both sides</a></li>
+<li><a class="snav-lesson" href="unit-02-5.html"><span class="ln">2.5</span> Equations with fractions (with two Fraction Refreshers)</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-03.html">Unit 3. Proportional Reasoning (the bridge to linearity)</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-03-1.html"><span class="ln">3.1</span> Ratios and rates</a></li>
+<li><a class="snav-lesson" href="unit-03-2.html"><span class="ln">3.2</span> Proportions &amp; cross-multiplication</a></li>
+<li><a class="snav-lesson" href="unit-03-3.html"><span class="ln">3.3</span> Percents</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-04.html">Unit 4. Introducing Functions</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-04-1.html"><span class="ln">4.1</span> What is a function</a></li>
+<li><a class="snav-lesson" href="unit-04-2.html"><span class="ln">4.2</span> Function notation f(x), domain &amp; range</a></li>
+<li><a class="snav-lesson" href="unit-04-3.html"><span class="ln">4.3</span> Multiple representations; linear vs. nonlinear</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-05.html">Unit 5. Linear Functions &amp; Their Graphs</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-05-1.html"><span class="ln">5.1</span> The coordinate plane</a></li>
+<li><a class="snav-lesson" href="unit-05-2.html"><span class="ln">5.2</span> Graphing linear equations from a table</a></li>
+<li><a class="snav-lesson" href="unit-05-3.html"><span class="ln">5.3</span> Slope</a></li>
+<li><a class="snav-lesson" href="unit-05-4.html"><span class="ln">5.4</span> Slope-intercept form y = mx + b</a></li>
+<li><a class="snav-lesson" href="unit-05-5.html"><span class="ln">5.5</span> Writing equations of lines</a></li>
+<li><a class="snav-lesson" href="unit-05-6.html"><span class="ln">5.6</span> x-intercepts, graphing by intercepts &amp; standard form</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-06.html">Unit 6. Modeling &amp; Translation</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-06-1.html"><span class="ln">6.1</span> Translating words into expressions and equations</a></li>
+<li><a class="snav-lesson" href="unit-06-2.html"><span class="ln">6.2</span> Classic word problems (number, age, distance, value &amp; relationship)</a></li>
+<li><a class="snav-lesson" href="unit-06-3.html"><span class="ln">6.3</span> Scatter plots &amp; line of best fit (a first taste of data)</a></li>
+</ol>
+</li>
+<li class="active">
+<a class="snav-unit" href="unit-07.html">Unit 7. Systems of Equations</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-07-1.html"><span class="ln">7.1</span> Solving by graphing</a></li>
+<li><a class="snav-lesson cur" href="unit-07-2.html"><span class="ln">7.2</span> Substitution</a></li>
+<li><a class="snav-lesson" href="unit-07-3.html"><span class="ln">7.3</span> Elimination</a></li>
+<li><a class="snav-lesson" href="unit-07-4.html"><span class="ln">7.4</span> Special cases &amp; applications</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-08.html">Unit 8. Inequalities</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-08-1.html"><span class="ln">8.1</span> One-variable inequalities</a></li>
+<li><a class="snav-lesson" href="unit-08-2.html"><span class="ln">8.2</span> Compound inequalities</a></li>
+<li><a class="snav-lesson" href="unit-08-3.html"><span class="ln">8.3</span> Absolute value: graphs &amp; distance</a></li>
+<li><a class="snav-lesson" href="unit-08-4.html"><span class="ln">8.4</span> Graphing linear inequalities (two variables) &amp; systems</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-09.html">Unit 9. Sequences &amp; Exponential Functions</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-09-1.html"><span class="ln">9.1</span> Arithmetic &amp; geometric sequences as functions</a></li>
+<li><a class="snav-lesson" href="unit-09-2.html"><span class="ln">9.2</span> Exponential growth &amp; decay; linear vs. exponential</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-10.html">Unit 10. Exponents &amp; Polynomials</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-10-1.html"><span class="ln">10.1</span> Exponent rules (including zero &amp; negative exponents)</a></li>
+<li><a class="snav-lesson" href="unit-10-2.html"><span class="ln">10.2</span> Scientific notation</a></li>
+<li><a class="snav-lesson" href="unit-10-3.html"><span class="ln">10.3</span> Polynomials — terms, degree, standard form; add &amp; subtract</a></li>
+<li><a class="snav-lesson" href="unit-10-4.html"><span class="ln">10.4</span> Multiplying polynomials</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-11.html">Unit 11. Factoring</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-11-1.html"><span class="ln">11.1</span> Greatest common factor (GCF)</a></li>
+<li><a class="snav-lesson" href="unit-11-2.html"><span class="ln">11.2</span> Factoring trinomials x²+bx+c</a></li>
+<li><a class="snav-lesson" href="unit-11-3.html"><span class="ln">11.3</span> Special patterns</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-12.html">Unit 12. Quadratic Functions &amp; Equations (the capstone)</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-12-1.html"><span class="ln">12.1</span> Square roots &amp; simplifying radicals</a></li>
+<li><a class="snav-lesson" href="unit-12-2.html"><span class="ln">12.2</span> The simplest quadratics (x²=9 → two solutions)</a></li>
+<li><a class="snav-lesson" href="unit-12-3.html"><span class="ln">12.3</span> Solving by factoring (zero-product property)</a></li>
+<li><a class="snav-lesson" href="unit-12-4.html"><span class="ln">12.4</span> Completing the square</a></li>
+<li><a class="snav-lesson" href="unit-12-5.html"><span class="ln">12.5</span> The quadratic formula &amp; the discriminant</a></li>
+<li><a class="snav-lesson" href="unit-12-6.html"><span class="ln">12.6</span> Graphing parabolas</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="appendix.html">Appendix. Data &amp; Statistics</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="appendix-1.html"><span class="ln">A.1</span> One-variable statistics — center &amp; spread</a></li>
+<li><a class="snav-lesson" href="appendix-2.html"><span class="ln">A.2</span> Two-variable data — line of best fit, correlation vs. causation</a></li>
+<li><a class="snav-lesson" href="appendix-3.html"><span class="ln">A.3</span> Two-way tables</a></li>
+</ol>
+</li>
+</ol></nav>
+</aside>
+<div class="content">
+<main>
+<div class="kicker">Unit 7 · Lesson 7.2</div><h1>Substitution</h1>
+
+
+<p>Graphing showed you what a solution <em>is</em>. Now you'll find it exactly, with no graph to read. The trick rests on one fact you already trust: in a system, x means the same number in both equations, and so does y. The two equations aren't strangers. They describe the same pair of hidden numbers.</p>
+<p>Think of y as a mystery box with one number hidden inside. Suppose the first equation tells you outright what's in the box: y = 2x. That's not a different y from the one in the second equation. It's the <em>same</em> box, and you've just been told what it holds. So anywhere the second equation says y, you can pour in 2x instead, because they're equal. That swap is <strong>substitution</strong>.</p>
+<p>The payoff is what makes the swap worth doing. The second equation has two unknowns, x and y, and you can't solve one equation in two unknowns. But the moment you replace y with 2x, that equation has only x in it. One equation, one unknown, the kind you've been solving since Unit 2. The crossing point falls out as soon as a single variable is left standing.</p>
+<p>The full move, start to finish: isolate a variable in one equation, substitute that expression into the <em>other</em> equation, solve the one-variable equation you're left with, back-substitute to find the partner coordinate, and check both. That last "find the partner" step is the one people skip, so it's built into the first example.</p>
+<div class="cl-terms">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6.5C9.5 5 6 5 3.5 6.5V18C6 16.5 9.5 16.5 12 18C14.5 16.5 18 16.5 20.5 18V6.5C18 5 14.5 5 12 6.5Z"/><path d="M12 6.5V18"/></svg>New words</span></p>
+<ul>
+<li><a class="refcode" id="7.2.d1" href="#7.2.d1">7.2.d1</a> <strong>Substitution:</strong> replacing a variable with an expression equal to it. Because each variable denotes the <em>same</em> number in both equations, an expression equal to (say) y in one equation may stand in for y in the other.</li>
+</ul>
+</div>
+<section class="worked">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19.5V15L15.5 4.5 19.5 8.5 9 19Z"/><path d="M13.5 6.5 17.5 10.5"/></svg>Worked example</span></p>
+<p><em>Example 1.</em> Solve y = 2x and x + y = 9.
+Here y is already alone. The first equation tells you the box holds 2x. So in the second equation, wherever you see y, pour in 2x:
+$$x + 2x = 9 \;\Rightarrow\; 3x = 9 \;\Rightarrow\; x = 3.$$
+Why this works: x plus 2x is three x's, so 3x = 9, and dividing both sides by 3 gives x = 3. But you're not done. You have x, not the pair. Go back and find y: since y = 2x, y = 2(3) = 6. So the solution is (3, 6). Check both: is 6 = 2(3)? Yes. Is 3 + 6 = 9? Yes. Solution: (3, 6).</p>
+<p><em>Example 2, isolate first.</em> Solve x = y + 1 and 2x + y = 8.
+This time x is the one already alone: x = y + 1. Substitute y + 1 in place of x in the second equation:
+$$2(y + 1) + y = 8 \;\Rightarrow\; 2y + 2 + y = 8 \;\Rightarrow\; 3y + 2 = 8 \;\Rightarrow\; 3y = 6 \;\Rightarrow\; y = 2.$$
+Step by step: the 2 outside the parentheses has to reach <em>everything</em> inside, so 2(y + 1) becomes 2y + 2. That's the distributing move from Unit 6, handing a copy to each term. Then 2y + y is 3y, so 3y + 2 = 8; subtract 2 from both sides to get 3y = 6; divide by 3 to get y = 2. Now find the partner: x = y + 1 = 2 + 1 = 3. Solution (3, 2). Check both: is 3 = 2 + 1? Yes. Is 2(3) + 2 = 8? Yes, since 6 + 2 = 8. Solution: (3, 2).</p>
+<p>That distributing step is the one to slow down on. It's tempting to write 2(y + 1) as 2y + 1, sending the 2 to only the first thing inside. But the 2 has to greet everyone in the parentheses, so it's 2y + 2. A quick way to catch it: count the terms inside, and make sure the outside number reached every one.</p>
+<p><em>Example 3, watch the distribution.</em> Solve y = x − 2 and x + y = 10.
+y is alone, so substitute x − 2 for y in the second equation:
+$$x + (x - 2) = 10 \;\Rightarrow\; 2x - 2 = 10 \;\Rightarrow\; 2x = 12 \;\Rightarrow\; x = 6.$$
+The x plus another x makes 2x, and the −2 comes along, so 2x − 2 = 10; add 2 to both sides for 2x = 12, then divide by 2 to get x = 6. Partner: y = x − 2 = 6 − 2 = 4. Solution (6, 4). Check both: is 4 = 6 − 2? Yes. Is 6 + 4 = 10? Yes. Solution: (6, 4).</p>
+<p><em>Example 4, isolate when nothing is alone yet.</em> Solve x + y = 7 and 2x + y = 11 by substitution.
+Neither variable is alone here, so make one alone first. The first equation is the easy one to rearrange: subtract x from both sides to get y = 7 − x. Now substitute 7 − x for y in the second equation:
+$$2x + (7 - x) = 11 \;\Rightarrow\; x + 7 = 11 \;\Rightarrow\; x = 4.$$
+Here 2x − x is just x, so x + 7 = 11, and subtracting 7 gives x = 4. Partner: y = 7 − x = 7 − 4 = 3. Solution (4, 3). Check both: is 4 + 3 = 7? Yes. Is 2(4) + 3 = 11? Yes, since 8 + 3 = 11. Solution: (4, 3). (This same system has a matching pair of y-terms, which makes it a natural fit for the elimination method coming in 7.3. You'll solve it that way too.)</p>
+<p>Which equation you substitute into matters too. You isolated y from the <em>first</em> equation, so you pour the result into the <em>second</em> one. If you pour it back into the first, the one you just got it from, everything collapses to something like 0 = 0, which is true but tells you nothing, because you've only said "the first equation equals itself." Always substitute into the other equation.</p>
+<p>Here's a clean one to get the method moving before the practice mixes things up. Solve y = 5 and x + y = 8. The first equation hands you y outright, so substitute 5 for y in the second: x + 5 = 8, which gives x = 3. Partner's already known, y = 5. Solution (3, 5). Check both: 5 = 5, and 3 + 5 = 8. When one equation just states a value like that, substitution is almost no work at all.</p>
+</section>
+<div class="cl-check">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M9.6 9.6a2.6 2.6 0 1 1 3.3 2.5c-.9.3-1.4.9-1.4 1.8"/><circle cx="11.5" cy="16.6" r=".9" fill="currentColor" stroke="none"/></svg>Check yourself</span></p>
+<ol>
+<li><a class="refcode" id="7.2.c1" href="#7.2.c1">7.2.c1</a> "In y = 2x and x + y = 9, why is it safe to write x + 2x = 9? What justifies swapping y for 2x?" (Because the first equation says y <em>equals</em> 2x, so they're the same number, and y is the same number in both equations. Swapping equal things for equal things keeps the second equation true.)</li>
+<li><a class="refcode" id="7.2.c2" href="#7.2.c2">7.2.c2</a> "You isolated y in equation one. Into <em>which</em> equation do you substitute, and why not the other?" (Into equation two, the one you didn't isolate from. Substituting back into equation one just restates it as something like 0 = 0, true but empty, so it finds nothing.)</li>
+<li><a class="refcode" id="7.2.c3" href="#7.2.c3">7.2.c3</a> "Make up a system where substitution is clearly the easier method than elimination, and say why." (Any system with a variable already alone, like y = 3x − 2 and x + y = 10, lets you pour 3x − 2 straight in with no rearranging. When a variable is sitting by itself, substitution is the short path.)</li>
+</ol>
+<p><strong>Practice problems</strong> (solve by substitution; give (x, y) and verify both):</p>
+<ol>
+<li><a class="refcode" id="7.2.1" href="#7.2.1">7.2.1</a> y = 3x and x + y = 8</li>
+<li><a class="refcode" id="7.2.2" href="#7.2.2">7.2.2</a> y = x + 4 and 2x + y = 10</li>
+<li><a class="refcode" id="7.2.3" href="#7.2.3">7.2.3</a> x = 2y and x + y = 9</li>
+<li><a class="refcode" id="7.2.4" href="#7.2.4">7.2.4</a> y = x - 1 and 3x + y = 11</li>
+<li><a class="refcode" id="7.2.5" href="#7.2.5">7.2.5</a> x = y + 3 and x + 2y = 9</li>
+<li><a class="refcode" id="7.2.6" href="#7.2.6">7.2.6</a> y = 2x + 1 and x + y = 7</li>
+<li><a class="refcode" id="7.2.7" href="#7.2.7">7.2.7</a> y = 4x and 2x + y = 18</li>
+<li><a class="refcode" id="7.2.8" href="#7.2.8">7.2.8</a> x = 3y and 2x - y = 10</li>
+</ol>
+</div>
+<details class="answers">
+<summary><span class="tw"></span><span class="eyebrow">Answers</span><span class="hint">Try each one yourself first, then open to check.</span></summary>
+<div class="ak-body">
+<ol>
+<li>(2, 6) — 6 = 3(2), 2 + 6 = 8</li>
+<li>(2, 6) — 6 = 2 + 4, 2(2) + 6 = 10</li>
+<li>(6, 3) — 6 = 2(3), 6 + 3 = 9</li>
+<li>(3, 2) — 2 = 3 - 1, 3(3) + 2 = 11</li>
+<li>(5, 2) — 5 = 2 + 3, 5 + 2(2) = 9</li>
+<li>(2, 5) — 5 = 2(2) + 1, 2 + 5 = 7</li>
+<li>(3, 12) — 12 = 4(3), 2(3) + 12 = 18</li>
+<li>(6, 2) — 6 = 3(2), 2(6) - 2 = 10</li>
+</ol>
+</div>
+</details>
+<nav class="pagenav" aria-label="Previous and next page">
+<a class="pn-prev" href="unit-07-1.html"><span class="pn-dir">&larr;&nbsp;Back</span><span class="pn-title">Lesson 7.1</span></a>
+<a class="pn-next" href="unit-07-3.html"><span class="pn-dir">Next&nbsp;&rarr;</span><span class="pn-title">Lesson 7.3</span></a>
+</nav>
+</main>
+<footer><p>A friendly Algebra 1 textbook, made to be read alongside the Claude tutor. Math by KaTeX.</p></footer>
+</div>
+</div>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  renderMathInElement(document.body, {delimiters: [{left: "$$", right: "$$", display: true}], throwOnError: false});
+  var root = document.documentElement, body = document.body;
+  document.getElementById("theme").addEventListener("click", function () {
+    root.classList.toggle("dark");
+    localStorage.setItem("a1-theme", root.classList.contains("dark") ? "dark" : "light");
+  });
+  var menu = document.getElementById("menu");
+  menu.addEventListener("click", function () {
+    var open = body.classList.toggle("nav-open");
+    menu.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+  var sn = document.getElementById("sidenav");
+  if (sn) sn.addEventListener("click", function (e) { if (e.target.closest("a")) body.classList.remove("nav-open"); });
+});
+</script>
+</body>
+</html>

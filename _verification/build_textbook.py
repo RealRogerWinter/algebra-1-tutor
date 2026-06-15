@@ -1,10 +1,11 @@
 """Generate the HTML textbook from the unit .md prose + SSOT + bundled figures (build tooling).
 
-The textbook is a *generated presentation layer* over the unit `.md` files (the prose source of
-truth) — never a hand-maintained copy — so the tutor and the textbook can never teach different math
-(REBUILD_PLAN "Architecture spine", handoff §9). Math renders via KaTeX (the textbook is a normal
-website, so a pinned CDN is fine — the no-fetch rule is only for the skill sandbox). Reference codes
-become deep-link targets; bundled figure SVGs are embedded inline.
+Each lesson is its own page (unit-NN-M.html), reached from a persistent left sidebar and linear
+prev/next nav; each unit also gets a short overview page (unit-NN.html), and the book opens with a
+how-to-use page. The math source is the student copy in textbook-src/ (falling back to the tutor
+unit .md), kept in lockstep with the SSOT-verified math by check_textbook_src.py. Math renders via
+KaTeX (a pinned CDN is fine for a website). Reference codes become deep-link targets; bundled figure
+SVGs are embedded inline.
 
 CLI:
   python _verification/build_textbook.py            # (re)generate docs/textbook/
@@ -254,8 +255,149 @@ def md_to_body(text):
     return _restore_math(body, math)
 
 
+# --- page model: one page per lesson, with a unit overview + a persistent sidebar ----------------
+_LESSON_HDR = re.compile(r"(?m)^## Lesson ([0-9A]+\.\d+):[ \t]*(.*)$")
+
+
+def _overview_fname(uid):
+    return "appendix.html" if str(uid) == "A" else f"unit-{int(uid):02d}.html"
+
+
+def _lesson_fname(lesson_id):
+    scope, sub = lesson_id.split(".")
+    return f"appendix-{sub}.html" if scope == "A" else f"unit-{int(scope):02d}-{sub}.html"
+
+
+def _split_unit(md):
+    """Split a unit's markdown into the intro (everything before the first lesson) and a list of
+    (lesson_id, lesson_title, chunk). Each chunk keeps its '## Lesson' header so the deep-link code
+    pass still scopes it, but drops the trailing '---' inter-lesson divider (so no stray rule)."""
+    hdrs = list(_LESSON_HDR.finditer(md))
+    intro = re.sub(r"\n+-{3,}[ \t]*$", "\n", (md[:hdrs[0].start()] if hdrs else md).rstrip()).rstrip()
+    lessons = []
+    for i, m in enumerate(hdrs):
+        end = hdrs[i + 1].start() if i + 1 < len(hdrs) else len(md)
+        chunk = re.sub(r"\n+-{3,}[ \t]*$", "\n", md[m.start():end].rstrip()).rstrip()
+        lessons.append((m.group(1), m.group(2).strip(), chunk))
+    return intro, lessons
+
+
+def _strip_lead(html, tag):
+    return re.sub(rf"^\s*<{tag}[^>]*>.*?</{tag}>", "", html, count=1, flags=re.DOTALL)
+
+
+def _sidebar(model, cur):
+    """The persistent left index: How-to-use / All-units, then every unit (current expanded)."""
+    out = ['<nav class="snav" aria-label="Contents">',
+           f'<a class="snav-top{" cur" if cur == "how-to-use.html" else ""}" href="how-to-use.html">How to use this book</a>',
+           f'<a class="snav-top{" cur" if cur == "index.html" else ""}" href="index.html">All units</a>',
+           '<ol class="snav-units">']
+    for unit in model:
+        active = cur == unit["overview"] or any(cur == l["fname"] for l in unit["lessons"])
+        ucur = " cur" if cur == unit["overview"] else ""
+        label = "Appendix" if unit["id"] == "A" else f"Unit {unit['id']}"
+        out.append(f'<li class="{"active" if active else ""}">')
+        out.append(f'<a class="snav-unit{ucur}" href="{unit["overview"]}">{label}. {_html.escape(unit["title"])}</a>')
+        if unit["lessons"]:
+            out.append('<ol class="snav-lessons">')
+            for l in unit["lessons"]:
+                lc = " cur" if cur == l["fname"] else ""
+                out.append(f'<li><a class="snav-lesson{lc}" href="{l["fname"]}">'
+                           f'<span class="ln">{_html.escape(l["id"])}</span> {_html.escape(l["title"])}</a></li>')
+            out.append('</ol>')
+        out.append('</li>')
+    out.append('</ol></nav>')
+    return "\n".join(out)
+
+
+def _pagenav(prev_link, next_link):
+    if not prev_link and not next_link:
+        return ""
+    parts = ['<nav class="pagenav" aria-label="Previous and next page">']
+    if prev_link:
+        parts.append(f'<a class="pn-prev" href="{prev_link[0]}"><span class="pn-dir">&larr;&nbsp;Back</span>'
+                     f'<span class="pn-title">{_html.escape(prev_link[1])}</span></a>')
+    else:
+        parts.append('<span></span>')
+    if next_link:
+        parts.append(f'<a class="pn-next" href="{next_link[0]}"><span class="pn-dir">Next&nbsp;&rarr;</span>'
+                     f'<span class="pn-title">{_html.escape(next_link[1])}</span></a>')
+    parts.append('</nav>')
+    return "\n".join(parts)
+
+
 # --- HTML template ------------------------------------------------------------------------------
+def _lesson_page(title, body, model, cur, prev_link=None, next_link=None, *, subtitle="",
+                 surface="textbook", hero=None, kicker=""):
+    kick = f'<div class="kicker">{_html.escape(kicker)}</div>' if kicker else ""
+    if hero:
+        lede = f'<p class="lede">{_html.escape(subtitle)}</p>' if subtitle else ""
+        head_block = (f'<div class="hero"><div class="hero-text">{kick}'
+                      f'<h1>{_html.escape(title)}</h1>{lede}</div>'
+                      f'<img class="hero-art" src="{hero}" alt=""></div>')
+    else:
+        sub = f'<p class="subtitle">{_html.escape(subtitle)}</p>' if subtitle else ""
+        head_block = f'{kick}<h1>{_html.escape(title)}</h1>\n{sub}'
+    return f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{_html.escape(title)} — Algebra 1</title>
+<script>try{{if(localStorage.getItem("a1-theme")==="dark")document.documentElement.classList.add("dark");}}catch(e){{}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..40,500..600&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="textbook.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@{KATEX}/dist/katex.min.css" crossorigin="anonymous">
+</head>
+<body data-surface="{surface}">
+<header class="topbar">
+  <button id="menu" class="menu" type="button" aria-label="Open or close the contents menu" aria-expanded="false">☰&nbsp;Contents</button>
+  <a class="home" href="index.html">Algebra&nbsp;1</a>
+  <span class="sp"></span>
+  <button id="theme" type="button" aria-label="Toggle light or dark theme">◐&nbsp;Theme</button>
+</header>
+<div class="shell">
+<aside class="sidenav" id="sidenav">
+{_sidebar(model, cur)}
+</aside>
+<div class="content">
+<main>
+{head_block}
+{body}
+{_pagenav(prev_link, next_link)}
+</main>
+<footer><p>A friendly Algebra 1 textbook, made to be read alongside the Claude tutor. Math by KaTeX.</p></footer>
+</div>
+</div>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@{KATEX}/dist/katex.min.js" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@{KATEX}/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {{
+  renderMathInElement(document.body, {{delimiters: [{{left: "$$", right: "$$", display: true}}], throwOnError: false}});
+  var root = document.documentElement, body = document.body;
+  document.getElementById("theme").addEventListener("click", function () {{
+    root.classList.toggle("dark");
+    localStorage.setItem("a1-theme", root.classList.contains("dark") ? "dark" : "light");
+  }});
+  var menu = document.getElementById("menu");
+  menu.addEventListener("click", function () {{
+    var open = body.classList.toggle("nav-open");
+    menu.setAttribute("aria-expanded", open ? "true" : "false");
+  }});
+  var sn = document.getElementById("sidenav");
+  if (sn) sn.addEventListener("click", function (e) {{ if (e.target.closest("a")) body.classList.remove("nav-open"); }});
+}});
+</script>
+</body>
+</html>
+"""
+
+
 def _page(title, body, prev_link, next_link, subtitle="", *, surface="textbook", hero=None, kicker=""):
+    """Original single-column layout (topbar nav, no rail). Shared by the student guide, tutor
+    guide, and landing; the textbook itself uses _lesson_page (with the left index rail)."""
     nav = ['<a class="home" href="index.html">Algebra&nbsp;1</a>']
     if prev_link:
         nav.append(f'<a href="{prev_link[0]}">&larr;&nbsp;{prev_link[1]}</a>')
@@ -320,7 +462,7 @@ CSS = """/* ====================================================================
 :root{
   --step--1:.86rem; --step-0:1rem; --step-1:1.18rem; --step-2:1.42rem; --step-3:1.7rem; --step-4:2.05rem; --step-5:2.45rem;
   --lh:1.68; --lh-tight:1.18;
-  --measure:64ch; --wide:46rem;
+  --measure:64ch; --wide:46rem; --rail:16rem;
   --serif-math:"STIX Two Text","Cambria Math";
   --radius:16px; --radius-sm:11px;
   --s2:.5rem; --s3:.8rem; --s4:1.15rem; --s5:1.9rem; --s6:2.8rem; --s7:4.2rem;
@@ -370,30 +512,50 @@ hr{border:0; border-top:1px solid var(--rule); margin:var(--s6) 0}
 .cl-ic{width:1.15em; height:1.15em; flex:none}
 
 /* ---- top bar ---- */
-.topbar{position:sticky; top:0; z-index:9; display:flex; align-items:center; gap:1.1rem;
-  padding:.6rem max(1.2rem,calc((100% - var(--wide))/2)); border-bottom:1px solid var(--rule);
-  background:color-mix(in srgb,var(--paper) 86%,transparent); font-size:var(--step--1);}
+.topbar{position:sticky; top:0; z-index:40; display:flex; align-items:center; gap:1rem;
+  padding:.6rem 1.2rem; border-bottom:1px solid var(--rule);
+  background:color-mix(in srgb,var(--paper) 88%,transparent); font-size:var(--step--1);}
 @supports not (background:color-mix(in srgb,red,blue)){ .topbar{background:var(--paper)} }
 .topbar nav{display:flex; gap:.9rem; flex-wrap:wrap; align-items:baseline}
 .topbar a{color:var(--link); text-decoration:none} .topbar a:hover{text-decoration:underline}
 .topbar .home{font-family:"Fraunces",serif; font-weight:600; font-size:var(--step-0); color:var(--ink)}
 .topbar .sp{margin-left:auto}
-#theme{background:none; border:1px solid var(--rule); border-radius:999px; color:var(--ink-soft);
-  cursor:pointer; padding:.3rem .7rem; font:inherit; font-size:var(--step--1)} #theme:hover{color:var(--ink); border-color:var(--blue)}
+#theme,.menu{background:none; border:1px solid var(--rule); border-radius:999px; color:var(--ink-soft);
+  cursor:pointer; padding:.3rem .7rem; font:inherit; font-size:var(--step--1)}
+#theme:hover,.menu:hover{color:var(--ink); border-color:var(--blue)}
+.menu{display:none}
 @supports ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
   .topbar{-webkit-backdrop-filter:blur(8px); backdrop-filter:blur(8px)} }
 
-/* ---- layout: calm centered column; special blocks a touch wider ---- */
-main{max-width:var(--wide); margin:0 auto; padding:0 1.2rem 5rem}
+/* ---- app shell: left index rail + reading column ---- */
+.shell{display:grid; grid-template-columns:var(--rail) minmax(0,1fr); align-items:start}
+.content{min-width:0}
+.sidenav{position:sticky; top:3.1rem; align-self:start; max-height:calc(100vh - 3.1rem); overflow:auto;
+  padding:1.2rem .9rem 3rem; border-right:1px solid var(--rule); background:var(--paper); font-size:var(--step--1)}
+.snav a{display:block; text-decoration:none; color:var(--ink-soft); border-radius:8px; padding:.3rem .55rem; line-height:1.35}
+.snav a:hover{background:var(--card-2); color:var(--ink)}
+.snav a.cur{color:var(--link); background:var(--tint-blue); font-weight:600}
+.snav-top{font-weight:600; color:var(--ink)}
+.snav-units{list-style:none; margin:.6rem 0 0; padding:0; counter-reset:none}
+.snav-units > li{margin:.1rem 0}
+.snav-unit{font-weight:600; color:var(--ink)}
+.snav-lessons{list-style:none; margin:.05rem 0 .55rem; padding:0 0 0 .55rem; border-left:1px solid var(--rule); display:none}
+.snav-units > li.active > .snav-lessons{display:block}
+.snav-lesson .ln{font:600 .85em "IBM Plex Mono",monospace; color:var(--ink-soft); margin-right:.25rem}
+.snav-lesson.cur .ln{color:var(--link)}
+
+/* ---- reading column: calm centered measure; special blocks a touch wider ---- */
+main{max-width:var(--wide); margin:0 auto; padding:1rem 1.3rem 4rem}
 main > *{max-width:var(--measure); margin-inline:auto}
 main > figure.fig, main > .worked, main > .practice, main > .answers, main > .hero,
-main > table, main > .katex-display, main > .unit-grid{max-width:var(--wide)}
-footer{max-width:var(--measure); margin:var(--s7) auto 0; padding:1.1rem 1.2rem; color:var(--ink-soft);
+main > table, main > .katex-display, main > .lesson-list, main > .pagenav{max-width:var(--wide)}
+footer{max-width:var(--measure); margin:var(--s7) auto 0; padding:1.1rem 1.3rem; color:var(--ink-soft);
   font-size:var(--step--1); border-top:1px solid var(--rule)}
 
-/* ---- unit hero ---- */
-.hero{margin:var(--s6) auto var(--s5); display:grid; grid-template-columns:1.05fr .95fr; gap:1.6rem; align-items:center}
-.hero .kicker{color:var(--blue); font-weight:600; font-size:var(--step--1); letter-spacing:.04em}
+/* ---- unit hero + page kicker ---- */
+.kicker{color:var(--blue); font-weight:600; font-size:var(--step--1); letter-spacing:.04em; margin:.6rem 0 .1rem}
+.hero{margin:var(--s5) auto var(--s5); display:grid; grid-template-columns:1.05fr .95fr; gap:1.6rem; align-items:center}
+.hero .kicker{margin:0}
 .hero h1{margin:.3rem 0 .5rem}
 .hero .lede{font-size:var(--step-1); color:var(--ink-soft); margin:0}
 .hero-art{width:100%; height:auto; border-radius:var(--radius); box-shadow:var(--shadow); display:block; aspect-ratio:16/9; object-fit:cover}
@@ -409,7 +571,7 @@ html.dark .hero-art{filter:brightness(.9) saturate(.92)}
 
 /* ---- callout family (plain-language labels) ---- */
 .cl-goal,.cl-terms,.cl-watch,.cl-note,.cl-check,.cl-wrap{background:var(--card); border-radius:var(--radius);
-  padding:1rem 1.25rem; margin:var(--s5) auto; box-shadow:var(--shadow)}
+  padding:1.1rem 1.3rem; margin:var(--s6) auto; box-shadow:var(--shadow)}
 .cl-goal{background:none; box-shadow:none; border-left:3px solid var(--blue); border-radius:0; padding:.3rem 0 .3rem 1.1rem}
 .cl-goal .eyebrow{color:var(--blue)} .cl-goal p:last-child{margin-bottom:0} .cl-goal p{font-size:var(--step-1)}
 .cl-why{font-size:var(--step-1); color:var(--ink-soft); line-height:1.55; margin:var(--s4) auto var(--s5);
@@ -419,16 +581,16 @@ html.dark .hero-art{filter:brightness(.9) saturate(.92)}
 .cl-check .eyebrow{color:var(--leaf)} .cl-note{background:var(--card-2); box-shadow:none; color:var(--ink-soft)}
 .cl-wrap{border-left:3px solid var(--leaf)} .cl-wrap .eyebrow{color:var(--leaf)}
 .cl-goal p:last-child,.cl-terms :last-child,.cl-watch :last-child,.cl-note :last-child,.cl-check :last-child,.cl-wrap :last-child{margin-bottom:0}
-.cl-terms ul,.cl-check ol,.cl-watch ul{margin:0; padding-left:0; list-style:none; display:grid; gap:.6rem}
-.cl-terms li,.cl-check li,.cl-watch li{padding-left:0; min-width:0}
+.cl-terms ul,.cl-check ol,.cl-watch ul{margin:0; padding-left:0; list-style:none; display:grid; gap:.7rem}
+.cl-terms li,.cl-check li,.cl-watch li{padding-left:0; min-width:0; overflow-wrap:break-word}
 .cl-check ol{counter-reset:c}
 
 /* ---- worked example ---- */
-.worked{background:var(--card); border-radius:var(--radius); padding:1.1rem 1.35rem; margin:var(--s5) auto;
+.worked{background:var(--card); border-radius:var(--radius); padding:1.2rem 1.4rem; margin:var(--s6) auto;
   box-shadow:var(--shadow); border-left:4px solid var(--blue)}
 .worked .eyebrow{color:var(--blue)}
-.worked ol,.worked ul{list-style:none; padding-left:0; margin:.4rem 0; display:grid; gap:1rem}
-.worked li{padding-top:1rem; border-top:1px solid var(--rule); min-width:0} .worked li:first-child{padding-top:0; border-top:0}
+.worked ol,.worked ul{list-style:none; padding-left:0; margin:.4rem 0; display:grid; gap:1.1rem}
+.worked li{padding-top:1.1rem; border-top:1px solid var(--rule); min-width:0; overflow-wrap:break-word} .worked li:first-child{padding-top:0; border-top:0}
 .worked .katex-display{overflow-x:auto; padding:.3rem 0; margin:.5rem 0}
 .worked :last-child{margin-bottom:0}
 .worked,.answers{position:relative; overflow:hidden}
@@ -437,22 +599,24 @@ html.dark .hero-art{filter:brightness(.9) saturate(.92)}
   -webkit-mask:var(--wm) center/contain no-repeat; mask:var(--wm) center/contain no-repeat}
 .answers::after{background:var(--leaf)}
 
-/* ---- practice / problem set ---- */
-.practice{margin:var(--s5) auto}
+/* ---- practice / problem set: one clean column, wrap (never side-scroll) ---- */
+.practice{margin:var(--s6) auto}
 .practice .eyebrow{color:var(--ink-soft)}
 .practice p em{font-style:normal; font-weight:600; font-size:var(--step--1); color:var(--ink-soft)}
-.practice > p{margin:1.2rem 0 .5rem}
-.practice ol{list-style:none; padding-left:0; margin:0; display:grid; gap:.55rem;
-  grid-template-columns:repeat(auto-fill,minmax(min(100%,18rem),1fr))}
+.practice > p{margin:1.3rem 0 .5rem}
+.practice ol{list-style:none; padding-left:0; margin:0; display:grid; gap:.6rem;
+  grid-template-columns:repeat(auto-fill,minmax(min(100%,24rem),1fr))}
 .practice li{display:flex; gap:.6rem; align-items:baseline; background:var(--card); border:1px solid var(--rule);
-  border-left:2px solid var(--rule); border-radius:var(--radius-sm); padding:.55rem .8rem; box-shadow:var(--shadow); min-width:0}
+  border-left:2px solid var(--rule); border-radius:var(--radius-sm); padding:.6rem .85rem; box-shadow:var(--shadow);
+  min-width:0; overflow-wrap:anywhere}
+.practice li > .refcode{flex:0 0 auto}
 .practice li:hover{border-color:var(--blue); border-left-width:4px}
 .practice li:target{border-color:var(--blue); border-left-width:4px; background:var(--tint-blue)}
-.practice li > .refcode{flex:0 0 auto}
-.practice li.long{grid-column:1/-1}
+.practice li .katex{white-space:normal}
+.practice li .katex-display{overflow-x:auto; margin:.3rem 0}
 
 /* ---- answer key reveal ---- */
-.answers{background:var(--card); border-radius:var(--radius); margin:var(--s5) auto; box-shadow:var(--shadow); overflow:hidden; border:1px solid var(--rule)}
+.answers{background:var(--card); border-radius:var(--radius); margin:var(--s6) auto; box-shadow:var(--shadow); overflow:hidden; border:1px solid var(--rule)}
 .answers > summary{cursor:pointer; list-style:none; display:flex; align-items:center; gap:.6rem; padding:.9rem 1.25rem}
 .answers > summary::-webkit-details-marker{display:none}
 .answers .tw{width:.7rem; height:.7rem; border:2px solid var(--leaf); border-top:0; border-right:0;
@@ -460,7 +624,25 @@ html.dark .hero-art{filter:brightness(.9) saturate(.92)}
 .answers[open] .tw{transform:rotate(45deg) translate(-1px,-1px)}
 .answers summary .eyebrow{color:var(--leaf); margin:0}
 .answers .hint{color:var(--ink-soft); font-size:var(--step--1)} .answers[open] .hint{display:none}
-.answers .ak-body{padding:.1rem 1.4rem 1.1rem} .answers .ak-body > :last-child{margin-bottom:0}
+.answers .ak-body{padding:.1rem 1.4rem 1.1rem; overflow-wrap:break-word} .answers .ak-body > :last-child{margin-bottom:0}
+
+/* ---- prev / next page nav ---- */
+.pagenav{display:flex; gap:1rem; justify-content:space-between; align-items:stretch;
+  margin:var(--s7) auto 0; padding-top:var(--s5); border-top:1px solid var(--rule)}
+.pagenav a{display:flex; flex-direction:column; gap:.15rem; flex:1 1 0; max-width:49%; text-decoration:none;
+  background:var(--card); border:1px solid var(--rule); border-radius:var(--radius); padding:.8rem 1.1rem; box-shadow:var(--shadow)}
+.pagenav a:hover{border-color:var(--blue)}
+.pagenav .pn-next{text-align:right; margin-left:auto}
+.pagenav .pn-dir{font-size:var(--step--1); color:var(--ink-soft)}
+.pagenav .pn-title{font-weight:600; color:var(--ink); font-family:"Fraunces",serif}
+
+/* ---- unit overview: list of its lessons ---- */
+.lesson-list ol{list-style:none; padding:0; margin:var(--s5) auto; display:grid; gap:.7rem}
+.lesson-list li{margin:0}
+.lesson-list a{display:block; background:var(--card); border:1px solid var(--rule); border-left:3px solid var(--blue);
+  border-radius:var(--radius-sm); padding:.75rem 1.05rem; text-decoration:none; box-shadow:var(--shadow); color:var(--ink)}
+.lesson-list a:hover{border-color:var(--blue)}
+.lesson-list a b{font-family:"Fraunces",serif; color:var(--link); margin-right:.3rem}
 
 /* ---- tutor-guide problem card (cross-site consistency) ---- */
 .tproblem{background:var(--card); border:1px solid var(--rule); border-radius:var(--radius); padding:1rem 1.25rem; margin:var(--s4) auto; box-shadow:var(--shadow)}
@@ -470,7 +652,7 @@ html.dark .hero-art{filter:brightness(.9) saturate(.92)}
 .tproblem .ans{margin:.7rem 0 0}
 
 /* ---- figure (graph paper belongs here) ---- */
-figure.fig{margin:var(--s5) auto; background:var(--card); border-radius:var(--radius); padding:1.1rem 1.1rem .7rem;
+figure.fig{margin:var(--s6) auto; background:var(--card); border-radius:var(--radius); padding:1.1rem 1.1rem .7rem;
   box-shadow:var(--shadow); text-align:center; border:1px solid var(--rule);
   background-image:linear-gradient(var(--rule) 1px,transparent 1px),linear-gradient(90deg,var(--rule) 1px,transparent 1px);
   background-size:22px 22px}
@@ -501,16 +683,26 @@ section.ug{margin:var(--s4) auto; background:var(--card); border:1px solid var(-
 section.ug h3{margin:.1rem 0 .4rem} section.ug :last-child{margin-bottom:0}
 .toc{background:var(--card); border:1px solid var(--rule); border-radius:var(--radius); padding:.8rem 1.15rem}
 
+/* ---- mobile: the rail slides in over the page ---- */
+@media (max-width:62rem){
+  .shell{grid-template-columns:1fr}
+  .menu{display:inline-flex; order:-1}
+  .sidenav{position:fixed; top:0; left:0; height:100dvh; width:17rem; max-height:none; z-index:60;
+    transform:translateX(-100%); transition:transform .2s ease; box-shadow:0 0 40px rgba(0,0,0,.3)}
+  body.nav-open .sidenav{transform:none}
+  body.nav-open::after{content:""; position:fixed; inset:0; background:rgba(0,0,0,.4); z-index:50}
+}
+
 /* ---- motion (reduced-motion safe) ---- */
 @media (prefers-reduced-motion:no-preference){
-  .practice li,.worked,figure.fig,#theme,ul.units li,.refcode{transition:border-color .15s ease, box-shadow .15s ease, color .15s ease, transform .15s ease}
-  ul.units li:hover{transform:translateY(-1px)}
+  .practice li,.worked,figure.fig,#theme,.menu,ul.units li,.refcode,.lesson-list a,.pagenav a{transition:border-color .15s ease, box-shadow .15s ease, color .15s ease, transform .15s ease}
+  ul.units li:hover,.lesson-list a:hover,.pagenav a:hover{transform:translateY(-1px)}
   :target{animation:flash 1.4s ease-out 1} @keyframes flash{0%{background:var(--tint-honey)}100%{background:transparent}}
 }
 
 /* ---- print (courtesy) ---- */
 @media print{
-  .topbar{position:static} #theme{display:none} a{color:inherit; text-decoration:none}
+  .topbar,.sidenav,.pagenav{display:none} .shell{display:block} a{color:inherit; text-decoration:none}
   body,figure.fig{background-image:none}
   .answers[open] .ak-body, details > *{display:revert} details{display:block} .answers summary{display:none}
   .worked,.practice li,figure.fig,blockquote,ul.units li{break-inside:avoid; box-shadow:none}
@@ -518,47 +710,81 @@ section.ug h3{margin:.1rem 0 .4rem} section.ug :last-child{margin-bottom:0}
 """
 
 
-def _index_html(ssot):
-    items = []
-    for u in ssot.units:
-        href = ("appendix.html" if u.id == "A" else f"unit-{int(u.id):02d}.html")
-        opt = " (optional)" if u.optional else ""
-        items.append(f'<li><a href="{href}"><b>Unit {u.id}</b> · {_html.escape(u.title)}</a>{opt}'
-                     f'<br><span class="u">{_html.escape(u.description)}</span></li>')
-    body = ('<p class="subtitle">A full Algebra 1 textbook, generated from the tutor\'s lesson source. '
-            'Every worked example, definition, and figure has a reference code you can quote to the tutor.</p>'
-            '<ul class="units">' + "\n".join(items) + "</ul>")
-    return _page("Algebra 1 — Contents", body, None, None)
-
-
 _UNIT_HERO = {"1": "numberline", "2": "balance", "3": "steps", "4": "machine", "5": "lines",
               "6": "modeling", "7": "systems", "8": "inequality", "9": "exponential", "10": "areamodel",
               "11": "factoring", "12": "arch", "A": "dots"}
 
 
-def _unit_pages(ssot):
-    order = ssot.units
-    pages = {}
-    for i, u in enumerate(order):
-        fname = ("appendix.html" if u.id == "A" else f"unit-{int(u.id):02d}.html")
-        body = md_to_body(open(_md_path(u.id), encoding="utf-8").read())
-        # strip the leading <h1> (the template adds its own) and use the SSOT title
-        body = re.sub(r"^\s*<h1[^>]*>.*?</h1>", "", body, count=1, flags=re.DOTALL)
-        prev_u = order[i - 1] if i > 0 else None
-        next_u = order[i + 1] if i + 1 < len(order) else None
-        pl = ((("appendix.html" if prev_u.id == "A" else f"unit-{int(prev_u.id):02d}.html"),
-               f"Unit {prev_u.id}") if prev_u else None)
-        nl = ((("appendix.html" if next_u.id == "A" else f"unit-{int(next_u.id):02d}.html"),
-               f"Unit {next_u.id}") if next_u else None)
-        kicker = "Appendix" if str(u.id) == "A" else f"Unit {u.id}"
-        hero = f"../assets/{_UNIT_HERO.get(str(u.id), 'lines')}.jpg"
-        pages[fname] = _page(u.title, body, pl, nl, u.description, hero=hero, kicker=kicker)
-    return pages
+def _index_html(ssot, model):
+    items = []
+    for u in ssot.units:
+        href = _overview_fname(u.id)
+        opt = " (optional)" if u.optional else ""
+        label = "Appendix" if str(u.id) == "A" else f"Unit {u.id}"
+        items.append(f'<li><a href="{href}"><b>{label}</b> · {_html.escape(u.title)}</a>{opt}'
+                     f'<br><span class="u">{_html.escape(u.description)}</span></li>')
+    body = ('<p class="subtitle">A complete, friendly Algebra 1 course you can read at your own pace. '
+            'New here? Start with <a href="how-to-use.html">how to use this book</a>.</p>'
+            '<ul class="units">' + "\n".join(items) + "</ul>")
+    return _lesson_page("Algebra 1", body, model, "index.html", None, ("how-to-use.html", "How to use this book"))
+
+
+def _intro_page(model, next_link):
+    md = open(os.path.join(TEXTBOOK_SRC, "how-to-use.md"), encoding="utf-8").read()
+    body = _strip_lead(md_to_body(md), "h1")
+    return _lesson_page("How to use this book", body, model, "how-to-use.html",
+                        ("index.html", "All units"), next_link, kicker="Start here")
 
 
 def build_site(ssot):
-    files = {"index.html": _index_html(ssot), "textbook.css": CSS}
-    files.update(_unit_pages(ssot))
+    # read + split every unit once
+    units_data = []
+    for u in ssot.units:
+        intro, lessons = _split_unit(open(_md_path(u.id), encoding="utf-8").read())
+        units_data.append((u, intro, lessons))
+
+    # sidebar model (every unit, with its lessons)
+    model = [{"id": str(u.id), "title": u.title, "overview": _overview_fname(u.id),
+              "lessons": [{"id": lid, "title": lt, "fname": _lesson_fname(lid)} for lid, lt, _ in lessons]}
+             for u, _i, lessons in units_data]
+
+    # linear page sequence for prev/next
+    seq = [("how-to-use.html", "How to use this book")]
+    for u, _i, lessons in units_data:
+        seq.append((_overview_fname(u.id), "Appendix" if str(u.id) == "A" else f"Unit {u.id}"))
+        for lid, _lt, _c in lessons:
+            seq.append((_lesson_fname(lid), f"Lesson {lid}"))
+    posn = {fn: k for k, (fn, _l) in enumerate(seq)}
+
+    def around(fn):
+        k = posn[fn]
+        prev = seq[k - 1] if k > 0 else None
+        nxt = seq[k + 1] if k + 1 < len(seq) else None
+        return prev, nxt
+
+    files = {"textbook.css": CSS}
+    files["index.html"] = _index_html(ssot, model)
+    files["how-to-use.html"] = _intro_page(model, around("how-to-use.html")[1])
+
+    for u, intro, lessons in units_data:
+        ov = _overview_fname(u.id)
+        kicker = "Appendix" if str(u.id) == "A" else f"Unit {u.id}"
+        # overview page: hero + unit intro + a list of its lessons
+        intro_html = _strip_lead(md_to_body(intro), "h1")
+        ll = ['<nav class="lesson-list" aria-label="Lessons in this unit"><ol>']
+        for lid, lt, _c in lessons:
+            ll.append(f'<li><a href="{_lesson_fname(lid)}"><b>Lesson {lid}</b>{_html.escape(lt)}</a></li>')
+        ll.append("</ol></nav>")
+        pl, nl = around(ov)
+        files[ov] = _lesson_page(u.title, intro_html + "\n" + "\n".join(ll), model, ov, pl, nl,
+                          subtitle=u.description, hero=f"../assets/{_UNIT_HERO.get(str(u.id), 'lines')}.jpg",
+                          kicker=kicker)
+        # one page per lesson
+        for lid, lt, chunk in lessons:
+            fn = _lesson_fname(lid)
+            lbody = _strip_lead(md_to_body(chunk), "h2")
+            pl2, nl2 = around(fn)
+            files[fn] = _lesson_page(lt, lbody, model, fn, pl2, nl2, kicker=f"{kicker} · Lesson {lid}")
     return files
 
 

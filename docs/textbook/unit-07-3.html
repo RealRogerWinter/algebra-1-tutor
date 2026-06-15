@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Elimination — Algebra 1</title>
+<script>try{if(localStorage.getItem("a1-theme")==="dark")document.documentElement.classList.add("dark");}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..40,500..600&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="textbook.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous">
+</head>
+<body data-surface="textbook">
+<header class="topbar">
+  <button id="menu" class="menu" type="button" aria-label="Open or close the contents menu" aria-expanded="false">☰&nbsp;Contents</button>
+  <a class="home" href="index.html">Algebra&nbsp;1</a>
+  <span class="sp"></span>
+  <button id="theme" type="button" aria-label="Toggle light or dark theme">◐&nbsp;Theme</button>
+</header>
+<div class="shell">
+<aside class="sidenav" id="sidenav">
+<nav class="snav" aria-label="Contents">
+<a class="snav-top" href="how-to-use.html">How to use this book</a>
+<a class="snav-top" href="index.html">All units</a>
+<ol class="snav-units">
+<li class="">
+<a class="snav-unit" href="unit-01.html">Unit 1. Foundations &amp; the Language of Algebra</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-01-1.html"><span class="ln">1.1</span> Variables and the meaning of equations</a></li>
+<li><a class="snav-lesson" href="unit-01-2.html"><span class="ln">1.2</span> The number system &amp; the number line</a></li>
+<li><a class="snav-lesson" href="unit-01-3.html"><span class="ln">1.3</span> Order of operations</a></li>
+<li><a class="snav-lesson" href="unit-01-4.html"><span class="ln">1.4</span> Negative numbers</a></li>
+<li><a class="snav-lesson" href="unit-01-5.html"><span class="ln">1.5</span> Expressions vs. equations; evaluating expressions</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-02.html">Unit 2. Solving Linear Equations</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-02-1.html"><span class="ln">2.1</span> Inverse operations &amp; one-step equations</a></li>
+<li><a class="snav-lesson" href="unit-02-2.html"><span class="ln">2.2</span> Two-step equations</a></li>
+<li><a class="snav-lesson" href="unit-02-3.html"><span class="ln">2.3</span> Combining like terms &amp; the distributive property</a></li>
+<li><a class="snav-lesson" href="unit-02-4.html"><span class="ln">2.4</span> Variables on both sides</a></li>
+<li><a class="snav-lesson" href="unit-02-5.html"><span class="ln">2.5</span> Equations with fractions (with two Fraction Refreshers)</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-03.html">Unit 3. Proportional Reasoning (the bridge to linearity)</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-03-1.html"><span class="ln">3.1</span> Ratios and rates</a></li>
+<li><a class="snav-lesson" href="unit-03-2.html"><span class="ln">3.2</span> Proportions &amp; cross-multiplication</a></li>
+<li><a class="snav-lesson" href="unit-03-3.html"><span class="ln">3.3</span> Percents</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-04.html">Unit 4. Introducing Functions</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-04-1.html"><span class="ln">4.1</span> What is a function</a></li>
+<li><a class="snav-lesson" href="unit-04-2.html"><span class="ln">4.2</span> Function notation f(x), domain &amp; range</a></li>
+<li><a class="snav-lesson" href="unit-04-3.html"><span class="ln">4.3</span> Multiple representations; linear vs. nonlinear</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-05.html">Unit 5. Linear Functions &amp; Their Graphs</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-05-1.html"><span class="ln">5.1</span> The coordinate plane</a></li>
+<li><a class="snav-lesson" href="unit-05-2.html"><span class="ln">5.2</span> Graphing linear equations from a table</a></li>
+<li><a class="snav-lesson" href="unit-05-3.html"><span class="ln">5.3</span> Slope</a></li>
+<li><a class="snav-lesson" href="unit-05-4.html"><span class="ln">5.4</span> Slope-intercept form y = mx + b</a></li>
+<li><a class="snav-lesson" href="unit-05-5.html"><span class="ln">5.5</span> Writing equations of lines</a></li>
+<li><a class="snav-lesson" href="unit-05-6.html"><span class="ln">5.6</span> x-intercepts, graphing by intercepts &amp; standard form</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-06.html">Unit 6. Modeling &amp; Translation</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-06-1.html"><span class="ln">6.1</span> Translating words into expressions and equations</a></li>
+<li><a class="snav-lesson" href="unit-06-2.html"><span class="ln">6.2</span> Classic word problems (number, age, distance, value &amp; relationship)</a></li>
+<li><a class="snav-lesson" href="unit-06-3.html"><span class="ln">6.3</span> Scatter plots &amp; line of best fit (a first taste of data)</a></li>
+</ol>
+</li>
+<li class="active">
+<a class="snav-unit" href="unit-07.html">Unit 7. Systems of Equations</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-07-1.html"><span class="ln">7.1</span> Solving by graphing</a></li>
+<li><a class="snav-lesson" href="unit-07-2.html"><span class="ln">7.2</span> Substitution</a></li>
+<li><a class="snav-lesson cur" href="unit-07-3.html"><span class="ln">7.3</span> Elimination</a></li>
+<li><a class="snav-lesson" href="unit-07-4.html"><span class="ln">7.4</span> Special cases &amp; applications</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-08.html">Unit 8. Inequalities</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-08-1.html"><span class="ln">8.1</span> One-variable inequalities</a></li>
+<li><a class="snav-lesson" href="unit-08-2.html"><span class="ln">8.2</span> Compound inequalities</a></li>
+<li><a class="snav-lesson" href="unit-08-3.html"><span class="ln">8.3</span> Absolute value: graphs &amp; distance</a></li>
+<li><a class="snav-lesson" href="unit-08-4.html"><span class="ln">8.4</span> Graphing linear inequalities (two variables) &amp; systems</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-09.html">Unit 9. Sequences &amp; Exponential Functions</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-09-1.html"><span class="ln">9.1</span> Arithmetic &amp; geometric sequences as functions</a></li>
+<li><a class="snav-lesson" href="unit-09-2.html"><span class="ln">9.2</span> Exponential growth &amp; decay; linear vs. exponential</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-10.html">Unit 10. Exponents &amp; Polynomials</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-10-1.html"><span class="ln">10.1</span> Exponent rules (including zero &amp; negative exponents)</a></li>
+<li><a class="snav-lesson" href="unit-10-2.html"><span class="ln">10.2</span> Scientific notation</a></li>
+<li><a class="snav-lesson" href="unit-10-3.html"><span class="ln">10.3</span> Polynomials — terms, degree, standard form; add &amp; subtract</a></li>
+<li><a class="snav-lesson" href="unit-10-4.html"><span class="ln">10.4</span> Multiplying polynomials</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-11.html">Unit 11. Factoring</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-11-1.html"><span class="ln">11.1</span> Greatest common factor (GCF)</a></li>
+<li><a class="snav-lesson" href="unit-11-2.html"><span class="ln">11.2</span> Factoring trinomials x²+bx+c</a></li>
+<li><a class="snav-lesson" href="unit-11-3.html"><span class="ln">11.3</span> Special patterns</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-12.html">Unit 12. Quadratic Functions &amp; Equations (the capstone)</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-12-1.html"><span class="ln">12.1</span> Square roots &amp; simplifying radicals</a></li>
+<li><a class="snav-lesson" href="unit-12-2.html"><span class="ln">12.2</span> The simplest quadratics (x²=9 → two solutions)</a></li>
+<li><a class="snav-lesson" href="unit-12-3.html"><span class="ln">12.3</span> Solving by factoring (zero-product property)</a></li>
+<li><a class="snav-lesson" href="unit-12-4.html"><span class="ln">12.4</span> Completing the square</a></li>
+<li><a class="snav-lesson" href="unit-12-5.html"><span class="ln">12.5</span> The quadratic formula &amp; the discriminant</a></li>
+<li><a class="snav-lesson" href="unit-12-6.html"><span class="ln">12.6</span> Graphing parabolas</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="appendix.html">Appendix. Data &amp; Statistics</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="appendix-1.html"><span class="ln">A.1</span> One-variable statistics — center &amp; spread</a></li>
+<li><a class="snav-lesson" href="appendix-2.html"><span class="ln">A.2</span> Two-variable data — line of best fit, correlation vs. causation</a></li>
+<li><a class="snav-lesson" href="appendix-3.html"><span class="ln">A.3</span> Two-way tables</a></li>
+</ol>
+</li>
+</ol></nav>
+</aside>
+<div class="content">
+<main>
+<div class="kicker">Unit 7 · Lesson 7.3</div><h1>Elimination</h1>
+
+
+<p>Substitution shines when a variable is already alone. But plenty of systems come written like this, 3x + 2y = 16 and x + y = 6, with nothing isolated and no clean way to isolate it without dragging in fractions. For those, there's a method built to handle them head-on, and it's the workhorse you'll lean on most in later math.</p>
+<p>The idea starts from the balance scale. Each equation is a level scale: the left side weighs exactly what the right side weighs. So if you have two true equations and you add their left sides together and their right sides together, the result is still balanced and still true. That's the move. You stack two equations and combine them, and if you've lined things up right, one variable disappears in the adding.</p>
+<p>Picture x + y = 10 and x − y = 4. Stack them and add straight down. On the left, x + x is 2x, and then there's a +y and a −y. Those are a debt and an equal amount of cash sitting together: they go to zero and leave nothing behind. On the right, 10 + 4 is 14. So adding the two equations gives 2x = 14, one equation in one unknown. The y didn't get "cancelled" by some trick. The +y and the −y summed to zero because they were exact opposites.</p>
+<p>That's the whole engine: combine the two equations so one variable's terms go to zero, solve what's left, then back-substitute for the partner and check both. The phrase to keep is "go to zero." It's literally what happens when +y and −y add.</p>
+<p>When the matching terms have <em>opposite</em> signs, like +y and −y, you <strong>add</strong> to make them go to zero. When they have the <em>same</em> sign, like 2x in one equation and 2x in the other, you <strong>subtract</strong> one equation from the other so they go to zero. Add for opposites, subtract for matches.</p>
+<p>And what if nothing lines up at all, with no pair of matching or opposite coefficients? Then you <strong>scale</strong> first: multiply an entire equation, both sides and every term, by a number that makes one pair line up. Multiplying a whole equation by a number is just resizing both pans of the scale equally, so it stays balanced and the line it describes doesn't change. Once a pair matches or opposes, you're back to the add-or-subtract move.</p>
+<div class="cl-terms">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6.5C9.5 5 6 5 3.5 6.5V18C6 16.5 9.5 16.5 12 18C14.5 16.5 18 16.5 20.5 18V6.5C18 5 14.5 5 12 6.5Z"/><path d="M12 6.5V18"/></svg>New words</span></p>
+<ul>
+<li><a class="refcode" id="7.3.d1" href="#7.3.d1">7.3.d1</a> <strong>Elimination (linear combination):</strong> combining two equations so that one variable's terms sum to zero ("go to zero"), removing it.</li>
+<li><a class="refcode" id="7.3.d2" href="#7.3.d2">7.3.d2</a> <strong>Scaling an equation:</strong> multiplying an <em>entire</em> equation by a number. Because both sides are multiplied equally, the line, and the solution, is unchanged (the balance scale stays level when you resize both pans by the same amount).</li>
+</ul>
+</div>
+<section class="worked">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19.5V15L15.5 4.5 19.5 8.5 9 19Z"/><path d="M13.5 6.5 17.5 10.5"/></svg>Worked example</span></p>
+<p><em>Example 1, add to send a variable to zero.</em> Solve x + y = 10 and x − y = 4.
+The y-terms are +y and −y, opposites, so <strong>add</strong> the two equations to send them to zero:
+$$(x + y) + (x - y) = 10 + 4 \;\Rightarrow\; 2x = 14 \;\Rightarrow\; x = 7.$$
+Adding down the left: x + x is 2x, and +y plus −y is zero, so 2x is all that's left; on the right, 10 + 4 is 14. Divide by 2 to get x = 7. Now the partner: put x = 7 back into x + y = 10, giving 7 + y = 10, so y = 3. Solution (7, 3). Check both: is 7 + 3 = 10? Yes. Is 7 − 3 = 4? Yes. Solution: (7, 3).</p>
+<p><em>Example 2, subtract to send a variable to zero.</em> Solve 2x + 3y = 12 and 2x − y = 4.
+Here the x-terms match: 2x in each, same sign. So <strong>subtract</strong> the second equation from the first to send the 2x to zero:
+$$(2x + 3y) - (2x - y) = 12 - 4 \;\Rightarrow\; 4y = 8 \;\Rightarrow\; y = 2.$$
+Watch the subtraction carefully, because it's the place a sign goes missing. Subtracting the whole second equation flips the sign of <em>every</em> term in it: the 2x becomes −2x (so 2x − 2x is zero), and the −y becomes +y (so 3y + y is 4y). On the right, 12 − 4 is 8. So 4y = 8, and y = 2. Partner: put y = 2 into 2x − y = 4, giving 2x − 2 = 4, so 2x = 6 and x = 3. Solution (3, 2). Check both: is 2(3) + 3(2) = 12? Yes, since 6 + 6 = 12. Is 2(3) − 2 = 4? Yes. Solution: (3, 2).</p>
+<p>That sign-flip on subtraction is the classic slip in this lesson. When you subtract the second equation, the −y inside it becomes +y, not −y. Every sign turns over. If you forget and leave it, you'd get 3y − y = 2y instead of 4y, and the answer comes out wrong. A good guard is the check at the end: if your pair doesn't satisfy both equations, a flipped sign in the subtraction is the first place to look.</p>
+<p><em>Example 3, subtract, coefficients already matched the other variable.</em> Solve x + y = 7 and 2x + y = 11.
+The y-terms match (a +y in each), so <strong>subtract</strong> to send them to zero. Take the first from the second: (2x + y) − (x + y) = 11 − 7, which gives x = 4 (the y's go to zero, 2x − x is x, and 11 − 7 is 4). Partner: 4 + y = 7, so y = 3. Solution (4, 3). Check both: is 4 + 3 = 7? Yes. Is 2(4) + 3 = 11? Yes. Solution: (4, 3). (This is the same system you solved by substitution in 7.2. Same answer, a different road to it. When two methods both fit, the choice is yours; pick whichever looks cleaner for the system in front of you.)</p>
+<p><em>Example 4, scaling required.</em> Solve 3x + 2y = 16 and x + y = 6.
+Nothing matches yet: 3x and x don't agree, and 2y and y don't agree. So <strong>scale</strong> first. Multiply the <em>entire</em> second equation by 2, both sides and every term, to make the y-coefficients match: 2(x + y) = 2(6) becomes 2x + 2y = 12. Now the y-terms are both +2y, so subtract this from the first equation:
+$$(3x + 2y) - (2x + 2y) = 16 - 12 \;\Rightarrow\; x = 4.$$
+The +2y terms go to zero, 3x − 2x is x, and 16 − 12 is 4, so x = 4. Partner: put x = 4 into x + y = 6, giving y = 2. Solution (4, 2). Check both: is 3(4) + 2(2) = 16? Yes, since 12 + 4 = 16. Is 4 + 2 = 6? Yes. Solution: (4, 2).</p>
+<p>When you scale, multiply <em>every</em> term and <em>both</em> sides. Doubling only the left side, or only the x-term, tips the scale and changes the equation. The way to keep it honest is to hand the multiplier to each piece, the same as distributing.</p>
+<p><em>Example 5, add, opposite y-coefficients.</em> Solve 3x + 2y = 12 and 5x − 2y = 4.
+The y-terms are +2y and −2y, opposites already, no scaling needed. So <strong>add</strong>:
+$$(3x + 2y) + (5x - 2y) = 12 + 4 \;\Rightarrow\; 8x = 16 \;\Rightarrow\; x = 2.$$
+Down the left: 3x + 5x is 8x, and +2y plus −2y goes to zero; on the right, 12 + 4 is 16. So 8x = 16 and x = 2. Partner: put x = 2 into 3x + 2y = 12, giving 6 + 2y = 12, so 2y = 6 and y = 3. Solution (2, 3). Check both: is 3(2) + 2(3) = 12? Yes, since 6 + 6 = 12. Is 5(2) − 2(3) = 4? Yes, since 10 − 6 = 4. Solution: (2, 3).</p>
+</section>
+<div class="cl-check">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M9.6 9.6a2.6 2.6 0 1 1 3.3 2.5c-.9.3-1.4.9-1.4 1.8"/><circle cx="11.5" cy="16.6" r=".9" fill="currentColor" stroke="none"/></svg>Check yourself</span></p>
+<ol>
+<li><a class="refcode" id="7.3.c1" href="#7.3.c1">7.3.c1</a> "In 2x + 3y = 12 and 2x - y = 4, why subtract rather than add? What tells you which to do?" (The x-terms are both +2x, same sign, a match, so subtracting sends them to zero. If they'd been opposites, like +2x and −2x, you'd add instead. Same sign, subtract; opposite signs, add.)</li>
+<li><a class="refcode" id="7.3.c2" href="#7.3.c2">7.3.c2</a> "Why is it legal to multiply x + y = 6 by 2? What stays true after you do?" (Because multiplying both sides equally keeps the scale balanced: 2(x + y) really does equal 2(6). The equation still describes the same line and the same solution; you've only rewritten it in a more useful size.)</li>
+<li><a class="refcode" id="7.3.c3" href="#7.3.c3">7.3.c3</a> "Given 4x + 3y = 10 and 2x + y = 4, which equation would you scale and by what, to eliminate x? (Don't solve, just plan the move.)" (Scale the second equation by 2: 2(2x + y) = 2(4) gives 4x + 2y = 8. Now both equations have +4x, so subtracting sends x to zero.)</li>
+</ol>
+<p><strong>Practice problems</strong> (solve by elimination; scale first where needed; give (x, y) and verify both):</p>
+<p><em>Set A: add or subtract directly</em></p>
+<ol>
+<li><a class="refcode" id="7.3.1" href="#7.3.1">7.3.1</a> x + y = 8 and x - y = 2</li>
+<li><a class="refcode" id="7.3.2" href="#7.3.2">7.3.2</a> x + y = 12 and x - y = 6</li>
+<li><a class="refcode" id="7.3.3" href="#7.3.3">7.3.3</a> 2x + y = 9 and x - y = 3</li>
+<li><a class="refcode" id="7.3.4" href="#7.3.4">7.3.4</a> 3x + y = 14 and x + y = 6</li>
+<li><a class="refcode" id="7.3.5" href="#7.3.5">7.3.5</a> 2x + 3y = 13 and 2x + y = 7</li>
+<li><a class="refcode" id="7.3.6" href="#7.3.6">7.3.6</a> x + 2y = 11 and x + y = 7</li>
+</ol>
+<p><em>Set B: scale first</em></p>
+<ol start="7">
+<li><a class="refcode" id="7.3.7" href="#7.3.7">7.3.7</a> 3x + 2y = 16 and x + 4y = 22</li>
+<li><a class="refcode" id="7.3.8" href="#7.3.8">7.3.8</a> 2x + y = 11 and 3x + 2y = 18</li>
+</ol>
+</div>
+<details class="answers">
+<summary><span class="tw"></span><span class="eyebrow">Answers</span><span class="hint">Try each one yourself first, then open to check.</span></summary>
+<div class="ak-body">
+<ol>
+<li>(5, 3) — 5 + 3 = 8, 5 - 3 = 2</li>
+<li>(9, 3) — 9 + 3 = 12, 9 - 3 = 6</li>
+<li>(4, 1) — 2(4) + 1 = 9, 4 - 1 = 3</li>
+<li>(4, 2) — 3(4) + 2 = 14, 4 + 2 = 6</li>
+<li>(2, 3) — 2(2) + 3(3) = 13, 2(2) + 3 = 7</li>
+<li>(3, 4) — 3 + 2(4) = 11, 3 + 4 = 7</li>
+<li>(2, 5) — multiply eq.1 by 2 → 6x+4y=32, subtract eq.2 → 5x=10, x=2, y=5. 3(2)+2(5)=16, 2+4(5)=22</li>
+<li>(4, 3) — multiply eq.1 by 2 → 4x+2y=22, subtract eq.2 → x=4, y=3. 2(4)+3=11, 3(4)+2(3)=18</li>
+</ol>
+</div>
+</details>
+<nav class="pagenav" aria-label="Previous and next page">
+<a class="pn-prev" href="unit-07-2.html"><span class="pn-dir">&larr;&nbsp;Back</span><span class="pn-title">Lesson 7.2</span></a>
+<a class="pn-next" href="unit-07-4.html"><span class="pn-dir">Next&nbsp;&rarr;</span><span class="pn-title">Lesson 7.4</span></a>
+</nav>
+</main>
+<footer><p>A friendly Algebra 1 textbook, made to be read alongside the Claude tutor. Math by KaTeX.</p></footer>
+</div>
+</div>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  renderMathInElement(document.body, {delimiters: [{left: "$$", right: "$$", display: true}], throwOnError: false});
+  var root = document.documentElement, body = document.body;
+  document.getElementById("theme").addEventListener("click", function () {
+    root.classList.toggle("dark");
+    localStorage.setItem("a1-theme", root.classList.contains("dark") ? "dark" : "light");
+  });
+  var menu = document.getElementById("menu");
+  menu.addEventListener("click", function () {
+    var open = body.classList.toggle("nav-open");
+    menu.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+  var sn = document.getElementById("sidenav");
+  if (sn) sn.addEventListener("click", function (e) { if (e.target.closest("a")) body.classList.remove("nav-open"); });
+});
+</script>
+</body>
+</html>

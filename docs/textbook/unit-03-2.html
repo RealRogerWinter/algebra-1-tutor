@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Proportions &amp; cross-multiplication — Algebra 1</title>
+<script>try{if(localStorage.getItem("a1-theme")==="dark")document.documentElement.classList.add("dark");}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..40,500..600&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="textbook.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous">
+</head>
+<body data-surface="textbook">
+<header class="topbar">
+  <button id="menu" class="menu" type="button" aria-label="Open or close the contents menu" aria-expanded="false">☰&nbsp;Contents</button>
+  <a class="home" href="index.html">Algebra&nbsp;1</a>
+  <span class="sp"></span>
+  <button id="theme" type="button" aria-label="Toggle light or dark theme">◐&nbsp;Theme</button>
+</header>
+<div class="shell">
+<aside class="sidenav" id="sidenav">
+<nav class="snav" aria-label="Contents">
+<a class="snav-top" href="how-to-use.html">How to use this book</a>
+<a class="snav-top" href="index.html">All units</a>
+<ol class="snav-units">
+<li class="">
+<a class="snav-unit" href="unit-01.html">Unit 1. Foundations &amp; the Language of Algebra</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-01-1.html"><span class="ln">1.1</span> Variables and the meaning of equations</a></li>
+<li><a class="snav-lesson" href="unit-01-2.html"><span class="ln">1.2</span> The number system &amp; the number line</a></li>
+<li><a class="snav-lesson" href="unit-01-3.html"><span class="ln">1.3</span> Order of operations</a></li>
+<li><a class="snav-lesson" href="unit-01-4.html"><span class="ln">1.4</span> Negative numbers</a></li>
+<li><a class="snav-lesson" href="unit-01-5.html"><span class="ln">1.5</span> Expressions vs. equations; evaluating expressions</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-02.html">Unit 2. Solving Linear Equations</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-02-1.html"><span class="ln">2.1</span> Inverse operations &amp; one-step equations</a></li>
+<li><a class="snav-lesson" href="unit-02-2.html"><span class="ln">2.2</span> Two-step equations</a></li>
+<li><a class="snav-lesson" href="unit-02-3.html"><span class="ln">2.3</span> Combining like terms &amp; the distributive property</a></li>
+<li><a class="snav-lesson" href="unit-02-4.html"><span class="ln">2.4</span> Variables on both sides</a></li>
+<li><a class="snav-lesson" href="unit-02-5.html"><span class="ln">2.5</span> Equations with fractions (with two Fraction Refreshers)</a></li>
+</ol>
+</li>
+<li class="active">
+<a class="snav-unit" href="unit-03.html">Unit 3. Proportional Reasoning (the bridge to linearity)</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-03-1.html"><span class="ln">3.1</span> Ratios and rates</a></li>
+<li><a class="snav-lesson cur" href="unit-03-2.html"><span class="ln">3.2</span> Proportions &amp; cross-multiplication</a></li>
+<li><a class="snav-lesson" href="unit-03-3.html"><span class="ln">3.3</span> Percents</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-04.html">Unit 4. Introducing Functions</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-04-1.html"><span class="ln">4.1</span> What is a function</a></li>
+<li><a class="snav-lesson" href="unit-04-2.html"><span class="ln">4.2</span> Function notation f(x), domain &amp; range</a></li>
+<li><a class="snav-lesson" href="unit-04-3.html"><span class="ln">4.3</span> Multiple representations; linear vs. nonlinear</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-05.html">Unit 5. Linear Functions &amp; Their Graphs</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-05-1.html"><span class="ln">5.1</span> The coordinate plane</a></li>
+<li><a class="snav-lesson" href="unit-05-2.html"><span class="ln">5.2</span> Graphing linear equations from a table</a></li>
+<li><a class="snav-lesson" href="unit-05-3.html"><span class="ln">5.3</span> Slope</a></li>
+<li><a class="snav-lesson" href="unit-05-4.html"><span class="ln">5.4</span> Slope-intercept form y = mx + b</a></li>
+<li><a class="snav-lesson" href="unit-05-5.html"><span class="ln">5.5</span> Writing equations of lines</a></li>
+<li><a class="snav-lesson" href="unit-05-6.html"><span class="ln">5.6</span> x-intercepts, graphing by intercepts &amp; standard form</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-06.html">Unit 6. Modeling &amp; Translation</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-06-1.html"><span class="ln">6.1</span> Translating words into expressions and equations</a></li>
+<li><a class="snav-lesson" href="unit-06-2.html"><span class="ln">6.2</span> Classic word problems (number, age, distance, value &amp; relationship)</a></li>
+<li><a class="snav-lesson" href="unit-06-3.html"><span class="ln">6.3</span> Scatter plots &amp; line of best fit (a first taste of data)</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-07.html">Unit 7. Systems of Equations</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-07-1.html"><span class="ln">7.1</span> Solving by graphing</a></li>
+<li><a class="snav-lesson" href="unit-07-2.html"><span class="ln">7.2</span> Substitution</a></li>
+<li><a class="snav-lesson" href="unit-07-3.html"><span class="ln">7.3</span> Elimination</a></li>
+<li><a class="snav-lesson" href="unit-07-4.html"><span class="ln">7.4</span> Special cases &amp; applications</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-08.html">Unit 8. Inequalities</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-08-1.html"><span class="ln">8.1</span> One-variable inequalities</a></li>
+<li><a class="snav-lesson" href="unit-08-2.html"><span class="ln">8.2</span> Compound inequalities</a></li>
+<li><a class="snav-lesson" href="unit-08-3.html"><span class="ln">8.3</span> Absolute value: graphs &amp; distance</a></li>
+<li><a class="snav-lesson" href="unit-08-4.html"><span class="ln">8.4</span> Graphing linear inequalities (two variables) &amp; systems</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-09.html">Unit 9. Sequences &amp; Exponential Functions</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-09-1.html"><span class="ln">9.1</span> Arithmetic &amp; geometric sequences as functions</a></li>
+<li><a class="snav-lesson" href="unit-09-2.html"><span class="ln">9.2</span> Exponential growth &amp; decay; linear vs. exponential</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-10.html">Unit 10. Exponents &amp; Polynomials</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-10-1.html"><span class="ln">10.1</span> Exponent rules (including zero &amp; negative exponents)</a></li>
+<li><a class="snav-lesson" href="unit-10-2.html"><span class="ln">10.2</span> Scientific notation</a></li>
+<li><a class="snav-lesson" href="unit-10-3.html"><span class="ln">10.3</span> Polynomials — terms, degree, standard form; add &amp; subtract</a></li>
+<li><a class="snav-lesson" href="unit-10-4.html"><span class="ln">10.4</span> Multiplying polynomials</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-11.html">Unit 11. Factoring</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-11-1.html"><span class="ln">11.1</span> Greatest common factor (GCF)</a></li>
+<li><a class="snav-lesson" href="unit-11-2.html"><span class="ln">11.2</span> Factoring trinomials x²+bx+c</a></li>
+<li><a class="snav-lesson" href="unit-11-3.html"><span class="ln">11.3</span> Special patterns</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-12.html">Unit 12. Quadratic Functions &amp; Equations (the capstone)</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-12-1.html"><span class="ln">12.1</span> Square roots &amp; simplifying radicals</a></li>
+<li><a class="snav-lesson" href="unit-12-2.html"><span class="ln">12.2</span> The simplest quadratics (x²=9 → two solutions)</a></li>
+<li><a class="snav-lesson" href="unit-12-3.html"><span class="ln">12.3</span> Solving by factoring (zero-product property)</a></li>
+<li><a class="snav-lesson" href="unit-12-4.html"><span class="ln">12.4</span> Completing the square</a></li>
+<li><a class="snav-lesson" href="unit-12-5.html"><span class="ln">12.5</span> The quadratic formula &amp; the discriminant</a></li>
+<li><a class="snav-lesson" href="unit-12-6.html"><span class="ln">12.6</span> Graphing parabolas</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="appendix.html">Appendix. Data &amp; Statistics</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="appendix-1.html"><span class="ln">A.1</span> One-variable statistics — center &amp; spread</a></li>
+<li><a class="snav-lesson" href="appendix-2.html"><span class="ln">A.2</span> Two-variable data — line of best fit, correlation vs. causation</a></li>
+<li><a class="snav-lesson" href="appendix-3.html"><span class="ln">A.3</span> Two-way tables</a></li>
+</ol>
+</li>
+</ol></nav>
+</aside>
+<div class="content">
+<main>
+<div class="kicker">Unit 3 · Lesson 3.2</div><h1>Proportions &amp; cross-multiplication</h1>
+
+
+<p>Say 4 apples cost \$3. At that same price, what do 10 apples cost? The two words doing all the work are <em>same price</em>.</p>
+<p>The price-per-apple doesn't change just because you bought more, so the comparison "apples to dollars" stays equal even as both numbers grow. Two equal comparisons like that, set side by side, are a proportion. Most of scaling, from recipes to maps to currency, is exactly this move.</p>
+<p>Start with the picture: stack the two comparisons as equal fractions, keeping the same unit on top on both sides.</p>
+<p>$$\frac{4 \text{ apples}}{\$3} = \frac{10 \text{ apples}}{\$x}$$</p>
+<p>Apples are on top on the left, so apples go on top on the right; dollars sit underneath on both. That lines the two ratios up to be equal, which is what "same price" means.</p>
+<p>Now for the move that solves a proportion. It has a name, cross-multiplication, and it isn't a magic X. It's the same habit from Unit 2 of doing the same thing to both sides, used twice to clear the fractions. Start from two equal ratios and clear each bottom in turn:</p>
+<p>$$\frac{a}{b} = \frac{c}{d} \;\xrightarrow{\times b}\; a = \frac{bc}{d} \;\xrightarrow{\times d}\; a\cdot d = b\cdot c.$$</p>
+<p>All that happened: you multiplied both sides by b to clear the first bottom, then by d to clear the second. The crossed product a·d = b·c is the <em>result</em> of those two clearings, not a trick you have to take on faith. (This is safe because b and d aren't zero. Multiplying both sides by something that might be zero isn't a reversible move, which is why proportions keep their bottoms nonzero.)</p>
+<p>Once the bottoms are gone, what's left is an ordinary one-step equation, solved exactly the way you solved them in Unit 2.</p>
+<p>One caution, and it's the deep one for this lesson: cross-multiplication is for <em>direct</em> proportions, where two ratios stay equal. Some real situations move the opposite way. More workers means <em>fewer</em> days, and there the right setup is different.</p>
+<p>You'll meet that case head-on in the worked examples and again in problem 7, so the question "is this even direct?" stays alive.</p>
+<div class="cl-terms">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6.5C9.5 5 6 5 3.5 6.5V18C6 16.5 9.5 16.5 12 18C14.5 16.5 18 16.5 20.5 18V6.5C18 5 14.5 5 12 6.5Z"/><path d="M12 6.5V18"/></svg>New words</span></p>
+<ul>
+<li><a class="refcode" id="3.2.d1" href="#3.2.d1">3.2.d1</a> <strong>Proportion:</strong> a statement that two ratios are equal: a/b = c/d (where b and d are not 0, so the fractions are defined).</li>
+<li><a class="refcode" id="3.2.d2" href="#3.2.d2">3.2.d2</a> <strong>Cross-multiplication:</strong> for a/b = c/d with b, d ≠ 0, the rule a·d = b·c.</li>
+<li><a class="refcode" id="3.2.d3" href="#3.2.d3">3.2.d3</a> <strong>Direct proportion:</strong> as one quantity grows, the other grows in the same ratio (more apples → more cost). The ratios stay equal.</li>
+<li><a class="refcode" id="3.2.d4" href="#3.2.d4">3.2.d4</a> <strong>Inverse proportion:</strong> as one quantity grows, the other <em>shrinks</em> so that their <strong>product</strong> stays constant (more workers → fewer days; workers × days = total work). The constant product workers × days = k mirrors the constant <em>ratio</em> of the direct case; symbolically xy = k (equivalently y = k/x). (Its graph is a curve, not a line. That's out of scope for now; here we only use the constant-product idea to solve.)</li>
+</ul>
+</div>
+<section class="worked">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19.5V15L15.5 4.5 19.5 8.5 9 19Z"/><path d="M13.5 6.5 17.5 10.5"/></svg>Worked example</span></p>
+<ol>
+<li>
+<p><a class="refcode" id="3.2.w1" href="#3.2.w1">3.2.w1</a> <em>Solve a basic proportion.</em> x/4 = 6/8. Cross-multiply to clear the bottoms, which gives 8x = 24; that's a one-step equation, so divide both sides by 8 and x = 3. Check by putting it back: 3/4 = 6/8, and both reduce to 3/4, so it holds.</p>
+</li>
+<li>
+<p><a class="refcode" id="3.2.w2" href="#3.2.w2">3.2.w2</a> <em>Variable in a denominator.</em> 3/x = 9/15. First note x can't be 0, since 3/x has to mean something. Cross-multiply: 9x = 45, so divide both sides by 9 and x = 5. Check: 3/5 = 9/15, and 9/15 reduces to 3/5, so it holds.</p>
+</li>
+<li>
+<p><a class="refcode" id="3.2.w3" href="#3.2.w3">3.2.w3</a> <em>Word problem (direct).</em> 4 apples cost \$3; what do 10 apples cost? Write it with the units inline so the "same unit on top on both sides" rule stays visible, apples over dollars on both sides:
+$$\frac{4 \text{ apples}}{\$3} = \frac{10 \text{ apples}}{\$x} \;\Rightarrow\; 4x = 30 \;\Rightarrow\; x = \$7.50.$$
+Cross-multiplying clears the bottoms to give 4x = 30, then dividing by 4 gives x = 7.5. Check: 4/3 = 10/7.5, the same price per apple on both sides.</p>
+</li>
+<li>
+<p><a class="refcode" id="3.2.w4" href="#3.2.w4">3.2.w4</a> <em>Inverse, the trap.</em> 5 workers build a wall in 12 days. How long for 3 workers, at the same total work? The thing that's fixed here isn't a ratio, it's the <strong>total work</strong>: workers × days = 5 × 12 = 60 worker-days. So 3 × t = 60, which gives t = 20 days. Notice it came out <em>bigger</em>: fewer workers means more days. If you'd reached for a direct proportion, 5/3 = 12/t, you'd have gotten the relationship backward, a good reason to ask which way things move before setting up.</p>
+</li>
+</ol>
+<p>Now a clean direct one to get the rhythm back before the practice. If 2 pencils cost \$1, what do 6 pencils cost at the same price? Stack the ratios, 2/1 = 6/x, then cross-multiply to 2x = 6, and divide by 2 for x = \$3. Check: 2/1 and 6/3 are both 2 pencils per dollar. Straightforward, just the proportion move once.</p>
+<p>Two slips show up a lot here. One is doing cross-multiplication without being able to say <em>why</em>. That's the version that gets misapplied, because if it's "just the X trick," nothing stops you from using it on a sum or on an inverse case where it doesn't belong. The cure is to remember it's only "clear both bottoms," so it only fits two equal ratios.</p>
+<p>The other is mismatched units: apples over dollars on one side but dollars over apples on the other. Keep the same unit on top on both sides, and the setup stays honest.</p>
+<p>Before you set up any proportion, say your plan in a sentence: when this quantity goes <em>up</em>, does the other go up (direct: set the ratios equal) or down (inverse: set the products equal)? Answer that first, then write the setup.</p>
+</section>
+<div class="cl-check">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M9.6 9.6a2.6 2.6 0 1 1 3.3 2.5c-.9.3-1.4.9-1.4 1.8"/><circle cx="11.5" cy="16.6" r=".9" fill="currentColor" stroke="none"/></svg>Check yourself</span></p>
+<ul>
+<li><a class="refcode" id="3.2.c1" href="#3.2.c1">3.2.c1</a> "Re-derive cross-multiplication for a/b = c/d in your own steps. What are you actually doing to both sides?" (Multiply both sides by b to clear the first bottom, leaving a = bc/d; then multiply both sides by d to clear the second, leaving a·d = b·c. It's "do the same to both sides," done twice.)</li>
+<li><a class="refcode" id="3.2.c2" href="#3.2.c2">3.2.c2</a> "A car going 60 mph covers a fixed 120-mile trip; at 40 mph it takes <em>longer</em>. Is trip-time-vs-speed direct or inverse? How would you set it up?" (Inverse: faster means less time, so speed × time is the fixed 120 miles. Set the products equal: 60 × 2 = 120, so at 40 mph, 40 × t = 120 and t = 3 hours.)</li>
+<li><a class="refcode" id="3.2.c3" href="#3.2.c3">3.2.c3</a> "In 2/5 = x/20, without solving, will x be bigger or smaller than 2, and why?" (Bigger. The bottom went from 5 to 20, four times as large, so to keep the ratios equal the top has to grow the same way: x is 4 times 2, which is 8.)</li>
+</ul>
+<p>You can now set up a proportion, explain cross-multiplication as clearing both bottoms, solve the leftover equation with your Unit 2 moves, and stop to check whether a situation is direct or inverse before you set it up.</p>
+<p>The problems below come shuffled rather than sorted by type, which is harder but makes the moves stick. Each one has its answer at the end of the lesson, and a stalled problem is your cue to reread the matching worked example. One of these isn't a direct proportion, so stay alert for it.</p>
+</div>
+<section class="practice">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4.5" width="15.5" height="15.5" rx="2.5"/><path d="M7.5 10 9 11.5 12 8.5"/><path d="M14 10H16.5"/><path d="M7.5 15H16.5"/></svg>Practice</span></p>
+<p><em>Solve the proportion (direct):</em></p>
+<ol>
+<li><a class="refcode" id="3.2.1" href="#3.2.1">3.2.1</a> x/3 = 10/15</li>
+<li><a class="refcode" id="3.2.2" href="#3.2.2">3.2.2</a> 2/5 = x/20</li>
+<li><a class="refcode" id="3.2.3" href="#3.2.3">3.2.3</a> 6/x = 3/4</li>
+<li><a class="refcode" id="3.2.4" href="#3.2.4">3.2.4</a> x/8 = 9/12</li>
+<li><a class="refcode" id="3.2.5" href="#3.2.5">3.2.5</a> 7/2 = 21/x</li>
+</ol>
+<p><em>Word problems (set up, then solve):</em></p>
+<ol start="6">
+<li><a class="refcode" id="3.2.6" href="#3.2.6">3.2.6</a> On a map, 1 inch represents 50 miles. How many miles is 3.5 inches?</li>
+<li><a class="refcode" id="3.2.7" href="#3.2.7">3.2.7</a> 5 workers build a wall in 12 days. <strong>Is this direct or inverse?</strong> Set it up and solve for how long 3 workers take at the same total work.</li>
+<li><a class="refcode" id="3.2.8" href="#3.2.8">3.2.8</a> 9 lb of apples cost \$18. What do 4 lb cost?</li>
+</ol>
+</section>
+<details class="answers">
+<summary><span class="tw"></span><span class="eyebrow">Answers</span><span class="hint">Try each one yourself first, then open to check.</span></summary>
+<div class="ak-body">
+<ol>
+<li>15x = 30 ⇒ x = 2.</li>
+<li>40 = 5x ⇒ x = 8.</li>
+<li>24 = 3x ⇒ x = 8.</li>
+<li>12x = 72 ⇒ x = 6.</li>
+<li>7x = 42 ⇒ x = 6.</li>
+<li>1/50 = 3.5/x ⇒ x = 50 × 3.5 = 175 miles.</li>
+<li><strong>Inverse.</strong> Total work = 5 × 12 = 60 worker-days, so 3 × t = 60, giving t = 20 days. (Not 5/3 = 12/t — fewer workers means <em>more</em> time.)</li>
+<li>Unit price \$18 ÷ 9 = \$2/lb, so 4 × \$2 = \$8. (Or 9/18 = 4/x ⇒ x = 8.)</li>
+</ol>
+</div>
+</details>
+<nav class="pagenav" aria-label="Previous and next page">
+<a class="pn-prev" href="unit-03-1.html"><span class="pn-dir">&larr;&nbsp;Back</span><span class="pn-title">Lesson 3.1</span></a>
+<a class="pn-next" href="unit-03-3.html"><span class="pn-dir">Next&nbsp;&rarr;</span><span class="pn-title">Lesson 3.3</span></a>
+</nav>
+</main>
+<footer><p>A friendly Algebra 1 textbook, made to be read alongside the Claude tutor. Math by KaTeX.</p></footer>
+</div>
+</div>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  renderMathInElement(document.body, {delimiters: [{left: "$$", right: "$$", display: true}], throwOnError: false});
+  var root = document.documentElement, body = document.body;
+  document.getElementById("theme").addEventListener("click", function () {
+    root.classList.toggle("dark");
+    localStorage.setItem("a1-theme", root.classList.contains("dark") ? "dark" : "light");
+  });
+  var menu = document.getElementById("menu");
+  menu.addEventListener("click", function () {
+    var open = body.classList.toggle("nav-open");
+    menu.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+  var sn = document.getElementById("sidenav");
+  if (sn) sn.addEventListener("click", function (e) { if (e.target.closest("a")) body.classList.remove("nav-open"); });
+});
+</script>
+</body>
+</html>

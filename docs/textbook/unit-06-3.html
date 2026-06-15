@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Scatter plots &amp; line of best fit (a first taste of data) — Algebra 1</title>
+<script>try{if(localStorage.getItem("a1-theme")==="dark")document.documentElement.classList.add("dark");}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..40,500..600&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="textbook.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous">
+</head>
+<body data-surface="textbook">
+<header class="topbar">
+  <button id="menu" class="menu" type="button" aria-label="Open or close the contents menu" aria-expanded="false">☰&nbsp;Contents</button>
+  <a class="home" href="index.html">Algebra&nbsp;1</a>
+  <span class="sp"></span>
+  <button id="theme" type="button" aria-label="Toggle light or dark theme">◐&nbsp;Theme</button>
+</header>
+<div class="shell">
+<aside class="sidenav" id="sidenav">
+<nav class="snav" aria-label="Contents">
+<a class="snav-top" href="how-to-use.html">How to use this book</a>
+<a class="snav-top" href="index.html">All units</a>
+<ol class="snav-units">
+<li class="">
+<a class="snav-unit" href="unit-01.html">Unit 1. Foundations &amp; the Language of Algebra</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-01-1.html"><span class="ln">1.1</span> Variables and the meaning of equations</a></li>
+<li><a class="snav-lesson" href="unit-01-2.html"><span class="ln">1.2</span> The number system &amp; the number line</a></li>
+<li><a class="snav-lesson" href="unit-01-3.html"><span class="ln">1.3</span> Order of operations</a></li>
+<li><a class="snav-lesson" href="unit-01-4.html"><span class="ln">1.4</span> Negative numbers</a></li>
+<li><a class="snav-lesson" href="unit-01-5.html"><span class="ln">1.5</span> Expressions vs. equations; evaluating expressions</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-02.html">Unit 2. Solving Linear Equations</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-02-1.html"><span class="ln">2.1</span> Inverse operations &amp; one-step equations</a></li>
+<li><a class="snav-lesson" href="unit-02-2.html"><span class="ln">2.2</span> Two-step equations</a></li>
+<li><a class="snav-lesson" href="unit-02-3.html"><span class="ln">2.3</span> Combining like terms &amp; the distributive property</a></li>
+<li><a class="snav-lesson" href="unit-02-4.html"><span class="ln">2.4</span> Variables on both sides</a></li>
+<li><a class="snav-lesson" href="unit-02-5.html"><span class="ln">2.5</span> Equations with fractions (with two Fraction Refreshers)</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-03.html">Unit 3. Proportional Reasoning (the bridge to linearity)</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-03-1.html"><span class="ln">3.1</span> Ratios and rates</a></li>
+<li><a class="snav-lesson" href="unit-03-2.html"><span class="ln">3.2</span> Proportions &amp; cross-multiplication</a></li>
+<li><a class="snav-lesson" href="unit-03-3.html"><span class="ln">3.3</span> Percents</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-04.html">Unit 4. Introducing Functions</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-04-1.html"><span class="ln">4.1</span> What is a function</a></li>
+<li><a class="snav-lesson" href="unit-04-2.html"><span class="ln">4.2</span> Function notation f(x), domain &amp; range</a></li>
+<li><a class="snav-lesson" href="unit-04-3.html"><span class="ln">4.3</span> Multiple representations; linear vs. nonlinear</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-05.html">Unit 5. Linear Functions &amp; Their Graphs</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-05-1.html"><span class="ln">5.1</span> The coordinate plane</a></li>
+<li><a class="snav-lesson" href="unit-05-2.html"><span class="ln">5.2</span> Graphing linear equations from a table</a></li>
+<li><a class="snav-lesson" href="unit-05-3.html"><span class="ln">5.3</span> Slope</a></li>
+<li><a class="snav-lesson" href="unit-05-4.html"><span class="ln">5.4</span> Slope-intercept form y = mx + b</a></li>
+<li><a class="snav-lesson" href="unit-05-5.html"><span class="ln">5.5</span> Writing equations of lines</a></li>
+<li><a class="snav-lesson" href="unit-05-6.html"><span class="ln">5.6</span> x-intercepts, graphing by intercepts &amp; standard form</a></li>
+</ol>
+</li>
+<li class="active">
+<a class="snav-unit" href="unit-06.html">Unit 6. Modeling &amp; Translation</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-06-1.html"><span class="ln">6.1</span> Translating words into expressions and equations</a></li>
+<li><a class="snav-lesson" href="unit-06-2.html"><span class="ln">6.2</span> Classic word problems (number, age, distance, value &amp; relationship)</a></li>
+<li><a class="snav-lesson cur" href="unit-06-3.html"><span class="ln">6.3</span> Scatter plots &amp; line of best fit (a first taste of data)</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-07.html">Unit 7. Systems of Equations</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-07-1.html"><span class="ln">7.1</span> Solving by graphing</a></li>
+<li><a class="snav-lesson" href="unit-07-2.html"><span class="ln">7.2</span> Substitution</a></li>
+<li><a class="snav-lesson" href="unit-07-3.html"><span class="ln">7.3</span> Elimination</a></li>
+<li><a class="snav-lesson" href="unit-07-4.html"><span class="ln">7.4</span> Special cases &amp; applications</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-08.html">Unit 8. Inequalities</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-08-1.html"><span class="ln">8.1</span> One-variable inequalities</a></li>
+<li><a class="snav-lesson" href="unit-08-2.html"><span class="ln">8.2</span> Compound inequalities</a></li>
+<li><a class="snav-lesson" href="unit-08-3.html"><span class="ln">8.3</span> Absolute value: graphs &amp; distance</a></li>
+<li><a class="snav-lesson" href="unit-08-4.html"><span class="ln">8.4</span> Graphing linear inequalities (two variables) &amp; systems</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-09.html">Unit 9. Sequences &amp; Exponential Functions</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-09-1.html"><span class="ln">9.1</span> Arithmetic &amp; geometric sequences as functions</a></li>
+<li><a class="snav-lesson" href="unit-09-2.html"><span class="ln">9.2</span> Exponential growth &amp; decay; linear vs. exponential</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-10.html">Unit 10. Exponents &amp; Polynomials</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-10-1.html"><span class="ln">10.1</span> Exponent rules (including zero &amp; negative exponents)</a></li>
+<li><a class="snav-lesson" href="unit-10-2.html"><span class="ln">10.2</span> Scientific notation</a></li>
+<li><a class="snav-lesson" href="unit-10-3.html"><span class="ln">10.3</span> Polynomials — terms, degree, standard form; add &amp; subtract</a></li>
+<li><a class="snav-lesson" href="unit-10-4.html"><span class="ln">10.4</span> Multiplying polynomials</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-11.html">Unit 11. Factoring</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-11-1.html"><span class="ln">11.1</span> Greatest common factor (GCF)</a></li>
+<li><a class="snav-lesson" href="unit-11-2.html"><span class="ln">11.2</span> Factoring trinomials x²+bx+c</a></li>
+<li><a class="snav-lesson" href="unit-11-3.html"><span class="ln">11.3</span> Special patterns</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-12.html">Unit 12. Quadratic Functions &amp; Equations (the capstone)</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-12-1.html"><span class="ln">12.1</span> Square roots &amp; simplifying radicals</a></li>
+<li><a class="snav-lesson" href="unit-12-2.html"><span class="ln">12.2</span> The simplest quadratics (x²=9 → two solutions)</a></li>
+<li><a class="snav-lesson" href="unit-12-3.html"><span class="ln">12.3</span> Solving by factoring (zero-product property)</a></li>
+<li><a class="snav-lesson" href="unit-12-4.html"><span class="ln">12.4</span> Completing the square</a></li>
+<li><a class="snav-lesson" href="unit-12-5.html"><span class="ln">12.5</span> The quadratic formula &amp; the discriminant</a></li>
+<li><a class="snav-lesson" href="unit-12-6.html"><span class="ln">12.6</span> Graphing parabolas</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="appendix.html">Appendix. Data &amp; Statistics</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="appendix-1.html"><span class="ln">A.1</span> One-variable statistics — center &amp; spread</a></li>
+<li><a class="snav-lesson" href="appendix-2.html"><span class="ln">A.2</span> Two-variable data — line of best fit, correlation vs. causation</a></li>
+<li><a class="snav-lesson" href="appendix-3.html"><span class="ln">A.3</span> Two-way tables</a></li>
+</ol>
+</li>
+</ol></nav>
+</aside>
+<div class="content">
+<main>
+<div class="kicker">Unit 6 · Lesson 6.3</div><h1>Scatter plots &amp; line of best fit (a first taste of data)</h1>
+
+
+<p>Real data is messy. Measure ten people's study hours and quiz scores and the points won't sit on a tidy line. But a <em>trend</em> usually shows through anyway, and that trend is often all you need to describe what's going on and make a prediction. This lesson is your first look at handling data that way. Keep it light: it's a preview of Unit A (Data &amp; Statistics), where these ideas get the full treatment. Here we just plant them.</p>
+<p>The tool for capturing a trend is one you already have. A line of best fit is the linear function from Unit 5, the y = mx + b form, or f(x) = mx + b, laid through a cloud of scattered points so it summarizes them. So there's nothing new to learn here, just the everyday face of the line you already know how to read.</p>
+<p>Begin with something concrete. Picture a handful of students, and for each one a pair of numbers: hours studied and quiz score. Say a couple of the pairs out loud, so they feel like real people before they become dots. One student studied 1 hour and scored 55, another studied 6 hours and scored 92.</p>
+<p>Now the picture. Put each pair on a coordinate plane as a single point, the way you plotted points back in Lesson 5.1: one dot per student, and no line joining the dots. Here's that cloud of points with a line drawn through the middle of it. The dots drift from lower-left to upper-right, and the straight line follows that drift without touching every dot.</p>
+<p>When you look at a cloud like that, the first question is just its direction: does it rise, fall, or drift with no clear tilt? This one rises left to right, so we call the <strong>association positive</strong>: more study hours tend to go with higher scores.</p>
+<p>That trend line through the middle is a single line chosen to summarize the whole cloud. It won't pass through every point, and it isn't meant to. It's a model of messy data, not a path that visits each dot. Because it's sketched by eye to run through the middle, a different reasonable person might draw a slightly different one. (A calculator's line-of-best-fit tool finds the single best one by formula; that's a Unit A job. Ours is close enough to work with.)</p>
+<p>Once you have the line, predicting is just evaluating the function, the same skill from Units 4 and 5. If a best-fit line comes out as f(x) = 3x + 2, then predicting at x = 10 is f(10) = 3(10) + 2 = 32.</p>
+<p>Two words go with prediction, and they're worth meeting once here. Predicting <em>inside</em> the range your data actually covers is <strong>interpolation</strong>, and it's the more trustworthy kind. Predicting <em>outside</em> that range is <strong>extrapolation</strong>, and it gets riskier the farther out you reach, because you're trusting the trend to hold where you have no points. Both terms come back in Unit A.</p>
+<p>The most useful thing a trend line tells you is usually not the prediction but what the slope and intercept <em>mean</em>. Don't stop at the numbers. Take f(x) = 3x + 2 for (hours practiced, free throws made). The slope 3 is a rate: about 3 more free throws made for each extra hour of practice, the same "so much for every one" idea as d = rt in the last lesson. The intercept 2 is the predicted makes with zero practice, the value when x = 0. Reading those two numbers in plain words is what lets a line actually tell you something, and it's what Unit A builds on.</p>
+<p>One caution before the examples, because it's the easiest thing to overclaim. A trend showing two things move together does not prove one <em>causes</em> the other. Ice-cream sales and drownings both climb in summer, but ice cream doesn't cause drownings. Hot weather drives both. A trend is real and useful; it just isn't proof of a cause.</p>
+<div class="cl-terms">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6.5C9.5 5 6 5 3.5 6.5V18C6 16.5 9.5 16.5 12 18C14.5 16.5 18 16.5 20.5 18V6.5C18 5 14.5 5 12 6.5Z"/><path d="M12 6.5V18"/></svg>New words</span></p>
+<ul>
+<li><a class="refcode" id="6.3.d1" href="#6.3.d1">6.3.d1</a> <strong>Scatter plot:</strong> a graph of paired data (x, y) plotted as individual points, with no connecting line.</li>
+<li><a class="refcode" id="6.3.d2" href="#6.3.d2">6.3.d2</a> <strong>Association / correlation:</strong> the overall trend in the cloud of points. <strong>Positive:</strong> as x goes up, y tends to go up (cloud rises left to right). <strong>Negative:</strong> as x goes up, y tends to go down. <strong>No association:</strong> no clear up-or-down trend.</li>
+<li><a class="refcode" id="6.3.d3" href="#6.3.d3">6.3.d3</a> <strong>Line of best fit (trend line):</strong> a single line drawn to pass as close as possible to all the points, summarizing the trend. It <em>is</em> a linear function, so you evaluate it to predict.</li>
+<li><a class="refcode" id="6.3.d4" href="#6.3.d4">6.3.d4</a> <strong>Correlation is not causation:</strong> two quantities trending together does <strong>not</strong> prove one <em>causes</em> the other.</li>
+</ul>
+<p>The point table for the scatter plot above is (1,55), (2,60), (2,68), (3,70), (4,80), (5,86), (6,92). The cloud rises, so the association is positive. Read the worked examples a line at a time, especially how each one reads the slope and intercept back into the story.</p>
+</div>
+<section class="worked">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19.5V15L15.5 4.5 19.5 8.5 9 19Z"/><path d="M13.5 6.5 17.5 10.5"/></svg>Worked example</span></p>
+<p><em>Example 1: read the trend.</em> The scatter plot above (hours studied vs. quiz score) rises from lower-left to upper-right. So the <strong>association is positive</strong>: more study hours tend to go with higher scores. Note "tend to": not every point obeys, which is exactly why it's a trend and not a rule.</p>
+<p><em>Example 2: predict, then interpret slope and intercept.</em> A study finds the best-fit line f(x) = 3x + 2 for (hours practiced, free throws made). Predict the makes for someone who practices x = 10 hours by evaluating the function:
+$$f(10) = 3(10) + 2 = 32 \text{ free throws.}$$
+The line <em>is</em> the model, so predicting is just the evaluation skill from Unit 5. Now read the parts in context: the slope 3 says about 3 more makes per extra hour practiced (a rate), and the intercept 2 is the predicted makes with no practice. One honest flag: if the data only ran up to a few practice hours, x = 10 reaches past it, so this prediction is an extrapolation. Trust it less than one inside the data's range.</p>
+<p><em>Example 3: negative association, prediction, and a causation caution.</em> A best-fit line for (daily screen-time hours x, hours of sleep y) is f(x) = −0.5x + 9. Predict the sleep for someone with x = 6 hours of screen time:
+$$f(6) = -0.5(6) + 9 = 6 \text{ hours of sleep.}$$
+The slope is negative, so this is a <strong>negative association</strong>: more of x goes with less of y. In context: the slope −0.5 means roughly half an hour less sleep per extra hour of screen time, and the intercept 9 is the predicted sleep with zero screen time. But hold the caution in mind: a downward trend doesn't <em>prove</em> screen time causes less sleep. Some other factor could be driving both. Correlation is not causation.</p>
+<p>A natural slip here is reading the <em>direction</em> of a cloud off the <em>signs of its numbers</em>, calling a falling cloud "positive" because the values happen to be positive. After you've named one correctly, the self-check is to ignore the numbers and just watch the cloud: does it rise or fall left to right? That direction, not the sign of the values, is what positive and negative describe.</p>
+<p>Two related habits to keep: don't connect the dots into a zig-zag (you want one summarizing line, not a path through each point), and don't expect every point to land on the line (real data scatters; the line is deliberately close-but-not-through-all).</p>
+<p>Run one prediction before the practice set. For f(x) = 2x + 1, predict at x = 5: f(5) = 2(5) + 1 = 11. Substitute and compute, the same evaluation you've done since Unit 4.</p>
+</section>
+<div class="cl-check">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M9.6 9.6a2.6 2.6 0 1 1 3.3 2.5c-.9.3-1.4.9-1.4 1.8"/><circle cx="11.5" cy="16.6" r=".9" fill="currentColor" stroke="none"/></svg>Check yourself</span></p>
+<ol>
+<li><a class="refcode" id="6.3.c1" href="#6.3.c1">6.3.c1</a> Sketch in words what a scatter plot with <strong>no association</strong> looks like, and give a real pair of quantities you'd expect to show it. (A shapeless cloud with no rise or fall, points scattered every which way. One pair: a person's height and their phone number.)</li>
+<li><a class="refcode" id="6.3.c2" href="#6.3.c2">6.3.c2</a> A town finds shoe size and reading level are positively associated in children. Does bigger feet cause better reading? Explain in one sentence what's really going on. (No. Older children have both bigger feet and more reading practice, so age drives both; it's correlation, not causation.)</li>
+<li><a class="refcode" id="6.3.c3" href="#6.3.c3">6.3.c3</a> A best-fit line is f(x) = 0.5x + 60. Predict y when x = 20, and say whether the association is positive or negative. (f(20) = 0.5(20) + 60 = 70; the slope is positive, so the association is positive.)</li>
+<li><a class="refcode" id="6.3.c4" href="#6.3.c4">6.3.c4</a> For the same best-fit line f(x) = 0.5x + 60 modeling (minutes of exercise x, resting heart-rate-recovery score y), explain in context what the <strong>0.5</strong> and the <strong>60</strong> each tell you. (One sentence each.) (The 0.5 is a rate: about half a point more recovery score per extra minute of exercise. The 60 is the predicted recovery score with zero minutes of exercise.)</li>
+</ol>
+<p>A mix of conceptual and prediction problems follows. Conceptual ones ask you to name an association or judge a causation claim; the rest hand you a line to evaluate. Answers are at the end of the lesson, and the matching worked example sits just above if you get stuck.</p>
+</div>
+<section class="practice">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4.5" width="15.5" height="15.5" rx="2.5"/><path d="M7.5 10 9 11.5 12 8.5"/><path d="M14 10H16.5"/><path d="M7.5 15H16.5"/></svg>Practice</span></p>
+<p><em>Conceptual:</em></p>
+<ol>
+<li><a class="refcode" id="6.3.1" href="#6.3.1">6.3.1</a> For each, name the likely association (positive / negative / none): (a) hours of exercise per week vs. resting heart rate; (b) a car's age vs. its resale price; (c) a person's height vs. their phone number.</li>
+<li><a class="refcode" id="6.3.2" href="#6.3.2">6.3.2</a> In your own words, what does a line of best fit <em>do</em>, and why won't it pass through every point?</li>
+<li><a class="refcode" id="6.3.3" href="#6.3.3">6.3.3</a> True or false, with a one-sentence reason: "If two quantities are strongly correlated, one must cause the other."</li>
+<li><a class="refcode" id="6.3.4" href="#6.3.4">6.3.4</a> A scatter plot's cloud falls from upper-left to lower-right. Positive, negative, or no association?</li>
+</ol>
+<p><em>Predictions (evaluate the given best-fit line):</em></p>
+<ol start="5">
+<li><a class="refcode" id="6.3.5" href="#6.3.5">6.3.5</a> Best-fit line f(x) = 3x + 2. Predict y at x = 4.</li>
+<li><a class="refcode" id="6.3.6" href="#6.3.6">6.3.6</a> Best-fit line f(x) = -2x + 50. Predict y at x = 15.</li>
+<li><a class="refcode" id="6.3.7" href="#6.3.7">6.3.7</a> Best-fit line f(x) = 0.5x + 60. Predict y at x = 20.</li>
+</ol>
+<p><em>Interpret &amp; range (in context):</em></p>
+<ol start="8">
+<li><a class="refcode" id="6.3.8" href="#6.3.8">6.3.8</a> A best-fit line for (hours worked x, dollars earned y) is f(x) = 12x + 0. In context, what does the <strong>slope 12</strong> mean, and what does the <strong>intercept 0</strong> mean?</li>
+<li><a class="refcode" id="6.3.9" href="#6.3.9">6.3.9</a> The line in problems 5 was built from data running from x = 1 to x = 6. Is predicting at x = 4 an <strong>interpolation</strong> or an <strong>extrapolation</strong>, and which kind of prediction is more trustworthy?</li>
+</ol>
+</section>
+<details class="answers">
+<summary><span class="tw"></span><span class="eyebrow">Answers</span><span class="hint">Try each one yourself first, then open to check.</span></summary>
+<div class="ak-body">
+<ol>
+<li>(a) <strong>negative</strong> (more exercise tends to lower resting heart rate); (b) <strong>negative</strong> (older car, lower price); (c) <strong>none</strong> (height and phone number are unrelated).</li>
+<li>It draws a single straight line that best summarizes the overall trend so you can describe it and predict; it won't hit every point because real data scatters — the line is a model of messy data, not a connect-the-dots path.</li>
+<li><strong>False</strong> — correlation shows two things trend together, but a hidden third factor (or coincidence) can cause the trend; correlation is not causation.</li>
+<li><strong>Negative association</strong> (the trend falls as x increases).</li>
+<li>f(4) = 3(4) + 2 = 14.</li>
+<li>f(15) = -2(15) + 50 = 20.</li>
+<li>f(20) = 0.5(20) + 60 = 70.</li>
+<li><strong>Slope 12:</strong> each extra hour worked adds about \$12 to earnings (a rate, \$12 per hour); <strong>intercept 0:</strong> with 0 hours worked, predicted earnings are \$0.</li>
+<li><strong>Interpolation</strong> — x = 4 sits inside the data's range (1 to 6), so it's the more trustworthy kind of prediction; an extrapolation reaches outside the data and is riskier.</li>
+</ol>
+</div>
+</details>
+<div class="ldiv" aria-hidden="true"><i></i><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3.5 20.5 12 12 20.5 3.5 12Z"/></svg><i></i></div>
+<p>You can now turn a phrase or sentence into algebra by naming the variable in words and reading the structure. You can set up and solve the four classic word-problem families with one method and check against the original wording. And you can read a scatter plot: naming its association, predicting from a best-fit line, saying what its slope and intercept mean, telling interpolation from extrapolation, and remembering that a trend isn't proof of a cause.</p>
+<p>Those last data ideas are the on-ramp to Unit A, and the setup habits here are what mature into two equations in two variables in Unit 7.</p>
+<nav class="pagenav" aria-label="Previous and next page">
+<a class="pn-prev" href="unit-06-2.html"><span class="pn-dir">&larr;&nbsp;Back</span><span class="pn-title">Lesson 6.2</span></a>
+<a class="pn-next" href="unit-07.html"><span class="pn-dir">Next&nbsp;&rarr;</span><span class="pn-title">Unit 7</span></a>
+</nav>
+</main>
+<footer><p>A friendly Algebra 1 textbook, made to be read alongside the Claude tutor. Math by KaTeX.</p></footer>
+</div>
+</div>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  renderMathInElement(document.body, {delimiters: [{left: "$$", right: "$$", display: true}], throwOnError: false});
+  var root = document.documentElement, body = document.body;
+  document.getElementById("theme").addEventListener("click", function () {
+    root.classList.toggle("dark");
+    localStorage.setItem("a1-theme", root.classList.contains("dark") ? "dark" : "light");
+  });
+  var menu = document.getElementById("menu");
+  menu.addEventListener("click", function () {
+    var open = body.classList.toggle("nav-open");
+    menu.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+  var sn = document.getElementById("sidenav");
+  if (sn) sn.addEventListener("click", function (e) { if (e.target.closest("a")) body.classList.remove("nav-open"); });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Two-way tables — Algebra 1</title>
+<script>try{if(localStorage.getItem("a1-theme")==="dark")document.documentElement.classList.add("dark");}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..40,500..600&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="textbook.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous">
+</head>
+<body data-surface="textbook">
+<header class="topbar">
+  <button id="menu" class="menu" type="button" aria-label="Open or close the contents menu" aria-expanded="false">☰&nbsp;Contents</button>
+  <a class="home" href="index.html">Algebra&nbsp;1</a>
+  <span class="sp"></span>
+  <button id="theme" type="button" aria-label="Toggle light or dark theme">◐&nbsp;Theme</button>
+</header>
+<div class="shell">
+<aside class="sidenav" id="sidenav">
+<nav class="snav" aria-label="Contents">
+<a class="snav-top" href="how-to-use.html">How to use this book</a>
+<a class="snav-top" href="index.html">All units</a>
+<ol class="snav-units">
+<li class="">
+<a class="snav-unit" href="unit-01.html">Unit 1. Foundations &amp; the Language of Algebra</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-01-1.html"><span class="ln">1.1</span> Variables and the meaning of equations</a></li>
+<li><a class="snav-lesson" href="unit-01-2.html"><span class="ln">1.2</span> The number system &amp; the number line</a></li>
+<li><a class="snav-lesson" href="unit-01-3.html"><span class="ln">1.3</span> Order of operations</a></li>
+<li><a class="snav-lesson" href="unit-01-4.html"><span class="ln">1.4</span> Negative numbers</a></li>
+<li><a class="snav-lesson" href="unit-01-5.html"><span class="ln">1.5</span> Expressions vs. equations; evaluating expressions</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-02.html">Unit 2. Solving Linear Equations</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-02-1.html"><span class="ln">2.1</span> Inverse operations &amp; one-step equations</a></li>
+<li><a class="snav-lesson" href="unit-02-2.html"><span class="ln">2.2</span> Two-step equations</a></li>
+<li><a class="snav-lesson" href="unit-02-3.html"><span class="ln">2.3</span> Combining like terms &amp; the distributive property</a></li>
+<li><a class="snav-lesson" href="unit-02-4.html"><span class="ln">2.4</span> Variables on both sides</a></li>
+<li><a class="snav-lesson" href="unit-02-5.html"><span class="ln">2.5</span> Equations with fractions (with two Fraction Refreshers)</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-03.html">Unit 3. Proportional Reasoning (the bridge to linearity)</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-03-1.html"><span class="ln">3.1</span> Ratios and rates</a></li>
+<li><a class="snav-lesson" href="unit-03-2.html"><span class="ln">3.2</span> Proportions &amp; cross-multiplication</a></li>
+<li><a class="snav-lesson" href="unit-03-3.html"><span class="ln">3.3</span> Percents</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-04.html">Unit 4. Introducing Functions</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-04-1.html"><span class="ln">4.1</span> What is a function</a></li>
+<li><a class="snav-lesson" href="unit-04-2.html"><span class="ln">4.2</span> Function notation f(x), domain &amp; range</a></li>
+<li><a class="snav-lesson" href="unit-04-3.html"><span class="ln">4.3</span> Multiple representations; linear vs. nonlinear</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-05.html">Unit 5. Linear Functions &amp; Their Graphs</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-05-1.html"><span class="ln">5.1</span> The coordinate plane</a></li>
+<li><a class="snav-lesson" href="unit-05-2.html"><span class="ln">5.2</span> Graphing linear equations from a table</a></li>
+<li><a class="snav-lesson" href="unit-05-3.html"><span class="ln">5.3</span> Slope</a></li>
+<li><a class="snav-lesson" href="unit-05-4.html"><span class="ln">5.4</span> Slope-intercept form y = mx + b</a></li>
+<li><a class="snav-lesson" href="unit-05-5.html"><span class="ln">5.5</span> Writing equations of lines</a></li>
+<li><a class="snav-lesson" href="unit-05-6.html"><span class="ln">5.6</span> x-intercepts, graphing by intercepts &amp; standard form</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-06.html">Unit 6. Modeling &amp; Translation</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-06-1.html"><span class="ln">6.1</span> Translating words into expressions and equations</a></li>
+<li><a class="snav-lesson" href="unit-06-2.html"><span class="ln">6.2</span> Classic word problems (number, age, distance, value &amp; relationship)</a></li>
+<li><a class="snav-lesson" href="unit-06-3.html"><span class="ln">6.3</span> Scatter plots &amp; line of best fit (a first taste of data)</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-07.html">Unit 7. Systems of Equations</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-07-1.html"><span class="ln">7.1</span> Solving by graphing</a></li>
+<li><a class="snav-lesson" href="unit-07-2.html"><span class="ln">7.2</span> Substitution</a></li>
+<li><a class="snav-lesson" href="unit-07-3.html"><span class="ln">7.3</span> Elimination</a></li>
+<li><a class="snav-lesson" href="unit-07-4.html"><span class="ln">7.4</span> Special cases &amp; applications</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-08.html">Unit 8. Inequalities</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-08-1.html"><span class="ln">8.1</span> One-variable inequalities</a></li>
+<li><a class="snav-lesson" href="unit-08-2.html"><span class="ln">8.2</span> Compound inequalities</a></li>
+<li><a class="snav-lesson" href="unit-08-3.html"><span class="ln">8.3</span> Absolute value: graphs &amp; distance</a></li>
+<li><a class="snav-lesson" href="unit-08-4.html"><span class="ln">8.4</span> Graphing linear inequalities (two variables) &amp; systems</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-09.html">Unit 9. Sequences &amp; Exponential Functions</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-09-1.html"><span class="ln">9.1</span> Arithmetic &amp; geometric sequences as functions</a></li>
+<li><a class="snav-lesson" href="unit-09-2.html"><span class="ln">9.2</span> Exponential growth &amp; decay; linear vs. exponential</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-10.html">Unit 10. Exponents &amp; Polynomials</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-10-1.html"><span class="ln">10.1</span> Exponent rules (including zero &amp; negative exponents)</a></li>
+<li><a class="snav-lesson" href="unit-10-2.html"><span class="ln">10.2</span> Scientific notation</a></li>
+<li><a class="snav-lesson" href="unit-10-3.html"><span class="ln">10.3</span> Polynomials — terms, degree, standard form; add &amp; subtract</a></li>
+<li><a class="snav-lesson" href="unit-10-4.html"><span class="ln">10.4</span> Multiplying polynomials</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-11.html">Unit 11. Factoring</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-11-1.html"><span class="ln">11.1</span> Greatest common factor (GCF)</a></li>
+<li><a class="snav-lesson" href="unit-11-2.html"><span class="ln">11.2</span> Factoring trinomials x²+bx+c</a></li>
+<li><a class="snav-lesson" href="unit-11-3.html"><span class="ln">11.3</span> Special patterns</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-12.html">Unit 12. Quadratic Functions &amp; Equations (the capstone)</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-12-1.html"><span class="ln">12.1</span> Square roots &amp; simplifying radicals</a></li>
+<li><a class="snav-lesson" href="unit-12-2.html"><span class="ln">12.2</span> The simplest quadratics (x²=9 → two solutions)</a></li>
+<li><a class="snav-lesson" href="unit-12-3.html"><span class="ln">12.3</span> Solving by factoring (zero-product property)</a></li>
+<li><a class="snav-lesson" href="unit-12-4.html"><span class="ln">12.4</span> Completing the square</a></li>
+<li><a class="snav-lesson" href="unit-12-5.html"><span class="ln">12.5</span> The quadratic formula &amp; the discriminant</a></li>
+<li><a class="snav-lesson" href="unit-12-6.html"><span class="ln">12.6</span> Graphing parabolas</a></li>
+</ol>
+</li>
+<li class="active">
+<a class="snav-unit" href="appendix.html">Appendix. Data &amp; Statistics</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="appendix-1.html"><span class="ln">A.1</span> One-variable statistics — center &amp; spread</a></li>
+<li><a class="snav-lesson" href="appendix-2.html"><span class="ln">A.2</span> Two-variable data — line of best fit, correlation vs. causation</a></li>
+<li><a class="snav-lesson cur" href="appendix-3.html"><span class="ln">A.3</span> Two-way tables</a></li>
+</ol>
+</li>
+</ol></nav>
+</aside>
+<div class="content">
+<main>
+<div class="kicker">Appendix · Lesson A.3</div><h1>Two-way tables</h1>
+
+
+<p>Some data isn't a number at all; it's a label. "Owns a pet?" is yes or no; "lives in an apartment or a house?" is one or the other. Data sorted into groups like this is <strong>categorical</strong>, and when you have two such labels for each person, a <strong>two-way table</strong> is the clean way to see how they interact.</p>
+<p>Picture a survey of 50 people, each answering both questions. Every person falls into one of four buckets: pet-and-apartment, pet-and-house, no-pet-and-apartment, no-pet-and-house. A two-way table is just a grid with one bucket per inner cell.</p>
+<p>Lay it out as a grid with the totals written along the edges, and a useful check comes for free: the row totals and the column totals both have to add up to the same grand total. If they don't, a cell got misread.</p>
+<p>Reading the table is two moves. A <strong>count</strong> you read straight off a cell: how many people are in that bucket. A <strong>relative frequency</strong> turns a count into a fraction or percent of some total. The one thing to get right is <em>which</em> total you divide by, because that changes with the question. "What share of everyone owns a pet?" divides by the grand total. "Of the apartment dwellers, what share owns a pet?" divides by the apartment column's total, a rate <em>within one group</em>. Same cell sometimes, different denominator, different question.</p>
+<p>That second kind, a rate within one group, is a <strong>conditional relative frequency</strong>, and it's the one that answers the real question a two-way table is for: <em>does one category go with the other?</em> You answer it by comparing the conditional rate across groups. If apartment dwellers own pets at a clearly different rate than house dwellers do, then where you live and owning a pet are <strong>associated</strong>. If the two rates come out about equal, there's little or no association. That's the same idea as the positive/negative association from the scatter plots in A.2, now told with counts instead of dots.</p>
+<div class="cl-terms">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6.5C9.5 5 6 5 3.5 6.5V18C6 16.5 9.5 16.5 12 18C14.5 16.5 18 16.5 20.5 18V6.5C18 5 14.5 5 12 6.5Z"/><path d="M12 6.5V18"/></svg>New words</span></p>
+<ul>
+<li><a class="refcode" id="A.3.d1" href="#A.3.d1">A.3.d1</a> <strong>Categorical data:</strong> data sorted into <strong>groups/labels</strong> (yes/no, apartment/house), not measured numbers.</li>
+<li><a class="refcode" id="A.3.d2" href="#A.3.d2">A.3.d2</a> <strong>Two-way table:</strong> a grid with one category across the <strong>rows</strong> and another across the <strong>columns</strong>; each inner cell holds a <strong>count</strong>.</li>
+<li><a class="refcode" id="A.3.d3" href="#A.3.d3">A.3.d3</a> <strong>Row total / column total (marginals):</strong> the sum across a row or down a column. The corner <strong>grand total</strong> is everyone.</li>
+<li><a class="refcode" id="A.3.d4" href="#A.3.d4">A.3.d4</a> <strong>Relative frequency:</strong> a count expressed as a <strong>fraction or percent of a total</strong>, count/total. Which total you divide by depends on the question:</li>
+<li><strong>Joint relative frequency:</strong> a single cell over the <strong>grand total</strong> (e.g. "owns a pet <em>and</em> lives in an apartment, out of everyone").</li>
+<li><strong>Conditional relative frequency:</strong> a cell over its <strong>row or column total</strong>, i.e. a rate <em>within one group</em> (e.g. "of the apartment dwellers, the share who own a pet"). These are the ones you compare to detect association.</li>
+<li><a class="refcode" id="A.3.d5" href="#A.3.d5">A.3.d5</a> <strong>Association (for two categories):</strong> two categorical variables are <strong>associated</strong> when a <strong>conditional relative frequency differs across groups</strong>. For example, if the pet-ownership rate among apartment dwellers is clearly different from the rate among house dwellers, then <em>where you live</em> and <em>owning a pet</em> are associated. If those rates are about equal, there's little or no association. (This is the categorical-data echo of A.2's positive/negative association for scatter plots.)</li>
+</ul>
+<p>Here's the survey laid out, with 50 people sorted by whether they own a pet (rows) and whether they live in an apartment (columns):</p>
+<p>$$\begin{array}{c|c|c|c}
+ &amp; \text{Apartment} &amp; \text{House} &amp; \textbf{Total} \\ \hline
+\text{Pet: Yes} &amp; 6 &amp; 24 &amp; \mathbf{30} \\ \hline
+\text{Pet: No} &amp; 14 &amp; 6 &amp; \mathbf{20} \\ \hline
+\textbf{Total} &amp; \mathbf{20} &amp; \mathbf{30} &amp; \mathbf{50}
+\end{array}$$</p>
+<p>Read the single worked example below slowly. It walks every move on this one table, from totals to the association question.</p>
+</div>
+<section class="worked">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19.5V15L15.5 4.5 19.5 8.5 9 19Z"/><path d="M13.5 6.5 17.5 10.5"/></svg>Worked example</span></p>
+<p>Working the pet/apartment table above. The <strong>row totals</strong> add across: Pet-Yes is 6+24 = 30, and Pet-No is 14+6 = 20. The <strong>column totals</strong> add down: Apartment is 6+14 = 20, and House is 24+6 = 30. The <strong>grand total</strong> is 30+20 = 50, and the columns check it: 20+30 = 50 as well.</p>
+<p>To <strong>read a count</strong>, go straight to a cell: the people who own a pet <em>and</em> live in an apartment number 6, the top-left cell. For a <strong>joint relative frequency</strong> (a share of everyone), the fraction who own a pet is 30/50 = 3/5 = 60%. For a <strong>conditional relative frequency</strong> (a rate within one group), of the 20 apartment dwellers, the fraction who own a pet is 6/20 = 3/10 = 30%. Notice that the total you divide by changed with the question: the grand total 50 for "of everyone," the column total 20 for "of the apartment dwellers."</p>
+<p>Now the question the table is really for: does owning a pet go with where you live? Compare the two conditional rates. Among apartment dwellers, the pet rate is 6/20 = 3/10 = <strong>30%</strong>. Among house dwellers, it's 24/30 = 4/5 = <strong>80%</strong>. Those are very different, 30% against 80%, so owning a pet and where you live <strong>are associated</strong>: house dwellers are far more likely to own a pet. (Each group also sits well off the overall 60%, which is another sign they differ.)</p>
+<p>If both groups had instead landed near 60%, the rates would be about equal and we'd say there's little or no association. Comparing the rates across rows or columns like this is exactly how a two-way table reveals association, the categorical cousin of A.2's positive/negative association.</p>
+<p>The most common slip here is the denominator: when the question says "of the apartment dwellers," divide by that group's total, not the grand total. The phrase "out of <em>which</em> group?" points you to the right denominator every time.</p>
+<p>Reading "and" is its own question: "owns a pet <em>and</em> lives in an apartment" is a single cell over the grand total, a joint rate, while "of apartment dwellers, owns a pet" is that cell over the column total, a conditional rate. Different denominators, different questions.</p>
+<p>And one note on the association itself: a single conditional rate tells you nothing on its own. "30% of apartment dwellers own pets" isn't high or low until you have the other group to compare it to. Association is about whether the rate <em>differs</em> between groups, so always compute <em>both</em> rates and put them side by side. (Turning these fractions into percents is the Unit 3 move: 3/5 = 0.6 = 60%.)</p>
+</section>
+<div class="cl-check">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M9.6 9.6a2.6 2.6 0 1 1 3.3 2.5c-.9.3-1.4.9-1.4 1.8"/><circle cx="11.5" cy="16.6" r=".9" fill="currentColor" stroke="none"/></svg>Check yourself</span></p>
+<ol>
+<li><a class="refcode" id="A.3.c1" href="#A.3.c1">A.3.c1</a> Using the table, what fraction of <strong>house</strong> dwellers own a pet? Which total did you divide by, and why? (24/30 = 4/5 = 80%. Divide by the House column total, 30, because the question asks "of the house dwellers"; that group is the denominator.)</li>
+<li><a class="refcode" id="A.3.c2" href="#A.3.c2">A.3.c2</a> If you were told the four inner counts but no totals, how would you find the grand total two different ways, and what does it mean if they disagree? (Add the row totals, or add the column totals; both should give the same grand total. If they disagree, a cell was misread or miscounted.)</li>
+<li><a class="refcode" id="A.3.c3" href="#A.3.c3">A.3.c3</a> What's the difference between "owns a pet <em>and</em> lives in a house" (a joint relative frequency) and "of house dwellers, the share who own a pet" (a conditional one)? (The joint rate divides that cell by the grand total, a share of everyone. The conditional rate divides it by the House column total, a share within just the house dwellers. Same cell, different denominator.)</li>
+<li><a class="refcode" id="A.3.c4" href="#A.3.c4">A.3.c4</a> The apartment dwellers own pets 30% of the time and the house dwellers 80% of the time. From comparing those two rates, are <em>owning a pet</em> and <em>where you live</em> associated? How would the rates look if they were <strong>not</strong> associated? (Yes. 30% versus 80% is a big difference, so they're associated. If they weren't, the two rates would be about equal.)</li>
+</ol>
+<p>You can now build and read a two-way table, turn its counts into joint and conditional rates with the right denominator, and compare conditional rates across groups to decide whether two categories are associated.</p>
+<p>Mixed practice feels harder, and that's the point. Every problem has its answer at the end of the lesson, and the worked example above is the one to flip back to if a step stalls you.</p>
+<p><strong>Practice problems</strong>. Use this table of 50 students, <em>plays a sport</em> (rows) × <em>wears glasses</em> (columns):</p>
+<p>$$\begin{array}{c|c|c|c}
+ &amp; \text{Glasses} &amp; \text{No Glasses} &amp; \textbf{Total} \\ \hline
+\text{Sport: Yes} &amp; 14 &amp; 6 &amp; ? \\ \hline
+\text{Sport: No} &amp; 6 &amp; 24 &amp; ? \\ \hline
+\textbf{Total} &amp; ? &amp; ? &amp; ?
+\end{array}$$</p>
+<ol>
+<li><a class="refcode" id="A.3.1" href="#A.3.1">A.3.1</a> Find the row total for <strong>Sport: Yes</strong>.</li>
+<li><a class="refcode" id="A.3.2" href="#A.3.2">A.3.2</a> Find the column total for <strong>Glasses</strong>.</li>
+<li><a class="refcode" id="A.3.3" href="#A.3.3">A.3.3</a> Find the <strong>grand total</strong>.</li>
+<li><a class="refcode" id="A.3.4" href="#A.3.4">A.3.4</a> How many students <strong>play a sport and wear glasses</strong>?</li>
+<li><a class="refcode" id="A.3.5" href="#A.3.5">A.3.5</a> What percent of <strong>all</strong> students wear glasses?</li>
+<li><a class="refcode" id="A.3.6" href="#A.3.6">A.3.6</a> Of the students who <strong>wear glasses</strong>, what percent <strong>play a sport</strong>? (a conditional relative frequency)</li>
+<li><a class="refcode" id="A.3.7" href="#A.3.7">A.3.7</a> Of the students who <strong>don't wear glasses</strong>, what percent <strong>play a sport</strong>? Compare this with your answer to #6. Are <strong>playing a sport</strong> and <strong>wearing glasses</strong> associated? Explain.</li>
+</ol>
+</div>
+<details class="answers">
+<summary><span class="tw"></span><span class="eyebrow">Answers</span><span class="hint">Try each one yourself first, then open to check.</span></summary>
+<div class="ak-body">
+<ol>
+<li>14+6=20</li>
+<li>14+6=20</li>
+<li>50 — add the row totals (20+30) or the column totals (20+30); both give 50.</li>
+<li>14 (top-left cell)</li>
+<li>20/50=2/5=40%</li>
+<li>14/20=7/10=70%</li>
+<li>6/30=1/5=20%. The two conditional rates are <strong>far apart — 70% (glasses) vs. 20% (no glasses)</strong> — so <strong>yes, playing a sport and wearing glasses are associated</strong> here (sport-players are much more likely to wear glasses). If the two rates had been about equal, there'd be little or no association.</li>
+</ol>
+</div>
+</details>
+<div class="ldiv" aria-hidden="true"><i></i><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3.5 20.5 12 12 20.5 3.5 12Z"/></svg><i></i></div>
+<p>You've now got a small statistics toolkit. For one variable, you can find the center and spread of a list and spot an outlier pulling on the mean (A.1). For two number variables, you can read a scatter plot, check its form before fitting a line, use a best-fit line to predict, read a correlation by eye, and keep correlation apart from causation (A.2). For categorical data, you can build a two-way table, turn counts into relative frequencies, and compare conditional rates to detect association (A.3).</p>
+<p>The thread tying it to the rest of the course is A.2's punchline: a line of best fit is just f(x) = mx + b from Unit 5, fit to messy data and used to predict, once you've checked a line is the right shape for the cloud. And "association" turned up twice, as the lean of a scatter and as conditional rates differing across groups.</p>
+<nav class="pagenav" aria-label="Previous and next page">
+<a class="pn-prev" href="appendix-2.html"><span class="pn-dir">&larr;&nbsp;Back</span><span class="pn-title">Lesson A.2</span></a>
+</nav>
+</main>
+<footer><p>A friendly Algebra 1 textbook, made to be read alongside the Claude tutor. Math by KaTeX.</p></footer>
+</div>
+</div>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  renderMathInElement(document.body, {delimiters: [{left: "$$", right: "$$", display: true}], throwOnError: false});
+  var root = document.documentElement, body = document.body;
+  document.getElementById("theme").addEventListener("click", function () {
+    root.classList.toggle("dark");
+    localStorage.setItem("a1-theme", root.classList.contains("dark") ? "dark" : "light");
+  });
+  var menu = document.getElementById("menu");
+  menu.addEventListener("click", function () {
+    var open = body.classList.toggle("nav-open");
+    menu.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+  var sn = document.getElementById("sidenav");
+  if (sn) sn.addEventListener("click", function (e) { if (e.target.closest("a")) body.classList.remove("nav-open"); });
+});
+</script>
+</body>
+</html>

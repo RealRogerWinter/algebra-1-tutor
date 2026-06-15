@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Special cases &amp; applications — Algebra 1</title>
+<script>try{if(localStorage.getItem("a1-theme")==="dark")document.documentElement.classList.add("dark");}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..40,500..600&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="textbook.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous">
+</head>
+<body data-surface="textbook">
+<header class="topbar">
+  <button id="menu" class="menu" type="button" aria-label="Open or close the contents menu" aria-expanded="false">☰&nbsp;Contents</button>
+  <a class="home" href="index.html">Algebra&nbsp;1</a>
+  <span class="sp"></span>
+  <button id="theme" type="button" aria-label="Toggle light or dark theme">◐&nbsp;Theme</button>
+</header>
+<div class="shell">
+<aside class="sidenav" id="sidenav">
+<nav class="snav" aria-label="Contents">
+<a class="snav-top" href="how-to-use.html">How to use this book</a>
+<a class="snav-top" href="index.html">All units</a>
+<ol class="snav-units">
+<li class="">
+<a class="snav-unit" href="unit-01.html">Unit 1. Foundations &amp; the Language of Algebra</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-01-1.html"><span class="ln">1.1</span> Variables and the meaning of equations</a></li>
+<li><a class="snav-lesson" href="unit-01-2.html"><span class="ln">1.2</span> The number system &amp; the number line</a></li>
+<li><a class="snav-lesson" href="unit-01-3.html"><span class="ln">1.3</span> Order of operations</a></li>
+<li><a class="snav-lesson" href="unit-01-4.html"><span class="ln">1.4</span> Negative numbers</a></li>
+<li><a class="snav-lesson" href="unit-01-5.html"><span class="ln">1.5</span> Expressions vs. equations; evaluating expressions</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-02.html">Unit 2. Solving Linear Equations</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-02-1.html"><span class="ln">2.1</span> Inverse operations &amp; one-step equations</a></li>
+<li><a class="snav-lesson" href="unit-02-2.html"><span class="ln">2.2</span> Two-step equations</a></li>
+<li><a class="snav-lesson" href="unit-02-3.html"><span class="ln">2.3</span> Combining like terms &amp; the distributive property</a></li>
+<li><a class="snav-lesson" href="unit-02-4.html"><span class="ln">2.4</span> Variables on both sides</a></li>
+<li><a class="snav-lesson" href="unit-02-5.html"><span class="ln">2.5</span> Equations with fractions (with two Fraction Refreshers)</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-03.html">Unit 3. Proportional Reasoning (the bridge to linearity)</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-03-1.html"><span class="ln">3.1</span> Ratios and rates</a></li>
+<li><a class="snav-lesson" href="unit-03-2.html"><span class="ln">3.2</span> Proportions &amp; cross-multiplication</a></li>
+<li><a class="snav-lesson" href="unit-03-3.html"><span class="ln">3.3</span> Percents</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-04.html">Unit 4. Introducing Functions</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-04-1.html"><span class="ln">4.1</span> What is a function</a></li>
+<li><a class="snav-lesson" href="unit-04-2.html"><span class="ln">4.2</span> Function notation f(x), domain &amp; range</a></li>
+<li><a class="snav-lesson" href="unit-04-3.html"><span class="ln">4.3</span> Multiple representations; linear vs. nonlinear</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-05.html">Unit 5. Linear Functions &amp; Their Graphs</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-05-1.html"><span class="ln">5.1</span> The coordinate plane</a></li>
+<li><a class="snav-lesson" href="unit-05-2.html"><span class="ln">5.2</span> Graphing linear equations from a table</a></li>
+<li><a class="snav-lesson" href="unit-05-3.html"><span class="ln">5.3</span> Slope</a></li>
+<li><a class="snav-lesson" href="unit-05-4.html"><span class="ln">5.4</span> Slope-intercept form y = mx + b</a></li>
+<li><a class="snav-lesson" href="unit-05-5.html"><span class="ln">5.5</span> Writing equations of lines</a></li>
+<li><a class="snav-lesson" href="unit-05-6.html"><span class="ln">5.6</span> x-intercepts, graphing by intercepts &amp; standard form</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-06.html">Unit 6. Modeling &amp; Translation</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-06-1.html"><span class="ln">6.1</span> Translating words into expressions and equations</a></li>
+<li><a class="snav-lesson" href="unit-06-2.html"><span class="ln">6.2</span> Classic word problems (number, age, distance, value &amp; relationship)</a></li>
+<li><a class="snav-lesson" href="unit-06-3.html"><span class="ln">6.3</span> Scatter plots &amp; line of best fit (a first taste of data)</a></li>
+</ol>
+</li>
+<li class="active">
+<a class="snav-unit" href="unit-07.html">Unit 7. Systems of Equations</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-07-1.html"><span class="ln">7.1</span> Solving by graphing</a></li>
+<li><a class="snav-lesson" href="unit-07-2.html"><span class="ln">7.2</span> Substitution</a></li>
+<li><a class="snav-lesson" href="unit-07-3.html"><span class="ln">7.3</span> Elimination</a></li>
+<li><a class="snav-lesson cur" href="unit-07-4.html"><span class="ln">7.4</span> Special cases &amp; applications</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-08.html">Unit 8. Inequalities</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-08-1.html"><span class="ln">8.1</span> One-variable inequalities</a></li>
+<li><a class="snav-lesson" href="unit-08-2.html"><span class="ln">8.2</span> Compound inequalities</a></li>
+<li><a class="snav-lesson" href="unit-08-3.html"><span class="ln">8.3</span> Absolute value: graphs &amp; distance</a></li>
+<li><a class="snav-lesson" href="unit-08-4.html"><span class="ln">8.4</span> Graphing linear inequalities (two variables) &amp; systems</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-09.html">Unit 9. Sequences &amp; Exponential Functions</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-09-1.html"><span class="ln">9.1</span> Arithmetic &amp; geometric sequences as functions</a></li>
+<li><a class="snav-lesson" href="unit-09-2.html"><span class="ln">9.2</span> Exponential growth &amp; decay; linear vs. exponential</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-10.html">Unit 10. Exponents &amp; Polynomials</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-10-1.html"><span class="ln">10.1</span> Exponent rules (including zero &amp; negative exponents)</a></li>
+<li><a class="snav-lesson" href="unit-10-2.html"><span class="ln">10.2</span> Scientific notation</a></li>
+<li><a class="snav-lesson" href="unit-10-3.html"><span class="ln">10.3</span> Polynomials — terms, degree, standard form; add &amp; subtract</a></li>
+<li><a class="snav-lesson" href="unit-10-4.html"><span class="ln">10.4</span> Multiplying polynomials</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-11.html">Unit 11. Factoring</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-11-1.html"><span class="ln">11.1</span> Greatest common factor (GCF)</a></li>
+<li><a class="snav-lesson" href="unit-11-2.html"><span class="ln">11.2</span> Factoring trinomials x²+bx+c</a></li>
+<li><a class="snav-lesson" href="unit-11-3.html"><span class="ln">11.3</span> Special patterns</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-12.html">Unit 12. Quadratic Functions &amp; Equations (the capstone)</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-12-1.html"><span class="ln">12.1</span> Square roots &amp; simplifying radicals</a></li>
+<li><a class="snav-lesson" href="unit-12-2.html"><span class="ln">12.2</span> The simplest quadratics (x²=9 → two solutions)</a></li>
+<li><a class="snav-lesson" href="unit-12-3.html"><span class="ln">12.3</span> Solving by factoring (zero-product property)</a></li>
+<li><a class="snav-lesson" href="unit-12-4.html"><span class="ln">12.4</span> Completing the square</a></li>
+<li><a class="snav-lesson" href="unit-12-5.html"><span class="ln">12.5</span> The quadratic formula &amp; the discriminant</a></li>
+<li><a class="snav-lesson" href="unit-12-6.html"><span class="ln">12.6</span> Graphing parabolas</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="appendix.html">Appendix. Data &amp; Statistics</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="appendix-1.html"><span class="ln">A.1</span> One-variable statistics — center &amp; spread</a></li>
+<li><a class="snav-lesson" href="appendix-2.html"><span class="ln">A.2</span> Two-variable data — line of best fit, correlation vs. causation</a></li>
+<li><a class="snav-lesson" href="appendix-3.html"><span class="ln">A.3</span> Two-way tables</a></li>
+</ol>
+</li>
+</ol></nav>
+</aside>
+<div class="content">
+<main>
+<div class="kicker">Unit 7 · Lesson 7.4</div><h1>Special cases &amp; applications</h1>
+
+
+<p>Two lines usually cross at one point, but not always. Lay any two lines on a plane and exactly one of three things happens: they cross once, they run parallel and never meet, or they sit right on top of each other. This lesson handles the two unusual cases, and then puts the whole toolkit to work on word problems, which are the real reason systems are worth learning.</p>
+<p>The three outcomes are easiest to hold as one picture, tied to the slopes you know from Unit 5. Different slopes, and the lines tilt differently, so they have to cross somewhere: that's one solution. Same slope but different intercepts, and they march along parallel forever, never touching: that's no solution. Same slope <em>and</em> same intercept, and they're secretly the same line drawn twice, so every point on it works: that's infinitely many solutions.</p>
+<table>
+<thead>
+<tr>
+<th>The two lines…</th>
+<th>How many solutions</th>
+<th>What the algebra leaves</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>cross once</strong> (different slopes)</td>
+<td><strong>one</strong> solution, the (x, y) where they meet</td>
+<td>a normal value, e.g. x = 4</td>
+</tr>
+<tr>
+<td><strong>are parallel</strong> (same slope, different intercept)</td>
+<td><strong>no solution</strong>, they never meet</td>
+<td>a <strong>false</strong> statement, e.g. 0 = 5</td>
+</tr>
+<tr>
+<td><strong>are the same line</strong> (identical after simplifying)</td>
+<td><strong>infinitely many</strong>, every point on the line works</td>
+<td>an always-<strong>true</strong> statement, e.g. 0 = 0</td>
+</tr>
+</tbody>
+</table>
+<p>One thing about these cases surprises people the first time. When you solve a normal system, the variables stay around long enough to give you a value. But in these two special cases, the variables all vanish partway through, and what's left over is the signal that tells you which case you're in.</p>
+<p>If the leftover statement is <strong>false</strong>, like 0 = 5, no numbers can ever make it true, so there's <strong>no solution</strong>: that's the parallel case. If the leftover is always <strong>true</strong>, like 0 = 0, then every point already works, so there are <strong>infinitely many</strong>: that's the same-line case. So when the x's and y's disappear, don't panic; read the statement they leave behind.</p>
+<p><strong>New terms / the three outcomes:</strong> every pair of lines does exactly one of three things, summarized in the table above.</p>
+<ul>
+<li><strong>No solution:</strong> the parallel-lines case. Whatever method you use, the variables vanish and you're left with something <strong>false</strong> (like 0 = 5). Nothing can make it true, so nothing solves the system.</li>
+<li><strong>Infinitely many solutions:</strong> the same-line case (one equation is just a multiple of the other). The variables vanish and you're left with something always <strong>true</strong> (like 0 = 0). Every point on the shared line works.</li>
+</ul>
+<p>For the word problems in the second half, the move is the one from Unit 6, now done twice: name your two unknowns, turn the two facts in the story into two equations, solve by whichever method fits, and check your answer against the <em>story</em>, not just the algebra. A useful habit when you write the two equations is to keep them on different units: one equation counting <em>how many</em> of something, the other counting <em>dollars</em> or <em>amount</em>. That keeps you from accidentally writing the same fact twice.</p>
+<section class="worked">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19.5V15L15.5 4.5 19.5 8.5 9 19Z"/><path d="M13.5 6.5 17.5 10.5"/></svg>Worked example</span></p>
+<p><em>Example 1, no solution (parallel).</em> Solve y = 2x + 1 and y = 2x − 3.
+Both have y alone, so substitute the first into the second: 2x + 1 = 2x − 3. Now subtract 2x from both sides, and the x's vanish: 1 = −3. That's <strong>false</strong>. No number anywhere makes 1 equal −3. So there's <strong>no solution.</strong> And it lines up with the picture: both lines have slope 2 but different intercepts, so they're parallel and never meet.</p>
+<p><em>Example 2, no solution in standard form.</em> Solve 2x − y = 3 and 4x − 2y = 1.
+Scale the first equation by 2 to match the second's x-term: 2(2x − y) = 2(3) gives 4x − 2y = 6. Now subtract the second equation from it: (4x − 2y) − (4x − 2y) = 6 − 1. The whole left side goes to zero, leaving 0 = 5, which is <strong>false</strong>. So <strong>no solution.</strong> (The two lines are parallel; the scaling just made it visible.)</p>
+<p><em>Example 3, infinitely many (same line).</em> Solve x + y = 4 and 2x + 2y = 8.
+Look closely: the second equation is just the first one times 2. To confirm with the algebra, scale the first by 2 to get 2x + 2y = 8, then subtract the second: 0 = 0, always <strong>true</strong>. The two equations are the very same line, so there are <strong>infinitely many solutions</strong>. Every point on x + y = 4 works, such as (0, 4), (1, 3), and (4, 0). "Infinitely many" isn't a vague shrug, though; it's a precise set: it's <em>all</em> the pairs (x, y) with x + y = 4. Describing it in those plain words is enough.</p>
+<p>A warning right where these two cases get mixed up: it's easy to call 0 = 0 "no solution" and 0 = 5 "infinitely many," because both feel like dead ends. They're backwards. A <strong>true</strong> leftover means <em>everything</em> works, so infinitely many; a <strong>false</strong> leftover means <em>nothing</em> works, so none. Anchor it on the meaning: true says yes to every point, false says yes to no point.</p>
+<p><em>Example 4, an application with tickets.</em> A theater sells adult tickets at $8 and child tickets at $5. One night it sold <strong>200 tickets</strong> for <strong>$1300</strong> total. How many of each?
+Start by naming the unknowns and turning each fact into an equation. Let a = adult tickets and c = child tickets. One fact counts tickets, the other counts dollars:
+$$a + c = 200 \qquad 8a + 5c = 1300.$$
+Substitution is clean here. From the first equation, c = 200 − a. Pour that into the second: 8a + 5(200 − a) = 1300. Distribute the 5 to both terms inside: 8a + 1000 − 5a = 1300. Combine the a's: 3a + 1000 = 1300, so 3a = 300 and a = 100. Partner: c = 200 − 100 = 100. Now check against the story: 100 + 100 = 200 tickets, and 8(100) + 5(100) = 800 + 500 = 1300 dollars. Both fit, so it's <strong>100 adult, 100 child.</strong></p>
+<p><em>Example 5, an application with coins, less symmetric.</em> A jar has <strong>15 coins</strong>, all quarters and dimes, worth <strong>$2.70</strong> (270 cents). How many of each?
+Let q = quarters and d = dimes. One equation counts coins, the other counts cents (a quarter is 25 cents, a dime is 10):
+$$q + d = 15 \qquad 25q + 10d = 270.$$
+Elimination fits well. Scale the first equation by 10 so the d-terms match: 10q + 10d = 150. Subtract that from the second: (25q + 10d) − (10q + 10d) = 270 − 150, so the d's go to zero and 15q = 120, giving q = 8. Partner: d = 15 − 8 = 7. Check the story: 8 + 7 = 15 coins, and 25(8) + 10(7) = 200 + 70 = 270 cents. Both fit, so it's <strong>8 quarters, 7 dimes.</strong></p>
+<p><em>Example 6, an application with a mixture.</em> How many liters of a <strong>20%</strong> salt solution and a <strong>50%</strong> salt solution should you mix to make <strong>30 liters</strong> of a <strong>30%</strong> solution?
+Let x = liters of the 20% solution and y = liters of the 50% solution. One equation counts liters of liquid, the other counts liters of actual salt. The target, 30 L at 30%, holds 0.30 · 30 = 9 L of salt:
+$$x + y = 30 \qquad 0.20x + 0.50y = 9.$$
+Decimals are easier to handle cleared, so multiply the salt equation by 10: 2x + 5y = 90. Then scale the liter equation by 2: 2x + 2y = 60. Subtract: (2x + 5y) − (2x + 2y) = 90 − 60, the x's go to zero, and 3y = 30, so y = 10. Partner: x = 30 − 10 = 20. Check the story: 20 + 10 = 30 liters, and the salt is 0.20(20) + 0.50(10) = 4 + 5 = 9 L, which is 30% of 30. Both fit: <strong>20 L of the 20% solution, 10 L of the 50%.</strong> (This is built like a coin problem: one equation counts the amount of liquid, one counts the active ingredient.)</p>
+<p><em>Example 7, an application with perimeter.</em> A rectangle's <strong>length is 4 more than its width</strong>, and its <strong>perimeter is 28</strong>. Find the length and width as a system.
+Let l = length and w = width. The two facts become two equations. Perimeter is the distance all the way around, which for a rectangle is twice the length plus twice the width:
+$$l = w + 4 \qquad 2l + 2w = 28.$$
+Length is already alone, so substitute l = w + 4 into the perimeter equation: 2(w + 4) + 2w = 28. Distribute the 2: 2w + 8 + 2w = 28. Combine: 4w + 8 = 28, so 4w = 20 and w = 5. Partner: l = 5 + 4 = 9. Check the story: length 9 is 4 more than width 5, and the perimeter is 2(9) + 2(5) = 18 + 10 = 28. Both fit: <strong>width 5, length 9.</strong></p>
+<p>One last thing about word-problem answers: check them against the <em>story</em>, not only the math. If a system hands you a negative number of tickets or half a coin, the algebra may be flawless but the setup slipped somewhere. That strange answer is a signal to look back at how you wrote the two equations.</p>
+</section>
+<div class="cl-check">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M9.6 9.6a2.6 2.6 0 1 1 3.3 2.5c-.9.3-1.4.9-1.4 1.8"/><circle cx="11.5" cy="16.6" r=".9" fill="currentColor" stroke="none"/></svg>Check yourself</span></p>
+<ol>
+<li><a class="refcode" id="7.4.c1" href="#7.4.c1">7.4.c1</a> "You solve a system and reach 7 = 7. How many solutions, and what do the graphs look like?" (Infinitely many. A leftover that's always true means every point already works, so the two equations are the same line, one drawn right on top of the other.)</li>
+<li><a class="refcode" id="7.4.c2" href="#7.4.c2">7.4.c2</a> "Two lines have the same slope. What two situations are still possible, and how does the algebra tell them apart?" (Either they're parallel with different intercepts, meaning no solution, and the algebra leaves a false statement like 0 = 5. Or they're the same line, meaning infinitely many, and the algebra leaves a true statement like 0 = 0. The leftover statement tells you which.)</li>
+<li><a class="refcode" id="7.4.c3" href="#7.4.c3">7.4.c3</a> "A problem says '30 nickels and dimes worth $2.40.' Name your two variables and write the two equations, but don't solve yet." (Let n = nickels and d = dimes. One equation counts coins, one counts cents: n + d = 30 and 5n + 10d = 240.)</li>
+</ol>
+</div>
+<section class="practice">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4.5" width="15.5" height="15.5" rx="2.5"/><path d="M7.5 10 9 11.5 12 8.5"/><path d="M14 10H16.5"/><path d="M7.5 15H16.5"/></svg>Practice</span></p>
+<p><em>Set A: classify (one solution / none / infinitely many); if one, give it</em></p>
+<ol>
+<li><a class="refcode" id="7.4.1" href="#7.4.1">7.4.1</a> y = 3x + 2 and y = 3x - 5</li>
+<li><a class="refcode" id="7.4.2" href="#7.4.2">7.4.2</a> x + y = 5 and 3x + 3y = 15</li>
+<li><a class="refcode" id="7.4.3" href="#7.4.3">7.4.3</a> y = x + 1 and y = -x + 7</li>
+</ol>
+<p><em>Set B: applications (set up two equations, solve, check the story)</em></p>
+<ol start="4">
+<li><a class="refcode" id="7.4.4" href="#7.4.4">7.4.4</a> Two numbers add to 30, and one is 6 more than the other. Find the numbers.</li>
+<li><a class="refcode" id="7.4.5" href="#7.4.5">7.4.5</a> A snack stand: 2 burgers and 1 fries cost $11; 1 burger and 2 fries cost $10. Find the price of a burger and of fries.</li>
+<li><a class="refcode" id="7.4.6" href="#7.4.6">7.4.6</a> A boat goes <strong>20 mph downstream</strong> (with the current) and <strong>4 mph upstream</strong> (against it). Find the boat's speed in still water and the speed of the current. (Hint: with the current the speeds add, against it they subtract.)</li>
+<li><a class="refcode" id="7.4.7" href="#7.4.7">7.4.7</a> <em>(mixture)</em> How many milliliters of a <strong>10%</strong> acid solution and a <strong>40%</strong> acid solution make <strong>40 mL</strong> of a <strong>25%</strong> solution?</li>
+<li><a class="refcode" id="7.4.8" href="#7.4.8">7.4.8</a> <em>(perimeter)</em> A rectangle's length is <strong>2 more than its width</strong> and its perimeter is <strong>24</strong>. Find the width and length.</li>
+</ol>
+</section>
+<details class="answers">
+<summary><span class="tw"></span><span class="eyebrow">Answers</span><span class="hint">Try each one yourself first, then open to check.</span></summary>
+<div class="ak-body">
+<ol>
+<li><strong>No solution</strong> — same slope 3, different intercepts (parallel); substituting gives 2 = -5, false.</li>
+<li><strong>Infinitely many</strong> — eq.2 is eq.1 times 3 (same line); reduces to 0 = 0.</li>
+<li><strong>One solution, (3, 4)</strong> — 4 = 3 + 1, 4 = -3 + 7.</li>
+<li>x + y = 30, x = y + 6 → (y + 6) + y = 30 ⇒ y = 12, x = 18. The numbers are <strong>18 and 12</strong> (18 + 12 = 30, 18 = 12 + 6).</li>
+<li>2b + f = 11, b + 2f = 10 → eliminate: scale eq.2 by 2 → 2b + 4f = 20, subtract eq.1 → 3f = 9, f = 3, then b = 4. <strong>Burger $4, fries $3</strong> (2(4)+3 = 11, 4 + 2(3) = 10).</li>
+<li>Let b = boat speed in still water, c = current. Downstream the speeds add, upstream they subtract: b + c = 20, b − c = 4 → add → 2b = 24, b = 12, then c = 8. <strong>Boat 12 mph, current 8 mph</strong> (12 + 8 = 20, 12 − 8 = 4).</li>
+<li>Let x = mL of 10%, y = mL of 40%; one equation counts mL, one counts acid (25% of 40 = 10 mL): x + y = 40, 0.10x + 0.40y = 10. Clear decimals (×10): x + 4y = 100; subtract x + y = 40 → 3y = 60 ⇒ y = 20, then x = 20. <strong>20 mL of each</strong> (20 + 20 = 40; 0.10(20) + 0.40(20) = 2 + 8 = 10 mL acid).</li>
+<li>Let l = length, w = width: l = w + 2, 2l + 2w = 24. Substitute → 2(w + 2) + 2w = 24 ⇒ 4w + 4 = 24 ⇒ w = 5, then l = 7. <strong>Width 5, length 7</strong> (perimeter 2(7) + 2(5) = 24, and 7 = 5 + 2).</li>
+</ol>
+</div>
+</details>
+<div class="ldiv" aria-hidden="true"><i></i><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3.5 20.5 12 12 20.5 3.5 12Z"/></svg><i></i></div>
+<p>You can now solve a system three ways and tell which fits.</p>
+<p>Graphing shows you what a solution means, the one point on both lines, but only reads clean whole-number crossings. Substitution is the short path when a variable is already alone: pour its expression into the other equation and you're down to one unknown. Elimination is the workhorse for equations in standard form: scale if you need to, then add for opposite coefficients or subtract for matching ones, so a variable goes to zero.</p>
+<p>When the variables all vanish, read what's left: a false statement means no solution (parallel lines), a true one means infinitely many (the same line). And whichever road you take, the answer is an ordered pair, confirmed by putting it back into both equations.</p>
+<nav class="pagenav" aria-label="Previous and next page">
+<a class="pn-prev" href="unit-07-3.html"><span class="pn-dir">&larr;&nbsp;Back</span><span class="pn-title">Lesson 7.3</span></a>
+<a class="pn-next" href="unit-08.html"><span class="pn-dir">Next&nbsp;&rarr;</span><span class="pn-title">Unit 8</span></a>
+</nav>
+</main>
+<footer><p>A friendly Algebra 1 textbook, made to be read alongside the Claude tutor. Math by KaTeX.</p></footer>
+</div>
+</div>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  renderMathInElement(document.body, {delimiters: [{left: "$$", right: "$$", display: true}], throwOnError: false});
+  var root = document.documentElement, body = document.body;
+  document.getElementById("theme").addEventListener("click", function () {
+    root.classList.toggle("dark");
+    localStorage.setItem("a1-theme", root.classList.contains("dark") ? "dark" : "light");
+  });
+  var menu = document.getElementById("menu");
+  menu.addEventListener("click", function () {
+    var open = body.classList.toggle("nav-open");
+    menu.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+  var sn = document.getElementById("sidenav");
+  if (sn) sn.addEventListener("click", function (e) { if (e.target.closest("a")) body.classList.remove("nav-open"); });
+});
+</script>
+</body>
+</html>

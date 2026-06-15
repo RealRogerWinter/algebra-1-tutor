@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Polynomials — terms, degree, standard form; add &amp; subtract — Algebra 1</title>
+<script>try{if(localStorage.getItem("a1-theme")==="dark")document.documentElement.classList.add("dark");}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..40,500..600&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="textbook.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous">
+</head>
+<body data-surface="textbook">
+<header class="topbar">
+  <button id="menu" class="menu" type="button" aria-label="Open or close the contents menu" aria-expanded="false">☰&nbsp;Contents</button>
+  <a class="home" href="index.html">Algebra&nbsp;1</a>
+  <span class="sp"></span>
+  <button id="theme" type="button" aria-label="Toggle light or dark theme">◐&nbsp;Theme</button>
+</header>
+<div class="shell">
+<aside class="sidenav" id="sidenav">
+<nav class="snav" aria-label="Contents">
+<a class="snav-top" href="how-to-use.html">How to use this book</a>
+<a class="snav-top" href="index.html">All units</a>
+<ol class="snav-units">
+<li class="">
+<a class="snav-unit" href="unit-01.html">Unit 1. Foundations &amp; the Language of Algebra</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-01-1.html"><span class="ln">1.1</span> Variables and the meaning of equations</a></li>
+<li><a class="snav-lesson" href="unit-01-2.html"><span class="ln">1.2</span> The number system &amp; the number line</a></li>
+<li><a class="snav-lesson" href="unit-01-3.html"><span class="ln">1.3</span> Order of operations</a></li>
+<li><a class="snav-lesson" href="unit-01-4.html"><span class="ln">1.4</span> Negative numbers</a></li>
+<li><a class="snav-lesson" href="unit-01-5.html"><span class="ln">1.5</span> Expressions vs. equations; evaluating expressions</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-02.html">Unit 2. Solving Linear Equations</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-02-1.html"><span class="ln">2.1</span> Inverse operations &amp; one-step equations</a></li>
+<li><a class="snav-lesson" href="unit-02-2.html"><span class="ln">2.2</span> Two-step equations</a></li>
+<li><a class="snav-lesson" href="unit-02-3.html"><span class="ln">2.3</span> Combining like terms &amp; the distributive property</a></li>
+<li><a class="snav-lesson" href="unit-02-4.html"><span class="ln">2.4</span> Variables on both sides</a></li>
+<li><a class="snav-lesson" href="unit-02-5.html"><span class="ln">2.5</span> Equations with fractions (with two Fraction Refreshers)</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-03.html">Unit 3. Proportional Reasoning (the bridge to linearity)</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-03-1.html"><span class="ln">3.1</span> Ratios and rates</a></li>
+<li><a class="snav-lesson" href="unit-03-2.html"><span class="ln">3.2</span> Proportions &amp; cross-multiplication</a></li>
+<li><a class="snav-lesson" href="unit-03-3.html"><span class="ln">3.3</span> Percents</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-04.html">Unit 4. Introducing Functions</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-04-1.html"><span class="ln">4.1</span> What is a function</a></li>
+<li><a class="snav-lesson" href="unit-04-2.html"><span class="ln">4.2</span> Function notation f(x), domain &amp; range</a></li>
+<li><a class="snav-lesson" href="unit-04-3.html"><span class="ln">4.3</span> Multiple representations; linear vs. nonlinear</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-05.html">Unit 5. Linear Functions &amp; Their Graphs</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-05-1.html"><span class="ln">5.1</span> The coordinate plane</a></li>
+<li><a class="snav-lesson" href="unit-05-2.html"><span class="ln">5.2</span> Graphing linear equations from a table</a></li>
+<li><a class="snav-lesson" href="unit-05-3.html"><span class="ln">5.3</span> Slope</a></li>
+<li><a class="snav-lesson" href="unit-05-4.html"><span class="ln">5.4</span> Slope-intercept form y = mx + b</a></li>
+<li><a class="snav-lesson" href="unit-05-5.html"><span class="ln">5.5</span> Writing equations of lines</a></li>
+<li><a class="snav-lesson" href="unit-05-6.html"><span class="ln">5.6</span> x-intercepts, graphing by intercepts &amp; standard form</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-06.html">Unit 6. Modeling &amp; Translation</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-06-1.html"><span class="ln">6.1</span> Translating words into expressions and equations</a></li>
+<li><a class="snav-lesson" href="unit-06-2.html"><span class="ln">6.2</span> Classic word problems (number, age, distance, value &amp; relationship)</a></li>
+<li><a class="snav-lesson" href="unit-06-3.html"><span class="ln">6.3</span> Scatter plots &amp; line of best fit (a first taste of data)</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-07.html">Unit 7. Systems of Equations</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-07-1.html"><span class="ln">7.1</span> Solving by graphing</a></li>
+<li><a class="snav-lesson" href="unit-07-2.html"><span class="ln">7.2</span> Substitution</a></li>
+<li><a class="snav-lesson" href="unit-07-3.html"><span class="ln">7.3</span> Elimination</a></li>
+<li><a class="snav-lesson" href="unit-07-4.html"><span class="ln">7.4</span> Special cases &amp; applications</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-08.html">Unit 8. Inequalities</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-08-1.html"><span class="ln">8.1</span> One-variable inequalities</a></li>
+<li><a class="snav-lesson" href="unit-08-2.html"><span class="ln">8.2</span> Compound inequalities</a></li>
+<li><a class="snav-lesson" href="unit-08-3.html"><span class="ln">8.3</span> Absolute value: graphs &amp; distance</a></li>
+<li><a class="snav-lesson" href="unit-08-4.html"><span class="ln">8.4</span> Graphing linear inequalities (two variables) &amp; systems</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-09.html">Unit 9. Sequences &amp; Exponential Functions</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-09-1.html"><span class="ln">9.1</span> Arithmetic &amp; geometric sequences as functions</a></li>
+<li><a class="snav-lesson" href="unit-09-2.html"><span class="ln">9.2</span> Exponential growth &amp; decay; linear vs. exponential</a></li>
+</ol>
+</li>
+<li class="active">
+<a class="snav-unit" href="unit-10.html">Unit 10. Exponents &amp; Polynomials</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-10-1.html"><span class="ln">10.1</span> Exponent rules (including zero &amp; negative exponents)</a></li>
+<li><a class="snav-lesson" href="unit-10-2.html"><span class="ln">10.2</span> Scientific notation</a></li>
+<li><a class="snav-lesson cur" href="unit-10-3.html"><span class="ln">10.3</span> Polynomials — terms, degree, standard form; add &amp; subtract</a></li>
+<li><a class="snav-lesson" href="unit-10-4.html"><span class="ln">10.4</span> Multiplying polynomials</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-11.html">Unit 11. Factoring</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-11-1.html"><span class="ln">11.1</span> Greatest common factor (GCF)</a></li>
+<li><a class="snav-lesson" href="unit-11-2.html"><span class="ln">11.2</span> Factoring trinomials x²+bx+c</a></li>
+<li><a class="snav-lesson" href="unit-11-3.html"><span class="ln">11.3</span> Special patterns</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-12.html">Unit 12. Quadratic Functions &amp; Equations (the capstone)</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-12-1.html"><span class="ln">12.1</span> Square roots &amp; simplifying radicals</a></li>
+<li><a class="snav-lesson" href="unit-12-2.html"><span class="ln">12.2</span> The simplest quadratics (x²=9 → two solutions)</a></li>
+<li><a class="snav-lesson" href="unit-12-3.html"><span class="ln">12.3</span> Solving by factoring (zero-product property)</a></li>
+<li><a class="snav-lesson" href="unit-12-4.html"><span class="ln">12.4</span> Completing the square</a></li>
+<li><a class="snav-lesson" href="unit-12-5.html"><span class="ln">12.5</span> The quadratic formula &amp; the discriminant</a></li>
+<li><a class="snav-lesson" href="unit-12-6.html"><span class="ln">12.6</span> Graphing parabolas</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="appendix.html">Appendix. Data &amp; Statistics</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="appendix-1.html"><span class="ln">A.1</span> One-variable statistics — center &amp; spread</a></li>
+<li><a class="snav-lesson" href="appendix-2.html"><span class="ln">A.2</span> Two-variable data — line of best fit, correlation vs. causation</a></li>
+<li><a class="snav-lesson" href="appendix-3.html"><span class="ln">A.3</span> Two-way tables</a></li>
+</ol>
+</li>
+</ol></nav>
+</aside>
+<div class="content">
+<main>
+<div class="kicker">Unit 10 · Lesson 10.3</div><h1>Polynomials — terms, degree, standard form; add &amp; subtract</h1>
+
+
+<p>A polynomial is just a sum of terms like 3x² + 2x − 1: number-times-a-power pieces, added up. It's the noun the next three units are about, so this lesson gives the parts their names and then does the two easiest things you can do with them: add and subtract.</p>
+<p>The adding is nothing new; it's Unit 2's "combine like terms" with fresh vocabulary. The subtracting hides one genuine trap, and most of the lesson's care goes there.</p>
+<p>First, the vocabulary, all on one example. Take 5x² − 3x + 2. It has three pieces, so it's a <strong>trinomial</strong>. Its highest power is 2, so its <strong>degree</strong> is 2. The number riding the highest-power term is its <strong>leading coefficient</strong>, here 5. And it's already in <strong>standard form</strong>, meaning its terms run from highest power down to lowest. A useful way to see why the plain number sits last: think of 2 as 2x⁰, since x⁰ = 1. That makes it the lowest-degree term, so it naturally ends the line.</p>
+<p>Now adding. Like terms have to match the variable <em>and</em> its power: 3x² and x² are both "x²-pieces," so they combine, while 3x² and 3x are different kinds and don't. Picture the x²-pieces and the x-pieces as two different kinds of box: you can only stack a box with its own kind. Add the coefficients within each kind and keep them sorted by degree:
+$$(3x^2+2x-1)+(x^2-5x+4) = (3+1)x^2+(2-5)x+(-1+4) = 4x^2-3x+3$$
+Nothing fancy: x²-pieces with x²-pieces, x-pieces with x-pieces, plain numbers with plain numbers.</p>
+<p>Subtraction is the same idea with one step that's easy to fumble, so go slow here. Subtracting a whole polynomial means a −1 shakes hands with <em>every</em> term inside the second parentheses: every sign flips, not just the first. This is the exact "hand the minus to everyone" move from Unit 2, wearing new clothes:
+$$(2x^2+3x)-(x^2-x+2) = 2x^2+3x \;\underbrace{-x^2+x-2}_{\text{every sign flipped}} = x^2+4x-2$$
+Watch the two that bite: the −x inside became +x, and the +2 became −2. The first term flipping is obvious; it's these later ones that get left alone by accident.</p>
+<p>Here's the move that catches it for you: put a simple number in for x and check both sides. At x = 1, the original is (2 + 3) − (1 − 1 + 2) = 5 − 2 = 3, and the result is 1 + 4 − 2 = 3. They match, so the signs are right.</p>
+<p>If they <em>hadn't</em> matched, that wouldn't be a failure. Your check would have just caught a slipped sign before it cost you anything. The next move would be to go back and re-run the flips one term at a time, because a mismatch here is almost always one sign left unflipped, not a broken method.</p>
+<div class="cl-terms">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6.5C9.5 5 6 5 3.5 6.5V18C6 16.5 9.5 16.5 12 18C14.5 16.5 18 16.5 20.5 18V6.5C18 5 14.5 5 12 6.5Z"/><path d="M12 6.5V18"/></svg>New words</span></p>
+<ul>
+<li><a class="refcode" id="10.3.d1" href="#10.3.d1">10.3.d1</a> <strong>Polynomial:</strong> a sum of terms, each a real number (the coefficient) times a whole-number power of a variable (e.g. 3x²+2x-1). The "whole-number power" part is what matters most: it rules out negative and fractional exponents, which is exactly what separates a polynomial from the rational/radical expressions seen in 10.1.</li>
+<li><a class="refcode" id="10.3.d2" href="#10.3.d2">10.3.d2</a> <strong>Term / coefficient:</strong> a single piece separated by + or -; the coefficient is its number part (in 3x², the coefficient is 3).</li>
+<li><a class="refcode" id="10.3.d3" href="#10.3.d3">10.3.d3</a> <strong>Monomial / binomial / trinomial:</strong> a polynomial with 1 / 2 / 3 terms.</li>
+<li><a class="refcode" id="10.3.d4" href="#10.3.d4">10.3.d4</a> <strong>Degree:</strong> the highest exponent in the polynomial (3x²+2x-1 has degree 2). The degree of a single term is its exponent; a nonzero constant has degree 0 (read it as cx⁰, since x⁰=1, so the 2 in 3x²+2x-1 is a degree-0 term, and a lone "7" has degree 0). This is <em>why</em> the constant sits last in standard form: it's the lowest-degree (x⁰) term.</li>
+<li><a class="refcode" id="10.3.d5" href="#10.3.d5">10.3.d5</a> <strong>Standard form:</strong> terms written in <strong>descending</strong> order of degree (highest power first).</li>
+<li><a class="refcode" id="10.3.d6" href="#10.3.d6">10.3.d6</a> <strong>Leading coefficient:</strong> the coefficient of the highest-degree term (once in standard form).</li>
+</ul>
+</div>
+<section class="worked">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19.5V15L15.5 4.5 19.5 8.5 9 19Z"/><path d="M13.5 6.5 17.5 10.5"/></svg>Worked example</span></p>
+<p><em>Naming (no arithmetic):</em> 3x²-7 → binomial, degree 2, leading coefficient 3.</p>
+<p><em>Standard form:</em>
+$$2+5x^2-3x \;\Rightarrow\; 5x^2-3x+2$$</p>
+<p><em>Add:</em>
+$$(3x^2+2x-1)+(x^2-5x+4) = 4x^2-3x+3$$</p>
+<p><em>Add (a term cancels to zero):</em>
+$$(x^2+6x+2)+(3x^2-6x-7) = 4x^2+0x-5 = 4x^2-5$$</p>
+<p><em>Subtract, distribute the negative (the #1 trap here):</em>
+$$(2x^2+3x)-(x^2-x+2) = x^2+4x-2 \qquad\text{Check at }x=1:\; 5-2=3 \;\text{ and }\; 1+4-2=3$$</p>
+<p><em>Subtract, three terms each:</em>
+$$(5x^2-2x+1)-(2x^2+3x-4) = 3x^2-5x+5$$</p>
+<p>In that fourth example, notice the 6x and the −6x added to nothing and the term simply dropped out: 4x² + 0x − 5 is just 4x² − 5. A term going to zero isn't something missing; it's a real result, and you write what's left.</p>
+<p>The slip to keep an eye on is the one the subtraction examples are built around: flipping only the first sign after a minus. It's easy to write (2x² + 3x) − (x² − x + 2) as x² + 2x + 2, leaving the −x and the +2 alone. The cause is natural: the parentheses make it feel like the minus belongs to the whole group rather than to each piece. The cure is the substitution check you just saw, where a mismatch at x = 1 points straight at a sign you didn't flip.</p>
+<p>The other thing people do is fuse unlike terms, writing 3x² + 2x as 5x² or 5x³. Those are different kinds of box; an x²-piece and an x-piece can't be stacked, so 3x² + 2x just stays as it is.</p>
+<p>Read one straightforward case off the page before the set starts mixing. Name the type, degree, and leading coefficient of 7x⁵. One term, so it's a monomial; its highest (and only) power is 5, so degree 5; and the number on that term is 7, the leading coefficient. You're just reading the parts off the page.</p>
+</section>
+<div class="cl-check">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M9.6 9.6a2.6 2.6 0 1 1 3.3 2.5c-.9.3-1.4.9-1.4 1.8"/><circle cx="11.5" cy="16.6" r=".9" fill="currentColor" stroke="none"/></svg>Check yourself</span></p>
+<ol>
+<li><a class="refcode" id="10.3.c1" href="#10.3.c1">10.3.c1</a> Name the type, degree, and leading coefficient of 4x³ − x + 9, then put 7 − 2x² in standard form. (Trinomial, degree 3, leading coefficient 4; and 7 − 2x² becomes −2x² + 7.)</li>
+<li><a class="refcode" id="10.3.c2" href="#10.3.c2">10.3.c2</a> Subtract (x² − 4x + 5) − (2x² − 4x − 1), then prove the signs are right by testing x = 1. (Flip every sign in the second group: x² − 4x + 5 − 2x² + 4x + 1 = −x² + 6. Check at x = 1: original (1 − 4 + 5) − (2 − 4 − 1) = 2 − (−3) = 5, and −1 + 6 = 5.)</li>
+<li><a class="refcode" id="10.3.c3" href="#10.3.c3">10.3.c3</a> Why can't 3x² and 3x be combined, even though both have a 3 and an x? (They're different kinds of term, one an x²-piece and the other an x-piece, and only terms with the same variable <em>and</em> the same power combine.)</li>
+</ol>
+<p>You can now name a polynomial's parts, write it in standard form, add by combining like terms, and subtract with every sign flipped. Then check that subtraction with a quick substitution, so a missed sign never slips past you.</p>
+<p>The problems below shuffle naming, adding, and subtracting together, and that mix is harder on purpose: choosing the right first move each time is what makes the skill last. You'll find every answer at the end of the lesson, with a worked example above for each problem, so lean on those if one stops you. The subtraction problems are where the sign trap lives, so run a substitution check on each one. That habit is the main thing this lesson is teaching.</p>
+</div>
+<section class="practice">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4.5" width="15.5" height="15.5" rx="2.5"/><path d="M7.5 10 9 11.5 12 8.5"/><path d="M14 10H16.5"/><path d="M7.5 15H16.5"/></svg>Practice</span></p>
+<p><em>Name the type, degree, and leading coefficient:</em></p>
+<ol>
+<li><a class="refcode" id="10.3.1" href="#10.3.1">10.3.1</a> 3x-7  2. x²-4x+1  3. 7x⁵</li>
+</ol>
+<p><em>Write in standard form:</em></p>
+<ol start="4">
+<li><a class="refcode" id="10.3.2" href="#10.3.2">10.3.2</a> 2+5x²-3x  5. 4x-1+x³</li>
+</ol>
+<p><em>Add:</em></p>
+<ol start="6">
+<li><a class="refcode" id="10.3.3" href="#10.3.3">10.3.3</a> (3x²+2x-1)+(x²-5x+4)  7. (2x²+3x)+(4x²-x+5)  8. (x²+6x+2)+(3x²-6x-7)</li>
+</ol>
+<p><em>Subtract (distribute the negative to every term):</em></p>
+<ol start="9">
+<li><a class="refcode" id="10.3.4" href="#10.3.4">10.3.4</a> (2x²+3x)-(x²-x+2)  10. (5x²-2x+1)-(2x²+3x-4)  11. (4x²+x)-(x²+x-6)  12. (x³+2x-3)-(x³-x+5)</li>
+</ol>
+</section>
+<details class="answers">
+<summary><span class="tw"></span><span class="eyebrow">Answers</span><span class="hint">Try each one yourself first, then open to check.</span></summary>
+<div class="ak-body">
+<p>1) binomial, degree 1, leading coefficient 3.  2) trinomial, degree 2, leading coefficient 1.  3) monomial, degree 5, leading coefficient 7.  4) 5x²-3x+2  5) x³+4x-1  6) 4x²-3x+3  7) 6x²+2x+5  8) 4x²-5  9) x²+4x-2  10) 3x²-5x+5  11) 3x²+6  12) 3x-8</p>
+<p><em>Substitution spot-checks:</em> #9 at x=1: 5-2=3, 1+4-2=3. #12 at x=1: (1+2-3)-(1-1+5)=0-5=-5, and 3(1)-8=-5 (the x³'s subtract to zero).</p>
+</div>
+</details>
+<nav class="pagenav" aria-label="Previous and next page">
+<a class="pn-prev" href="unit-10-2.html"><span class="pn-dir">&larr;&nbsp;Back</span><span class="pn-title">Lesson 10.2</span></a>
+<a class="pn-next" href="unit-10-4.html"><span class="pn-dir">Next&nbsp;&rarr;</span><span class="pn-title">Lesson 10.4</span></a>
+</nav>
+</main>
+<footer><p>A friendly Algebra 1 textbook, made to be read alongside the Claude tutor. Math by KaTeX.</p></footer>
+</div>
+</div>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  renderMathInElement(document.body, {delimiters: [{left: "$$", right: "$$", display: true}], throwOnError: false});
+  var root = document.documentElement, body = document.body;
+  document.getElementById("theme").addEventListener("click", function () {
+    root.classList.toggle("dark");
+    localStorage.setItem("a1-theme", root.classList.contains("dark") ? "dark" : "light");
+  });
+  var menu = document.getElementById("menu");
+  menu.addEventListener("click", function () {
+    var open = body.classList.toggle("nav-open");
+    menu.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+  var sn = document.getElementById("sidenav");
+  if (sn) sn.addEventListener("click", function (e) { if (e.target.closest("a")) body.classList.remove("nav-open"); });
+});
+</script>
+</body>
+</html>

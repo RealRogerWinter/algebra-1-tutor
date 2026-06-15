@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Graphing linear inequalities (two variables) &amp; systems — Algebra 1</title>
+<script>try{if(localStorage.getItem("a1-theme")==="dark")document.documentElement.classList.add("dark");}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..40,500..600&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="textbook.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous">
+</head>
+<body data-surface="textbook">
+<header class="topbar">
+  <button id="menu" class="menu" type="button" aria-label="Open or close the contents menu" aria-expanded="false">☰&nbsp;Contents</button>
+  <a class="home" href="index.html">Algebra&nbsp;1</a>
+  <span class="sp"></span>
+  <button id="theme" type="button" aria-label="Toggle light or dark theme">◐&nbsp;Theme</button>
+</header>
+<div class="shell">
+<aside class="sidenav" id="sidenav">
+<nav class="snav" aria-label="Contents">
+<a class="snav-top" href="how-to-use.html">How to use this book</a>
+<a class="snav-top" href="index.html">All units</a>
+<ol class="snav-units">
+<li class="">
+<a class="snav-unit" href="unit-01.html">Unit 1. Foundations &amp; the Language of Algebra</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-01-1.html"><span class="ln">1.1</span> Variables and the meaning of equations</a></li>
+<li><a class="snav-lesson" href="unit-01-2.html"><span class="ln">1.2</span> The number system &amp; the number line</a></li>
+<li><a class="snav-lesson" href="unit-01-3.html"><span class="ln">1.3</span> Order of operations</a></li>
+<li><a class="snav-lesson" href="unit-01-4.html"><span class="ln">1.4</span> Negative numbers</a></li>
+<li><a class="snav-lesson" href="unit-01-5.html"><span class="ln">1.5</span> Expressions vs. equations; evaluating expressions</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-02.html">Unit 2. Solving Linear Equations</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-02-1.html"><span class="ln">2.1</span> Inverse operations &amp; one-step equations</a></li>
+<li><a class="snav-lesson" href="unit-02-2.html"><span class="ln">2.2</span> Two-step equations</a></li>
+<li><a class="snav-lesson" href="unit-02-3.html"><span class="ln">2.3</span> Combining like terms &amp; the distributive property</a></li>
+<li><a class="snav-lesson" href="unit-02-4.html"><span class="ln">2.4</span> Variables on both sides</a></li>
+<li><a class="snav-lesson" href="unit-02-5.html"><span class="ln">2.5</span> Equations with fractions (with two Fraction Refreshers)</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-03.html">Unit 3. Proportional Reasoning (the bridge to linearity)</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-03-1.html"><span class="ln">3.1</span> Ratios and rates</a></li>
+<li><a class="snav-lesson" href="unit-03-2.html"><span class="ln">3.2</span> Proportions &amp; cross-multiplication</a></li>
+<li><a class="snav-lesson" href="unit-03-3.html"><span class="ln">3.3</span> Percents</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-04.html">Unit 4. Introducing Functions</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-04-1.html"><span class="ln">4.1</span> What is a function</a></li>
+<li><a class="snav-lesson" href="unit-04-2.html"><span class="ln">4.2</span> Function notation f(x), domain &amp; range</a></li>
+<li><a class="snav-lesson" href="unit-04-3.html"><span class="ln">4.3</span> Multiple representations; linear vs. nonlinear</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-05.html">Unit 5. Linear Functions &amp; Their Graphs</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-05-1.html"><span class="ln">5.1</span> The coordinate plane</a></li>
+<li><a class="snav-lesson" href="unit-05-2.html"><span class="ln">5.2</span> Graphing linear equations from a table</a></li>
+<li><a class="snav-lesson" href="unit-05-3.html"><span class="ln">5.3</span> Slope</a></li>
+<li><a class="snav-lesson" href="unit-05-4.html"><span class="ln">5.4</span> Slope-intercept form y = mx + b</a></li>
+<li><a class="snav-lesson" href="unit-05-5.html"><span class="ln">5.5</span> Writing equations of lines</a></li>
+<li><a class="snav-lesson" href="unit-05-6.html"><span class="ln">5.6</span> x-intercepts, graphing by intercepts &amp; standard form</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-06.html">Unit 6. Modeling &amp; Translation</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-06-1.html"><span class="ln">6.1</span> Translating words into expressions and equations</a></li>
+<li><a class="snav-lesson" href="unit-06-2.html"><span class="ln">6.2</span> Classic word problems (number, age, distance, value &amp; relationship)</a></li>
+<li><a class="snav-lesson" href="unit-06-3.html"><span class="ln">6.3</span> Scatter plots &amp; line of best fit (a first taste of data)</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-07.html">Unit 7. Systems of Equations</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-07-1.html"><span class="ln">7.1</span> Solving by graphing</a></li>
+<li><a class="snav-lesson" href="unit-07-2.html"><span class="ln">7.2</span> Substitution</a></li>
+<li><a class="snav-lesson" href="unit-07-3.html"><span class="ln">7.3</span> Elimination</a></li>
+<li><a class="snav-lesson" href="unit-07-4.html"><span class="ln">7.4</span> Special cases &amp; applications</a></li>
+</ol>
+</li>
+<li class="active">
+<a class="snav-unit" href="unit-08.html">Unit 8. Inequalities</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-08-1.html"><span class="ln">8.1</span> One-variable inequalities</a></li>
+<li><a class="snav-lesson" href="unit-08-2.html"><span class="ln">8.2</span> Compound inequalities</a></li>
+<li><a class="snav-lesson" href="unit-08-3.html"><span class="ln">8.3</span> Absolute value: graphs &amp; distance</a></li>
+<li><a class="snav-lesson cur" href="unit-08-4.html"><span class="ln">8.4</span> Graphing linear inequalities (two variables) &amp; systems</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-09.html">Unit 9. Sequences &amp; Exponential Functions</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-09-1.html"><span class="ln">9.1</span> Arithmetic &amp; geometric sequences as functions</a></li>
+<li><a class="snav-lesson" href="unit-09-2.html"><span class="ln">9.2</span> Exponential growth &amp; decay; linear vs. exponential</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-10.html">Unit 10. Exponents &amp; Polynomials</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-10-1.html"><span class="ln">10.1</span> Exponent rules (including zero &amp; negative exponents)</a></li>
+<li><a class="snav-lesson" href="unit-10-2.html"><span class="ln">10.2</span> Scientific notation</a></li>
+<li><a class="snav-lesson" href="unit-10-3.html"><span class="ln">10.3</span> Polynomials — terms, degree, standard form; add &amp; subtract</a></li>
+<li><a class="snav-lesson" href="unit-10-4.html"><span class="ln">10.4</span> Multiplying polynomials</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-11.html">Unit 11. Factoring</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-11-1.html"><span class="ln">11.1</span> Greatest common factor (GCF)</a></li>
+<li><a class="snav-lesson" href="unit-11-2.html"><span class="ln">11.2</span> Factoring trinomials x²+bx+c</a></li>
+<li><a class="snav-lesson" href="unit-11-3.html"><span class="ln">11.3</span> Special patterns</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-12.html">Unit 12. Quadratic Functions &amp; Equations (the capstone)</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-12-1.html"><span class="ln">12.1</span> Square roots &amp; simplifying radicals</a></li>
+<li><a class="snav-lesson" href="unit-12-2.html"><span class="ln">12.2</span> The simplest quadratics (x²=9 → two solutions)</a></li>
+<li><a class="snav-lesson" href="unit-12-3.html"><span class="ln">12.3</span> Solving by factoring (zero-product property)</a></li>
+<li><a class="snav-lesson" href="unit-12-4.html"><span class="ln">12.4</span> Completing the square</a></li>
+<li><a class="snav-lesson" href="unit-12-5.html"><span class="ln">12.5</span> The quadratic formula &amp; the discriminant</a></li>
+<li><a class="snav-lesson" href="unit-12-6.html"><span class="ln">12.6</span> Graphing parabolas</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="appendix.html">Appendix. Data &amp; Statistics</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="appendix-1.html"><span class="ln">A.1</span> One-variable statistics — center &amp; spread</a></li>
+<li><a class="snav-lesson" href="appendix-2.html"><span class="ln">A.2</span> Two-variable data — line of best fit, correlation vs. causation</a></li>
+<li><a class="snav-lesson" href="appendix-3.html"><span class="ln">A.3</span> Two-way tables</a></li>
+</ol>
+</li>
+</ol></nav>
+</aside>
+<div class="content">
+<main>
+<div class="kicker">Unit 8 · Lesson 8.4</div><h1>Graphing linear inequalities (two variables) &amp; systems</h1>
+
+
+<p>In Unit 5, the answer to a two-variable equation like y = 2x + 1 was a line, every point on it. Loosen the = to an inequality and the answer grows: instead of the line, you get a whole <em>region</em>, a flat sheet of points filling one side of that line. This is the picture behind questions like "which combinations of two things are allowed," where a budget or a limit carves the plane into the allowed part and the rest.</p>
+<p>Think about y &gt; 2x + 1. It's asking, for each point, "is the output bigger than what the line gives?" Put another way, "which points sit <em>above</em> the line y = 2x + 1?" The line itself is the dividing fence: above it the inequality is true, below it false. So the answer isn't the fence, it's the whole field on one side of it. That field is called a <strong>half-plane</strong>, and the line is its <strong>boundary</strong> <a class="refcode" id="8.4.f1" href="#8.4.f1">8.4.f1</a>.</p>
+<figure class="fig" id="fig-8.4.f1"><svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+  <polygon points="18.0,196.5 222.0,43.5 222.0,18.0 18.0,18.0" fill="#2980b9" fill-opacity="0.15"/>
+  <line x1="18.0" y1="145.5" x2="222.0" y2="145.5" stroke="#888"/>
+  <text x="216.0" y="141.5" font-size="10" fill="#888">x</text>
+  <line x1="120.0" y1="18.0" x2="120.0" y2="222.0" stroke="#888"/>
+  <text x="124.0" y="26.0" font-size="10" fill="#888">y</text>
+  <line x1="18.0" y1="196.5" x2="222.0" y2="43.5" stroke="#2980b9" stroke-width="2.5" stroke-dasharray="5 3"/>
+  <circle cx="120.0" cy="69.0" r="3.5" fill="#27ae60"/>
+  <text x="125.0" y="63.0" font-size="10" fill="#27ae60">test (0, 3)</text>
+</svg><figcaption><b>Figure 8.4.f1</b></figcaption></figure>
+
+<p>Two decisions turn that idea into a graph. First, whether the boundary line is drawn solid or dashed, which is the same open-versus-filled choice from Lesson 8.1 in a new costume. If the inequality is strict (&lt; or &gt;), the boundary itself isn't included, so you draw it <strong>dashed</strong>. If it's inclusive (≤ or ≥), the boundary counts, so you draw it <strong>solid</strong>. Second, which side to shade, and here there's a reliable method that never makes you guess.</p>
+<p>To pick the side, <strong>test a point</strong> that isn't on the line, drop it into the inequality, and see if it makes a true statement. If it does, shade the side that point is on; if it doesn't, shade the other side.</p>
+<p>The easiest test point is almost always the origin, (0,0), because the arithmetic is trivial, unless the line runs through the origin, in which case you pick any other off-line point. And say the test out loud as you do it, because hearing it keeps you honest: "at (0,0), is 0 &gt; 1? No, so shade the other side."</p>
+<p>So the whole procedure is three steps: graph the boundary (compute two points the Unit 5 way, then make it dashed or solid), test an off-line point and shade the side that comes out true, and state that test in words. Compute the boundary points rather than eyeballing them; a small sign slip there throws off the whole line.</p>
+<p>For a <strong>system</strong>, meaning two or more inequalities that must all hold at once, you graph each region the same way, then keep only where they <strong>overlap</strong>. The overlap is the set of points that satisfy every inequality together, and you confirm it by testing a point that should be inside all of them.</p>
+<div class="cl-terms">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6.5C9.5 5 6 5 3.5 6.5V18C6 16.5 9.5 16.5 12 18C14.5 16.5 18 16.5 20.5 18V6.5C18 5 14.5 5 12 6.5Z"/><path d="M12 6.5V18"/></svg>New words</span></p>
+<ul>
+<li><a class="refcode" id="8.4.d1" href="#8.4.d1">8.4.d1</a> <strong>Linear inequality in two variables:</strong> e.g. y &gt; 2x + 1, satisfied not by a line but by a <strong>half-plane</strong> (every point on one side of the boundary).</li>
+<li><a class="refcode" id="8.4.d2" href="#8.4.d2">8.4.d2</a> <strong>Boundary line:</strong> the line you get by replacing the inequality with = (here y = 2x + 1, the function f(x) = 2x+1). <strong>Dashed</strong> if strict (&lt;, &gt;), meaning the line itself is <em>not</em> included; <strong>solid</strong> if inclusive (≤, ≥).</li>
+<li><a class="refcode" id="8.4.d3" href="#8.4.d3">8.4.d3</a> <strong>Half-plane / test point:</strong> one of the two sides the boundary cuts the plane into. To choose the correct side, <strong>test a point</strong> not on the line (the <strong>origin (0,0)</strong> is easiest) and shade the side that makes the inequality true.</li>
+<li><a class="refcode" id="8.4.d4" href="#8.4.d4">8.4.d4</a> <strong>System of inequalities:</strong> two or more inequalities at once; the solution is the <strong>overlap</strong> of their shaded regions.</li>
+</ul>
+</div>
+<section class="worked">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19.5V15L15.5 4.5 19.5 8.5 9 19Z"/><path d="M13.5 6.5 17.5 10.5"/></svg>Worked example</span></p>
+<p><em>Example 1, strict, dashed.</em> Graph y &gt; 2x + 1.
+Boundary: y = 2x + 1, through (0,1) and (1,3). It's strict (&gt;), so draw it <strong>dashed</strong>: the line itself isn't part of the answer.
+Test (0,0): is 0 &gt; 2(0) + 1 = 1? That's 0 &gt; 1, which is <strong>false</strong>, so shade the side <em>not</em> containing the origin. Region: everything above the dashed line.</p>
+<p><em>Example 2, inclusive, solid.</em> Graph y ≤ -x + 3.
+Boundary: y = -x + 3, through (0,3) and (3,0). It's inclusive (≤), so draw it <strong>solid</strong>: the line is included.
+Test (0,0): is 0 ≤ -0 + 3 = 3? That's 0 ≤ 3, which is <strong>true</strong>, so shade the side containing the origin. Region: the line and everything below it.</p>
+<p><em>Example 3, fractional slope, dashed.</em> Graph y &lt; (1/2)x - 2.
+Boundary: y = (1/2)x - 2, through (0,-2) and (2,-1). Strict (&lt;), so <strong>dashed</strong>.
+Test (0,0): is 0 &lt; (1/2)(0) - 2 = -2? That's 0 &lt; -2, which is <strong>false</strong>, so shade the other side. Region: below the dashed line.</p>
+<p><em>Example 4, a system.</em> Graph the system y ≥ x - 1 <strong>and</strong> y ≤ -x + 3.
+Take them one at a time. Boundary 1: y = x - 1, <strong>solid</strong> (inclusive); test (0,0): is 0 ≥ -1? <strong>True</strong>, so shade the side with the origin. Boundary 2: y = -x + 3, <strong>solid</strong>; test (0,0): is 0 ≤ 3? <strong>True</strong>, so shade the side with the origin again.
+The solution is the <strong>overlap</strong> of the two shaded regions, a wedge that contains the origin, fenced by both solid lines. Confirm it with a point inside the overlap, say (1,0): 0 ≥ 1 − 1 = 0 is true, and 0 ≤ -1 + 3 = 2 is true, so (1,0) belongs to both.</p>
+<p>A couple of things to keep straight, now that you've worked the clean cases. Don't try to guess the side from the direction of the sign: once the line tilts, a &gt; does not always mean "shade up," so let the tested point decide every time.</p>
+<p>And if the boundary runs through the origin, the origin sits <em>on</em> the fence and can't tell you a side, so pick a different test point, like (1,0). For a system, the answer is the overlap, never the union: shading each region is only the setup, and the solution is just the part they share.</p>
+</section>
+<div class="cl-check">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M9.6 9.6a2.6 2.6 0 1 1 3.3 2.5c-.9.3-1.4.9-1.4 1.8"/><circle cx="11.5" cy="16.6" r=".9" fill="currentColor" stroke="none"/></svg>Check yourself</span></p>
+<ol>
+<li><a class="refcode" id="8.4.c1" href="#8.4.c1">8.4.c1</a> For y &lt; x + 4: is the boundary dashed or solid, and how do you decide which side to shade? Do the origin test out loud. (Strict &lt;, so dashed. Test (0,0): is 0 &lt; 0 + 4 = 4? Yes, true, so shade the side with the origin, below the line.)</li>
+<li><a class="refcode" id="8.4.c2" href="#8.4.c2">8.4.c2</a> Your boundary line passes through (0,0). Why can't you use the origin as your test point, and what would you use instead? (Because (0,0) is on the boundary, it can't tell you which side is the solution. It's on the fence, not on either side. Pick any point not on the line, such as (1,0), and test that.)</li>
+<li><a class="refcode" id="8.4.c3" href="#8.4.c3">8.4.c3</a> A system is y &gt; x and y &lt; 4. Describe the solution region: which two boundaries, dashed or solid, and roughly where the overlap sits. (Both boundaries are dashed: the line y = x and the horizontal line y = 4. The overlap is the region above y = x and below y = 4, a wedge opening to the left, where points satisfy both at once.)</li>
+</ol>
+<p>Working a mixed set takes more effort than grinding one type, and that effort is exactly what carries the skill to next week. Answers are at the end of the lesson, and a stalled problem means flip back to the matching worked example. For each one, name the boundary line, say dashed or solid, run the test point out loud, and then state which side to shade.</p>
+<p><strong>Practice problems</strong> (for each: name the boundary line, dashed or solid, the test point with its true/false result, and which side to shade):</p>
+<p><em>Set A, single inequalities</em></p>
+<ol>
+<li><a class="refcode" id="8.4.1" href="#8.4.1">8.4.1</a> y &gt; x + 2</li>
+<li><a class="refcode" id="8.4.2" href="#8.4.2">8.4.2</a> y ≤ 2x - 1</li>
+<li><a class="refcode" id="8.4.3" href="#8.4.3">8.4.3</a> y &lt; -x + 4</li>
+<li><a class="refcode" id="8.4.4" href="#8.4.4">8.4.4</a> y ≥ 3x  <em>(boundary through origin, so choose a different test point)</em></li>
+<li><a class="refcode" id="8.4.5" href="#8.4.5">8.4.5</a> x + y &lt; 5</li>
+</ol>
+<p><em>Set B, a system</em></p>
+<ol start="6">
+<li><a class="refcode" id="8.4.6" href="#8.4.6">8.4.6</a> y &gt; x <strong>and</strong> y &lt; -x + 4  <em>(describe the overlap region)</em></li>
+</ol>
+<p><em>Set C, boundary arithmetic (eval)</em></p>
+<ol start="7">
+<li><a class="refcode" id="8.4.7" href="#8.4.7">8.4.7</a> For the boundary y = 2x - 3, compute y at x = 2 (a point to plot).</li>
+</ol>
+</div>
+<details class="answers">
+<summary><span class="tw"></span><span class="eyebrow">Answers</span><span class="hint">Try each one yourself first, then open to check.</span></summary>
+<div class="ak-body">
+<ol>
+<li>Boundary y = x + 2 (e.g. (0,2),(1,3)), <strong>dashed</strong>. Test (0,0): 0 &gt; 2? <strong>false</strong> → shade the side <strong>without</strong> the origin (above the line).</li>
+<li>Boundary y = 2x - 1 ((0,-1),(1,1)), <strong>solid</strong>. Test (0,0): 0 ≤ -1? <strong>false</strong> → shade the <strong>other</strong> side (below the line).</li>
+<li>Boundary y = -x + 4 ((0,4),(4,0)), <strong>dashed</strong>. Test (0,0): 0 &lt; 4? <strong>true</strong> → shade the side <strong>with</strong> the origin (below/left).</li>
+<li>Boundary y = 3x ((0,0),(1,3)), <strong>solid</strong>. Origin is <em>on</em> the line — test (1,0): 0 ≥ 3(1)=3? <strong>false</strong> → shade the side <strong>not</strong> containing (1,0): the side holding points like (0,1) and (-1,0) — above/left of the steep line. <em>(For a steep line, pick the shaded side by testing a point you can see is in or out, not by "left" or "right".)</em></li>
+<li>Boundary x + y = 5 ((0,5),(5,0)), <strong>dashed</strong>. Test (0,0): 0 + 0 = 0 &lt; 5? <strong>true</strong> → shade the side <strong>with</strong> the origin (below/left).</li>
+<li>Boundary 1 y = x, <strong>dashed</strong>, shade above (test (0,1): 1 &gt; 0). Boundary 2 y = -x + 4, <strong>dashed</strong>, shade below (test (0,0): 0 &lt; 4). <strong>Solution = the overlap</strong>, a wedge between the two dashed lines (e.g. (1,2): 2 &gt; 1 and 2 &lt; 3).</li>
+<li>y = 2(2) - 3 = 1 → plot (2, 1).</li>
+</ol>
+</div>
+</details>
+<div class="ldiv" aria-hidden="true"><i></i><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3.5 20.5 12 12 20.5 3.5 12Z"/></svg><i></i></div>
+<p>You can now solve a one-variable inequality the same way you solve an equation, flipping the sign only when you multiply or divide by a negative, and confirm it by testing a point in the original.</p>
+<p>You can graph a solution with the right circle and direction, chain conditions with <em>and</em> (the overlap) and <em>or</em> (the union), read absolute value as distance from 0 to handle |x| = k, |x| &lt; k, and |x| &gt; k, and graph a two-variable inequality or a system as a shaded region picked out by a test point.</p>
+<p>The thread through all of it is the same: solve as you always have, then let a tested point tell you the answer is real.</p>
+<nav class="pagenav" aria-label="Previous and next page">
+<a class="pn-prev" href="unit-08-3.html"><span class="pn-dir">&larr;&nbsp;Back</span><span class="pn-title">Lesson 8.3</span></a>
+<a class="pn-next" href="unit-09.html"><span class="pn-dir">Next&nbsp;&rarr;</span><span class="pn-title">Unit 9</span></a>
+</nav>
+</main>
+<footer><p>A friendly Algebra 1 textbook, made to be read alongside the Claude tutor. Math by KaTeX.</p></footer>
+</div>
+</div>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  renderMathInElement(document.body, {delimiters: [{left: "$$", right: "$$", display: true}], throwOnError: false});
+  var root = document.documentElement, body = document.body;
+  document.getElementById("theme").addEventListener("click", function () {
+    root.classList.toggle("dark");
+    localStorage.setItem("a1-theme", root.classList.contains("dark") ? "dark" : "light");
+  });
+  var menu = document.getElementById("menu");
+  menu.addEventListener("click", function () {
+    var open = body.classList.toggle("nav-open");
+    menu.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+  var sn = document.getElementById("sidenav");
+  if (sn) sn.addEventListener("click", function (e) { if (e.target.closest("a")) body.classList.remove("nav-open"); });
+});
+</script>
+</body>
+</html>

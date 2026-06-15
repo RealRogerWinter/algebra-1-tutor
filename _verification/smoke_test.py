@@ -43,17 +43,17 @@ def check():
         if not os.path.exists(cf):
             issues.append(f"complementary set missing for unit {u.id}")
 
-    # 2. every bundled figure is embedded in its textbook unit page (figure render)
+    # 2. every bundled figure is embedded in its textbook LESSON page (figure render)
     for s in figmod.FIGURES:
-        p = _page(tb.OUT_DIR, s["lesson"].split(".")[0])
+        p = os.path.join(tb.OUT_DIR, tb._lesson_fname(s["lesson"]))
         if os.path.exists(p) and f'id="fig-{s["code"]}"' not in open(p, encoding="utf-8").read():
             issues.append(f'figure {s["code"]} not embedded in {os.path.basename(p)}')
 
     # 3. reference-code resolution spot-checks across materials (code lookup)
     spot = [
-        (_has(_page(tb.OUT_DIR, "1"), 'id="1.1.d1"'), "definition 1.1.d1 -> textbook unit-01"),
-        (_has(_page(tb.OUT_DIR, "12"), 'id="12.6.w1"'), "worked-ex 12.6.w1 -> textbook unit-12"),
-        (_has(_page(tb.OUT_DIR, "12"), 'id="fig-12.6.f1"'), "figure 12.6.f1 -> textbook unit-12"),
+        (_has(os.path.join(tb.OUT_DIR, tb._lesson_fname("1.1")), 'id="1.1.d1"'), "definition 1.1.d1 -> textbook lesson 1.1"),
+        (_has(os.path.join(tb.OUT_DIR, tb._lesson_fname("12.6")), 'id="12.6.w1"'), "worked-ex 12.6.w1 -> textbook lesson 12.6"),
+        (_has(os.path.join(tb.OUT_DIR, tb._lesson_fname("12.6")), 'id="fig-12.6.f1"'), "figure 12.6.f1 -> textbook lesson 12.6"),
         (_has(_page(tg.OUT_DIR, "5"), 'id="5.4.T1"'), "complementary 5.4.T1 -> tutor-guide unit-05"),
         (_has(os.path.join(REPO_ROOT, "algebra-1-tutor", "references", "misconceptions.md"),
               "{#mis.3}"), "mis.3 -> misconceptions.md anchor"),

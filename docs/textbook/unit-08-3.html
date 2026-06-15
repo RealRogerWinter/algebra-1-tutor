@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Absolute value: graphs &amp; distance — Algebra 1</title>
+<script>try{if(localStorage.getItem("a1-theme")==="dark")document.documentElement.classList.add("dark");}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..40,500..600&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="textbook.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous">
+</head>
+<body data-surface="textbook">
+<header class="topbar">
+  <button id="menu" class="menu" type="button" aria-label="Open or close the contents menu" aria-expanded="false">☰&nbsp;Contents</button>
+  <a class="home" href="index.html">Algebra&nbsp;1</a>
+  <span class="sp"></span>
+  <button id="theme" type="button" aria-label="Toggle light or dark theme">◐&nbsp;Theme</button>
+</header>
+<div class="shell">
+<aside class="sidenav" id="sidenav">
+<nav class="snav" aria-label="Contents">
+<a class="snav-top" href="how-to-use.html">How to use this book</a>
+<a class="snav-top" href="index.html">All units</a>
+<ol class="snav-units">
+<li class="">
+<a class="snav-unit" href="unit-01.html">Unit 1. Foundations &amp; the Language of Algebra</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-01-1.html"><span class="ln">1.1</span> Variables and the meaning of equations</a></li>
+<li><a class="snav-lesson" href="unit-01-2.html"><span class="ln">1.2</span> The number system &amp; the number line</a></li>
+<li><a class="snav-lesson" href="unit-01-3.html"><span class="ln">1.3</span> Order of operations</a></li>
+<li><a class="snav-lesson" href="unit-01-4.html"><span class="ln">1.4</span> Negative numbers</a></li>
+<li><a class="snav-lesson" href="unit-01-5.html"><span class="ln">1.5</span> Expressions vs. equations; evaluating expressions</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-02.html">Unit 2. Solving Linear Equations</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-02-1.html"><span class="ln">2.1</span> Inverse operations &amp; one-step equations</a></li>
+<li><a class="snav-lesson" href="unit-02-2.html"><span class="ln">2.2</span> Two-step equations</a></li>
+<li><a class="snav-lesson" href="unit-02-3.html"><span class="ln">2.3</span> Combining like terms &amp; the distributive property</a></li>
+<li><a class="snav-lesson" href="unit-02-4.html"><span class="ln">2.4</span> Variables on both sides</a></li>
+<li><a class="snav-lesson" href="unit-02-5.html"><span class="ln">2.5</span> Equations with fractions (with two Fraction Refreshers)</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-03.html">Unit 3. Proportional Reasoning (the bridge to linearity)</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-03-1.html"><span class="ln">3.1</span> Ratios and rates</a></li>
+<li><a class="snav-lesson" href="unit-03-2.html"><span class="ln">3.2</span> Proportions &amp; cross-multiplication</a></li>
+<li><a class="snav-lesson" href="unit-03-3.html"><span class="ln">3.3</span> Percents</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-04.html">Unit 4. Introducing Functions</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-04-1.html"><span class="ln">4.1</span> What is a function</a></li>
+<li><a class="snav-lesson" href="unit-04-2.html"><span class="ln">4.2</span> Function notation f(x), domain &amp; range</a></li>
+<li><a class="snav-lesson" href="unit-04-3.html"><span class="ln">4.3</span> Multiple representations; linear vs. nonlinear</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-05.html">Unit 5. Linear Functions &amp; Their Graphs</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-05-1.html"><span class="ln">5.1</span> The coordinate plane</a></li>
+<li><a class="snav-lesson" href="unit-05-2.html"><span class="ln">5.2</span> Graphing linear equations from a table</a></li>
+<li><a class="snav-lesson" href="unit-05-3.html"><span class="ln">5.3</span> Slope</a></li>
+<li><a class="snav-lesson" href="unit-05-4.html"><span class="ln">5.4</span> Slope-intercept form y = mx + b</a></li>
+<li><a class="snav-lesson" href="unit-05-5.html"><span class="ln">5.5</span> Writing equations of lines</a></li>
+<li><a class="snav-lesson" href="unit-05-6.html"><span class="ln">5.6</span> x-intercepts, graphing by intercepts &amp; standard form</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-06.html">Unit 6. Modeling &amp; Translation</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-06-1.html"><span class="ln">6.1</span> Translating words into expressions and equations</a></li>
+<li><a class="snav-lesson" href="unit-06-2.html"><span class="ln">6.2</span> Classic word problems (number, age, distance, value &amp; relationship)</a></li>
+<li><a class="snav-lesson" href="unit-06-3.html"><span class="ln">6.3</span> Scatter plots &amp; line of best fit (a first taste of data)</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-07.html">Unit 7. Systems of Equations</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-07-1.html"><span class="ln">7.1</span> Solving by graphing</a></li>
+<li><a class="snav-lesson" href="unit-07-2.html"><span class="ln">7.2</span> Substitution</a></li>
+<li><a class="snav-lesson" href="unit-07-3.html"><span class="ln">7.3</span> Elimination</a></li>
+<li><a class="snav-lesson" href="unit-07-4.html"><span class="ln">7.4</span> Special cases &amp; applications</a></li>
+</ol>
+</li>
+<li class="active">
+<a class="snav-unit" href="unit-08.html">Unit 8. Inequalities</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-08-1.html"><span class="ln">8.1</span> One-variable inequalities</a></li>
+<li><a class="snav-lesson" href="unit-08-2.html"><span class="ln">8.2</span> Compound inequalities</a></li>
+<li><a class="snav-lesson cur" href="unit-08-3.html"><span class="ln">8.3</span> Absolute value: graphs &amp; distance</a></li>
+<li><a class="snav-lesson" href="unit-08-4.html"><span class="ln">8.4</span> Graphing linear inequalities (two variables) &amp; systems</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-09.html">Unit 9. Sequences &amp; Exponential Functions</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-09-1.html"><span class="ln">9.1</span> Arithmetic &amp; geometric sequences as functions</a></li>
+<li><a class="snav-lesson" href="unit-09-2.html"><span class="ln">9.2</span> Exponential growth &amp; decay; linear vs. exponential</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-10.html">Unit 10. Exponents &amp; Polynomials</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-10-1.html"><span class="ln">10.1</span> Exponent rules (including zero &amp; negative exponents)</a></li>
+<li><a class="snav-lesson" href="unit-10-2.html"><span class="ln">10.2</span> Scientific notation</a></li>
+<li><a class="snav-lesson" href="unit-10-3.html"><span class="ln">10.3</span> Polynomials — terms, degree, standard form; add &amp; subtract</a></li>
+<li><a class="snav-lesson" href="unit-10-4.html"><span class="ln">10.4</span> Multiplying polynomials</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-11.html">Unit 11. Factoring</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-11-1.html"><span class="ln">11.1</span> Greatest common factor (GCF)</a></li>
+<li><a class="snav-lesson" href="unit-11-2.html"><span class="ln">11.2</span> Factoring trinomials x²+bx+c</a></li>
+<li><a class="snav-lesson" href="unit-11-3.html"><span class="ln">11.3</span> Special patterns</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-12.html">Unit 12. Quadratic Functions &amp; Equations (the capstone)</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-12-1.html"><span class="ln">12.1</span> Square roots &amp; simplifying radicals</a></li>
+<li><a class="snav-lesson" href="unit-12-2.html"><span class="ln">12.2</span> The simplest quadratics (x²=9 → two solutions)</a></li>
+<li><a class="snav-lesson" href="unit-12-3.html"><span class="ln">12.3</span> Solving by factoring (zero-product property)</a></li>
+<li><a class="snav-lesson" href="unit-12-4.html"><span class="ln">12.4</span> Completing the square</a></li>
+<li><a class="snav-lesson" href="unit-12-5.html"><span class="ln">12.5</span> The quadratic formula &amp; the discriminant</a></li>
+<li><a class="snav-lesson" href="unit-12-6.html"><span class="ln">12.6</span> Graphing parabolas</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="appendix.html">Appendix. Data &amp; Statistics</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="appendix-1.html"><span class="ln">A.1</span> One-variable statistics — center &amp; spread</a></li>
+<li><a class="snav-lesson" href="appendix-2.html"><span class="ln">A.2</span> Two-variable data — line of best fit, correlation vs. causation</a></li>
+<li><a class="snav-lesson" href="appendix-3.html"><span class="ln">A.3</span> Two-way tables</a></li>
+</ol>
+</li>
+</ol></nav>
+</aside>
+<div class="content">
+<main>
+<div class="kicker">Unit 8 · Lesson 8.3</div><h1>Absolute value: graphs &amp; distance</h1>
+
+
+<p>Sometimes what you care about is <em>how far</em>, not which direction. A part machined to "within 0.5 millimeters of target" can be a little over or a little under. What matters is the size of the gap, not its sign. That idea, distance with the direction thrown away, is exactly what absolute value measures.</p>
+<p>Picture the number line. The <strong>absolute value</strong> of a number, written |x|, is simply how far x sits from 0, and distance is never negative. So |5| = 5, because 5 is five steps from 0. And |−5| = 5 too, because −5 is also five steps from 0, just on the other side. Different inputs, same distance. (This builds on the number line from Unit 1; here it becomes a tool.)</p>
+<p>Once you read |x| as distance, its graph almost draws itself. Plot y = |x| at a few inputs: at x = −3 you get 3, at −2 you get 2, at −1 you get 1, at 0 you get 0, then 1, 2, 3 going right. Those points are (-3,3), (-2,2), (-1,1), (0,0), (1,1), (2,2), (3,3), and joined up they make a <strong>V</strong> sitting on the origin <a class="refcode" id="8.3.f1" href="#8.3.f1">8.3.f1</a>.</p>
+<figure class="fig" id="fig-8.3.f1"><svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+  <line x1="18.0" y1="188.0" x2="222.0" y2="188.0" stroke="#888"/>
+  <text x="216.0" y="184.0" font-size="10" fill="#888">x</text>
+  <line x1="120.0" y1="18.0" x2="120.0" y2="222.0" stroke="#888"/>
+  <text x="124.0" y="26.0" font-size="10" fill="#888">y</text>
+  <polyline fill="none" stroke="#8e44ad" stroke-width="2.5" points="18.0,52.0 120.0,188.0 222.0,52.0"/>
+  <circle cx="120.0" cy="188.0" r="3.5" fill="#c0392b"/>
+  <text x="125.0" y="182.0" font-size="10" fill="#c0392b">vertex (0,0)</text>
+  <circle cx="196.5" cy="86.0" r="3.5" fill="#c0392b"/>
+  <text x="201.5" y="80.0" font-size="10" fill="#c0392b">(3,3)</text>
+</svg><figcaption><b>Figure 8.3.f1</b></figcaption></figure>
+
+<p>The right arm climbs at slope +1, the left arm climbs at slope −1, and the whole thing rests on the x-axis, never dipping below it, because an output that <em>is</em> a distance can't be negative. Shifts just slide that V around without changing its shape: y = |x| + 2 lifts it up 2, y = |x| − 3 drops it down 3, and y = |x − 1| slides it right 1, so its vertex moves to where the inside equals 0. Those are pictures to read off, not equations to solve.</p>
+<p>Now the solving, read straight from the distance picture. There are three shapes, and each one is a plain-language question about distance from 0:</p>
+<ul>
+<li>|x| = k asks "which numbers are exactly k from 0?" Two of them, one each way: <strong>x = k or x = -k</strong>. (This needs k ≥ 0. At k = 0 the two answers collapse to the single x = 0; if k is negative there's no solution, since no distance is negative.)</li>
+<li>|x| &lt; k asks "which numbers are within k of 0?" Everything in the band around 0: <strong>-k &lt; x &lt; k</strong>. That's an <em>and</em>, a single segment, and it's a direct payoff of Lesson 8.2. (This needs k &gt; 0.)</li>
+<li>|x| &gt; k asks "which numbers are more than k from 0?" Everything out past k on either side: <strong>x &lt; -k or x &gt; k</strong>. That's an <em>or</em>, two rays. (This holds for any k ≥ 0.)</li>
+</ul>
+<p>One setup step comes before you read any of those off: get the absolute value by itself first. If it's scaled, as in 2|x| ≤ 8, divide to isolate it (here divide by 2 to get |x| ≤ 4), and <em>then</em> read the distance. Keep that isolating step a division by a <em>positive</em> number for now.</p>
+<div class="cl-terms">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6.5C9.5 5 6 5 3.5 6.5V18C6 16.5 9.5 16.5 12 18C14.5 16.5 18 16.5 20.5 18V6.5C18 5 14.5 5 12 6.5Z"/><path d="M12 6.5V18"/></svg>New words</span></p>
+<ul>
+<li><a class="refcode" id="8.3.d1" href="#8.3.d1">8.3.d1</a> <strong>Absolute value |x|:</strong> the distance of x from 0 on the number line; always ≥ 0. |5| = 5 and |-5| = 5, both are 5 units from 0 (callback to Unit 1.4).</li>
+<li><a class="refcode" id="8.3.d2" href="#8.3.d2">8.3.d2</a> <strong>The graph y = |x|:</strong> a <strong>V</strong> with its vertex at the origin (the right arm rises at slope +1, the left arm at slope -1), and it never dips below the x-axis, because an output that <em>is</em> a distance can't be negative.</li>
+<li><a class="refcode" id="8.3.d3" href="#8.3.d3">8.3.d3</a> <strong>Simple shifts of the V:</strong> y = |x| + 2 lifts the whole V up 2; y = |x| − 3 drops it 3; y = |x − 1| slides it right 1 (the vertex moves to where the inside equals 0). These are <em>graph</em> moves read off the picture, not algebra to solve.</li>
+</ul>
+</div>
+<section class="worked">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19.5V15L15.5 4.5 19.5 8.5 9 19Z"/><path d="M13.5 6.5 17.5 10.5"/></svg>Worked example</span></p>
+<p><em>Example: inclusive "within".</em> Solve |x| ≤ 2. This asks for the numbers within 2 of 0, and the ≤ includes the boundary, so -2 ≤ x ≤ 2. Filled circles at -2 and 2, shade the segment between. Solution: <strong>-2 ≤ x ≤ 2</strong>.</p>
+<p><em>Example: the graph y = |x|.</em> Plot (-2,2), (-1,1), (0,0), (1,1), (2,2): a <strong>V</strong> with vertex (0,0), arms at slope ±1, resting on the x-axis. Then y = |x| − 2 is the same V dropped 2, with vertex (0,-2), and y = |x − 1| is it slid right 1, with vertex (1,0). Nothing to solve here, you're just reading the picture.</p>
+<p><em>Example: "outside" (or).</em> Solve |x| &gt; 2. This asks for the numbers more than 2 from 0, which is <strong>x &lt; -2 or x &gt; 2</strong>. Open circles at -2 and 2, shade outward in two rays.</p>
+<p><em>Example: isolate first.</em> Solve 2|x| ≤ 8. Divide both sides by 2 first; it's a positive 2, so nothing flips: |x| ≤ 4. That's the numbers within 4 of 0, so <strong>-4 ≤ x ≤ 4</strong>. Filled circles at -4 and 4, shade between.</p>
+<p><em>Example: no solution / all reals.</em> Distance is never negative, so you can read these straight off the picture without any algebra. |x| = -3 has <strong>no solution</strong>, because nothing sits a negative distance from 0. |x| &lt; -2 has <strong>no solution</strong> for the same reason: no distance is below -2. And |x| &gt; -1 is true for <strong>every</strong> real x, since every distance is more than -1.</p>
+<p>That last example points at the trap to watch here. It's tempting to give |x| = k a single answer and stop, but distance runs both ways, so expect two: x = k and x = −k (the lone exception is k = 0).</p>
+<p>And a quick self-check on the <em>and</em>/<em>or</em> split: "within" or "less than" gives one segment between -k and k, while "outside" or "greater than" gives two rays. If you're ever unsure which, don't reach for a memorized rule. Go back to the distance question and re-derive it.</p>
+</section>
+<div class="cl-check">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M9.6 9.6a2.6 2.6 0 1 1 3.3 2.5c-.9.3-1.4.9-1.4 1.8"/><circle cx="11.5" cy="16.6" r=".9" fill="currentColor" stroke="none"/></svg>Check yourself</span></p>
+<ol>
+<li><a class="refcode" id="8.3.c1" href="#8.3.c1">8.3.c1</a> Sketch y = |x| in words: where's the vertex, what are the arm slopes, and why does it never go below the x-axis? Then describe y = |x| + 1. (Vertex at the origin (0,0); right arm slope +1, left arm slope −1; it stays at or above the axis because an output that is a distance can't be negative. y = |x| + 1 is the same V lifted up 1, vertex at (0,1).)</li>
+<li><a class="refcode" id="8.3.c2" href="#8.3.c2">8.3.c2</a> Why does |x| &lt; 4 become an <em>and</em> (a single segment) while |x| &gt; 4 becomes an <em>or</em> (two rays)? Use the distance picture. ("Within 4 of 0" means closer than 4 on both sides at once: an <em>and</em>, the band -4 &lt; x &lt; 4. "More than 4 from 0" means out past 4 on either side: an <em>or</em>, the two rays x &lt; -4 or x &gt; 4.)</li>
+<li><a class="refcode" id="8.3.c3" href="#8.3.c3">8.3.c3</a> What is the solution of |x| = -3? Of |x| &gt; -3? Explain each from "distance is never negative." (|x| = -3 has no solution: nothing sits a negative distance from 0. |x| &gt; -3 is all real numbers: every distance is greater than -3, so every x qualifies.)</li>
+</ol>
+<p>For practice, stay on the core path: everything here is centered at 0, so you can read each one off the distance picture. Give both solutions for the equations, describe the graph for the inequalities, and check your answers by substituting.</p>
+<p><strong>Practice problems (core, the mastery path):</strong> symmetric, centered at 0. <em>(Problems 2, 3, 5, 6, 7 shift the center off 0, so they've moved to the Reach set below.)</em></p>
+<p><em>Equations (give both solutions; check):</em></p>
+<ol>
+<li><a class="refcode" id="8.3.1" href="#8.3.1">8.3.1</a> |x| = 4</li>
+<li><a class="refcode" id="8.3.2" href="#8.3.2">8.3.2</a> |2x| = 8</li>
+<li><a class="refcode" id="8.3.3" href="#8.3.3">8.3.3</a> |x| = 7</li>
+</ol>
+<p><em>Inequalities (solve; describe the graph):</em></p>
+<ol start="8">
+<li><a class="refcode" id="8.3.4" href="#8.3.4">8.3.4</a> |2x| &lt; 6</li>
+<li><a class="refcode" id="8.3.5" href="#8.3.5">8.3.5</a> |x| &gt; 5</li>
+<li><a class="refcode" id="8.3.6" href="#8.3.6">8.3.6</a> 2|x| ≤ 10</li>
+<li><a class="refcode" id="8.3.7" href="#8.3.7">8.3.7</a> |x| &lt; -2</li>
+<li><a class="refcode" id="8.3.8" href="#8.3.8">8.3.8</a> |x| &gt; -1</li>
+</ol>
+</div>
+<details class="answers">
+<summary><span class="tw"></span><span class="eyebrow">Answers</span><span class="hint">Try each one yourself first, then open to check.</span></summary>
+<div class="ak-body">
+<ol>
+<li>x = 4 or x = -4. (|4| = 4, |-4| = 4.)</li>
+<li>x = 4 or x = -4. (|2·4| = 8, |2·(-4)| = 8.)</li>
+<li>x = 7 or x = -7. (|7| = 7, |-7| = 7.)</li>
+<li>-3 &lt; x &lt; 3 — |2x| &lt; 6 ⇒ -6 &lt; 2x &lt; 6; open circles at -3 and 3, shade between (<em>and</em>).</li>
+<li>x &lt; -5 or x &gt; 5 — "more than 5 from 0"; open circles at -5 and 5, shade outward (<em>or</em>).</li>
+<li>-5 ≤ x ≤ 5 — isolate: divide by 2 → |x| ≤ 5; filled circles at -5 and 5, shade between.</li>
+<li><strong>no solution</strong> — a distance can't be less than -2.</li>
+<li><strong>all real numbers</strong> — every distance is more than -1.</li>
+</ol>
+</div>
+</details>
+<div class="ldiv" aria-hidden="true"><i></i><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3.5 20.5 12 12 20.5 3.5 12Z"/></svg><i></i></div>
+<h3 id="reach-beyond-algebra-1-optional-off-the-mastery-path">Reach beyond Algebra 1 (optional, off the mastery path)</h3>
+<p>This part is here so you can see where the idea goes next. It isn't part of the Algebra 1 target, so get the distance-from-0 core above solid first and treat the rest as a preview.</p>
+<p>When the center moves off 0, as in |x − 3| = 5 or |2x − 1| = 7, you can't just read x = ±k anymore. The move is to split into <strong>two cases</strong> (the inside equals +k, or the inside equals −k), solve each, and name the answer set. Here's that method on one example.</p>
+<p><em>w1: |x − 3| = 5.</em> Two cases: x − 3 = 5 → x = 8, or x − 3 = -5 → x = -2. Solutions: <strong>x = 8 or x = -2</strong>. Check: |8 − 3| = 5, |-2 − 3| = 5. <em>(Pictured: "distance 5 from 3.")</em></p>
+<p><em>A few more, same idea.</em>
+<em>w2: |x − 3| &lt; 5.</em> Within 5 of 3 → -5 &lt; x − 3 &lt; 5 → -2 &lt; x &lt; 8 (interval (-2, 8)).
+<em>w3: |x − 3| &gt; 5.</em> More than 5 from 3 → x − 3 &lt; -5 or x − 3 &gt; 5 → x &lt; -2 or x &gt; 8.
+<em>w4: |x + 2| = 3.</em> |x + 2| = |x − (-2)|, distance 3 from -2 → x = 1 or x = -5.</p>
+<p><em>Reach practice (optional):</em></p>
+<ol start="2">
+<li>|x + 2| = 3</li>
+<li>|x - 1| = 4</li>
+<li>|2x - 1| = 7</li>
+<li>|x + 1| &lt; 3</li>
+<li>|x - 2| ≥ 4</li>
+</ol>
+<p><strong>Reach answer key:</strong></p>
+<ol start="2">
+<li>x = 1 or x = -5. (|1+2| = 3, |-5+2| = 3.)</li>
+<li>x = 5 or x = -3. (|5-1| = 4, |-3-1| = 4.)</li>
+<li>x = 4 or x = -3. (2x-1 = 7 → x = 4; 2x-1 = -7 → x = -3.)</li>
+<li>-4 &lt; x &lt; 2 — "within 3 of -1"; interval (-4, 2).</li>
+<li>x ≤ -2 or x ≥ 6 — "at least 4 from 2"; two rays.</li>
+</ol>
+<nav class="pagenav" aria-label="Previous and next page">
+<a class="pn-prev" href="unit-08-2.html"><span class="pn-dir">&larr;&nbsp;Back</span><span class="pn-title">Lesson 8.2</span></a>
+<a class="pn-next" href="unit-08-4.html"><span class="pn-dir">Next&nbsp;&rarr;</span><span class="pn-title">Lesson 8.4</span></a>
+</nav>
+</main>
+<footer><p>A friendly Algebra 1 textbook, made to be read alongside the Claude tutor. Math by KaTeX.</p></footer>
+</div>
+</div>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  renderMathInElement(document.body, {delimiters: [{left: "$$", right: "$$", display: true}], throwOnError: false});
+  var root = document.documentElement, body = document.body;
+  document.getElementById("theme").addEventListener("click", function () {
+    root.classList.toggle("dark");
+    localStorage.setItem("a1-theme", root.classList.contains("dark") ? "dark" : "light");
+  });
+  var menu = document.getElementById("menu");
+  menu.addEventListener("click", function () {
+    var open = body.classList.toggle("nav-open");
+    menu.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+  var sn = document.getElementById("sidenav");
+  if (sn) sn.addEventListener("click", function (e) { if (e.target.closest("a")) body.classList.remove("nav-open"); });
+});
+</script>
+</body>
+</html>

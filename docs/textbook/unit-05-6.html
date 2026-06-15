@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>x-intercepts, graphing by intercepts &amp; standard form — Algebra 1</title>
+<script>try{if(localStorage.getItem("a1-theme")==="dark")document.documentElement.classList.add("dark");}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..40,500..600&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="textbook.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous">
+</head>
+<body data-surface="textbook">
+<header class="topbar">
+  <button id="menu" class="menu" type="button" aria-label="Open or close the contents menu" aria-expanded="false">☰&nbsp;Contents</button>
+  <a class="home" href="index.html">Algebra&nbsp;1</a>
+  <span class="sp"></span>
+  <button id="theme" type="button" aria-label="Toggle light or dark theme">◐&nbsp;Theme</button>
+</header>
+<div class="shell">
+<aside class="sidenav" id="sidenav">
+<nav class="snav" aria-label="Contents">
+<a class="snav-top" href="how-to-use.html">How to use this book</a>
+<a class="snav-top" href="index.html">All units</a>
+<ol class="snav-units">
+<li class="">
+<a class="snav-unit" href="unit-01.html">Unit 1. Foundations &amp; the Language of Algebra</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-01-1.html"><span class="ln">1.1</span> Variables and the meaning of equations</a></li>
+<li><a class="snav-lesson" href="unit-01-2.html"><span class="ln">1.2</span> The number system &amp; the number line</a></li>
+<li><a class="snav-lesson" href="unit-01-3.html"><span class="ln">1.3</span> Order of operations</a></li>
+<li><a class="snav-lesson" href="unit-01-4.html"><span class="ln">1.4</span> Negative numbers</a></li>
+<li><a class="snav-lesson" href="unit-01-5.html"><span class="ln">1.5</span> Expressions vs. equations; evaluating expressions</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-02.html">Unit 2. Solving Linear Equations</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-02-1.html"><span class="ln">2.1</span> Inverse operations &amp; one-step equations</a></li>
+<li><a class="snav-lesson" href="unit-02-2.html"><span class="ln">2.2</span> Two-step equations</a></li>
+<li><a class="snav-lesson" href="unit-02-3.html"><span class="ln">2.3</span> Combining like terms &amp; the distributive property</a></li>
+<li><a class="snav-lesson" href="unit-02-4.html"><span class="ln">2.4</span> Variables on both sides</a></li>
+<li><a class="snav-lesson" href="unit-02-5.html"><span class="ln">2.5</span> Equations with fractions (with two Fraction Refreshers)</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-03.html">Unit 3. Proportional Reasoning (the bridge to linearity)</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-03-1.html"><span class="ln">3.1</span> Ratios and rates</a></li>
+<li><a class="snav-lesson" href="unit-03-2.html"><span class="ln">3.2</span> Proportions &amp; cross-multiplication</a></li>
+<li><a class="snav-lesson" href="unit-03-3.html"><span class="ln">3.3</span> Percents</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-04.html">Unit 4. Introducing Functions</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-04-1.html"><span class="ln">4.1</span> What is a function</a></li>
+<li><a class="snav-lesson" href="unit-04-2.html"><span class="ln">4.2</span> Function notation f(x), domain &amp; range</a></li>
+<li><a class="snav-lesson" href="unit-04-3.html"><span class="ln">4.3</span> Multiple representations; linear vs. nonlinear</a></li>
+</ol>
+</li>
+<li class="active">
+<a class="snav-unit" href="unit-05.html">Unit 5. Linear Functions &amp; Their Graphs</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-05-1.html"><span class="ln">5.1</span> The coordinate plane</a></li>
+<li><a class="snav-lesson" href="unit-05-2.html"><span class="ln">5.2</span> Graphing linear equations from a table</a></li>
+<li><a class="snav-lesson" href="unit-05-3.html"><span class="ln">5.3</span> Slope</a></li>
+<li><a class="snav-lesson" href="unit-05-4.html"><span class="ln">5.4</span> Slope-intercept form y = mx + b</a></li>
+<li><a class="snav-lesson" href="unit-05-5.html"><span class="ln">5.5</span> Writing equations of lines</a></li>
+<li><a class="snav-lesson cur" href="unit-05-6.html"><span class="ln">5.6</span> x-intercepts, graphing by intercepts &amp; standard form</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-06.html">Unit 6. Modeling &amp; Translation</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-06-1.html"><span class="ln">6.1</span> Translating words into expressions and equations</a></li>
+<li><a class="snav-lesson" href="unit-06-2.html"><span class="ln">6.2</span> Classic word problems (number, age, distance, value &amp; relationship)</a></li>
+<li><a class="snav-lesson" href="unit-06-3.html"><span class="ln">6.3</span> Scatter plots &amp; line of best fit (a first taste of data)</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-07.html">Unit 7. Systems of Equations</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-07-1.html"><span class="ln">7.1</span> Solving by graphing</a></li>
+<li><a class="snav-lesson" href="unit-07-2.html"><span class="ln">7.2</span> Substitution</a></li>
+<li><a class="snav-lesson" href="unit-07-3.html"><span class="ln">7.3</span> Elimination</a></li>
+<li><a class="snav-lesson" href="unit-07-4.html"><span class="ln">7.4</span> Special cases &amp; applications</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-08.html">Unit 8. Inequalities</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-08-1.html"><span class="ln">8.1</span> One-variable inequalities</a></li>
+<li><a class="snav-lesson" href="unit-08-2.html"><span class="ln">8.2</span> Compound inequalities</a></li>
+<li><a class="snav-lesson" href="unit-08-3.html"><span class="ln">8.3</span> Absolute value: graphs &amp; distance</a></li>
+<li><a class="snav-lesson" href="unit-08-4.html"><span class="ln">8.4</span> Graphing linear inequalities (two variables) &amp; systems</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-09.html">Unit 9. Sequences &amp; Exponential Functions</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-09-1.html"><span class="ln">9.1</span> Arithmetic &amp; geometric sequences as functions</a></li>
+<li><a class="snav-lesson" href="unit-09-2.html"><span class="ln">9.2</span> Exponential growth &amp; decay; linear vs. exponential</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-10.html">Unit 10. Exponents &amp; Polynomials</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-10-1.html"><span class="ln">10.1</span> Exponent rules (including zero &amp; negative exponents)</a></li>
+<li><a class="snav-lesson" href="unit-10-2.html"><span class="ln">10.2</span> Scientific notation</a></li>
+<li><a class="snav-lesson" href="unit-10-3.html"><span class="ln">10.3</span> Polynomials — terms, degree, standard form; add &amp; subtract</a></li>
+<li><a class="snav-lesson" href="unit-10-4.html"><span class="ln">10.4</span> Multiplying polynomials</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-11.html">Unit 11. Factoring</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-11-1.html"><span class="ln">11.1</span> Greatest common factor (GCF)</a></li>
+<li><a class="snav-lesson" href="unit-11-2.html"><span class="ln">11.2</span> Factoring trinomials x²+bx+c</a></li>
+<li><a class="snav-lesson" href="unit-11-3.html"><span class="ln">11.3</span> Special patterns</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-12.html">Unit 12. Quadratic Functions &amp; Equations (the capstone)</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-12-1.html"><span class="ln">12.1</span> Square roots &amp; simplifying radicals</a></li>
+<li><a class="snav-lesson" href="unit-12-2.html"><span class="ln">12.2</span> The simplest quadratics (x²=9 → two solutions)</a></li>
+<li><a class="snav-lesson" href="unit-12-3.html"><span class="ln">12.3</span> Solving by factoring (zero-product property)</a></li>
+<li><a class="snav-lesson" href="unit-12-4.html"><span class="ln">12.4</span> Completing the square</a></li>
+<li><a class="snav-lesson" href="unit-12-5.html"><span class="ln">12.5</span> The quadratic formula &amp; the discriminant</a></li>
+<li><a class="snav-lesson" href="unit-12-6.html"><span class="ln">12.6</span> Graphing parabolas</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="appendix.html">Appendix. Data &amp; Statistics</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="appendix-1.html"><span class="ln">A.1</span> One-variable statistics — center &amp; spread</a></li>
+<li><a class="snav-lesson" href="appendix-2.html"><span class="ln">A.2</span> Two-variable data — line of best fit, correlation vs. causation</a></li>
+<li><a class="snav-lesson" href="appendix-3.html"><span class="ln">A.3</span> Two-way tables</a></li>
+</ol>
+</li>
+</ol></nav>
+</aside>
+<div class="content">
+<main>
+<div class="kicker">Unit 5 · Lesson 5.6</div><h1>x-intercepts, graphing by intercepts &amp; standard form</h1>
+
+
+<p>Two points fix a line, and the two easiest points to find are usually where the line crosses the axes. This lesson adds the <strong>x-intercept</strong> to the y-intercept you already know, uses the pair of them to graph a line fast, and introduces <strong>standard form</strong>, Ax + By = C. That's the form lines often arrive in, where no slope or intercept is sitting in plain sight.</p>
+<p>Start with what an intercept actually is: the spot where the line crosses an axis. On the x-axis you haven't gone up or down at all, so y = 0 there. On the y-axis you haven't gone across at all, so x = 0 there. That gives a clean rule for finding either one: set the <em>other</em> coordinate to 0 and solve for what's left.</p>
+<p>You already do half of this. Back in Lesson 5.4 you found the y-intercept by putting x = 0 (that's f(0) = b). The x-intercept is the very same move with the roles swapped: put y = 0 and solve for x.</p>
+<p>Two intercepts are two points, and two points draw a line, so plot the pair and connect them. One safety habit worth keeping: compute a <em>third</em> point as a checkpoint. If all three line up, you can trust the picture; if the third one misses, recheck your arithmetic before you draw, because a wrong graph is worse than no graph.</p>
+<p>Now standard form, Ax + By = C, where A, B, and C are integers (and A is kept positive by convention). It treats x and y even-handedly, with neither one solved for. That makes it tidy for reading off intercepts but useless for reading slope until you rearrange it.</p>
+<p>To get the intercepts, the same zero-out move works: set y = 0 for the x-intercept, set x = 0 for the y-intercept. To get the slope, isolate y, the Unit-2 move: Ax + By = C becomes y = −(A/B)x + C/B, so the slope is −A/B and the y-intercept is C/B.</p>
+<div class="cl-terms">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6.5C9.5 5 6 5 3.5 6.5V18C6 16.5 9.5 16.5 12 18C14.5 16.5 18 16.5 20.5 18V6.5C18 5 14.5 5 12 6.5Z"/><path d="M12 6.5V18"/></svg>New words</span></p>
+<ul>
+<li><a class="refcode" id="5.6.d1" href="#5.6.d1">5.6.d1</a> <strong>x-intercept:</strong> the point (a, 0) where the line crosses the x-axis. Because every point on the x-axis has y = 0, you find it by setting y = 0 and solving for x. (Mirror of the y-intercept (0, b) from 5.4, where x = 0.)</li>
+<li><a class="refcode" id="5.6.d2" href="#5.6.d2">5.6.d2</a> <strong>Standard form:</strong> Ax + By = C, with A, B, C integers (and A ≥ 0 by convention). It treats x and y even-handedly, with neither solved for. To read slope and y-intercept, solve for y; to graph fast, use the two intercepts.</li>
+</ul>
+</div>
+<section class="worked">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19.5V15L15.5 4.5 19.5 8.5 9 19Z"/><path d="M13.5 6.5 17.5 10.5"/></svg>Worked example</span></p>
+<ol>
+<li>
+<p><a class="refcode" id="5.6.w1" href="#5.6.w1">5.6.w1</a> Find the x-intercept of y = 2x - 6. Set y = 0:
+$$0 = 2x - 6 \;\Rightarrow\; 2x = 6 \;\Rightarrow\; x = 3$$
+So the x-intercept is <strong>(3, 0)</strong>. For contrast, its y-intercept is (0, −6), found by putting x = 0. Notice both intercepts come from the <em>same</em> move: zero out the other variable.</p>
+</li>
+<li>
+<p><a class="refcode" id="5.6.w2" href="#5.6.w2">5.6.w2</a> Graph y = -2x + 4 from its two intercepts. The x-intercept: set y = 0 → 0 = −2x + 4 → x = 2 → <strong>(2, 0)</strong>. The y-intercept: set x = 0 → y = 4 → <strong>(0, 4)</strong> (or just read b = 4). Plot those two and draw the line. Checkpoint third point at x = 1: −2(1) + 4 = 2, so (1, 2), which lines up with the two intercepts, so the graph is trustworthy. Here's the line through the two intercepts, with the checkpoint marked <a class="refcode" id="5.6.f1" href="#5.6.f1">5.6.f1</a>.</p>
+</li>
+</ol>
+<figure class="fig" id="fig-5.6.f1"><svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+  <line x1="18.0" y1="171.0" x2="222.0" y2="171.0" stroke="#888"/>
+  <text x="216.0" y="167.0" font-size="10" fill="#888">x</text>
+  <line x1="58.8" y1="18.0" x2="58.8" y2="222.0" stroke="#888"/>
+  <text x="62.8" y="26.0" font-size="10" fill="#888">y</text>
+  <line x1="18.0" y1="18.0" x2="222.0" y2="273.0" stroke="#2980b9" stroke-width="2.5"/>
+  <circle cx="58.8" cy="69.0" r="3.5" fill="#c0392b"/>
+  <text x="63.8" y="63.0" font-size="10" fill="#c0392b">(0,4)</text>
+  <circle cx="140.4" cy="171.0" r="3.5" fill="#c0392b"/>
+  <text x="145.4" y="165.0" font-size="10" fill="#c0392b">x-int (2,0)</text>
+  <text x="128.07999999999998" y="146.6" font-size="10" fill="#2980b9">2x + y = 4</text>
+</svg><figcaption><b>Figure 5.6.f1</b></figcaption></figure>
+<table>
+<thead>
+<tr>
+<th>x</th>
+<th>y = -2x + 4</th>
+<th>point</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>4</td>
+<td>(0,4) y-intercept</td>
+</tr>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>(1,2) checkpoint</td>
+</tr>
+<tr>
+<td>2</td>
+<td>0</td>
+<td>(2,0) x-intercept</td>
+</tr>
+</tbody>
+</table>
+<ol start="3">
+<li>
+<p><a class="refcode" id="5.6.w3" href="#5.6.w3">5.6.w3</a> Standard form 3x + 4y = 12: read both intercepts, then convert to slope-intercept. The x-intercept (y = 0): 3x = 12 → x = 4 → <strong>(4, 0)</strong>. The y-intercept (x = 0): 4y = 12 → y = 3 → <strong>(0, 3)</strong>. Now solve for y: 3x + 4y = 12 → 4y = -3x + 12 → $$y = -\tfrac34 x + 3$$ so the slope is −3/4 and the y-intercept is (0, 3), which matches the intercept we just found, a nice confirmation.</p>
+</li>
+<li>
+<p><a class="refcode" id="5.6.w4" href="#5.6.w4">5.6.w4</a> Convert y = (3/4)x - 2 to standard form. Clear the fraction first by multiplying everything by 4, then gather x and y on the left:
+$$y = \tfrac34 x - 2 \;\Rightarrow\; 4y = 3x - 8 \;\Rightarrow\; 3x - 4y = 8$$
+Standard form keeps A positive, so we wrote it with the x-term positive. Check: at x = 0, −4y = 8 → y = −2, the original intercept, so the conversion held.</p>
+</li>
+<li>
+<p><a class="refcode" id="5.6.w5" href="#5.6.w5">5.6.w5</a> Read intercepts straight off standard form 2x + 5y = 10. Think of it as a budget: $2 items and $5 items totaling $10. The x-intercept: 2x = 10 → <strong>(5, 0)</strong> (all $2 items, five of them). The y-intercept: 5y = 10 → <strong>(0, 2)</strong> (all $5 items, two of them). Standard form is tidy for this, since each intercept just divides C by one coefficient.</p>
+</li>
+</ol>
+<p>It's easy to zero out the wrong variable: for the <em>x</em>-intercept you set <em>y</em> = 0, not x = 0. If you set x = 0 you'll get the y-intercept by mistake, so anchor it to the picture: on the x-axis, how far up are you? Zero. So y = 0 there.</p>
+<p>A second slip is reading slope off standard form before solving for y: from 3x + 4y = 12 the slope is <em>not</em> 3; it's −A/B = −3/4, and only after you isolate y. Whenever you go to read a slope, first ask whether the equation is solved for y yet.</p>
+<p>And one edge case: a line through the origin, like y = 2x, crosses both axes at the same point (0, 0), so the two-intercept method gives you only one point; just plug in any other x to get a second.</p>
+</section>
+<div class="cl-check">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M9.6 9.6a2.6 2.6 0 1 1 3.3 2.5c-.9.3-1.4.9-1.4 1.8"/><circle cx="11.5" cy="16.6" r=".9" fill="currentColor" stroke="none"/></svg>Check yourself</span></p>
+<ol>
+<li><a class="refcode" id="5.6.c1" href="#5.6.c1">5.6.c1</a> For 5x + 2y = 20, find both intercepts and say which two points you'd plot to graph it. (x-intercept: 5x = 20 → (4, 0); y-intercept: 2y = 20 → (0, 10); plot (4, 0) and (0, 10).)</li>
+<li><a class="refcode" id="5.6.c2" href="#5.6.c2">5.6.c2</a> A classmate sets x = 0 to find the <em>x</em>-intercept. What did they actually find, and what should they have done? (Setting x = 0 gives the <em>y</em>-intercept; to find the x-intercept they should set y = 0 and solve for x.)</li>
+<li><a class="refcode" id="5.6.c3" href="#5.6.c3">5.6.c3</a> Put y = (2/3)x - 1 into standard form Ax + By = C with integer coefficients. What are A, B, and C? (Multiply by 3: 3y = 2x − 3 → 2x − 3y = 3, so A = 2, B = −3, C = 3.)</li>
+</ol>
+<p>You can now find an x-intercept by setting y = 0, graph a line fast from its two intercepts with a third point as a checkpoint, and move between standard form and slope-intercept form in both directions.</p>
+<p>The practice mixes finding intercepts, converting in each direction, and graphing, so the first step shifts from one problem to the next. Working out which step to take is exactly what makes the skill durable. Answers and the worked examples are there if one stalls you.</p>
+</div>
+<section class="practice">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4.5" width="15.5" height="15.5" rx="2.5"/><path d="M7.5 10 9 11.5 12 8.5"/><path d="M14 10H16.5"/><path d="M7.5 15H16.5"/></svg>Practice</span></p>
+<p><em>Find the x-intercept (set y = 0):</em></p>
+<ol>
+<li><a class="refcode" id="5.6.1" href="#5.6.1">5.6.1</a> y = 2x - 8</li>
+<li><a class="refcode" id="5.6.2" href="#5.6.2">5.6.2</a> y = -x + 5</li>
+<li><a class="refcode" id="5.6.3" href="#5.6.3">5.6.3</a> y = 3x + 12</li>
+<li><a class="refcode" id="5.6.4" href="#5.6.4">5.6.4</a> y = (1/2)x - 4</li>
+</ol>
+<p><em>Find BOTH intercepts of the standard-form line:</em></p>
+<ol start="5">
+<li><a class="refcode" id="5.6.5" href="#5.6.5">5.6.5</a> 4x + 3y = 12</li>
+<li><a class="refcode" id="5.6.6" href="#5.6.6">5.6.6</a> 2x - 5y = 10</li>
+</ol>
+<p><em>Convert standard form to slope-intercept (solve for y); give slope and y-intercept:</em></p>
+<ol start="7">
+<li><a class="refcode" id="5.6.7" href="#5.6.7">5.6.7</a> 2x + y = 7</li>
+<li><a class="refcode" id="5.6.8" href="#5.6.8">5.6.8</a> 3x - 4y = 8</li>
+</ol>
+<p><em>Convert to standard form Ax + By = C (integer coefficients, A ≥ 0):</em></p>
+<ol start="9">
+<li><a class="refcode" id="5.6.9" href="#5.6.9">5.6.9</a> y = 2x + 3</li>
+<li><a class="refcode" id="5.6.10" href="#5.6.10">5.6.10</a> y = (2/3)x - 1</li>
+</ol>
+<p><em>Graph from intercepts / mixed:</em></p>
+<ol start="11">
+<li><a class="refcode" id="5.6.11" href="#5.6.11">5.6.11</a> For 5x + 2y = 20, name the two intercept points you'd plot.</li>
+<li><a class="refcode" id="5.6.12" href="#5.6.12">5.6.12</a> A line crosses the x-axis at (4, 0) and the y-axis at (0, -2). Find its slope, then its slope-intercept equation.</li>
+</ol>
+</section>
+<details class="answers">
+<summary><span class="tw"></span><span class="eyebrow">Answers</span><span class="hint">Try each one yourself first, then open to check.</span></summary>
+<div class="ak-body">
+<ol>
+<li>0 = 2x - 8 → x = 4 → <strong>(4, 0)</strong> · 2. 0 = -x + 5 → x = 5 → <strong>(5, 0)</strong> · 3. 0 = 3x + 12 → x = -4 → <strong>(-4, 0)</strong> · 4. 0 = (1/2)x - 4 → x = 8 → <strong>(8, 0)</strong> · 5. x-int (3, 0), y-int (0, 4) · 6. x-int (5, 0), y-int (0, -2) · 7. y = -2x + 7; slope -2, y-intercept (0, 7) · 8. y = (3/4)x - 2; slope 3/4, y-intercept (0, -2) · 9. -2x + y = 3 ⇒ <strong>2x - y = -3</strong> · 10. multiply by 3: 3y = 2x - 3 ⇒ <strong>2x - 3y = 3</strong> · 11. (4, 0) and (0, 10) · 12. slope = (-2 - 0)/(0 - 4) = 1/2; y = (1/2)x - 2.</li>
+</ol>
+</div>
+</details>
+<div class="ldiv" aria-hidden="true"><i></i><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3.5 20.5 12 12 20.5 3.5 12Z"/></svg><i></i></div>
+<p>Looking back, the pieces of a line now hang together. A table (5.2) gives you points; the graph (5.1 and 5.2) shows them; the slope (5.3) is the steady rate between them; y = mx + b (5.4) lets you read the slope and intercept at a glance; point-slope (5.5) builds the equation from a point and a slope; and intercepts with standard form (5.6) graph a line fast when it isn't solved for y.</p>
+<p>Through all of it, a line <em>is</em> a function: y = mx + b and f(x) = mx + b are one object, and what makes it a line is a constant rate of change. Wherever a real context is attached, read m as the rate and b as the starting value. That reading is exactly what Unit 6 turns words into.</p>
+<nav class="pagenav" aria-label="Previous and next page">
+<a class="pn-prev" href="unit-05-5.html"><span class="pn-dir">&larr;&nbsp;Back</span><span class="pn-title">Lesson 5.5</span></a>
+<a class="pn-next" href="unit-06.html"><span class="pn-dir">Next&nbsp;&rarr;</span><span class="pn-title">Unit 6</span></a>
+</nav>
+</main>
+<footer><p>A friendly Algebra 1 textbook, made to be read alongside the Claude tutor. Math by KaTeX.</p></footer>
+</div>
+</div>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  renderMathInElement(document.body, {delimiters: [{left: "$$", right: "$$", display: true}], throwOnError: false});
+  var root = document.documentElement, body = document.body;
+  document.getElementById("theme").addEventListener("click", function () {
+    root.classList.toggle("dark");
+    localStorage.setItem("a1-theme", root.classList.contains("dark") ? "dark" : "light");
+  });
+  var menu = document.getElementById("menu");
+  menu.addEventListener("click", function () {
+    var open = body.classList.toggle("nav-open");
+    menu.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+  var sn = document.getElementById("sidenav");
+  if (sn) sn.addEventListener("click", function (e) { if (e.target.closest("a")) body.classList.remove("nav-open"); });
+});
+</script>
+</body>
+</html>
