@@ -223,7 +223,7 @@ The tool for capturing a trend is one you already have. A line of best fit is th
 
 Begin with something concrete. Picture a handful of students, and for each one a pair of numbers: hours studied and quiz score. Say a couple of the pairs out loud, so they feel like real people before they become dots. One student studied 1 hour and scored 55, another studied 6 hours and scored 92.
 
-Now the picture. Put each pair on a coordinate plane as a single point, the way you plotted points back in Lesson 5.1: one dot per student, and no line joining the dots. Here's that cloud of points with a line drawn through the middle of it. The dots drift from lower-left to upper-right, and the straight line follows that drift without touching every dot.
+Now the picture. Put each pair on a coordinate plane as a single point, the way you plotted points back in Lesson 5.1: one dot per student, and no line joining the dots. Here's that cloud of points with a line drawn through the middle of it {#6.3.f1}. The dots drift from lower-left to upper-right, and the straight line follows that drift without touching every dot.
 
 When you look at a cloud like that, the first question is just its direction: does it rise, fall, or drift with no clear tilt? This one rises left to right, so we call the **association positive**: more study hours tend to go with higher scores.
 
