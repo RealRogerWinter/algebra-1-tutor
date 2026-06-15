@@ -9,7 +9,7 @@ pixels-per-unit on each line), so equal ratios always land in the same
 column. The numbers printed are verified with plain arithmetic:
 
   (1) 60 mi : 1 hr   ->  60/1 = 120/2 = 180/3 = 60 mi per hr
-  (2) 3 apples : 2 $ ->  3/2  = 6/4   = 9/6   = 1.5 apples per $
+  (2) 3 apples : 2 dollars -> 3/2 = 6/4 = 9/6 = 1.5 apples per dollar
   (3) percent        ->  10/40 = 25%, 20/40 = 50%, 40/40 = 100%
 """
 
@@ -196,7 +196,7 @@ def _apples_dollars():
         pairs=pairs,
         title="Double number line: 3 apples for 2 dollars",
     )
-    math = r"$$\frac{3\text{ apples}}{\$2}=\frac{6\text{ apples}}{\$4}=\frac{9\text{ apples}}{\$6}=\tfrac{3}{2}$$"
+    math = r"$$\frac{3\text{ apples}}{2\text{ dollars}}=\frac{6\text{ apples}}{4\text{ dollars}}=\frac{9\text{ apples}}{6\text{ dollars}}=\tfrac{3}{2}$$"
     return svg + math
 
 
@@ -231,7 +231,7 @@ def samples():
             "html": _miles_hours(),
         },
         {
-            "caption": "3 apples for $2, scaled up to 6 : 4 and 9 : 6",
+            "caption": "3 apples for 2 dollars, scaled up to 6 : 4 and 9 : 6",
             "html": _apples_dollars(),
         },
         {

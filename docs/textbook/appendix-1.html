@@ -149,7 +149,7 @@
 
 <p>Picture five friends comparing quiz scores. Two questions come up almost on their own: what's a <em>typical</em> score, and were they all close together or all over the place? Those are the two questions you ask of any pile of numbers, and statistics has a small toolkit for each. The first question is about the <strong>center</strong> of the data; the second is about its <strong>spread</strong>. This lesson builds four numbers that answer them, and shows you when one of them tells the truer story than the others.</p>
 <p>Here's a way to see all of it at once. Imagine dropping the scores onto a number line, one dot per score. The whole picture of "typical versus spread out" is right there: where the dots pile up is the center, and how far they reach is the spread.</p>
-<figure class="viz"><svg viewBox="0 0 360 200" xmlns="http://www.w3.org/2000/svg" role="img" font-family="sans-serif" style="width:100%;max-width:360px;height:auto;display:block;margin:0 auto" data-slug="hist">
+<figure class="fig viz" id="fig-A.1.f1"><svg viewBox="0 0 360 200" xmlns="http://www.w3.org/2000/svg" role="img" font-family="sans-serif" style="width:100%;max-width:360px;height:auto;display:block;margin:0 auto" data-slug="hist">
   <text x="30" y="162" font-size="10" fill="#888" text-anchor="end">0</text>
   <line x1="38" y1="125" x2="338" y2="125" stroke="#888" stroke-width="1" stroke-opacity="0.25"/>
   <text x="30" y="129" font-size="10" fill="#888" text-anchor="end">1</text>
@@ -176,10 +176,12 @@
   <text x="310.4" y="174" font-size="10" fill="#888" text-anchor="middle">80–90</text>
   <line x1="38" y1="158" x2="338" y2="158" stroke="#888" stroke-width="2.5" stroke-linecap="round"/>
 </svg>
-<div style="text-align:center;color:var(--ink-soft);font-size:.9em;margin-top:.3rem">minutes spent studying</div><figcaption>Histogram of study minutes sorted into five equal-width bins; each bar&#x27;s height is the count in that bin.</figcaption></figure>
-
+<div style="text-align:center;color:var(--ink-soft);font-size:.9em;margin-top:.3rem">minutes spent studying</div><figcaption><b>Figure A.1.f1</b> &mdash; Histogram of study minutes sorted into five equal-width bins; each bar&#x27;s height is the count in that bin.</figcaption></figure>
 <p>The <strong>mean</strong> is the balance point of that line. It's the spot where the dots would balance if the line were a seesaw. The <strong>median</strong> is the dot with equal counts of dots on either side of it. And whether the dots sit in a tight clump or stretch far apart <em>is</em> the spread.</p>
-<figure class="viz"><svg viewBox="0 0 360 150" xmlns="http://www.w3.org/2000/svg" role="img" font-family="sans-serif" style="width:100%;max-width:360px;height:auto;display:block;margin:0 auto" data-slug="box">
+<figure class="illus"><img class="illus-art" src="../assets/illus-a-1-mean-balance.jpg" alt="A row of dots balancing on a single point, picturing the mean as a balance point." loading="lazy"></figure>
+
+<p>Now the symbols, which are just shorthand for those pictures. The mean is the "fair share": add every value and divide by how many there are, the way you'd split a bill evenly. The median is the middle value once you put the list <strong>in order</strong>. The range is the biggest value minus the smallest. It's a first, quick measure of how far the data reaches.</p>
+<figure class="fig viz" id="fig-A.1.f2"><svg viewBox="0 0 360 150" xmlns="http://www.w3.org/2000/svg" role="img" font-family="sans-serif" style="width:100%;max-width:360px;height:auto;display:block;margin:0 auto" data-slug="box">
   <line x1="30" y1="118" x2="330" y2="118" stroke="#888" stroke-width="2.5" stroke-linecap="round"/>
   <line x1="30" y1="118" x2="30" y2="124" stroke="#888" stroke-width="1.5" stroke-linecap="round"/>
   <text x="30" y="138" font-size="11" fill="#888" text-anchor="middle">4</text>
@@ -205,11 +207,7 @@
   <text x="210" y="30" font-size="11" fill="#2980b9" text-anchor="middle" font-weight="600">10</text>
   <text x="270" y="30" font-size="11" fill="#888" text-anchor="middle" font-weight="600">12</text>
 </svg>
-<div style="text-align:center;color:var(--ink-soft);font-size:.9em;margin-top:.4rem">$$\min=6,\ Q_1=7,\ \text{median}=9,\ Q_3=10,\ \max=12$$</div><figcaption>Box-and-whisker plot of nine quiz scores: the box spans Q1 to Q3, the red line is the median, the whiskers reach the min and max.</figcaption></figure>
-
-<figure class="illus"><img class="illus-art" src="../assets/illus-a-1-mean-balance.jpg" alt="A row of dots balancing on a single point, picturing the mean as a balance point." loading="lazy"></figure>
-
-<p>Now the symbols, which are just shorthand for those pictures. The mean is the "fair share": add every value and divide by how many there are, the way you'd split a bill evenly. The median is the middle value once you put the list <strong>in order</strong>. The range is the biggest value minus the smallest. It's a first, quick measure of how far the data reaches.</p>
+<div style="text-align:center;color:var(--ink-soft);font-size:.9em;margin-top:.4rem">$$\min=6,\ Q_1=7,\ \text{median}=9,\ Q_3=10,\ \max=12$$</div><figcaption><b>Figure A.1.f2</b> &mdash; Box-and-whisker plot of nine quiz scores: the box spans Q1 to Q3, the red line is the median, the whiskers reach the min and max.</figcaption></figure>
 <p>That ordering step in the median is small and easy to skip, so make it a habit from the start: line the numbers up smallest to largest <em>first</em>, then point to the middle. It matters because the middle of the unordered list is usually the wrong number. In {4, 8, 6, 5, 2} the middle as written is 6, but ordered it's 2, 4, 5, 6, 8 and the real middle is 5. If there's an even count, there's no single middle dot, so you average the two middle ones.</p>
 <div class="cl-terms">
 <p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6.5C9.5 5 6 5 3.5 6.5V18C6 16.5 9.5 16.5 12 18C14.5 16.5 18 16.5 20.5 18V6.5C18 5 14.5 5 12 6.5Z"/><path d="M12 6.5V18"/></svg>New words</span></p>

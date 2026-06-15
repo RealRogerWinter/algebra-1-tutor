@@ -32,13 +32,13 @@ To peel the +5 away, do the opposite of adding 5: subtract 5. That's the **inver
 $$x+5=12 \;\xrightarrow{\,-5\text{ both sides}\,}\; x=7$$
 When you subtract 5 from x + 5, the +5 goes to zero, and x is left standing alone. Notice what *didn't* happen: nothing got cancelled by magic. The +5 went to zero because you subtracted exactly 5.
 
+<!--viz:interactive_equation#2-->
+
 One move left, and it's the one to build into a habit now: check it. Put your answer back into the original equation and see if both sides match. Here x = 7, so the left side is 7 + 5 = 12, which matches the right. So x = 7 is the **solution**, the value that makes the equation a true statement.
 
 That check is your safety net for the whole book. If the two sides ever *don't* match, you haven't failed. Your check just did its job and caught something before it counted. That's exactly what it's for. Go back to your first step and re-run the arithmetic slowly. A mismatch is almost always one sign or one small slip, not the whole method.
 
 The same move handles every one-step equation; only the operation you undo changes. If x has something subtracted, add it back. If x is multiplied, divide. If x is divided, multiply. The picture stays the balance scale: whatever you do, do it to both pans.
-
-<!--viz:interactive_equation#2-->
 
 **New terms:**
 - {#2.1.d1} **Solution:** a value that makes the equation a *true statement* when you substitute it in. (That's exactly why we check by substituting. We're confirming the statement is true.)
@@ -62,8 +62,6 @@ $$4x=20 \;\xrightarrow{\,\div 4\,}\; x=5 \qquad \text{Check: } 4(5)=20$$
 $$\frac{x}{2}=6 \;\xrightarrow{\,\times 2\,}\; x=12 \qquad \text{Check: } \frac{12}{2}=6$$
 
 In the multiplication one, dividing both sides by 4 makes the 4 in front go to one, since 4/4 is 1 and 1x is just x. That's the same "goes to one" idea you'll use any time a number is multiplying the variable.
-
-<!--viz:bar_models#1-->
 
 {#2.1.w5} Here's a clean case to get the method moving before the practice mixes things up:
 $$x+7=7 \;\xrightarrow{\,-7\,}\; x=0 \qquad \text{Check: } 0+7=7$$
@@ -217,8 +215,6 @@ But 3x + 2 is different. That's three boxes plus two loose coins. There's no way
 
 <!--viz:area_models#3-->
 
-<!--illus:2-3-boxes-coins-->
-
 Now distributing. The number outside a set of parentheses has to reach *everyone* inside. Picture handing a flyer to every person in a room, skipping no one. So in 2(x + 4), the 2 greets the x and the 4 both. A clean way to see why is to draw it as the area of a rectangle, 2 tall and (x + 4) wide, split into two cells:
 $$\begin{array}{c|c|c}
  & x & 4 \\ \hline
@@ -227,8 +223,6 @@ $$\begin{array}{c|c|c}
 The two cells are the two products, 2x and 8, and together they're the whole area: 2x + 8.
 
 <!--viz:area_models#0-->
-
-<!--illus:2-3-area-distribute-->
 
 Then the one that bites. When the thing out front is a minus sign, it's really a −1, and it shakes hands with every term inside, including their signs. Take −(x − 4). The −1 meets the x and gives −x. Then it meets the −4, and −1 times −4 is +4. So −(x − 4) is −x + 4.
 
@@ -344,6 +338,8 @@ So far every equation has had **exactly one** solution. That's the common case, 
 
 You don't decide which outcome it is up front. Run the usual procedure, and if the x's disappear, stop and ask one question: is what's left actually true? In balance terms, if both pans were secretly identical, the scale stays level no matter what the box holds, and that's an identity. If the pans can never match, no box-weight will balance them, and that's a contradiction.
 
+<!--viz:flowcharts#1-->
+
 Here's one worked example of each outcome. Keep the substitution habit even when the variable disappears.
 
 **Worked examples:**
@@ -391,8 +387,6 @@ If this lesson is getting heavy, that's reasonable. It folds together every move
 5. {#2.4.c5} Give the fewest-steps first move for 4(x + 5) = 24, and say why dividing by 4 first is cleaner here than distributing. (Divide both sides by 4 first: x + 5 = 6, so x = 1. It's cleaner because 24/4 = 6 is whole, so no fraction appears; check 4(1 + 5) = 24.)
 
 You can now solve an equation with variables on both sides by gathering the boxes onto one pan and the numbers onto the other, recognize when the variable going to zero means all real numbers or no solution, and choose the cleaner of two valid first moves.
-
-<!--viz:flowcharts#1-->
 
 Several of these land on a negative, and several are an identity or a contradiction rather than the usual one solution.
 
@@ -446,6 +440,8 @@ You need just two skills. The first is adding and subtracting fractions by givin
 If fractions already feel solid, you can move through this quickly. A good way to test yourself: glance at (2/3)x = 6. If you know how to start, skim; if you hesitate, this is exactly the ground to walk slowly.
 
 ### Fraction Refresher A: Common Denominators
+
+<!--viz:anatomy#1-->
 
 The one rule under all fraction addition is that you can only add **same-sized pieces**. Thirds and quarters aren't the same size, so you can't just add them as they sit. You first rename both as a common size, then add the numerators, which are the counts of pieces. This is also why a bigger bottom number can mean a *smaller* piece: split one pizza among 6 people instead of 4, and each slice is smaller, so 1/6 is less than 1/4 even though 6 is the bigger number. And you can never add across the top and bottom: 1/2 + 1/3 is not 2/5.
 
@@ -511,7 +507,11 @@ The 2/3 times 3/2 goes to one, leaving x alone, and 6 times 3/2 is 9. The check 
 
 Now put those two fraction skills to work. An equation with a fraction in it can look intimidating, but every one turns back into the whole-number equations you already solve. There are two ways in, and you've just refreshed both: multiply by a reciprocal when a single fraction multiplies x, or clear the fractions when they're scattered through the equation.
 
+<!--illus:2-6-clear-fractions-->
+
 Here are the two strategies, each turning a fraction equation into a plain one.
+
+<!--viz:annotated_examples#2-->
 
 **(1) Single fraction coefficient → multiply by the reciprocal** (Refresher B). When one fraction multiplies x, multiply both sides by its reciprocal so the coefficient goes to one:
 $$\frac23 x=6 \;\xrightarrow{\,\times \frac32\,}\; x=9 \qquad \text{Check: } \frac23(9)=6$$
@@ -520,10 +520,6 @@ $$\frac23 x=6 \;\xrightarrow{\,\times \frac32\,}\; x=9 \qquad \text{Check: } \fr
 $$\frac{x}{2}+\frac{x}{3}=5 \;\xrightarrow{\,\times 6\text{ (the LCM)}\,}\; 6\cdot\frac{x}{2}+6\cdot\frac{x}{3}=6\cdot 5 \;\Rightarrow\; 3x+2x=30 \;\Rightarrow\; 5x=30 \;\Rightarrow\; x=6$$
 $$\text{Check: } \frac{6}{2}+\frac{6}{3}=3+2=5$$
 The one thing to hold onto: every term gets multiplied, including the right side. It's the flyers idea again. The ×6 has to reach everyone, or the scale stops balancing.
-
-<!--viz:annotated_examples#2-->
-
-<!--illus:2-6-clear-fractions-->
 
 **Worked examples:**
 

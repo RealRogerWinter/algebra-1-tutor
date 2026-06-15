@@ -148,7 +148,7 @@
 <div class="hero"><div class="hero-text"><div class="kicker">Unit 12 · Lesson 12.6</div><h1>Graphing parabolas</h1></div><img class="hero-art" src="../assets/hero-12-6.jpg" alt=""></div>
 
 <p>Here's the picture the whole unit has been pointing at. A quadratic, graphed, is a smooth U, called a <strong>parabola</strong>. The solutions you've been finding are where that U crosses the x-axis, and a U usually crosses <em>twice</em>: once on the way down, once on the way back up. There are your two solutions, drawn.</p>
-<figure class="viz"><div class="parab-wrap" data-init="0">
+<figure class="fig viz" id="fig-12.6.f2"><div class="parab-wrap" data-init="0">
   <style>
     .parab-wrap{max-width:380px;margin:0 auto;font-family:inherit}
     .parab-wrap svg{width:100%;height:auto;display:block;
@@ -221,7 +221,7 @@
   <script>(function(){
     var root=document.currentScript.parentNode;
     if(!root||root.dataset.init==="1"){return;} root.dataset.init="1";
-
+    
   var LIM=6, W=360, PAD=30;
   var SX=(W-2*PAD)/(2*LIM);
   function px(x){return PAD+(x+LIM)*SX;}
@@ -255,8 +255,7 @@
     sa.addEventListener("input",draw);
     draw();
   })();</script>
-</div><figcaption>Parabola stretcher: one slider sets a in y = x². Watch it open upward, flatten, then open downward as a passes through zero, with the vertex pinned at the origin.</figcaption></figure>
-
+</div><figcaption><b>Figure 12.6.f2</b> &mdash; Parabola stretcher: one slider sets a in y = x². Watch it open upward, flatten, then open downward as a passes through zero, with the vertex pinned at the origin.</figcaption></figure>
 <p>When a quadratic has just one solution, the U barely touches the axis at its lowest point (the discriminant was 0). When it has none, the whole U floats clear of the axis, above it or below it (the discriminant was negative). The graph re-explains everything from Lesson 12.5 in one image.</p>
 <p>That's the deep reason a quadratic usually has two solutions, and it ties the unit together: radicals, roots, the discriminant, and now the curve are all the same story. A quadratic is also just a function from Units 4 and 5: y = x² − 4 and f(x) = x² − 4 are the same object, and the "roots" are simply the inputs where the output is 0, which is where the graph meets the x-axis.</p>
 <p>To draw one well, work from numbers rather than guessing the shape. Pick a handful of x-values, compute the matching y for each, plot the points, and join them into a smooth U. The example below shows the line through those points <a class="refcode" id="12.6.f1" href="#12.6.f1" data-prompt="Use the Algebra 1 tutor skill to help me with the figure in Lesson 12.6 (reference 12.6.f1). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for the figure in Lesson 12.6">12.6.f1</a>, with the roots and vertex marked, alongside the table the curve was built from.</p>

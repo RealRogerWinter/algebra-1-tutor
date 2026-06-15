@@ -317,7 +317,7 @@ def _complete_square():
         + '<div style="color:var(--ink-soft);font-size:.95em">Split 6x into two 3-wide strips; the dashed corner is what completes the big square:</div>'
         + svg
         + '<div>$$x^2+6x=(x+3)^2-9$$</div>'
-        + '<div style="color:var(--ink-soft);font-size:.9em">filled square is $(x+3)^2$; we added $9$, so we subtract it back.</div>'
+        + '<div style="color:var(--ink-soft);font-size:.9em">filled square is (x+3)²; we added 9, so we subtract it back.</div>'
         + "</div>"
     )
 

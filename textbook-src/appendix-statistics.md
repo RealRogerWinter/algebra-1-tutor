@@ -20,11 +20,11 @@ Here's a way to see all of it at once. Imagine dropping the scores onto a number
 
 The **mean** is the balance point of that line. It's the spot where the dots would balance if the line were a seesaw. The **median** is the dot with equal counts of dots on either side of it. And whether the dots sit in a tight clump or stretch far apart *is* the spread.
 
-<!--viz:stats_charts#0-->
-
 <!--illus:a-1-mean-balance-->
 
 Now the symbols, which are just shorthand for those pictures. The mean is the "fair share": add every value and divide by how many there are, the way you'd split a bill evenly. The median is the middle value once you put the list **in order**. The range is the biggest value minus the smallest. It's a first, quick measure of how far the data reaches.
+
+<!--viz:stats_charts#0-->
 
 That ordering step in the median is small and easy to skip, so make it a habit from the start: line the numbers up smallest to largest *first*, then point to the middle. It matters because the middle of the unordered list is usually the wrong number. In {4, 8, 6, 5, 2} the middle as written is 6, but ordered it's 2, 4, 5, 6, 8 and the real middle is 5. If there's an even count, there's no single middle dot, so you average the two middle ones.
 
@@ -189,9 +189,9 @@ Some data isn't a number at all; it's a label. "Owns a pet?" is yes or no; "live
 
 <!--viz:stats_charts#2-->
 
-<!--illus:a-3-two-way-grid-->
-
 Picture a survey of 50 people, each answering both questions. Every person falls into one of four buckets: pet-and-apartment, pet-and-house, no-pet-and-apartment, no-pet-and-house. A two-way table is just a grid with one bucket per inner cell.
+
+<!--illus:a-3-two-way-grid-->
 
 Lay it out as a grid with the totals written along the edges, and a useful check comes for free: the row totals and the column totals both have to add up to the same grand total. If they don't, a cell got misread.
 

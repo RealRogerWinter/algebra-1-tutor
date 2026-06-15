@@ -353,10 +353,17 @@ def main():
     fl = figure_lint()
     if fl:
         failures += [f"figure: {i}" for i in fl]
+    try:
+        import viz_figures
+        vf = viz_figures.check()
+        if vf:
+            failures += [f"viz-figure: {i}" for i in vf]
+    except Exception as e:  # noqa: BLE001
+        failures.append(f"viz-figure: registry check crashed: {e}")
     if failures:
         print("FAIL:\n  " + "\n  ".join(failures))
         return 1
-    print("check_alignment: alignment + notation + point-on-line + code-grammar + md-anchor + figure all green.")
+    print("check_alignment: alignment + notation + point-on-line + code-grammar + md-anchor + figure + viz-figure all green.")
     return 0
 
 

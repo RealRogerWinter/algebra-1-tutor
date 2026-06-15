@@ -27,5 +27,3 @@ A few things it's good for:
 - **Upload a photo of your handwritten work.** Take a picture of what you wrote on paper and send it. Claude will read your steps, check them, and show you exactly where a line went sideways if one did.
 
 You don't need any of this to begin. Open the first lesson and start reading. Claude is there for the moments you want a hand, and asking for one is part of how this works, not a sign you're behind.
-
-<!--viz:concept_map#0-->
