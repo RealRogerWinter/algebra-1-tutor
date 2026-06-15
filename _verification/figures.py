@@ -197,9 +197,28 @@ def _r_growth(s):
         out.append(_dot(M, x, y)); out.append(_label(M, x, y, lab))
     return _svg("\n  ".join(out))
 
+def _r_factor_array(s):
+    """Each factor pair of a number drawn as a rectangle of unit squares (rows x cols), so the
+    rectangle's area IS the number and its two side lengths are a factor pair. 1.4: 'factor' at the
+    word's first use. Integer coordinates only, so the SVG is byte-deterministic."""
+    num = int(s["num"])
+    pairs = [(int(r), int(c)) for (r, c) in s["pairs"]]
+    cell, pitch, padx, top, gap_lbl, blockgap = 12, 15, 12, 18, 7, 14
+    out, y = [], top
+    for (rows, cols) in pairs:
+        out.append(f'<text x="{padx}" y="{y}" font-size="12" fill="#2980b9">{rows} × {cols} = {num}</text>')
+        gy = y + gap_lbl
+        for r in range(rows):
+            for c in range(cols):
+                out.append(f'<rect x="{padx + c * pitch}" y="{gy + r * pitch}" width="{cell}" '
+                           f'height="{cell}" rx="2" fill="#d6eaf8" stroke="#2980b9" stroke-width="1.5"/>')
+        y = gy + rows * pitch + blockgap
+    return (f'<svg viewBox="0 0 240 {y}" xmlns="http://www.w3.org/2000/svg" '
+            f'font-family="sans-serif">\n  ' + "\n  ".join(out) + "\n</svg>\n")
+
 RENDERERS = {"line": _r_line, "parabola": _r_parabola, "vgraph": _r_vgraph,
              "inequality_region": _r_inequality, "scatter": _r_scatter, "number_line": _r_number_line,
-             "plane": _r_plane, "lines2": _r_lines2, "growth": _r_growth}
+             "plane": _r_plane, "lines2": _r_lines2, "growth": _r_growth, "factor_array": _r_factor_array}
 
 def render(spec):
     return RENDERERS[spec["type"]](spec)
@@ -283,6 +302,18 @@ def accuracy_issues(spec):
             mxs, mys = sp.nsimplify(mx), sp.nsimplify(my)
             if not (mys == m * mxs + b or mys == base ** mxs):
                 iss.append(f"{code}: mark ({mx},{my}) '{lab}' on neither y={m}x+{b} nor y={base}^x")
+    elif t == "factor_array":
+        num = spec["num"]
+        pairs = [(int(a), int(b)) for (a, b) in spec["pairs"]]
+        for (a, b) in pairs:
+            if a * b != num:
+                iss.append(f"{code}: pair {a}x{b} does not multiply to {num}")
+        # the drawn pairs must be EXACTLY the complete set of unordered factor pairs, so the
+        # figure can never imply a number has fewer (or wrong) factors than it does.
+        complete = sorted({(d, num // d) for d in range(1, num + 1) if num % d == 0 and d <= num // d})
+        given = sorted((min(a, b), max(a, b)) for (a, b) in pairs)
+        if given != complete:
+            iss.append(f"{code}: pairs {given} are not the complete factor pairs {complete} of {num}")
     return iss
 
 # --- registry -----------------------------------------------------------------------------------
@@ -335,6 +366,9 @@ FIGURES = [
      "ticks": [-6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6],
      "points": [{"x": -5, "label": "-5"}, {"x": -2, "label": "-2"}],
      "caption": "-5 sits farther left (a bigger debt) than -2"},
+    # Unit 1 — factors: 12 as its rectangles (1x12, 2x6, 3x4); side lengths are the factor pairs
+    {"code": "1.4.f2", "lesson": "1.4", "type": "factor_array", "num": 12,
+     "pairs": [[1, 12], [2, 6], [3, 4]], "caption": "the factors of 12 as rectangles: 1x12, 2x6, 3x4"},
     # Unit 5 — the coordinate plane; writing a line from a point + slope
     {"code": "5.1.f1", "lesson": "5.1", "type": "plane", "xwindow": [-5, 5], "ywindow": [-5, 5],
      "quadrants": [(2.7, 2.7, "(+, +)"), (-2.7, 2.7, "(-, +)"), (-2.7, -2.7, "(-, -)"), (2.7, -2.7, "(+, -)")],
