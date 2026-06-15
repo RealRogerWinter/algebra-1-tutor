@@ -447,10 +447,12 @@ Find the line where it breaks. (The distribution: −2 times −1 is **+2**, not
 - *Bulletproof:* multiply the denominators (4 and 6 → 24) — always works, may need reducing.
 - *Cleaner:* use the **LCM** (least common multiple) of the denominators (4 and 6 → 12).
 
-**Worked:**
+**Worked examples:**
 $$\frac34+\frac16:\quad \text{LCM}(4,6)=12,\quad \frac34=\frac{9}{12},\ \frac16=\frac{2}{12} \;\Rightarrow\; \frac{9}{12}+\frac{2}{12}=\frac{11}{12}$$
 
-**Practice (add/subtract; reduce your answer):**
+**Practice problems:**
+
+*Add or subtract, then reduce:*
 1. 1/4+2/4
 2. 1/3+1/6
 3. 1/2+1/4
@@ -462,30 +464,34 @@ $$\frac34+\frac16:\quad \text{LCM}(4,6)=12,\quad \frac34=\frac{9}{12},\ \frac16=
 9. 2/3-1/6
 10. 1/2+1/3+1/6
 
-**Key (verified):** 1) 3/4  2) 1/2  3) 3/4  4) 11/12  5) 1/4  6) 1/2  7) 7/10  8) 5/8  9) 1/2  10) 1
+**Answer key:** 1) 3/4  2) 1/2  3) 3/4  4) 11/12  5) 1/4  6) 1/2  7) 7/10  8) 5/8  9) 1/2  10) 1
+
+---
 
 ### Fraction Refresher B — Reciprocals
 
 **The idea:** The **reciprocal** of a fraction is the fraction flipped, and a number times its reciprocal **goes to one**: 2/3 × 3/2 = 1. A whole number is "over 1," so its reciprocal flips too: 5=5/1 → 1/5. **To undo multiplication by a fraction, multiply by its reciprocal** — that's the inverse operation for a fraction coefficient. So (2/3)x=6 is solved by multiplying both sides by 3/2.
 
-**Worked:**
+**Worked examples:**
 $$\frac23 x = 6 \;\xrightarrow{\,\times \frac32\,}\; x = 6\cdot\frac32 = 9 \qquad \text{Check: } \frac23(9)=6$$
 
-**Practice — name the reciprocal:**
-1. 5/8
-2. 1/9
-3. 6
-4. 11/4
+**Practice problems:**
 
-**Practice — solve using a reciprocal:**
-5. (1/2)x=7
-6. (2/5)x=4
-7. (3/4)x=6
-8. (2/3)x=10
-9. (5/6)x=5
-10. (3/2)x=9
+*Name the reciprocal:*
+11. 5/8
+12. 1/9
+13. 6
+14. 11/4
 
-**Key (verified):** 1) 8/5  2) 9  3) 1/6  4) 4/11  5) 14  6) 10  7) 8  8) 15  9) 6  10) 6
+*Solve using a reciprocal:*
+15. (1/2)x=7
+16. (2/5)x=4
+17. (3/4)x=6
+18. (2/3)x=10
+19. (5/6)x=5
+20. (3/2)x=9
+
+**Answer key:** 11) 8/5  12) 9  13) 1/6  14) 4/11  15) 14  16) 10  17) 8  18) 15  19) 6  20) 6
 
 ---
 
