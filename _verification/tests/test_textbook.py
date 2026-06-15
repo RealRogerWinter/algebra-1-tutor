@@ -287,6 +287,33 @@ def test_pair_does_not_append_later_key_to_last_answer():
     assert "4) D" in html                             # the 4-6 key still renders (its own box)
 
 
+def test_pair_falls_back_on_preamble_table():
+    # a shared $$ table/array before problem 1 (appendix A.3) can't live in per-problem rows, so the
+    # lesson must fall back (keeping the table), not silently drop it.
+    lesson = ("## Lesson 9.4: Demo\n\n"
+              "**Practice problems**. Use this table:\n\n"
+              "$$\\begin{array}{c|c} a & b \\\\ 1 & 2 \\end{array}$$\n\n"
+              "1. Find a.\n2. Find b.\n\n"
+              "**Answer key:**\n1. one  2. two\n\n---\n")
+    html = bt.md_to_body(lesson)
+    assert 'class="qcheck"' not in html               # fell back
+    assert "begin{array}" in html                     # the table survives
+
+
+def test_pair_keeps_unused_strand_key():
+    # a second strand with its OWN re-numbered key (unit-12 6) must not be deleted just because its
+    # numbers overlap the converted set's numbers — only keys actually used in a conversion are dropped.
+    lesson = ("## Lesson 9.3: Demo\n\n"
+              "**Practice problems:**\n\n"
+              "1. p  2. q  3. r\n\n"
+              "**Answer key:**\n1) P  2) Q  3) R\n\n"
+              "A short strand follows.\n\n"
+              "**Answer key:**\n1) strandone  2) strandtwo\n\n---\n")
+    html = bt.md_to_body(lesson)
+    assert html.count('class="qcheck"') == 3          # main set converted
+    assert "strandone" in html and "strandtwo" in html  # strand key NOT dropped
+
+
 def test_pair_falls_back_on_nonmonotonic_numbering():
     # unit-08 8.3 'core' set lists problems out of order (… 9 then 8); that must fall back, not drop 8.
     lesson = ("## Lesson 9.7: Demo\n\n"

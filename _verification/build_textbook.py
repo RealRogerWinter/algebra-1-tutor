@@ -350,6 +350,11 @@ def _split_practice_block(body):
         if kind == "sub":
             items.append(("sub", text)); continue
         marks = [(m.start(), m.end(), int(m.group(1))) for m in _PROB_MARK.finditer(text)]
+        head = text[:marks[0][0]] if marks else text
+        if head.strip():
+            # content before the first problem (a shared $$ table/array, a figure, lead-in prose):
+            # per-problem rows can't carry it, so flag it — the caller falls back to keep it visible
+            items.append(("pre", head.strip()))
         for i, (_st, en, num) in enumerate(marks):
             stop = marks[i + 1][0] if i + 1 < len(marks) else len(text)
             items.append(("prob", num, text[en:stop].strip()))
@@ -397,9 +402,10 @@ def _hdr_kind(line):
 def _practice_instr(header_line):
     """The instructional remainder of a practice header, e.g. '**Practice problems** (solve by
     graphing …):' -> '(solve by graphing …)'. Empty for a plain '**Practice problems:**'."""
-    t = header_line.replace("**", " ")
-    t = re.sub(r'^\s*Practice problems?\b', '', t).strip()
-    return re.sub(r'\s+', ' ', t.lstrip(":").strip())
+    t = re.sub(r'^\s*Practice problems?\b', '', header_line.replace("**", " ")).strip()
+    t = re.sub(r'^[\s.:•·–—-]+', '', t)        # drop leading separator punctuation ('**…**. Use …')
+    t = re.sub(r'[\s:]+$', '', t)              # and a trailing colon ('(solve …):' -> '(solve …)')
+    return re.sub(r'\s+', ' ', t).strip()
 
 
 def _scan_pa_blocks(lines):
@@ -501,38 +507,34 @@ def _pair_practice_answers(text):
     answers = [(s, e, inner) for k, s, e, _instr, inner in blocks if k == "answers"]
     if not practices or not answers:
         return text
-
-    universe = set()
-    for _s, _e, _instr, items in practices:
-        universe |= {it[1] for it in items if it[0] == "prob"}
     pstarts = [p[0] for p in practices]
 
-    edits, consumed = [], set()
+    edits, used = [], set()
     for idx, (ps, pe, instr, items) in enumerate(practices):
         nums = [it[1] for it in items if it[0] == "prob"]
-        if len(nums) < 2 or len(set(nums)) != len(nums) or nums != sorted(nums):
-            continue                                  # need >=2 problems, strictly increasing, no dups
+        if (len(nums) < 2 or len(set(nums)) != len(nums) or nums != sorted(nums)
+                or any(it[0] == "pre" for it in items)):
+            continue           # need >=2 strictly-increasing problems and no shared preamble/table
         nxt = pstarts[idx + 1] if idx + 1 < len(pstarts) else len(lines) + 1
         # Accumulate the following key block(s) only until this set's numbers are covered, then stop.
         # This both (a) skips a later key for OTHER problems (a 13-18 set after a 1-12 set) and
         # (b) avoids appending a second strand's re-numbered 1-3 key onto the last answer of a 1-8 set.
-        want, parts, covered = set(nums), [], set()
-        for as_, _ae, inner in answers:
+        want, parts, covered, cand = set(nums), [], set(), []
+        for as_, ae, inner in answers:
             if not (ps < as_ < nxt) or want <= covered:
                 continue
-            parts.append(inner); covered |= _key_numbers(inner, want)
+            parts.append(inner); covered |= _key_numbers(inner, want); cand.append((as_, ae))
         amap = _answers_for("\n".join(parts), nums)
         if amap is None:
             continue
         paired = [it if it[0] == "sub" else ("prob", it[1], it[2], amap[it[1]]) for it in items]
         edits.append((ps, pe, ["", _render_practice(paired, instr), ""]))
-        consumed |= set(nums)
+        used.update(cand)                              # only drop keys actually used by a conversion
 
     if not edits:
         return text
     for as_, ae, inner in answers:
-        provides = _key_numbers(inner, universe)
-        if provides and provides <= consumed:
+        if (as_, ae) in used:                          # a residual/strand key (unused) keeps its box
             edits.append((as_, ae, None))
 
     edits.sort(key=lambda t: t[0])
@@ -1020,8 +1022,9 @@ html.dark .hero-art{filter:brightness(.9) saturate(.92)}
 /* project visually-hidden helper, scoped to the reveal so the short '.vh' name can't hide anything else */
 .qcheck .vh{position:absolute!important; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden;
   clip:rect(0 0 0 0); white-space:nowrap; border:0}
-.practice-intro{color:var(--ink-soft); font-size:var(--step--1); margin:.2rem 0 .7rem}
-.practice-sub{font-weight:600; font-size:var(--step--1); color:var(--ink-soft); margin:1.3rem 0 .5rem}
+/* scoped under .practice so the (0,1,1) '.practice > p' rule can't override these margins */
+.practice .practice-intro{color:var(--ink-soft); font-size:var(--step--1); margin:.2rem 0 .7rem}
+.practice .practice-sub{font-weight:600; font-size:var(--step--1); color:var(--ink-soft); margin:1.3rem 0 .5rem}
 .prow{display:flex; gap:.5rem .9rem; align-items:baseline; flex-wrap:wrap; background:var(--card);
   border:1px solid var(--rule); border-radius:var(--radius); padding:.7rem .9rem; margin:.6rem 0}
 .prow .prob{flex:1 1 60%; min-width:0; overflow-wrap:break-word}
@@ -1037,8 +1040,8 @@ html.dark .hero-art{filter:brightness(.9) saturate(.92)}
 .qcheck .qa::before{content:"\2713"; font-weight:700}
 .qcheck:not([open]) .qa{display:none} .qcheck[open] .qa{display:inline-flex}
 @media (prefers-reduced-motion:no-preference){ .prow{transition:border-color .15s ease} }
-/* print: show every answer (even un-opened reveals) and hide the toggle. !important beats the
-   .qcheck:not([open]) .qa{display:none} screen rule, which has higher specificity. */
+/* print: show every answer (even un-opened reveals) and hide the toggle. The screen rule
+   .qcheck:not([open]) .qa{display:none} has higher specificity, so !important is needed here. */
 @media print{ .qcheck .qa{display:inline-flex !important} .qcheck > summary{display:none} }
 
 /* ---- prev / next page nav ---- */
