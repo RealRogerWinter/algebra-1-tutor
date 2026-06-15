@@ -447,7 +447,7 @@ def _render_practice(items, instr=""):
                 f'<div class="prow">'
                 f'<span class="prob"><span class="pnum">{num}.</span> {_md_inline(ptext)}</span>'
                 f'<details class="qcheck"><summary>'
-                f'<span class="qc-label">Reveal answer</span>'
+                f'<span class="qc-show">Reveal answer</span><span class="qc-hide">Hide</span>'
                 f'<span class="vh"> to problem {num}</span></summary>'
                 f'<span class="qa">{_md_inline(ans)}</span></details></div>')
     out.append("</section>")
@@ -1134,9 +1134,10 @@ html.dark .hero-art{filter:brightness(.9) saturate(.92)}
 .qcheck{margin-left:auto; flex:0 0 auto}
 .qcheck > summary{cursor:pointer; list-style:none; display:inline-flex; align-items:center}
 .qcheck > summary::-webkit-details-marker{display:none}
-.qcheck .qc-label{font-size:var(--step--1); font-weight:600; color:var(--leaf);
+.qcheck .qc-show, .qcheck .qc-hide{font-size:var(--step--1); font-weight:600; color:var(--leaf);
   border:1px solid var(--leaf); border-radius:999px; padding:.28rem .7rem; background:var(--tint-leaf, transparent)}
-.qcheck[open] .qc-label{color:var(--ink-soft); border-color:var(--rule)}
+.qcheck[open] .qc-hide{color:var(--ink-soft); border-color:var(--rule)}   /* muted 'Hide' once open */
+.qcheck:not([open]) .qc-hide{display:none} .qcheck[open] .qc-show{display:none}
 .qcheck .qa{align-items:center; gap:.4rem; margin-left:.55rem; font-weight:600; color:var(--leaf)}
 .qcheck .qa::before{content:"\u2713"; font-weight:700}
 .qcheck:not([open]) .qa{display:none} .qcheck[open] .qa{display:inline-flex}
