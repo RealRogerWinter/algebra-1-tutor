@@ -53,8 +53,8 @@ def build_site(ssot):
 <p class="u">Math is rendered with KaTeX. The whole course is generated from one source of truth and held correct by sympy and a CI gate.</p>
 """
     page = bt._lesson_page("Algebra 1", body, bt._ssot_model(ssot), "", None, None, subtitle=lede,
-                           hero="assets/numberline.jpg", kicker="A complete course",
-                           sidebar_prefix="textbook/", sidebar_top=TOP)
+                           hero="assets/landing-hero.jpg", kicker="A complete course",
+                           sidebar_prefix="textbook/", sidebar_top=TOP, brand_prefix="")
     return {"index.html": page, "textbook.css": bt.CSS}
 
 
