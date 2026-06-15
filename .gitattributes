@@ -8,6 +8,9 @@ docs/CURRICULUM.md text eol=lf
 # doesn't show spurious CRLF diffs on Windows checkouts.
 algebra-1-tutor/figures/*.svg text eol=lf
 
+# Viz-figure artifacts are generated LF-only by _verification/build_viz_artifacts.py.
+algebra-1-tutor/figures/*.html text eol=lf
+
 # The HTML textbook is generated LF-only by _verification/build_textbook.py.
 docs/textbook/** text eol=lf
 
