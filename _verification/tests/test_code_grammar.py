@@ -6,7 +6,7 @@ def test_all_real_ids_pass():
     assert bad == [], f"ids violating grammar: {bad}"
 
 def test_accepts_known_shapes():
-    for good in ["5.5.6", "12.1.w1", "A.2.3", "refA.4", "refB.10", "8.2.5b"]:
+    for good in ["5.5.6", "12.1.w1", "A.2.3", "refA.4", "refB.10", "refE.7", "8.2.5b"]:
         assert ca.ID_RE.match(good), good
 
 def test_rejects_malformed():

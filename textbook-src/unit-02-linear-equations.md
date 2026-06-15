@@ -429,26 +429,115 @@ Several of these land on a negative, and several are an identity or a contradict
 
 ## Lesson 2.5: Fraction refresher
 
-Fractions turn up all through the units ahead (in slope, in rates, in proportions), so it's worth getting steady with them before you start solving equations that contain them. Many adults stalled on fractions years ago. If that's you, nothing here is out of reach; this short lesson rebuilds the two pieces you'll lean on next.
+Fractions turn up all through the units ahead, in slope and rates and proportions, so it's worth getting steady with them before you solve equations that contain them. Many adults stalled on fractions years ago. If that's you, nothing here is out of reach. This lesson rebuilds fractions from the ground up, one piece at a time.
 
-You need just two skills. The first is adding and subtracting fractions by giving them a common size. The second is the reciprocal, a flipped fraction, which is how you undo a fraction that's multiplying the variable. The next lesson puts both to work, so firm them up here first.
+Here's the plan. First, what a fraction actually is: one number, with one spot on the number line. Then how to rename a fraction without changing its value, and how to shrink it to lowest terms. Then the four operations, adding through dividing. Last comes the reciprocal, the flipped fraction the next lesson uses to undo a fraction sitting on x. Each part leans on the one before it.
 
-If fractions already feel solid, you can move through this quickly. A good way to test yourself: glance at (2/3)x = 6. If you know how to start, skim; if you hesitate, this is exactly the ground to walk slowly.
+If fractions already feel solid, move through this quickly. A good way to test yourself: glance at (2/3)x = 6. If you know how to start, skim. If you hesitate, this is the ground to walk slowly.
 
-### Fraction Refresher A: Common Denominators
+### Part 1: What a fraction is
 
 <!--viz:anatomy#1-->
 
-The one rule under all fraction addition is that you can only add **same-sized pieces**. Thirds and quarters aren't the same size, so you can't just add them as they sit. You first rename both as a common size, then add the numerators, which are the counts of pieces. This is also why a bigger bottom number can mean a *smaller* piece: split one pizza among 6 people instead of 4, and each slice is smaller, so 1/6 is less than 1/4 even though 6 is the bigger number. And you can never add across the top and bottom: 1/2 + 1/3 is not 2/5.
+A fraction is one number, not two numbers stacked up. Write 3/4 and you've named a single amount. The top number is the {#2.5.d1} **numerator**, and it counts how many pieces you have. The bottom number is the {#2.5.d2} **denominator**, and it says how many equal pieces make one whole. So 3/4 is three of the four equal pieces that fill a whole.
+
+The clearest place to see a fraction is the number line. To find 3/4, take the stretch from 0 to 1, cut it into 4 equal steps, and count 3 steps from 0. That single point is 3/4. Holding a fraction as a location, rather than as two numbers stacked, is the habit that keeps the rest of this lesson from feeling slippery.
+
+<!--viz:fractions#0-->
+
+The denominator can fool you: a bigger bottom number means a smaller piece. Cut one pizza among 6 people instead of 4 and every slice is smaller, so 1/6 is less than 1/4 even though 6 is the bigger number. More splits, smaller pieces.
 
 <!--illus:2-5-pizza-fractions-->
 
-To find a common denominator, you have two options:
+The numerator can be larger than the denominator. {#2.5.d3} An **improper fraction** like 7/4 just means 7 quarter-steps, which carry you past 1; it lands at the same place as 1 and 3/4. {#2.5.d4} Writing it as 1 3/4 makes it a **mixed number**. Both names point to the same spot on the line.
+
+One thing to settle now, because it trips up many returning students: a fraction is a finished number. 3/4 is every bit as complete an answer as 0.75, and 1/3 is cleaner left alone than turned into 0.3333… You only convert a fraction to a decimal when a problem asks you to.
+
+**Check for understanding (transfer):**
+1. {#2.5.c1} Without dividing it out, where does 9/8 sit: just under 1, exactly 1, or just past 1? How can you tell? (Just past 1: 8/8 is one whole, and 9/8 is one more eighth beyond it.)
+
+**Practice problems:**
+
+*Read the fraction:*
+1. In 3/8, name the denominator and say what it tells you.
+2. Which is larger, 1/5 or 1/3? Picture the pizza.
+3. Which is larger, 3/4 or 3/8?
+4. Is 6/6 less than, equal to, or more than 1?
+
+*Place and rename:*
+5. Is 5/4 less than 1 or more than 1, and roughly where does it sit?
+6. Write 7/4 as a mixed number.
+7. Write 2 1/3 as an improper fraction.
+8. True or false: 1/2 must become 0.5 before it counts as an answer.
+
+**Answer key:** 1) 8; the whole is cut into 8 equal pieces  2) 1/3  3) 3/4  4) equal to 1  5) more than 1, at 1 and 1/4  6) 1 3/4  7) 7/3  8) false; a fraction is a finished number
+
+---
+
+---
+
+### Part 2: Equivalent fractions and lowest terms
+
+The same point on the line can wear more than one name. Cut each of the 4 pieces of 3/4 in half and you have 8 smaller pieces with 6 of them shaded, but the shaded length hasn't moved. So 3/4 and 6/8 are {#2.5.d5} **equivalent fractions**: different names for one amount.
+
+<!--viz:fractions#1-->
+
+The rule behind every equivalent fraction is short: multiply or divide the top and the bottom by the same number. You're really multiplying by a disguised 1, like 2/2 or 5/5, and multiplying by 1 changes a number's name, not its size.
+$$\frac34 = \frac{3\times 2}{4\times 2} = \frac68 \qquad \frac34 = \frac{3\times 5}{4\times 5} = \frac{15}{20}$$
+
+Running that rule backward is how you reduce a fraction. {#2.5.d6} A fraction is in **lowest terms** when the top and bottom share no common factor except 1, so there's nothing left to divide out. To get there, divide the top and bottom by their {#2.5.d7} **greatest common divisor (GCD)**, the biggest number that goes into both evenly.
+
+<!--viz:fractions#2-->
+
+Take 12/18. The GCD of 12 and 18 is 6, so divide both by 6:
+$$\frac{12}{18} = \frac{12\div 6}{18\div 6} = \frac23$$
+And 2/3 is as far as it goes, because 2 and 3 share no factor but 1. If you don't spot the GCD right away, that's fine. Divide by any common factor you do see and repeat: 12/18 → (÷2) → 6/9 → (÷3) → 2/3. Same destination, just in smaller steps.
+
+Comparing two fractions leans on this same renaming. To see whether 2/3 or 3/4 is larger, give them a common denominator and compare the counts of pieces:
+$$\frac23 = \frac{8}{12}, \quad \frac34 = \frac{9}{12} \;\Rightarrow\; \frac23 < \frac34$$
+A benchmark check is often faster: 5/8 is more than 1/2 (which is 4/8), and 3/8 is less than 1/2, so 5/8 is the larger of those two with no renaming at all.
+
+**Check for understanding (transfer):**
+1. {#2.5.c2} Reduce 24/36 to lowest terms, and say how you know you can't reduce it any further. (Divide top and bottom by the GCD, 12: 24/36 = 2/3. It's done because 2 and 3 share no common factor but 1.)
+
+**Practice problems:**
+
+*Write an equivalent fraction:*
+1. Write 2/3 with a denominator of 12.
+2. Write 3/5 with a denominator of 10.
+
+*Reduce to lowest terms:*
+3. 6/8
+4. 10/15
+5. 8/20
+6. 9/24
+7. 16/24
+8. 15/20
+
+*Compare with <, >, or =:*
+9. 2/3 and 3/4
+10. 5/8 and 1/2
+
+**Answer key:** 1) 8/12  2) 6/10  3) 3/4  4) 2/3  5) 2/5  6) 3/8  7) 2/3  8) 3/4  9) 2/3 < 3/4  10) 5/8 > 1/2
+
+---
+
+---
+
+### Part 3: Adding and subtracting
+
+The one rule under all fraction addition is that you can only add **same-sized pieces**. Thirds and quarters aren't the same size, so you can't add them as they sit. You first rename both as a common size, then add the numerators, which are the counts of pieces. And you can never add straight across the top and bottom: 1/2 + 1/3 is not 2/5.
+
+To find a common denominator, you have two routes:
 - *Bulletproof:* multiply the denominators (4 and 6 → 24). This always works, though the answer may need reducing.
 - *Cleaner:* use the **LCM** (least common multiple) of the denominators (4 and 6 → 12), which keeps the numbers smaller.
 
-**Worked examples:**
-$$\frac34+\frac16:\quad \text{LCM}(4,6)=12,\quad \frac34=\frac{9}{12},\ \frac16=\frac{2}{12} \;\Rightarrow\; \frac{9}{12}+\frac{2}{12}=\frac{11}{12}$$
+<!--viz:fractions#3-->
+
+Both routes land in the same place. Here is 3/4 + 1/6 worked each way:
+$$\frac34+\frac16:\quad \text{LCM}=12,\quad \frac34=\frac{9}{12},\ \frac16=\frac{2}{12} \;\Rightarrow\; \frac{9}{12}+\frac{2}{12}=\frac{11}{12}$$
+$$\frac34+\frac16:\quad 4\times 6=24,\quad \frac34=\frac{18}{24},\ \frac16=\frac{4}{24} \;\Rightarrow\; \frac{18}{24}+\frac{4}{24}=\frac{22}{24}=\frac{11}{12}$$
+The LCM route gets you straight to 11/12. The product route makes bigger numbers and one extra reducing step at the end, but it never fails you when the LCM is hard to spot.
 
 A quick self-check on any fraction answer: picture roughly where it sits between the nearest whole numbers and ask whether its size makes sense. 11/12 is just under 1, which fits adding two parts that are each less than a whole.
 
@@ -470,32 +559,75 @@ A quick self-check on any fraction answer: picture roughly where it sits between
 
 ---
 
-### Fraction Refresher B: Reciprocals
+---
 
-The **reciprocal** of a fraction is just the fraction flipped over, and a number times its reciprocal goes to one: 2/3 × 3/2 = 1. A whole number counts as itself "over 1," so its reciprocal flips too. 5 is 5/1, and its reciprocal is 1/5. Here's why this matters: to undo multiplication by a fraction, you multiply by its reciprocal. That's the inverse operation for a fraction coefficient, the same idea as dividing to undo a whole-number coefficient. So (2/3)x = 6 is solved by multiplying both sides by 3/2.
+### Part 4: Multiplying and dividing
 
-**Worked examples:**
+Multiplying is the one operation that does not need a common denominator. You multiply straight across, top times top and bottom times bottom, then reduce. Picture it as area: to find 1/2 × 2/3, shade 1/2 of a square going across and 2/3 of it going down. The part where the two shadings overlap is the answer.
+
+<!--viz:fractions#4-->
+
+$$\frac12 \times \frac23 = \frac{1\times 2}{2\times 3} = \frac{2}{6} = \frac13$$
+Notice the result, 1/3, is smaller than either fraction you started with. That feels wrong until you read the × as "of": 1/2 × 2/3 is "half of two-thirds," and half of something is less than the whole of it. Multiplying by a number below 1 shrinks things.
+
+Dividing is multiplying in disguise. Ask what 3/4 ÷ 1/2 is really asking: how many halves fit into 3/4? A half is 2/4, and 3/4 holds one and a half of those, so the answer is 3/2. You reach it every time by flipping the second fraction and multiplying. That flipped fraction is its reciprocal, which the next part looks at closely:
+$$\frac34 \div \frac12 = \frac34 \times \frac21 = \frac{6}{4} = \frac32$$
+Flip the divisor, never the first fraction, and the division turns into a multiplication you already know how to do.
+
+**Check for understanding (transfer):**
+1. {#2.5.c3} The division (3/4) ÷ (1/4) asks how many quarter-steps fit in 3/4. Answer it first by picturing the steps, then by multiplying by the reciprocal, and check the two agree. (Three quarter-steps fit, so 3. By reciprocal: 3/4 × 4/1 = 12/4 = 3. Both give 3.)
+
+**Practice problems:**
+
+*Multiply, then reduce:*
+1. (1/2)(2/3)
+2. (2/3)(3/4)
+3. (3/5)(5/6)
+4. (3/4)(2/9)
+5. (2/3)(6/7)
+
+*Divide (flip the second fraction, then multiply):*
+6. (1/2)÷(1/4)
+7. (3/4)÷(1/2)
+8. (2/3)÷(4/9)
+9. (5/6)÷(5/12)
+10. (3/8)÷(3/4)
+
+**Answer key:** 1) 1/3  2) 1/2  3) 1/2  4) 1/6  5) 4/7  6) 2  7) 3/2  8) 3/2  9) 2  10) 1/2
+
+---
+
+---
+
+### Part 5: Reciprocals, and solving (2/3)x = 6
+
+The {#2.5.d8} **reciprocal** of a fraction is the fraction flipped over, and any nonzero number times its reciprocal goes to one: 2/3 × 3/2 = 1. A whole number counts as itself "over 1," so its reciprocal flips too: 5 is 5/1, and its reciprocal is 1/5.
+
+<!--viz:fractions#5-->
+
+Here's why this matters for solving. To undo multiplication by a fraction, you multiply by its reciprocal. That's the inverse operation for a fraction coefficient, the same idea as dividing to undo a whole-number coefficient. So (2/3)x = 6 is solved by multiplying both sides by 3/2:
 $$\frac23 x = 6 \;\xrightarrow{\,\times \frac32\,}\; x = 6\cdot\frac32 = 9 \qquad \text{Check: } \frac23(9)=6$$
-
-The 2/3 times 3/2 goes to one, leaving x alone, and 6 times 3/2 is 9. The check puts it back: two-thirds of 9 is 6.
+The 2/3 times 3/2 goes to one, leaving x by itself, and 6 times 3/2 is 9. The check puts it back: two-thirds of 9 is 6.
 
 **Practice problems:**
 
 *Name the reciprocal:*
-11. 5/8
-12. 1/9
-13. 6
-14. 11/4
+1. 5/8
+2. 1/9
+3. 6
+4. 11/4
 
 *Solve using a reciprocal:*
-15. (1/2)x=7
-16. (2/5)x=4
-17. (3/4)x=6
-18. (2/3)x=10
-19. (5/6)x=5
-20. (3/2)x=9
+5. (1/2)x=7
+6. (2/5)x=4
+7. (3/4)x=6
+8. (2/3)x=10
+9. (5/6)x=5
+10. (3/2)x=9
 
-**Answer key:** 11) 8/5  12) 9  13) 1/6  14) 4/11  15) 14  16) 10  17) 8  18) 15  19) 6  20) 6
+**Answer key:** 1) 8/5  2) 9  3) 1/6  4) 4/11  5) 14  6) 10  7) 8  8) 15  9) 6  10) 6
+
+You've now rebuilt the whole toolkit: what a fraction is, how to rename and reduce it, and how to add, subtract, multiply, divide, and flip it. The next lesson puts the last ideas to work, using the reciprocal and the common denominator to solve equations that have fractions in them.
 
 ---
 
