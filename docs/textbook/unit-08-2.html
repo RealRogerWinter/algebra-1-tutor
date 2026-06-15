@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Compound inequalities — Algebra 1</title>
+<script>try{if(localStorage.getItem("a1-theme")==="dark")document.documentElement.classList.add("dark");}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..40,500..600&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="textbook.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous">
+</head>
+<body data-surface="textbook">
+<header class="topbar">
+  <button id="menu" class="menu" type="button" aria-label="Open or close the contents menu" aria-expanded="false">☰&nbsp;Contents</button>
+  <a class="home" href="index.html">Algebra&nbsp;1</a>
+  <span class="sp"></span>
+  <button id="theme" type="button" aria-label="Toggle light or dark theme">◐&nbsp;Theme</button>
+</header>
+<div class="shell">
+<aside class="sidenav" id="sidenav">
+<nav class="snav" aria-label="Contents">
+<a class="snav-top" href="how-to-use.html">How to use this book</a>
+<a class="snav-top" href="index.html">All units</a>
+<ol class="snav-units">
+<li class="">
+<a class="snav-unit" href="unit-01.html">Unit 1. Foundations &amp; the Language of Algebra</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-01-1.html"><span class="ln">1.1</span> Variables and the meaning of equations</a></li>
+<li><a class="snav-lesson" href="unit-01-2.html"><span class="ln">1.2</span> The number system &amp; the number line</a></li>
+<li><a class="snav-lesson" href="unit-01-3.html"><span class="ln">1.3</span> Order of operations</a></li>
+<li><a class="snav-lesson" href="unit-01-4.html"><span class="ln">1.4</span> Negative numbers</a></li>
+<li><a class="snav-lesson" href="unit-01-5.html"><span class="ln">1.5</span> Expressions vs. equations; evaluating expressions</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-02.html">Unit 2. Solving Linear Equations</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-02-1.html"><span class="ln">2.1</span> Inverse operations &amp; one-step equations</a></li>
+<li><a class="snav-lesson" href="unit-02-2.html"><span class="ln">2.2</span> Two-step equations</a></li>
+<li><a class="snav-lesson" href="unit-02-3.html"><span class="ln">2.3</span> Combining like terms &amp; the distributive property</a></li>
+<li><a class="snav-lesson" href="unit-02-4.html"><span class="ln">2.4</span> Variables on both sides</a></li>
+<li><a class="snav-lesson" href="unit-02-5.html"><span class="ln">2.5</span> Equations with fractions (with two Fraction Refreshers)</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-03.html">Unit 3. Proportional Reasoning (the bridge to linearity)</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-03-1.html"><span class="ln">3.1</span> Ratios and rates</a></li>
+<li><a class="snav-lesson" href="unit-03-2.html"><span class="ln">3.2</span> Proportions &amp; cross-multiplication</a></li>
+<li><a class="snav-lesson" href="unit-03-3.html"><span class="ln">3.3</span> Percents</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-04.html">Unit 4. Introducing Functions</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-04-1.html"><span class="ln">4.1</span> What is a function</a></li>
+<li><a class="snav-lesson" href="unit-04-2.html"><span class="ln">4.2</span> Function notation f(x), domain &amp; range</a></li>
+<li><a class="snav-lesson" href="unit-04-3.html"><span class="ln">4.3</span> Multiple representations; linear vs. nonlinear</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-05.html">Unit 5. Linear Functions &amp; Their Graphs</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-05-1.html"><span class="ln">5.1</span> The coordinate plane</a></li>
+<li><a class="snav-lesson" href="unit-05-2.html"><span class="ln">5.2</span> Graphing linear equations from a table</a></li>
+<li><a class="snav-lesson" href="unit-05-3.html"><span class="ln">5.3</span> Slope</a></li>
+<li><a class="snav-lesson" href="unit-05-4.html"><span class="ln">5.4</span> Slope-intercept form y = mx + b</a></li>
+<li><a class="snav-lesson" href="unit-05-5.html"><span class="ln">5.5</span> Writing equations of lines</a></li>
+<li><a class="snav-lesson" href="unit-05-6.html"><span class="ln">5.6</span> x-intercepts, graphing by intercepts &amp; standard form</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-06.html">Unit 6. Modeling &amp; Translation</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-06-1.html"><span class="ln">6.1</span> Translating words into expressions and equations</a></li>
+<li><a class="snav-lesson" href="unit-06-2.html"><span class="ln">6.2</span> Classic word problems (number, age, distance, value &amp; relationship)</a></li>
+<li><a class="snav-lesson" href="unit-06-3.html"><span class="ln">6.3</span> Scatter plots &amp; line of best fit (a first taste of data)</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-07.html">Unit 7. Systems of Equations</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-07-1.html"><span class="ln">7.1</span> Solving by graphing</a></li>
+<li><a class="snav-lesson" href="unit-07-2.html"><span class="ln">7.2</span> Substitution</a></li>
+<li><a class="snav-lesson" href="unit-07-3.html"><span class="ln">7.3</span> Elimination</a></li>
+<li><a class="snav-lesson" href="unit-07-4.html"><span class="ln">7.4</span> Special cases &amp; applications</a></li>
+</ol>
+</li>
+<li class="active">
+<a class="snav-unit" href="unit-08.html">Unit 8. Inequalities</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-08-1.html"><span class="ln">8.1</span> One-variable inequalities</a></li>
+<li><a class="snav-lesson cur" href="unit-08-2.html"><span class="ln">8.2</span> Compound inequalities</a></li>
+<li><a class="snav-lesson" href="unit-08-3.html"><span class="ln">8.3</span> Absolute value: graphs &amp; distance</a></li>
+<li><a class="snav-lesson" href="unit-08-4.html"><span class="ln">8.4</span> Graphing linear inequalities (two variables) &amp; systems</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-09.html">Unit 9. Sequences &amp; Exponential Functions</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-09-1.html"><span class="ln">9.1</span> Arithmetic &amp; geometric sequences as functions</a></li>
+<li><a class="snav-lesson" href="unit-09-2.html"><span class="ln">9.2</span> Exponential growth &amp; decay; linear vs. exponential</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-10.html">Unit 10. Exponents &amp; Polynomials</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-10-1.html"><span class="ln">10.1</span> Exponent rules (including zero &amp; negative exponents)</a></li>
+<li><a class="snav-lesson" href="unit-10-2.html"><span class="ln">10.2</span> Scientific notation</a></li>
+<li><a class="snav-lesson" href="unit-10-3.html"><span class="ln">10.3</span> Polynomials — terms, degree, standard form; add &amp; subtract</a></li>
+<li><a class="snav-lesson" href="unit-10-4.html"><span class="ln">10.4</span> Multiplying polynomials</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-11.html">Unit 11. Factoring</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-11-1.html"><span class="ln">11.1</span> Greatest common factor (GCF)</a></li>
+<li><a class="snav-lesson" href="unit-11-2.html"><span class="ln">11.2</span> Factoring trinomials x²+bx+c</a></li>
+<li><a class="snav-lesson" href="unit-11-3.html"><span class="ln">11.3</span> Special patterns</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-12.html">Unit 12. Quadratic Functions &amp; Equations (the capstone)</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-12-1.html"><span class="ln">12.1</span> Square roots &amp; simplifying radicals</a></li>
+<li><a class="snav-lesson" href="unit-12-2.html"><span class="ln">12.2</span> The simplest quadratics (x²=9 → two solutions)</a></li>
+<li><a class="snav-lesson" href="unit-12-3.html"><span class="ln">12.3</span> Solving by factoring (zero-product property)</a></li>
+<li><a class="snav-lesson" href="unit-12-4.html"><span class="ln">12.4</span> Completing the square</a></li>
+<li><a class="snav-lesson" href="unit-12-5.html"><span class="ln">12.5</span> The quadratic formula &amp; the discriminant</a></li>
+<li><a class="snav-lesson" href="unit-12-6.html"><span class="ln">12.6</span> Graphing parabolas</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="appendix.html">Appendix. Data &amp; Statistics</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="appendix-1.html"><span class="ln">A.1</span> One-variable statistics — center &amp; spread</a></li>
+<li><a class="snav-lesson" href="appendix-2.html"><span class="ln">A.2</span> Two-variable data — line of best fit, correlation vs. causation</a></li>
+<li><a class="snav-lesson" href="appendix-3.html"><span class="ln">A.3</span> Two-way tables</a></li>
+</ol>
+</li>
+</ol></nav>
+</aside>
+<div class="content">
+<main>
+<div class="kicker">Unit 8 · Lesson 8.2</div><h1>Compound inequalities</h1>
+
+
+<p>Real limits often come in pairs. A thermostat might need to keep a room <em>between</em> 60 and 80 degrees, two conditions at once. A ride might admit anyone <em>older than 12 or with a guardian</em>, where either condition will do.</p>
+<p>Those two little words, <em>and</em> and <em>or</em>, are what this lesson is about, and they pull in opposite directions. <em>And</em> narrows things down to where both conditions hold, while <em>or</em> opens things up to where either one does.</p>
+<p>Picture two bars you might have to clear. <em>And</em> is "you must clear <strong>both</strong> bars": the only numbers that survive are the ones that pass every condition, so you end up with the narrow strip where the conditions overlap. "Temperature between 60 and 80" is an <em>and</em>, since a reading has to be above 60 <em>and</em> below 80, so only the middle band counts.</p>
+<p><em>Or</em> is "clear <strong>either</strong> bar," so a number gets in if it passes even one condition, and you end up with everything either condition allows. "Water under 32 degrees or over 100" is an <em>or</em>: freezing <em>or</em> boiling, with the whole comfortable middle left out.</p>
+<p>On a number line, you shade each condition and then read off the combination. For an <em>and</em>, you keep only the part where the two shadings <strong>overlap</strong>, typically a single segment between two endpoints. For an <em>or</em>, you keep <strong>everything</strong> that either shading covered, often two separate rays heading opposite ways with a gap between them. The endpoints follow the same open/filled rule from Lesson 8.1: each boundary is open or filled according to its own sign.</p>
+<p>In symbols, an <em>and</em> often gets written as one chained statement. "x &gt; 2 and x ≤ 5," the numbers between 2 and 5 with 5 included, can be squeezed into 2 &lt; x ≤ 5, read as a single sentence: x is bigger than 2 <em>and</em> at most 5.</p>
+<p>A chained form like that always means <em>and</em>, and it's only well-formed when both signs point the same way. Something like 3 &lt; x &gt; 1 points two ways at once and doesn't say anything coherent, so don't write it. An <em>or</em>, by contrast, usually stays as two separate statements joined by the word "or," because its two pieces don't touch.</p>
+<p>The solving follows the picture. For a chained <em>and</em>, you do the same move to <strong>all three</strong> parts at once, left, middle, and right together, because the whole statement has to stay balanced, not just the middle. For an <em>or</em>, you solve the two inequalities <strong>separately</strong> and then put their answers together.</p>
+<div class="cl-terms">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6.5C9.5 5 6 5 3.5 6.5V18C6 16.5 9.5 16.5 12 18C14.5 16.5 18 16.5 20.5 18V6.5C18 5 14.5 5 12 6.5Z"/><path d="M12 6.5V18"/></svg>New words</span></p>
+<ul>
+<li><a class="refcode" id="8.2.d1" href="#8.2.d1">8.2.d1</a> <strong>Compound inequality:</strong> two inequalities combined into one statement.</li>
+<li><a class="refcode" id="8.2.d2" href="#8.2.d2">8.2.d2</a> <strong>And (intersection):</strong> <em>both</em> parts must hold. 2 &lt; x ≤ 5 is shorthand for x &gt; 2 <strong>and</strong> x ≤ 5: the values <strong>between</strong> 2 and 5 (with 5 included). On the line, the <strong>overlap</strong> of the two shaded regions, a single segment.</li>
+<li><a class="refcode" id="8.2.d3" href="#8.2.d3">8.2.d3</a> <strong>Double inequality</strong> (a.k.a. <strong>three-part inequality</strong>): the chained form a &lt; x &lt; b. It is only well-formed when <strong>both symbols point the same way</strong>, and it <em>always</em> means an <strong>and</strong> (a &lt; x <strong>and</strong> x &lt; b). Never write something like 3 &lt; x &gt; 1. A chained form with the symbols pointing opposite ways is meaningless.</li>
+<li><a class="refcode" id="8.2.d4" href="#8.2.d4">8.2.d4</a> <strong>Or (union):</strong> <em>at least one</em> part holds. x &lt; -1 <strong>or</strong> x &gt; 3: <strong>everything</strong> in either ray; the two pieces don't touch.</li>
+</ul>
+</div>
+<section class="worked">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19.5V15L15.5 4.5 19.5 8.5 9 19Z"/><path d="M13.5 6.5 17.5 10.5"/></svg>Worked example</span></p>
+<p><a class="refcode" id="8.2.w1" href="#8.2.w1">8.2.w1</a>
+<em>Example 1, "and" (three-part).</em> Solve -1 &lt; x + 2 &lt; 4.
+The middle has a +2 you want to clear, so subtract 2. To keep the whole chain balanced, subtract it from all three parts at once: -1 − 2 &lt; x &lt; 4 − 2, which is -3 &lt; x &lt; 2.
+Graph: open circles at -3 and 2 (both signs strict), shade the segment between them.
+Test a point from inside, x = 0: in the original, 0 + 2 = 2, and -1 &lt; 2 &lt; 4 is true. Solution: <strong>-3 &lt; x &lt; 2</strong>.</p>
+<p><a class="refcode" id="8.2.w2" href="#8.2.w2">8.2.w2</a>
+<em>Example 2, "and" with a division.</em> Solve 3 ≤ 2x - 1 ≤ 9.
+Add 1 to all three parts: 4 ≤ 2x ≤ 10. Now divide all three by 2; it's a positive 2, so no sign flips: 2 ≤ x ≤ 5.
+Graph: filled circles at 2 and 5 (both inclusive), shade between. Solution: <strong>2 ≤ x ≤ 5</strong>.</p>
+<p><a class="refcode" id="8.2.w3" href="#8.2.w3">8.2.w3</a>
+<em>Example 3, "or".</em> Solve x &lt; -1 <strong>or</strong> x &gt; 3.
+This one is already solved. It's two separate conditions, so there's nothing to isolate. Graph: an open circle at -1 shading left, and an open circle at 3 shading right, with nothing in the middle. Solution: <strong>x &lt; -1 or x &gt; 3</strong>.</p>
+<p><a class="refcode" id="8.2.w4" href="#8.2.w4">8.2.w4</a>
+<em>Example 4, "or" needing work.</em> Solve 2x ≤ -4 <strong>or</strong> x - 3 &gt; 2.
+Solve each piece on its own. Left: divide 2x ≤ -4 by the positive 2 to get x ≤ -2. Right: add 3 to x − 3 &gt; 2 to get x &gt; 5. Then put them together. Graph: a filled circle at -2 shading left, and an open circle at 5 shading right. Solution: <strong>x ≤ -2 or x &gt; 5</strong>.</p>
+<p>The flip rule hasn't gone anywhere. It still applies to a chained inequality, and there it touches <em>both</em> signs at once.</p>
+<p><a class="refcode" id="8.2.w5" href="#8.2.w5">8.2.w5</a>
+<em>Example 5, three-part, divide by a negative (flip BOTH signs).</em> Solve -6 &lt; -2x ≤ 4.
+The middle is -2x, so divide all three parts by -2. Dividing by a negative flips each sign: the &lt; and the ≤ both turn around, giving -6/-2 &gt; x ≥ 4/-2, that is 3 &gt; x ≥ -2.
+That's correct, but it's awkward to read with the bigger number on the left. Rewrite it left-to-right in increasing order: reading 3 &gt; x ≥ -2 backwards gives <strong>-2 ≤ x &lt; 3</strong>. Notice only the <em>positions</em> moved. The strict end stayed strict and the inclusive end stayed inclusive, so the 3 keeps its open mark and the -2 keeps its filled one.
+Graph: a filled circle at -2, an open circle at 3, shade the segment between.
+Now test, and check the endpoints too, since a flip is exactly where an endpoint can slip. Inside, x = 0: -6 &lt; -2(0) = 0 ≤ 4, true. Endpoint x = -2: -2(-2) = 4, and -6 &lt; 4 ≤ 4 is true, so -2 is in. Endpoint x = 3: -2(3) = -6, and -6 &lt; -6 is false, so 3 is out. That matches the filled -2 and open 3. Solution: <strong>-2 ≤ x &lt; 3</strong>.</p>
+<p>Two mix-ups are worth naming now that you've seen the clean cases. The first is shading the whole line for an <em>and</em>: if you ever end up shading everything for an <em>and</em>, you've combined the pieces like an <em>or</em> by mistake, when an <em>and</em> keeps only the overlap.</p>
+<p>The second shows up when the two conditions don't actually overlap. "x &gt; 5 and x &lt; 1" asks for numbers that are both above 5 and below 1, and there aren't any, so the answer is <em>no solution</em>, an empty graph rather than the whole line. (Swap the word to <em>or</em> and the same two pieces cover a great deal: everything below 1 together with everything above 5.)</p>
+</section>
+<div class="cl-check">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M9.6 9.6a2.6 2.6 0 1 1 3.3 2.5c-.9.3-1.4.9-1.4 1.8"/><circle cx="11.5" cy="16.6" r=".9" fill="currentColor" stroke="none"/></svg>Check yourself</span></p>
+<ol>
+<li><a class="refcode" id="8.2.c1" href="#8.2.c1">8.2.c1</a> Rewrite 2 &lt; x ≤ 5 as two separate inequalities joined by a word. Which word, and why is the graph a single segment instead of two rays? (It's x &gt; 2 <em>and</em> x ≤ 5. The word is <em>and</em>, so only the numbers satisfying both survive, the overlap, which is the single segment from 2 to 5, open at 2 and filled at 5.)</li>
+<li><a class="refcode" id="8.2.c2" href="#8.2.c2">8.2.c2</a> Why does x &gt; 5 <strong>and</strong> x &lt; 1 have no solution, while x &gt; 5 <strong>or</strong> x &lt; 1 has lots? Describe both graphs. (No number is above 5 and below 1 at once, so the <em>and</em> has no solution and its graph is empty. The <em>or</em> needs only one condition, so it covers everything below 1 together with everything above 5: two rays heading opposite ways.)</li>
+<li><a class="refcode" id="8.2.c3" href="#8.2.c3">8.2.c3</a> You solve a three-part inequality and divide all parts by -2. What happens to the two inequality signs, and how would testing a point confirm it? (Dividing by a negative flips both signs at once. To confirm, pick a number from your final segment, put it in the original, and check it makes a true statement; testing the endpoints shows which is included and which isn't.)</li>
+</ol>
+<p>These problems mix <em>and</em> with <em>or</em> on purpose, since having to tell them apart each time is what gets the difference to stick. The answers and the matching worked examples are at the end of the lesson if you get stuck. Notice as you go that <em>and</em> problems should collapse to one segment and <em>or</em> problems should open into two rays. If your picture comes out the other way, that's a cue to re-read the joining word.</p>
+<p><strong>Practice problems</strong> (solve and describe the graph: segment-between for <em>and</em>, two rays for <em>or</em>):</p>
+<p><em>Set A, "and"</em></p>
+<ol>
+<li><a class="refcode" id="8.2.1" href="#8.2.1">8.2.1</a> -2 &lt; x - 1 &lt; 3</li>
+<li><a class="refcode" id="8.2.2" href="#8.2.2">8.2.2</a> 0 ≤ x + 1 ≤ 4</li>
+<li><a class="refcode" id="8.2.3" href="#8.2.3">8.2.3</a> 3 ≤ 2x - 1 ≤ 9</li>
+<li><a class="refcode" id="8.2.4" href="#8.2.4">8.2.4</a> -4 &lt; 2x &lt; 6</li>
+</ol>
+<p><em>Set B, "or"</em></p>
+<ol start="5">
+<li><a class="refcode" id="8.2.5" href="#8.2.5">8.2.5</a> x &lt; -1 or x &gt; 5</li>
+<li><a class="refcode" id="8.2.6" href="#8.2.6">8.2.6</a> x + 1 &lt; 0 or x - 3 &gt; 2</li>
+<li><a class="refcode" id="8.2.7" href="#8.2.7">8.2.7</a> 2x ≤ -4 or x &gt; 3</li>
+<li><a class="refcode" id="8.2.8" href="#8.2.8">8.2.8</a> x - 3 ≥ 2 or x &lt; -2</li>
+</ol>
+<p><em>Set C, three-part, divide by a negative (flip BOTH signs, then rewrite in increasing order)</em></p>
+<ol start="9">
+<li><a class="refcode" id="8.2.9" href="#8.2.9">8.2.9</a> -9 ≤ -3x &lt; 6</li>
+</ol>
+</div>
+<details class="answers">
+<summary><span class="tw"></span><span class="eyebrow">Answers</span><span class="hint">Try each one yourself first, then open to check.</span></summary>
+<div class="ak-body">
+<ol>
+<li>-1 &lt; x &lt; 4 — add 1 to all parts; open circles at -1 and 4, shade between.</li>
+<li>-1 ≤ x ≤ 3 — subtract 1 from all parts; filled circles at -1 and 3, shade between.</li>
+<li>2 ≤ x ≤ 5 — add 1, divide by 2; filled circles at 2 and 5, shade between.</li>
+<li>-2 &lt; x &lt; 3 — divide all by 2; open circles at -2 and 3, shade between.</li>
+<li>x &lt; -1 or x &gt; 5 — two rays (open at -1 left, open at 5 right).</li>
+<li>x &lt; -1 or x &gt; 5 — left: x&lt;-1; right: x&gt;5; two rays.</li>
+<li>x ≤ -2 or x &gt; 3 — filled at -2 left, open at 3 right.</li>
+<li>x ≥ 5 or x &lt; -2 — filled at 5 right, open at -2 left.</li>
+<li>-2 &lt; x ≤ 3 — divide all three parts by -3 and <strong>flip both</strong> signs (3 ≥ x &gt; -2), then rewrite increasing; open circle at -2, filled circle at 3, shade between. <em>(Test x = 0: -9 ≤ 0 &lt; 6; endpoint x = 3 is in since -3(3) = -9 ≥ -9; endpoint x = -2 is out since -3(-2) = 6 &lt; 6 is false.)</em></li>
+</ol>
+</div>
+</details>
+<nav class="pagenav" aria-label="Previous and next page">
+<a class="pn-prev" href="unit-08-1.html"><span class="pn-dir">&larr;&nbsp;Back</span><span class="pn-title">Lesson 8.1</span></a>
+<a class="pn-next" href="unit-08-3.html"><span class="pn-dir">Next&nbsp;&rarr;</span><span class="pn-title">Lesson 8.3</span></a>
+</nav>
+</main>
+<footer><p>A friendly Algebra 1 textbook, made to be read alongside the Claude tutor. Math by KaTeX.</p></footer>
+</div>
+</div>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  renderMathInElement(document.body, {delimiters: [{left: "$$", right: "$$", display: true}], throwOnError: false});
+  var root = document.documentElement, body = document.body;
+  document.getElementById("theme").addEventListener("click", function () {
+    root.classList.toggle("dark");
+    localStorage.setItem("a1-theme", root.classList.contains("dark") ? "dark" : "light");
+  });
+  var menu = document.getElementById("menu");
+  menu.addEventListener("click", function () {
+    var open = body.classList.toggle("nav-open");
+    menu.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+  var sn = document.getElementById("sidenav");
+  if (sn) sn.addEventListener("click", function (e) { if (e.target.closest("a")) body.classList.remove("nav-open"); });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Multiplying polynomials — Algebra 1</title>
+<script>try{if(localStorage.getItem("a1-theme")==="dark")document.documentElement.classList.add("dark");}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..40,500..600&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="textbook.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous">
+</head>
+<body data-surface="textbook">
+<header class="topbar">
+  <button id="menu" class="menu" type="button" aria-label="Open or close the contents menu" aria-expanded="false">☰&nbsp;Contents</button>
+  <a class="home" href="index.html">Algebra&nbsp;1</a>
+  <span class="sp"></span>
+  <button id="theme" type="button" aria-label="Toggle light or dark theme">◐&nbsp;Theme</button>
+</header>
+<div class="shell">
+<aside class="sidenav" id="sidenav">
+<nav class="snav" aria-label="Contents">
+<a class="snav-top" href="how-to-use.html">How to use this book</a>
+<a class="snav-top" href="index.html">All units</a>
+<ol class="snav-units">
+<li class="">
+<a class="snav-unit" href="unit-01.html">Unit 1. Foundations &amp; the Language of Algebra</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-01-1.html"><span class="ln">1.1</span> Variables and the meaning of equations</a></li>
+<li><a class="snav-lesson" href="unit-01-2.html"><span class="ln">1.2</span> The number system &amp; the number line</a></li>
+<li><a class="snav-lesson" href="unit-01-3.html"><span class="ln">1.3</span> Order of operations</a></li>
+<li><a class="snav-lesson" href="unit-01-4.html"><span class="ln">1.4</span> Negative numbers</a></li>
+<li><a class="snav-lesson" href="unit-01-5.html"><span class="ln">1.5</span> Expressions vs. equations; evaluating expressions</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-02.html">Unit 2. Solving Linear Equations</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-02-1.html"><span class="ln">2.1</span> Inverse operations &amp; one-step equations</a></li>
+<li><a class="snav-lesson" href="unit-02-2.html"><span class="ln">2.2</span> Two-step equations</a></li>
+<li><a class="snav-lesson" href="unit-02-3.html"><span class="ln">2.3</span> Combining like terms &amp; the distributive property</a></li>
+<li><a class="snav-lesson" href="unit-02-4.html"><span class="ln">2.4</span> Variables on both sides</a></li>
+<li><a class="snav-lesson" href="unit-02-5.html"><span class="ln">2.5</span> Equations with fractions (with two Fraction Refreshers)</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-03.html">Unit 3. Proportional Reasoning (the bridge to linearity)</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-03-1.html"><span class="ln">3.1</span> Ratios and rates</a></li>
+<li><a class="snav-lesson" href="unit-03-2.html"><span class="ln">3.2</span> Proportions &amp; cross-multiplication</a></li>
+<li><a class="snav-lesson" href="unit-03-3.html"><span class="ln">3.3</span> Percents</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-04.html">Unit 4. Introducing Functions</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-04-1.html"><span class="ln">4.1</span> What is a function</a></li>
+<li><a class="snav-lesson" href="unit-04-2.html"><span class="ln">4.2</span> Function notation f(x), domain &amp; range</a></li>
+<li><a class="snav-lesson" href="unit-04-3.html"><span class="ln">4.3</span> Multiple representations; linear vs. nonlinear</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-05.html">Unit 5. Linear Functions &amp; Their Graphs</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-05-1.html"><span class="ln">5.1</span> The coordinate plane</a></li>
+<li><a class="snav-lesson" href="unit-05-2.html"><span class="ln">5.2</span> Graphing linear equations from a table</a></li>
+<li><a class="snav-lesson" href="unit-05-3.html"><span class="ln">5.3</span> Slope</a></li>
+<li><a class="snav-lesson" href="unit-05-4.html"><span class="ln">5.4</span> Slope-intercept form y = mx + b</a></li>
+<li><a class="snav-lesson" href="unit-05-5.html"><span class="ln">5.5</span> Writing equations of lines</a></li>
+<li><a class="snav-lesson" href="unit-05-6.html"><span class="ln">5.6</span> x-intercepts, graphing by intercepts &amp; standard form</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-06.html">Unit 6. Modeling &amp; Translation</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-06-1.html"><span class="ln">6.1</span> Translating words into expressions and equations</a></li>
+<li><a class="snav-lesson" href="unit-06-2.html"><span class="ln">6.2</span> Classic word problems (number, age, distance, value &amp; relationship)</a></li>
+<li><a class="snav-lesson" href="unit-06-3.html"><span class="ln">6.3</span> Scatter plots &amp; line of best fit (a first taste of data)</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-07.html">Unit 7. Systems of Equations</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-07-1.html"><span class="ln">7.1</span> Solving by graphing</a></li>
+<li><a class="snav-lesson" href="unit-07-2.html"><span class="ln">7.2</span> Substitution</a></li>
+<li><a class="snav-lesson" href="unit-07-3.html"><span class="ln">7.3</span> Elimination</a></li>
+<li><a class="snav-lesson" href="unit-07-4.html"><span class="ln">7.4</span> Special cases &amp; applications</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-08.html">Unit 8. Inequalities</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-08-1.html"><span class="ln">8.1</span> One-variable inequalities</a></li>
+<li><a class="snav-lesson" href="unit-08-2.html"><span class="ln">8.2</span> Compound inequalities</a></li>
+<li><a class="snav-lesson" href="unit-08-3.html"><span class="ln">8.3</span> Absolute value: graphs &amp; distance</a></li>
+<li><a class="snav-lesson" href="unit-08-4.html"><span class="ln">8.4</span> Graphing linear inequalities (two variables) &amp; systems</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-09.html">Unit 9. Sequences &amp; Exponential Functions</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-09-1.html"><span class="ln">9.1</span> Arithmetic &amp; geometric sequences as functions</a></li>
+<li><a class="snav-lesson" href="unit-09-2.html"><span class="ln">9.2</span> Exponential growth &amp; decay; linear vs. exponential</a></li>
+</ol>
+</li>
+<li class="active">
+<a class="snav-unit" href="unit-10.html">Unit 10. Exponents &amp; Polynomials</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-10-1.html"><span class="ln">10.1</span> Exponent rules (including zero &amp; negative exponents)</a></li>
+<li><a class="snav-lesson" href="unit-10-2.html"><span class="ln">10.2</span> Scientific notation</a></li>
+<li><a class="snav-lesson" href="unit-10-3.html"><span class="ln">10.3</span> Polynomials — terms, degree, standard form; add &amp; subtract</a></li>
+<li><a class="snav-lesson cur" href="unit-10-4.html"><span class="ln">10.4</span> Multiplying polynomials</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-11.html">Unit 11. Factoring</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-11-1.html"><span class="ln">11.1</span> Greatest common factor (GCF)</a></li>
+<li><a class="snav-lesson" href="unit-11-2.html"><span class="ln">11.2</span> Factoring trinomials x²+bx+c</a></li>
+<li><a class="snav-lesson" href="unit-11-3.html"><span class="ln">11.3</span> Special patterns</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-12.html">Unit 12. Quadratic Functions &amp; Equations (the capstone)</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-12-1.html"><span class="ln">12.1</span> Square roots &amp; simplifying radicals</a></li>
+<li><a class="snav-lesson" href="unit-12-2.html"><span class="ln">12.2</span> The simplest quadratics (x²=9 → two solutions)</a></li>
+<li><a class="snav-lesson" href="unit-12-3.html"><span class="ln">12.3</span> Solving by factoring (zero-product property)</a></li>
+<li><a class="snav-lesson" href="unit-12-4.html"><span class="ln">12.4</span> Completing the square</a></li>
+<li><a class="snav-lesson" href="unit-12-5.html"><span class="ln">12.5</span> The quadratic formula &amp; the discriminant</a></li>
+<li><a class="snav-lesson" href="unit-12-6.html"><span class="ln">12.6</span> Graphing parabolas</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="appendix.html">Appendix. Data &amp; Statistics</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="appendix-1.html"><span class="ln">A.1</span> One-variable statistics — center &amp; spread</a></li>
+<li><a class="snav-lesson" href="appendix-2.html"><span class="ln">A.2</span> Two-variable data — line of best fit, correlation vs. causation</a></li>
+<li><a class="snav-lesson" href="appendix-3.html"><span class="ln">A.3</span> Two-way tables</a></li>
+</ol>
+</li>
+</ol></nav>
+</aside>
+<div class="content">
+<main>
+<div class="kicker">Unit 10 · Lesson 10.4</div><h1>Multiplying polynomials</h1>
+
+
+<p>This is the forward direction of the course's main thread: you take (x + 2)(x + 3) and multiply it out to x² + 5x + 6. The next unit hands you x² + 5x + 6 and asks you to find the pieces it came from, so multiplying out now is the very thing you'll learn to undo.</p>
+<p>There's one spot where almost everyone loses a piece, the <em>middle</em> term, and the area box in this lesson is built to make that piece impossible to miss.</p>
+<p>Start with the simpler case: a single term times a polynomial. The factor outside the parentheses hands a flyer to <em>everyone</em> inside, skipping no one. So 3x(x + 4) gives 3x · x and 3x · 4:
+$$3x(x+4)=3x\cdot x+3x\cdot 4=3x^2+12x$$
+The exponents follow last lesson's product rule: x · x is x², and the coefficient 3 rides along.</p>
+<p>Now two binomials, where the middle term lives. Think of (x + 2)(x + 3) as the area of a rectangle whose width is x + 2 and whose height is x + 3. Slice the width into its two parts and the height into its two parts, and the rectangle breaks into four smaller cells. Each cell's area is one little product, and the whole area is all four added up:
+$$\begin{array}{c|c|c}
+ &amp; x &amp; 3 \\ \hline
+x &amp; x^2 &amp; 3x \\ \hline
+2 &amp; 2x &amp; 6
+\end{array}\qquad\Rightarrow\qquad x^2 + \underbrace{3x+2x}_{=\,5x} + 6 = x^2+5x+6$$
+There they are: four cells, x², 3x, 2x, and 6. The two in the middle, 3x and 2x, are the ones people drop, and they add up to the 5x that makes this a trinomial instead of just x² + 6.</p>
+<p>These same four products, taken in a fixed order, are sometimes called FOIL. The box is worth preferring, because it <em>shows you why a middle term exists</em> and keeps working when the pieces get bigger, where that shortcut runs out.</p>
+<p>If the grid isn't your thing, there's a second way to see the same thing: distribute twice. First the x greets both terms in the second parentheses, then the 2 greets both:
+$$x(x+3)+2(x+3)=x^2+3x+2x+6=x^2+5x+6$$
+Same four products, same middle term, no grid. Pick whichever picture you find easier to keep straight. They give the same answer because they <em>are</em> the same work.</p>
+<div class="cl-terms">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6.5C9.5 5 6 5 3.5 6.5V18C6 16.5 9.5 16.5 12 18C14.5 16.5 18 16.5 20.5 18V6.5C18 5 14.5 5 12 6.5Z"/><path d="M12 6.5V18"/></svg>New words</span></p>
+<p>none new. This is the distributive property (Unit 2) applied once (monomial × polynomial) or twice (binomial × binomial).</p>
+</div>
+<section class="worked">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19.5V15L15.5 4.5 19.5 8.5 9 19Z"/><path d="M13.5 6.5 17.5 10.5"/></svg>Worked example</span></p>
+<p><em>Monomial × binomial, distribute:</em>
+<a class="refcode" id="10.4.w1" href="#10.4.w1">10.4.w1</a>
+$$3x(x+4)=3x^2+12x$$</p>
+<p><em>Binomial × binomial, the area box:</em>
+<a class="refcode" id="10.4.w2" href="#10.4.w2">10.4.w2</a>
+$$(x+2)(x+3)=x^2+5x+6 \quad(\text{middle term }3x+2x=5x)$$</p>
+<p><em>A negative in one binomial (watch signs):</em>
+<a class="refcode" id="10.4.w3" href="#10.4.w3">10.4.w3</a>
+$$(x-3)(x-4)=x^2-4x-3x+12=x^2-7x+12$$</p>
+<p><em>Difference of squares, the middle term vanishes:</em>
+<a class="refcode" id="10.4.w4" href="#10.4.w4">10.4.w4</a>
+$$(x-4)(x+4)=x^2+4x-4x-16=x^2-16$$
+The +4x and -4x cancel, and that's <em>why</em> (a-b)(a+b)=a²-b².</p>
+<p><em>Squaring a binomial, the middle term is doubled:</em>
+<a class="refcode" id="10.4.w5" href="#10.4.w5">10.4.w5</a>
+$$(x+3)^2=(x+3)(x+3)=x^2+3x+3x+9=x^2+6x+9$$
+Note that (x+3)²≠x²+9. The middle 6x is the whole point.</p>
+<p>Two of those deserve a second look. In the difference-of-squares example, the two middle cells, +4x and −4x, go to zero together, which is the whole reason (x − 4)(x + 4) collapses to just x² − 16.</p>
+<p>And in the last one, squaring a binomial, the tempting move is to square each piece and write x² + 9. But (x + 3)² means (x + 3)(x + 3), and running the box gives a middle term of 3x + 3x = 6x. So (x + 3)² is x² + 6x + 9; the 6x is exactly the part that gets dropped, and catching it is what the example is for.</p>
+<p>Across all of these, the error to watch for is the missing middle term: writing (x + 2)(x + 3) as x² + 6, or (x + 3)² as x² + 9. It happens when only the first-and-last products get written down.</p>
+<p>The box is the cure, because it makes the question concrete. Every part of the width meets every part of the height, so there are <em>four</em> cells, not two; if you only have two terms, ask where the middle cells went. When a sign is in play, fill each cell with its <em>signed</em> product (x · −4 is −4x) and then add, and a substitution check at x = 1 will flag any sign that went astray.</p>
+<p>Run the box once on a friendly case to feel it click. Expand (x + 5)(x + 1). The four cells are x², x, 5x, and 5; the middle two, x and 5x, add to 6x; so it's x² + 6x + 5. Four cells, then collect the middle pair, and that's the whole method.</p>
+</section>
+<div class="cl-check">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M9.6 9.6a2.6 2.6 0 1 1 3.3 2.5c-.9.3-1.4.9-1.4 1.8"/><circle cx="11.5" cy="16.6" r=".9" fill="currentColor" stroke="none"/></svg>Check yourself</span></p>
+<ol>
+<li><a class="refcode" id="10.4.c1" href="#10.4.c1">10.4.c1</a> Expand (x + 2)(x + 5) with the area box, and point to where the middle term 7x comes from. (Four cells: x², 5x, 2x, 10; the middle pair 5x + 2x is the 7x, giving x² + 7x + 10.)</li>
+<li><a class="refcode" id="10.4.c2" href="#10.4.c2">10.4.c2</a> Why does (x − 5)(x + 5) have <em>no</em> middle term, but (x − 5)(x − 5) does? (In the first, the middle cells are −5x and +5x, which go to zero, leaving x² − 25; in the second they're −5x and −5x, which add to −10x, giving x² − 10x + 25.)</li>
+<li><a class="refcode" id="10.4.c3" href="#10.4.c3">10.4.c3</a> Suppose someone writes (x + 4)² = x² + 16. Using the box, show them exactly what they dropped. (Running (x + 4)(x + 4) gives middle cells 4x and 4x; they add to 8x, so the answer is x² + 8x + 16, and the dropped piece is the 8x.)</li>
+</ol>
+<p>You can now multiply a single term across a polynomial, multiply two binomials with the area box, and reliably produce the middle term, including the cases where it doubles or vanishes. Hold onto each (x + 2)(x + 3) → x² + 5x + 6 you do: the next unit starts from the right-hand side and hunts for the left, and this same box is the tool you'll fill in reverse.</p>
+<p>The set below mixes monomial products with binomial products instead of grouping them, harder in the moment but better for remembering. The answers wait at the end of the lesson, and each problem matches one of the worked examples above, so reread the right one whenever you get stuck. The last three are the special patterns: watch for a vanishing middle term in one and a doubled one in the others.</p>
+</div>
+<section class="practice">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4.5" width="15.5" height="15.5" rx="2.5"/><path d="M7.5 10 9 11.5 12 8.5"/><path d="M14 10H16.5"/><path d="M7.5 15H16.5"/></svg>Practice</span></p>
+<p><em>Monomial × polynomial (distribute):</em></p>
+<ol>
+<li><a class="refcode" id="10.4.1" href="#10.4.1">10.4.1</a> 3x(x+4)  2. 2x(3x-5)  3. -4x(x²-2x+1)</li>
+</ol>
+<p><em>Binomial × binomial (use the area box):</em></p>
+<ol start="4">
+<li><a class="refcode" id="10.4.2" href="#10.4.2">10.4.2</a> (x+2)(x+3)  5. (x+5)(x+1)  6. (x-2)(x+7)  7. (x-3)(x-4)</li>
+</ol>
+<p><em>With a leading coefficient:</em></p>
+<ol start="8">
+<li><a class="refcode" id="10.4.3" href="#10.4.3">10.4.3</a> (2x+1)(x+3)  9. (3x-2)(x+5)</li>
+</ol>
+<p><em>Special patterns (preview of Unit 11):</em></p>
+<ol start="10">
+<li><a class="refcode" id="10.4.4" href="#10.4.4">10.4.4</a> (x-4)(x+4)  11. (x+3)²  12. (x-5)²</li>
+</ol>
+</section>
+<details class="answers">
+<summary><span class="tw"></span><span class="eyebrow">Answers</span><span class="hint">Try each one yourself first, then open to check.</span></summary>
+<div class="ak-body">
+<p>1) 3x²+12x  2) 6x²-10x  3) -4x³+8x²-4x  4) x²+5x+6  5) x²+6x+5  6) x²+5x-14  7) x²-7x+12  8) 2x²+7x+3  9) 3x²+13x-10  10) x²-16  11) x²+6x+9  12) x²-10x+25</p>
+<p><em>Substitution spot-checks at x=1:</em> #6: (-1)(8)=-8, and 1+5-14=-8. #9: (1)(6)=6, and 3+13-10=6. #11: (4)²=16, and 1+6+9=16.</p>
+</div>
+</details>
+<div class="ldiv" aria-hidden="true"><i></i><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3.5 20.5 12 12 20.5 3.5 12Z"/></svg><i></i></div>
+<p>You've reached the end of building expressions up. You can simplify with the exponent rules and rebuild the zero and negative cases when memory slips; move a number between standard and scientific form and compute in scientific form; name and add and subtract polynomials with the subtraction signs handled; and multiply binomials with the area box, middle term and all. The next unit takes that last box and runs it backward: you'll be handed the finished area and asked to find the edges. Every (x + 2)(x + 3) → x² + 5x + 6 you practiced is one you're about to learn to read from right to left.</p>
+<nav class="pagenav" aria-label="Previous and next page">
+<a class="pn-prev" href="unit-10-3.html"><span class="pn-dir">&larr;&nbsp;Back</span><span class="pn-title">Lesson 10.3</span></a>
+<a class="pn-next" href="unit-11.html"><span class="pn-dir">Next&nbsp;&rarr;</span><span class="pn-title">Unit 11</span></a>
+</nav>
+</main>
+<footer><p>A friendly Algebra 1 textbook, made to be read alongside the Claude tutor. Math by KaTeX.</p></footer>
+</div>
+</div>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  renderMathInElement(document.body, {delimiters: [{left: "$$", right: "$$", display: true}], throwOnError: false});
+  var root = document.documentElement, body = document.body;
+  document.getElementById("theme").addEventListener("click", function () {
+    root.classList.toggle("dark");
+    localStorage.setItem("a1-theme", root.classList.contains("dark") ? "dark" : "light");
+  });
+  var menu = document.getElementById("menu");
+  menu.addEventListener("click", function () {
+    var open = body.classList.toggle("nav-open");
+    menu.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+  var sn = document.getElementById("sidenav");
+  if (sn) sn.addEventListener("click", function (e) { if (e.target.closest("a")) body.classList.remove("nav-open"); });
+});
+</script>
+</body>
+</html>

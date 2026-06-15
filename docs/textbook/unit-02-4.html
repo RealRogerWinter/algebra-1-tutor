@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Variables on both sides — Algebra 1</title>
+<script>try{if(localStorage.getItem("a1-theme")==="dark")document.documentElement.classList.add("dark");}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..40,500..600&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="textbook.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous">
+</head>
+<body data-surface="textbook">
+<header class="topbar">
+  <button id="menu" class="menu" type="button" aria-label="Open or close the contents menu" aria-expanded="false">☰&nbsp;Contents</button>
+  <a class="home" href="index.html">Algebra&nbsp;1</a>
+  <span class="sp"></span>
+  <button id="theme" type="button" aria-label="Toggle light or dark theme">◐&nbsp;Theme</button>
+</header>
+<div class="shell">
+<aside class="sidenav" id="sidenav">
+<nav class="snav" aria-label="Contents">
+<a class="snav-top" href="how-to-use.html">How to use this book</a>
+<a class="snav-top" href="index.html">All units</a>
+<ol class="snav-units">
+<li class="">
+<a class="snav-unit" href="unit-01.html">Unit 1. Foundations &amp; the Language of Algebra</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-01-1.html"><span class="ln">1.1</span> Variables and the meaning of equations</a></li>
+<li><a class="snav-lesson" href="unit-01-2.html"><span class="ln">1.2</span> The number system &amp; the number line</a></li>
+<li><a class="snav-lesson" href="unit-01-3.html"><span class="ln">1.3</span> Order of operations</a></li>
+<li><a class="snav-lesson" href="unit-01-4.html"><span class="ln">1.4</span> Negative numbers</a></li>
+<li><a class="snav-lesson" href="unit-01-5.html"><span class="ln">1.5</span> Expressions vs. equations; evaluating expressions</a></li>
+</ol>
+</li>
+<li class="active">
+<a class="snav-unit" href="unit-02.html">Unit 2. Solving Linear Equations</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-02-1.html"><span class="ln">2.1</span> Inverse operations &amp; one-step equations</a></li>
+<li><a class="snav-lesson" href="unit-02-2.html"><span class="ln">2.2</span> Two-step equations</a></li>
+<li><a class="snav-lesson" href="unit-02-3.html"><span class="ln">2.3</span> Combining like terms &amp; the distributive property</a></li>
+<li><a class="snav-lesson cur" href="unit-02-4.html"><span class="ln">2.4</span> Variables on both sides</a></li>
+<li><a class="snav-lesson" href="unit-02-5.html"><span class="ln">2.5</span> Equations with fractions (with two Fraction Refreshers)</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-03.html">Unit 3. Proportional Reasoning (the bridge to linearity)</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-03-1.html"><span class="ln">3.1</span> Ratios and rates</a></li>
+<li><a class="snav-lesson" href="unit-03-2.html"><span class="ln">3.2</span> Proportions &amp; cross-multiplication</a></li>
+<li><a class="snav-lesson" href="unit-03-3.html"><span class="ln">3.3</span> Percents</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-04.html">Unit 4. Introducing Functions</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-04-1.html"><span class="ln">4.1</span> What is a function</a></li>
+<li><a class="snav-lesson" href="unit-04-2.html"><span class="ln">4.2</span> Function notation f(x), domain &amp; range</a></li>
+<li><a class="snav-lesson" href="unit-04-3.html"><span class="ln">4.3</span> Multiple representations; linear vs. nonlinear</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-05.html">Unit 5. Linear Functions &amp; Their Graphs</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-05-1.html"><span class="ln">5.1</span> The coordinate plane</a></li>
+<li><a class="snav-lesson" href="unit-05-2.html"><span class="ln">5.2</span> Graphing linear equations from a table</a></li>
+<li><a class="snav-lesson" href="unit-05-3.html"><span class="ln">5.3</span> Slope</a></li>
+<li><a class="snav-lesson" href="unit-05-4.html"><span class="ln">5.4</span> Slope-intercept form y = mx + b</a></li>
+<li><a class="snav-lesson" href="unit-05-5.html"><span class="ln">5.5</span> Writing equations of lines</a></li>
+<li><a class="snav-lesson" href="unit-05-6.html"><span class="ln">5.6</span> x-intercepts, graphing by intercepts &amp; standard form</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-06.html">Unit 6. Modeling &amp; Translation</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-06-1.html"><span class="ln">6.1</span> Translating words into expressions and equations</a></li>
+<li><a class="snav-lesson" href="unit-06-2.html"><span class="ln">6.2</span> Classic word problems (number, age, distance, value &amp; relationship)</a></li>
+<li><a class="snav-lesson" href="unit-06-3.html"><span class="ln">6.3</span> Scatter plots &amp; line of best fit (a first taste of data)</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-07.html">Unit 7. Systems of Equations</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-07-1.html"><span class="ln">7.1</span> Solving by graphing</a></li>
+<li><a class="snav-lesson" href="unit-07-2.html"><span class="ln">7.2</span> Substitution</a></li>
+<li><a class="snav-lesson" href="unit-07-3.html"><span class="ln">7.3</span> Elimination</a></li>
+<li><a class="snav-lesson" href="unit-07-4.html"><span class="ln">7.4</span> Special cases &amp; applications</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-08.html">Unit 8. Inequalities</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-08-1.html"><span class="ln">8.1</span> One-variable inequalities</a></li>
+<li><a class="snav-lesson" href="unit-08-2.html"><span class="ln">8.2</span> Compound inequalities</a></li>
+<li><a class="snav-lesson" href="unit-08-3.html"><span class="ln">8.3</span> Absolute value: graphs &amp; distance</a></li>
+<li><a class="snav-lesson" href="unit-08-4.html"><span class="ln">8.4</span> Graphing linear inequalities (two variables) &amp; systems</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-09.html">Unit 9. Sequences &amp; Exponential Functions</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-09-1.html"><span class="ln">9.1</span> Arithmetic &amp; geometric sequences as functions</a></li>
+<li><a class="snav-lesson" href="unit-09-2.html"><span class="ln">9.2</span> Exponential growth &amp; decay; linear vs. exponential</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-10.html">Unit 10. Exponents &amp; Polynomials</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-10-1.html"><span class="ln">10.1</span> Exponent rules (including zero &amp; negative exponents)</a></li>
+<li><a class="snav-lesson" href="unit-10-2.html"><span class="ln">10.2</span> Scientific notation</a></li>
+<li><a class="snav-lesson" href="unit-10-3.html"><span class="ln">10.3</span> Polynomials — terms, degree, standard form; add &amp; subtract</a></li>
+<li><a class="snav-lesson" href="unit-10-4.html"><span class="ln">10.4</span> Multiplying polynomials</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-11.html">Unit 11. Factoring</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-11-1.html"><span class="ln">11.1</span> Greatest common factor (GCF)</a></li>
+<li><a class="snav-lesson" href="unit-11-2.html"><span class="ln">11.2</span> Factoring trinomials x²+bx+c</a></li>
+<li><a class="snav-lesson" href="unit-11-3.html"><span class="ln">11.3</span> Special patterns</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-12.html">Unit 12. Quadratic Functions &amp; Equations (the capstone)</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-12-1.html"><span class="ln">12.1</span> Square roots &amp; simplifying radicals</a></li>
+<li><a class="snav-lesson" href="unit-12-2.html"><span class="ln">12.2</span> The simplest quadratics (x²=9 → two solutions)</a></li>
+<li><a class="snav-lesson" href="unit-12-3.html"><span class="ln">12.3</span> Solving by factoring (zero-product property)</a></li>
+<li><a class="snav-lesson" href="unit-12-4.html"><span class="ln">12.4</span> Completing the square</a></li>
+<li><a class="snav-lesson" href="unit-12-5.html"><span class="ln">12.5</span> The quadratic formula &amp; the discriminant</a></li>
+<li><a class="snav-lesson" href="unit-12-6.html"><span class="ln">12.6</span> Graphing parabolas</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="appendix.html">Appendix. Data &amp; Statistics</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="appendix-1.html"><span class="ln">A.1</span> One-variable statistics — center &amp; spread</a></li>
+<li><a class="snav-lesson" href="appendix-2.html"><span class="ln">A.2</span> Two-variable data — line of best fit, correlation vs. causation</a></li>
+<li><a class="snav-lesson" href="appendix-3.html"><span class="ln">A.3</span> Two-way tables</a></li>
+</ol>
+</li>
+</ol></nav>
+</aside>
+<div class="content">
+<main>
+<div class="kicker">Unit 2 · Lesson 2.4</div><h1>Variables on both sides</h1>
+
+
+<p>Some questions naturally put the unknown on both sides at once. "When does plan A cost the same as plan B?" puts x in both prices. Solving these uses nothing new; it's a rehearsal of every habit so far, with one added first move. It's also where you'll see all three things a linear equation can turn out to be: one solution, no solution, or true for every number.</p>
+<p>Picture the balance scale again, but now both pans hold boxes <em>and</em> coins. Take 5x + 2 = 3x + 10: the left pan has five boxes and 2 coins, the right has three boxes and 10 coins. To corner x, get all the boxes onto one pan by removing the same thing from both. Take 3x off each side, so the 3x on the right goes to zero, and you're left with 2x + 2 = 10, a familiar two-step equation:
+$$5x+2=3x+10 \;\xrightarrow{\,-3x\,}\; 2x+2=10 \;\xrightarrow{\,-2\,}\; 2x=8 \;\xrightarrow{\,\div 2\,}\; x=4$$
+$$\text{Check: } 5(4)+2=22 \;\text{ and }\; 3(4)+10=22$$
+A small thing makes the numbers kinder: move the <em>smaller</em> variable term, so you don't end up with a negative coefficient. Either choice is correct, though; the answer comes out the same.</p>
+<div class="cl-terms">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6.5C9.5 5 6 5 3.5 6.5V18C6 16.5 9.5 16.5 12 18C14.5 16.5 18 16.5 20.5 18V6.5C18 5 14.5 5 12 6.5Z"/><path d="M12 6.5V18"/></svg>New words</span></p>
+<ul>
+<li><a class="refcode" id="2.4.d1" href="#2.4.d1">2.4.d1</a> <strong>Conditional equation:</strong> an equation that's true for exactly one value of the variable, the usual case, with a single solution (e.g. 5x+2=3x+10, true only at x=4).</li>
+<li><a class="refcode" id="2.4.d2" href="#2.4.d2">2.4.d2</a> <strong>Identity:</strong> an equation that's true for <em>every</em> value. Both sides are really the same expression. Its solution set is <strong>all real numbers / infinitely many solutions</strong> (e.g. 2x+4=2(x+2)).</li>
+<li><a class="refcode" id="2.4.d3" href="#2.4.d3">2.4.d3</a> <strong>Contradiction:</strong> an equation that's true for <em>no</em> value. It reduces to a false numeric statement. It has <strong>no solution</strong> (e.g. 2x+3=2x+5).</li>
+</ul>
+</div>
+<section class="worked">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19.5V15L15.5 4.5 19.5 8.5 9 19Z"/><path d="M13.5 6.5 17.5 10.5"/></svg>Worked example</span></p>
+<p><em>Standard:</em>
+<a class="refcode" id="2.4.w1" href="#2.4.w1">2.4.w1</a>
+$$5x+2=3x+10 \xrightarrow{-3x} 2x+2=10 \xrightarrow{-2} 2x=8 \xrightarrow{\div 2} x=4 \quad\text{Check: }22=22$$</p>
+<p><em>Constants and variables both to move:</em>
+<a class="refcode" id="2.4.w2" href="#2.4.w2">2.4.w2</a>
+$$7x-3=2x+12 \xrightarrow{-2x} 5x-3=12 \xrightarrow{+3} 5x=15 \xrightarrow{\div 5} x=3 \quad\text{Check: }18=18$$</p>
+<p><em>Negative answer (move the larger variable term, land below zero):</em>
+<a class="refcode" id="2.4.w3" href="#2.4.w3">2.4.w3</a>
+$$4x+1=6x+9 \xrightarrow{-4x} 1=2x+9 \xrightarrow{-9} -8=2x \xrightarrow{\div 2} x=-4$$
+$$\text{Check: } 4(-4)+1=-15 \;\text{ and }\; 6(-4)+9=-15$$</p>
+<p><em>Distribute first, then gather:</em>
+<a class="refcode" id="2.4.w4" href="#2.4.w4">2.4.w4</a>
+$$2(x-1)=x+5 \xrightarrow{\text{distribute}} 2x-2=x+5 \xrightarrow{-x} x-2=5 \xrightarrow{+2} x=7$$
+$$\text{Check: } 2(7-1)=12 \;\text{ and }\; 7+5=12$$</p>
+<p>In the third one the variable terms don't subtract away cleanly to a positive, so the answer is −4. That's a real solution, and the check confirms it on both sides. In the fourth, the left side has parentheses, so you tidy first, distributing the 2 across (x − 1) to get 2x − 2, and only then gather the x's. Tidy each side before you move terms across, and the rest is the two-step move you already know.</p>
+<p><strong>The substitution check, when it doesn't match.</strong> You'll lean on the check hard in this lesson, because there are more steps for a sign to slip in. As back in 2.1, a check that doesn't match is the check working, not a verdict on you. Here the likeliest culprit is a sign lost when you took a variable term off both pans, so re-run that subtraction first; the method itself is almost never the problem.</p>
+</section>
+<h3 id="the-three-outcomes">The three outcomes</h3>
+<p>So far every equation has had <strong>exactly one</strong> solution. That's the common case, but it isn't the only one. Once the variable is on both sides, the <em>same procedure</em> can land in one of three places. The tell is what happens to the variable when you gather terms:</p>
+<ul>
+<li><strong>Conditional: exactly one solution.</strong> The variable terms <em>don't</em> go away; you isolate x and get one value. This is everything in Lessons 2.1 to 2.4 so far.</li>
+<li><strong>Identity: infinitely many solutions (all real numbers).</strong> When you gather, the variable terms go to zero on both sides <strong>and</strong> the leftover numeric statement is <strong>true</strong> (like 4=4). The two sides were the same expression all along, so <em>every</em> number works.</li>
+<li><strong>Contradiction: no solution.</strong> The variable terms go to zero <strong>and</strong> the leftover statement is <strong>false</strong> (like 3=5). No number can make a false statement true, so nothing works.</li>
+</ul>
+<p>You don't decide which outcome it is up front. Run the usual procedure, and if the x's disappear, stop and ask one question: is what's left actually true? In balance terms, if both pans were secretly identical, the scale stays level no matter what the box holds, and that's an identity. If the pans can never match, no box-weight will balance them, and that's a contradiction.</p>
+<p><strong>Worked examples (one of each outcome, keep the substitution habit even here):</strong></p>
+<p><em>Conditional, the usual one solution:</em>
+<a class="refcode" id="2.4.w5" href="#2.4.w5">2.4.w5</a>
+$$3(x-2)+4=2(x+1)-x \xrightarrow{\text{distribute}} 3x-2=x+2 \xrightarrow{-x} 2x-2=2 \xrightarrow{+2,\,\div 2} x=2$$
+$$\text{Check: } 3(2-2)+4=4 \;\text{ and }\; 2(2+1)-2=4$$</p>
+<p><em>Identity, the x's go to zero, true statement, so all real numbers:</em>
+<a class="refcode" id="2.4.w6" href="#2.4.w6">2.4.w6</a>
+$$2x+4=2(x+2) \xrightarrow{\text{distribute}} 2x+4=2x+4 \xrightarrow{-2x} 4=4 \;\text{ (always true)}$$
+The variable went to zero and left <strong>4=4</strong>, a true statement, so the answer is <strong>infinitely many solutions (all real numbers).</strong> You can sanity-check with two different numbers: at x = 0 both sides are 4; at x = 5 both sides are 14. They match for any x.</p>
+<p><em>Contradiction, the x's go to zero, false statement, so no solution:</em>
+<a class="refcode" id="2.4.w7" href="#2.4.w7">2.4.w7</a>
+$$2x+3=2x+5 \xrightarrow{-2x} 3=5 \;\text{(false)}$$
+The variable went to zero and left <strong>3=5</strong>, which is never true, so there's <strong>no solution.</strong> Sanity-check: at x = 0 the sides are 3 and 5; at x = 10 they're 23 and 25. The right side is always 2 bigger, so they can never be equal.</p>
+<p>If the x's vanish, that isn't an error and it isn't x = 0. There's simply no x left to report. Read the leftover statement instead. For an identity, write <strong>all real numbers</strong> (or "infinitely many solutions"); for a contradiction, write <strong>no solution</strong>. Don't write "x = 4 = 4" or "x = 3 = 5"; once the variable is gone, you're only reading whether what remains is true or false.</p>
+<h3 id="two-valid-solving-orders-which-is-cleaner-and-when">Two valid solving orders (which is cleaner, and when)</h3>
+<p>For a multi-step equation there's often more than one correct first move. Take 3(x+2)=18. Both of these are right:</p>
+<p><a class="refcode" id="2.4.w8" href="#2.4.w8">2.4.w8</a>
+$$\textbf{Distribute first:}\quad 3(x+2)=18 \xrightarrow{\text{distribute}} 3x+6=18 \xrightarrow{-6} 3x=12 \xrightarrow{\div 3} x=4$$</p>
+<p>$$\textbf{Divide first:}\quad 3(x+2)=18 \xrightarrow{\div 3} x+2=6 \xrightarrow{-2} x=4$$</p>
+<p>Same answer (x = 4, and 3(4 + 2) = 18 checks). When the whole left side is multiplied by a number that divides the right side cleanly, as 3 goes into 18 evenly, dividing first is fewer steps and smaller numbers. But if the right side <em>weren't</em> a clean multiple, say 3(x + 2) = 20, dividing first gives x + 2 = 20/3 and drags a fraction through every later step, so distributing first keeps things whole longer. Both orders are valid. The skill is glancing ahead to pick the cleaner one for the equation in front of you, and which to use is your call.</p>
+<p><strong>One spot-the-error to read.</strong> Here's a worked solution to 5 − 2(x − 1) = 9 with one broken line, shown beside the correct version so you can see exactly where they part ways. This is the distributing-a-negative trap from Lesson 2.3, now hiding inside a both-sides solve:
+<a class="refcode" id="2.4.w9" href="#2.4.w9">2.4.w9</a>
+$$5-2(x-1)=9 \;\to\; 5-2x-2=9 \;\to\; 3-2x=9 \;\to\; -2x=6 \;\to\; x=-3$$
+The break is in the very first move. The −2 reaches the −1 inside as −2 × −1 = <strong>+2</strong>, not −2, so the correct second line is 5 − 2x <strong>+ 2</strong> = 9, which becomes 7 − 2x = 9, then −2x = 2, and <strong>x = −1</strong>. If you didn't spot it, that's fine. The fix is right here. Confirm x = −1 in the original: 5 − 2(−1 − 1) = 5 − 2(−2) = 5 + 4 = 9, which matches.</p>
+<p>A couple of slips worth naming, now that you've had a clean success at each. When you subtract a variable term, it has to come off <em>both</em> pans; subtracting 3x from the left only is the most common way a both-sides solve goes wrong.</p>
+<p>And watch the sign when you distribute a positive number over a subtraction: in 2(x − 1), the result is 2x − 2, not 2x − 1 or 2x + 2, because the 2 reaches the −1 and gives −2. Let the substitution check settle any doubt.</p>
+<p>If this lesson is getting heavy, that's reasonable. It folds together every move so far. It's fine to leave a problem and come back to it tomorrow; a break genuinely helps, and you haven't lost anything. When you return, re-read the balance-scale picture at the top first, since every move here is still just taking the same thing off both pans.</p>
+<div class="cl-check">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M9.6 9.6a2.6 2.6 0 1 1 3.3 2.5c-.9.3-1.4.9-1.4 1.8"/><circle cx="11.5" cy="16.6" r=".9" fill="currentColor" stroke="none"/></svg>Check yourself</span></p>
+<ol>
+<li><a class="refcode" id="2.4.c1" href="#2.4.c1">2.4.c1</a> Solve 6x + 1 = 4x + 9. Which side did you move the variable to, and why that one? (Subtract the smaller term, 4x, from both sides to keep the coefficient positive: 2x + 1 = 9, then 2x = 8, so x = 4. Check: both sides equal 25.)</li>
+<li><a class="refcode" id="2.4.c2" href="#2.4.c2">2.4.c2</a> In 3x + 8 = 7x + 20, if you move 3x right you'll hit a negative. Walk through it and check. (Subtract 3x: 8 = 4x + 20, then subtract 20: −12 = 4x, so x = −3. Check: 3(−3) + 8 = −1 and 7(−3) + 20 = −1.)</li>
+<li><a class="refcode" id="2.4.c3" href="#2.4.c3">2.4.c3</a> Why must you distribute 2(x − 1) <em>before</em> gathering the x's? (Until the parentheses are gone, the left side isn't yet a sum of plain terms you can move; distributing gives 2x − 2, and then you can subtract the x on the right.)</li>
+<li><a class="refcode" id="2.4.c4" href="#2.4.c4">2.4.c4</a> You solve an equation and the x's disappear, leaving 7 = 7. What's the solution, and what would it mean instead if you'd been left with 7 = 2? (7 = 7 is true, so all real numbers; 7 = 2 is false, so no solution.)</li>
+<li><a class="refcode" id="2.4.c5" href="#2.4.c5">2.4.c5</a> Give the fewest-steps first move for 4(x + 5) = 24, and say why dividing by 4 first is cleaner here than distributing. (Divide both sides by 4 first: x + 5 = 6, so x = 1. It's cleaner because 24/4 = 6 is whole, so no fraction appears; check 4(1 + 5) = 24.)</li>
+</ol>
+<p>You can now solve an equation with variables on both sides by gathering the boxes onto one pan and the numbers onto the other, recognize when the variable going to zero means all real numbers or no solution, and choose the cleaner of two valid first moves.</p>
+<p>Several of these land on a negative, and several are an identity or a contradiction rather than the usual one solution.</p>
+</div>
+<section class="practice">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4.5" width="15.5" height="15.5" rx="2.5"/><path d="M7.5 10 9 11.5 12 8.5"/><path d="M14 10H16.5"/><path d="M7.5 15H16.5"/></svg>Practice</span></p>
+<p><em>Gather variables (positive answers):</em></p>
+<ol>
+<li><a class="refcode" id="2.4.1" href="#2.4.1">2.4.1</a> 6x+1=4x+9  2. 8x-5=3x+10  3. 5x+3=2x+18  4. 7x-2=5x+8  5. 9x+4=6x+19  6. 4x-7=x+5</li>
+</ol>
+<p><em>Negative answers:</em></p>
+<ol start="7">
+<li><a class="refcode" id="2.4.2" href="#2.4.2">2.4.2</a> 3x+8=7x+20  8. 2x-9=5x+3</li>
+</ol>
+<p><em>Distribute first, then gather:</em></p>
+<ol start="9">
+<li><a class="refcode" id="2.4.3" href="#2.4.3">2.4.3</a> 3(x+2)=x+10  10. 2(x-1)=4x+6  11. 5x-4=3(x+2)  12. 4(x-3)=2x+2</li>
+</ol>
+<p><em>Three outcomes. Decide: one solution, all real numbers, or no solution? (Gather, then read the leftover statement.)</em></p>
+<ol start="13">
+<li><a class="refcode" id="2.4.4" href="#2.4.4">2.4.4</a> 4x+5=2x+13  14. 3x+5=3x+5  15. 2x+3=2x+5  16. 6x+1=2x+13  17. 2(x+3)=2x+6  18. 5x+2=5x-9  19. 3(x-4)=3x-12  20. 4(x+1)=2(2x+5)</li>
+</ol>
+<p><em>Strategy choice. Solve, then say which first move (divide-first vs. distribute-first) was cleaner and why:</em></p>
+<ol start="21">
+<li><a class="refcode" id="2.4.5" href="#2.4.5">2.4.5</a> 5(x+2)=35</li>
+</ol>
+</section>
+<details class="answers">
+<summary><span class="tw"></span><span class="eyebrow">Answers</span><span class="hint">Try each one yourself first, then open to check.</span></summary>
+<div class="ak-body">
+<p>1) 4  2) 3  3) 5  4) 5  5) 5  6) 4  7) -3  8) -4  9) 2  10) -4  11) 5  12) 7
+13) x=4  14) identity — all real numbers  15) contradiction — no solution  16) x=3  17) identity — all real numbers  18) contradiction — no solution  19) identity — all real numbers  20) contradiction — no solution  21) x=5</p>
+<p><em>Substitution spot-checks:</em> #7: 3(-3)+8=-1, 7(-3)+20=-1. #10: 2(-4-1)=-10, 4(-4)+6=-10. #11: 5(5)-4=21, 3(5+2)=21. #14: 3(0)+5=5 and 3(0)+5=5; at x=2 both give 11 — true for every x. #15: at x=0 the sides are 3 and 5; the right side stays 2 bigger for every x, so never equal. #21 (divide-first): 5(x+2)=35 → x+2=7 → x=5, cleaner than distributing to 5x+10=35 since 35/5 is whole; check 5(5+2)=35.</p>
+</div>
+</details>
+<nav class="pagenav" aria-label="Previous and next page">
+<a class="pn-prev" href="unit-02-3.html"><span class="pn-dir">&larr;&nbsp;Back</span><span class="pn-title">Lesson 2.3</span></a>
+<a class="pn-next" href="unit-02-5.html"><span class="pn-dir">Next&nbsp;&rarr;</span><span class="pn-title">Lesson 2.5</span></a>
+</nav>
+</main>
+<footer><p>A friendly Algebra 1 textbook, made to be read alongside the Claude tutor. Math by KaTeX.</p></footer>
+</div>
+</div>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  renderMathInElement(document.body, {delimiters: [{left: "$$", right: "$$", display: true}], throwOnError: false});
+  var root = document.documentElement, body = document.body;
+  document.getElementById("theme").addEventListener("click", function () {
+    root.classList.toggle("dark");
+    localStorage.setItem("a1-theme", root.classList.contains("dark") ? "dark" : "light");
+  });
+  var menu = document.getElementById("menu");
+  menu.addEventListener("click", function () {
+    var open = body.classList.toggle("nav-open");
+    menu.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+  var sn = document.getElementById("sidenav");
+  if (sn) sn.addEventListener("click", function (e) { if (e.target.closest("a")) body.classList.remove("nav-open"); });
+});
+</script>
+</body>
+</html>

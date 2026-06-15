@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The number system &amp; the number line — Algebra 1</title>
+<script>try{if(localStorage.getItem("a1-theme")==="dark")document.documentElement.classList.add("dark");}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..40,500..600&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="textbook.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous">
+</head>
+<body data-surface="textbook">
+<header class="topbar">
+  <button id="menu" class="menu" type="button" aria-label="Open or close the contents menu" aria-expanded="false">☰&nbsp;Contents</button>
+  <a class="home" href="index.html">Algebra&nbsp;1</a>
+  <span class="sp"></span>
+  <button id="theme" type="button" aria-label="Toggle light or dark theme">◐&nbsp;Theme</button>
+</header>
+<div class="shell">
+<aside class="sidenav" id="sidenav">
+<nav class="snav" aria-label="Contents">
+<a class="snav-top" href="how-to-use.html">How to use this book</a>
+<a class="snav-top" href="index.html">All units</a>
+<ol class="snav-units">
+<li class="active">
+<a class="snav-unit" href="unit-01.html">Unit 1. Foundations &amp; the Language of Algebra</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-01-1.html"><span class="ln">1.1</span> Variables and the meaning of equations</a></li>
+<li><a class="snav-lesson cur" href="unit-01-2.html"><span class="ln">1.2</span> The number system &amp; the number line</a></li>
+<li><a class="snav-lesson" href="unit-01-3.html"><span class="ln">1.3</span> Order of operations</a></li>
+<li><a class="snav-lesson" href="unit-01-4.html"><span class="ln">1.4</span> Negative numbers</a></li>
+<li><a class="snav-lesson" href="unit-01-5.html"><span class="ln">1.5</span> Expressions vs. equations; evaluating expressions</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-02.html">Unit 2. Solving Linear Equations</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-02-1.html"><span class="ln">2.1</span> Inverse operations &amp; one-step equations</a></li>
+<li><a class="snav-lesson" href="unit-02-2.html"><span class="ln">2.2</span> Two-step equations</a></li>
+<li><a class="snav-lesson" href="unit-02-3.html"><span class="ln">2.3</span> Combining like terms &amp; the distributive property</a></li>
+<li><a class="snav-lesson" href="unit-02-4.html"><span class="ln">2.4</span> Variables on both sides</a></li>
+<li><a class="snav-lesson" href="unit-02-5.html"><span class="ln">2.5</span> Equations with fractions (with two Fraction Refreshers)</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-03.html">Unit 3. Proportional Reasoning (the bridge to linearity)</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-03-1.html"><span class="ln">3.1</span> Ratios and rates</a></li>
+<li><a class="snav-lesson" href="unit-03-2.html"><span class="ln">3.2</span> Proportions &amp; cross-multiplication</a></li>
+<li><a class="snav-lesson" href="unit-03-3.html"><span class="ln">3.3</span> Percents</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-04.html">Unit 4. Introducing Functions</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-04-1.html"><span class="ln">4.1</span> What is a function</a></li>
+<li><a class="snav-lesson" href="unit-04-2.html"><span class="ln">4.2</span> Function notation f(x), domain &amp; range</a></li>
+<li><a class="snav-lesson" href="unit-04-3.html"><span class="ln">4.3</span> Multiple representations; linear vs. nonlinear</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-05.html">Unit 5. Linear Functions &amp; Their Graphs</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-05-1.html"><span class="ln">5.1</span> The coordinate plane</a></li>
+<li><a class="snav-lesson" href="unit-05-2.html"><span class="ln">5.2</span> Graphing linear equations from a table</a></li>
+<li><a class="snav-lesson" href="unit-05-3.html"><span class="ln">5.3</span> Slope</a></li>
+<li><a class="snav-lesson" href="unit-05-4.html"><span class="ln">5.4</span> Slope-intercept form y = mx + b</a></li>
+<li><a class="snav-lesson" href="unit-05-5.html"><span class="ln">5.5</span> Writing equations of lines</a></li>
+<li><a class="snav-lesson" href="unit-05-6.html"><span class="ln">5.6</span> x-intercepts, graphing by intercepts &amp; standard form</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-06.html">Unit 6. Modeling &amp; Translation</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-06-1.html"><span class="ln">6.1</span> Translating words into expressions and equations</a></li>
+<li><a class="snav-lesson" href="unit-06-2.html"><span class="ln">6.2</span> Classic word problems (number, age, distance, value &amp; relationship)</a></li>
+<li><a class="snav-lesson" href="unit-06-3.html"><span class="ln">6.3</span> Scatter plots &amp; line of best fit (a first taste of data)</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-07.html">Unit 7. Systems of Equations</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-07-1.html"><span class="ln">7.1</span> Solving by graphing</a></li>
+<li><a class="snav-lesson" href="unit-07-2.html"><span class="ln">7.2</span> Substitution</a></li>
+<li><a class="snav-lesson" href="unit-07-3.html"><span class="ln">7.3</span> Elimination</a></li>
+<li><a class="snav-lesson" href="unit-07-4.html"><span class="ln">7.4</span> Special cases &amp; applications</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-08.html">Unit 8. Inequalities</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-08-1.html"><span class="ln">8.1</span> One-variable inequalities</a></li>
+<li><a class="snav-lesson" href="unit-08-2.html"><span class="ln">8.2</span> Compound inequalities</a></li>
+<li><a class="snav-lesson" href="unit-08-3.html"><span class="ln">8.3</span> Absolute value: graphs &amp; distance</a></li>
+<li><a class="snav-lesson" href="unit-08-4.html"><span class="ln">8.4</span> Graphing linear inequalities (two variables) &amp; systems</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-09.html">Unit 9. Sequences &amp; Exponential Functions</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-09-1.html"><span class="ln">9.1</span> Arithmetic &amp; geometric sequences as functions</a></li>
+<li><a class="snav-lesson" href="unit-09-2.html"><span class="ln">9.2</span> Exponential growth &amp; decay; linear vs. exponential</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-10.html">Unit 10. Exponents &amp; Polynomials</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-10-1.html"><span class="ln">10.1</span> Exponent rules (including zero &amp; negative exponents)</a></li>
+<li><a class="snav-lesson" href="unit-10-2.html"><span class="ln">10.2</span> Scientific notation</a></li>
+<li><a class="snav-lesson" href="unit-10-3.html"><span class="ln">10.3</span> Polynomials — terms, degree, standard form; add &amp; subtract</a></li>
+<li><a class="snav-lesson" href="unit-10-4.html"><span class="ln">10.4</span> Multiplying polynomials</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-11.html">Unit 11. Factoring</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-11-1.html"><span class="ln">11.1</span> Greatest common factor (GCF)</a></li>
+<li><a class="snav-lesson" href="unit-11-2.html"><span class="ln">11.2</span> Factoring trinomials x²+bx+c</a></li>
+<li><a class="snav-lesson" href="unit-11-3.html"><span class="ln">11.3</span> Special patterns</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-12.html">Unit 12. Quadratic Functions &amp; Equations (the capstone)</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-12-1.html"><span class="ln">12.1</span> Square roots &amp; simplifying radicals</a></li>
+<li><a class="snav-lesson" href="unit-12-2.html"><span class="ln">12.2</span> The simplest quadratics (x²=9 → two solutions)</a></li>
+<li><a class="snav-lesson" href="unit-12-3.html"><span class="ln">12.3</span> Solving by factoring (zero-product property)</a></li>
+<li><a class="snav-lesson" href="unit-12-4.html"><span class="ln">12.4</span> Completing the square</a></li>
+<li><a class="snav-lesson" href="unit-12-5.html"><span class="ln">12.5</span> The quadratic formula &amp; the discriminant</a></li>
+<li><a class="snav-lesson" href="unit-12-6.html"><span class="ln">12.6</span> Graphing parabolas</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="appendix.html">Appendix. Data &amp; Statistics</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="appendix-1.html"><span class="ln">A.1</span> One-variable statistics — center &amp; spread</a></li>
+<li><a class="snav-lesson" href="appendix-2.html"><span class="ln">A.2</span> Two-variable data — line of best fit, correlation vs. causation</a></li>
+<li><a class="snav-lesson" href="appendix-3.html"><span class="ln">A.3</span> Two-way tables</a></li>
+</ol>
+</li>
+</ol></nav>
+</aside>
+<div class="content">
+<main>
+<div class="kicker">Unit 1 · Lesson 1.2</div><h1>The number system &amp; the number line</h1>
+
+
+<p>When you solve 2x = 7 later on, the answer is 3.5. The instinct is to assume you slipped. You didn't; 3.5 is a real, ordinary number. To see why, start with one picture that holds every number you'll meet: the number line.</p>
+<p>Draw a straight line and mark 0 in the middle. The counting numbers (1, 2, 3, and so on, the ones you'd use to count apples) step off to the right. Their negatives, the mirror image on the other side of 0, step off to the left. Every number you'll meet lives somewhere on this one line <a class="refcode" id="1.2.f1" href="#1.2.f1">1.2.f1</a>.</p>
+<figure class="fig" id="fig-1.2.f1"><svg viewBox="0 0 320 60" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+  <line x1="14" y1="30" x2="306" y2="30" stroke="#333" stroke-width="2"/>
+  <line x1="20.0" y1="25" x2="20.0" y2="35" stroke="#333"/>
+  <text x="20.0" y="50" font-size="10" text-anchor="middle">-3</text>
+  <line x1="55.0" y1="25" x2="55.0" y2="35" stroke="#333"/>
+  <text x="55.0" y="50" font-size="10" text-anchor="middle">-2</text>
+  <line x1="90.0" y1="25" x2="90.0" y2="35" stroke="#333"/>
+  <text x="90.0" y="50" font-size="10" text-anchor="middle">-1</text>
+  <line x1="125.0" y1="25" x2="125.0" y2="35" stroke="#333"/>
+  <text x="125.0" y="50" font-size="10" text-anchor="middle">0</text>
+  <line x1="160.0" y1="25" x2="160.0" y2="35" stroke="#333"/>
+  <text x="160.0" y="50" font-size="10" text-anchor="middle">1</text>
+  <line x1="195.0" y1="25" x2="195.0" y2="35" stroke="#333"/>
+  <text x="195.0" y="50" font-size="10" text-anchor="middle">2</text>
+  <line x1="230.0" y1="25" x2="230.0" y2="35" stroke="#333"/>
+  <text x="230.0" y="50" font-size="10" text-anchor="middle">3</text>
+  <line x1="265.0" y1="25" x2="265.0" y2="35" stroke="#333"/>
+  <text x="265.0" y="50" font-size="10" text-anchor="middle">4</text>
+  <line x1="300.0" y1="25" x2="300.0" y2="35" stroke="#333"/>
+  <text x="300.0" y="50" font-size="10" text-anchor="middle">5</text>
+  <circle cx="151.25" cy="30" r="5" fill="#c0392b" stroke="#c0392b" stroke-width="2"/>
+  <text x="151.25" y="18" font-size="10" text-anchor="middle" fill="#c0392b">3/4</text>
+  <circle cx="37.5" cy="30" r="5" fill="#c0392b" stroke="#c0392b" stroke-width="2"/>
+  <text x="37.5" y="18" font-size="10" text-anchor="middle" fill="#c0392b">-2.5</text>
+</svg><figcaption><b>Figure 1.2.f1</b></figcaption></figure>
+
+<p>The line is not only the evenly spaced ticks. Look between two ticks, say between 0 and 1, and there are more numbers sitting in the gap: 3/4 lands there, and so does 0.5. The in-between points are numbers too, and every gap is packed with them, no matter how far you zoom in.</p>
+<p>Now give the points on the line their names, building up the same picture one step at a time. The <strong>counting numbers</strong> are 1, 2, 3, and so on. Add 0 and you have the <strong>whole numbers</strong>. Add the negatives and you have the <strong>integers</strong>: …, −2, −1, 0, 1, 2, …, with no fractional part. The gap-fillers you can write as one whole number over another, like 3/4, are the <strong>rational numbers</strong>, and the integers are part of this group too, since 5 is just 5/1. Each name builds on the last, all on the one line.</p>
+<p>Most points on that line are rational, but not all of them. A few numbers have decimals that run on forever <em>without</em> ever settling into a repeating pattern, so no fraction a/b ever lands exactly on them. Two famous ones are π = 3.14159… and √2 = 1.41421…. These are the <strong>irrational numbers</strong>.</p>
+<p>The rationals and the irrationals together, every single point on the line with no gaps, are the <strong>real numbers</strong>. The "whole line" the picture just promised now has a proper name, and it's the ground algebra stands on.</p>
+<p>One more idea trips a lot of people here. A fraction bar or a decimal point is just how a number is <em>spelled</em>, not what it <em>is</em>. The number 5 can be written 5, or 5/1, or 5.0: three spellings, one point on the line. So you can't tell a number's type from how it's written. Work out its value first, then classify it.</p>
+<div class="cl-terms">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6.5C9.5 5 6 5 3.5 6.5V18C6 16.5 9.5 16.5 12 18C14.5 16.5 18 16.5 20.5 18V6.5C18 5 14.5 5 12 6.5Z"/><path d="M12 6.5V18"/></svg>New words</span></p>
+<ul>
+<li><a class="refcode" id="1.2.d1" href="#1.2.d1">1.2.d1</a> <strong>Natural (counting) numbers:</strong> 1, 2, 3, …</li>
+<li><a class="refcode" id="1.2.d2" href="#1.2.d2">1.2.d2</a> <strong>Whole numbers:</strong> the naturals plus 0.</li>
+<li><a class="refcode" id="1.2.d3" href="#1.2.d3">1.2.d3</a> <strong>Integers:</strong> whole numbers and their negatives: …, -2, -1, 0, 1, 2, …, with no fractional part.</li>
+<li><a class="refcode" id="1.2.d4" href="#1.2.d4">1.2.d4</a> <strong>Rational numbers:</strong> any number that can be written as a ratio of two integers a/b (b ≠ 0). This <em>includes</em> integers (5 = 5/1), terminating decimals (4.8 = 24/5), and repeating decimals (0.333… = 1/3).</li>
+<li><a class="refcode" id="1.2.d5" href="#1.2.d5">1.2.d5</a> <strong>Irrational numbers:</strong> numbers whose decimal <em>never ends and never repeats</em>, so they <strong>cannot</strong> be written as a ratio of two integers: for example π = 3.14159… and √2 = 1.41421…. (No radical arithmetic yet; √2 returns in Unit 12. Here, just know it names a real point on the line.)</li>
+<li><a class="refcode" id="1.2.d6" href="#1.2.d6">1.2.d6</a> <strong>Real numbers:</strong> every number on the number line: the rationals <strong>and</strong> the irrationals together. Algebra works over the real numbers, so "the whole line" finally has a name.</li>
+<li><a class="refcode" id="1.2.d7" href="#1.2.d7">1.2.d7</a> <strong>Decimal:</strong> a way of <em>writing</em> a number using a decimal point; the way it's written doesn't change what kind of number it is.</li>
+</ul>
+</div>
+<section class="worked">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19.5V15L15.5 4.5 19.5 8.5 9 19Z"/><path d="M13.5 6.5 17.5 10.5"/></svg>Worked example</span></p>
+<ol>
+<li><a class="refcode" id="1.2.w1" href="#1.2.w1">1.2.w1</a> Classify 7. It's a counting number, so it's an <strong>integer</strong>, and 7 = 7/1 makes it <strong>rational</strong> too. The labels stack; a number can be several types at once.</li>
+<li><a class="refcode" id="1.2.w2" href="#1.2.w2">1.2.w2</a> Classify 4.8. It isn't a whole amount, so it's <em>not</em> an integer; but 4.8 = 24/5, a ratio of two integers, so it's <strong>rational, non-integer</strong>.</li>
+<li><a class="refcode" id="1.2.w3" href="#1.2.w3">1.2.w3</a> Classify 10/2. Don't be thrown by the fraction bar. Work out the value first. 10/2 = 5, so its value is 5, which makes it an <strong>integer</strong> (and rational). The spelling looked like a fraction; the value is a whole number.</li>
+<li><a class="refcode" id="1.2.w4" href="#1.2.w4">1.2.w4</a> Classify 0.333…. The repeating decimal is exactly 1/3, a ratio of integers, so it's <strong>rational, non-integer</strong>. Again, the value decides, not the look.</li>
+<li><a class="refcode" id="1.2.w5" href="#1.2.w5">1.2.w5</a> Show three spellings of one number: 5 = 5/1 = 5.0. All three name the <em>same point</em> on the line, a useful reminder that how you write it doesn't change what it is.</li>
+<li><a class="refcode" id="1.2.w6" href="#1.2.w6">1.2.w6</a> Classify √2 and π. Neither can be written as a ratio of integers, because their decimals never end and never repeat, so both are <strong>irrational</strong> (and therefore <strong>real</strong>, like every point on the line). Compare √9: it <em>looks</em> like a root, but √9 = 3, an <strong>integer</strong>. Value, not spelling.</li>
+</ol>
+<p>A point you can almost feel on the line, before any rule: split one pizza among 6 people instead of 4. Whose slice is smaller? The 6-way slice. That's why 1/6 is less than 1/4, even though 6 is the bigger number on the bottom. More people sharing means smaller pieces. Keep that picture; it keeps fraction sizes honest later.</p>
+</section>
+<div class="cl-check">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M9.6 9.6a2.6 2.6 0 1 1 3.3 2.5c-.9.3-1.4.9-1.4 1.8"/><circle cx="11.5" cy="16.6" r=".9" fill="currentColor" stroke="none"/></svg>Check yourself</span></p>
+<ul>
+<li><a class="refcode" id="1.2.c1" href="#1.2.c1">1.2.c1</a> Name a number that is rational but <em>not</em> an integer, and say how you know it's rational. (One answer: 0.5, because it's 1/2, a ratio of two integers, and it isn't a whole number.)</li>
+<li><a class="refcode" id="1.2.c2" href="#1.2.c2">1.2.c2</a> Is 12/3 an integer? Make the case from its value, not its appearance. (Work it out: 12/3 = 3, a whole number, so yes, an integer, even though it's written as a fraction.)</li>
+<li><a class="refcode" id="1.2.c3" href="#1.2.c3">1.2.c3</a> Roughly where does −2.5 sit relative to −2 and −3 on the line? (Exactly halfway between them: one half-step to the left of −2, one half-step to the right of −3.)</li>
+</ul>
+<p>You can now name the kinds of numbers, see why each sits inside the next, and place any of them on the line. And here's the part that pays off all course long: you can decide a number's type from its value instead of its spelling.</p>
+<p>Sorting different kinds of number in one set is harder than drilling one kind, and that difficulty is doing real work: it's what makes the skill last. Each answer is at the end of the lesson, and the worked examples above cover every type you'll meet here.</p>
+</div>
+<section class="practice">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4.5" width="15.5" height="15.5" rx="2.5"/><path d="M7.5 10 9 11.5 12 8.5"/><path d="M14 10H16.5"/><path d="M7.5 15H16.5"/></svg>Practice</span></p>
+<p>Classify each number; label <strong>all</strong> types that apply (integer / rational / irrational / real; note non-integer where it matters). Evaluate first where needed. Every one of these is a <strong>real</strong> number.</p>
+<ol>
+<li><a class="refcode" id="1.2.1" href="#1.2.1">1.2.1</a> 7</li>
+<li><a class="refcode" id="1.2.2" href="#1.2.2">1.2.2</a> -4</li>
+<li><a class="refcode" id="1.2.3" href="#1.2.3">1.2.3</a> 4.8</li>
+<li><a class="refcode" id="1.2.4" href="#1.2.4">1.2.4</a> 0</li>
+<li><a class="refcode" id="1.2.5" href="#1.2.5">1.2.5</a> 3/4</li>
+<li><a class="refcode" id="1.2.6" href="#1.2.6">1.2.6</a> -2.5</li>
+<li><a class="refcode" id="1.2.7" href="#1.2.7">1.2.7</a> 10/2</li>
+<li><a class="refcode" id="1.2.8" href="#1.2.8">1.2.8</a> 0.333…</li>
+<li><a class="refcode" id="1.2.9" href="#1.2.9">1.2.9</a> √2</li>
+<li><a class="refcode" id="1.2.10" href="#1.2.10">1.2.10</a> π</li>
+<li><a class="refcode" id="1.2.11" href="#1.2.11">1.2.11</a> √16</li>
+<li><a class="refcode" id="1.2.12" href="#1.2.12">1.2.12</a> 0.1010010001… (one more 0 each time — never repeating)</li>
+</ol>
+</section>
+<details class="answers">
+<summary><span class="tw"></span><span class="eyebrow">Answers</span><span class="hint">Try each one yourself first, then open to check.</span></summary>
+<div class="ak-body">
+<p><em>(all twelve are </em><em>real</em><em> numbers; the labels below add the finer type.)</em></p>
+<ol>
+<li>integer, rational</li>
+<li>integer, rational</li>
+<li>rational, non-integer</li>
+<li>integer, rational</li>
+<li>rational, non-integer</li>
+<li>rational, non-integer</li>
+<li>=5 → integer, rational</li>
+<li>=1/3 → rational, non-integer</li>
+<li>irrational</li>
+<li>irrational</li>
+<li>=4 → integer, rational</li>
+<li>irrational (never repeats)</li>
+</ol>
+<p><em>(For 7, 8, and 11, notice that how a number is written doesn't fix its type; its value does. In 9, 10, and 12 you're meeting the irrationals: real points on the line with no fraction form.)</em></p>
+</div>
+</details>
+<nav class="pagenav" aria-label="Previous and next page">
+<a class="pn-prev" href="unit-01-1.html"><span class="pn-dir">&larr;&nbsp;Back</span><span class="pn-title">Lesson 1.1</span></a>
+<a class="pn-next" href="unit-01-3.html"><span class="pn-dir">Next&nbsp;&rarr;</span><span class="pn-title">Lesson 1.3</span></a>
+</nav>
+</main>
+<footer><p>A friendly Algebra 1 textbook, made to be read alongside the Claude tutor. Math by KaTeX.</p></footer>
+</div>
+</div>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  renderMathInElement(document.body, {delimiters: [{left: "$$", right: "$$", display: true}], throwOnError: false});
+  var root = document.documentElement, body = document.body;
+  document.getElementById("theme").addEventListener("click", function () {
+    root.classList.toggle("dark");
+    localStorage.setItem("a1-theme", root.classList.contains("dark") ? "dark" : "light");
+  });
+  var menu = document.getElementById("menu");
+  menu.addEventListener("click", function () {
+    var open = body.classList.toggle("nav-open");
+    menu.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+  var sn = document.getElementById("sidenav");
+  if (sn) sn.addEventListener("click", function (e) { if (e.target.closest("a")) body.classList.remove("nav-open"); });
+});
+</script>
+</body>
+</html>

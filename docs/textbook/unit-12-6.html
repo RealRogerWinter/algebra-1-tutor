@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Graphing parabolas — Algebra 1</title>
+<script>try{if(localStorage.getItem("a1-theme")==="dark")document.documentElement.classList.add("dark");}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..40,500..600&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="textbook.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous">
+</head>
+<body data-surface="textbook">
+<header class="topbar">
+  <button id="menu" class="menu" type="button" aria-label="Open or close the contents menu" aria-expanded="false">☰&nbsp;Contents</button>
+  <a class="home" href="index.html">Algebra&nbsp;1</a>
+  <span class="sp"></span>
+  <button id="theme" type="button" aria-label="Toggle light or dark theme">◐&nbsp;Theme</button>
+</header>
+<div class="shell">
+<aside class="sidenav" id="sidenav">
+<nav class="snav" aria-label="Contents">
+<a class="snav-top" href="how-to-use.html">How to use this book</a>
+<a class="snav-top" href="index.html">All units</a>
+<ol class="snav-units">
+<li class="">
+<a class="snav-unit" href="unit-01.html">Unit 1. Foundations &amp; the Language of Algebra</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-01-1.html"><span class="ln">1.1</span> Variables and the meaning of equations</a></li>
+<li><a class="snav-lesson" href="unit-01-2.html"><span class="ln">1.2</span> The number system &amp; the number line</a></li>
+<li><a class="snav-lesson" href="unit-01-3.html"><span class="ln">1.3</span> Order of operations</a></li>
+<li><a class="snav-lesson" href="unit-01-4.html"><span class="ln">1.4</span> Negative numbers</a></li>
+<li><a class="snav-lesson" href="unit-01-5.html"><span class="ln">1.5</span> Expressions vs. equations; evaluating expressions</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-02.html">Unit 2. Solving Linear Equations</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-02-1.html"><span class="ln">2.1</span> Inverse operations &amp; one-step equations</a></li>
+<li><a class="snav-lesson" href="unit-02-2.html"><span class="ln">2.2</span> Two-step equations</a></li>
+<li><a class="snav-lesson" href="unit-02-3.html"><span class="ln">2.3</span> Combining like terms &amp; the distributive property</a></li>
+<li><a class="snav-lesson" href="unit-02-4.html"><span class="ln">2.4</span> Variables on both sides</a></li>
+<li><a class="snav-lesson" href="unit-02-5.html"><span class="ln">2.5</span> Equations with fractions (with two Fraction Refreshers)</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-03.html">Unit 3. Proportional Reasoning (the bridge to linearity)</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-03-1.html"><span class="ln">3.1</span> Ratios and rates</a></li>
+<li><a class="snav-lesson" href="unit-03-2.html"><span class="ln">3.2</span> Proportions &amp; cross-multiplication</a></li>
+<li><a class="snav-lesson" href="unit-03-3.html"><span class="ln">3.3</span> Percents</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-04.html">Unit 4. Introducing Functions</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-04-1.html"><span class="ln">4.1</span> What is a function</a></li>
+<li><a class="snav-lesson" href="unit-04-2.html"><span class="ln">4.2</span> Function notation f(x), domain &amp; range</a></li>
+<li><a class="snav-lesson" href="unit-04-3.html"><span class="ln">4.3</span> Multiple representations; linear vs. nonlinear</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-05.html">Unit 5. Linear Functions &amp; Their Graphs</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-05-1.html"><span class="ln">5.1</span> The coordinate plane</a></li>
+<li><a class="snav-lesson" href="unit-05-2.html"><span class="ln">5.2</span> Graphing linear equations from a table</a></li>
+<li><a class="snav-lesson" href="unit-05-3.html"><span class="ln">5.3</span> Slope</a></li>
+<li><a class="snav-lesson" href="unit-05-4.html"><span class="ln">5.4</span> Slope-intercept form y = mx + b</a></li>
+<li><a class="snav-lesson" href="unit-05-5.html"><span class="ln">5.5</span> Writing equations of lines</a></li>
+<li><a class="snav-lesson" href="unit-05-6.html"><span class="ln">5.6</span> x-intercepts, graphing by intercepts &amp; standard form</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-06.html">Unit 6. Modeling &amp; Translation</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-06-1.html"><span class="ln">6.1</span> Translating words into expressions and equations</a></li>
+<li><a class="snav-lesson" href="unit-06-2.html"><span class="ln">6.2</span> Classic word problems (number, age, distance, value &amp; relationship)</a></li>
+<li><a class="snav-lesson" href="unit-06-3.html"><span class="ln">6.3</span> Scatter plots &amp; line of best fit (a first taste of data)</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-07.html">Unit 7. Systems of Equations</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-07-1.html"><span class="ln">7.1</span> Solving by graphing</a></li>
+<li><a class="snav-lesson" href="unit-07-2.html"><span class="ln">7.2</span> Substitution</a></li>
+<li><a class="snav-lesson" href="unit-07-3.html"><span class="ln">7.3</span> Elimination</a></li>
+<li><a class="snav-lesson" href="unit-07-4.html"><span class="ln">7.4</span> Special cases &amp; applications</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-08.html">Unit 8. Inequalities</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-08-1.html"><span class="ln">8.1</span> One-variable inequalities</a></li>
+<li><a class="snav-lesson" href="unit-08-2.html"><span class="ln">8.2</span> Compound inequalities</a></li>
+<li><a class="snav-lesson" href="unit-08-3.html"><span class="ln">8.3</span> Absolute value: graphs &amp; distance</a></li>
+<li><a class="snav-lesson" href="unit-08-4.html"><span class="ln">8.4</span> Graphing linear inequalities (two variables) &amp; systems</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-09.html">Unit 9. Sequences &amp; Exponential Functions</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-09-1.html"><span class="ln">9.1</span> Arithmetic &amp; geometric sequences as functions</a></li>
+<li><a class="snav-lesson" href="unit-09-2.html"><span class="ln">9.2</span> Exponential growth &amp; decay; linear vs. exponential</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-10.html">Unit 10. Exponents &amp; Polynomials</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-10-1.html"><span class="ln">10.1</span> Exponent rules (including zero &amp; negative exponents)</a></li>
+<li><a class="snav-lesson" href="unit-10-2.html"><span class="ln">10.2</span> Scientific notation</a></li>
+<li><a class="snav-lesson" href="unit-10-3.html"><span class="ln">10.3</span> Polynomials — terms, degree, standard form; add &amp; subtract</a></li>
+<li><a class="snav-lesson" href="unit-10-4.html"><span class="ln">10.4</span> Multiplying polynomials</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-11.html">Unit 11. Factoring</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-11-1.html"><span class="ln">11.1</span> Greatest common factor (GCF)</a></li>
+<li><a class="snav-lesson" href="unit-11-2.html"><span class="ln">11.2</span> Factoring trinomials x²+bx+c</a></li>
+<li><a class="snav-lesson" href="unit-11-3.html"><span class="ln">11.3</span> Special patterns</a></li>
+</ol>
+</li>
+<li class="active">
+<a class="snav-unit" href="unit-12.html">Unit 12. Quadratic Functions &amp; Equations (the capstone)</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-12-1.html"><span class="ln">12.1</span> Square roots &amp; simplifying radicals</a></li>
+<li><a class="snav-lesson" href="unit-12-2.html"><span class="ln">12.2</span> The simplest quadratics (x²=9 → two solutions)</a></li>
+<li><a class="snav-lesson" href="unit-12-3.html"><span class="ln">12.3</span> Solving by factoring (zero-product property)</a></li>
+<li><a class="snav-lesson" href="unit-12-4.html"><span class="ln">12.4</span> Completing the square</a></li>
+<li><a class="snav-lesson" href="unit-12-5.html"><span class="ln">12.5</span> The quadratic formula &amp; the discriminant</a></li>
+<li><a class="snav-lesson cur" href="unit-12-6.html"><span class="ln">12.6</span> Graphing parabolas</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="appendix.html">Appendix. Data &amp; Statistics</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="appendix-1.html"><span class="ln">A.1</span> One-variable statistics — center &amp; spread</a></li>
+<li><a class="snav-lesson" href="appendix-2.html"><span class="ln">A.2</span> Two-variable data — line of best fit, correlation vs. causation</a></li>
+<li><a class="snav-lesson" href="appendix-3.html"><span class="ln">A.3</span> Two-way tables</a></li>
+</ol>
+</li>
+</ol></nav>
+</aside>
+<div class="content">
+<main>
+<div class="kicker">Unit 12 · Lesson 12.6</div><h1>Graphing parabolas</h1>
+
+
+<p>Here's the picture the whole unit has been pointing at. A quadratic, graphed, is a smooth U, called a <strong>parabola</strong>. The solutions you've been finding are where that U crosses the x-axis, and a U usually crosses <em>twice</em>: once on the way down, once on the way back up. There are your two solutions, drawn.</p>
+<p>When a quadratic has just one solution, the U barely touches the axis at its lowest point (the discriminant was 0). When it has none, the whole U floats clear of the axis, above it or below it (the discriminant was negative). The graph re-explains everything from Lesson 12.5 in one image.</p>
+<p>That's the deep reason a quadratic usually has two solutions, and it ties the unit together: radicals, roots, the discriminant, and now the curve are all the same story. A quadratic is also just a function from Units 4 and 5: y = x² − 4 and f(x) = x² − 4 are the same object, and the "roots" are simply the inputs where the output is 0, which is where the graph meets the x-axis.</p>
+<p>To draw one well, work from numbers rather than guessing the shape. Pick a handful of x-values, compute the matching y for each, plot the points, and join them into a smooth U. The example below shows the line through those points <a class="refcode" id="12.6.f1" href="#12.6.f1">12.6.f1</a>, with the roots and vertex marked, alongside the table the curve was built from.</p>
+<figure class="fig" id="fig-12.6.f1"><svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+  <line x1="18.0" y1="129.27" x2="222.0" y2="129.27" stroke="#888"/>
+  <text x="216.0" y="125.27000000000001" font-size="10" fill="#888">x</text>
+  <line x1="120.0" y1="18.0" x2="120.0" y2="222.0" stroke="#888"/>
+  <text x="124.0" y="26.0" font-size="10" fill="#888">y</text>
+  <polyline fill="none" stroke="#8e44ad" stroke-width="2.5" points="18.0,36.55 20.55,44.79 23.1,52.82 25.65,60.64 28.2,68.26 30.75,75.66 33.3,82.86 35.85,89.85 38.4,96.63 40.95,103.2 43.5,109.57 46.05,115.72 48.6,121.67 51.15,127.41 53.7,132.94 56.25,138.26 58.8,143.37 61.35,148.27 63.9,152.96 66.45,157.45 69.0,161.73 71.55,165.8 74.1,169.66 76.65,173.31 79.2,176.75 81.75,179.98 84.3,183.01 86.85,185.82 89.4,188.43 91.95,190.83 94.5,193.02 97.05,195.0 99.6,196.78 102.15,198.34 104.7,199.7 107.25,200.85 109.8,201.79 112.35,202.52 114.9,203.04 117.45,203.35 120.0,203.45 122.55,203.35 125.1,203.04 127.65,202.52 130.2,201.79 132.75,200.85 135.3,199.7 137.85,198.34 140.4,196.78 142.95,195.0 145.5,193.02 148.05,190.83 150.6,188.43 153.15,185.82 155.7,183.01 158.25,179.98 160.8,176.75 163.35,173.31 165.9,169.66 168.45,165.8 171.0,161.73 173.55,157.45 176.1,152.96 178.65,148.27 181.2,143.37 183.75,138.26 186.3,132.94 188.85,127.41 191.4,121.67 193.95,115.72 196.5,109.57 199.05,103.2 201.6,96.63 204.15,89.85 206.7,82.86 209.25,75.66 211.8,68.26 214.35,60.64 216.9,52.82 219.45,44.79 222.0,36.55"/>
+  <circle cx="52.0" cy="129.27" r="3.5" fill="#c0392b"/>
+  <text x="57.0" y="123.27000000000001" font-size="10" fill="#c0392b">(-2,0)</text>
+  <circle cx="188.0" cy="129.27" r="3.5" fill="#c0392b"/>
+  <text x="193.0" y="123.27000000000001" font-size="10" fill="#c0392b">(2,0)</text>
+  <circle cx="120.0" cy="203.45" r="3.5" fill="#c0392b"/>
+  <text x="125.0" y="197.45" font-size="10" fill="#c0392b">vertex (0,-4)</text>
+</svg><figcaption><b>Figure 12.6.f1</b></figcaption></figure>
+
+<p>Three features tell you most of what you need. The <strong>direction</strong> comes from the sign of a: a &gt; 0 opens up (a valley), a &lt; 0 opens down (a hill). The <strong>roots</strong> are where y = 0; solve the quadratic by any method from 12.3 to 12.5. The <strong>vertex</strong> is the turning point, the bottom of a valley or top of a hill; its x-coordinate is x = −b/(2a), and you plug that back in for its y.</p>
+<p>One handy check: when there are two real roots, the vertex sits exactly halfway between them, so the average of the roots gives the vertex's x. That follows from the U being a mirror image across the vertical line through its vertex, the <strong>axis of symmetry</strong>. The −b/(2a) formula stays the general tool, though; it works even when the roots are irrational or absent.</p>
+<div class="cl-terms">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6.5C9.5 5 6 5 3.5 6.5V18C6 16.5 9.5 16.5 12 18C14.5 16.5 18 16.5 20.5 18V6.5C18 5 14.5 5 12 6.5Z"/><path d="M12 6.5V18"/></svg>New words</span></p>
+<ul>
+<li><a class="refcode" id="12.6.d1" href="#12.6.d1">12.6.d1</a> <strong>Parabola:</strong> the U-shaped graph of a quadratic y=ax²+bx+c.</li>
+<li><a class="refcode" id="12.6.d2" href="#12.6.d2">12.6.d2</a> <strong>Roots / x-intercepts:</strong> where the parabola crosses the x-axis, exactly the solutions of ax²+bx+c=0 (Lessons 12.3 to 12.5). This is <em>why</em> a quadratic usually has two.</li>
+<li><a class="refcode" id="12.6.d3" href="#12.6.d3">12.6.d3</a> <strong>Vertex:</strong> the turning point (bottom of the U if it opens up, top if down). Its x-coordinate is x=-b/2a.</li>
+<li><a class="refcode" id="12.6.d4" href="#12.6.d4">12.6.d4</a> <strong>Axis of symmetry:</strong> the vertical line x=-b/2a through the vertex; the parabola is a mirror image across it.</li>
+<li><a class="refcode" id="12.6.d5" href="#12.6.d5">12.6.d5</a> <strong>Opens up / down:</strong> <strong>up if a&gt;0</strong>, <strong>down if a&lt;0</strong>.</li>
+</ul>
+</div>
+<section class="worked">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19.5V15L15.5 4.5 19.5 8.5 9 19Z"/><path d="M13.5 6.5 17.5 10.5"/></svg>Worked example</span></p>
+<ol>
+<li><a class="refcode" id="12.6.w1" href="#12.6.w1">12.6.w1</a> y=x²-4 (here a=1,b=0,c=-4). Read it feature by feature. Direction: a=1&gt;0, so it opens <strong>up</strong>. Roots: set y=0, so x²-4=0 ⇒ x=±2, crossing at (-2,0) and (2,0). Vertex: x=-0/2=0, and y=0²-4=-4, so (0,-4). Now compute a small table and plot it:</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>x</th>
+<th>-3</th>
+<th>-2</th>
+<th>-1</th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>y=x^2-4</td>
+<td>5</td>
+<td>0</td>
+<td>-3</td>
+<td>-4</td>
+<td>-3</td>
+<td>0</td>
+<td>5</td>
+</tr>
+</tbody>
+</table>
+<p>Plot those seven points and join them into a smooth U: it dips to (0,-4) at the bottom and rises symmetrically, crossing the axis at the two roots. The table is symmetric around x=0, which matches the vertex sitting on the axis of symmetry there.</p>
+<ol start="2">
+<li><a class="refcode" id="12.6.w2" href="#12.6.w2">12.6.w2</a> y=x²-2x-3 (a=1,b=-2,c=-3). Direction: a&gt;0, opens <strong>up</strong>. Roots: x²-2x-3=0 ⇒ (x-3)(x+1)=0 ⇒ x=3,-1, so (3,0) and (-1,0). Vertex: x=-(-2)/2=1, and y=1²-2(1)-3=-4, so (1,-4). Notice 1 is exactly midway between the roots -1 and 3, which is the symmetry working as a check. Table:</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>x</th>
+<th>-2</th>
+<th>-1</th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>y</td>
+<td>5</td>
+<td>0</td>
+<td>-3</td>
+<td>-4</td>
+<td>-3</td>
+<td>0</td>
+<td>5</td>
+</tr>
+</tbody>
+</table>
+<p>Join these into a smooth U through the two roots and down to the vertex at (1,-4).</p>
+<p>A clean case to get the reading-off motion before the practice: sketch y = x² − 1. It opens up (a = 1 &gt; 0); the roots come from x² − 1 = 0, so x = ±1, at (−1, 0) and (1, 0); and the vertex is at x = 0, y = −1, so (0, −1). A U dipping to (0, −1) and crossing at ±1: direction, roots, vertex, done.</p>
+<p>With a couple of graphs behind you, here are the slips to watch. Don't eyeball the curve into shape; compute the table and let the points decide it, or the U comes out lopsided and teaches you a false picture.</p>
+<p>Watch the opening direction: y = −x² + 4 opens <em>down</em>, because a is negative; read the sign of a before you draw. The vertex-x can trip a sign when b is negative: for b = −2, −b/(2a) is −(−2)/2 = +1, not −1.</p>
+<p>And keep three things distinct: the roots are where y = 0, the vertex is the turn, and the y-intercept (0, c) is where the curve meets the y-axis. The y-intercept generally isn't a root.</p>
+</section>
+<div class="cl-check">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M9.6 9.6a2.6 2.6 0 1 1 3.3 2.5c-.9.3-1.4.9-1.4 1.8"/><circle cx="11.5" cy="16.6" r=".9" fill="currentColor" stroke="none"/></svg>Check yourself</span></p>
+<ol>
+<li><a class="refcode" id="12.6.c1" href="#12.6.c1">12.6.c1</a> For y = x² − 6x + 8, find the roots and the vertex. How are the roots and the vertex's x-coordinate related? (Roots: x² − 6x + 8 = 0 ⇒ (x − 2)(x − 4) = 0 ⇒ x = 2, 4. Vertex: x = −(−6)/2 = 3, y = 3² − 6(3) + 8 = −1, so (3, −1). The vertex's x, 3, is the average of the roots 2 and 4, so it sits exactly between them.)</li>
+<li><a class="refcode" id="12.6.c2" href="#12.6.c2">12.6.c2</a> A parabola opens downward and never touches the x-axis. What can you say about its a and about its discriminant? (a &lt; 0, since it opens down; and the discriminant is negative, since it has no real roots and never meets the axis.)</li>
+<li><a class="refcode" id="12.6.c3" href="#12.6.c3">12.6.c3</a> Why are the x-intercepts of y = x² − 9 exactly the solutions of x² − 9 = 0? (The x-intercepts are the points where y = 0, and setting y = 0 gives x² − 9 = 0, the very same equation. So its solutions, x = ±3, are precisely where the graph crosses the x-axis.)</li>
+</ol>
+<p>You can now graph a quadratic by reading its direction from the sign of a, its roots from y = 0, and its vertex from x = −b/(2a), building the curve from a computed table. And you can explain why the U usually crosses the axis twice.</p>
+<p>Mixed practice feels harder on purpose, and that's what makes it last. Every answer is at the end of the lesson; if one stalls you, flip back to the worked example it's based on.</p>
+</div>
+<section class="practice">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4.5" width="15.5" height="15.5" rx="2.5"/><path d="M7.5 10 9 11.5 12 8.5"/><path d="M14 10H16.5"/><path d="M7.5 15H16.5"/></svg>Practice</span></p>
+<p><em>For each, find the roots, the vertex, and the direction it opens (then sketch):</em></p>
+<ol>
+<li><a class="refcode" id="12.6.1" href="#12.6.1">12.6.1</a> y=x²-1</li>
+<li><a class="refcode" id="12.6.2" href="#12.6.2">12.6.2</a> y=x²-9</li>
+<li><a class="refcode" id="12.6.3" href="#12.6.3">12.6.3</a> y=x²-4</li>
+<li><a class="refcode" id="12.6.4" href="#12.6.4">12.6.4</a> y=x²+4x+3</li>
+<li><a class="refcode" id="12.6.5" href="#12.6.5">12.6.5</a> y=x²-6x+8</li>
+<li><a class="refcode" id="12.6.6" href="#12.6.6">12.6.6</a> y=x²+2x-3</li>
+<li><a class="refcode" id="12.6.7" href="#12.6.7">12.6.7</a> y=-x²+4</li>
+<li><a class="refcode" id="12.6.8" href="#12.6.8">12.6.8</a> Sketch y=x²-2x-3 using its roots and vertex.</li>
+</ol>
+</section>
+<details class="answers">
+<summary><span class="tw"></span><span class="eyebrow">Answers</span><span class="hint">Try each one yourself first, then open to check.</span></summary>
+<div class="ak-body">
+<ol>
+<li>roots x=±1; vertex (0,-1); opens up · 2. roots x=±3; vertex (0,-9); opens up · 3. roots x=±2; vertex (0,-4); opens up · 4. (x+1)(x+3), roots x=-1,-3; vertex x=-2, y=-1 → (-2,-1); opens up · 5. (x-2)(x-4), roots x=2,4; vertex x=3, y=-1 → (3,-1); opens up · 6. (x+3)(x-1), roots x=-3,1; vertex x=-1, y=-4 → (-1,-4); opens up · 7. roots x=±2; vertex (0,4); opens <strong>down</strong> (a=-1) · 8. roots x=-1,3; vertex (1,-4); opens up — U through (-1,0),(1,-4),(3,0).</li>
+</ol>
+</div>
+</details>
+<div class="ldiv" aria-hidden="true"><i></i><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3.5 20.5 12 12 20.5 3.5 12Z"/></svg><i></i></div>
+<h2 id="a-short-word-problems-strand-where-the-two-solutions-mean-something">A short word problems strand (where the two solutions mean something)</h2>
+<p>Try these once the methods feel solid. The algebra isn't harder here. A quadratic from a real situation still gives you two roots, and you keep the one that fits the question. Sometimes both roots are real and only one makes sense; that's the "reject the impossible root" move, and it's where "two solutions" and "no real solution" stop being mechanics and start to mean something. Solve each by whichever method is cleanest (factoring is enough for all three below), then read your answer back into the story.</p>
+<p><strong>Worked example (model it, then reject a root):</strong> <em>A ball is thrown straight up; its height in feet after t seconds is h=-16t²+32t. When does it hit the ground (h=0)?</em>
+Set -16t²+32t=0, factor -16t(t-2)=0 ⇒ t=0 or t=2. Both are real, but in context <strong>t=0 is the launch instant</strong> (height 0 because it just left the hand) and <strong>t=2 is the landing</strong>, so it hits the ground at t=2 seconds. Two roots came out of the math; only one answers the question. Before you start one of these, it helps to name your plan in a sentence: what are you solving for, and which root fits the story?</p>
+<p><strong>Application practice (state both roots, then the one that fits, and why):</strong></p>
+<ol>
+<li>A ball's height is h=-16t²+48t feet after t seconds. Find both times its height is 0, and say which is the launch and which is the landing.</li>
+<li>Two consecutive positive integers have a product of 56. Set up n(n+1)=56 and find them; explain why the negative-integer pair is rejected.</li>
+<li>A rectangle's length is 3 more than its width, and its area is 40. Find the width (let the width be w, so w(w+3)=40); explain why one root is impossible.</li>
+</ol>
+<details class="answers">
+<summary><span class="tw"></span><span class="eyebrow">Answers</span><span class="hint">Try each one yourself first, then open to check.</span></summary>
+<div class="ak-body">
+<ol>
+<li>-16t²+48t=0 ⇒ -16t(t-3)=0 ⇒ t=0 or t=3; <strong>t=0 launch, t=3 landing</strong> (hits the ground at 3 s). · 2. n(n+1)=56 ⇒ n²+n-56=0 ⇒ (n-7)(n+8)=0 ⇒ n=7 or n=-8; keep <strong>n=7 → integers 7 and 8</strong> (the problem says <em>positive</em>, so reject n=-8). · 3. w(w+3)=40 ⇒ w²+3w-40=0 ⇒ (w-5)(w+8)=0 ⇒ w=5 or w=-8; a width can't be negative, so <strong>w=5</strong> (rectangle 5 by 8). </li>
+</ol>
+</div>
+</details>
+<div class="ldiv" aria-hidden="true"><i></i><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3.5 20.5 12 12 20.5 3.5 12Z"/></svg><i></i></div>
+<h2 id="quadratics-reference-choosing-a-solving-method">Quadratics reference (choosing a solving method)</h2>
+<p>Keep this box handy for when you're staring at a quadratic and wondering which tool to grab. The first job is triage: pick the cleanest method for the shape in front of you, then solve. You have four tools, and the choice is yours. Picking one on purpose, rather than always defaulting to the same one, is part of the skill.</p>
+<p><strong>Pick by the shape of the equation:</strong></p>
+<ul>
+<li><strong>Looks like (something)² = k, with no plain x term?</strong> Use the <strong>Square-Root Property (12.2)</strong>: isolate the square, then x = ±√k if k ≥ 0 (no real solution if k &lt; 0). Cleanest for x² = 9 (→ x = ±3), 3x² = 27, (x + 1)² = 5. No need to drag the formula into these.</li>
+<li><strong>Factors with nice integers?</strong> Use <strong>factoring (12.3)</strong>. Best for tidy integer roots like x² + 5x + 6 = 0 (→ x = −2, −3) or x² − 9 = 0. Quick test: does the discriminant b² − 4ac come out a perfect square? Then it factors over the rationals and factoring will be fast.</li>
+<li><strong>Messy, or it won't factor, or you just want a guaranteed route?</strong> Use the <strong>quadratic formula (12.5)</strong>. It solves <em>every</em> quadratic, for example x² − 2x − 5 = 0 (→ 1 ± √6, discriminant 24, not a perfect square) or any case where a isn't 1, like 2x² + 3x − 2 = 0.</li>
+<li>A rule of thumb: try square-root property, then factoring, then formula, in that order of "is it clean here?" When in doubt, the formula never fails.</li>
+</ul>
+<p><strong>The four tools at a glance:</strong></p>
+<ul>
+<li><strong>Square-Root Property (12.2), for (something)² = k.</strong> Isolate the square, apply ±√( ) when k ≥ 0; k &lt; 0 gives no real solution. The narrow but cleanest case.</li>
+<li><strong>Factoring (12.3), clean but not always possible.</strong> Fastest when the quadratic factors with nice integers. Get one side to 0, factor, set each factor = 0. Won't work on most irrational-root quadratics (those whose discriminant isn't a perfect square).</li>
+<li>
+<p><strong>Quadratic formula (12.5), universal.</strong>
+$$x=\dfrac{-b\pm\sqrt{b^2-4ac}}{2a}$$
+Works on <em>every</em> quadratic; read a, b, c (signs included) straight off ax² + bx + c = 0. The discriminant b² − 4ac pre-counts the real solutions (&gt; 0 two, with a perfect square → rational, else irrational; = 0 one repeated root; &lt; 0 none).</p>
+</li>
+<li>
+<p><strong>Completing the square (12.4), the formula's origin.</strong> Add (b/2)² to both sides to build a perfect square, then ±√( ). Rarely the quickest for a numeric answer, but it's the move the quadratic formula is built from.</p>
+</li>
+</ul>
+<p>The ± runs through all four, and the parabola (12.6) shows why: a U usually crosses the x-axis <strong>twice</strong> because <strong>squaring lost the sign</strong>, the single idea this whole unit recovers.</p>
+<p>You've now closed the loop on Algebra 1. The two long threads of the course both end right here: exponents to roots to quadratics, and multiplying binomials to factoring to solving. You can move among the solving methods, read the discriminant to know what to expect, and picture the parabola behind it all. If a piece of this unit ever goes hazy later, come back to the one sentence everything hangs on: squaring loses the sign, so undoing it gives you back both.</p>
+<nav class="pagenav" aria-label="Previous and next page">
+<a class="pn-prev" href="unit-12-5.html"><span class="pn-dir">&larr;&nbsp;Back</span><span class="pn-title">Lesson 12.5</span></a>
+<a class="pn-next" href="appendix.html"><span class="pn-dir">Next&nbsp;&rarr;</span><span class="pn-title">Appendix</span></a>
+</nav>
+</main>
+<footer><p>A friendly Algebra 1 textbook, made to be read alongside the Claude tutor. Math by KaTeX.</p></footer>
+</div>
+</div>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  renderMathInElement(document.body, {delimiters: [{left: "$$", right: "$$", display: true}], throwOnError: false});
+  var root = document.documentElement, body = document.body;
+  document.getElementById("theme").addEventListener("click", function () {
+    root.classList.toggle("dark");
+    localStorage.setItem("a1-theme", root.classList.contains("dark") ? "dark" : "light");
+  });
+  var menu = document.getElementById("menu");
+  menu.addEventListener("click", function () {
+    var open = body.classList.toggle("nav-open");
+    menu.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+  var sn = document.getElementById("sidenav");
+  if (sn) sn.addEventListener("click", function (e) { if (e.target.closest("a")) body.classList.remove("nav-open"); });
+});
+</script>
+</body>
+</html>

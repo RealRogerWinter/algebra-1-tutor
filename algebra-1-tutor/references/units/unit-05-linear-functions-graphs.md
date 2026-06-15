@@ -48,9 +48,13 @@ A point with a 0 coordinate sits *on an axis*, not in a quadrant — flag this, 
 
 **Worked examples:** Plot (3,2), (-1,4), (0,-3), (-2,-2) and name each quadrant.
 
+{#5.1.w1}
 - (3,2): x is +, y is + → right 3, up 2 → **Quadrant I**.
+{#5.1.w2}
 - (-1,4): x is −, y is + → left 1, up 4 → **Quadrant II**.
+{#5.1.w3}
 - (0,-3): x is 0 → no left/right; down 3 → sits **on the y-axis** (no quadrant).
+{#5.1.w4}
 - (-2,-2): both − → left 2, down 2 → **Quadrant III**.
 
 Offer the artifact (computed screen coords, Template 2 mapping): (3,2)→(170,70), (-1,4)→(90,30), (0,-3)→(110,170), (-2,-2)→(70,150). Always include the companion table:
@@ -107,6 +111,11 @@ Offer the artifact (computed screen coords, Template 2 mapping): (3,2)→(170,70
 
 Table (compute each y — verify with the code tool):
 
+{#5.2.w1}
+{#5.2.w2}
+{#5.2.w3}
+{#5.2.w4}
+
 | x | 2x-1 | y |
 |----|--------|----|
 | −1 | 2(-1)-1 | −3 |
@@ -117,7 +126,9 @@ Table (compute each y — verify with the code tool):
 Points (-1,-3),(0,-1),(1,1),(2,3) lie in a straight line. Artifact (Template 2): pick two convenient endpoints (-2,-5)→(70,210) and (3,5)→(170,10); mark the y-intercept (0,-1)→(110,130); label the line y=2x-1.
 
 Membership tests:
+{#5.2.w5}
 - (3,5): 2(3)-1 = 5. 5 = 5 → **on the line**.
+{#5.2.w6}
 - (3,4): 2(3)-1 = 5, but the point says y=4. 5 ≠ 4 → **not on the line**.
 
 **Watch for:**

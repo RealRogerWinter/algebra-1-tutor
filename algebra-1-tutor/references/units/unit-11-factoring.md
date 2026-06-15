@@ -62,20 +62,25 @@ Lead Socratically (SKILL.md): "What's the biggest number that divides *both* 15 
 **Worked examples** (each pulls the GCF, then checks by multiplying back):
 
 *Numbers only:*
+{#11.1.w1}
 $$6x+9 \;=\; 3(2x+3) \qquad \text{Check: } 3\cdot 2x + 3\cdot 3 = 6x+9$$
 
 *Number and a variable:*
+{#11.1.w2}
 $$4x^2+8x \;=\; 4x(x+2) \qquad \text{Check: } 4x\cdot x + 4x\cdot 2 = 4x^2+8x$$
 
 *Higher powers — take the lowest power of x:*
+{#11.1.w3}
 $$15x^3-10x^2 \;=\; 5x^2(3x-2) \qquad \text{Check: } 5x^2\cdot 3x - 5x^2\cdot 2 = 15x^3-10x^2$$
 "Both terms have at least x², so x² comes out; gcd(15,10)=5, so 5 comes out — GCF =5x²."
 
 *The "stopped too early" trap, done right:*
+{#11.1.w4}
 $$12x+18 \;=\; 6(2x+3) \qquad \text{Check: } 6\cdot 2x + 6\cdot 3 = 12x+18$$
 Note: 2(6x+9) and 3(4x+6) are common factors but **not the greatest** — the inside still shares a factor. Only 6 leaves an inside (2x+3) with nothing left to pull.
 
 *Variable factor with a negative inside:*
+{#11.1.w5}
 $$10x^2-25x \;=\; 5x(2x-5) \qquad \text{Check: } 5x\cdot 2x - 5x\cdot 5 = 10x^2-25x$$
 
 **Watch for:**
@@ -143,26 +148,32 @@ Lead Socratically: "We need two numbers. Their product is c=6 — same sign or o
 **Worked examples** (covering all sign cases; each checked by expanding back):
 
 *Both positive (c>0, b>0):*
+{#11.2.w1}
 $$x^2+5x+6=(x+2)(x+3) \qquad \text{Check: } x^2+3x+2x+6 = x^2+5x+6$$
 (2·3=6, 2+3=5.)
 
 *Both negative (c>0, b<0):*
+{#11.2.w2}
 $$x^2-5x+6=(x-2)(x-3) \qquad \text{Check: } x^2-3x-2x+6 = x^2-5x+6$$
 (c positive ⇒ same sign; b negative ⇒ both negative. (-2)(-3)=6, (-2)+(-3)=-5.)
 
 *Opposite signs, sum positive (c<0, b>0):*
+{#11.2.w3}
 $$x^2+x-6=(x+3)(x-2) \qquad \text{Check: } x^2-2x+3x-6 = x^2+x-6$$
 (c negative ⇒ opposite signs; need product -6, sum +1: +3 and -2.)
 
 *Opposite signs, sum negative (c<0, b<0):*
+{#11.2.w4}
 $$x^2-x-6=(x-3)(x+2) \qquad \text{Check: } x^2+2x-3x-6 = x^2-x-6$$
 (Opposite signs; product -6, sum -1: the bigger number 3 is negative.)
 
 *A bigger both-positive one:*
+{#11.2.w5}
 $$x^2+7x+12=(x+3)(x+4) \qquad \text{Check: } x^2+4x+3x+12 = x^2+7x+12$$
 (Pairs of 12: 1·12, 2·6, 3·4; only 3+4=7.)
 
 *Opposite signs, larger gap:*
+{#11.2.w6}
 $$x^2-2x-15=(x-5)(x+3) \qquad \text{Check: } x^2+3x-5x-15 = x^2-2x-15$$
 (Product -15, sum -2: -5 and +3; the bigger, 5, is negative because b<0.)
 
@@ -173,10 +184,12 @@ Not every trinomial factors over the integers. The two-number search has a *fini
 > **Stopping rule.** To factor x²+bx+c, list every integer pair that multiplies to c, then check each pair's sum against b. If **no** pair sums to b, **stop**: the trinomial is **prime (irreducible over the integers)**. Exhausting the finite pair list *is* the proof — it's the same "I checked it" ethos as the multiply-back habit, applied to the search itself.
 
 *Worked example — a prime one (c>0, b>0):*
+{#11.2.w7}
 $$x^2+2x+5 \;\Rightarrow\; \text{prime (irreducible over the integers)}$$
 c=5>0, so the two numbers would have the **same sign**, and b>0 forces both **positive**. The only positive pair multiplying to 5 is 1·5, which sums to 6, not 2. No other pair exists. Search exhausted ⇒ **prime**. (There is no integer factorization to multiply back — and that's the answer.)
 
 *Worked example — another prime one:*
+{#11.2.w8}
 $$x^2+x+1 \;\Rightarrow\; \text{prime (irreducible over the integers)}$$
 c=1, b=1. The only integer pair multiplying to 1 is 1·1 (sum 2) or (-1)(-1) (sum -2); neither sums to 1. List exhausted ⇒ **prime**.
 
@@ -258,19 +271,24 @@ Lead Socratically: "Are both ends perfect squares? Is there a minus between them
 **Worked examples** (each checked by multiplying back):
 
 *Difference of squares — basic:*
+{#11.3.w1}
 $$x^2-9=(x+3)(x-3) \qquad \text{Check: } x^2-3x+3x-9 = x^2-9$$
 
 *Difference of squares — larger:*
+{#11.3.w2}
 $$x^2-25=(x+5)(x-5) \qquad \text{Check: } x^2-5x+5x-25 = x^2-25$$
 
 *Difference of squares with a coefficient (4x²=(2x)²):*
+{#11.3.w3}
 $$4x^2-1=(2x+1)(2x-1) \qquad \text{Check: } 4x^2-2x+2x-1 = 4x^2-1$$
 
 *Perfect-square trinomial (plus):*
+{#11.3.w4}
 $$x^2+6x+9=(x+3)^2 \qquad \text{Check: } (x+3)(x+3)=x^2+3x+3x+9 = x^2+6x+9$$
 (√(x²)=x, √9=3, 2·x·3=6x.)
 
 *Perfect-square trinomial (minus):*
+{#11.3.w5}
 $$x^2-10x+25=(x-5)^2 \qquad \text{Check: } (x-5)(x-5)=x^2-5x-5x+25 = x^2-10x+25$$
 (√(x²)=x, √25=5, 2·x·5=10x; minus ⇒ (x-5)².)
 
@@ -279,10 +297,12 @@ $$x^2-10x+25=(x-5)^2 \qquad \text{Check: } (x-5)(x-5)=x^2-5x-5x+25 = x^2-10x+25$
 The biggest gain from "always try the GCF first" (11.1) shows up here: pulling a common factor can *turn a messy expression into a clean pattern*, and forgetting to keep that GCF in the final answer is the classic "not fully factored" slip. Two strategy-choice models, each done end-to-end:
 
 *GCF, then a perfect square:*
+{#11.3.w6}
 $$2x^2+12x+18 \;=\; 2(x^2+6x+9) \;=\; 2(x+3)^2 \qquad \text{Check: } 2(x^2+6x+9)=2x^2+12x+18$$
 Pull the 2 (every coefficient is even); the inside x²+6x+9 is now a perfect square (√(x²)=x, √9=3, 2·x·3=6x). The 2 **stays out front** — 2(x+3)² is fully factored; (x+3)² alone would be wrong.
 
 *GCF, then a difference of squares:*
+{#11.3.w7}
 $$3x^2-12 \;=\; 3(x^2-4) \;=\; 3(x+2)(x-2) \qquad \text{Check: } 3(x+2)(x-2)=3(x^2-4)=3x^2-12$$
 Pulling 3 exposes x²-4, a difference of squares. Note neither step was visible *before* the GCF came out — that's why GCF goes first.
 

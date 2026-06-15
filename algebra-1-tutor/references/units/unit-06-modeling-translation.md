@@ -40,25 +40,30 @@ Pacing: 6.1 builds the translation reflex on small pieces. 6.2 applies it to mul
 
 **Worked examples:**
 
+{#6.1.w1}
 *Example 1 — phrase to expression (order trap).* "3 less than 4 times a number."
 Let x = the number. "4 times a number" is 4x. "3 less than 4x" takes 3 *away from* 4x:
 $$4x - 3$$
 Not 3 - 4x. Check with x = 10: "3 less than 40" is 37, and 4(10) - 3 = 37.
 
+{#6.1.w2}
 *Example 2 — phrase to expression (two actions).* "A number doubled, then increased by 7."
 Let x = the number. Double it: 2x. Increase that by 7:
 $$2x + 7$$
 
+{#6.1.w3}
 *Example 3 — sentence to equation, then solve.* "7 less than 4 times a number is 9."
 Let x = the number. Left side: "7 less than 4x" = 4x - 7. The word *is* = 9.
 $$4x - 7 = 9 \;\Rightarrow\; 4x = 16 \;\Rightarrow\; x = 4$$
 Check in the original words: 4 times 4 is 16; 7 less than 16 is 9.
 
+{#6.1.w4}
 *Example 4 — sentence to equation, then solve.* "The sum of a number and 12 is 20."
 Let x = the number. "The sum of a number and 12" = x + 12; "is 20" = 20.
 $$x + 12 = 20 \;\Rightarrow\; x = 8$$
 Check: 8 + 12 = 20.
 
+{#6.1.w5}
 *Example 5 — the reversal trap (relationship, not a number).* "There are 6 students for every professor; s students, p professors. Write the equation."
 Don't translate left-to-right into 6s = p. Read the structure: students are the *bigger* group, six times as many. Test with 1 professor: that's 6 students, so s = 6p. (`misconceptions.md §2`.) Confirm: p = 2 gives s = 12 — 12 students, 2 professors, ratio 6-to-1.
 
@@ -131,37 +136,44 @@ Narrate that defining the *second* unknown in terms of the first is what keeps e
 
 **Worked examples:**
 
+{#6.2.ex1}
 *Example 1 — number (consecutive integers).* "Three consecutive integers sum to 33. Find them."
 Let n = the smallest. The next two are n + 1 and n + 2.
 $$n + (n + 1) + (n + 2) = 33 \;\Rightarrow\; 3n + 3 = 33 \;\Rightarrow\; 3n = 30 \;\Rightarrow\; n = 10$$
 So the integers are 10, 11, 12. Check in words: 10 + 11 + 12 = 33.
 
+{#6.2.ex2}
 *Example 2 — number (consecutive even).* "Three consecutive even integers sum to 78."
 Let n = the smallest even integer; the next even integers are n + 2 and n + 4.
 $$n + (n + 2) + (n + 4) = 78 \;\Rightarrow\; 3n + 6 = 78 \;\Rightarrow\; n = 24$$
 Integers: 24, 26, 28. Check: 24 + 26 + 28 = 78, and all even.
 
+{#6.2.ex3}
 *Example 3 — age.* "Sam is 3 years older than Pat. Together their ages total 27. How old is each?"
 Let p = Pat's age. Then Sam's age = p + 3 (second unknown in terms of the first).
 $$p + (p + 3) = 27 \;\Rightarrow\; 2p + 3 = 27 \;\Rightarrow\; 2p = 24 \;\Rightarrow\; p = 12$$
 Pat is 12, Sam is 12 + 3 = 15. Check in words: Sam (15) is 3 more than Pat (12), and 12 + 15 = 27.
 
+{#6.2.ex4}
 *Example 4 — distance (d = rt).* "A car travels at 60 mph. How long to go 180 miles?"
 Let t = the time in hours. Using d = rt with d = 180, r = 60:
 $$60t = 180 \;\Rightarrow\; t = 3$$
 3 hours. Check: 60 × 3 = 180 miles.
 
+{#6.2.ex5}
 *Example 5 — distance (two objects).* "Two cars leave the same point in opposite directions, one at 50 mph and one at 70 mph. After how many hours are they 360 miles apart?"
 Let t = the time in hours. Distance apart = sum of the two distances = 50t + 70t.
 $$50t + 70t = 360 \;\Rightarrow\; 120t = 360 \;\Rightarrow\; t = 3$$
 3 hours. Check: in 3 hours one goes 150 mi, the other 210 mi; 150 + 210 = 360.
 
+{#6.2.ex6}
 *Example 6 — value (coins).* "A jar has 15 coins, all dimes and quarters, worth $2.55 total. How many of each?"
 Let d = the number of dimes. Then the number of quarters = 15 - d (the rest of the 15). Value in dollars:
 $$0.10d + 0.25(15 - d) = 2.55$$
 $$0.10d + 3.75 - 0.25d = 2.55 \;\Rightarrow\; -0.15d = -1.20 \;\Rightarrow\; d = 8$$
 8 dimes, 15 - 8 = 7 quarters. Check in words: 15 coins; value 8(0.10) + 7(0.25) = 0.80 + 1.75 = $2.55.
 
+{#6.2.ex7}
 *Example 7 — value (tickets).* "100 tickets sold: adult $8, child $5, for $680 total. How many adult tickets?"
 Let a = the number of adult tickets; child tickets = 100 - a.
 $$8a + 5(100 - a) = 680 \;\Rightarrow\; 8a + 500 - 5a = 680 \;\Rightarrow\; 3a = 180 \;\Rightarrow\; a = 60$$
@@ -260,12 +272,15 @@ Point table to show alongside it: (1,55),(2,60),(2,68),(3,70),(4,80),(5,86),(6,9
 
 **Worked examples:**
 
+{#6.3.w1}
 *Example 1 — read the trend.* The scatter plot above (hours studied vs. quiz score) rises from lower-left to upper-right. **Association: positive** — more study hours tend to go with higher scores. (Tend to — not every point obeys; that's why it's a trend, not a rule.)
 
+{#6.3.w2}
 *Example 2 — predict, then interpret slope and intercept.* A study finds the best-fit line f(x) = 3x + 2 for (hours practiced, free throws made). Predict the makes for someone who practices x = 10 hours:
 $$f(10) = 3(10) + 2 = 32 \text{ free throws.}$$
 This is just evaluating the linear function from Unit 5 — the line *is* the model. Now read the parts in context: the **slope 3** says about 3 more makes per extra hour practiced (a rate); the **intercept 2** is the predicted makes with no practice. And note the x = 10 prediction is likely an **extrapolation** — if the data only ran up to a few practice hours, x = 10 reaches past it, so trust it less than a within-range prediction.
 
+{#6.3.w3}
 *Example 3 — negative association + prediction + causation caution.* A best-fit line for (daily screen-time hours x, hours of sleep y) is f(x) = -0.5x + 9. Predict the sleep for someone with x = 6 hours of screen time:
 $$f(6) = -0.5(6) + 9 = 6 \text{ hours of sleep.}$$
 The negative slope means a **negative association** — more of x goes with less of y. In context: the **slope −0.5** says roughly half an hour less sleep per extra hour of screen time; the **intercept 9** is the predicted sleep with zero screen time. But caution: a downward trend doesn't *prove* screen time *causes* less sleep — some other factor could drive both. Correlation is not causation.

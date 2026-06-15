@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Special patterns — Algebra 1</title>
+<script>try{if(localStorage.getItem("a1-theme")==="dark")document.documentElement.classList.add("dark");}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..40,500..600&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="textbook.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous">
+</head>
+<body data-surface="textbook">
+<header class="topbar">
+  <button id="menu" class="menu" type="button" aria-label="Open or close the contents menu" aria-expanded="false">☰&nbsp;Contents</button>
+  <a class="home" href="index.html">Algebra&nbsp;1</a>
+  <span class="sp"></span>
+  <button id="theme" type="button" aria-label="Toggle light or dark theme">◐&nbsp;Theme</button>
+</header>
+<div class="shell">
+<aside class="sidenav" id="sidenav">
+<nav class="snav" aria-label="Contents">
+<a class="snav-top" href="how-to-use.html">How to use this book</a>
+<a class="snav-top" href="index.html">All units</a>
+<ol class="snav-units">
+<li class="">
+<a class="snav-unit" href="unit-01.html">Unit 1. Foundations &amp; the Language of Algebra</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-01-1.html"><span class="ln">1.1</span> Variables and the meaning of equations</a></li>
+<li><a class="snav-lesson" href="unit-01-2.html"><span class="ln">1.2</span> The number system &amp; the number line</a></li>
+<li><a class="snav-lesson" href="unit-01-3.html"><span class="ln">1.3</span> Order of operations</a></li>
+<li><a class="snav-lesson" href="unit-01-4.html"><span class="ln">1.4</span> Negative numbers</a></li>
+<li><a class="snav-lesson" href="unit-01-5.html"><span class="ln">1.5</span> Expressions vs. equations; evaluating expressions</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-02.html">Unit 2. Solving Linear Equations</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-02-1.html"><span class="ln">2.1</span> Inverse operations &amp; one-step equations</a></li>
+<li><a class="snav-lesson" href="unit-02-2.html"><span class="ln">2.2</span> Two-step equations</a></li>
+<li><a class="snav-lesson" href="unit-02-3.html"><span class="ln">2.3</span> Combining like terms &amp; the distributive property</a></li>
+<li><a class="snav-lesson" href="unit-02-4.html"><span class="ln">2.4</span> Variables on both sides</a></li>
+<li><a class="snav-lesson" href="unit-02-5.html"><span class="ln">2.5</span> Equations with fractions (with two Fraction Refreshers)</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-03.html">Unit 3. Proportional Reasoning (the bridge to linearity)</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-03-1.html"><span class="ln">3.1</span> Ratios and rates</a></li>
+<li><a class="snav-lesson" href="unit-03-2.html"><span class="ln">3.2</span> Proportions &amp; cross-multiplication</a></li>
+<li><a class="snav-lesson" href="unit-03-3.html"><span class="ln">3.3</span> Percents</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-04.html">Unit 4. Introducing Functions</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-04-1.html"><span class="ln">4.1</span> What is a function</a></li>
+<li><a class="snav-lesson" href="unit-04-2.html"><span class="ln">4.2</span> Function notation f(x), domain &amp; range</a></li>
+<li><a class="snav-lesson" href="unit-04-3.html"><span class="ln">4.3</span> Multiple representations; linear vs. nonlinear</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-05.html">Unit 5. Linear Functions &amp; Their Graphs</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-05-1.html"><span class="ln">5.1</span> The coordinate plane</a></li>
+<li><a class="snav-lesson" href="unit-05-2.html"><span class="ln">5.2</span> Graphing linear equations from a table</a></li>
+<li><a class="snav-lesson" href="unit-05-3.html"><span class="ln">5.3</span> Slope</a></li>
+<li><a class="snav-lesson" href="unit-05-4.html"><span class="ln">5.4</span> Slope-intercept form y = mx + b</a></li>
+<li><a class="snav-lesson" href="unit-05-5.html"><span class="ln">5.5</span> Writing equations of lines</a></li>
+<li><a class="snav-lesson" href="unit-05-6.html"><span class="ln">5.6</span> x-intercepts, graphing by intercepts &amp; standard form</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-06.html">Unit 6. Modeling &amp; Translation</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-06-1.html"><span class="ln">6.1</span> Translating words into expressions and equations</a></li>
+<li><a class="snav-lesson" href="unit-06-2.html"><span class="ln">6.2</span> Classic word problems (number, age, distance, value &amp; relationship)</a></li>
+<li><a class="snav-lesson" href="unit-06-3.html"><span class="ln">6.3</span> Scatter plots &amp; line of best fit (a first taste of data)</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-07.html">Unit 7. Systems of Equations</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-07-1.html"><span class="ln">7.1</span> Solving by graphing</a></li>
+<li><a class="snav-lesson" href="unit-07-2.html"><span class="ln">7.2</span> Substitution</a></li>
+<li><a class="snav-lesson" href="unit-07-3.html"><span class="ln">7.3</span> Elimination</a></li>
+<li><a class="snav-lesson" href="unit-07-4.html"><span class="ln">7.4</span> Special cases &amp; applications</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-08.html">Unit 8. Inequalities</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-08-1.html"><span class="ln">8.1</span> One-variable inequalities</a></li>
+<li><a class="snav-lesson" href="unit-08-2.html"><span class="ln">8.2</span> Compound inequalities</a></li>
+<li><a class="snav-lesson" href="unit-08-3.html"><span class="ln">8.3</span> Absolute value: graphs &amp; distance</a></li>
+<li><a class="snav-lesson" href="unit-08-4.html"><span class="ln">8.4</span> Graphing linear inequalities (two variables) &amp; systems</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-09.html">Unit 9. Sequences &amp; Exponential Functions</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-09-1.html"><span class="ln">9.1</span> Arithmetic &amp; geometric sequences as functions</a></li>
+<li><a class="snav-lesson" href="unit-09-2.html"><span class="ln">9.2</span> Exponential growth &amp; decay; linear vs. exponential</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-10.html">Unit 10. Exponents &amp; Polynomials</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-10-1.html"><span class="ln">10.1</span> Exponent rules (including zero &amp; negative exponents)</a></li>
+<li><a class="snav-lesson" href="unit-10-2.html"><span class="ln">10.2</span> Scientific notation</a></li>
+<li><a class="snav-lesson" href="unit-10-3.html"><span class="ln">10.3</span> Polynomials — terms, degree, standard form; add &amp; subtract</a></li>
+<li><a class="snav-lesson" href="unit-10-4.html"><span class="ln">10.4</span> Multiplying polynomials</a></li>
+</ol>
+</li>
+<li class="active">
+<a class="snav-unit" href="unit-11.html">Unit 11. Factoring</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-11-1.html"><span class="ln">11.1</span> Greatest common factor (GCF)</a></li>
+<li><a class="snav-lesson" href="unit-11-2.html"><span class="ln">11.2</span> Factoring trinomials x²+bx+c</a></li>
+<li><a class="snav-lesson cur" href="unit-11-3.html"><span class="ln">11.3</span> Special patterns</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-12.html">Unit 12. Quadratic Functions &amp; Equations (the capstone)</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-12-1.html"><span class="ln">12.1</span> Square roots &amp; simplifying radicals</a></li>
+<li><a class="snav-lesson" href="unit-12-2.html"><span class="ln">12.2</span> The simplest quadratics (x²=9 → two solutions)</a></li>
+<li><a class="snav-lesson" href="unit-12-3.html"><span class="ln">12.3</span> Solving by factoring (zero-product property)</a></li>
+<li><a class="snav-lesson" href="unit-12-4.html"><span class="ln">12.4</span> Completing the square</a></li>
+<li><a class="snav-lesson" href="unit-12-5.html"><span class="ln">12.5</span> The quadratic formula &amp; the discriminant</a></li>
+<li><a class="snav-lesson" href="unit-12-6.html"><span class="ln">12.6</span> Graphing parabolas</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="appendix.html">Appendix. Data &amp; Statistics</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="appendix-1.html"><span class="ln">A.1</span> One-variable statistics — center &amp; spread</a></li>
+<li><a class="snav-lesson" href="appendix-2.html"><span class="ln">A.2</span> Two-variable data — line of best fit, correlation vs. causation</a></li>
+<li><a class="snav-lesson" href="appendix-3.html"><span class="ln">A.3</span> Two-way tables</a></li>
+</ol>
+</li>
+</ol></nav>
+</aside>
+<div class="content">
+<main>
+<div class="kicker">Unit 11 · Lesson 11.3</div><h1>Special patterns</h1>
+
+
+<p>Two kinds of factoring show up so often that it pays to recognize them on sight, without running the full two-number search each time. The first is a <strong>difference of squares</strong>, like x²−9. The second is a <strong>perfect-square trinomial</strong>, like x²+6x+9. Learning to spot them saves you the whole two-number search.</p>
+<p>Start with the difference of squares, and build it rather than just state it. Multiply (a+b)(a−b) with the area box from Unit 10:</p>
+<p>$$\begin{array}{c|c|c}
+ &amp; a &amp; -b \\ \hline
+a &amp; a^2 &amp; -ab \\ \hline
+b &amp; ab &amp; -b^2
+\end{array}\qquad\Rightarrow\qquad a^2 - ab + ab - b^2 = a^2-b^2$$</p>
+<p>Look at the two middle cells: +ab and −ab. They add to zero, so the middle term goes to zero and disappears, leaving just a²−b². Run that backward and you have your factoring rule.</p>
+<p>How do you recognize one? Two perfect squares with a <em>minus</em> between them. Then a is the square root of the first, b is the square root of the last, and it splits into (a+b)(a−b):</p>
+<p>$$x^2-9=(x)^2-(3)^2=(x+3)(x-3)$$</p>
+<p>Now the warning. A <em>sum</em> of squares, x²+9, with a <em>plus</em>, does not factor over the integers. Difference of squares needs the minus. You can see why with the unit's own multiply-back move: tempted to write (x+3)(x−3) for x²+9? Multiply it back and you get x²−9, a minus, so that product factors x²−9, never x²+9. The two-number search says the same thing: you'd need two numbers multiplying to +9 and adding to 0, and no integer pair does that. So x²+9 is prime.</p>
+<p>Now the perfect-square trinomial. These are what you get when you square a binomial: (x+3)² works out to x²+6x+9. How do you recognize one? The first and last terms are both perfect squares, <em>and</em> the middle term equals 2 times the two square roots multiplied.</p>
+<p>Check x²+6x+9: the square root of x² is x, the square root of 9 is 3, and 2·x·3 = 6x, which matches the middle, so it's (x+3)². The sign in the middle becomes the sign inside the parentheses: x²−10x+25 is (x−5)².</p>
+<p>These two patterns are really just <em>special cases</em> of Lesson 11.2. For a perfect square the two numbers are equal, and for a difference of squares they're opposites. So the multiply-back check is the same one you already know, and it's just as mandatory here.</p>
+<div class="cl-terms">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6.5C9.5 5 6 5 3.5 6.5V18C6 16.5 9.5 16.5 12 18C14.5 16.5 18 16.5 20.5 18V6.5C18 5 14.5 5 12 6.5Z"/><path d="M12 6.5V18"/></svg>New words</span></p>
+<ul>
+<li><a class="refcode" id="11.3.d1" href="#11.3.d1">11.3.d1</a> <strong>Perfect square:</strong> a quantity that is something squared. 9=3², x²=(x)², 4x²=(2x)² are perfect squares; 7 and x are not.</li>
+<li><a class="refcode" id="11.3.d2" href="#11.3.d2">11.3.d2</a> <strong>Difference of squares:</strong> one perfect square <em>minus</em> another, a²-b².</li>
+<li><a class="refcode" id="11.3.d3" href="#11.3.d3">11.3.d3</a> <strong>Perfect-square trinomial:</strong> a trinomial that is exactly (a±b)² multiplied out.</li>
+</ul>
+<p>In each example below, the recognition step comes first: confirm the pattern against the rule before writing the factors.</p>
+</div>
+<section class="worked">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19.5V15L15.5 4.5 19.5 8.5 9 19Z"/><path d="M13.5 6.5 17.5 10.5"/></svg>Worked example</span></p>
+<p>(each checked by multiplying back):</p>
+<p><em>Difference of squares, basic:</em>
+<a class="refcode" id="11.3.w1" href="#11.3.w1">11.3.w1</a>
+$$x^2-9=(x+3)(x-3) \qquad \text{Check: } x^2-3x+3x-9 = x^2-9$$</p>
+<p><em>Difference of squares, larger:</em>
+<a class="refcode" id="11.3.w2" href="#11.3.w2">11.3.w2</a>
+$$x^2-25=(x+5)(x-5) \qquad \text{Check: } x^2-5x+5x-25 = x^2-25$$</p>
+<p><em>Difference of squares with a coefficient (4x²=(2x)²):</em>
+<a class="refcode" id="11.3.w3" href="#11.3.w3">11.3.w3</a>
+$$4x^2-1=(2x+1)(2x-1) \qquad \text{Check: } 4x^2-2x+2x-1 = 4x^2-1$$</p>
+<p><em>Perfect-square trinomial (plus):</em>
+<a class="refcode" id="11.3.w4" href="#11.3.w4">11.3.w4</a>
+$$x^2+6x+9=(x+3)^2 \qquad \text{Check: } (x+3)(x+3)=x^2+3x+3x+9 = x^2+6x+9$$
+(√(x²)=x, √9=3, 2·x·3=6x.)</p>
+<p><em>Perfect-square trinomial (minus):</em>
+<a class="refcode" id="11.3.w5" href="#11.3.w5">11.3.w5</a>
+$$x^2-10x+25=(x-5)^2 \qquad \text{Check: } (x-5)(x-5)=x^2-5x-5x+25 = x^2-10x+25$$
+(√(x²)=x, √25=5, 2·x·5=10x; the minus makes it (x−5)².)</p>
+<p>Four slips to watch for once the patterns are working for you.</p>
+<p>The first is trying to factor a sum of squares, writing x²+9 as (x+3)(x−3); multiply your answer back and you'll see it gives x²−9, with a minus, so it's the wrong starting point. A sum of squares is prime over the integers.</p>
+<p>The second is mistaking a near-miss for a perfect square: x²+5x+9 has square ends, but 2·x·3 = 6x, not 5x, so it is <em>not</em> (x+3)². When the middle doesn't equal twice the roots multiplied, fall back to the 11.2 search, and here that search comes up empty (pairs of 9: 1+9=10, 3+3=6, neither is 5), so x²+5x+9 is prime.</p>
+<p>The third is dropping a coefficient's square root, writing 4x²−1 as (4x+1)(4x−1); the square root of 4x² is 2x, not 4x, and multiplying back shows it.</p>
+<p>And the last is ignoring the middle sign in a perfect square, calling x²−10x+25 an (x+5)²; the middle sign carries inside, so it's (x−5)².</p>
+</section>
+<h3 id="putting-it-together-gcf-first-then-the-pattern">Putting it together: GCF first, then the pattern</h3>
+<p>Here's where "always try the GCF first" pays off most. Pulling a common factor can turn a messy expression into a clean pattern that wasn't visible before, and forgetting to keep that GCF in your final answer is the classic "not fully factored" slip. Two worked-through examples, each done end to end.</p>
+<p><em>GCF, then a perfect square:</em>
+<a class="refcode" id="11.3.w6" href="#11.3.w6">11.3.w6</a>
+$$2x^2+12x+18 \;=\; 2(x^2+6x+9) \;=\; 2(x+3)^2 \qquad \text{Check: } 2(x^2+6x+9)=2x^2+12x+18$$
+Pull the 2, since every coefficient is even. The inside, x²+6x+9, is now a perfect square (√(x²)=x, √9=3, 2·x·3=6x). The 2 stays out front: 2(x+3)² is fully factored, and (x+3)² alone would be missing the 2.</p>
+<p><em>GCF, then a difference of squares:</em>
+<a class="refcode" id="11.3.w7" href="#11.3.w7">11.3.w7</a>
+$$3x^2-12 \;=\; 3(x^2-4) \;=\; 3(x+2)(x-2) \qquad \text{Check: } 3(x+2)(x-2)=3(x^2-4)=3x^2-12$$
+Pulling out 3 exposes x²−4, a difference of squares. Neither step was visible before the GCF came out, which is exactly why the GCF goes first.</p>
+<p>So how do you know you're done? A factorization is finished only when no piece can be factored again. After each split, look at every factor and ask: can this one be factored? Is there a leftover difference of squares, a trinomial that still factors, a GCF you missed? Stop only when each piece is a single term, a prime trinomial, or a binomial that can't be broken down further.</p>
+<div class="cl-check">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M9.6 9.6a2.6 2.6 0 1 1 3.3 2.5c-.9.3-1.4.9-1.4 1.8"/><circle cx="11.5" cy="16.6" r=".9" fill="currentColor" stroke="none"/></svg>Check yourself</span></p>
+<ol>
+<li><a class="refcode" id="11.3.c1" href="#11.3.c1">11.3.c1</a> Is x²−16 a difference of squares? Factor it, then multiply back to prove it. (Yes: x² and 16 are both perfect squares with a minus between them, so it's (x+4)(x−4); multiplying back gives x²−4x+4x−16 = x²−16.)</li>
+<li><a class="refcode" id="11.3.c2" href="#11.3.c2">11.3.c2</a> Can x²+16 be factored the same way? Why or why not? (No: that's a <em>sum</em> of squares, which is prime over the integers. (x+4)(x−4) would multiply back to x²−16, a minus, so it can't be the factoring of x²+16.)</li>
+<li><a class="refcode" id="11.3.c3" href="#11.3.c3">11.3.c3</a> How do you tell x²+6x+9 (a perfect square) from x²+6x+8 (not one)? Factor each. (Check the middle against twice the roots: for x²+6x+9, 2·x·3 = 6x matches, so it's (x+3)². For x²+6x+8, the ends aren't a matching square pair, so run the two-number search: 2 and 4 multiply to 8 and add to 6, giving (x+2)(x+4).)</li>
+</ol>
+<p>You can now spot a difference of squares and a perfect-square trinomial on sight, factor each one, recognize that a sum of squares is prime, and factor completely by pulling the GCF first and checking every remaining piece.</p>
+<p>The order of attack worth carrying out of this unit, into Unit 12 and beyond: always pull the GCF first, then count the terms. Two terms means look for a difference of squares (and remember a sum of squares is prime). Three terms means glance for a perfect square and otherwise run the two-number search (and if no integer pair works, it's prime). Then factor completely, checking every piece, and multiply back every time.</p>
+<p>The thread tying it all together is that factoring is multiplying backward, so Unit 10 is your answer key, which is what makes the check feel natural instead of like extra work. And you've already done the hard part for next unit: once x²+5x+6 is (x+2)(x+3), reading off the answers to a quadratic is one short step away.</p>
+</div>
+<section class="practice">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4.5" width="15.5" height="15.5" rx="2.5"/><path d="M7.5 10 9 11.5 12 8.5"/><path d="M14 10H16.5"/><path d="M7.5 15H16.5"/></svg>Practice</span></p>
+<p><em>Difference of squares:</em></p>
+<ol>
+<li><a class="refcode" id="11.3.1" href="#11.3.1">11.3.1</a> x²-9  2. x²-16  3. x²-25  4. x²-49  5. x²-1  6. 4x²-9  7. 9x²-1</li>
+</ol>
+<p><em>Perfect-square trinomials:</em></p>
+<ol start="8">
+<li><a class="refcode" id="11.3.2" href="#11.3.2">11.3.2</a> x²+6x+9  9. x²-10x+25  10. x²+8x+16  11. x²-4x+4  12. x²+2x+1</li>
+</ol>
+<p><em>GCF first, then factor completely (each needs a common factor pulled before the pattern shows):</em></p>
+<ol start="13">
+<li><a class="refcode" id="11.3.3" href="#11.3.3">11.3.3</a> 2x²+12x+18  14. 3x²-12  15. 2x²+10x+12</li>
+</ol>
+</section>
+<details class="answers">
+<summary><span class="tw"></span><span class="eyebrow">Answers</span><span class="hint">Try each one yourself first, then open to check.</span></summary>
+<div class="ak-body">
+<p>1) (x+3)(x-3)  2) (x+4)(x-4)  3) (x+5)(x-5)  4) (x+7)(x-7)  5) (x+1)(x-1)  6) (2x+3)(2x-3)  7) (3x+1)(3x-1)  8) (x+3)²  9) (x-5)²  10) (x+4)²  11) (x-2)²  12) (x+1)²
+13) 2(x+3)²  14) 3(x+2)(x-2)  15) 2(x+2)(x+3)</p>
+<p><em>Spot-checks:</em> #6: (2x+3)(2x-3)=4x²-9. #10: 2·x·4=8x, so (x+4)². #11: middle -4x=2·x·(-2), so (x-2)². #13: 2(x+3)²=2(x²+6x+9)=2x²+12x+18 (keep the 2!). #14: 3(x²-4)=3x²-12.</p>
+</div>
+</details>
+<nav class="pagenav" aria-label="Previous and next page">
+<a class="pn-prev" href="unit-11-2.html"><span class="pn-dir">&larr;&nbsp;Back</span><span class="pn-title">Lesson 11.2</span></a>
+<a class="pn-next" href="unit-12.html"><span class="pn-dir">Next&nbsp;&rarr;</span><span class="pn-title">Unit 12</span></a>
+</nav>
+</main>
+<footer><p>A friendly Algebra 1 textbook, made to be read alongside the Claude tutor. Math by KaTeX.</p></footer>
+</div>
+</div>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  renderMathInElement(document.body, {delimiters: [{left: "$$", right: "$$", display: true}], throwOnError: false});
+  var root = document.documentElement, body = document.body;
+  document.getElementById("theme").addEventListener("click", function () {
+    root.classList.toggle("dark");
+    localStorage.setItem("a1-theme", root.classList.contains("dark") ? "dark" : "light");
+  });
+  var menu = document.getElementById("menu");
+  menu.addEventListener("click", function () {
+    var open = body.classList.toggle("nav-open");
+    menu.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+  var sn = document.getElementById("sidenav");
+  if (sn) sn.addEventListener("click", function (e) { if (e.target.closest("a")) body.classList.remove("nav-open"); });
+});
+</script>
+</body>
+</html>

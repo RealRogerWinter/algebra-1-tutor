@@ -222,7 +222,8 @@ FIGURES = [
     # Unit 1 — number system / distance
     {"code": "1.2.f1", "lesson": "1.2", "type": "number_line", "min": -3, "max": 5,
      "ticks": [-3, -2, -1, 0, 1, 2, 3, 4, 5],
-     "points": [{"x": 3, "label": "3"}], "caption": "number line"},
+     "points": [{"x": 0.75, "label": "3/4"}, {"x": -2.5, "label": "-2.5"}],
+     "caption": "number line"},
     # Unit 4 — multiple representations: a line and a parabola
     {"code": "4.3.f1", "lesson": "4.3", "type": "line", "m": 2, "b": 1,
      "xwindow": [-3, 3], "ywindow": [-5, 7], "marks": [(0, 1, "(0,1)")], "caption": "y = 2x + 1"},

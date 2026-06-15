@@ -71,11 +71,11 @@
     {"id": "2.4.11", "kind": "solve", "eq": "5*x-4=3*(x+2)", "var": "x", "answer": "5"},
     {"id": "2.4.12", "kind": "solve", "eq": "4*(x-3)=2*x+2", "var": "x", "answer": "7"},
 
-    {"id": "2.4.w1", "kind": "solve",  "eq": "3*(x-2)+4=2*(x+1)-x", "var": "x", "answer": "2"},
-    {"id": "2.4.w2", "kind": "manual", "answer": "identity — all real numbers"},
-    {"id": "2.4.w3", "kind": "manual", "answer": "contradiction — no solution"},
-    {"id": "2.4.w4", "kind": "solve",  "eq": "3*(x+2)=18", "var": "x", "answer": "4"},
-    {"id": "2.4.w5", "kind": "solve",  "eq": "5-2*(x-1)=9", "var": "x", "answer": "-1"},
+    {"id": "2.4.w5", "kind": "solve",  "eq": "3*(x-2)+4=2*(x+1)-x", "var": "x", "answer": "2"},
+    {"id": "2.4.w6", "kind": "manual", "answer": "identity — all real numbers"},
+    {"id": "2.4.w7", "kind": "manual", "answer": "contradiction — no solution"},
+    {"id": "2.4.w8", "kind": "solve",  "eq": "3*(x+2)=18", "var": "x", "answer": "4"},
+    {"id": "2.4.w9", "kind": "solve",  "eq": "5-2*(x-1)=9", "var": "x", "answer": "-1"},
 
     {"id": "2.4.13", "kind": "solve",  "eq": "4*x+5=2*x+13", "var": "x", "answer": "4"},
     {"id": "2.4.14", "kind": "manual", "answer": "identity — all real numbers"},
@@ -121,7 +121,7 @@
     {"id": "2.5.10", "kind": "solve", "eq": "(3/4)*x-2=4",    "var": "x", "answer": "8"},
     {"id": "2.5.11", "kind": "solve", "eq": "(2/5)*x=3",      "var": "x", "answer": "15/2"},
 
-    {"id": "2.5.w1", "kind": "solve", "eq": "x/2+x/3=5",      "var": "x", "answer": "6"},
-    {"id": "2.5.w2", "kind": "solve", "eq": "(2/3)*x=5",      "var": "x", "answer": "15/2"}
+    {"id": "2.5.w2", "kind": "solve", "eq": "x/2+x/3=5",      "var": "x", "answer": "6"},
+    {"id": "2.5.w4", "kind": "solve", "eq": "(2/3)*x=5",      "var": "x", "answer": "15/2"}
   ]
 }

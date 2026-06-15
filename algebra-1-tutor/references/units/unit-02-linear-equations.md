@@ -53,18 +53,23 @@ Lead Socratically (SKILL.md): "The +5 is sitting next to x. What's the opposite 
 **Worked examples** (each isolates with the inverse, then checks):
 
 *Addition — undo by subtracting:*
+{#2.1.w1}
 $$x+5=12 \;\xrightarrow{\,-5\,}\; x=7 \qquad \text{Check: } 7+5=12$$
 
 *Subtraction — undo by adding:*
+{#2.1.w2}
 $$x-4=10 \;\xrightarrow{\,+4\,}\; x=14 \qquad \text{Check: } 14-4=10$$
 
 *Multiplication — undo by dividing:*
+{#2.1.w3}
 $$4x=20 \;\xrightarrow{\,\div 4\,}\; x=5 \qquad \text{Check: } 4(5)=20$$
 
 *Division — undo by multiplying:*
+{#2.1.w4}
 $$\frac{x}{2}=6 \;\xrightarrow{\,\times 2\,}\; x=12 \qquad \text{Check: } \frac{12}{2}=6$$
 
 *A "looks empty" case (good for the equals-sign idea):*
+{#2.1.w5}
 $$x+7=7 \;\xrightarrow{\,-7\,}\; x=0 \qquad \text{Check: } 0+7=7$$
 "There's nothing wrong with x=0 — zero is a perfectly good number." (misconceptions.md §1: = means *same as*, not "compute something.")
 
@@ -120,16 +125,20 @@ Ask first: "We have a ×2 and a +3 wrapped around x. Which layer is on the *outs
 **Worked examples:**
 
 *Multiply-then-add:*
+{#2.2.w1}
 $$2x+3=11 \;\xrightarrow{\,-3\,}\; 2x=8 \;\xrightarrow{\,\div 2\,}\; x=4 \qquad \text{Check: } 2(4)+3=8+3=11$$
 
 *Division type:*
+{#2.2.w2}
 $$\frac{x}{3}-2=4 \;\xrightarrow{\,+2\,}\; \frac{x}{3}=6 \;\xrightarrow{\,\times 3\,}\; x=18 \qquad \text{Check: } \frac{18}{3}-2=6-2=4$$
 
 *Dividing by a negative (Unit 1 callback):*
+{#2.2.w3}
 $$8-2x=14 \;\xrightarrow{\,-8\,}\; -2x=6 \;\xrightarrow{\,\div(-2)\,}\; x=-3 \qquad \text{Check: } 8-2(-3)=8+6=14$$
 Narrate the sign: -2x=6, divide both sides by -2; 6/-2=-3. The check is where a sign slip would get caught — 8-2(-3) uses subtracting a negative (metaphors.md → negatives; misconceptions.md §3).
 
 *A surprising one (answer is 0):*
+{#2.2.w4}
 $$3x+6=6 \;\xrightarrow{\,-6\,}\; 3x=0 \;\xrightarrow{\,\div 3\,}\; x=0 \qquad \text{Check: } 3(0)+6=6$$
 
 **Watch for:**
@@ -189,18 +198,23 @@ $$\begin{array}{c|c|c}
 **Worked examples:**
 
 *Combine like terms:*
+{#2.3.w1}
 $$3x+2x=5x$$
 
 *Combine, leaving unlike terms alone:*
+{#2.3.w2}
 $$7x-4x+2 = 3x+2 \quad(\text{the }+2\text{ has no like partner})$$
 
 *Distribute (positive):*
+{#2.3.w3}
 $$2(x+4)=2x+8$$
 
 *Distribute a negative — the #1 sign trap:*
+{#2.3.w4}
 $$-(x-4) = -x+4 \qquad \text{Check at }x=1:\; -(1-4)=3 \;\text{ and }\; -1+4=3$$
 
 *Distribute a negative, then combine (the trap in full):*
+{#2.3.w5}
 $$3-2(x-5) \;=\; 3 + (-2)(x) + (-2)(-5) \;=\; 3 - 2x + 10 \;=\; -2x+13$$
 Check at x=1: original 3-2(1-5)=3-2(-4)=3+8=11; rewrite -2(1)+13=11. (Common wrong answer: 3-2x-10=-2x-7 from giving -2 × -5 a minus sign.)
 
@@ -257,16 +271,20 @@ Ask first: "We've got boxes on both pans. What could we subtract from *both* sid
 **Worked examples:**
 
 *Standard:*
+{#2.4.w1}
 $$5x+2=3x+10 \xrightarrow{-3x} 2x+2=10 \xrightarrow{-2} 2x=8 \xrightarrow{\div 2} x=4 \quad\text{Check: }22=22$$
 
 *Constants and variables both to move:*
+{#2.4.w2}
 $$7x-3=2x+12 \xrightarrow{-2x} 5x-3=12 \xrightarrow{+3} 5x=15 \xrightarrow{\div 5} x=3 \quad\text{Check: }18=18$$
 
 *Negative answer (move the larger variable term, land below zero — Unit 1 callback):*
+{#2.4.w3}
 $$4x+1=6x+9 \xrightarrow{-4x} 1=2x+9 \xrightarrow{-9} -8=2x \xrightarrow{\div 2} x=-4$$
 $$\text{Check: } 4(-4)+1=-15 \;\text{ and }\; 6(-4)+9=-15$$
 
 *Distribute first, then gather:*
+{#2.4.w4}
 $$2(x-1)=x+5 \xrightarrow{\text{distribute}} 2x-2=x+5 \xrightarrow{-x} x-2=5 \xrightarrow{+2} x=7$$
 $$\text{Check: } 2(7-1)=12 \;\text{ and }\; 7+5=12$$
 
@@ -283,14 +301,17 @@ Teaching arc: don't announce the categories first — let the student run the us
 **Worked examples (one of each outcome — keep the substitution habit even here):**
 
 *Conditional — the usual one solution:*
+{#2.4.w5}
 $$3(x-2)+4=2(x+1)-x \xrightarrow{\text{distribute}} 3x-2=x+2 \xrightarrow{-x} 2x-2=2 \xrightarrow{+2,\,\div 2} x=2$$
 $$\text{Check: } 3(2-2)+4=4 \;\text{ and }\; 2(2+1)-2=4$$
 
 *Identity — the x's cancel, true statement, so all real numbers:*
+{#2.4.w6}
 $$2x+4=2(x+2) \xrightarrow{\text{distribute}} 2x+4=2x+4 \xrightarrow{-2x} 4=4 \;\checkmark\text{ (always true)}$$
 The variable vanished and left **4=4**, a true statement → **infinitely many solutions (all real numbers).** Sanity check with two different numbers: at x=0, both sides are 4; at x=5, both sides are 14. They match for *any* x.
 
 *Contradiction — the x's cancel, false statement, so no solution:*
+{#2.4.w7}
 $$2x+3=2x+5 \xrightarrow{-2x} 3=5 \;\text{(false)}$$
 The variable vanished and left **3=5**, which is never true → **no solution.** Sanity check: at x=0 the sides are 3 and 5; at x=10 they're 23 and 25 — the right side is *always* 2 bigger, so they can never be equal.
 
@@ -300,6 +321,7 @@ The variable vanished and left **3=5**, which is never true → **no solution.**
 
 For a multi-step equation there's often more than one correct first move. Take 3(x+2)=18. Both of these are right:
 
+{#2.4.w8}
 $$\textbf{Distribute first:}\quad 3(x+2)=18 \xrightarrow{\text{distribute}} 3x+6=18 \xrightarrow{-6} 3x=12 \xrightarrow{\div 3} x=4$$
 
 $$\textbf{Divide first:}\quad 3(x+2)=18 \xrightarrow{\div 3} x+2=6 \xrightarrow{-2} x=4$$
@@ -307,6 +329,7 @@ $$\textbf{Divide first:}\quad 3(x+2)=18 \xrightarrow{\div 3} x+2=6 \xrightarrow{
 Same answer (x=4, and 3(4+2)=18 checks). Ask the student: *which did you like, and why?* The point to draw out: when the whole left side is multiplied by a number that divides the right side cleanly (3 into 18), **dividing first** is fewer steps and smaller numbers. But if the right side *weren't* a clean multiple — say 3(x+2)=20 — dividing first gives x+2=20/3 and drags a fraction through every later step, so **distributing first** keeps it whole longer. Both orders are valid — the skill is glancing ahead to pick the cleaner one for *this* equation.
 
 **One spot-the-error (distributing a negative — misconceptions.md §3).** A student solves 5−2(x−1)=9 like this:
+{#2.4.w9}
 $$5-2(x-1)=9 \;\to\; 5-2x-2=9 \;\to\; 3-2x=9 \;\to\; -2x=6 \;\to\; x=-3$$
 Find the line where it breaks. (The distribution: −2 times −1 is **+2**, not −2, so the correct second line is 5−2x**+2**=9 → 7−2x=9 → −2x=2 → **x=−1**.) Have the student confirm x=−1 in the *original*: 5−2(−1−1)=5−2(−2)=5+4=9. ✓ This is the same trap as Lesson 2.3, now living inside a both-sides solve — exactly where it relapses.
 
@@ -407,15 +430,19 @@ Stress: multiply **every** term, including the right side — the balance must s
 **Worked examples:**
 
 *Reciprocal method:*
+{#2.5.w1}
 $$\frac23 x=6 \xrightarrow{\times \frac32} x=9 \qquad \text{Check: } \frac23(9)=6$$
 
 *Clear-the-fractions method:*
+{#2.5.w2}
 $$\frac{x}{2}+\frac{x}{3}=5 \xrightarrow{\times 6} 3x+2x=30 \Rightarrow 5x=30 \Rightarrow x=6 \qquad \text{Check: } 3+2=5$$
 
 *Reciprocal with a bigger numerator:*
+{#2.5.w3}
 $$\frac34 x=9 \xrightarrow{\times \frac43} x=12 \qquad \text{Check: } \frac34(12)=9$$
 
 *An answer that's itself a fraction (a fraction is a perfectly good solution):*
+{#2.5.w4}
 $$\frac23 x=5 \xrightarrow{\times \frac32} x=\frac{15}{2} \qquad \text{Check: } \frac23\cdot\frac{15}{2}=\frac{30}{6}=5$$
 Don't "round" 15/2 to 7 or 8 — an exact fraction *is* the answer. Just as zero was a fine answer earlier, so is 15/2.
 

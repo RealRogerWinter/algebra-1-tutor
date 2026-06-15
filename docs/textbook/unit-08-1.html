@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>One-variable inequalities — Algebra 1</title>
+<script>try{if(localStorage.getItem("a1-theme")==="dark")document.documentElement.classList.add("dark");}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..40,500..600&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="textbook.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous">
+</head>
+<body data-surface="textbook">
+<header class="topbar">
+  <button id="menu" class="menu" type="button" aria-label="Open or close the contents menu" aria-expanded="false">☰&nbsp;Contents</button>
+  <a class="home" href="index.html">Algebra&nbsp;1</a>
+  <span class="sp"></span>
+  <button id="theme" type="button" aria-label="Toggle light or dark theme">◐&nbsp;Theme</button>
+</header>
+<div class="shell">
+<aside class="sidenav" id="sidenav">
+<nav class="snav" aria-label="Contents">
+<a class="snav-top" href="how-to-use.html">How to use this book</a>
+<a class="snav-top" href="index.html">All units</a>
+<ol class="snav-units">
+<li class="">
+<a class="snav-unit" href="unit-01.html">Unit 1. Foundations &amp; the Language of Algebra</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-01-1.html"><span class="ln">1.1</span> Variables and the meaning of equations</a></li>
+<li><a class="snav-lesson" href="unit-01-2.html"><span class="ln">1.2</span> The number system &amp; the number line</a></li>
+<li><a class="snav-lesson" href="unit-01-3.html"><span class="ln">1.3</span> Order of operations</a></li>
+<li><a class="snav-lesson" href="unit-01-4.html"><span class="ln">1.4</span> Negative numbers</a></li>
+<li><a class="snav-lesson" href="unit-01-5.html"><span class="ln">1.5</span> Expressions vs. equations; evaluating expressions</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-02.html">Unit 2. Solving Linear Equations</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-02-1.html"><span class="ln">2.1</span> Inverse operations &amp; one-step equations</a></li>
+<li><a class="snav-lesson" href="unit-02-2.html"><span class="ln">2.2</span> Two-step equations</a></li>
+<li><a class="snav-lesson" href="unit-02-3.html"><span class="ln">2.3</span> Combining like terms &amp; the distributive property</a></li>
+<li><a class="snav-lesson" href="unit-02-4.html"><span class="ln">2.4</span> Variables on both sides</a></li>
+<li><a class="snav-lesson" href="unit-02-5.html"><span class="ln">2.5</span> Equations with fractions (with two Fraction Refreshers)</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-03.html">Unit 3. Proportional Reasoning (the bridge to linearity)</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-03-1.html"><span class="ln">3.1</span> Ratios and rates</a></li>
+<li><a class="snav-lesson" href="unit-03-2.html"><span class="ln">3.2</span> Proportions &amp; cross-multiplication</a></li>
+<li><a class="snav-lesson" href="unit-03-3.html"><span class="ln">3.3</span> Percents</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-04.html">Unit 4. Introducing Functions</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-04-1.html"><span class="ln">4.1</span> What is a function</a></li>
+<li><a class="snav-lesson" href="unit-04-2.html"><span class="ln">4.2</span> Function notation f(x), domain &amp; range</a></li>
+<li><a class="snav-lesson" href="unit-04-3.html"><span class="ln">4.3</span> Multiple representations; linear vs. nonlinear</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-05.html">Unit 5. Linear Functions &amp; Their Graphs</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-05-1.html"><span class="ln">5.1</span> The coordinate plane</a></li>
+<li><a class="snav-lesson" href="unit-05-2.html"><span class="ln">5.2</span> Graphing linear equations from a table</a></li>
+<li><a class="snav-lesson" href="unit-05-3.html"><span class="ln">5.3</span> Slope</a></li>
+<li><a class="snav-lesson" href="unit-05-4.html"><span class="ln">5.4</span> Slope-intercept form y = mx + b</a></li>
+<li><a class="snav-lesson" href="unit-05-5.html"><span class="ln">5.5</span> Writing equations of lines</a></li>
+<li><a class="snav-lesson" href="unit-05-6.html"><span class="ln">5.6</span> x-intercepts, graphing by intercepts &amp; standard form</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-06.html">Unit 6. Modeling &amp; Translation</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-06-1.html"><span class="ln">6.1</span> Translating words into expressions and equations</a></li>
+<li><a class="snav-lesson" href="unit-06-2.html"><span class="ln">6.2</span> Classic word problems (number, age, distance, value &amp; relationship)</a></li>
+<li><a class="snav-lesson" href="unit-06-3.html"><span class="ln">6.3</span> Scatter plots &amp; line of best fit (a first taste of data)</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-07.html">Unit 7. Systems of Equations</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-07-1.html"><span class="ln">7.1</span> Solving by graphing</a></li>
+<li><a class="snav-lesson" href="unit-07-2.html"><span class="ln">7.2</span> Substitution</a></li>
+<li><a class="snav-lesson" href="unit-07-3.html"><span class="ln">7.3</span> Elimination</a></li>
+<li><a class="snav-lesson" href="unit-07-4.html"><span class="ln">7.4</span> Special cases &amp; applications</a></li>
+</ol>
+</li>
+<li class="active">
+<a class="snav-unit" href="unit-08.html">Unit 8. Inequalities</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson cur" href="unit-08-1.html"><span class="ln">8.1</span> One-variable inequalities</a></li>
+<li><a class="snav-lesson" href="unit-08-2.html"><span class="ln">8.2</span> Compound inequalities</a></li>
+<li><a class="snav-lesson" href="unit-08-3.html"><span class="ln">8.3</span> Absolute value: graphs &amp; distance</a></li>
+<li><a class="snav-lesson" href="unit-08-4.html"><span class="ln">8.4</span> Graphing linear inequalities (two variables) &amp; systems</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-09.html">Unit 9. Sequences &amp; Exponential Functions</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-09-1.html"><span class="ln">9.1</span> Arithmetic &amp; geometric sequences as functions</a></li>
+<li><a class="snav-lesson" href="unit-09-2.html"><span class="ln">9.2</span> Exponential growth &amp; decay; linear vs. exponential</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-10.html">Unit 10. Exponents &amp; Polynomials</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-10-1.html"><span class="ln">10.1</span> Exponent rules (including zero &amp; negative exponents)</a></li>
+<li><a class="snav-lesson" href="unit-10-2.html"><span class="ln">10.2</span> Scientific notation</a></li>
+<li><a class="snav-lesson" href="unit-10-3.html"><span class="ln">10.3</span> Polynomials — terms, degree, standard form; add &amp; subtract</a></li>
+<li><a class="snav-lesson" href="unit-10-4.html"><span class="ln">10.4</span> Multiplying polynomials</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-11.html">Unit 11. Factoring</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-11-1.html"><span class="ln">11.1</span> Greatest common factor (GCF)</a></li>
+<li><a class="snav-lesson" href="unit-11-2.html"><span class="ln">11.2</span> Factoring trinomials x²+bx+c</a></li>
+<li><a class="snav-lesson" href="unit-11-3.html"><span class="ln">11.3</span> Special patterns</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-12.html">Unit 12. Quadratic Functions &amp; Equations (the capstone)</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-12-1.html"><span class="ln">12.1</span> Square roots &amp; simplifying radicals</a></li>
+<li><a class="snav-lesson" href="unit-12-2.html"><span class="ln">12.2</span> The simplest quadratics (x²=9 → two solutions)</a></li>
+<li><a class="snav-lesson" href="unit-12-3.html"><span class="ln">12.3</span> Solving by factoring (zero-product property)</a></li>
+<li><a class="snav-lesson" href="unit-12-4.html"><span class="ln">12.4</span> Completing the square</a></li>
+<li><a class="snav-lesson" href="unit-12-5.html"><span class="ln">12.5</span> The quadratic formula &amp; the discriminant</a></li>
+<li><a class="snav-lesson" href="unit-12-6.html"><span class="ln">12.6</span> Graphing parabolas</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="appendix.html">Appendix. Data &amp; Statistics</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="appendix-1.html"><span class="ln">A.1</span> One-variable statistics — center &amp; spread</a></li>
+<li><a class="snav-lesson" href="appendix-2.html"><span class="ln">A.2</span> Two-variable data — line of best fit, correlation vs. causation</a></li>
+<li><a class="snav-lesson" href="appendix-3.html"><span class="ln">A.3</span> Two-way tables</a></li>
+</ol>
+</li>
+</ol></nav>
+</aside>
+<div class="content">
+<main>
+<div class="kicker">Unit 8 · Lesson 8.1</div><h1>One-variable inequalities</h1>
+
+
+<p>Real limits are rarely "exactly equal." You need <em>at least</em> $20 for the ticket, <em>no more than</em> 8 hours in the workday, a speed <em>under</em> the limit. Each of those describes a whole range of acceptable values, not one magic number, and that range is what an inequality is for.</p>
+<p>Start with something you can picture: a sign at a ride that says "you must be at least 13." Is a 13-year-old allowed on? Yes. "At least 13" invites 13 itself in. Is a 20-year-old allowed? Yes. Is a 12-year-old? No.</p>
+<p>So the rule doesn't pick out one age. It lets in a whole crowd of them, everyone from 13 upward. Write the age as a and that's a ≥ 13.</p>
+<p>This is the first real difference from an equation. An equation like a = 13 has one answer. An inequality has many, and that's normal, not a sign something went wrong.</p>
+<p>Each of the four signs is just a way of saying which numbers are let in:</p>
+<ul>
+<li>a &lt; 13 means <em>less than</em> 13: everyone under 13, but not 13 itself.</li>
+<li>a &gt; 13 means <em>greater than</em> 13: everyone over 13, but not 13 itself.</li>
+<li>a ≤ 13 means <em>less than or equal to</em> 13: under 13, and 13 too.</li>
+<li>a ≥ 13 means <em>greater than or equal to</em> 13: over 13, and 13 too.</li>
+</ul>
+<p>The little line under ≤ and ≥ is doing real work: it's the "or equal to," and it's what invites the boundary number itself into the crowd. A sign without the line (&lt; or &gt;) leaves the boundary out. That one distinction shapes the picture you're about to draw, so read the sign slowly and ask, every time: is the boundary invited in, or not?</p>
+<p>Here's the picture. The answer to an inequality lives on a number line, as a shaded stretch of it. You mark the boundary with a circle, and the circle tells you whether the boundary counts. An <strong>open circle</strong> (a hollow ○) sits at the boundary when the sign is strict, &lt; or &gt;, meaning the boundary itself is <em>not</em> included. A <strong>filled circle</strong> (a solid ●) sits there when the sign is inclusive, ≤ or ≥, meaning it <em>is</em> included. Then you shade the ray, the whole run of numbers that work, in the direction of the values that make the statement true. For x ≤ 2, that's a filled circle at 2 and shading running left, off toward the smaller numbers, because every number 2 and below belongs <a class="refcode" id="8.1.f1" href="#8.1.f1">8.1.f1</a>.</p>
+<figure class="fig" id="fig-8.1.f1"><svg viewBox="0 0 320 60" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+  <line x1="14" y1="30" x2="306" y2="30" stroke="#333" stroke-width="2"/>
+  <line x1="20.0" y1="25" x2="20.0" y2="35" stroke="#333"/>
+  <text x="20.0" y="50" font-size="10" text-anchor="middle">-1</text>
+  <line x1="66.67" y1="25" x2="66.67" y2="35" stroke="#333"/>
+  <text x="66.67" y="50" font-size="10" text-anchor="middle">0</text>
+  <line x1="113.33" y1="25" x2="113.33" y2="35" stroke="#333"/>
+  <text x="113.33" y="50" font-size="10" text-anchor="middle">1</text>
+  <line x1="160.0" y1="25" x2="160.0" y2="35" stroke="#333"/>
+  <text x="160.0" y="50" font-size="10" text-anchor="middle">2</text>
+  <line x1="206.67" y1="25" x2="206.67" y2="35" stroke="#333"/>
+  <text x="206.67" y="50" font-size="10" text-anchor="middle">3</text>
+  <line x1="253.33" y1="25" x2="253.33" y2="35" stroke="#333"/>
+  <text x="253.33" y="50" font-size="10" text-anchor="middle">4</text>
+  <line x1="300.0" y1="25" x2="300.0" y2="35" stroke="#333"/>
+  <text x="300.0" y="50" font-size="10" text-anchor="middle">5</text>
+  <line x1="160.0" y1="30" x2="300.0" y2="30" stroke="#c0392b" stroke-width="4"/>
+  <circle cx="160.0" cy="30" r="5" fill="white" stroke="#c0392b" stroke-width="2"/>
+  <text x="160.0" y="18" font-size="10" text-anchor="middle" fill="#c0392b">x > 2</text>
+</svg><figcaption><b>Figure 8.1.f1</b></figcaption></figure>
+
+<p>Now the symbols. You solve an inequality almost exactly like an equation. Use the same balanced moves from Unit 2, whatever you do to one side you do to the other, to get the variable alone. Adding or subtracting from both sides never changes the direction. Multiplying or dividing both sides by a <em>positive</em> number never changes it either. There is one move, and only one, that does.</p>
+<p>That one move: if you multiply or divide both sides by a <em>negative</em> number, the inequality sign flips. Less-than becomes greater-than, and the other way around. This is the rule that trips people, so don't take it on faith. Look at why it has to be true. Start with something nobody would argue with:
+$$2 &lt; 3$$
+Plainly true. Now multiply both sides by −1, which turns the 2 into −2 and the 3 into −3. Is −2 &lt; −3? No. Owing $2 leaves you better off than owing $3, so −2 is the <em>bigger</em> number here. The statement 2 &lt; 3 was true, and to keep it true after multiplying by the negative, the sign has to turn around:
+$$2 &lt; 3 \;\xrightarrow{\;\times(-1)\;}\; -2 &gt; -3$$
+So the flip isn't a trick to memorize. It's the only way the statement stays honest when a negative reverses which side is bigger.</p>
+<p>And here's the habit that makes this whole lesson safe: after you solve, <strong>test a point</strong>. Take any number from your answer set, put it back into the <em>original</em> inequality, and check that it makes a true statement. If it does, you can trust your answer.</p>
+<p>And if you ever forget the flip, the test catches it. A number that clearly should work won't, and that mismatch is your signal to look again.</p>
+<p>Read each worked example slowly, a line at a time, and ask why each line follows from the one before it. That's what turns a worked example into something you can actually reuse.</p>
+<section class="worked">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19.5V15L15.5 4.5 19.5 8.5 9 19Z"/><path d="M13.5 6.5 17.5 10.5"/></svg>Worked example</span></p>
+<p><a class="refcode" id="8.1.w1" href="#8.1.w1">8.1.w1</a>
+<em>Example 1, no flip.</em> Solve x + 3 &lt; 7.
+The +3 is added onto x, so undo it: subtract 3 from both sides, which sends the +3 to zero and leaves x alone. That gives x &lt; 4. The sign didn't move, because subtracting doesn't flip it.
+Graph: an open circle at 4, since &lt; leaves the boundary out, and shade left toward the smaller values.
+Now test a point. Try x = 0, which is in "x &lt; 4." Back in the original: 0 + 3 = 3, and 3 &lt; 7 is true. (And 0 &lt; 4 fits the answer too.) So the answer holds: <strong>x &lt; 4</strong>.</p>
+<p><a class="refcode" id="8.1.w2" href="#8.1.w2">8.1.w2</a>
+<em>Example 2, two steps, no flip.</em> Solve 2x − 1 ≥ 5.
+Undo the −1 first by adding 1 to both sides: 2x ≥ 6. Now x is multiplied by 2, so divide both sides by 2 to free it. You're dividing by a <em>positive</em> 2, so the sign stays put: x ≥ 3.
+Graph: a filled circle at 3, since ≥ includes the boundary, and shade right.
+Test x = 4: in the original, 2(4) − 1 = 8 − 1 = 7, and 7 ≥ 5 is true; and 4 ≥ 3 fits. Solution: <strong>x ≥ 3</strong>.</p>
+<p>If a test ever <em>doesn't</em> come out true, you haven't failed. Your check just did its job and caught something before it counted. That's exactly what it's for. Go back to your first step and re-run the arithmetic slowly. A mismatch is almost always one small slip, often a dropped sign or a flip you missed, not the whole method coming apart.</p>
+<p>Now the move worth slowing down for. With a <em>positive</em> coefficient, an inequality behaves just like an equation. The moment a <em>negative</em> coefficient appears, the flip enters.</p>
+<p><a class="refcode" id="8.1.w3" href="#8.1.w3">8.1.w3</a>
+<em>Example 3, the flip.</em> Solve −2x &lt; 6.
+Here x is multiplied by −2, so divide both sides by −2 to free it. Dividing by a negative flips the sign, so &lt; becomes &gt;: x &gt; −3.
+Graph: an open circle at −3, and shade right.
+Test x = 0, which is in "x &gt; −3": the original is −2(0) = 0, and 0 &lt; 6 is true; and 0 &gt; −3 fits. Solution: <strong>x &gt; −3</strong>.</p>
+<p>This is where testing a point earns its keep. Had you forgotten to flip and written x &lt; −3, then 0 would be shut out of your answer, even though 0 plainly makes the original true. The test would have caught the missing flip on the spot.</p>
+<p>A bare −x, as in the next example, hides the same trap. Reading −x as "negative x" can tempt you to leave the sign alone, but −x is −1 times x, and undoing that −1 means dividing by a negative, so the flip still applies.</p>
+<p><a class="refcode" id="8.1.w4" href="#8.1.w4">8.1.w4</a>
+<em>Example 4, the −x trap.</em> Solve 5 − x &gt; 2.
+Subtract 5 from both sides: −x &gt; −3. Now x is multiplied by −1, so divide both sides by −1, and that flips the sign: x &lt; 3.
+Test x = 0: in the original, 5 − 0 = 5, and 5 &gt; 2 is true; and 0 &lt; 3 fits. Solution: <strong>x &lt; 3</strong>.
+There's a tidy way to dodge the negative coefficient entirely: add x to both sides first, giving 5 &gt; 2 + x, then subtract 2 to get 3 &gt; x, which reads as x &lt; 3, the same answer with no flip to remember. Two honest routes, same checked result.</p>
+<p>When a problem hands you a −x, you can flip carefully, or you can move the variable to the other side so its coefficient is positive. The choice is yours, and picking the one that feels cleaner to you is a real strategy, not a shortcut.</p>
+<p>Here's a clean one to get the method moving before the practice mixes things up. Solve 3x &gt; 12: x is multiplied by 3, so divide both sides by the positive 3, no flip, and x &gt; 4. Open circle at 4, shade right. Test x = 5: 3(5) = 15 &gt; 12, true. Nothing tricky here, just the undo move, once, with a positive coefficient.</p>
+<p>One way people get stuck early is treating an inequality like it has a single answer. It doesn't. A quick way to feel the difference: after you solve, name three different numbers from your answer set and check that each one works in the original. Three numbers, all true. That's the <em>set</em> the shaded ray stands for.</p>
+</section>
+<div class="cl-terms">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6.5C9.5 5 6 5 3.5 6.5V18C6 16.5 9.5 16.5 12 18C14.5 16.5 18 16.5 20.5 18V6.5C18 5 14.5 5 12 6.5Z"/><path d="M12 6.5V18"/></svg>New words</span></p>
+<ul>
+<li><a class="refcode" id="8.1.d1" href="#8.1.d1">8.1.d1</a> <strong>Inequality:</strong> a statement that <strong>compares</strong> two quantities using &lt; (less than), &gt; (greater than), ≤ (less than <em>or equal to</em>), or ≥ (greater than or equal to), saying one is less than, greater than, or at most/at least the other (an <em>order</em> relation).</li>
+<li><a class="refcode" id="8.1.d2" href="#8.1.d2">8.1.d2</a> <strong>Solution set:</strong> <em>all</em> the values that make the inequality true, usually infinitely many, drawn as a shaded ray.</li>
+<li><a class="refcode" id="8.1.d3" href="#8.1.d3">8.1.d3</a> <strong>Strict</strong> (&lt;, &gt;) vs. <strong>inclusive</strong> (≤, ≥): whether the boundary value itself counts.</li>
+</ul>
+</div>
+<div class="cl-check">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M9.6 9.6a2.6 2.6 0 1 1 3.3 2.5c-.9.3-1.4.9-1.4 1.8"/><circle cx="11.5" cy="16.6" r=".9" fill="currentColor" stroke="none"/></svg>Check yourself</span></p>
+<ol>
+<li><a class="refcode" id="8.1.c1" href="#8.1.c1">8.1.c1</a> Solve −3x ≥ 12, then put x = −5 into the <em>original</em> inequality and walk through how the test confirms your answer (or would have caught a slip). (Dividing by −3 flips the sign: x ≤ −4. Test x = −5, which is in "x ≤ −4": the original is −3(−5) = 15, and 15 ≥ 12 is true, so the answer holds. If you'd forgotten the flip and written x ≥ −4, then −5 would be excluded even though it makes the original true. The test would flag it.)</li>
+<li><a class="refcode" id="8.1.c2" href="#8.1.c2">8.1.c2</a> Two people solve −x &lt; 4. One writes x &lt; −4, the other x &gt; −4. Use x = 0 to decide who's right and say how you know. (Put x = 0 in the original: −0 = 0, and 0 &lt; 4 is true, so 0 must be in the answer. It fits x &gt; −4 but not x &lt; −4, so x &gt; −4 is correct. The −1 was divided out, which flips the sign.)</li>
+<li><a class="refcode" id="8.1.c3" href="#8.1.c3">8.1.c3</a> In words, describe the number-line graph of x ≤ 2: which circle, and which way do you shade? (A filled circle at 2, because ≤ includes the boundary, then shade left toward the smaller numbers.)</li>
+</ol>
+<p>A mixed set is harder than a page of one kind of problem, and that difficulty is what makes the skill last. Every problem below has its answer at the end of the lesson, and if one stalls you, flip back to the worked example it's based on. Watch especially for Set B, where a negative coefficient means a flip is coming, and close every problem by testing a point.</p>
+<p><strong>Practice problems</strong> (solve; then describe the number-line graph in words: which circle and which way you shade):</p>
+<p><em>Set A, no flip</em></p>
+<ol>
+<li><a class="refcode" id="8.1.1" href="#8.1.1">8.1.1</a> x - 2 &lt; 3</li>
+<li><a class="refcode" id="8.1.2" href="#8.1.2">8.1.2</a> x + 5 ≤ 2</li>
+<li><a class="refcode" id="8.1.3" href="#8.1.3">8.1.3</a> 3x &gt; 12</li>
+<li><a class="refcode" id="8.1.4" href="#8.1.4">8.1.4</a> x/2 ≥ 4</li>
+<li><a class="refcode" id="8.1.5" href="#8.1.5">8.1.5</a> 2x + 1 ≤ 9</li>
+<li><a class="refcode" id="8.1.6" href="#8.1.6">8.1.6</a> 4x - 3 &gt; 9</li>
+</ol>
+<p><em>Set B, requires a flip (multiply/divide by a negative)</em></p>
+<ol start="7">
+<li><a class="refcode" id="8.1.7" href="#8.1.7">8.1.7</a> -x &lt; 4</li>
+<li><a class="refcode" id="8.1.8" href="#8.1.8">8.1.8</a> -3x ≤ 9</li>
+<li><a class="refcode" id="8.1.9" href="#8.1.9">8.1.9</a> -x + 2 &lt; 5</li>
+<li><a class="refcode" id="8.1.10" href="#8.1.10">8.1.10</a> 10 - 2x ≥ 4</li>
+<li><a class="refcode" id="8.1.11" href="#8.1.11">8.1.11</a> 3 - x ≤ 7</li>
+<li><a class="refcode" id="8.1.12" href="#8.1.12">8.1.12</a> -4x ≤ -8</li>
+</ol>
+<p><em>Set C, read the graph (manual)</em></p>
+<ol start="13">
+<li><a class="refcode" id="8.1.13" href="#8.1.13">8.1.13</a> A number line shows an <strong>open</strong> circle at 1 shaded to the <strong>right</strong>. Write the inequality.</li>
+<li><a class="refcode" id="8.1.14" href="#8.1.14">8.1.14</a> A number line shows a <strong>filled</strong> circle at -2 shaded to the <strong>left</strong>. Write the inequality.</li>
+</ol>
+</div>
+<details class="answers">
+<summary><span class="tw"></span><span class="eyebrow">Answers</span><span class="hint">Try each one yourself first, then open to check.</span></summary>
+<div class="ak-body">
+<ol>
+<li>x &lt; 5 — open circle at 5, shade left.</li>
+<li>x ≤ -3 — filled circle at -3, shade left.</li>
+<li>x &gt; 4 — open circle at 4, shade right.</li>
+<li>x ≥ 8 — filled circle at 8, shade right.</li>
+<li>x ≤ 4 — filled circle at 4, shade left.</li>
+<li>x &gt; 3 — open circle at 3, shade right.</li>
+<li>x &gt; -4 — <strong>flip</strong> (÷ by -1); open circle at -4, shade right. <em>(Test x=0: -0&lt;4, 0&gt;-4.)</em></li>
+<li>x ≥ -3 — <strong>flip</strong> (÷ by -3); filled circle at -3, shade right.</li>
+<li>x &gt; -3 — subtract 2 → -x &lt; 3 → <strong>flip</strong> → x &gt; -3; open circle at -3, shade right.</li>
+<li>x ≤ 3 — subtract 10 → -2x ≥ -6 → <strong>flip</strong> (÷ by -2) → x ≤ 3; filled circle at 3, shade left.</li>
+<li>x ≥ -4 — subtract 3 → -x ≤ 4 → <strong>flip</strong> → x ≥ -4; filled circle at -4, shade right.</li>
+<li>x ≥ 2 — divide by -4 → <strong>flip</strong> → x ≥ 2; filled circle at 2, shade right. <em>(Test x=2: -8 ≤ -8.)</em></li>
+<li>x &gt; 1 (open + right = strict greater-than).</li>
+<li>x ≤ -2 (filled + left = inclusive less-than-or-equal).</li>
+</ol>
+</div>
+</details>
+<nav class="pagenav" aria-label="Previous and next page">
+<a class="pn-prev" href="unit-08.html"><span class="pn-dir">&larr;&nbsp;Back</span><span class="pn-title">Unit 8</span></a>
+<a class="pn-next" href="unit-08-2.html"><span class="pn-dir">Next&nbsp;&rarr;</span><span class="pn-title">Lesson 8.2</span></a>
+</nav>
+</main>
+<footer><p>A friendly Algebra 1 textbook, made to be read alongside the Claude tutor. Math by KaTeX.</p></footer>
+</div>
+</div>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  renderMathInElement(document.body, {delimiters: [{left: "$$", right: "$$", display: true}], throwOnError: false});
+  var root = document.documentElement, body = document.body;
+  document.getElementById("theme").addEventListener("click", function () {
+    root.classList.toggle("dark");
+    localStorage.setItem("a1-theme", root.classList.contains("dark") ? "dark" : "light");
+  });
+  var menu = document.getElementById("menu");
+  menu.addEventListener("click", function () {
+    var open = body.classList.toggle("nav-open");
+    menu.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+  var sn = document.getElementById("sidenav");
+  if (sn) sn.addEventListener("click", function (e) { if (e.target.closest("a")) body.classList.remove("nav-open"); });
+});
+</script>
+</body>
+</html>

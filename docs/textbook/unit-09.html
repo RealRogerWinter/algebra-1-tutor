@@ -13,233 +13,175 @@
 </head>
 <body data-surface="textbook">
 <header class="topbar">
-  <nav><a class="home" href="index.html">Algebra&nbsp;1</a> &nbsp;·&nbsp; <a href="unit-08.html">&larr;&nbsp;Unit 8</a> &nbsp;·&nbsp; <a href="unit-10.html">Unit 10&nbsp;&rarr;</a></nav>
+  <button id="menu" class="menu" type="button" aria-label="Open or close the contents menu" aria-expanded="false">☰&nbsp;Contents</button>
+  <a class="home" href="index.html">Algebra&nbsp;1</a>
   <span class="sp"></span>
-  <button id="theme" type="button" aria-label="Toggle light or dark theme">◐ Theme</button>
+  <button id="theme" type="button" aria-label="Toggle light or dark theme">◐&nbsp;Theme</button>
 </header>
+<div class="shell">
+<aside class="sidenav" id="sidenav">
+<nav class="snav" aria-label="Contents">
+<a class="snav-top" href="how-to-use.html">How to use this book</a>
+<a class="snav-top" href="index.html">All units</a>
+<ol class="snav-units">
+<li class="">
+<a class="snav-unit" href="unit-01.html">Unit 1. Foundations &amp; the Language of Algebra</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-01-1.html"><span class="ln">1.1</span> Variables and the meaning of equations</a></li>
+<li><a class="snav-lesson" href="unit-01-2.html"><span class="ln">1.2</span> The number system &amp; the number line</a></li>
+<li><a class="snav-lesson" href="unit-01-3.html"><span class="ln">1.3</span> Order of operations</a></li>
+<li><a class="snav-lesson" href="unit-01-4.html"><span class="ln">1.4</span> Negative numbers</a></li>
+<li><a class="snav-lesson" href="unit-01-5.html"><span class="ln">1.5</span> Expressions vs. equations; evaluating expressions</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-02.html">Unit 2. Solving Linear Equations</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-02-1.html"><span class="ln">2.1</span> Inverse operations &amp; one-step equations</a></li>
+<li><a class="snav-lesson" href="unit-02-2.html"><span class="ln">2.2</span> Two-step equations</a></li>
+<li><a class="snav-lesson" href="unit-02-3.html"><span class="ln">2.3</span> Combining like terms &amp; the distributive property</a></li>
+<li><a class="snav-lesson" href="unit-02-4.html"><span class="ln">2.4</span> Variables on both sides</a></li>
+<li><a class="snav-lesson" href="unit-02-5.html"><span class="ln">2.5</span> Equations with fractions (with two Fraction Refreshers)</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-03.html">Unit 3. Proportional Reasoning (the bridge to linearity)</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-03-1.html"><span class="ln">3.1</span> Ratios and rates</a></li>
+<li><a class="snav-lesson" href="unit-03-2.html"><span class="ln">3.2</span> Proportions &amp; cross-multiplication</a></li>
+<li><a class="snav-lesson" href="unit-03-3.html"><span class="ln">3.3</span> Percents</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-04.html">Unit 4. Introducing Functions</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-04-1.html"><span class="ln">4.1</span> What is a function</a></li>
+<li><a class="snav-lesson" href="unit-04-2.html"><span class="ln">4.2</span> Function notation f(x), domain &amp; range</a></li>
+<li><a class="snav-lesson" href="unit-04-3.html"><span class="ln">4.3</span> Multiple representations; linear vs. nonlinear</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-05.html">Unit 5. Linear Functions &amp; Their Graphs</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-05-1.html"><span class="ln">5.1</span> The coordinate plane</a></li>
+<li><a class="snav-lesson" href="unit-05-2.html"><span class="ln">5.2</span> Graphing linear equations from a table</a></li>
+<li><a class="snav-lesson" href="unit-05-3.html"><span class="ln">5.3</span> Slope</a></li>
+<li><a class="snav-lesson" href="unit-05-4.html"><span class="ln">5.4</span> Slope-intercept form y = mx + b</a></li>
+<li><a class="snav-lesson" href="unit-05-5.html"><span class="ln">5.5</span> Writing equations of lines</a></li>
+<li><a class="snav-lesson" href="unit-05-6.html"><span class="ln">5.6</span> x-intercepts, graphing by intercepts &amp; standard form</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-06.html">Unit 6. Modeling &amp; Translation</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-06-1.html"><span class="ln">6.1</span> Translating words into expressions and equations</a></li>
+<li><a class="snav-lesson" href="unit-06-2.html"><span class="ln">6.2</span> Classic word problems (number, age, distance, value &amp; relationship)</a></li>
+<li><a class="snav-lesson" href="unit-06-3.html"><span class="ln">6.3</span> Scatter plots &amp; line of best fit (a first taste of data)</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-07.html">Unit 7. Systems of Equations</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-07-1.html"><span class="ln">7.1</span> Solving by graphing</a></li>
+<li><a class="snav-lesson" href="unit-07-2.html"><span class="ln">7.2</span> Substitution</a></li>
+<li><a class="snav-lesson" href="unit-07-3.html"><span class="ln">7.3</span> Elimination</a></li>
+<li><a class="snav-lesson" href="unit-07-4.html"><span class="ln">7.4</span> Special cases &amp; applications</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-08.html">Unit 8. Inequalities</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-08-1.html"><span class="ln">8.1</span> One-variable inequalities</a></li>
+<li><a class="snav-lesson" href="unit-08-2.html"><span class="ln">8.2</span> Compound inequalities</a></li>
+<li><a class="snav-lesson" href="unit-08-3.html"><span class="ln">8.3</span> Absolute value: graphs &amp; distance</a></li>
+<li><a class="snav-lesson" href="unit-08-4.html"><span class="ln">8.4</span> Graphing linear inequalities (two variables) &amp; systems</a></li>
+</ol>
+</li>
+<li class="active">
+<a class="snav-unit cur" href="unit-09.html">Unit 9. Sequences &amp; Exponential Functions</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-09-1.html"><span class="ln">9.1</span> Arithmetic &amp; geometric sequences as functions</a></li>
+<li><a class="snav-lesson" href="unit-09-2.html"><span class="ln">9.2</span> Exponential growth &amp; decay; linear vs. exponential</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-10.html">Unit 10. Exponents &amp; Polynomials</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-10-1.html"><span class="ln">10.1</span> Exponent rules (including zero &amp; negative exponents)</a></li>
+<li><a class="snav-lesson" href="unit-10-2.html"><span class="ln">10.2</span> Scientific notation</a></li>
+<li><a class="snav-lesson" href="unit-10-3.html"><span class="ln">10.3</span> Polynomials — terms, degree, standard form; add &amp; subtract</a></li>
+<li><a class="snav-lesson" href="unit-10-4.html"><span class="ln">10.4</span> Multiplying polynomials</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-11.html">Unit 11. Factoring</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-11-1.html"><span class="ln">11.1</span> Greatest common factor (GCF)</a></li>
+<li><a class="snav-lesson" href="unit-11-2.html"><span class="ln">11.2</span> Factoring trinomials x²+bx+c</a></li>
+<li><a class="snav-lesson" href="unit-11-3.html"><span class="ln">11.3</span> Special patterns</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-12.html">Unit 12. Quadratic Functions &amp; Equations (the capstone)</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-12-1.html"><span class="ln">12.1</span> Square roots &amp; simplifying radicals</a></li>
+<li><a class="snav-lesson" href="unit-12-2.html"><span class="ln">12.2</span> The simplest quadratics (x²=9 → two solutions)</a></li>
+<li><a class="snav-lesson" href="unit-12-3.html"><span class="ln">12.3</span> Solving by factoring (zero-product property)</a></li>
+<li><a class="snav-lesson" href="unit-12-4.html"><span class="ln">12.4</span> Completing the square</a></li>
+<li><a class="snav-lesson" href="unit-12-5.html"><span class="ln">12.5</span> The quadratic formula &amp; the discriminant</a></li>
+<li><a class="snav-lesson" href="unit-12-6.html"><span class="ln">12.6</span> Graphing parabolas</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="appendix.html">Appendix. Data &amp; Statistics</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="appendix-1.html"><span class="ln">A.1</span> One-variable statistics — center &amp; spread</a></li>
+<li><a class="snav-lesson" href="appendix-2.html"><span class="ln">A.2</span> Two-variable data — line of best fit, correlation vs. causation</a></li>
+<li><a class="snav-lesson" href="appendix-3.html"><span class="ln">A.3</span> Two-way tables</a></li>
+</ol>
+</li>
+</ol></nav>
+</aside>
+<div class="content">
 <main>
 <div class="hero"><div class="hero-text"><div class="kicker">Unit 9</div><h1>Sequences &amp; Exponential Functions</h1><p class="lede">Arithmetic/geometric sequences as functions, exponential growth &amp; decay, linear vs. exponential</p></div><img class="hero-art" src="../assets/exponential.jpg" alt=""></div>
 
 <blockquote>
-<p><strong>Prerequisites:</strong> Unit 4 (functions, f(x) notation, input → one output, multiple representations). Helped by Unit 5 (linear functions as the "constant rate of change" family) — we contrast against it constantly. Comfort with exponents from Unit 1 and substituting into an expression is assumed.
-<strong>By the end, the student can:</strong></p>
-<ul>
-<li>See a sequence as a function: the term number n is the input, the term a_n is the output.</li>
-<li>Identify a sequence as <strong>arithmetic</strong> (constant common difference d) or <strong>geometric</strong> (constant common ratio r), find d or r, and continue it.</li>
-<li>Write a sequence <strong>both ways</strong> — recursively (each term from the one before: a_n = a_{n-1} + d or a_n = r·a_{n-1}) and explicitly (jump straight to term n: a_n = a_1 + (n-1)d or a_n = a_1 · r^(n-1)) — and <strong>translate between the two forms</strong>.</li>
-<li>Use the rules a_n = a_1 + (n-1)d and a_n = a_1 · r^(n-1) to find a specific term without listing them all.</li>
-<li>Evaluate an exponential function y = a·bˣ — knowing it is well-defined only when a ≠ 0, b &gt; 0, b ≠ 1 — and read off the starting amount a and growth/decay factor b, <strong>interpreting what they mean</strong> (e.g. b = 1.05 is +5% per period, b = 0.9 is −10% per period).</li>
-<li>Tell <strong>linear from exponential</strong> at a glance: constant <em>difference</em> (add the same each step) vs. constant <em>ratio</em> (multiply by the same each step), including from a table.</li>
-<li>Identify growth (b&gt;1) vs. decay (0&lt;b&lt;1) and turn a percent change into a factor.</li>
-</ul>
+<p>This unit is about patterns that grow in a steady way: number lists that climb by a fixed step, and the kind of growth behind money earning interest or a population doubling. It pays off because that second kind, growing by multiplying, shows up everywhere once you can spot it.</p>
+<p>It helps to have one thing fresh: working out the value of an expression when you put a number into it. If you'd like a quick warm-up, redo a couple of problems on that from an earlier unit.</p>
 </blockquote>
-<h2 id="teaching-this-unit-orientation-for-the-tutor">Teaching this unit (orientation for the tutor)</h2>
-<p>This is a <strong>lighter, two-lesson unit</strong> that introduces two new <em>function families</em> and — most importantly — sets up the one contrast that organizes everything: <strong>linear means a constant DIFFERENCE (you add the same amount each step); exponential means a constant RATIO (you multiply by the same amount each step).</strong> Say that sentence early, repeat it often, and hang both lessons on it.</p>
-<p>Thread the <strong>Unit 4 function language</strong> the whole way: a sequence is <em>literally a function</em> whose inputs are the counting numbers 1, 2, 3, ... The vending machine / recipe pictures (<code>metaphors.md</code> → Functions) still apply — feed in the term number, get back the term. And keep the <strong>Unit 5 callback</strong> alive: a linear function is the "+ the same each step" family they already know; arithmetic sequences are just linear functions sampled at the counting numbers (same common difference d = the slope). Geometric/exponential is the genuinely new behavior.</p>
-<p>Make the <strong>discrete vs. continuous</strong> distinction explicit, because it is what makes the arithmetic↔linear and geometric↔exponential links rigorous (not just "smooth cousin" hand-waving): a sequence's domain is <strong>only</strong> the counting numbers 1, 2, 3, …, so its graph is a set of <strong>separate dots</strong> — there is no a₁.₅, no "in-between" term. An arithmetic sequence is exactly a <strong>linear</strong> function restricted to those integer inputs (its dots sit on the line y = a₁ + (n−1)d), and a <strong>geometric sequence is exactly an exponential function f(x) = a·bˣ restricted to those inputs</strong> (the common ratio r is the base b). The linear/exponential parent is the <strong>continuous</strong> version that fills in the gaps between the dots; the sequence itself is <em>not</em> smooth. State this once here and reuse it in 9.2 when you call y = a·bˣ the continuous version of the geometric sequence.</p>
-<p>Look <strong>forward</strong> too: Unit 12 introduces quadratics as yet <em>another</em> family (constant <em>second</em> difference). Planting "different families behave differently" here pays off there. (Unit 10 will formalize exponent rules; here we only need bˣ for whole-number-ish inputs, so keep exponent mechanics light.)</p>
-<p><strong>Biggest misconception traps in this unit:</strong></p>
-<ul>
-<li><strong>Confusing difference with ratio</strong> — calling 2, 6, 18, 54 arithmetic because "it keeps going up," or trying to find a common difference for a geometric sequence. Repair: have them compute <em>both</em> the differences and the ratios between consecutive terms and ask which one is <em>constant</em>.</li>
-<li><strong>The n-1 in the rule.</strong> Students use n instead of n-1 (because the first term already <em>is</em> a_1, you take only n-1 steps to reach the nth term). Tell: their term is one step too far. Anchor with "term 1 takes <em>zero</em> steps."</li>
-<li><strong>Percent → factor errors.</strong> "+10%" becomes a factor of 1.10 (not 0.10); "−20%" becomes 0.80 (not -0.20 or 1.20). This is the percent-change work of Unit 3 resurfacing. See <code>misconceptions.md §7</code> (reading what the expression <em>says</em>, e.g. p + 0.10p = 1.10p).</li>
-<li><strong>Linear-izing exponentials.</strong> Treating y = 2ˣ like y = 2x — a constant-difference reflex applied to a constant-ratio object. The side-by-side table is the cure: an <em>increasing</em> exponential (b&gt;1) pulls away and eventually overtakes <em>any</em> line (a <em>decaying</em> one, 0&lt;b&lt;1, does the opposite — it sinks toward 0).</li>
-</ul>
-<p><strong>Visuals:</strong> mostly <strong>tables</strong>, not graphs (<code>visuals.md</code> → "Pair every visual with words / a small table"). The signature visual of this unit is a <strong>two-column comparison table</strong> showing constant difference vs. constant ratio, and the <strong>linear-vs-exponential side-by-side table</strong>. Compute every entry (verify with the code tool — a wrong table teaches a wrong pattern). If you do graph an exponential, you can reuse <code>visuals.md</code> <strong>Template 2</strong>'s coordinate-mapping rule, but a clean table is usually enough here. No new template is required.</p>
-<p>There is no dedicated metaphor entry for sequences in <code>metaphors.md</code>; build on the <strong>Functions</strong> entries there (the machine fed the counting numbers) plus a plain "interest/doubling" story for exponentials, and walk from the story to the symbols as always (concreteness fading, <code>pedagogy.md</code>).</p>
-<div class="ldiv" aria-hidden="true"><i></i><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3.5 20.5 12 12 20.5 3.5 12Z"/></svg><i></i></div>
-<h2 id="lesson-91-arithmetic-geometric-sequences-as-functions">Lesson 9.1: Arithmetic &amp; geometric sequences as functions</h2>
-<div class="cl-goal">
-<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/></svg>What you'll learn</span></p>
-<p>Recognize a sequence as a function on the counting numbers (a <strong>discrete</strong> domain), classify it as arithmetic (constant d) or geometric (constant r), write it <strong>recursively and explicitly</strong>, and find any term with the explicit rule a_n = a_1 + (n-1)d or a_n = a_1 · r^(n-1).</p>
-</div>
-<div class="cl-why">
-<p>Sequences are the gentlest on-ramp to a new function family, and they make the central contrast — <em>add the same</em> vs. <em>multiply the same</em> — concrete and countable before we dress it up as y = a·bˣ in 9.2.</p>
-</div>
-<div class="cl-terms">
-<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6.5C9.5 5 6 5 3.5 6.5V18C6 16.5 9.5 16.5 12 18C14.5 16.5 18 16.5 20.5 18V6.5C18 5 14.5 5 12 6.5Z"/><path d="M12 6.5V18"/></svg>New words</span></p>
-<ul>
-<li><a class="refcode" id="9.1.d1" href="#9.1.d1">9.1.d1</a> <strong>Sequence:</strong> an ordered list of numbers, called <strong>terms</strong>. The 1st term is a_1, the 2nd is a_2, and the nth is a_n.</li>
-<li><a class="refcode" id="9.1.d2" href="#9.1.d2">9.1.d2</a> <strong>Term number n:</strong> the position in the list — 1, 2, 3, ... This is the <strong>input</strong>; the term a_n is the <strong>output</strong>. So a sequence <em>is a function</em> whose domain is the counting numbers.</li>
-<li><a class="refcode" id="9.1.d3" href="#9.1.d3">9.1.d3</a> <strong>Discrete domain:</strong> because the inputs are only the counting numbers 1, 2, 3, … (you can't ask for "term 1.5"), the sequence's graph is a set of <strong>separate dots</strong>, not a connected curve. This is what distinguishes a sequence from the linear/exponential function it resembles (whose domain is <em>all</em> real numbers).</li>
-<li><a class="refcode" id="9.1.d4" href="#9.1.d4">9.1.d4</a> <strong>Arithmetic sequence:</strong> each term is the previous one <strong>plus a fixed number</strong>, the <strong>common difference d</strong>. (Constant <em>difference</em>.)</li>
-<li><a class="refcode" id="9.1.d5" href="#9.1.d5">9.1.d5</a> <strong>Geometric sequence:</strong> each term is the previous one <strong>times a fixed number</strong>, the <strong>common ratio r</strong> (with r ≠ 0 and a_1 ≠ 0 — since we're multiplying, a 0 anywhere would kill the pattern). (Constant <em>ratio</em>.)</li>
-<li><a class="refcode" id="9.1.d6" href="#9.1.d6">9.1.d6</a> <strong>Recursive vs. explicit rule:</strong> a <strong>recursive</strong> rule says how to get each term <em>from the one before</em> (you must already know the previous term): arithmetic a_n = a_{n-1} + d, geometric a_n = r·a_{n-1}, with the <strong>first term a_1 stated separately</strong>. An <strong>explicit</strong> rule <em>jumps straight to term n</em> from the term number alone: arithmetic a_n = a_1 + (n-1)d, geometric a_n = a_1 · r^(n-1). They describe the <em>same</em> sequence — the recursive one is the "step-by-step" view, the explicit one is the "skip ahead" view, and you should be able to translate between them.</li>
-</ul>
-</div>
-<div class="cl-note">
-<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 11V16"/><circle cx="12" cy="8" r=".9" fill="currentColor" stroke="none"/></svg>How this builds</span></p>
-<ul>
-<li><strong>Concrete / function callback:</strong> "A sequence is the Unit 4 function machine (<code>metaphors.md</code> → Functions) fed the counting numbers: input 1 → 1st term, input 2 → 2nd term. The <em>rule</em> of the machine is what we're after." Start with the list 3, 7, 11, 15, ... and ask: "what do you do to get from each term to the next?" (add 4). Then 2, 6, 18, 54, ...: "and here?" (times 3). Name the two behaviors: <strong>add the same</strong> = arithmetic, <strong>multiply the same</strong> = geometric. Point out that "each term is the previous one plus/times a fixed number" is <em>already</em> the <strong>recursive rule</strong> stated in words — they understand it before they see the symbols; the only catch is you must also state the <strong>first term</strong> to launch it.</li>
-<li><strong>Pictorial / the diagnostic table:</strong> write the terms in a row and the <em>jumps</em> underneath. For arithmetic show the <strong>differences</strong> are all equal; for geometric show the <strong>ratios</strong> are all equal. This little table <em>is</em> the classification tool — always compute both when unsure.</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>term n</th>
-<th>1</th>
-<th>2</th>
-<th>3</th>
-<th>4</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>3,7,11,15 (arith)</td>
-<td>3</td>
-<td>7</td>
-<td>11</td>
-<td>15</td>
-</tr>
-<tr>
-<td>difference</td>
-<td>—</td>
-<td>+4</td>
-<td>+4</td>
-<td>+4</td>
-</tr>
-<tr>
-<td>2,6,18,54 (geo)</td>
-<td>2</td>
-<td>6</td>
-<td>18</td>
-<td>54</td>
-</tr>
-<tr>
-<td>ratio</td>
-<td>—</td>
-<td>x3</td>
-<td>x3</td>
-<td>x3</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>
-<p><strong>Symbolic:</strong> write each rule <strong>both ways</strong>. The <strong>recursive</strong> rule names each term from the one before (state a_1 too, or it has nowhere to start); the <strong>explicit</strong> rule jumps straight to term n. To reach the nth term explicitly you start at a_1 and take n-1 steps (term 1 takes <strong>zero</strong> steps — that's where the n-1 comes from):
-  $$\text{arithmetic:}\quad a_n = a_{n-1} + d,\ a_1\text{ given}\qquad\Longleftrightarrow\qquad a_n = a_1 + (n-1)\,d$$
-  $$\text{geometric:}\quad a_n = r\cdot a_{n-1},\ a_1\text{ given}\qquad\Longleftrightarrow\qquad a_n = a_1\cdot r^{\,n-1}$$
-  The recursive form mirrors the concrete "do the same thing each step" intuition; the explicit (boxed) form is the labor-saver that skips the listing. <strong>Translate between them:</strong> the recursive d (or r) is the <em>same</em> d (or r) in the explicit rule, and a_1 is shared — so reading off d and a_1 gets you either form. Verify any specific term with the code tool, ideally <strong>both ways</strong> (recursive listing vs. explicit formula) so they agree.</p>
-</li>
-<li>
-<p><strong>Discrete domain / restricted function (tie to the orientation):</strong> plot a few terms as dots — e.g. arithmetic 3, 7, 11, 15 as the points (1,3), (2,7), (3,11), (4,15). Those dots sit <em>on</em> the line y = 4n − 1, but the sequence is <strong>only the dots</strong> (no a₁.₅). That's the precise sense in which an arithmetic sequence is a <strong>linear function restricted to the counting numbers</strong>, and a geometric sequence is an <strong>exponential function f(x)=a·bˣ restricted to those integer inputs</strong> (with r as the base b). The line/curve is the continuous parent that fills the gaps.</p>
-</li>
-</ul>
-</div>
-<section class="worked">
-<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19.5V15L15.5 4.5 19.5 8.5 9 19Z"/><path d="M13.5 6.5 17.5 10.5"/></svg>Worked example</span></p>
-<ol>
-<li>
-<p><a class="refcode" id="9.1.w1" href="#9.1.w1">9.1.w1</a> <strong>Arithmetic</strong> 3, 7, 11, 15, ...: consecutive differences 7-3=4, 11-7=4, 15-11=4 are all 4, so d=4, a_1=3. Find a_10:
-$$a_{10} = 3 + (10-1)\cdot 4 = 3 + 9\cdot 4 = 3 + 36 = 39$$</p>
-</li>
-<li>
-<p><a class="refcode" id="9.1.w2" href="#9.1.w2">9.1.w2</a> <strong>Geometric</strong> 2, 6, 18, 54, ...: consecutive ratios 6/2=3, 18/6=3, 54/18=3 are all 3, so r=3, a_1=2. Find a_5:
-$$a_5 = 2\cdot 3^{\,5-1} = 2\cdot 3^{4} = 2\cdot 81 = 162$$</p>
-</li>
-<li>
-<p><a class="refcode" id="9.1.w3" href="#9.1.w3">9.1.w3</a> <strong>Which type?</strong> 5, 8, 11, 14, ...: differences are all +3 and the ratios (8/5, 11/8, ...) are <em>not</em> constant → <strong>arithmetic</strong>, d=3. Next term: 14+3 = 17.</p>
-</li>
-<li>
-<p><a class="refcode" id="9.1.w4" href="#9.1.w4">9.1.w4</a> <strong>Which type?</strong> 4, 12, 36, 108, ...: ratios are all ×3 (differences 8, 24, 72 are not constant) → <strong>geometric</strong>, r=3. Next term: 108·3 = 324.</p>
-</li>
-<li>
-<p><a class="refcode" id="9.1.w5" href="#9.1.w5">9.1.w5</a> <strong>A descending arithmetic sequence</strong> 10, 7, 4, 1, ...: d = -3. Find a_8:
-$$a_8 = 10 + (8-1)(-3) = 10 + 7(-3) = 10 - 21 = -11$$</p>
-</li>
-<li>
-<p><a class="refcode" id="9.1.w6" href="#9.1.w6">9.1.w6</a> <strong>Arithmetic, both forms (recursive ↔ explicit).</strong> 4, 9, 14, 19, ...: differences are all +5, so a_1=4, d=5. <strong>Recursive:</strong> a_1 = 4, a_n = a_{n-1} + 5. <strong>Explicit:</strong> a_n = 4 + (n-1)·5. Find a_6 <strong>both ways</strong> and confirm they match.
-$$\text{recursive: } 4 \to 9 \to 14 \to 19 \to 24 \to 29 \quad(\text{step +5 five times, } a_6=29)$$
-$$\text{explicit: } a_6 = 4 + (6-1)\cdot 5 = 4 + 5\cdot 5 = 4 + 25 = 29 \checkmark$$
-Same answer, 29 — the recursive form walks term by term; the explicit form skips straight to it.</p>
-</li>
-<li>
-<p><a class="refcode" id="9.1.w7" href="#9.1.w7">9.1.w7</a> <strong>Geometric, both forms (recursive ↔ explicit).</strong> 3, 6, 12, 24, ...: ratios are all ×2, so a_1=3, r=2. <strong>Recursive:</strong> a_1 = 3, a_n = 2·a_{n-1}. <strong>Explicit:</strong> a_n = 3·2^(n-1). Find a_5 <strong>both ways</strong>:
-$$\text{recursive: } 3 \to 6 \to 12 \to 24 \to 48 \quad(\times 2 \text{ four times, } a_5=48)$$
-$$\text{explicit: } a_5 = 3\cdot 2^{\,5-1} = 3\cdot 2^{4} = 3\cdot 16 = 48 \checkmark$$
-The translation is just reading off the shared a_1 and r: r=2 is both the recursive multiplier and the explicit base.</p>
-</li>
-</ol>
-</section>
-<div class="cl-watch">
-<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9H17"/><path d="M14.5 6.5 17 9 14.5 11.5"/><path d="M18 15H7"/><path d="M9.5 12.5 7 15 9.5 17.5"/></svg>A common mix-up</span></p>
-<ul>
-<li><strong>Difference vs. ratio mix-up</strong> — the headline trap. Tell: they call a doubling list "arithmetic," or hunt for a common difference in 2,6,18. Repair (don't restate): "Compute <em>both</em> the jumps <em>and</em> the ×-factors between terms — which one stays the same?" (<code>misconceptions.md §7</code> — read what the pattern actually does.)</li>
-<li><strong>The n-1 slip</strong> — using n instead of n-1 (e.g. a_10=3+10·4). Tell: the answer is exactly one d (or one factor of r) too big. Anchor: "term 1 takes zero steps; the 10th term is 9 steps from the first."</li>
-<li><strong>Off-by-one when counting which term.</strong> Have them say "a_1 is the <em>first</em> term" out loud and index carefully.</li>
-<li><strong>Negative d handled as positive</strong> in a descending sequence — a <code>misconceptions.md §3</code> negatives slip; have them keep the sign of d attached.</li>
-<li><strong>Recursive rule with no starting term.</strong> A recursive rule like a_n = a_{n-1} + 5 is <em>incomplete</em> on its own — without a_1 stated it can't launch. Tell: they write the step but can't actually produce any number. Anchor: "a recursive rule always needs its first term named."</li>
-</ul>
-</div>
-<div class="cl-note">
-<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 11V16"/><circle cx="12" cy="8" r=".9" fill="currentColor" stroke="none"/></svg>Figures to use</span></p>
-<p>the <strong>difference/ratio diagnostic table</strong> above (in-chat, always renders). Optionally offer a small <strong>discrete plot</strong> of one arithmetic sequence — dots at (1,3), (2,7), (3,11), (4,15) sitting on the line y = 4n − 1 — captioned "a sequence is a function, but only at whole-number inputs, so it's dots, <em>not</em> a line." This is the single best visual for the discrete-domain / restricted-function idea; pair it with a table per <code>visuals.md</code> policy. No SVG strictly needed.</p>
-</div>
-<div class="cl-check">
-<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M9.6 9.6a2.6 2.6 0 1 1 3.3 2.5c-.9.3-1.4.9-1.4 1.8"/><circle cx="11.5" cy="16.6" r=".9" fill="currentColor" stroke="none"/></svg>Check yourself</span></p>
-<ol>
-<li><a class="refcode" id="9.1.c1" href="#9.1.c1">9.1.c1</a> "Is 1, 5, 25, 125, ... arithmetic or geometric, and how can you <em>prove</em> it from the numbers — not just by feel?"</li>
-<li><a class="refcode" id="9.1.c2" href="#9.1.c2">9.1.c2</a> "An arithmetic sequence starts at 6 with d = 4. Without listing all of them, what's the 20th term, and why is it 6 + 19·4 and not 6 + 20·4?"</li>
-<li><a class="refcode" id="9.1.c3" href="#9.1.c3">9.1.c3</a> "Two sequences both start 2, ... — one is arithmetic with d=2, the other geometric with r=2. Write the first four terms of each. Where do they split apart?"</li>
-<li><a class="refcode" id="9.1.c4" href="#9.1.c4">9.1.c4</a> "An arithmetic sequence is given recursively as a_1 = 9, a_n = a_{n-1} − 2. Write its <strong>explicit</strong> rule, and explain how you read d and a_1 straight off the recursive form."</li>
-</ol>
-</div>
-<section class="practice">
-<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4.5" width="15.5" height="15.5" rx="2.5"/><path d="M7.5 10 9 11.5 12 8.5"/><path d="M14 10H16.5"/><path d="M7.5 15H16.5"/></svg>Practice</span></p>
-<p><em>Find the common difference d or ratio r, and state the type:</em></p>
-<ol>
-<li><a class="refcode" id="9.1.1" href="#9.1.1">9.1.1</a> 5, 8, 11, 14, ...</li>
-<li><a class="refcode" id="9.1.2" href="#9.1.2">9.1.2</a> 3, 6, 12, 24, ...</li>
-<li><a class="refcode" id="9.1.3" href="#9.1.3">9.1.3</a> 10, 7, 4, 1, ...</li>
-<li><a class="refcode" id="9.1.4" href="#9.1.4">9.1.4</a> 1, 5, 25, 125, ...</li>
-</ol>
-<p><em>Continue the sequence (give the next two terms):</em></p>
-<ol start="5">
-<li><a class="refcode" id="9.1.5" href="#9.1.5">9.1.5</a> 2, 9, 16, 23, ...</li>
-<li><a class="refcode" id="9.1.6" href="#9.1.6">9.1.6</a> 4, 12, 36, ...</li>
-<li><a class="refcode" id="9.1.7" href="#9.1.7">9.1.7</a> 100, 90, 80, ...</li>
-</ol>
-<p><em>Find the requested term using the rule:</em></p>
-<ol start="8">
-<li><a class="refcode" id="9.1.8" href="#9.1.8">9.1.8</a> Arithmetic 5, 8, 11, 14, ...: find a_10.</li>
-<li><a class="refcode" id="9.1.9" href="#9.1.9">9.1.9</a> Geometric 2, 6, 18, 54, ...: find a_5.</li>
-<li><a class="refcode" id="9.1.10" href="#9.1.10">9.1.10</a> Geometric 3, 6, 12, 24, ...: find a_7.</li>
-<li><a class="refcode" id="9.1.11" href="#9.1.11">9.1.11</a> Arithmetic 10, 7, 4, 1, ...: find a_8.</li>
-<li><a class="refcode" id="9.1.12" href="#9.1.12">9.1.12</a> Geometric 2, 4, 8, 16, ...: find a_10.</li>
-</ol>
-<p><em>Write the recursive rule, then find the term explicitly:</em></p>
-<ol start="13">
-<li><a class="refcode" id="9.1.13" href="#9.1.13">9.1.13</a> Arithmetic 6, 11, 16, 21, ...: write the recursive rule (with a_1), then find a_8 with the explicit rule.</li>
-<li><a class="refcode" id="9.1.14" href="#9.1.14">9.1.14</a> Geometric 2, 10, 50, 250, ...: write the recursive rule (with a_1), then find a_5 with the explicit rule.</li>
-</ol>
-<p><em>Given the recursive rule, find the requested term:</em></p>
-<ol start="15">
-<li><a class="refcode" id="9.1.15" href="#9.1.15">9.1.15</a> Arithmetic given by a_1 = 20, a_n = a_{n-1} − 4: find a_6.</li>
-<li><a class="refcode" id="9.1.16" href="#9.1.16">9.1.16</a> Geometric given by a_1 = 1, a_n = 3·a_{n-1}: find a_5.</li>
-</ol>
-</section>
-<details class="answers">
-<summary><span class="tw"></span><span class="eyebrow">Answers</span><span class="hint">Try each one yourself first, then open to check.</span></summary>
-<div class="ak-body">
-<ol>
-<li>d = 3, <strong>arithmetic</strong> · 2. r = 2, <strong>geometric</strong> · 3. d = -3, <strong>arithmetic</strong> · 4. r = 5, <strong>geometric</strong> · 5. d=7 → next two: 30, 37 · 6. r=3 → next two: 108, 324 · 7. d=-10 → next two: 70, 60 · 8. a_10 = 5 + (10-1)·3 = 32 · 9. a_5 = 2·3⁴ = 162 · 10. a_7 = 3·2⁶ = 192 · 11. a_8 = 10 + 7(-3) = -11 · 12. a_10 = 2·2⁹ = 1024 · 13. recursive a_1 = 6, a_n = a_{n-1} + 5; explicit a_8 = 6 + (8-1)·5 = 41 · 14. recursive a_1 = 2, a_n = 5·a_{n-1}; explicit a_5 = 2·5⁴ = 1250 · 15. a_6 = 20 + (6-1)(-4) = 0 · 16. a_5 = 1·3⁴ = 81.</li>
-</ol>
-</div>
-</details>
-<div class="ldiv" aria-hidden="true"><i></i><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3.5 20.5 12 12 20.5 3.5 12Z"/></svg><i></i></div>
-<h2 id="lesson-92-exponential-growth-decay-linear-vs-exponential">Lesson 9.2: Exponential growth &amp; decay; linear vs. exponential</h2>
+<p>This is a shorter unit, and it rests on one idea you can hold in a single sentence. Some patterns grow by <strong>adding the same amount each step</strong>. Others grow by <strong>multiplying by the same amount each step</strong>. That one difference, add the same versus multiply the same, separates the two families you'll meet here, and it's the thing to keep in mind on every page.</p>
+<p>You'll start with sequences, which are just ordered lists of numbers, because they make that contrast something you can count on your fingers. Then you'll meet exponential functions, which are the smooth, grown-up version of the multiplying pattern, and the kind of thing that describes money earning interest or a population doubling.</p>
+<p>Before each new sitting, redo two or three problems from a lesson or two back from memory first. It's a small warm-up, and it does more for you than re-reading.</p>
+<nav class="lesson-list" aria-label="Lessons in this unit"><ol>
+<li><a href="unit-09-1.html"><b>Lesson 9.1</b>Arithmetic &amp; geometric sequences as functions</a></li>
+<li><a href="unit-09-2.html"><b>Lesson 9.2</b>Exponential growth &amp; decay; linear vs. exponential</a></li>
+</ol></nav>
+<nav class="pagenav" aria-label="Previous and next page">
+<a class="pn-prev" href="unit-08-4.html"><span class="pn-dir">&larr;&nbsp;Back</span><span class="pn-title">Lesson 8.4</span></a>
+<a class="pn-next" href="unit-09-1.html"><span class="pn-dir">Next&nbsp;&rarr;</span><span class="pn-title">Lesson 9.1</span></a>
+</nav>
 </main>
-<footer><p>Generated from the unit source by <code>_verification/build_textbook.py</code>. Math by KaTeX.</p></footer>
+<footer><p>A friendly Algebra 1 textbook, made to be read alongside the Claude tutor. Math by KaTeX.</p></footer>
+</div>
+</div>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
 <script>
 document.addEventListener("DOMContentLoaded", function () {
   renderMathInElement(document.body, {delimiters: [{left: "$$", right: "$$", display: true}], throwOnError: false});
-  var t = document.getElementById("theme"), root = document.documentElement;
-  t.addEventListener("click", function () {
+  var root = document.documentElement, body = document.body;
+  document.getElementById("theme").addEventListener("click", function () {
     root.classList.toggle("dark");
     localStorage.setItem("a1-theme", root.classList.contains("dark") ? "dark" : "light");
   });
+  var menu = document.getElementById("menu");
+  menu.addEventListener("click", function () {
+    var open = body.classList.toggle("nav-open");
+    menu.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+  var sn = document.getElementById("sidenav");
+  if (sn) sn.addEventListener("click", function (e) { if (e.target.closest("a")) body.classList.remove("nav-open"); });
 });
 </script>
 </body>

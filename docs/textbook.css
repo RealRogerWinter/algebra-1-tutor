@@ -6,7 +6,7 @@
 :root{
   --step--1:.86rem; --step-0:1rem; --step-1:1.18rem; --step-2:1.42rem; --step-3:1.7rem; --step-4:2.05rem; --step-5:2.45rem;
   --lh:1.68; --lh-tight:1.18;
-  --measure:64ch; --wide:46rem;
+  --measure:64ch; --wide:46rem; --rail:16rem;
   --serif-math:"STIX Two Text","Cambria Math";
   --radius:16px; --radius-sm:11px;
   --s2:.5rem; --s3:.8rem; --s4:1.15rem; --s5:1.9rem; --s6:2.8rem; --s7:4.2rem;
@@ -56,30 +56,50 @@ hr{border:0; border-top:1px solid var(--rule); margin:var(--s6) 0}
 .cl-ic{width:1.15em; height:1.15em; flex:none}
 
 /* ---- top bar ---- */
-.topbar{position:sticky; top:0; z-index:9; display:flex; align-items:center; gap:1.1rem;
-  padding:.6rem max(1.2rem,calc((100% - var(--wide))/2)); border-bottom:1px solid var(--rule);
-  background:color-mix(in srgb,var(--paper) 86%,transparent); font-size:var(--step--1);}
+.topbar{position:sticky; top:0; z-index:40; display:flex; align-items:center; gap:1rem;
+  padding:.6rem 1.2rem; border-bottom:1px solid var(--rule);
+  background:color-mix(in srgb,var(--paper) 88%,transparent); font-size:var(--step--1);}
 @supports not (background:color-mix(in srgb,red,blue)){ .topbar{background:var(--paper)} }
 .topbar nav{display:flex; gap:.9rem; flex-wrap:wrap; align-items:baseline}
 .topbar a{color:var(--link); text-decoration:none} .topbar a:hover{text-decoration:underline}
 .topbar .home{font-family:"Fraunces",serif; font-weight:600; font-size:var(--step-0); color:var(--ink)}
 .topbar .sp{margin-left:auto}
-#theme{background:none; border:1px solid var(--rule); border-radius:999px; color:var(--ink-soft);
-  cursor:pointer; padding:.3rem .7rem; font:inherit; font-size:var(--step--1)} #theme:hover{color:var(--ink); border-color:var(--blue)}
+#theme,.menu{background:none; border:1px solid var(--rule); border-radius:999px; color:var(--ink-soft);
+  cursor:pointer; padding:.3rem .7rem; font:inherit; font-size:var(--step--1)}
+#theme:hover,.menu:hover{color:var(--ink); border-color:var(--blue)}
+.menu{display:none}
 @supports ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
   .topbar{-webkit-backdrop-filter:blur(8px); backdrop-filter:blur(8px)} }
 
-/* ---- layout: calm centered column; special blocks a touch wider ---- */
-main{max-width:var(--wide); margin:0 auto; padding:0 1.2rem 5rem}
+/* ---- app shell: left index rail + reading column ---- */
+.shell{display:grid; grid-template-columns:var(--rail) minmax(0,1fr); align-items:start}
+.content{min-width:0}
+.sidenav{position:sticky; top:3.1rem; align-self:start; max-height:calc(100vh - 3.1rem); overflow:auto;
+  padding:1.2rem .9rem 3rem; border-right:1px solid var(--rule); background:var(--paper); font-size:var(--step--1)}
+.snav a{display:block; text-decoration:none; color:var(--ink-soft); border-radius:8px; padding:.3rem .55rem; line-height:1.35}
+.snav a:hover{background:var(--card-2); color:var(--ink)}
+.snav a.cur{color:var(--link); background:var(--tint-blue); font-weight:600}
+.snav-top{font-weight:600; color:var(--ink)}
+.snav-units{list-style:none; margin:.6rem 0 0; padding:0; counter-reset:none}
+.snav-units > li{margin:.1rem 0}
+.snav-unit{font-weight:600; color:var(--ink)}
+.snav-lessons{list-style:none; margin:.05rem 0 .55rem; padding:0 0 0 .55rem; border-left:1px solid var(--rule); display:none}
+.snav-units > li.active > .snav-lessons{display:block}
+.snav-lesson .ln{font:600 .85em "IBM Plex Mono",monospace; color:var(--ink-soft); margin-right:.25rem}
+.snav-lesson.cur .ln{color:var(--link)}
+
+/* ---- reading column: calm centered measure; special blocks a touch wider ---- */
+main{max-width:var(--wide); margin:0 auto; padding:1rem 1.3rem 4rem}
 main > *{max-width:var(--measure); margin-inline:auto}
 main > figure.fig, main > .worked, main > .practice, main > .answers, main > .hero,
-main > table, main > .katex-display, main > .unit-grid{max-width:var(--wide)}
-footer{max-width:var(--measure); margin:var(--s7) auto 0; padding:1.1rem 1.2rem; color:var(--ink-soft);
+main > table, main > .katex-display, main > .lesson-list, main > .pagenav{max-width:var(--wide)}
+footer{max-width:var(--measure); margin:var(--s7) auto 0; padding:1.1rem 1.3rem; color:var(--ink-soft);
   font-size:var(--step--1); border-top:1px solid var(--rule)}
 
-/* ---- unit hero ---- */
-.hero{margin:var(--s6) auto var(--s5); display:grid; grid-template-columns:1.05fr .95fr; gap:1.6rem; align-items:center}
-.hero .kicker{color:var(--blue); font-weight:600; font-size:var(--step--1); letter-spacing:.04em}
+/* ---- unit hero + page kicker ---- */
+.kicker{color:var(--blue); font-weight:600; font-size:var(--step--1); letter-spacing:.04em; margin:.6rem 0 .1rem}
+.hero{margin:var(--s5) auto var(--s5); display:grid; grid-template-columns:1.05fr .95fr; gap:1.6rem; align-items:center}
+.hero .kicker{margin:0}
 .hero h1{margin:.3rem 0 .5rem}
 .hero .lede{font-size:var(--step-1); color:var(--ink-soft); margin:0}
 .hero-art{width:100%; height:auto; border-radius:var(--radius); box-shadow:var(--shadow); display:block; aspect-ratio:16/9; object-fit:cover}
@@ -95,7 +115,7 @@ html.dark .hero-art{filter:brightness(.9) saturate(.92)}
 
 /* ---- callout family (plain-language labels) ---- */
 .cl-goal,.cl-terms,.cl-watch,.cl-note,.cl-check,.cl-wrap{background:var(--card); border-radius:var(--radius);
-  padding:1rem 1.25rem; margin:var(--s5) auto; box-shadow:var(--shadow)}
+  padding:1.1rem 1.3rem; margin:var(--s6) auto; box-shadow:var(--shadow)}
 .cl-goal{background:none; box-shadow:none; border-left:3px solid var(--blue); border-radius:0; padding:.3rem 0 .3rem 1.1rem}
 .cl-goal .eyebrow{color:var(--blue)} .cl-goal p:last-child{margin-bottom:0} .cl-goal p{font-size:var(--step-1)}
 .cl-why{font-size:var(--step-1); color:var(--ink-soft); line-height:1.55; margin:var(--s4) auto var(--s5);
@@ -105,16 +125,16 @@ html.dark .hero-art{filter:brightness(.9) saturate(.92)}
 .cl-check .eyebrow{color:var(--leaf)} .cl-note{background:var(--card-2); box-shadow:none; color:var(--ink-soft)}
 .cl-wrap{border-left:3px solid var(--leaf)} .cl-wrap .eyebrow{color:var(--leaf)}
 .cl-goal p:last-child,.cl-terms :last-child,.cl-watch :last-child,.cl-note :last-child,.cl-check :last-child,.cl-wrap :last-child{margin-bottom:0}
-.cl-terms ul,.cl-check ol,.cl-watch ul{margin:0; padding-left:0; list-style:none; display:grid; gap:.6rem}
-.cl-terms li,.cl-check li,.cl-watch li{padding-left:0; min-width:0}
+.cl-terms ul,.cl-check ol,.cl-watch ul{margin:0; padding-left:0; list-style:none; display:grid; gap:.7rem}
+.cl-terms li,.cl-check li,.cl-watch li{padding-left:0; min-width:0; overflow-wrap:break-word}
 .cl-check ol{counter-reset:c}
 
 /* ---- worked example ---- */
-.worked{background:var(--card); border-radius:var(--radius); padding:1.1rem 1.35rem; margin:var(--s5) auto;
+.worked{background:var(--card); border-radius:var(--radius); padding:1.2rem 1.4rem; margin:var(--s6) auto;
   box-shadow:var(--shadow); border-left:4px solid var(--blue)}
 .worked .eyebrow{color:var(--blue)}
-.worked ol,.worked ul{list-style:none; padding-left:0; margin:.4rem 0; display:grid; gap:1rem}
-.worked li{padding-top:1rem; border-top:1px solid var(--rule); min-width:0} .worked li:first-child{padding-top:0; border-top:0}
+.worked ol,.worked ul{list-style:none; padding-left:0; margin:.4rem 0; display:grid; gap:1.1rem}
+.worked li{padding-top:1.1rem; border-top:1px solid var(--rule); min-width:0; overflow-wrap:break-word} .worked li:first-child{padding-top:0; border-top:0}
 .worked .katex-display{overflow-x:auto; padding:.3rem 0; margin:.5rem 0}
 .worked :last-child{margin-bottom:0}
 .worked,.answers{position:relative; overflow:hidden}
@@ -123,22 +143,24 @@ html.dark .hero-art{filter:brightness(.9) saturate(.92)}
   -webkit-mask:var(--wm) center/contain no-repeat; mask:var(--wm) center/contain no-repeat}
 .answers::after{background:var(--leaf)}
 
-/* ---- practice / problem set ---- */
-.practice{margin:var(--s5) auto}
+/* ---- practice / problem set: one clean column, wrap (never side-scroll) ---- */
+.practice{margin:var(--s6) auto}
 .practice .eyebrow{color:var(--ink-soft)}
 .practice p em{font-style:normal; font-weight:600; font-size:var(--step--1); color:var(--ink-soft)}
-.practice > p{margin:1.2rem 0 .5rem}
-.practice ol{list-style:none; padding-left:0; margin:0; display:grid; gap:.55rem;
-  grid-template-columns:repeat(auto-fill,minmax(min(100%,18rem),1fr))}
+.practice > p{margin:1.3rem 0 .5rem}
+.practice ol{list-style:none; padding-left:0; margin:0; display:grid; gap:.6rem;
+  grid-template-columns:repeat(auto-fill,minmax(min(100%,24rem),1fr))}
 .practice li{display:flex; gap:.6rem; align-items:baseline; background:var(--card); border:1px solid var(--rule);
-  border-left:2px solid var(--rule); border-radius:var(--radius-sm); padding:.55rem .8rem; box-shadow:var(--shadow); min-width:0}
+  border-left:2px solid var(--rule); border-radius:var(--radius-sm); padding:.6rem .85rem; box-shadow:var(--shadow);
+  min-width:0; overflow-wrap:anywhere}
+.practice li > .refcode{flex:0 0 auto}
 .practice li:hover{border-color:var(--blue); border-left-width:4px}
 .practice li:target{border-color:var(--blue); border-left-width:4px; background:var(--tint-blue)}
-.practice li > .refcode{flex:0 0 auto}
-.practice li.long{grid-column:1/-1}
+.practice li .katex{white-space:normal}
+.practice li .katex-display{overflow-x:auto; margin:.3rem 0}
 
 /* ---- answer key reveal ---- */
-.answers{background:var(--card); border-radius:var(--radius); margin:var(--s5) auto; box-shadow:var(--shadow); overflow:hidden; border:1px solid var(--rule)}
+.answers{background:var(--card); border-radius:var(--radius); margin:var(--s6) auto; box-shadow:var(--shadow); overflow:hidden; border:1px solid var(--rule)}
 .answers > summary{cursor:pointer; list-style:none; display:flex; align-items:center; gap:.6rem; padding:.9rem 1.25rem}
 .answers > summary::-webkit-details-marker{display:none}
 .answers .tw{width:.7rem; height:.7rem; border:2px solid var(--leaf); border-top:0; border-right:0;
@@ -146,7 +168,25 @@ html.dark .hero-art{filter:brightness(.9) saturate(.92)}
 .answers[open] .tw{transform:rotate(45deg) translate(-1px,-1px)}
 .answers summary .eyebrow{color:var(--leaf); margin:0}
 .answers .hint{color:var(--ink-soft); font-size:var(--step--1)} .answers[open] .hint{display:none}
-.answers .ak-body{padding:.1rem 1.4rem 1.1rem} .answers .ak-body > :last-child{margin-bottom:0}
+.answers .ak-body{padding:.1rem 1.4rem 1.1rem; overflow-wrap:break-word} .answers .ak-body > :last-child{margin-bottom:0}
+
+/* ---- prev / next page nav ---- */
+.pagenav{display:flex; gap:1rem; justify-content:space-between; align-items:stretch;
+  margin:var(--s7) auto 0; padding-top:var(--s5); border-top:1px solid var(--rule)}
+.pagenav a{display:flex; flex-direction:column; gap:.15rem; flex:1 1 0; max-width:49%; text-decoration:none;
+  background:var(--card); border:1px solid var(--rule); border-radius:var(--radius); padding:.8rem 1.1rem; box-shadow:var(--shadow)}
+.pagenav a:hover{border-color:var(--blue)}
+.pagenav .pn-next{text-align:right; margin-left:auto}
+.pagenav .pn-dir{font-size:var(--step--1); color:var(--ink-soft)}
+.pagenav .pn-title{font-weight:600; color:var(--ink); font-family:"Fraunces",serif}
+
+/* ---- unit overview: list of its lessons ---- */
+.lesson-list ol{list-style:none; padding:0; margin:var(--s5) auto; display:grid; gap:.7rem}
+.lesson-list li{margin:0}
+.lesson-list a{display:block; background:var(--card); border:1px solid var(--rule); border-left:3px solid var(--blue);
+  border-radius:var(--radius-sm); padding:.75rem 1.05rem; text-decoration:none; box-shadow:var(--shadow); color:var(--ink)}
+.lesson-list a:hover{border-color:var(--blue)}
+.lesson-list a b{font-family:"Fraunces",serif; color:var(--link); margin-right:.3rem}
 
 /* ---- tutor-guide problem card (cross-site consistency) ---- */
 .tproblem{background:var(--card); border:1px solid var(--rule); border-radius:var(--radius); padding:1rem 1.25rem; margin:var(--s4) auto; box-shadow:var(--shadow)}
@@ -156,7 +196,7 @@ html.dark .hero-art{filter:brightness(.9) saturate(.92)}
 .tproblem .ans{margin:.7rem 0 0}
 
 /* ---- figure (graph paper belongs here) ---- */
-figure.fig{margin:var(--s5) auto; background:var(--card); border-radius:var(--radius); padding:1.1rem 1.1rem .7rem;
+figure.fig{margin:var(--s6) auto; background:var(--card); border-radius:var(--radius); padding:1.1rem 1.1rem .7rem;
   box-shadow:var(--shadow); text-align:center; border:1px solid var(--rule);
   background-image:linear-gradient(var(--rule) 1px,transparent 1px),linear-gradient(90deg,var(--rule) 1px,transparent 1px);
   background-size:22px 22px}
@@ -187,16 +227,26 @@ section.ug{margin:var(--s4) auto; background:var(--card); border:1px solid var(-
 section.ug h3{margin:.1rem 0 .4rem} section.ug :last-child{margin-bottom:0}
 .toc{background:var(--card); border:1px solid var(--rule); border-radius:var(--radius); padding:.8rem 1.15rem}
 
+/* ---- mobile: the rail slides in over the page ---- */
+@media (max-width:62rem){
+  .shell{grid-template-columns:1fr}
+  .menu{display:inline-flex; order:-1}
+  .sidenav{position:fixed; top:0; left:0; height:100dvh; width:17rem; max-height:none; z-index:60;
+    transform:translateX(-100%); transition:transform .2s ease; box-shadow:0 0 40px rgba(0,0,0,.3)}
+  body.nav-open .sidenav{transform:none}
+  body.nav-open::after{content:""; position:fixed; inset:0; background:rgba(0,0,0,.4); z-index:50}
+}
+
 /* ---- motion (reduced-motion safe) ---- */
 @media (prefers-reduced-motion:no-preference){
-  .practice li,.worked,figure.fig,#theme,ul.units li,.refcode{transition:border-color .15s ease, box-shadow .15s ease, color .15s ease, transform .15s ease}
-  ul.units li:hover{transform:translateY(-1px)}
+  .practice li,.worked,figure.fig,#theme,.menu,ul.units li,.refcode,.lesson-list a,.pagenav a{transition:border-color .15s ease, box-shadow .15s ease, color .15s ease, transform .15s ease}
+  ul.units li:hover,.lesson-list a:hover,.pagenav a:hover{transform:translateY(-1px)}
   :target{animation:flash 1.4s ease-out 1} @keyframes flash{0%{background:var(--tint-honey)}100%{background:transparent}}
 }
 
 /* ---- print (courtesy) ---- */
 @media print{
-  .topbar{position:static} #theme{display:none} a{color:inherit; text-decoration:none}
+  .topbar,.sidenav,.pagenav{display:none} .shell{display:block} a{color:inherit; text-decoration:none}
   body,figure.fig{background-image:none}
   .answers[open] .ak-body, details > *{display:revert} details{display:block} .answers summary{display:none}
   .worked,.practice li,figure.fig,blockquote,ul.units li{break-inside:avoid; box-shadow:none}
