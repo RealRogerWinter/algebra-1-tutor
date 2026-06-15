@@ -21,7 +21,7 @@ TRANSFORMS = standard_transformations + (implicit_multiplication_application,)
 # .md {#code} anchors. Collision-free by construction (numeric scope vs letter scope; a
 # letter-then-digit tag vs digit-only practice).
 #   lesson item : (1-12 | A) . lesson . [w|ex|d|c|h|f]index[part]  e.g. 5.5.6, 12.1.w1, 1.1.d3, 1.2.f1
-#   refresher   : ref[AB] . index                                 e.g. refA.4, refB.10
+#   refresher   : ref[A-Z] . index                                e.g. refA.4, refB.10, refE.7
 #   globals     : mis.N | vis.tN | met.<kebab-slug>               e.g. mis.3, vis.t1, met.balance-scale
 # Tags: w worked example, ex example, (none) practice, d definition, c transfer-check,
 # h how-to/procedure, f figure (reserved for Phase 3; simple fN[part] form only).
@@ -30,7 +30,7 @@ TRANSFORMS = standard_transformations + (implicit_multiplication_application,)
 ID_RE = re.compile(
     r"^(?:"
     r"(?:[1-9]|1[0-2]|A)\.\d+\.(?:w|ex|d|c|h|f)?\d+[a-z]?"
-    r"|ref[AB]\.\d+"
+    r"|ref[A-Z]\.\d+"
     r"|mis\.\d+"
     r"|vis\.t\d+"
     r"|met\.[a-z0-9]+(?:-[a-z0-9]+)*"
