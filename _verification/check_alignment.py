@@ -16,7 +16,7 @@ REPO_ROOT = os.path.dirname(HERE)
 UNIT_MD = os.path.join(REPO_ROOT, "algebra-1-tutor", "references", "units")
 TRANSFORMS = standard_transformations + (implicit_multiplication_application,)
 
-# Unified backward-compatible id grammar (RESEARCH_REDTEAM_HANDOFF.md s5). ONE regex, TWO
+# Unified backward-compatible id grammar (see CONTRIBUTING.md -> "Reference codes"). ONE regex, TWO
 # scanners: code_grammar_lint() checks JSON ids (a strict subset); md_anchor_lint() checks the
 # .md {#code} anchors. Collision-free by construction (numeric scope vs letter scope; a
 # letter-then-digit tag vs digit-only practice).
