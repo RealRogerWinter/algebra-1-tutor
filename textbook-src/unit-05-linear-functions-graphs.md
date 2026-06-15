@@ -162,6 +162,8 @@ Start there. In Unit 3, "60 miles per 1 hour" was a unit rate. Draw a graph of d
 
 Now a picture for steepness: stairs and ramps. A gentle wheelchair ramp barely rises as you walk along it, a small slope. A steep staircase climbs a lot for each step forward, a big slope. Walk *downhill* and the slope is negative. Stand on a flat landing, going forward but not up at all, and the slope is zero. And a wall going straight up has no "forward" to speak of: you can't move across at all, so its slope is undefined. Those are the four cases, and they're just descriptions of how steep and which way.
 
+<!--illus:5-3-staircase-->
+
 To put a number on it, you compare two points on the line. Going from one point to the other, the **rise** is the vertical change and the **run** is the horizontal change. Slope is rise over run:
 
 $$m = \frac{y_2 - y_1}{x_2 - x_1}$$

@@ -30,6 +30,8 @@ Here's how to settle it for good: try a number. If the number is 10, then "3 les
 
 Sentences work the same way, with one extra piece. A verb like *is*, *equals*, *will be*, or *results in* is the equals sign. Everything before it is the left-hand expression; everything after it is the right-hand expression. Translate each side on its own, join them with =, and you've got an equation you can solve with your Unit 2 tools. "7 less than 4 times a number is 9" splits at *is*: the left side is "7 less than 4x," which is 4x − 7, and the right side is 9. That's 4x − 7 = 9.
 
+<!--illus:6-1-phrase-equation-->
+
 One tempting shortcut is a keyword table: "sum" means +, "of" means multiply, "less than" means subtract. Tables like that are fine as a memory aid, but they quietly fail on exactly the comparisons and reversals you just saw. Remember, "3 less than a number" is *not* 3 − x.
 
 So lean on the structure first and keep the words only as a backstop. Read what the sentence is *doing*, not which words it happens to contain.
@@ -128,6 +130,9 @@ That fourth step matters more than it looks. An answer can perfectly satisfy an 
 **New terms:**
 - {#6.2.d1} **Consecutive integers:** integers in a row, each one more than the last: n, n+1, n+2, … For consecutive **even** or **odd** integers, the gap is 2: n, n+2, n+4, … (This same gap-of-2 form fits both even and odd runs; which one you get depends only on the starting value n. So if solving gives a non-integer n, say n = 74/3, that total simply has *no* such consecutive run, and the fractional answer is the signal.)
 - {#6.2.d2} **Distance-rate-time relationship:** d = rt, where distance equals rate (speed) times time. (Slope from Unit 5 *is* a rate; on a distance-vs-time graph the speed is the slope.)
+
+<!--illus:6-2-drt-->
+
 - {#6.2.d3} **Value problem:** total *value* = (value of each item) × (number of items), summed over the kinds of items (e.g. dimes worth $0.10 each).
 
 As you work through the examples below, watch how every one runs the same four steps even as the stories change. That sameness is the thing you're learning to see.
