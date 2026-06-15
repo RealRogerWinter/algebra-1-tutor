@@ -30,7 +30,7 @@ Pacing: 5.1 is quick and concrete (most adults half-know the coordinate plane â€
 ## Lesson 5.1: The coordinate plane
 
 **Goal:** Plot and name ordered pairs (x, y) and identify which of the four quadrants (or axis) a point lies in.
-**Why it matters:** Every graph in the rest of algebra lives here. A function's table of inputs/outputs becomes *points*, and a line is just infinitely many of them.
+**Why it matters:** Every graph in the rest of algebra lives here {#5.1.f1}. A function's table of inputs/outputs becomes *points*, and a line is just infinitely many of them.
 **New terms:**
 - {#5.1.d1} **Coordinate plane:** a flat grid made by two number lines crossing at right angles.
 - {#5.1.d2} **x-axis / y-axis:** the horizontal and vertical number lines. They cross at the **origin**, (0,0).
@@ -332,7 +332,7 @@ The slope is **15 dollars per hour** â€” the cost climbs \$15 for each additiona
 
 1. Through (2,3) with slope 4:
 $$y - 3 = 4(x - 2) \;\Rightarrow\; y - 3 = 4x - 8 \;\Rightarrow\; y = 4x - 5$$
-Check: at x=2, 4(2)-5 = 3.
+Check: at x=2, 4(2)-5 = 3 {#5.5.f1}.
 
 2. Through (1,2) and (3,8): first m = (8-2)/(3-1) = 3. Then with (1,2):
 $$y - 2 = 3(x - 1) \;\Rightarrow\; y = 3x - 1$$

@@ -131,7 +131,7 @@ Test x = 0: 5 - 0 = 5 > 2; is 0 < 3?. Solution: **x < 3**.
 
 **Teaching arc (concrete → pictorial → symbolic):**
 - **Concrete:** *And* = "you must clear **both** bars" (narrows to the overlap). *Or* = "clear **either** bar" (widens to the union). "Temperature between 60 and 80" is an *and*; "under 32 or over 100" is an *or*.
-- **Pictorial:** Shade each condition on the same number line. *And* keeps only where the shadings **overlap** (a between-segment, two endpoints). *Or* keeps **everything** shaded by either (two rays heading opposite ways). Endpoints follow 8.1's open/filled rule per symbol.
+- **Pictorial:** Shade each condition on the same number line. *And* keeps only where the shadings **overlap** (a between-segment, two endpoints) {#8.2.f1}. *Or* keeps **everything** shaded by either (two rays heading opposite ways). Endpoints follow 8.1's open/filled rule per symbol.
 - **Symbolic:** A three-part *and* like -1 < x + 2 < 4 is solved by doing the **same move to all three parts** at once. An *or* is solved as **two separate** inequalities, then unioned.
 
 **Worked examples:**

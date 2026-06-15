@@ -14,7 +14,7 @@ It helps to have your work with single equations fresh. Before each new lesson, 
 
 Start with what a single equation already gives you. Write y = x + 1, and you don't get one answer. You get a whole line of them: (0, 1), (1, 2), (2, 3), and on forever. Write y = −x + 5, and that's a second line, its own endless list of points. Now ask a fair question: is there a single point that lives on *both* lines at the same time?
 
-That question is what a **system** asks. Two relationships, both true at once. The answer, when there is one, is the point where the two lines cross. It's the one (x, y) that satisfies both equations together.
+That question is what a **system** asks. Two relationships, both true at once. The answer, when there is one, is the point where the two lines cross {#7.1.f1}. It's the one (x, y) that satisfies both equations together.
 
 The way to *see* it is to graph both lines on one plane and look for where they meet. One caution before you draw, though: don't trust your eye to read a crossing point off the picture. Compute the points instead. Pick a few x-values, run each through both equations, and watch for the row where the two outputs match. That row is the crossing.
 
@@ -94,6 +94,8 @@ Graphing showed you what a solution *is*. Now you'll find it exactly, with no gr
 
 Think of y as a mystery box with one number hidden inside. Suppose the first equation tells you outright what's in the box: y = 2x. That's not a different y from the one in the second equation. It's the *same* box, and you've just been told what it holds. So anywhere the second equation says y, you can pour in 2x instead, because they're equal. That swap is **substitution**.
 
+<!--illus:7-2-substitution-->
+
 The payoff is what makes the swap worth doing. The second equation has two unknowns, x and y, and you can't solve one equation in two unknowns. But the moment you replace y with 2x, that equation has only x in it. One equation, one unknown, the kind you've been solving since Unit 2. The crossing point falls out as soon as a single variable is left standing.
 
 The full move, start to finish: isolate a variable in one equation, substitute that expression into the *other* equation, solve the one-variable equation you're left with, back-substitute to find the partner coordinate, and check both. That last "find the partner" step is the one people skip most, so watch for it.
@@ -166,6 +168,8 @@ Here's a clean one to get the method moving before the practice mixes things up.
 Substitution shines when a variable is already alone. But plenty of systems come written like this, 3x + 2y = 16 and x + y = 6, with nothing isolated and no clean way to isolate it without dragging in fractions. For those, there's a method built to handle them head-on, and it's the workhorse you'll lean on most in later math.
 
 The idea starts from the balance scale. Each equation is a level scale: the left side weighs exactly what the right side weighs. So if you have two true equations and you add their left sides together and their right sides together, the result is still balanced and still true. That's the move. You stack two equations and combine them, and if you've lined things up right, one variable disappears in the adding.
+
+<!--illus:7-3-add-equations-->
 
 Picture x + y = 10 and x − y = 4. Stack them and add straight down. On the left, x + x is 2x, and then there's a +y and a −y. Those are a debt and an equal amount of cash sitting together: they go to zero and leave nothing behind. On the right, 10 + 4 is 14. So adding the two equations gives 2x = 14, one equation in one unknown. The y didn't get "cancelled" by some trick. The +y and the −y summed to zero because they were exact opposites.
 
@@ -250,6 +254,8 @@ Down the left: 3x + 5x is 8x, and +2y plus −2y goes to zero; on the right, 12 
 Two lines usually cross at one point, but not always. Lay any two lines on a plane and exactly one of three things happens: they cross once, they run parallel and never meet, or they sit right on top of each other. This lesson handles the two unusual cases, and then puts the whole toolkit to work on word problems, which are the real reason systems are worth learning.
 
 The three outcomes are easiest to hold as one picture, tied to the slopes you know from Unit 5. Different slopes, and the lines tilt differently, so they have to cross somewhere: that's one solution. Same slope but different intercepts, and they march along parallel forever, never touching: that's no solution. Same slope *and* same intercept, and they're secretly the same line drawn twice, so every point on it works: that's infinitely many solutions.
+
+<!--illus:7-4-parallel-identical-->
 
 | The two lines… | How many solutions | What the algebra leaves |
 |---|---|---|

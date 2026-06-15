@@ -16,6 +16,8 @@ Think about a vending machine for a moment. You press a button and you get exact
 
 That reliable matching of each button to one snack is the whole idea behind a function. A function is a dependable pairing: each thing you put in comes back matched to exactly one thing.
 
+<!--illus:4-1-input-output-->
+
 Notice what the machine does *not* promise. It doesn't promise that every snack has its own button. Two different buttons can both dispense pretzels, and that's a perfectly good machine. Annoying, maybe, but not broken.
 
 What *would* count as broken is a button that gives pretzels sometimes and a soda other times. Press B4 and you can't tell what you'll get. That machine you'd kick.
@@ -32,6 +34,8 @@ Now the same idea on a graph, which is where you'll meet it most often. On a gra
 
 So sweep a vertical line slowly across the graph, left to right, and watch how many times it touches. If it never touches the graph in more than one place, every input has at most one output, and you've got a function. If a vertical line ever hits the graph in two places at once, that one input has two outputs, and it isn't.
 
+<!--illus:4-1-vertical-line-test-->
+
 This sweep has a name: the **vertical line test**. Walking your finger across the page as the imaginary line is a fine way to do it.
 
 A quick way to carry this in your pocket: *each input is paired with exactly one output, and repeats are only a problem on the input side.* Say it back to yourself; you'll use it constantly.
@@ -47,27 +51,43 @@ Read these next examples slowly, one at a time, and decide the answer in your he
 
 {#4.1.w1}
 *Example 1: a set of pairs (no formula needed).* Is {(1,2),(2,4),(3,6),(4,8)} a function?
-This is just a pairing, a list matching inputs to outputs, with no rule or formula written anywhere. That's allowed, because the pairing itself is the function. The inputs are 1, 2, 3, 4. Each one is different, each appears once, so each input is matched with exactly one output. **Yes, a function.**
+
+This is just a pairing, a list matching inputs to outputs, with no rule or formula written anywhere. That's allowed, because the pairing itself is the function. The inputs are 1, 2, 3, 4. Each one is different, each appears once, so each input is matched with exactly one output.
+
+**Yes, a function.**
 
 {#4.1.w2}
 *Example 2: a repeated output (still fine).* Is {(1,5),(2,5),(3,5)} a function?
-The output 5 shows up three times, which can look suspicious at first. But check the *inputs*: 1, 2, 3, each appearing once, each with a single output. A repeated output is allowed. This is the "two buttons, same snack" case, so it's **yes, a function.**
+
+The output 5 shows up three times, which can look suspicious at first. But check the *inputs*: 1, 2, 3, each appearing once, each with a single output. A repeated output is allowed. This is the "two buttons, same snack" case.
+
+**Yes, a function.**
 
 {#4.1.w3}
 *Example 3: a split input (broken).* Is {(1,2),(1,3),(2,4)} a function?
-Look at the input 1: it's paired with 2 and also with 3. One input, two outputs, the broken-button case. **No, not a function.**
+
+Look at the input 1: it's paired with 2 and also with 3. One input, two outputs, the broken-button case.
+
+**No, not a function.**
 
 {#4.1.w4}
-*Example 4: a table.*
+*Example 4: a table.* Is this table a function?
 
 | input x | 0 | 1 | 2 | 0 |
 |---|---|---|---|---|
 | output | 4 | 5 | 6 | 9 |
 
-A table is read the same way; just scan the input row for a repeat. Input 0 appears twice, giving 4 once and 9 once. That's two outputs for one input. **No, not a function.**
+A table is read the same way; just scan the input row for a repeat. Input 0 appears twice, giving 4 once and 9 once. That's two outputs for one input.
+
+**No, not a function.**
 
 {#4.1.w5}
-*Example 5: a graph (vertical line test).* Take a non-vertical straight line such as y=2x+1. Sweep a vertical line across it and it touches in exactly one spot everywhere you put it. **Function.** Now take a circle centered at the origin, or a sideways "U" (a parabola opening to the right): a vertical line through the middle cuts across it in **two** places at once. **Not a function.**
+*Example 5: a graph (vertical line test).* Is the graph a function? Try two shapes.
+
+First, a non-vertical straight line such as y=2x+1. Sweep a vertical line across it and it touches in exactly one spot everywhere you put it. **Function.**
+
+Now a circle centered at the origin, or a sideways "U" (a parabola opening to the right). A vertical line through the middle cuts across it in **two** places at once. **Not a function.**
+
 One straight line is the exception worth knowing. A *vertical* line such as x=3 is **not** a function: every point on it sits at the same input, x=3, so that single input is paired with infinitely many outputs. It's the cleanest possible example of one input with many outputs.
 
 Now that you've seen the right reading a few times, here's the slip that snares almost everyone at first. It's natural to decide that *any* repeat at all kills a function, a sensible-sounding "no repeats allowed" rule. But go back to the machine: two buttons giving the same snack doesn't break anything.
@@ -132,6 +152,8 @@ Start with something homier than symbols: a recipe. Suppose the recipe is *tripl
 Here's the one thing to nail down right away, because the parentheses are doing something unusual. In f(2), the parentheses do not mean multiply. They mean *feed this in*. So f(2) is not f times 2. It's "the output of recipe f when you put in 2." Read it out loud as "f of 2," and that misreading mostly takes care of itself.
 
 You can picture the same thing as a little machine with a readout. A number goes in the top, the rule runs inside, and the answer lights up on the display: drop in 2, and f(2) = 5 shows on the screen. That picture also gives you two words you'll need. Every input the machine is willing to accept is its **domain**. Every output that can ever light up on the display is its **range**.
+
+<!--illus:4-2-trays-->
 
 Now to the symbols themselves. The habit that will save you again and again is to write the input inside parentheses when you substitute, like this:
 $$f(2) = 3(2) - 1 = 6 - 1 = 5$$

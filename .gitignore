@@ -9,3 +9,7 @@ __pycache__/
 # OS
 .DS_Store
 Thumbs.db
+
+# Image-generation scratch + local API key (NEVER commit the key)
+_imgwork/
+*.key

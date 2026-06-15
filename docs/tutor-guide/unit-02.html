@@ -202,33 +202,33 @@
 <p>Distribute the left side: 3(2x + 4) = 6x + 12. Now the equation reads 6x + 12 = 6x + 12 — the two sides are the same expression. Gather the variable terms (subtract 6x from both sides):<br>$$6x+12=6x+12 \;\xrightarrow{\,-6x\,}\; 12=12$$<br>The variable vanished and left 12 = 12, a true statement. So every number works → identity, all real numbers (infinitely many solutions). Sanity check with two values: at x = 0 both sides are 12; at x = 5 both sides are 42. They match for any x. (Don't write 'x = 12 = 12' — once x is gone there is no single value to report.)</p>
 <p class="ans"><b>Answer:</b> Identity — all real numbers (infinitely many solutions).</p></div></details>
 </div></section>
-<section class="tset"><h2>Lesson 2.5: Equations with fractions (with two Fraction Refreshers)</h2>
-<div class="tproblem" id="2.5.T1">
-<a class="refcode" href="#2.5.T1">2.5.T1</a>
+<section class="tset"><h2>Lesson 2.6: Equations with fractions</h2>
+<div class="tproblem" id="2.6.T1">
+<a class="refcode" href="#2.6.T1">2.6.T1</a>
 <p>Solve for x:  (1/3)x = 6.  Use a reciprocal.</p>
 <details class="answers"><summary><span class="tw"></span><span class="eyebrow">Worked solution</span><span class="hint">Try it first, then open.</span></summary>
 <div class="ak-body">
 <p>The reciprocal of 1/3 is 3/1 = 3. Multiply both sides by 3 (this makes the coefficient go to one, since (1/3)·3 = 1):<br>$$\tfrac13 x=6 \;\xrightarrow{\,\times 3\,}\; x=18$$<br>Check: (1/3)(18) = 6.</p>
 <p class="ans"><b>Answer:</b> 18</p></div></details>
 </div>
-<div class="tproblem" id="2.5.T2">
-<a class="refcode" href="#2.5.T2">2.5.T2</a>
+<div class="tproblem" id="2.6.T2">
+<a class="refcode" href="#2.6.T2">2.6.T2</a>
 <p>Solve for x:  x/2 + x/3 = 10.  Clear the fractions first — what number clears both, and why?</p>
 <details class="answers"><summary><span class="tw"></span><span class="eyebrow">Worked solution</span><span class="hint">Try it first, then open.</span></summary>
 <div class="ak-body">
 <p>The denominators are 2 and 3; the LCM is 6, the smallest number both divide. Multiply every term on both sides by 6 (the balance stays level only if the whole equation is multiplied):<br>$$\frac{x}{2}+\frac{x}{3}=10 \;\xrightarrow{\,\times 6\,}\; 3x+2x=60 \;\Rightarrow\; 5x=60 \;\Rightarrow\; x=12$$<br>Check: 12/2 + 12/3 = 6 + 4 = 10.</p>
 <p class="ans"><b>Answer:</b> 12</p></div></details>
 </div>
-<div class="tproblem" id="2.5.T3">
-<a class="refcode" href="#2.5.T3">2.5.T3</a>
+<div class="tproblem" id="2.6.T3">
+<a class="refcode" href="#2.6.T3">2.6.T3</a>
 <p>Solve for x:  (3/4)x + 2 = 11.</p>
 <details class="answers"><summary><span class="tw"></span><span class="eyebrow">Worked solution</span><span class="hint">Try it first, then open.</span></summary>
 <div class="ak-body">
 <p>First strip the +2 (subtract 2 from both sides), then undo the (3/4) coefficient by multiplying by its reciprocal 4/3:<br>$$\tfrac34 x+2=11 \;\xrightarrow{\,-2\,}\; \tfrac34 x=9 \;\xrightarrow{\,\times \tfrac43\,}\; x=9\cdot\tfrac43=12$$<br>Check: (3/4)(12) + 2 = 9 + 2 = 11.</p>
 <p class="ans"><b>Answer:</b> 12</p></div></details>
 </div>
-<div class="tproblem" id="2.5.T4">
-<a class="refcode" href="#2.5.T4">2.5.T4</a>
+<div class="tproblem" id="2.6.T4">
+<a class="refcode" href="#2.6.T4">2.6.T4</a>
 <p>Solve for x:  (2/3)x = 7.  State the answer exactly.  (Light stretch — the solution is itself a fraction; don't round it.)</p>
 <details class="answers"><summary><span class="tw"></span><span class="eyebrow">Worked solution</span><span class="hint">Try it first, then open.</span></summary>
 <div class="ak-body">
@@ -285,6 +285,8 @@
 <footer><p>A friendly Algebra 1 textbook, made to be read alongside the Claude tutor. Math by KaTeX.</p></footer>
 </div>
 </div>
+<div id="rc-tip" role="tooltip" aria-hidden="true"></div>
+<div id="rc-toast" role="status" aria-live="polite" aria-hidden="true"></div>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
 <script>
@@ -303,6 +305,80 @@ document.addEventListener("DOMContentLoaded", function () {
   var sn = document.getElementById("sidenav");
   if (sn) sn.addEventListener("click", function (e) { if (e.target.closest("a")) body.classList.remove("nav-open"); });
 });
+</script>
+<script>
+(function () {
+  var tip = document.getElementById("rc-tip"), toast = document.getElementById("rc-toast");
+  if (!tip || !toast) return;
+  var toastT = 0, active = null;
+  function hideTip() {
+    tip.classList.remove("show"); tip.setAttribute("aria-hidden", "true");
+    if (active) { active.removeAttribute("aria-describedby"); active = null; }
+  }
+  function showTip(a) {
+    var p = a.getAttribute("data-prompt"); if (!p) return;
+    tip.textContent = "";
+    var h = document.createElement("span"); h.className = "rc-tip-h";
+    h.textContent = "Tutor prompt (click the code to copy):";
+    var q = document.createElement("span"); q.className = "rc-tip-q"; q.textContent = p;
+    tip.appendChild(h); tip.appendChild(q);
+    tip.setAttribute("aria-hidden", "false"); tip.classList.add("show");
+    if (active && active !== a) active.removeAttribute("aria-describedby");
+    active = a; a.setAttribute("aria-describedby", "rc-tip");  // expose the prompt text to screen readers
+    var r = a.getBoundingClientRect(), t = tip.getBoundingClientRect();
+    var top = r.top - t.height - 8;
+    if (top < 8) {                                  // no room above: place below, then clamp to the viewport
+      top = r.bottom + 8;
+      if (top + t.height > window.innerHeight - 8) top = Math.max(8, window.innerHeight - t.height - 8);
+    }
+    var left = Math.max(8, Math.min(r.left + r.width / 2 - t.width / 2, window.innerWidth - t.width - 8));
+    tip.style.top = top + "px"; tip.style.left = left + "px";
+  }
+  function showToast(msg) {
+    toast.textContent = msg; toast.classList.add("show"); toast.setAttribute("aria-hidden", "false");
+    if (toastT) clearTimeout(toastT);
+    toastT = setTimeout(function () {
+      toast.classList.remove("show"); toast.setAttribute("aria-hidden", "true");
+    }, 2600);
+  }
+  function fallbackCopy(text, ok) {
+    try {
+      var ta = document.createElement("textarea"); ta.value = text;
+      ta.style.position = "fixed"; ta.style.top = "-1000px"; ta.style.opacity = "0";
+      document.body.appendChild(ta); ta.focus(); ta.select();
+      var done = document.execCommand("copy"); document.body.removeChild(ta);
+      if (done) { ok(); } else { showToast("Select the prompt above and copy it."); }
+    } catch (e) { showToast("Select the prompt above and copy it."); }
+  }
+  function copyText(text, ok) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(ok, function () { fallbackCopy(text, ok); });
+    } else { fallbackCopy(text, ok); }
+  }
+  document.addEventListener("pointerover", function (e) {
+    var a = e.target.closest && e.target.closest(".refcode"); if (a) showTip(a);
+  });
+  document.addEventListener("pointerout", function (e) {
+    var a = e.target.closest && e.target.closest(".refcode");
+    if (a && !a.contains(e.relatedTarget)) hideTip();
+  });
+  document.addEventListener("focusin", function (e) {
+    var a = e.target.closest && e.target.closest(".refcode"); if (a) showTip(a);
+  });
+  document.addEventListener("focusout", function (e) {
+    if (e.target.closest && e.target.closest(".refcode")) hideTip();
+  });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") hideTip(); });
+  window.addEventListener("scroll", hideTip, true);
+  window.addEventListener("resize", hideTip);
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest && e.target.closest(".refcode"); if (!a) return;
+    e.preventDefault();
+    copyText(a.getAttribute("data-prompt") || a.textContent, function () {
+      showToast("Copied. Paste it into Claude to start.");
+    });
+  });
+})();
 </script>
 </body>
 </html>

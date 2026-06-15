@@ -20,6 +20,8 @@ Start with the equals sign, because almost everything ahead leans on reading it 
 
 Here's a picture for it. Imagine an old balance scale with two pans. If the two pans rest level, the weights on them are equal; that's all "=" claims, that the two sides weigh the same.
 
+<!--illus:1-1-mystery-box-->
+
 So read x + 3 = 7 as that scale resting level: the left pan holds x and 3, the right pan holds 7, and they balance. Here is the one rule to remember: whatever you do to one pan, you do to the other, or it tips.
 
 Reading "=" this way turns a string of symbols into a sentence. On its own, "4 + 3" is just a phrase, the name of a number, the way "the cost of two coffees" names an amount; it doesn't say anything yet. Drop an "=" in and you get a full sentence, with "=" acting as the verb: "4 + 3 = 7" claims the left side and the right side have the same value. A claim like that can be true, false, or, when a piece is still hidden, neither yet. Try reading each of these as a balance and saying which it is:
@@ -191,7 +193,20 @@ Here's the order, top to bottom:
 3. Multiply and divide, equally important, done left to right
 4. Add and subtract, equally important, done left to right
 
-Within the bottom two lines you work in reading order, left to right, the way you read a sentence. Multiply and divide aren't ranked against each other; they're equal, so you just take them in the order they come. Same for add and subtract. If you already know PEMDAS, you can keep it; just write it stacked, with MD on one line and AS on the next, so each of those pairs is read left to right.
+<!--illus:1-3-tiers-->
+
+Within the bottom two lines you work in reading order, left to right, the way you read a sentence. Multiply and divide aren't ranked against each other; they're equal, so you just take them in the order they come. Same for add and subtract.
+
+There's a short word that holds this whole order in your head: PEMDAS. It's a memory hook, one letter for each operation in the order you handle them. P is for Parentheses, E for Exponents, M for Multiplication, D for Division, A for Addition, and S for Subtraction. Say it once or twice and it sticks, and then the letters remind you what comes before what.
+
+The one thing to know about PEMDAS is that the six letters aren't six separate steps. M and D are a single step, and so are A and S, exactly like the four-line list above. The clearest way to hold that is to stack the letters in four rows, one row per line of the list:
+
+- P
+- E
+- MD
+- AS
+
+You read the rows top to bottom: parentheses first, then exponents, then the MD row, then the AS row. Inside the MD row, multiply and divide are equal, so you take them left to right; inside the AS row, add and subtract are equal, so you take those left to right too. Stacking it this way is what keeps PEMDAS from looking like six ranked steps, when it's really four.
 
 Now watch the order work on the spots that trip people, reading each one left to right within its line:
 
@@ -254,7 +269,9 @@ A set that jumps between tiers asks more of you than a row of look-alikes, and t
 
 Negatives turn up in almost every answer from here on. Getting comfortable with them now means a later problem adds only one new wrinkle at a time, instead of two at once. The friendliest way in is to think of a negative as a debt: −5 means you owe $5.
 
-Start with which negative is *bigger*, because that's where the eye gets fooled. Would you rather owe $5 or owe $2? Owing less leaves you better off, so −2 is the bigger number and −5 is the smaller one, even though 5 is bigger than 2. On the number line it's the same story: the bigger the debt, the farther *left* you sit, and farther left means smaller.
+<!--illus:1-4-counters-->
+
+Start with which negative is *bigger*, because that's where the eye gets fooled. Would you rather owe $5 or owe $2? Owing less leaves you better off, so −2 is the bigger number and −5 is the smaller one, even though 5 is bigger than 2. On the number line it's the same story: the bigger the debt, the farther *left* you sit, and farther left means smaller {#1.4.f1}.
 
 There are really two separate facts about −5 here, and keeping them apart is what makes negatives stop feeling backwards. One is its **value** (−5, which can be negative). The other is its **distance from 0**: how far it sits from 0, ignoring direction, which is 5, and a distance is never negative.
 
@@ -345,6 +362,8 @@ You *evaluate* an expression; you *solve* an equation. Trying to "solve" an expr
 To tell them apart, look for an equals sign. An expression is a noun phrase, like "three more than twice a number," with no verb and no =. An equation is a full sentence, with the = acting as the verb that claims a balance. No equals sign, it's an expression; equals sign present, it's an equation.
 
 Evaluating an expression is where the mystery box pays off. Picture 3x + 2 as a row of seats reserved for a guest who hasn't arrived; x is the empty chair. "Evaluate at x = 4" is the guest sitting down: every x becomes a 4. So 3x + 2 at x = 4 is 3(4) + 2.
+
+<!--illus:1-5-empty-chair-->
 
 Now just follow order of operations from Lesson 1.3: 3(4) is 12, then 12 + 2 is 14. Write the steps out, 3(4) + 2 = 12 + 2 = 14, rather than jumping straight to 14, because the careful-substitution habit is what keeps signs and order from slipping.
 

@@ -33,6 +33,8 @@ $$\begin{array}{c|c|c}
 
 The left edge, 4x, is the common factor; the top edges, x and 2, are what's left inside.
 
+<!--illus:11-1-un-distribute-->
+
 Now the symbols. Finding the GCF comes in two parts. First the number: the biggest number that divides every coefficient evenly. For 4x² + 8x, that's the biggest number dividing both 4 and 8, which is 4.
 
 Then the variables: the *lowest* power of the variable that shows up in every term. Here you have x² in the first term and x¹ in the second, so the most that *every* term carries is x¹. Multiply the two parts together and the GCF is 4x. Divide each term by 4x to find what stays inside.
@@ -113,6 +115,8 @@ x & x^2 & ?x \\ \hline
 \end{array}$$
 
 The two unknown edges have to multiply to 6 (that's the corner cell), and their x-terms have to add to 5x (that's the middle). Which is exactly one question, and it's the question behind every trinomial: what two numbers multiply to c and add to b?
+
+<!--illus:11-2-area-reversed-->
 
 So the method is a search for two numbers. List the pairs that multiply to c, and pick the pair that adds to b. For x²+5x+6, the pairs multiplying to 6 are 1·6 and 2·3; only 2 + 3 gives 5. So the factors are (x+2)(x+3).
 
@@ -251,6 +255,8 @@ b & ab & -b^2
 \end{array}\qquad\Rightarrow\qquad a^2 - ab + ab - b^2 = a^2-b^2$$
 
 Look at the two middle cells: +ab and −ab. They add to zero, so the middle term goes to zero and disappears, leaving just a²−b². Run that backward and you have your factoring rule.
+
+<!--illus:11-3-diff-squares-->
 
 How do you recognize one? Two perfect squares with a *minus* between them. Then a is the square root of the first, b is the square root of the last, and it splits into (a+b)(a−b):
 

@@ -20,9 +20,44 @@ UNIT_MD = os.path.join(REPO_ROOT, "algebra-1-tutor", "references", "units")
 TEXTBOOK_SRC = os.path.join(REPO_ROOT, "textbook-src")
 FIG_DIR = os.path.join(REPO_ROOT, "algebra-1-tutor", "figures")
 OUT_DIR = os.path.join(REPO_ROOT, "docs", "textbook")
+ASSETS_DIR = os.path.join(REPO_ROOT, "docs", "assets")
 KATEX = "0.16.11"
 ANCHOR_RE = re.compile(r"\{#([^}\s]+)\}")
 FCODE_RE = re.compile(r"^(?:[1-9]|1[0-2]|A)\.\d+\.f\d+[a-z]?$")
+_CODE_RE = re.compile(r"^([0-9]+|[A-Z])\.(\d+)\.(.+)$")  # scope.lesson.item (3-part lesson codes only)
+
+
+def _label_for(code):
+    """Plain-words description of a reference code, for the launcher prompt. Pure function of the
+    code string (no SSOT lookup) so the generated prompt is deterministic. Two-part bank codes
+    (mis.3, vis.t1, met.<slug>) fall back to the bare code."""
+    m = _CODE_RE.match(code)
+    if not m:
+        return f"reference {code}"
+    scope, lesson, item = m.groups()
+    clause = f" in Lesson {scope}.{lesson}"
+    mw = re.match(r"^(?:w|ex)(\d+)([a-z]?)$", item)
+    if mw:
+        return f"worked example {mw.group(1)}" + (f", part {mw.group(2)}" if mw.group(2) else "") + clause
+    mp = re.match(r"^(\d+)([a-z]?)$", item)
+    if mp:
+        return f"practice problem {mp.group(1)}" + (f", part {mp.group(2)}" if mp.group(2) else "") + clause
+    if re.match(r"^d\d+$", item):
+        return "a key term" + clause
+    if re.match(r"^c\d+$", item):
+        return "a check-for-understanding question" + clause
+    if re.match(r"^f\d+[a-z]?$", item):
+        return "the figure" + clause
+    if re.match(r"^h\d+$", item):
+        return "a how-to" + clause
+    return f"reference {code}" + clause
+
+
+def _prompt_for(code):
+    """The ready-to-paste tutor-launch prompt for a reference code."""
+    return (f"Use the Algebra 1 tutor skill to help me with {_label_for(code)} "
+            f"(reference {code}). Pull it up, then ask whether I'd like you to explain it, "
+            f"work through it together, or answer a specific question.")
 
 
 def _ssot():
@@ -88,18 +123,102 @@ def _id_worked_practice(text):
     return "\n".join(lines)
 
 
-def _convert_anchors(text):
-    """Turn {#code} into a visible, linkable refcode badge; embed the bundled SVG for f-codes."""
+def _attr(s):
+    """Escape a string for an HTML double-quoted attribute, keeping apostrophes literal so the
+    prompt round-trips verbatim through python-markdown's raw-HTML passthrough (no entity that a
+    later markdown pass could double-escape)."""
+    return _html.escape(s, quote=False).replace('"', "&quot;")
+
+
+def _refcode_badge(code, launcher):
+    """The visible, linkable refcode badge. When launcher=True it also carries the tutor-launch
+    prompt (data-prompt) + an aria-label so the textbook's refcode script can show and copy it."""
+    base = f'<a class="refcode" id="{code}" href="#{code}"'
+    if not launcher:
+        return base + f">{code}</a>"
+    return (base + f' data-prompt="{_attr(_prompt_for(code))}"'
+            f' aria-label="{_attr("Copy a tutor prompt for " + _label_for(code))}">{code}</a>')
+
+
+def _convert_anchors(text, launcher=False):
+    """Turn {#code} into a visible, linkable refcode badge; embed the bundled SVG for f-codes.
+    launcher=True (the HTML textbook) also attaches the tutor-launcher prompt to each badge."""
     out = []
     for ln in text.split("\n"):
         fcodes = [c for c in ANCHOR_RE.findall(ln)
                   if FCODE_RE.match(c) and os.path.exists(os.path.join(FIG_DIR, c + ".svg"))]
-        ln = ANCHOR_RE.sub(
-            lambda m: f'<a class="refcode" id="{m.group(1)}" href="#{m.group(1)}">{m.group(1)}</a>', ln)
+        ln = ANCHOR_RE.sub(lambda m: _refcode_badge(m.group(1), launcher), ln)
         out.append(ln)
         for c in fcodes:
             svg = open(os.path.join(FIG_DIR, c + ".svg"), encoding="utf-8").read().strip()
             out += ["", f'<figure class="fig" id="fig-{c}">{svg}<figcaption><b>Figure {c}</b></figcaption></figure>', ""]
+    return "\n".join(out)
+
+
+_ILLUS_RE = re.compile(r"<!--\s*illus:([a-z0-9-]+)\s*-->")
+
+# Inline metaphor illustrations (textbook-only). The student source carries a `<!--illus:slug-->`
+# marker at the metaphor sentence; the build swaps it for docs/assets/illus-<slug>.jpg with the
+# descriptive alt below (the alt carries the meaning if the image fails to load). These are NOT part
+# of the {#code} reference-code system, so the grammar / drift / figure lints never see them.
+_ILLUS = {
+    "1-1-mystery-box": "A balance scale with a covered box on one pan, picturing the equals sign as two sides held in balance.",
+    "1-3-tiers": "A vertical checklist with four boxes ticked in order from top to bottom, picturing a fixed step-by-step order.",
+    "1-4-counters": "A cut-away building with floors above the ground and floors below ground, picturing negative numbers as below zero.",
+    "1-5-empty-chair": "The number 4 sitting in a chair, picturing evaluating an expression by putting the value 4 in for x.",
+    "2-1-cup-coins": "A balance scale holding a cup and coins, with the same number of coins lifted from both pans.",
+    "2-2-dressing": "Socks put on before shoes, picturing inverse steps undone in reverse order.",
+    "2-3-boxes-coins": "Three identical boxes beside two loose coins that cannot be combined together.",
+    "2-3-area-distribute": "A rectangle split into two cells, picturing a factor distributed across a sum.",
+    "2-4-both-pans": "Identical boxes removed from both pans of a balance scale by the same amount.",
+    "2-5-pizza-fractions": "A smaller one-sixth slice beside a larger one-quarter slice: more sharers means smaller pieces.",
+    "3-1-unit-rate": "A speedometer beside a car at a steady speed, picturing a unit rate like miles in one hour.",
+    "3-2-cross-multiply": "Two fractions linked by a crossing X, picturing cross-multiplication.",
+    "3-3-percent-triangle": "A 10-by-10 grid of 100 small squares with 25 of them shaded, picturing a percent as a count per hundred.",
+    "4-1-input-output": "One input entering a machine and a single output leaving it.",
+    "4-1-vertical-line-test": "A vertical line sweeping across a curve, picturing the vertical-line test.",
+    "4-2-trays": "A machine with an in-tray of allowed inputs and an out-tray of produced outputs.",
+    "5-3-staircase": "A staircase of equal rise-over-run steps climbing alongside a line, picturing slope.",
+    "6-1-phrase-equation": "A phrase card turning into an equation card, picturing translation into symbols.",
+    "6-2-drt": "A small road trip, picturing distance as rate multiplied by time.",
+    "7-2-substitution": "One quantity plugged in to replace another, picturing substitution.",
+    "7-3-add-equations": "Two equations stacked and added so that one variable cancels out.",
+    "7-4-parallel-identical": "Parallel lines that never meet beside one identical line: no solution versus infinitely many.",
+    "9-1-steps-vs-doubling": "Evenly spaced steps beside doubling jumps, picturing arithmetic versus geometric growth.",
+    "10-1-repeated-mult": "A power shown as several equal copies multiplied together.",
+    "10-2-sliding-decimal": "A decimal point sliding across scales of size, picturing scientific notation.",
+    "10-3-algebra-tiles": "Algebra tiles sorted into groups by kind, picturing combining like terms.",
+    "10-4-area-grid": "An area-model grid of cells, picturing the product of two binomials.",
+    "11-1-un-distribute": "An area model run backward, picturing pulling a common factor out.",
+    "11-2-area-reversed": "An area grid filled in reverse to recover its two binomial sides.",
+    "11-3-diff-squares": "Mirror-image squares, picturing the difference-of-squares pattern.",
+    "12-1-area-to-side": "A square's area giving back its side length, picturing a square root as un-squaring.",
+    "12-4-complete-square": "A partial square completed by adding a small corner piece.",
+    "a-1-mean-balance": "A row of dots balancing on a single point, picturing the mean as a balance point.",
+    "a-3-two-way-grid": "A clean two-by-two grid of cells, picturing a two-way table.",
+    "howto-what-is-algebra": "A gentle path winding toward a warm sunrise, picturing algebra as an inviting, worthwhile beginning.",
+    "howto-using-claude": "An open book with a friendly speech bubble beside it, picturing reading along with a helpful companion tutor.",
+}
+
+
+def _convert_illus(text):
+    """Swap each `<!--illus:slug-->` marker for an inline illustration figure when the asset
+    docs/assets/illus-<slug>.jpg exists (else drop the marker, keeping any other text on the line).
+    Fence-aware. Block-level HTML with blank lines around it passes through markdown untouched."""
+    out, infence = [], False
+    for ln in text.split("\n"):
+        if ln.lstrip().startswith("```"):
+            infence = not infence; out.append(ln); continue
+        m = None if infence else _ILLUS_RE.search(ln)
+        if m and os.path.exists(os.path.join(ASSETS_DIR, f"illus-{m.group(1)}.jpg")):
+            slug = m.group(1)
+            alt = _html.escape(_ILLUS.get(slug, ""))
+            out += ["", f'<figure class="illus"><img class="illus-art" src="../assets/illus-{slug}.jpg" '
+                        f'alt="{alt}" loading="lazy"></figure>', ""]
+        elif m:
+            out.append(_ILLUS_RE.sub("", ln))
+        else:
+            out.append(ln)
     return "\n".join(out)
 
 
@@ -240,10 +359,11 @@ _DIVIDER = ('<div class="ldiv" aria-hidden="true"><i></i>'
             '<path d="M12 3.5 20.5 12 12 20.5 3.5 12Z"/></svg><i></i></div>')
 
 
-def md_to_body(text):
+def md_to_body(text, launcher=False):
     text, math = _protect_math(text)
+    text = _convert_illus(text)
     text = _id_worked_practice(text)
-    text = _convert_anchors(text)
+    text = _convert_anchors(text, launcher)
     text = _space_subheads(text)
     text = _blockify(text)
     text = _ensure_list_blank_lines(text)
@@ -276,6 +396,14 @@ def _ssot_model(ssot):
     return [{"id": str(u.id), "title": u.title, "overview": _overview_fname(u.id),
              "lessons": [{"id": l.id, "title": l.title, "fname": _lesson_fname(l.id)} for l in u.lessons]}
             for u in ssot.units]
+
+
+def _lesson_hero(lesson_id):
+    """A per-lesson hero illustration lives at docs/assets/hero-<id>.jpg (lesson dots -> dashes).
+    Auto-wired when the asset exists, so a lesson without one simply renders no hero art (and the
+    build stays deterministic on the committed asset set)."""
+    name = "hero-" + lesson_id.replace(".", "-")
+    return f"../assets/{name}.jpg" if os.path.exists(os.path.join(ASSETS_DIR, name + ".jpg")) else None
 
 
 def _split_unit(md):
@@ -340,6 +468,85 @@ def _pagenav(prev_link, next_link):
     return "\n".join(parts)
 
 
+# delegated controller for the reference-code tutor launcher (textbook pages only). Vanilla JS,
+# no deps; event-delegated so it covers every .refcode badge; a position:fixed tooltip escapes the
+# overflow:hidden on .worked/.answers cards. Plain string (not f-string) so its braces stay literal.
+_REFCODE_JS = """
+(function () {
+  var tip = document.getElementById("rc-tip"), toast = document.getElementById("rc-toast");
+  if (!tip || !toast) return;
+  var toastT = 0, active = null;
+  function hideTip() {
+    tip.classList.remove("show"); tip.setAttribute("aria-hidden", "true");
+    if (active) { active.removeAttribute("aria-describedby"); active = null; }
+  }
+  function showTip(a) {
+    var p = a.getAttribute("data-prompt"); if (!p) return;
+    tip.textContent = "";
+    var h = document.createElement("span"); h.className = "rc-tip-h";
+    h.textContent = "Tutor prompt (click the code to copy):";
+    var q = document.createElement("span"); q.className = "rc-tip-q"; q.textContent = p;
+    tip.appendChild(h); tip.appendChild(q);
+    tip.setAttribute("aria-hidden", "false"); tip.classList.add("show");
+    if (active && active !== a) active.removeAttribute("aria-describedby");
+    active = a; a.setAttribute("aria-describedby", "rc-tip");  // expose the prompt text to screen readers
+    var r = a.getBoundingClientRect(), t = tip.getBoundingClientRect();
+    var top = r.top - t.height - 8;
+    if (top < 8) {                                  // no room above: place below, then clamp to the viewport
+      top = r.bottom + 8;
+      if (top + t.height > window.innerHeight - 8) top = Math.max(8, window.innerHeight - t.height - 8);
+    }
+    var left = Math.max(8, Math.min(r.left + r.width / 2 - t.width / 2, window.innerWidth - t.width - 8));
+    tip.style.top = top + "px"; tip.style.left = left + "px";
+  }
+  function showToast(msg) {
+    toast.textContent = msg; toast.classList.add("show"); toast.setAttribute("aria-hidden", "false");
+    if (toastT) clearTimeout(toastT);
+    toastT = setTimeout(function () {
+      toast.classList.remove("show"); toast.setAttribute("aria-hidden", "true");
+    }, 2600);
+  }
+  function fallbackCopy(text, ok) {
+    try {
+      var ta = document.createElement("textarea"); ta.value = text;
+      ta.style.position = "fixed"; ta.style.top = "-1000px"; ta.style.opacity = "0";
+      document.body.appendChild(ta); ta.focus(); ta.select();
+      var done = document.execCommand("copy"); document.body.removeChild(ta);
+      if (done) { ok(); } else { showToast("Select the prompt above and copy it."); }
+    } catch (e) { showToast("Select the prompt above and copy it."); }
+  }
+  function copyText(text, ok) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(ok, function () { fallbackCopy(text, ok); });
+    } else { fallbackCopy(text, ok); }
+  }
+  document.addEventListener("pointerover", function (e) {
+    var a = e.target.closest && e.target.closest(".refcode"); if (a) showTip(a);
+  });
+  document.addEventListener("pointerout", function (e) {
+    var a = e.target.closest && e.target.closest(".refcode");
+    if (a && !a.contains(e.relatedTarget)) hideTip();
+  });
+  document.addEventListener("focusin", function (e) {
+    var a = e.target.closest && e.target.closest(".refcode"); if (a) showTip(a);
+  });
+  document.addEventListener("focusout", function (e) {
+    if (e.target.closest && e.target.closest(".refcode")) hideTip();
+  });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") hideTip(); });
+  window.addEventListener("scroll", hideTip, true);
+  window.addEventListener("resize", hideTip);
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest && e.target.closest(".refcode"); if (!a) return;
+    e.preventDefault();
+    copyText(a.getAttribute("data-prompt") || a.textContent, function () {
+      showToast("Copied. Paste it into Claude to start.");
+    });
+  });
+})();
+"""
+
+
 # --- HTML template ------------------------------------------------------------------------------
 def _lesson_page(title, body, model, cur, prev_link=None, next_link=None, *, subtitle="",
                  surface="textbook", hero=None, kicker="", home_href="index.html",
@@ -386,6 +593,8 @@ def _lesson_page(title, body, model, cur, prev_link=None, next_link=None, *, sub
 <footer><p>A friendly Algebra 1 textbook, made to be read alongside the Claude tutor. Math by KaTeX.</p></footer>
 </div>
 </div>
+<div id="rc-tip" role="tooltip" aria-hidden="true"></div>
+<div id="rc-toast" role="status" aria-live="polite" aria-hidden="true"></div>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@{KATEX}/dist/katex.min.js" crossorigin="anonymous"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@{KATEX}/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
 <script>
@@ -405,6 +614,7 @@ document.addEventListener("DOMContentLoaded", function () {{
   if (sn) sn.addEventListener("click", function (e) {{ if (e.target.closest("a")) body.classList.remove("nav-open"); }});
 }});
 </script>
+<script>{_REFCODE_JS}</script>
 </body>
 </html>
 """
@@ -687,6 +897,11 @@ html.dark figure.fig text[fill="#2980b9"],html.dark figure.fig [fill="#2980b9"]:
 html.dark figure.fig text[fill="#27ae60"]{fill:#69cf97} html.dark figure.fig text[fill="#8e44ad"]{fill:#c3a4e6}
 html.dark figure.fig line[stroke="#2980b9"]{stroke:#6fb0e8} html.dark figure.fig line[stroke="#8e44ad"]{stroke:#c3a4e6}
 
+/* ---- inline metaphor illustration (raster; warm, decorative but meaningful) ---- */
+figure.illus{margin:var(--s5) auto; max-width:30rem; text-align:center}
+figure.illus img.illus-art{width:100%; height:auto; border-radius:var(--radius); box-shadow:var(--shadow); display:block}
+html.dark figure.illus img.illus-art{filter:brightness(.92) saturate(.94)}
+
 /* ---- objectives blockquote & tables ---- */
 blockquote{margin:var(--s5) auto; padding:1rem 1.25rem; background:var(--tint-blue); border:1px solid var(--rule);
   border-left:3px solid var(--blue); border-radius:var(--radius); color:var(--ink)}
@@ -729,6 +944,28 @@ section.ug h3{margin:.1rem 0 .4rem} section.ug :last-child{margin-bottom:0}
   .answers[open] .ak-body, details > *{display:revert} details{display:block} .answers summary{display:none}
   .worked,.practice li,figure.fig,blockquote,ul.units li{break-inside:avoid; box-shadow:none}
 }
+
+/* ---- reference-code tutor launcher (textbook surface only) ---- */
+body[data-surface="textbook"] .refcode{cursor:copy}
+body[data-surface="textbook"] #rc-tip{position:fixed; z-index:80; max-width:min(92vw,30rem); margin:0;
+  padding:.6rem .8rem; background:var(--card); color:var(--ink); border:1px solid var(--rule);
+  border-radius:var(--radius-sm); box-shadow:var(--shadow);
+  font:var(--step--1)/1.5 "Source Serif 4",var(--serif-math),Georgia,serif;
+  opacity:0; visibility:hidden; pointer-events:none}
+body[data-surface="textbook"] #rc-tip.show{opacity:1; visibility:visible}
+body[data-surface="textbook"] #rc-tip .rc-tip-h{display:block; font-weight:600; font-size:.82em;
+  letter-spacing:.01em; color:var(--ink-soft); margin-bottom:.25rem}
+body[data-surface="textbook"] #rc-tip .rc-tip-q{display:block; color:var(--ink)}
+body[data-surface="textbook"] #rc-toast{position:fixed; left:50%; bottom:1.4rem; transform:translateX(-50%);
+  z-index:90; background:var(--ink); color:var(--paper); border-radius:999px; padding:.55rem 1.1rem;
+  font:var(--step--1)/1.3 "Source Serif 4",Georgia,serif; box-shadow:var(--shadow);
+  opacity:0; visibility:hidden; pointer-events:none; max-width:92vw}
+body[data-surface="textbook"] #rc-toast.show{opacity:1; visibility:visible}
+@media (prefers-reduced-motion:no-preference){
+  body[data-surface="textbook"] #rc-tip{transition:opacity .12s ease}
+  body[data-surface="textbook"] #rc-toast{transition:opacity .18s ease, transform .18s ease}
+  body[data-surface="textbook"] #rc-toast.show{transform:translateX(-50%) translateY(-2px)}
+}
 """
 
 
@@ -753,7 +990,7 @@ def _index_html(ssot, model):
 
 def _intro_page(model, next_link):
     md = open(os.path.join(TEXTBOOK_SRC, "how-to-use.md"), encoding="utf-8").read()
-    body = _strip_lead(md_to_body(md), "h1")
+    body = _strip_lead(md_to_body(md, launcher=True), "h1")
     return _lesson_page("How to use this book", body, model, "how-to-use.html",
                         ("index.html", "All units"), next_link, kicker="Start here")
 
@@ -792,7 +1029,7 @@ def build_site(ssot):
         ov = _overview_fname(u.id)
         kicker = "Appendix" if str(u.id) == "A" else f"Unit {u.id}"
         # overview page: hero + unit intro + a list of its lessons
-        intro_html = _strip_lead(md_to_body(intro), "h1")
+        intro_html = _strip_lead(md_to_body(intro, launcher=True), "h1")
         ll = ['<nav class="lesson-list" aria-label="Lessons in this unit"><ol>']
         for lid, lt, _c in lessons:
             ll.append(f'<li><a href="{_lesson_fname(lid)}"><b>Lesson {lid}</b>{_html.escape(lt)}</a></li>')
@@ -804,9 +1041,10 @@ def build_site(ssot):
         # one page per lesson
         for lid, lt, chunk in lessons:
             fn = _lesson_fname(lid)
-            lbody = _strip_lead(md_to_body(chunk), "h2")
+            lbody = _strip_lead(md_to_body(chunk, launcher=True), "h2")
             pl2, nl2 = around(fn)
-            files[fn] = _lesson_page(lt, lbody, model, fn, pl2, nl2, kicker=f"{kicker} · Lesson {lid}")
+            files[fn] = _lesson_page(lt, lbody, model, fn, pl2, nl2, kicker=f"{kicker} · Lesson {lid}",
+                                     hero=_lesson_hero(lid))
     return files
 
 

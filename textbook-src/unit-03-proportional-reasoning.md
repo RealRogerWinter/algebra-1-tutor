@@ -20,6 +20,8 @@ Suppose you drove 120 miles in 2 hours. How far did you go in *one* hour, on ave
 
 You took a comparison of two amounts and boiled it down to "per one hour." That per-one number, 60 miles per hour, is what the real world runs on: price per item, words per minute.
 
+<!--illus:3-1-unit-rate-->
+
 Here's the idea built up slowly, because the "per one" move is the one to get solid.
 
 Start with the picture. Lay the trip out as a tiny two-row table: 2 hours sits across from 120 miles. You want the bottom row, the one that starts with a single hour.
@@ -120,6 +122,8 @@ $$\frac{a}{b} = \frac{c}{d} \;\xrightarrow{\times b}\; a = \frac{bc}{d} \;\xrigh
 
 All that happened: you multiplied both sides by b to clear the first bottom, then by d to clear the second. The crossed product a·d = b·c is the *result* of those two clearings, not a trick you have to take on faith. (This is safe because b and d aren't zero. Multiplying both sides by something that might be zero isn't a reversible move, which is why proportions keep their bottoms nonzero.)
 
+<!--illus:3-2-cross-multiply-->
+
 Once the bottoms are gone, what's left is an ordinary one-step equation, solved exactly the way you solved them in Unit 2.
 
 One caution, and it's the deep one for this lesson: cross-multiplication is for *direct* proportions, where two ratios stay equal. Some real situations move the opposite way. More workers means *fewer* days, and there the right setup is different.
@@ -190,6 +194,8 @@ The problems below are shuffled rather than sorted by type. Answers are at the e
 ## Lesson 3.3: Percents
 
 A percent is a count out of 100. Picture a 10-by-10 grid of 100 little squares: 25% is just 25 of them shaded. That's all the word means: "per hundred."
+
+<!--illus:3-3-percent-triangle-->
 
 Once you see it as a part out of 100, percents stop being a separate topic and become the proportions you just practiced, with the bottom always set to 100.
 
