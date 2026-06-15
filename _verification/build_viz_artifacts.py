@@ -21,7 +21,11 @@ sys.path.insert(0, HERE)
 import viz_figures as _vf
 import build_textbook as _bt
 
-KATEX = _bt.KATEX
+# The textbook (a website) loads KaTeX from jsDelivr at _bt.KATEX (0.16.11). The skill artifacts
+# load from cdnjs, the CDN Claude.ai artifacts are sanctioned to use — but cdnjs's latest KaTeX is
+# 0.16.9, so we pin to that (jsDelivr's 0.16.11 path 404s on cdnjs). Rendering is identical for
+# Algebra-1 math. If cdnjs ships a newer KaTeX, bump this after confirming the three asset URLs 200.
+KATEX = "0.16.9"
 _CDNJS = "https://cdnjs.cloudflare.com/ajax/libs/KaTeX/" + KATEX
 
 # Assembled by .replace (NOT .format): build_textbook.CSS and the viz bodies contain literal { } and $$.
