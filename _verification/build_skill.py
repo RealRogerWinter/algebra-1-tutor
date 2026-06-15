@@ -16,7 +16,7 @@ SKILL_DIR = os.path.join(REPO_ROOT, "algebra-1-tutor")
 SKILL_FILE = os.path.join(REPO_ROOT, "algebra-1-tutor.skill")
 ZIP_FILE = os.path.join(REPO_ROOT, "algebra-1-tutor.zip")
 EXCLUDE = ("__pycache__", ".DS_Store", "Thumbs.db")
-_TEXT_EXT = (".md", ".svg", ".txt")
+_TEXT_EXT = (".md", ".svg", ".txt", ".html")
 
 
 def _files():

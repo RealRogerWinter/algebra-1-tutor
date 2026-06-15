@@ -1,3 +1,11 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Figure 12.4.f1</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+<style>
 /* ============================================================================
    Algebra 1 — visual design language (warm, friendly, calm; for a true beginner).
    One stylesheet shared by the textbook, student guide, tutor guide, and landing.
@@ -326,3 +334,23 @@ body[data-surface="textbook"] #rc-toast.show{opacity:1; visibility:visible}
   body[data-surface="textbook"] #rc-toast{transition:opacity .18s ease, transform .18s ease}
   body[data-surface="textbook"] #rc-toast.show{transform:translateX(-50%) translateY(-2px)}
 }
+
+.fig-standalone{max-width:760px;margin:1.4rem auto;padding:0 1rem}
+</style>
+<script>try{if(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)document.documentElement.classList.add('dark');}catch(e){}</script>
+</head>
+<body data-surface="textbook">
+<main class="fig-standalone">
+<figure class="fig viz" id="fig-12.4.f1"><div style="display:flex;flex-direction:column;gap:.5rem;align-items:center"><div style="color:var(--ink-soft);font-size:.95em">Split 6x into two 3-wide strips; the dashed corner is what completes the big square:</div><figure class="fig" style="margin:0"><svg viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif" role="img" stroke-linecap="round" stroke-linejoin="round" style="max-width:320px;width:100%;height:auto;display:block;margin:0 auto"><rect x="80" y="62" width="150" height="150" rx="6" stroke="#2980b9" stroke-width="2.5" fill="#2980b9" fill-opacity="0.13"/><text x="155.0" y="137.0" font-size="26" font-weight="600" fill="#2980b9" text-anchor="middle" dominant-baseline="middle">x²</text><rect x="230" y="62" width="64" height="150" rx="6" stroke="#8e44ad" stroke-width="2.5" fill="#8e44ad" fill-opacity="0.13"/><text x="262.0" y="137.0" font-size="18" font-weight="600" fill="#8e44ad" text-anchor="middle" dominant-baseline="middle">3x</text><rect x="80" y="212" width="150" height="64" rx="6" stroke="#8e44ad" stroke-width="2.5" fill="#8e44ad" fill-opacity="0.13"/><text x="155.0" y="244.0" font-size="18" font-weight="600" fill="#8e44ad" text-anchor="middle" dominant-baseline="middle">3x</text><rect x="230" y="212" width="64" height="64" rx="6" fill="#a9740f" fill-opacity="0.16" stroke="#a9740f" stroke-width="2.5" stroke-dasharray="6 5"/><text x="262.0" y="236.0" font-size="20" font-weight="600" fill="#a9740f" text-anchor="middle" dominant-baseline="middle">9</text><text x="262.0" y="256.0" font-size="12" font-weight="500" fill="#a9740f" text-anchor="middle" dominant-baseline="middle">add</text><path d="M80 55 V50 H230 V55" fill="none" stroke="#888" stroke-width="1.6" opacity="0.75"/><text x="155.0" y="36" font-size="16" font-weight="500" fill="#888" text-anchor="middle" dominant-baseline="middle">x</text><path d="M230 55 V50 H294 V55" fill="none" stroke="#a9740f" stroke-width="1.6" opacity="0.75"/><text x="262.0" y="36" font-size="16" font-weight="500" fill="#a9740f" text-anchor="middle" dominant-baseline="middle">3</text><path d="M73 62 H68 V212 H73" fill="none" stroke="#888" stroke-width="1.6" opacity="0.75"/><text x="54" y="137.0" font-size="16" font-weight="500" fill="#888" text-anchor="middle" dominant-baseline="middle">x</text><path d="M73 212 H68 V276 H73" fill="none" stroke="#a9740f" stroke-width="1.6" opacity="0.75"/><text x="54" y="244.0" font-size="16" font-weight="500" fill="#a9740f" text-anchor="middle" dominant-baseline="middle">3</text></svg></figure><div>$$x^2+6x+9=(x+3)^2$$</div><div style="color:var(--ink-soft);font-size:.9em">add the 3×3 corner (area 9) and the whole figure is the square (x+3)².</div></div><figcaption><b>Figure 12.4.f1</b> &mdash; Completing the square: x²+6x plus the missing 3×3 corner (area 9) makes (x+3)².</figcaption></figure>
+</main>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  if (typeof renderMathInElement === 'function') {
+    renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '\\(', right: '\\)', display: false}], throwOnError: false});
+  }
+});
+</script>
+</body>
+</html>

@@ -199,7 +199,9 @@ def _power():
         _label(254, 31, "exponent", RED, 11, "start"),
         _label(254, 45, f"use the base {exp} times", SLATE, 9, "start"),
     ]
-    svg = _svg("0 0 400 155", "".join(body))
+    # viewBox extends left of 0: the "base / the number being multiplied" label is right-anchored
+    # at x=66 and its long second line runs left past x=0 — widen the canvas so it isn't clipped.
+    svg = _svg("-78 0 478 155", "".join(body))
     expr = (
         f"\\textcolor{{#2980b9}}{{{base}}}^{{\\textcolor{{#c0392b}}{{{exp}}}}}"
         f" = \\underbrace{{{product}}}_{{\\textcolor{{#c0392b}}{{{exp}}}\\ \\text{{copies}}}}"

@@ -1,3 +1,11 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Figure 5.4.f3</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+<style>
 /* ============================================================================
    Algebra 1 — visual design language (warm, friendly, calm; for a true beginner).
    One stylesheet shared by the textbook, student guide, tutor guide, and landing.
@@ -326,3 +334,185 @@ body[data-surface="textbook"] #rc-toast.show{opacity:1; visibility:visible}
   body[data-surface="textbook"] #rc-toast{transition:opacity .18s ease, transform .18s ease}
   body[data-surface="textbook"] #rc-toast.show{transform:translateX(-50%) translateY(-2px)}
 }
+
+.fig-standalone{max-width:760px;margin:1.4rem auto;padding:0 1rem}
+</style>
+<script>try{if(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)document.documentElement.classList.add('dark');}catch(e){}</script>
+</head>
+<body data-surface="textbook">
+<main class="fig-standalone">
+<figure class="fig viz" id="fig-5.4.f3"><div class="lineexp-wrap" data-init="0">
+  <style>
+    .lineexp-wrap{max-width:380px;margin:0 auto;font-family:inherit}
+    .lineexp-wrap svg{width:100%;height:auto;display:block;
+      background:transparent;border-radius:var(--radius);touch-action:none}
+    .lineexp-eq{font:600 1.15rem "IBM Plex Mono",ui-monospace,Consolas,monospace;
+      color:var(--blue);text-align:center;margin:.5rem 0 .2rem;letter-spacing:.01em}
+    .lineexp-ctrl{display:grid;grid-template-columns:auto 1fr auto;gap:.5rem .7rem;
+      align-items:center;margin:.55rem .3rem 0;font-size:.92rem;color:var(--ink-soft)}
+    .lineexp-ctrl label{font-weight:600;color:var(--ink)}
+    .lineexp-ctrl output{font:600 .92rem "IBM Plex Mono",monospace;color:var(--ink);
+      min-width:2.4em;text-align:right}
+    .lineexp-wrap input[type=range]{width:100%;accent-color:var(--blue);
+      height:1.4rem;cursor:pointer}
+    .lineexp-wrap input[type=range]:focus-visible{outline:2px solid var(--blue);
+      outline-offset:3px;border-radius:6px}
+    .lineexp-row{text-align:center;margin:.55rem 0 0;font-size:.95rem;color:var(--ink-soft)}
+    .lineexp-hint{display:block;font-size:.8rem;color:var(--ink-soft);
+      margin-top:.15rem;opacity:.85}
+  </style>
+  <div class="lineexp-eq" id="lineexp-eq">y = x</div>
+  <svg viewBox="0 0 360 360" xmlns="http://www.w3.org/2000/svg"
+       font-family="sans-serif" aria-label="coordinate grid with a movable line">
+    <line x1="30.0" y1="330.0" x2="30.0" y2="30.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="30.0" y1="330.0" x2="330.0" y2="330.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="55.0" y1="330.0" x2="55.0" y2="30.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="30.0" y1="305.0" x2="330.0" y2="305.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="80.0" y1="330.0" x2="80.0" y2="30.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="30.0" y1="280.0" x2="330.0" y2="280.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="105.0" y1="330.0" x2="105.0" y2="30.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="30.0" y1="255.0" x2="330.0" y2="255.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="130.0" y1="330.0" x2="130.0" y2="30.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="30.0" y1="230.0" x2="330.0" y2="230.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="155.0" y1="330.0" x2="155.0" y2="30.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="30.0" y1="205.0" x2="330.0" y2="205.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="205.0" y1="330.0" x2="205.0" y2="30.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="30.0" y1="155.0" x2="330.0" y2="155.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="230.0" y1="330.0" x2="230.0" y2="30.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="30.0" y1="130.0" x2="330.0" y2="130.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="255.0" y1="330.0" x2="255.0" y2="30.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="30.0" y1="105.0" x2="330.0" y2="105.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="280.0" y1="330.0" x2="280.0" y2="30.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="30.0" y1="80.0" x2="330.0" y2="80.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="305.0" y1="330.0" x2="305.0" y2="30.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="30.0" y1="55.0" x2="330.0" y2="55.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="330.0" y1="330.0" x2="330.0" y2="30.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="30.0" y1="30.0" x2="330.0" y2="30.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="30.0" y1="180.0" x2="330.0" y2="180.0" stroke="#888" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="180.0" y1="30.0" x2="180.0" y2="330.0" stroke="#888" stroke-width="2.5" stroke-linecap="round"/>
+    <text x="326.0" y="172.0" font-size="13" fill="#888" text-anchor="end">x</text>
+    <text x="188.0" y="41.0" font-size="13" fill="#888">y</text>
+    <text x="80.0" y="195.0" font-size="10" fill="#888" text-anchor="middle">-4</text>
+    <text x="174.0" y="283.5" font-size="10" fill="#888" text-anchor="end">-4</text>
+    <text x="130.0" y="195.0" font-size="10" fill="#888" text-anchor="middle">-2</text>
+    <text x="174.0" y="233.5" font-size="10" fill="#888" text-anchor="end">-2</text>
+    <text x="230.0" y="195.0" font-size="10" fill="#888" text-anchor="middle">2</text>
+    <text x="174.0" y="133.5" font-size="10" fill="#888" text-anchor="end">2</text>
+    <text x="280.0" y="195.0" font-size="10" fill="#888" text-anchor="middle">4</text>
+    <text x="174.0" y="83.5" font-size="10" fill="#888" text-anchor="end">4</text>
+    <line id="lineexp-line" stroke="#2980b9" stroke-width="2.5" stroke-linecap="round"/>
+    <circle id="lineexp-yint" r="4.5" fill="#27ae60"/>
+    
+  </svg>
+  <div class="lineexp-ctrl">
+    <label for="lineexp-m">slope&nbsp;m</label>
+    <input id="lineexp-m" type="range" min="-3" max="3" step="0.5" value="1"
+       aria-label="slope m from negative 3 to 3">
+    <output id="lineexp-mo">1</output>
+    <label for="lineexp-b">intercept&nbsp;b</label>
+    <input id="lineexp-b" type="range" min="-5" max="5" step="1" value="0"
+       aria-label="y-intercept b from negative 5 to 5">
+    <output id="lineexp-bo">0</output>
+  </div>
+  
+  <script>(function(){
+    var root=document.currentScript.parentNode;
+    if(!root||root.dataset.init==="1"){return;} root.dataset.init="1";
+    
+  var LIM=6, W=360, PAD=30;
+  var SX=(W-2*PAD)/(2*LIM);
+  function px(x){return PAD+(x+LIM)*SX;}
+  function py(y){return PAD+(LIM-y)*SX;}
+  function fmt(v){v=Math.round(v*100)/100; return (v===Math.round(v))?(''+Math.round(v)):(''+v);}
+
+    var DRAG=false;
+    var line=root.querySelector("#lineexp-line");
+    var yint=root.querySelector("#lineexp-yint");
+    var eq=root.querySelector("#lineexp-eq");
+    var sm=root.querySelector("#lineexp-m"), sb=root.querySelector("#lineexp-b");
+    var om=root.querySelector("#lineexp-mo"), ob=root.querySelector("#lineexp-bo");
+    var pt=root.querySelector("#lineexp-pt");
+    var drop=root.querySelector("#lineexp-drop");
+    var xy=root.querySelector("#lineexp-xy");
+    var ptx=0;   // graph x of the draggable point (clamped to [-LIM,LIM])
+
+    function eqText(m,b){
+      var s = (m===0)?"":(m===1)?"x":(m===-1)?"-x":(fmt(m)+"x");
+      var t;
+      if(b===0){ t = s?"":"0"; }
+      else if(s===""){ t = fmt(b); }
+      else { t = (b>0? " + ":" - ")+fmt(Math.abs(b)); }
+      return "y = " + ((s||t)? (s+t) : "0");
+    }
+    // y on the line at graph-x, clamped so the segment stays inside the box.
+    function lineEndpoints(m,b){
+      // draw across full width; clip y visually via the viewBox (fine for LIM range)
+      return [[-LIM, m*(-LIM)+b],[LIM, m*LIM+b]];
+    }
+    function draw(){
+      var m=parseFloat(sm.value), b=parseFloat(sb.value);
+      om.textContent=fmt(m); ob.textContent=fmt(b);
+      var e=lineEndpoints(m,b);
+      line.setAttribute("x1",px(e[0][0])); line.setAttribute("y1",py(e[0][1]));
+      line.setAttribute("x2",px(e[1][0])); line.setAttribute("y2",py(e[1][1]));
+      yint.setAttribute("cx",px(0)); yint.setAttribute("cy",py(b));
+      eq.textContent=eqText(m,b);
+      if(DRAG){
+        if(ptx<-LIM)ptx=-LIM; if(ptx>LIM)ptx=LIM;
+        var yv=m*ptx+b;
+        pt.setAttribute("cx",px(ptx)); pt.setAttribute("cy",py(yv));
+        // dotted drop-line to the x-axis
+        drop.setAttribute("x1",px(ptx)); drop.setAttribute("y1",py(yv));
+        drop.setAttribute("x2",px(ptx)); drop.setAttribute("y2",py(0));
+        xy.textContent="("+fmt(ptx)+",\u00a0"+fmt(yv)+")";
+        pt.setAttribute("aria-valuetext","x equals "+fmt(ptx)+", y equals "+fmt(yv));
+      }
+    }
+    sm.addEventListener("input",draw); sb.addEventListener("input",draw);
+
+    if(DRAG && pt){
+      var svg=line.ownerSVGElement;
+      function gx(evt){ // pointer clientX -> graph x (inverse of px())
+        var r=svg.getBoundingClientRect();
+        var sxpx=(evt.clientX-r.left)*(W/r.width); // into viewBox px
+        var gxv=(sxpx-PAD)/SX-LIM;
+        gxv=Math.round(gxv*2)/2;                   // snap to half-units
+        if(gxv<-LIM)gxv=-LIM; if(gxv>LIM)gxv=LIM; return gxv;
+      }
+      var dragging=false;
+      pt.addEventListener("pointerdown",function(e){
+        dragging=true; pt.setPointerCapture(e.pointerId);
+        pt.style.cursor="grabbing"; e.preventDefault();
+      });
+      pt.addEventListener("pointermove",function(e){
+        if(!dragging)return; ptx=gx(e); draw();
+      });
+      function release(e){
+        dragging=false; pt.style.cursor="grab";
+        if(e&&e.pointerId!=null&&pt.releasePointerCapture){
+          try{pt.releasePointerCapture(e.pointerId);}catch(_){}
+        }
+      }
+      pt.addEventListener("pointerup",release);
+      pt.addEventListener("pointercancel",release);
+      pt.addEventListener("keydown",function(e){
+        var step=(e.key==="ArrowLeft")?-0.5:(e.key==="ArrowRight")?0.5:0;
+        if(step!==0){ ptx+=step; if(ptx<-LIM)ptx=-LIM; if(ptx>LIM)ptx=LIM;
+          draw(); e.preventDefault(); }
+      });
+    }
+    draw();
+  })();</script>
+</div><figcaption><b>Figure 5.4.f3</b> &mdash; Slope-intercept explorer: drag m to tilt the line and b to slide it up or down. The green dot is the y-intercept; the readout shows the line&#x27;s equation. Starts at y = x.</figcaption></figure>
+</main>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  if (typeof renderMathInElement === 'function') {
+    renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '\\(', right: '\\)', display: false}], throwOnError: false});
+  }
+});
+</script>
+</body>
+</html>

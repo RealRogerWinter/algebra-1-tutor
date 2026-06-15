@@ -1,3 +1,11 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Figure 1.1.f1</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+<style>
 /* ============================================================================
    Algebra 1 — visual design language (warm, friendly, calm; for a true beginner).
    One stylesheet shared by the textbook, student guide, tutor guide, and landing.
@@ -326,3 +334,193 @@ body[data-surface="textbook"] #rc-toast.show{opacity:1; visibility:visible}
   body[data-surface="textbook"] #rc-toast{transition:opacity .18s ease, transform .18s ease}
   body[data-surface="textbook"] #rc-toast.show{transform:translateX(-50%) translateY(-2px)}
 }
+
+.fig-standalone{max-width:760px;margin:1.4rem auto;padding:0 1rem}
+</style>
+<script>try{if(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)document.documentElement.classList.add('dark');}catch(e){}</script>
+</head>
+<body data-surface="textbook">
+<main class="fig-standalone">
+<figure class="fig viz" id="fig-1.1.f1">
+<div class="bal-wrap viz-iq" data-slug="bal">
+  <style>
+    .bal-wrap{max-width:30rem;margin-inline:auto}
+    .bal-svg{max-width:100%;height:auto;display:block;margin-inline:auto}
+    .bal-eq{text-align:center;font-size:1.45rem;letter-spacing:.01em;
+      margin:.2rem 0 .1rem;color:var(--ink)}
+    .bal-eq .v{color:var(--violet);font-weight:600}
+    .bal-note{text-align:center;color:var(--ink-soft);
+      font-size:.95rem;min-height:1.3em;margin-bottom:.6rem}
+    .bal-note.win{color:var(--leaf);font-weight:600}
+    .bal-controls{display:flex;gap:.6rem;justify-content:center;
+      flex-wrap:wrap;margin-top:.2rem}
+    .iq-btn{font:inherit;font-size:.95rem;cursor:pointer;
+      padding:.5rem .9rem;border-radius:var(--radius-sm,11px);
+      border:1.5px solid var(--rule);background:var(--card);
+      color:var(--ink);box-shadow:var(--shadow);
+      transition:transform .12s ease,border-color .12s ease,
+        background .12s ease,opacity .12s ease}
+    .iq-btn:hover:not(:disabled){transform:translateY(-1px);
+      border-color:var(--blue)}
+    .iq-btn:active:not(:disabled){transform:translateY(0)}
+    .iq-btn:focus-visible{outline:2.5px solid var(--blue);
+      outline-offset:2px}
+    .iq-btn.primary{border-color:var(--blue);color:var(--blue)}
+    .iq-btn:disabled{opacity:.45;cursor:default;box-shadow:none}
+  </style>
+
+  <p class="bal-eq" aria-live="polite"></p>
+  <p class="bal-note" aria-live="polite">Both pans weigh the same, so the
+    scale is level. Keep it that way.</p>
+  
+<svg viewBox="0 0 320 230" xmlns="http://www.w3.org/2000/svg"
+     font-family="inherit" class="bal-svg" aria-hidden="true">
+  <!-- base + stand -->
+  <line x1="160" y1="70" x2="160" y2="178" stroke="#888" stroke-width="2.5"
+        stroke-linecap="round"/>
+  <line x1="116" y1="182" x2="204" y2="182" stroke="#888" stroke-width="2.5"
+        stroke-linecap="round"/>
+  <circle cx="160" cy="70" r="6" fill="#888"/>
+  <!-- level beam -->
+  <line x1="48" y1="70" x2="272" y2="70" stroke="#8e44ad" stroke-width="2.5"
+        stroke-linecap="round"/>
+  <!-- hangers -->
+  <line x1="78" y1="70" x2="78" y2="104" stroke="#888" stroke-width="2"
+        stroke-linecap="round"/>
+  <line x1="242" y1="70" x2="242" y2="104" stroke="#888" stroke-width="2"
+        stroke-linecap="round"/>
+  <!-- pans -->
+  <path d="M40 104 Q78 138 116 104" fill="none" stroke="#2980b9"
+        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M204 104 Q242 138 280 104" fill="none" stroke="#2980b9"
+        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- contents are filled in by script, into these groups -->
+  <g class="bal-left"></g>
+  <g class="bal-right"></g>
+</svg>
+  <p style="text-align:center;color:var(--ink-soft);font-size:.92rem;
+    margin:.5rem 0 0">Goal: get the blue&nbsp;<b style="color:var(--blue)">x</b>
+    box alone.</p>
+  <div class="bal-controls">
+    <button type="button" class="iq-btn primary" data-act="sub">
+      Take 3 from both sides</button>
+    <button type="button" class="iq-btn" data-act="reset">Start over</button>
+  </div>
+</div>
+
+<script>
+(function(){
+  var slug = "bal";
+  // Find the most recently inserted, not-yet-initialised widget of this kind.
+  var roots = document.querySelectorAll('.'+slug+'-wrap[data-slug="'+slug+'"]');
+  var root = null;
+  for (var i = roots.length - 1; i >= 0; i--) {
+    if (!roots[i].dataset.iqReady) { root = roots[i]; break; }
+  }
+  if (!root) return;
+  root.dataset.iqReady = "1";
+
+  var SVGNS = "http://www.w3.org/2000/svg";
+  var leftG  = root.querySelector('.'+slug+'-left');
+  var rightG = root.querySelector('.'+slug+'-right');
+  var eqEl   = root.querySelector('.'+slug+'-eq');
+  var noteEl = root.querySelector('.'+slug+'-note');
+  var btnSub = root.querySelector('[data-act="sub"]');
+  var btnRst = root.querySelector('[data-act="reset"]');
+
+  // state: left side = one x-box + `units` unit weights; right side = `right`.
+  var units, right;
+
+  function unitDot(g, cx, cy){
+    var c = document.createElementNS(SVGNS, "circle");
+    c.setAttribute("cx", cx); c.setAttribute("cy", cy);
+    c.setAttribute("r", 7);
+    c.setAttribute("fill", "#c0392b");
+    c.setAttribute("opacity", "0.92");
+    g.appendChild(c);
+  }
+  function xBox(g, cx, cy){
+    var r = document.createElementNS(SVGNS, "rect");
+    var w = 30, h = 24;
+    r.setAttribute("x", cx - w/2); r.setAttribute("y", cy - h/2);
+    r.setAttribute("width", w);    r.setAttribute("height", h);
+    r.setAttribute("rx", 6);
+    r.setAttribute("fill", "none");
+    r.setAttribute("stroke", "#2980b9");
+    r.setAttribute("stroke-width", "2.5");
+    g.appendChild(r);
+    var t = document.createElementNS(SVGNS, "text");
+    t.setAttribute("x", cx); t.setAttribute("y", cy);
+    t.setAttribute("text-anchor", "middle");
+    t.setAttribute("dominant-baseline", "central");
+    t.setAttribute("font-style", "italic");
+    t.setAttribute("font-size", "15");
+    t.setAttribute("fill", "#2980b9");
+    t.textContent = "x";
+    g.appendChild(t);
+  }
+  // Lay items in a tidy row, centred under a pan whose centre x is `cx`.
+  function rowAt(g, cx, hasX, dots){
+    while (g.firstChild) g.removeChild(g.firstChild);
+    var items = (hasX ? 1 : 0) + dots;
+    var step = 20, y = 92;
+    var startX = cx - (items - 1) * step / 2;
+    var k = 0;
+    if (hasX) { xBox(g, startX + k * step, y); k++; }
+    for (var d = 0; d < dots; d++) { unitDot(g, startX + k * step, y); k++; }
+  }
+
+  function solved(){ return units === 0; }
+
+  function draw(){
+    rowAt(leftG, 78, true, units);          // left pan centre x = 78
+    rowAt(rightG, 242, false, right);       // right pan centre x = 242
+
+    var leftStr = "x" + (units > 0 ? " + " + units : "");
+    eqEl.innerHTML = leftStr + " = <span class=\"v\">" + right + "</span>";
+
+    if (solved()) {
+      noteEl.textContent = "Balanced and solved \u2014 x weighs " + right
+        + ".  x = " + right;
+      noteEl.classList.add("win");
+      btnSub.disabled = true;
+    } else {
+      noteEl.textContent = "Still balanced. Take 3 more from each side to free x.";
+      noteEl.classList.remove("win");
+      btnSub.disabled = false;
+    }
+  }
+
+  function reset(){
+    units = 3; right = 7;     // x + 3 = 7
+    btnSub.disabled = false;
+    draw();
+    noteEl.textContent = "Both pans weigh the same, so the scale is level. "
+      + "Keep it that way.";
+    noteEl.classList.remove("win");
+  }
+
+  btnSub.addEventListener("click", function(){
+    if (solved()) return;
+    // Same operation, both sides => stays balanced.
+    units -= 3; right -= 3;   // -> x = 4
+    if (units < 0) units = 0;
+    draw();
+  });
+  btnRst.addEventListener("click", reset);
+
+  reset();
+})();
+</script><figcaption><b>Figure 1.1.f1</b> &mdash; Balance scale for x + 3 = 7: subtract 3 from both pans, the beam stays level, x is freed (x = 4).</figcaption></figure>
+</main>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  if (typeof renderMathInElement === 'function') {
+    renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '\\(', right: '\\)', display: false}], throwOnError: false});
+  }
+});
+</script>
+</body>
+</html>

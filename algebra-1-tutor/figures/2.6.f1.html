@@ -1,3 +1,11 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Figure 2.6.f1</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+<style>
 /* ============================================================================
    Algebra 1 — visual design language (warm, friendly, calm; for a true beginner).
    One stylesheet shared by the textbook, student guide, tutor guide, and landing.
@@ -326,3 +334,80 @@ body[data-surface="textbook"] #rc-toast.show{opacity:1; visibility:visible}
   body[data-surface="textbook"] #rc-toast{transition:opacity .18s ease, transform .18s ease}
   body[data-surface="textbook"] #rc-toast.show{transform:translateX(-50%) translateY(-2px)}
 }
+
+.fig-standalone{max-width:760px;margin:1.4rem auto;padding:0 1rem}
+</style>
+<script>try{if(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)document.documentElement.classList.add('dark');}catch(e){}</script>
+</head>
+<body data-surface="textbook">
+<main class="fig-standalone">
+<figure class="fig viz" id="fig-2.6.f1">
+<style>
+.awe{
+  --awe-x:#2980b9; --awe-k:#a9740f;
+  max-width:30rem; margin:0 auto;
+  background:var(--card); border:1px solid var(--rule);
+  border-left:4px solid var(--blue);
+  border-radius:var(--radius); box-shadow:var(--shadow);
+  padding:1.15rem 1.35rem 1.3rem;
+}
+.awe-head{
+  font-weight:600; color:var(--blue);
+  font-size:.82rem; letter-spacing:.04em; text-transform:uppercase;
+  margin:0 0 .15rem;
+}
+.awe-prompt{
+  color:var(--ink-soft); font-size:.95rem; margin:0 0 .35rem;
+}
+.awe-step{
+  background:var(--paper);
+  border:1px solid var(--rule); border-radius:var(--radius-sm,11px);
+  padding:.5rem .85rem; text-align:center;
+}
+.awe-step .katex{ font-size:1.18em; }
+.awe-step.is-answer{
+  border-color:var(--leaf);
+  box-shadow:inset 0 0 0 1px var(--leaf);
+}
+.awe-conn{
+  display:flex; align-items:center; justify-content:center; gap:.6rem;
+  margin:.32rem auto; color:var(--ink-soft);
+  font-size:.86rem; line-height:1.3;
+}
+.awe-conn::before,.awe-conn::after{
+  content:""; height:1px; flex:1 1 1.4rem; max-width:2.4rem;
+  background:var(--rule);
+}
+.awe-conn .op{
+  display:inline-block; padding:.12rem .6rem;
+  background:var(--card); border:1px solid var(--rule);
+  border-radius:999px; white-space:nowrap;
+}
+.awe-conn .arr{ color:var(--blue); font-weight:600; }
+.awe-legend{
+  display:flex; flex-wrap:wrap; gap:.4rem 1.1rem;
+  margin:.85rem 0 0; padding-top:.7rem;
+  border-top:1px solid var(--rule);
+  color:var(--ink-soft); font-size:.82rem;
+}
+.awe-legend b{ font-weight:600; }
+.awe-legend .sw{
+  display:inline-block; width:.7rem; height:.7rem; border-radius:3px;
+  vertical-align:-1px; margin-right:.32rem;
+}
+.awe-legend .sw-x{ background:var(--awe-x); }
+.awe-legend .sw-k{ background:var(--awe-k); }
+</style>
+<div class="awe" id="awe-fractions"><p class="awe-head">Worked example</p><p class="awe-prompt">Solve for x:  x/2 + x/3 = 5.</p><div class="awe-step">$$\textcolor{#2980b9}{\dfrac{x}{2}} + \textcolor{#2980b9}{\dfrac{x}{3}} = \textcolor{#a9740f}{5}$$</div><div class="awe-conn"><span class="arr">&#8595;</span><span class="op">multiply every term by&nbsp;6 (the LCD)</span></div><div class="awe-step">$$\textcolor{#2980b9}{3x} + \textcolor{#2980b9}{2x} = \textcolor{#a9740f}{30}$$</div><div class="awe-conn"><span class="arr">&#8595;</span><span class="op">combine the x&#8209;terms</span></div><div class="awe-step">$$\textcolor{#2980b9}{5x} = \textcolor{#a9740f}{30}$$</div><div class="awe-conn"><span class="arr">&#8595;</span><span class="op">divide both sides by&nbsp;5</span></div><div class="awe-step is-answer">$$\textcolor{#2980b9}{x} = \textcolor{#a9740f}{6}$$</div><div class="awe-legend"><span><span class="sw sw-x"></span><b>x&#8209;terms</b></span><span><span class="sw sw-k"></span><b>constants</b></span></div></div><figcaption><b>Figure 2.6.f1</b> &mdash; Clear the fractions: x/2 + x/3 = 5</figcaption></figure>
+</main>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  if (typeof renderMathInElement === 'function') {
+    renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '\\(', right: '\\)', display: false}], throwOnError: false});
+  }
+});
+</script>
+</body>
+</html>

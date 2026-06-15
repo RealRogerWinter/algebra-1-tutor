@@ -27,6 +27,9 @@ jobs:
           name: Viz figures coded + sympy-vetted + in sync with markers
           command: python _verification/viz_figures.py --check
       - run:
+          name: Viz figure artifacts bundled + current
+          command: python _verification/build_viz_artifacts.py --check
+      - run:
           name: HTML textbook up to date
           command: python _verification/build_textbook.py --check
       - run:

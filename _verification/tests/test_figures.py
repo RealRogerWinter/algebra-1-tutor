@@ -45,3 +45,19 @@ def test_render_valid_xml():
 def test_figure_lint_clean():
     import check_alignment as ca
     assert ca.figure_lint() == []          # anchors <-> SVGs <-> accurate registry all aligned
+
+
+def test_figure_lint_covers_viz_artifacts():
+    import os
+    import check_alignment as ca
+    import build_viz_artifacts as bva
+    bva.build()
+    assert ca.figure_lint() == []
+    # the lint must FAIL if a viz artifact goes stale
+    p = os.path.join(bva.FIG_DIR, "3.2.f1.html")
+    orig = open(p, encoding="utf-8").read()
+    try:
+        open(p, "w", encoding="utf-8").write(orig + "<!--x-->")
+        assert any("3.2.f1.html" in i for i in ca.figure_lint())
+    finally:
+        open(p, "w", encoding="utf-8", newline="\n").write(orig.replace("\r\n", "\n"))

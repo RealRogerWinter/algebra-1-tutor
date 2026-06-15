@@ -1,3 +1,11 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Figure A.3.f1</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+<style>
 /* ============================================================================
    Algebra 1 — visual design language (warm, friendly, calm; for a true beginner).
    One stylesheet shared by the textbook, student guide, tutor guide, and landing.
@@ -326,3 +334,64 @@ body[data-surface="textbook"] #rc-toast.show{opacity:1; visibility:visible}
   body[data-surface="textbook"] #rc-toast{transition:opacity .18s ease, transform .18s ease}
   body[data-surface="textbook"] #rc-toast.show{transform:translateX(-50%) translateY(-2px)}
 }
+
+.fig-standalone{max-width:760px;margin:1.4rem auto;padding:0 1rem}
+</style>
+<script>try{if(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)document.documentElement.classList.add('dark');}catch(e){}</script>
+</head>
+<body data-surface="textbook">
+<main class="fig-standalone">
+<figure class="fig viz" id="fig-A.3.f1"><div style="max-width:440px;margin:0 auto">
+  <table style="border-collapse:collapse;width:100%;background:var(--card);border-radius:var(--radius-sm);overflow:hidden;font-size:.95em">
+    <caption style="color:var(--ink-soft);font-size:.85em;text-align:left;padding-bottom:.3rem">Owning a pet vs. where people live (n = 50)</caption>
+    <thead>
+      <tr>
+        <th style="border:1px solid var(--rule);padding:.45rem .6rem;background:var(--card-2)"></th>
+        <th style="border:1px solid var(--rule);padding:.45rem .6rem;background:var(--card-2);text-align:center">Apartment</th>
+        <th style="border:1px solid var(--rule);padding:.45rem .6rem;background:var(--card-2);text-align:center">House</th>
+        <th style="border:1px solid var(--rule);padding:.45rem .6rem;background:var(--card-2);text-align:center">Total</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th style="border:1px solid var(--rule);padding:.45rem .6rem;background:var(--card-2);text-align:left">Pet: Yes</th>
+        <td style="border:1px solid var(--rule);padding:.45rem .6rem;text-align:center">6</td>
+        <td style="border:1px solid var(--rule);padding:.45rem .6rem;text-align:center;background:rgba(169,116,15,0.16);outline:2px solid #a9740f;outline-offset:-2px;font-weight:700;color:#a9740f">24</td>
+        <td style="border:1px solid var(--rule);padding:.45rem .6rem;text-align:center;color:var(--ink-soft)">30</td>
+      </tr>
+      <tr>
+        <th style="border:1px solid var(--rule);padding:.45rem .6rem;background:var(--card-2);text-align:left">Pet: No</th>
+        <td style="border:1px solid var(--rule);padding:.45rem .6rem;text-align:center">14</td>
+        <td style="border:1px solid var(--rule);padding:.45rem .6rem;text-align:center">6</td>
+        <td style="border:1px solid var(--rule);padding:.45rem .6rem;text-align:center;color:var(--ink-soft)">20</td>
+      </tr>
+      <tr>
+        <th style="border:1px solid var(--rule);padding:.45rem .6rem;background:var(--card-2);text-align:left">Total</th>
+        <td style="border:1px solid var(--rule);padding:.45rem .6rem;text-align:center;color:var(--ink-soft)">20</td>
+        <td style="border:1px solid var(--rule);padding:.45rem .6rem;text-align:center;color:var(--ink-soft)">30</td>
+        <td style="border:1px solid var(--rule);padding:.45rem .6rem;text-align:center;color:var(--ink-soft);font-weight:700">50</td>
+      </tr>
+    </tbody>
+  </table>
+  <p style="margin:.7rem 0 0;color:var(--ink-soft);font-size:.92em;line-height:1.5">
+    The gold cell is the busy corner. Comparing down the columns (within each place):
+  </p>
+  $$\text{apartment}:\ \frac{6}{20}=0.30=30\%
+     \qquad \text{house}:\ \frac{24}{30}=0.80=80\%$$
+  <p style="margin:.4rem 0 0;color:var(--ink-soft);font-size:.92em;line-height:1.5">
+    80% of house-dwellers have a pet versus 30% in apartments,
+    so where you live and owning a pet are <strong style="color:var(--ink)">associated</strong>.
+  </p>
+</div><figcaption><b>Figure A.3.f1</b> &mdash; Two-way table (pets vs. housing, n = 50) with row and column totals; the highlighted cell and the two column percentages reveal an association.</figcaption></figure>
+</main>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  if (typeof renderMathInElement === 'function') {
+    renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '\\(', right: '\\)', display: false}], throwOnError: false});
+  }
+});
+</script>
+</body>
+</html>

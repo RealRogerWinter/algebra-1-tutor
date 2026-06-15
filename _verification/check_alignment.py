@@ -149,6 +149,8 @@ def figure_lint():
         issues.append(f"f-anchor {{#{c}}} has no bundled figures/{c}.svg")
     for f in sorted(svg_files - anchor_f):
         issues.append(f"figure SVG {f}.svg has no f-anchor in any unit")
+    import build_viz_artifacts as _bva     # viz figures bundled as <code>.html, current + 1:1
+    issues += _bva.check()
     return issues
 
 

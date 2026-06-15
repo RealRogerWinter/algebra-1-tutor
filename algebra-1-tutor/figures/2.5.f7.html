@@ -1,3 +1,11 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Figure 2.5.f7</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+<style>
 /* ============================================================================
    Algebra 1 — visual design language (warm, friendly, calm; for a true beginner).
    One stylesheet shared by the textbook, student guide, tutor guide, and landing.
@@ -326,3 +334,23 @@ body[data-surface="textbook"] #rc-toast.show{opacity:1; visibility:visible}
   body[data-surface="textbook"] #rc-toast{transition:opacity .18s ease, transform .18s ease}
   body[data-surface="textbook"] #rc-toast.show{transform:translateX(-50%) translateY(-2px)}
 }
+
+.fig-standalone{max-width:760px;margin:1.4rem auto;padding:0 1rem}
+</style>
+<script>try{if(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)document.documentElement.classList.add('dark');}catch(e){}</script>
+</head>
+<body data-surface="textbook">
+<main class="fig-standalone">
+<figure class="fig viz" id="fig-2.5.f7"><figure style="margin:0"><svg viewBox="0 0 540 114" xmlns="http://www.w3.org/2000/svg" width="100%" font-family="inherit" stroke-linecap="round" stroke-linejoin="round"><defs><marker id="fr-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#a9740f"/></marker></defs><text x="180" y="44" font-size="34" font-weight="700" fill="#2980b9" text-anchor="middle">2</text><line x1="154" y1="54" x2="206" y2="54" stroke="#2980b9" stroke-width="2.5"/><text x="180" y="90" font-size="34" font-weight="700" fill="#2980b9" text-anchor="middle">3</text><path d="M 230 49 C 275 24, 265 24, 310 49" fill="none" stroke="#a9740f" stroke-width="2.5" marker-end="url(#fr-arrow)"/><text x="270.0" y="22" font-size="14" fill="#a9740f" text-anchor="middle">flip</text><text x="360" y="44" font-size="34" font-weight="700" fill="#8e44ad" text-anchor="middle">3</text><line x1="334" y1="54" x2="386" y2="54" stroke="#8e44ad" stroke-width="2.5"/><text x="360" y="90" font-size="34" font-weight="700" fill="#8e44ad" text-anchor="middle">2</text></svg><figcaption style="margin-top:.4rem;color:var(--ink-soft)">The reciprocal flips top and bottom. A number times its reciprocal always goes to one, which is exactly what undoes a fraction that multiplies x: $$\frac23 \times \frac32 = \frac{6}{6} = 1.$$</figcaption></figure><figcaption><b>Figure 2.5.f7</b> &mdash; Reciprocal: 2/3 flips to 3/2 and their product is 1</figcaption></figure>
+</main>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  if (typeof renderMathInElement === 'function') {
+    renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '\\(', right: '\\)', display: false}], throwOnError: false});
+  }
+});
+</script>
+</body>
+</html>
