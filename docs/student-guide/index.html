@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Algebra 1 — Student Guide — Algebra 1</title>
+<title>Your path through Algebra 1 — Algebra 1</title>
 <script>try{if(localStorage.getItem("a1-theme")==="dark")document.documentElement.classList.add("dark");}catch(e){}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,55 +13,275 @@
 </head>
 <body data-surface="guide">
 <header class="topbar">
-  <nav><a class="home" href="index.html">Algebra&nbsp;1</a></nav>
+  <button id="menu" class="menu" type="button" aria-label="Open or close the contents menu" aria-expanded="false">☰&nbsp;Contents</button>
+  <a class="home" href="../index.html">Algebra&nbsp;1</a>
   <span class="sp"></span>
-  <button id="theme" type="button" aria-label="Toggle light or dark theme">◐ Theme</button>
+  <button id="theme" type="button" aria-label="Toggle light or dark theme">◐&nbsp;Theme</button>
 </header>
+<div class="shell">
+<aside class="sidenav" id="sidenav">
+<nav class="snav" aria-label="Contents">
+<a class="snav-top" href="../textbook/how-to-use.html">How to use this book</a>
+<a class="snav-top" href="../textbook/index.html">All units</a>
+<ol class="snav-units">
+<li class="">
+<a class="snav-unit" href="../textbook/unit-01.html">Unit 1. Foundations &amp; the Language of Algebra</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="../textbook/unit-01-1.html"><span class="ln">1.1</span> Variables and the meaning of equations</a></li>
+<li><a class="snav-lesson" href="../textbook/unit-01-2.html"><span class="ln">1.2</span> The number system &amp; the number line</a></li>
+<li><a class="snav-lesson" href="../textbook/unit-01-3.html"><span class="ln">1.3</span> Order of operations</a></li>
+<li><a class="snav-lesson" href="../textbook/unit-01-4.html"><span class="ln">1.4</span> Negative numbers</a></li>
+<li><a class="snav-lesson" href="../textbook/unit-01-5.html"><span class="ln">1.5</span> Expressions vs. equations; evaluating expressions</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="../textbook/unit-02.html">Unit 2. Solving Linear Equations</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="../textbook/unit-02-1.html"><span class="ln">2.1</span> Inverse operations &amp; one-step equations</a></li>
+<li><a class="snav-lesson" href="../textbook/unit-02-2.html"><span class="ln">2.2</span> Two-step equations</a></li>
+<li><a class="snav-lesson" href="../textbook/unit-02-3.html"><span class="ln">2.3</span> Combining like terms &amp; the distributive property</a></li>
+<li><a class="snav-lesson" href="../textbook/unit-02-4.html"><span class="ln">2.4</span> Variables on both sides</a></li>
+<li><a class="snav-lesson" href="../textbook/unit-02-5.html"><span class="ln">2.5</span> Fraction refresher</a></li>
+<li><a class="snav-lesson" href="../textbook/unit-02-6.html"><span class="ln">2.6</span> Equations with fractions</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="../textbook/unit-03.html">Unit 3. Proportional Reasoning (the bridge to linearity)</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="../textbook/unit-03-1.html"><span class="ln">3.1</span> Ratios and rates</a></li>
+<li><a class="snav-lesson" href="../textbook/unit-03-2.html"><span class="ln">3.2</span> Proportions &amp; cross-multiplication</a></li>
+<li><a class="snav-lesson" href="../textbook/unit-03-3.html"><span class="ln">3.3</span> Percents</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="../textbook/unit-04.html">Unit 4. Introducing Functions</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="../textbook/unit-04-1.html"><span class="ln">4.1</span> What is a function</a></li>
+<li><a class="snav-lesson" href="../textbook/unit-04-2.html"><span class="ln">4.2</span> Function notation f(x), domain &amp; range</a></li>
+<li><a class="snav-lesson" href="../textbook/unit-04-3.html"><span class="ln">4.3</span> Multiple representations; linear vs. nonlinear</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="../textbook/unit-05.html">Unit 5. Linear Functions &amp; Their Graphs</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="../textbook/unit-05-1.html"><span class="ln">5.1</span> The coordinate plane</a></li>
+<li><a class="snav-lesson" href="../textbook/unit-05-2.html"><span class="ln">5.2</span> Graphing linear equations from a table</a></li>
+<li><a class="snav-lesson" href="../textbook/unit-05-3.html"><span class="ln">5.3</span> Slope</a></li>
+<li><a class="snav-lesson" href="../textbook/unit-05-4.html"><span class="ln">5.4</span> Slope-intercept form y = mx + b</a></li>
+<li><a class="snav-lesson" href="../textbook/unit-05-5.html"><span class="ln">5.5</span> Writing equations of lines</a></li>
+<li><a class="snav-lesson" href="../textbook/unit-05-6.html"><span class="ln">5.6</span> x-intercepts, graphing by intercepts &amp; standard form</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="../textbook/unit-06.html">Unit 6. Modeling &amp; Translation</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="../textbook/unit-06-1.html"><span class="ln">6.1</span> Translating words into expressions and equations</a></li>
+<li><a class="snav-lesson" href="../textbook/unit-06-2.html"><span class="ln">6.2</span> Classic word problems (number, age, distance, value &amp; relationship)</a></li>
+<li><a class="snav-lesson" href="../textbook/unit-06-3.html"><span class="ln">6.3</span> Scatter plots &amp; line of best fit (a first taste of data)</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="../textbook/unit-07.html">Unit 7. Systems of Equations</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="../textbook/unit-07-1.html"><span class="ln">7.1</span> Solving by graphing</a></li>
+<li><a class="snav-lesson" href="../textbook/unit-07-2.html"><span class="ln">7.2</span> Substitution</a></li>
+<li><a class="snav-lesson" href="../textbook/unit-07-3.html"><span class="ln">7.3</span> Elimination</a></li>
+<li><a class="snav-lesson" href="../textbook/unit-07-4.html"><span class="ln">7.4</span> Special cases &amp; applications</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="../textbook/unit-08.html">Unit 8. Inequalities</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="../textbook/unit-08-1.html"><span class="ln">8.1</span> One-variable inequalities</a></li>
+<li><a class="snav-lesson" href="../textbook/unit-08-2.html"><span class="ln">8.2</span> Compound inequalities</a></li>
+<li><a class="snav-lesson" href="../textbook/unit-08-3.html"><span class="ln">8.3</span> Absolute value: graphs &amp; distance</a></li>
+<li><a class="snav-lesson" href="../textbook/unit-08-4.html"><span class="ln">8.4</span> Graphing linear inequalities (two variables) &amp; systems</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="../textbook/unit-09.html">Unit 9. Sequences &amp; Exponential Functions</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="../textbook/unit-09-1.html"><span class="ln">9.1</span> Arithmetic &amp; geometric sequences as functions</a></li>
+<li><a class="snav-lesson" href="../textbook/unit-09-2.html"><span class="ln">9.2</span> Exponential growth &amp; decay; linear vs. exponential</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="../textbook/unit-10.html">Unit 10. Exponents &amp; Polynomials</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="../textbook/unit-10-1.html"><span class="ln">10.1</span> Exponent rules (including zero &amp; negative exponents)</a></li>
+<li><a class="snav-lesson" href="../textbook/unit-10-2.html"><span class="ln">10.2</span> Scientific notation</a></li>
+<li><a class="snav-lesson" href="../textbook/unit-10-3.html"><span class="ln">10.3</span> Polynomials — terms, degree, standard form; add &amp; subtract</a></li>
+<li><a class="snav-lesson" href="../textbook/unit-10-4.html"><span class="ln">10.4</span> Multiplying polynomials</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="../textbook/unit-11.html">Unit 11. Factoring</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="../textbook/unit-11-1.html"><span class="ln">11.1</span> Greatest common factor (GCF)</a></li>
+<li><a class="snav-lesson" href="../textbook/unit-11-2.html"><span class="ln">11.2</span> Factoring trinomials x²+bx+c</a></li>
+<li><a class="snav-lesson" href="../textbook/unit-11-3.html"><span class="ln">11.3</span> Special patterns</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="../textbook/unit-12.html">Unit 12. Quadratic Functions &amp; Equations (the capstone)</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="../textbook/unit-12-1.html"><span class="ln">12.1</span> Square roots &amp; simplifying radicals</a></li>
+<li><a class="snav-lesson" href="../textbook/unit-12-2.html"><span class="ln">12.2</span> The simplest quadratics (x²=9 → two solutions)</a></li>
+<li><a class="snav-lesson" href="../textbook/unit-12-3.html"><span class="ln">12.3</span> Solving by factoring (zero-product property)</a></li>
+<li><a class="snav-lesson" href="../textbook/unit-12-4.html"><span class="ln">12.4</span> Completing the square</a></li>
+<li><a class="snav-lesson" href="../textbook/unit-12-5.html"><span class="ln">12.5</span> The quadratic formula &amp; the discriminant</a></li>
+<li><a class="snav-lesson" href="../textbook/unit-12-6.html"><span class="ln">12.6</span> Graphing parabolas</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="../textbook/appendix.html">Appendix. Data &amp; Statistics</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="../textbook/appendix-1.html"><span class="ln">A.1</span> One-variable statistics — center &amp; spread</a></li>
+<li><a class="snav-lesson" href="../textbook/appendix-2.html"><span class="ln">A.2</span> Two-variable data — line of best fit, correlation vs. causation</a></li>
+<li><a class="snav-lesson" href="../textbook/appendix-3.html"><span class="ln">A.3</span> Two-way tables</a></li>
+</ol>
+</li>
+</ol></nav>
+</aside>
+<div class="content">
 <main>
-<h1>Algebra 1 — Student Guide</h1>
+<div class="hero"><div class="hero-text"><div class="kicker">Student guide</div><h1>Your path through Algebra 1</h1><p class="lede">A self-paced path through Algebra 1, written for an adult who knows arithmetic and is meeting the rest of it for the first time. Read the textbook, work with the tutor, and practice — in order, or jump to whatever you need.</p></div><img class="hero-art" src="../assets/lines.jpg" alt=""></div>
+<h2>Start here</h2>
+<p>This course is built to be read on your own, at whatever pace suits you. Open the <a href="../textbook/how-to-use.html">textbook</a> and start with Lesson 1.1, or jump to the topic you need — each lesson explains itself, with worked examples to study and practice to try. There's no clock and nothing to keep up with.</p>
+<p>When you want a hand, ask Claude, your tutor. It has the whole book in front of it, so you can lean on it the way you'd lean on a patient person sitting beside you. Asking for help is part of how this works, not a sign you're behind.</p>
 
-<p class="subtitle">A self-paced path through Algebra 1 for an adult learner who knows arithmetic.
-Work with the tutor, read the textbook, and practice — in order, or jump to what you need.</p>
-
-<h2>How to use this course</h2>
+<h2>How the tutor helps</h2>
+<p>The tutor teaches one-on-one. A few things it's good for:</p>
 <ul>
-<li><b>The tutor</b> teaches one-on-one: it asks before it tells, checks every answer, and never rushes you. Ask it to start at the beginning, jump to a topic, or place you with a few quick questions.</li>
-<li><b>The textbook</b> (linked per unit below) has the worked examples, practice, and figures to read alongside.</li>
-<li><b>The Progress Card</b> is how you pick up where you left off: paste last session's card at the start of the next, and keep the <b>Due for review</b> line so old skills get mixed back in.</li>
-<li><b>Photos welcome:</b> snap your handwritten work and upload it — the tutor reads it back to confirm, then helps.</li>
+<li><b>Working a problem with you, one line at a time</b>, so you're doing the thinking instead of watching.</li>
+<li><b>Checking every answer</b> before it calls anything right or wrong — and assuming you might be the one who's right.</li>
+<li><b>Explaining a different way</b> when the first explanation doesn't land. A second picture often does it.</li>
+<li><b>Reading a photo of your handwritten work.</b> Snap a picture of what you wrote on paper; the tutor reads your steps back to confirm, then shows you where a line went sideways, if one did.</li>
+<li><b>Giving you more practice</b> when a skill is almost solid and you want a few more to lock it in.</li>
 </ul>
 
+<h2>Keeping your place: the Progress Card</h2>
+<p>Each conversation with the tutor starts fresh, so you carry your progress between sessions yourself. At a good stopping point, ask for a <b>Progress Card</b> — a short, readable note of where you are and what's next. Paste it back at the start of your next session and the tutor picks up right where you left off. Keep the <b>Due for review</b> line, too: it names a skill or two to mix back in, which is what keeps earlier work from fading.</p>
+
 <h2>Reference codes</h2>
-<p>Every worked example, practice problem, definition, and figure has a short code like <code>12.5.w2</code> (worked example 2 of lesson 12.5), <code>1.1.d3</code> (a definition), or <code>12.6.f1</code> (a figure). Quote one to the tutor — "explain 12.5.w2" — and it will pull that exact item up, re-check the math, and walk you through it.</p>
+<p>Every worked example, practice problem, definition, and figure has a short code. A code reads as place-then-item: <code>12.5.w2</code> is worked example 2 in Lesson 12.5, <code>5.3.4</code> is practice problem 4 in Lesson 5.3, <code>1.2.f1</code> is a figure, and <code>1.1.d3</code> is a definition. You'll see them beside items in the textbook, where they double as deep links you can bookmark.</p>
+<p>Their real use is pointing. Say "explain 12.5.w2" or "walk me through 5.3.4," and the tutor pulls that exact item up and works through it with you, re-checking the math as it goes. The <a href="../tutor-guide/index.html">tutor guide</a>'s extra problems use codes too, with a <code>T</code> in them, like <code>5.4.T1</code>.</p>
 
 <h2>The roadmap</h2>
-<section class="ug"><h3><a href="../textbook/unit-01.html">Unit 1: Foundations &amp; the Language of Algebra</a></h3><p>Variables, the equals sign as a balance, the number system &amp; number line, order of operations, negative numbers, expressions vs. equations</p><p class="u"><b>Builds on:</b> Arithmetic only</p><p class="u"><b>Lessons:</b> 1.1 Variables and the meaning of equations · 1.2 The number system &amp; the number line · 1.3 Order of operations · 1.4 Negative numbers · 1.5 Expressions vs. equations; evaluating expressions</p></section>
-<section class="ug"><h3><a href="../textbook/unit-02.html">Unit 2: Solving Linear Equations</a></h3><p>One- and two-step equations, like terms, distributive property, variables on both sides, fractions in equations</p><p class="u"><b>Builds on:</b> Unit 1 (esp. negatives, order of operations)</p><p class="u"><b>Lessons:</b> 2.1 Inverse operations &amp; one-step equations · 2.2 Two-step equations · 2.3 Combining like terms &amp; the distributive property · 2.4 Variables on both sides · 2.5 Fraction refresher · 2.6 Equations with fractions</p></section>
-<section class="ug"><h3><a href="../textbook/unit-03.html">Unit 3: Proportional Reasoning (the bridge to linearity)</a></h3><p>Ratios, rates, unit rate, proportions, percents</p><p class="u"><b>Builds on:</b> Unit 2 (solving), fraction comfort</p><p class="u"><b>Lessons:</b> 3.1 Ratios and rates · 3.2 Proportions &amp; cross-multiplication · 3.3 Percents</p></section>
-<section class="ug"><h3><a href="../textbook/unit-04.html">Unit 4: Introducing Functions</a></h3><p>What a function is, f(x) notation, domain &amp; range, table/graph/equation/words</p><p class="u"><b>Builds on:</b> Unit 2; helped by Unit 3 (rates)</p><p class="u"><b>Lessons:</b> 4.1 What is a function · 4.2 Function notation f(x), domain &amp; range · 4.3 Multiple representations; linear vs. nonlinear</p></section>
-<section class="ug"><h3><a href="../textbook/unit-05.html">Unit 5: Linear Functions &amp; Their Graphs</a></h3><p>Coordinate plane, graphing, slope, slope-intercept, writing equations of lines</p><p class="u"><b>Builds on:</b> Units 3 &amp; 4 (rate, functions)</p><p class="u"><b>Lessons:</b> 5.1 The coordinate plane · 5.2 Graphing linear equations from a table · 5.3 Slope · 5.4 Slope-intercept form y = mx + b · 5.5 Writing equations of lines · 5.6 x-intercepts, graphing by intercepts &amp; standard form</p></section>
-<section class="ug"><h3><a href="../textbook/unit-06.html">Unit 6: Modeling &amp; Translation</a></h3><p>Turning words into equations; number/age/distance/value &amp; relationship problems; intro scatter plots</p><p class="u"><b>Builds on:</b> Units 2 &amp; 5</p><p class="u"><b>Lessons:</b> 6.1 Translating words into expressions and equations · 6.2 Classic word problems (number, age, distance, value &amp; relationship) · 6.3 Scatter plots &amp; line of best fit (a first taste of data)</p></section>
-<section class="ug"><h3><a href="../textbook/unit-07.html">Unit 7: Systems of Equations</a></h3><p>Two equations, two unknowns: graphing, substitution, elimination, special cases</p><p class="u"><b>Builds on:</b> Units 5 &amp; 6</p><p class="u"><b>Lessons:</b> 7.1 Solving by graphing · 7.2 Substitution · 7.3 Elimination · 7.4 Special cases &amp; applications</p></section>
-<section class="ug"><h3><a href="../textbook/unit-08.html">Unit 8: Inequalities</a></h3><p>One-variable, the sign-flip, compound, absolute value, two-variable graphing</p><p class="u"><b>Builds on:</b> Units 2 &amp; 5</p><p class="u"><b>Lessons:</b> 8.1 One-variable inequalities · 8.2 Compound inequalities · 8.3 Absolute value: graphs &amp; distance · 8.4 Graphing linear inequalities (two variables) &amp; systems</p></section>
-<section class="ug"><h3><a href="../textbook/unit-09.html">Unit 9: Sequences &amp; Exponential Functions</a></h3><p>Arithmetic/geometric sequences as functions, exponential growth &amp; decay, linear vs. exponential</p><p class="u"><b>Builds on:</b> Unit 4 (functions); some Unit 5</p><p class="u"><b>Lessons:</b> 9.1 Arithmetic &amp; geometric sequences as functions · 9.2 Exponential growth &amp; decay; linear vs. exponential</p></section>
-<section class="ug"><h3><a href="../textbook/unit-10.html">Unit 10: Exponents &amp; Polynomials</a></h3><p>Exponent rules, scientific notation, polynomial operations, FOIL/area model</p><p class="u"><b>Builds on:</b> Unit 1 (exponents), Unit 2 (distributive)</p><p class="u"><b>Lessons:</b> 10.1 Exponent rules (including zero &amp; negative exponents) · 10.2 Scientific notation · 10.3 Polynomials — terms, degree, standard form; add &amp; subtract · 10.4 Multiplying polynomials</p></section>
-<section class="ug"><h3><a href="../textbook/unit-11.html">Unit 11: Factoring</a></h3><p>GCF, factoring trinomials, special patterns</p><p class="u"><b>Builds on:</b> Unit 10 (multiplying polynomials)</p><p class="u"><b>Lessons:</b> 11.1 Greatest common factor (GCF) · 11.2 Factoring trinomials x²+bx+c · 11.3 Special patterns</p></section>
-<section class="ug"><h3><a href="../textbook/unit-12.html">Unit 12: Quadratic Functions &amp; Equations (the capstone)</a></h3><p>Square roots &amp; radicals, x²=9, factoring, completing the square, quadratic formula, parabolas</p><p class="u"><b>Builds on:</b> Units 10 &amp; 11; Unit 5 (graphing)</p><p class="u"><b>Lessons:</b> 12.1 Square roots &amp; simplifying radicals · 12.2 The simplest quadratics (x²=9 → two solutions) · 12.3 Solving by factoring (zero-product property) · 12.4 Completing the square · 12.5 The quadratic formula &amp; the discriminant · 12.6 Graphing parabolas</p></section>
-<section class="ug"><h3><a href="../textbook/appendix.html">Unit A: Data &amp; Statistics</a></h3><p>One/two-variable statistics, line of best fit, correlation vs. causation, two-way tables</p><p class="u"><b>Builds on:</b> Unit 5 (graphing lines)</p><p class="u"><b>Lessons:</b> A.1 One-variable statistics — center &amp; spread · A.2 Two-variable data — line of best fit, correlation vs. causation · A.3 Two-way tables</p></section>
+<p class="subtitle">Twelve units and a statistics appendix, in a sensible order. Each card opens it in the textbook — start at the top, or jump to what you need.</p>
+<ul class="units"><li><a href="../textbook/unit-01.html"><b>Unit 1</b> · Foundations &amp; the Language of Algebra</a><br><span class="u">Variables, the equals sign as a balance, the number system &amp; number line, order of operations, negative numbers, expressions vs. equations</span></li>
+<li><a href="../textbook/unit-02.html"><b>Unit 2</b> · Solving Linear Equations</a><br><span class="u">One- and two-step equations, like terms, distributive property, variables on both sides, fractions in equations</span></li>
+<li><a href="../textbook/unit-03.html"><b>Unit 3</b> · Proportional Reasoning (the bridge to linearity)</a><br><span class="u">Ratios, rates, unit rate, proportions, percents</span></li>
+<li><a href="../textbook/unit-04.html"><b>Unit 4</b> · Introducing Functions</a><br><span class="u">What a function is, f(x) notation, domain &amp; range, table/graph/equation/words</span></li>
+<li><a href="../textbook/unit-05.html"><b>Unit 5</b> · Linear Functions &amp; Their Graphs</a><br><span class="u">Coordinate plane, graphing, slope, slope-intercept, writing equations of lines</span></li>
+<li><a href="../textbook/unit-06.html"><b>Unit 6</b> · Modeling &amp; Translation</a><br><span class="u">Turning words into equations; number/age/distance/value &amp; relationship problems; intro scatter plots</span></li>
+<li><a href="../textbook/unit-07.html"><b>Unit 7</b> · Systems of Equations</a><br><span class="u">Two equations, two unknowns: graphing, substitution, elimination, special cases</span></li>
+<li><a href="../textbook/unit-08.html"><b>Unit 8</b> · Inequalities</a><br><span class="u">One-variable, the sign-flip, compound, absolute value, two-variable graphing</span></li>
+<li><a href="../textbook/unit-09.html"><b>Unit 9</b> · Sequences &amp; Exponential Functions</a><br><span class="u">Arithmetic/geometric sequences as functions, exponential growth &amp; decay, linear vs. exponential</span></li>
+<li><a href="../textbook/unit-10.html"><b>Unit 10</b> · Exponents &amp; Polynomials</a><br><span class="u">Exponent rules, scientific notation, polynomial operations, FOIL/area model</span></li>
+<li><a href="../textbook/unit-11.html"><b>Unit 11</b> · Factoring</a><br><span class="u">GCF, factoring trinomials, special patterns</span></li>
+<li><a href="../textbook/unit-12.html"><b>Unit 12</b> · Quadratic Functions &amp; Equations (the capstone)</a><br><span class="u">Square roots &amp; radicals, x²=9, factoring, completing the square, quadratic formula, parabolas</span></li>
+<li><a href="../textbook/appendix.html"><b>Appendix</b> · Data &amp; Statistics</a><br><span class="u">One/two-variable statistics, line of best fit, correlation vs. causation, two-way tables</span></li></ul>
+
 
 </main>
-<footer><p>Generated from the unit source by <code>_verification/build_textbook.py</code>. Math by KaTeX.</p></footer>
+<footer><p>A friendly Algebra 1 textbook, made to be read alongside the Claude tutor. Math by KaTeX.</p></footer>
+</div>
+</div>
+<div id="rc-tip" role="tooltip" aria-hidden="true"></div>
+<div id="rc-toast" role="status" aria-live="polite" aria-hidden="true"></div>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
 <script>
 document.addEventListener("DOMContentLoaded", function () {
   renderMathInElement(document.body, {delimiters: [{left: "$$", right: "$$", display: true}], throwOnError: false});
-  var t = document.getElementById("theme"), root = document.documentElement;
-  t.addEventListener("click", function () {
+  var root = document.documentElement, body = document.body;
+  document.getElementById("theme").addEventListener("click", function () {
     root.classList.toggle("dark");
     localStorage.setItem("a1-theme", root.classList.contains("dark") ? "dark" : "light");
   });
+  var menu = document.getElementById("menu");
+  menu.addEventListener("click", function () {
+    var open = body.classList.toggle("nav-open");
+    menu.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+  var sn = document.getElementById("sidenav");
+  if (sn) sn.addEventListener("click", function (e) { if (e.target.closest("a")) body.classList.remove("nav-open"); });
 });
+</script>
+<script>
+(function () {
+  var tip = document.getElementById("rc-tip"), toast = document.getElementById("rc-toast");
+  if (!tip || !toast) return;
+  var toastT = 0, active = null;
+  function hideTip() {
+    tip.classList.remove("show"); tip.setAttribute("aria-hidden", "true");
+    if (active) { active.removeAttribute("aria-describedby"); active = null; }
+  }
+  function showTip(a) {
+    var p = a.getAttribute("data-prompt"); if (!p) return;
+    tip.textContent = "";
+    var h = document.createElement("span"); h.className = "rc-tip-h";
+    h.textContent = "Tutor prompt (click the code to copy):";
+    var q = document.createElement("span"); q.className = "rc-tip-q"; q.textContent = p;
+    tip.appendChild(h); tip.appendChild(q);
+    tip.setAttribute("aria-hidden", "false"); tip.classList.add("show");
+    if (active && active !== a) active.removeAttribute("aria-describedby");
+    active = a; a.setAttribute("aria-describedby", "rc-tip");  // expose the prompt text to screen readers
+    var r = a.getBoundingClientRect(), t = tip.getBoundingClientRect();
+    var top = r.top - t.height - 8;
+    if (top < 8) {                                  // no room above: place below, then clamp to the viewport
+      top = r.bottom + 8;
+      if (top + t.height > window.innerHeight - 8) top = Math.max(8, window.innerHeight - t.height - 8);
+    }
+    var left = Math.max(8, Math.min(r.left + r.width / 2 - t.width / 2, window.innerWidth - t.width - 8));
+    tip.style.top = top + "px"; tip.style.left = left + "px";
+  }
+  function showToast(msg) {
+    toast.textContent = msg; toast.classList.add("show"); toast.setAttribute("aria-hidden", "false");
+    if (toastT) clearTimeout(toastT);
+    toastT = setTimeout(function () {
+      toast.classList.remove("show"); toast.setAttribute("aria-hidden", "true");
+    }, 2600);
+  }
+  function fallbackCopy(text, ok) {
+    try {
+      var ta = document.createElement("textarea"); ta.value = text;
+      ta.style.position = "fixed"; ta.style.top = "-1000px"; ta.style.opacity = "0";
+      document.body.appendChild(ta); ta.focus(); ta.select();
+      var done = document.execCommand("copy"); document.body.removeChild(ta);
+      if (done) { ok(); } else { showToast("Select the prompt above and copy it."); }
+    } catch (e) { showToast("Select the prompt above and copy it."); }
+  }
+  function copyText(text, ok) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(ok, function () { fallbackCopy(text, ok); });
+    } else { fallbackCopy(text, ok); }
+  }
+  document.addEventListener("pointerover", function (e) {
+    var a = e.target.closest && e.target.closest(".refcode"); if (a) showTip(a);
+  });
+  document.addEventListener("pointerout", function (e) {
+    var a = e.target.closest && e.target.closest(".refcode");
+    if (a && !a.contains(e.relatedTarget)) hideTip();
+  });
+  document.addEventListener("focusin", function (e) {
+    var a = e.target.closest && e.target.closest(".refcode"); if (a) showTip(a);
+  });
+  document.addEventListener("focusout", function (e) {
+    if (e.target.closest && e.target.closest(".refcode")) hideTip();
+  });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") hideTip(); });
+  window.addEventListener("scroll", hideTip, true);
+  window.addEventListener("resize", hideTip);
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest && e.target.closest(".refcode"); if (!a) return;
+    e.preventDefault();
+    copyText(a.getAttribute("data-prompt") || a.textContent, function () {
+      showToast("Copied. Paste it into Claude to start.");
+    });
+  });
+})();
 </script>
 </body>
 </html>

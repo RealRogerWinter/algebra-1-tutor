@@ -1,6 +1,7 @@
-"""Generate the student guide from the SSOT (build tooling). A learner-facing roadmap (a motivating
-map, not a textbook) that links into the generated textbook and explains how to use the tutor + the
-reference-code system. Look/CSS shared with the textbook.
+"""Generate the student guide (build tooling): one warm front page for the course that shares the
+textbook's chrome — the same left unit rail (pointed into ../textbook/), a hero, and the shared CSS.
+A motivating map, not a second textbook: it explains how to learn with the tutor and the
+reference-code system, then lays out the roadmap as cards that link straight into the textbook.
 
   python _verification/build_student_guide.py            # (re)generate docs/student-guide/
   python _verification/build_student_guide.py --check    # verify the committed page is current
@@ -10,6 +11,12 @@ import argparse, html as _html, os, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO_ROOT = os.path.dirname(HERE)
 OUT_DIR = os.path.join(REPO_ROOT, "docs", "student-guide")
+
+TOP = [("how-to-use.html", "How to use this book"), ("index.html", "All units")]
+
+HERO_LEDE = ("A self-paced path through Algebra 1, written for an adult who knows arithmetic and is "
+             "meeting the rest of it for the first time. Read the textbook, work with the tutor, and "
+             "practice — in order, or jump to whatever you need.")
 
 
 def _bt():
@@ -25,40 +32,48 @@ def _ssot():
 
 
 def _roadmap(ssot):
-    rows = []
+    items = []
     for u in ssot.units:
         href = "../textbook/" + ("appendix.html" if u.id == "A" else f"unit-{int(u.id):02d}.html")
         opt = ' <span class="u">(optional)</span>' if u.optional else ""
-        lessons = " · ".join(f"{l.id} {_html.escape(l.title)}" for l in u.lessons)
-        rows.append(
-            f'<section class="ug"><h3><a href="{href}">Unit {u.id}: {_html.escape(u.title)}</a>{opt}</h3>'
-            f'<p>{_html.escape(u.description)}</p>'
-            f'<p class="u"><b>Builds on:</b> {_html.escape(u.prerequisites)}</p>'
-            f'<p class="u"><b>Lessons:</b> {lessons}</p></section>')
-    return "\n".join(rows)
+        label = "Appendix" if u.id == "A" else f"Unit {u.id}"
+        items.append(f'<li><a href="{href}"><b>{label}</b> · {_html.escape(u.title)}</a>{opt}'
+                     f'<br><span class="u">{_html.escape(u.description)}</span></li>')
+    return '<ul class="units">' + "\n".join(items) + "</ul>"
 
 
 def build_site(ssot):
     bt = _bt()
-    body = f"""<p class="subtitle">A self-paced path through Algebra 1 for an adult learner who knows arithmetic.
-Work with the tutor, read the textbook, and practice — in order, or jump to what you need.</p>
+    body = f"""<h2>Start here</h2>
+<p>This course is built to be read on your own, at whatever pace suits you. Open the <a href="../textbook/how-to-use.html">textbook</a> and start with Lesson 1.1, or jump to the topic you need — each lesson explains itself, with worked examples to study and practice to try. There's no clock and nothing to keep up with.</p>
+<p>When you want a hand, ask Claude, your tutor. It has the whole book in front of it, so you can lean on it the way you'd lean on a patient person sitting beside you. Asking for help is part of how this works, not a sign you're behind.</p>
 
-<h2>How to use this course</h2>
+<h2>How the tutor helps</h2>
+<p>The tutor teaches one-on-one. A few things it's good for:</p>
 <ul>
-<li><b>The tutor</b> teaches one-on-one: it asks before it tells, checks every answer, and never rushes you. Ask it to start at the beginning, jump to a topic, or place you with a few quick questions.</li>
-<li><b>The textbook</b> (linked per unit below) has the worked examples, practice, and figures to read alongside.</li>
-<li><b>The Progress Card</b> is how you pick up where you left off: paste last session's card at the start of the next, and keep the <b>Due for review</b> line so old skills get mixed back in.</li>
-<li><b>Photos welcome:</b> snap your handwritten work and upload it — the tutor reads it back to confirm, then helps.</li>
+<li><b>Working a problem with you, one line at a time</b>, so you're doing the thinking instead of watching.</li>
+<li><b>Checking every answer</b> before it calls anything right or wrong — and assuming you might be the one who's right.</li>
+<li><b>Explaining a different way</b> when the first explanation doesn't land. A second picture often does it.</li>
+<li><b>Reading a photo of your handwritten work.</b> Snap a picture of what you wrote on paper; the tutor reads your steps back to confirm, then shows you where a line went sideways, if one did.</li>
+<li><b>Giving you more practice</b> when a skill is almost solid and you want a few more to lock it in.</li>
 </ul>
 
+<h2>Keeping your place: the Progress Card</h2>
+<p>Each conversation with the tutor starts fresh, so you carry your progress between sessions yourself. At a good stopping point, ask for a <b>Progress Card</b> — a short, readable note of where you are and what's next. Paste it back at the start of your next session and the tutor picks up right where you left off. Keep the <b>Due for review</b> line, too: it names a skill or two to mix back in, which is what keeps earlier work from fading.</p>
+
 <h2>Reference codes</h2>
-<p>Every worked example, practice problem, definition, and figure has a short code like <code>12.5.w2</code> (worked example 2 of lesson 12.5), <code>1.1.d3</code> (a definition), or <code>12.6.f1</code> (a figure). Quote one to the tutor — "explain 12.5.w2" — and it will pull that exact item up, re-check the math, and walk you through it.</p>
+<p>Every worked example, practice problem, definition, and figure has a short code. A code reads as place-then-item: <code>12.5.w2</code> is worked example 2 in Lesson 12.5, <code>5.3.4</code> is practice problem 4 in Lesson 5.3, <code>1.2.f1</code> is a figure, and <code>1.1.d3</code> is a definition. You'll see them beside items in the textbook, where they double as deep links you can bookmark.</p>
+<p>Their real use is pointing. Say "explain 12.5.w2" or "walk me through 5.3.4," and the tutor pulls that exact item up and works through it with you, re-checking the math as it goes. The <a href="../tutor-guide/index.html">tutor guide</a>'s extra problems use codes too, with a <code>T</code> in them, like <code>5.4.T1</code>.</p>
 
 <h2>The roadmap</h2>
+<p class="subtitle">Twelve units and a statistics appendix, in a sensible order. Each card opens it in the textbook — start at the top, or jump to what you need.</p>
 {_roadmap(ssot)}
 """
-    return {"index.html": bt._page("Algebra 1 — Student Guide", body, None, None, surface="guide"),
-            "textbook.css": bt.CSS}
+    page = bt._lesson_page("Your path through Algebra 1", body, bt._ssot_model(ssot), "", None, None,
+                           subtitle=HERO_LEDE, surface="guide", hero="../assets/lines.jpg",
+                           kicker="Student guide", home_href="../index.html",
+                           sidebar_prefix="../textbook/", sidebar_top=TOP)
+    return {"index.html": page, "textbook.css": bt.CSS}
 
 
 def generate():

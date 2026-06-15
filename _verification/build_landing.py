@@ -1,5 +1,6 @@
 """Generate the GitHub Pages landing page (docs/index.html) that links the three generated sites
-(textbook, student guide, tutor guide). Build tooling; CSS shared with the textbook.
+(textbook, student guide, tutor guide). Build tooling; shares the textbook's chrome (left rail into
+the textbook, a hero) and CSS so the front door reads as one work.
 
   python _verification/build_landing.py            # (re)generate docs/index.html + docs/textbook.css
   python _verification/build_landing.py --check    # verify the committed landing is current
@@ -9,6 +10,8 @@ import argparse, glob, json, os, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO_ROOT = os.path.dirname(HERE)
 OUT_DIR = os.path.join(REPO_ROOT, "docs")
+
+TOP = [("how-to-use.html", "How to use this book"), ("index.html", "All units")]
 
 
 def _bt():
@@ -37,16 +40,22 @@ def _counts(ssot):
 def build_site(ssot):
     bt = _bt()
     u, l, f, c = _counts(ssot)
-    body = f"""<p class="subtitle">A complete, self-paced Algebra 1 course for an adult learner who knows arithmetic — {u} units, {l} lessons. Every worked example, definition, and figure has a reference code you can quote to the tutor.</p>
-<ul class="units">
-<li><a href="student-guide/index.html"><b>Student guide</b></a><br><span class="u">Start here: how the course works, the roadmap, and how to use the tutor.</span></li>
-<li><a href="textbook/index.html"><b>Textbook</b></a><br><span class="u">The lessons in full — worked examples, practice, and {f} computed figures, with reference-code deep links.</span></li>
+    core = sum(1 for x in ssot.units if str(x.id) != "A")
+    lede = (f"A complete, self-paced Algebra 1 course for an adult who knows arithmetic: a friendly "
+            f"textbook to read and a one-on-one tutor to learn with, plus extra practice when you want "
+            f"it. {core} units and a statistics appendix, {l} lessons in all, each quotable by a short code.")
+    body = f"""<ul class="units">
+<li><a href="student-guide/index.html"><b>Student guide</b></a><br><span class="u">Start here: how the course works and how to learn with the tutor.</span></li>
+<li><a href="textbook/index.html"><b>Textbook</b></a><br><span class="u">The lessons in full — worked examples, practice, and {f} computed figures, each with a reference code you can deep-link or quote.</span></li>
 <li><a href="tutor-guide/index.html"><b>Tutor guide</b></a><br><span class="u">{c} extra parallel-form problems with full worked solutions, plus a mixed-review set per unit.</span></li>
 </ul>
-<p class="u">Math is rendered with KaTeX. The course is generated from a single source of truth and held correct by sympy and a CI gate. Sources and licenses are listed in the textbook's reference pack.</p>
+<blockquote><p>See a code like <code>12.5.w2</code> beside a worked example? Quote it to the tutor — "explain 12.5.w2" — and it pulls up that exact item, re-checks the math, and walks you through it.</p></blockquote>
+<p class="u">Math is rendered with KaTeX. The whole course is generated from one source of truth and held correct by sympy and a CI gate.</p>
 """
-    return {"index.html": bt._page("Algebra 1 — A Complete Course", body, None, None),
-            "textbook.css": bt.CSS}
+    page = bt._lesson_page("Algebra 1", body, bt._ssot_model(ssot), "", None, None, subtitle=lede,
+                           hero="assets/numberline.jpg", kicker="A complete course",
+                           sidebar_prefix="textbook/", sidebar_top=TOP)
+    return {"index.html": page, "textbook.css": bt.CSS}
 
 
 def generate():

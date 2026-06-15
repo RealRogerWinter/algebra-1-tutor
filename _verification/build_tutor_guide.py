@@ -1,17 +1,34 @@
-"""Generate the tutor-guide complementary-problem pages from the verified T-tier datastore
-(build tooling). Look/CSS shared with the textbook. Data from _verification/complementary/*.json
-(REBUILD_BRIEF R1). Each problem shows its reference code, the prompt, and a collapsible full
-worked solution.
+"""Generate the tutor-guide complementary-problem site from the verified T-tier datastore (build
+tooling). Same chrome and CSS as the textbook — a left unit rail, a hero, and prev/next nav — so the
+guide reads as part of the same book. Each unit is a page of fresh, parallel-form problems with
+collapsible worked solutions; there is a How-to-use intro and a catalog index. Data from
+_verification/complementary/*.json (REBUILD_BRIEF R1).
 
   python _verification/build_tutor_guide.py            # (re)generate docs/tutor-guide/
   python _verification/build_tutor_guide.py --check    # verify committed pages are current
 """
-import argparse, glob, html as _html, json, os, re, sys
+import argparse, html as _html, json, os, re, sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO_ROOT = os.path.dirname(HERE)
 COMP_DIR = os.path.join(HERE, "complementary")
 OUT_DIR = os.path.join(REPO_ROOT, "docs", "tutor-guide")
+
+TOP = [("how-to-use.html", "How to use this guide"), ("index.html", "All units")]
+
+# --- new prose (course house voice; copyedited) --------------------------------------------------
+INDEX_LEDE = ("Extra practice for every unit: fresh problems built in the same shapes as the "
+              "textbook's, each with a full worked solution you open once you've tried it yourself. "
+              "Every unit also closes with a mixed-review set for keeping earlier skills sharp.")
+
+UNIT_SUBTITLE = ("Fresh, parallel-form problems with full worked solutions — more reps for the "
+                 "skills in this unit, kept separate from the textbook's own problems.")
+
+HOWTO_BODY = """<p>This guide is a bank of extra practice. For the lessons in the course, it has fresh problems built in the same shape as the ones in the textbook, so you can keep working a skill until it feels steady. Each problem comes with a full worked solution behind a reveal: try the problem first, then open the solution to check your reasoning, not just your final answer.</p>
+<p>The quickest way to use it is with the tutor. Ask Claude for a few problems like the ones in Lesson 5.4, or quote a problem's code, and it will work through it with you and check the math. You can also read a unit's page here and work straight down it on paper.</p>
+<p>Every problem carries a short code, like <code>5.4.T1</code>. The <code>T</code> marks it as a tutor-guide problem, kept separate from the textbook's own numbering so the two never collide. Quote a code to the tutor to point at one exact problem.</p>
+<p>Each unit ends with a <b>mixed-review set</b>, with codes like <code>5.R.T1</code>. These mix skills from across the unit on purpose, so two problems in a row rarely call for the same first move. That kind of mixed, spaced practice feels harder than a page of look-alikes, and it's what makes a skill last to next week. Reach for a review set when a unit feels solid, or to warm up after a few days away.</p>
+<p>The matching lessons, worked examples, and figures live in the <a href="../textbook/index.html">textbook</a>, and the <a href="../student-guide/index.html">student guide</a> lays out the whole path through the course.</p>"""
 
 
 def _bt():
@@ -24,6 +41,10 @@ def _ssot():
     sys.path.insert(0, HERE)
     import generate
     return generate.load_ssot()
+
+
+def _ufname(uid):
+    return "appendix.html" if str(uid) == "A" else f"unit-{int(uid):02d}.html"
 
 
 def _comp_file(uid):
@@ -48,56 +69,70 @@ def _problem_html(p):
     return (f'<div class="tproblem" id="{code}">\n'
             f'<a class="refcode" href="#{code}">{code}</a>\n{prompt}\n'
             f'<details class="answers"><summary><span class="tw"></span>'
-            f'<span class="eyebrow">Worked solution</span></summary>\n'
+            f'<span class="eyebrow">Worked solution</span>'
+            f'<span class="hint">Try it first, then open.</span></summary>\n'
             f'<div class="ak-body">\n{sol}\n<p class="ans"><b>Answer:</b> {ans}</p></div></details>\n</div>')
 
 
-def _unit_page(bt, u, prev_link, next_link):
+def _unit_body(u):
     probs = _comp_file(u.id)
     by_lesson, review = {}, []
     for p in probs:
-        mid = str(p.get("id", "..")).split(".")[1] if "." in str(p.get("id", "")) else ""
+        pid = str(p.get("id", ".."))
+        mid = pid.split(".")[1] if "." in pid else ""
         (review if mid == "R" else by_lesson.setdefault(f"{u.id}.{mid}", [])).append(p)
-    sections = []
+    label = "Appendix" if u.id == "A" else f"Unit {u.id}"
+    out = [f'<p class="tset"><a class="xref" href="../textbook/{_ufname(u.id)}">Read {label} in the textbook &rarr;</a></p>']
     for l in u.lessons:
         items = by_lesson.get(l.id, [])
         if not items:
             continue
-        sections.append(f'<section><h2>Lesson {l.id}: {_html.escape(l.title)}</h2>\n'
-                        + "\n".join(_problem_html(p) for p in items) + "</section>")
+        out.append(f'<section class="tset"><h2>Lesson {l.id}: {_html.escape(l.title)}</h2>\n'
+                   + "\n".join(_problem_html(p) for p in items) + "</section>")
     if review:
-        sections.append('<section><h2>Mixed review (interleaving)</h2>\n'
-                        '<p class="subtitle">Problems that mix skills from across the unit.</p>\n'
-                        + "\n".join(_problem_html(p) for p in review) + "</section>")
-    body = "\n".join(sections) or "<p>(No complementary problems yet.)</p>"
-    return bt._page(f"Unit {u.id}: {u.title} — Complementary problems", body, prev_link, next_link,
-                    "Tutor guide: fresh, parallel problems with full worked solutions.", surface="tutor")
+        out.append('<section class="tset"><h2>Mixed review</h2>\n'
+                   '<p class="subtitle">Problems that mix skills from across the unit — good for spacing earlier work back in.</p>\n'
+                   + "\n".join(_problem_html(p) for p in review) + "</section>")
+    return "\n".join(out) if len(out) > 1 else "<p>(No complementary problems yet.)</p>"
 
 
 def build_site(ssot):
     bt = _bt()
-    files = {"textbook.css": bt.CSS}
     order = ssot.units
-    # index
+    model = [{"id": str(u.id), "title": u.title, "overview": _ufname(u.id), "lessons": []} for u in order]
+
+    seq = [("how-to-use.html", "How to use this guide"), ("index.html", "All units")]
+    seq += [(_ufname(u.id), "Appendix" if u.id == "A" else f"Unit {u.id}") for u in order]
+    posn = {fn: k for k, (fn, _l) in enumerate(seq)}
+
+    def around(fn):
+        k = posn[fn]
+        return (seq[k - 1] if k > 0 else None), (seq[k + 1] if k + 1 < len(seq) else None)
+
+    def page(title, body, cur, *, subtitle="", hero=None, kicker=""):
+        pl, nl = around(cur)
+        return bt._lesson_page(title, body, model, cur, pl, nl, subtitle=subtitle, surface="tutor",
+                               hero=hero, kicker=kicker, sidebar_top=TOP, home_href="../index.html")
+
+    files = {"textbook.css": bt.CSS}
+    files["how-to-use.html"] = page("How to use the tutor guide", HOWTO_BODY, "how-to-use.html",
+                                    kicker="Start here")
+
     items = []
     for u in order:
-        href = "appendix.html" if u.id == "A" else f"unit-{int(u.id):02d}.html"
         n = len(_comp_file(u.id))
-        items.append(f'<li><a href="{href}"><b>Unit {u.id}</b> · {_html.escape(u.title)}</a> '
-                     f'<span class="u">({n} problems)</span></li>')
-    idx_body = ('<p class="subtitle">Complementary problem sets for the tutor — original parallel-form '
-                'problems (separate from the textbook) with full worked solutions, plus a mixed-review '
-                'set per unit for interleaving.</p><ul class="units">' + "\n".join(items) + "</ul>")
-    files["index.html"] = bt._page("Algebra 1 — Tutor Guide (Complementary Problems)", idx_body, None, None, surface="tutor")
-    for i, u in enumerate(order):
-        fname = "appendix.html" if u.id == "A" else f"unit-{int(u.id):02d}.html"
-        prev_u = order[i - 1] if i > 0 else None
-        next_u = order[i + 1] if i + 1 < len(order) else None
-        pl = (("appendix.html" if prev_u.id == "A" else f"unit-{int(prev_u.id):02d}.html"),
-              f"Unit {prev_u.id}") if prev_u else None
-        nl = (("appendix.html" if next_u.id == "A" else f"unit-{int(next_u.id):02d}.html"),
-              f"Unit {next_u.id}") if next_u else None
-        files[fname] = _unit_page(_bt(), u, pl, nl)
+        label = "Appendix" if u.id == "A" else f"Unit {u.id}"
+        items.append(f'<li><a href="{_ufname(u.id)}"><b>{label}</b> · {_html.escape(u.title)}</a>'
+                     f'<br><span class="u">{n} problems</span></li>')
+    idx_body = '<ul class="units">' + "\n".join(items) + "</ul>"
+    files["index.html"] = page("Extra practice", idx_body, "index.html", subtitle=INDEX_LEDE,
+                               hero="../assets/steps.jpg", kicker="Tutor guide")
+
+    for u in order:
+        kicker = "Tutor guide · " + ("Appendix" if u.id == "A" else f"Unit {u.id}")
+        hero = f"../assets/{bt._UNIT_HERO.get(str(u.id), 'lines')}.jpg"
+        files[_ufname(u.id)] = page(u.title, _unit_body(u), _ufname(u.id), subtitle=UNIT_SUBTITLE,
+                                    hero=hero, kicker=kicker)
     return files
 
 

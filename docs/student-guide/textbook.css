@@ -92,7 +92,7 @@ hr{border:0; border-top:1px solid var(--rule); margin:var(--s6) 0}
 main{max-width:var(--wide); margin:0 auto; padding:1rem 1.3rem 4rem}
 main > *{max-width:var(--measure); margin-inline:auto}
 main > figure.fig, main > .worked, main > .practice, main > .answers, main > .hero,
-main > table, main > .katex-display, main > .lesson-list, main > .pagenav{max-width:var(--wide)}
+main > table, main > .katex-display, main > .lesson-list, main > .pagenav, main > .tset{max-width:var(--wide)}
 footer{max-width:var(--measure); margin:var(--s7) auto 0; padding:1.1rem 1.3rem; color:var(--ink-soft);
   font-size:var(--step--1); border-top:1px solid var(--rule)}
 
@@ -112,6 +112,12 @@ html.dark .hero-art{filter:brightness(.9) saturate(.92)}
   background:var(--card-2); border:1px solid var(--rule); border-radius:999px; padding:.08em .55em; white-space:nowrap}
 .refcode:hover,.refcode:focus-visible{color:var(--link); border-color:var(--blue)}
 :target{scroll-margin-top:5rem}
+
+/* ---- cross-material link (a guide pointing into the textbook, and back) ---- */
+.xref{display:inline-flex; align-items:center; gap:.4rem; font-size:var(--step--1); font-weight:600;
+  color:var(--link); text-decoration:none; background:var(--card-2); border:1px solid var(--rule);
+  border-radius:999px; padding:.3rem .8rem}
+.xref:hover,.xref:focus-visible{border-color:var(--blue); color:var(--link)}
 
 /* ---- callout family (plain-language labels) ---- */
 .cl-goal,.cl-terms,.cl-watch,.cl-note,.cl-check,.cl-wrap{background:var(--card); border-radius:var(--radius);
@@ -244,7 +250,7 @@ section.ug h3{margin:.1rem 0 .4rem} section.ug :last-child{margin-bottom:0}
 
 /* ---- motion (reduced-motion safe) ---- */
 @media (prefers-reduced-motion:no-preference){
-  .practice li,.worked,figure.fig,#theme,.menu,ul.units li,.refcode,.lesson-list a,.pagenav a{transition:border-color .15s ease, box-shadow .15s ease, color .15s ease, transform .15s ease}
+  .practice li,.worked,figure.fig,#theme,.menu,ul.units li,.refcode,.xref,.lesson-list a,.pagenav a{transition:border-color .15s ease, box-shadow .15s ease, color .15s ease, transform .15s ease}
   ul.units li:hover,.lesson-list a:hover,.pagenav a:hover{transform:translateY(-1px)}
   :target{animation:flash 1.4s ease-out 1} @keyframes flash{0%{background:var(--tint-honey)}100%{background:transparent}}
 }

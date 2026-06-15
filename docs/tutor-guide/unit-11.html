@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Unit 11: Factoring — Complementary problems — Algebra 1</title>
+<title>Factoring — Algebra 1</title>
 <script>try{if(localStorage.getItem("a1-theme")==="dark")document.documentElement.classList.add("dark");}catch(e){}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,142 +13,191 @@
 </head>
 <body data-surface="tutor">
 <header class="topbar">
-  <nav><a class="home" href="index.html">Algebra&nbsp;1</a> &nbsp;·&nbsp; <a href="unit-10.html">&larr;&nbsp;Unit 10</a> &nbsp;·&nbsp; <a href="unit-12.html">Unit 12&nbsp;&rarr;</a></nav>
+  <button id="menu" class="menu" type="button" aria-label="Open or close the contents menu" aria-expanded="false">☰&nbsp;Contents</button>
+  <a class="home" href="../index.html">Algebra&nbsp;1</a>
   <span class="sp"></span>
-  <button id="theme" type="button" aria-label="Toggle light or dark theme">◐ Theme</button>
+  <button id="theme" type="button" aria-label="Toggle light or dark theme">◐&nbsp;Theme</button>
 </header>
+<div class="shell">
+<aside class="sidenav" id="sidenav">
+<nav class="snav" aria-label="Contents">
+<a class="snav-top" href="how-to-use.html">How to use this guide</a>
+<a class="snav-top" href="index.html">All units</a>
+<ol class="snav-units">
+<li class="">
+<a class="snav-unit" href="unit-01.html">Unit 1. Foundations &amp; the Language of Algebra</a>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-02.html">Unit 2. Solving Linear Equations</a>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-03.html">Unit 3. Proportional Reasoning (the bridge to linearity)</a>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-04.html">Unit 4. Introducing Functions</a>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-05.html">Unit 5. Linear Functions &amp; Their Graphs</a>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-06.html">Unit 6. Modeling &amp; Translation</a>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-07.html">Unit 7. Systems of Equations</a>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-08.html">Unit 8. Inequalities</a>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-09.html">Unit 9. Sequences &amp; Exponential Functions</a>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-10.html">Unit 10. Exponents &amp; Polynomials</a>
+</li>
+<li class="active">
+<a class="snav-unit cur" href="unit-11.html">Unit 11. Factoring</a>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-12.html">Unit 12. Quadratic Functions &amp; Equations (the capstone)</a>
+</li>
+<li class="">
+<a class="snav-unit" href="appendix.html">Appendix. Data &amp; Statistics</a>
+</li>
+</ol></nav>
+</aside>
+<div class="content">
 <main>
-<h1>Unit 11: Factoring — Complementary problems</h1>
-<p class="subtitle">Tutor guide: fresh, parallel problems with full worked solutions.</p>
-<section><h2>Lesson 11.1: Greatest common factor (GCF)</h2>
+<div class="hero"><div class="hero-text"><div class="kicker">Tutor guide · Unit 11</div><h1>Factoring</h1><p class="lede">Fresh, parallel-form problems with full worked solutions — more reps for the skills in this unit, kept separate from the textbook&#x27;s own problems.</p></div><img class="hero-art" src="../assets/factoring.jpg" alt=""></div>
+<p class="tset"><a class="xref" href="../textbook/unit-11.html">Read Unit 11 in the textbook &rarr;</a></p>
+<section class="tset"><h2>Lesson 11.1: Greatest common factor (GCF)</h2>
 <div class="tproblem" id="11.1.T1">
 <a class="refcode" href="#11.1.T1">11.1.T1</a>
 <p>Factor out the GCF: 7x + 21. Then multiply your answer back to prove it.</p>
-<details class="answers"><summary><span class="tw"></span><span class="eyebrow">Worked solution</span></summary>
+<details class="answers"><summary><span class="tw"></span><span class="eyebrow">Worked solution</span><span class="hint">Try it first, then open.</span></summary>
 <div class="ak-body">
-<p>Numbers only. The biggest number dividing both 7 and 21 is 7; there is no x in the second term, so no variable comes out. GCF = 7. Divide each term by 7: 7x ÷ 7 = x and 21 ÷ 7 = 3.<br>7x + 21 = 7(x + 3)<br>Check (multiply back): 7·x + 7·3 = 7x + 21. ✓</p>
+<p>Numbers only. The biggest number dividing both 7 and 21 is 7; there is no x in the second term, so no variable comes out. GCF = 7. Divide each term by 7: 7x ÷ 7 = x and 21 ÷ 7 = 3.<br>7x + 21 = 7(x + 3)<br>Check (multiply back): 7·x + 7·3 = 7x + 21.</p>
 <p class="ans"><b>Answer:</b> 7*(x+3)</p></div></details>
 </div>
 <div class="tproblem" id="11.1.T2">
 <a class="refcode" href="#11.1.T2">11.1.T2</a>
 <p>Factor out the GCF: 12x² − 8x. Watch the sign on the second term.</p>
-<details class="answers"><summary><span class="tw"></span><span class="eyebrow">Worked solution</span></summary>
+<details class="answers"><summary><span class="tw"></span><span class="eyebrow">Worked solution</span><span class="hint">Try it first, then open.</span></summary>
 <div class="ak-body">
-<p>Two parts. Numbers: gcd(12, 8) = 4. Variables: both terms have at least one x (x² and x¹), so the lowest power x¹ comes out. GCF = 4x.<br>Divide each term by 4x: 12x² ÷ 4x = 3x, and −8x ÷ 4x = −2 (the minus stays).<br>12x² − 8x = 4x(3x − 2)<br>Check: 4x·3x − 4x·2 = 12x² − 8x. ✓<br>Note: 2x(6x − 4) and 4(3x² − 2x) are common factors but not the greatest — the inside still shares something.</p>
+<p>Two parts. Numbers: gcd(12, 8) = 4. Variables: both terms have at least one x (x² and x¹), so the lowest power x¹ comes out. GCF = 4x.<br>Divide each term by 4x: 12x² ÷ 4x = 3x, and −8x ÷ 4x = −2 (the minus stays).<br>12x² − 8x = 4x(3x − 2)<br>Check: 4x·3x − 4x·2 = 12x² − 8x.<br>Note: 2x(6x − 4) and 4(3x² − 2x) are common factors but not the greatest — the inside still shares something.</p>
 <p class="ans"><b>Answer:</b> 4*x*(3*x-2)</p></div></details>
 </div>
 <div class="tproblem" id="11.1.T3">
 <a class="refcode" href="#11.1.T3">11.1.T3</a>
 <p>Factor out the GCF: 20x³ + 15x². Take the lowest power of x.</p>
-<details class="answers"><summary><span class="tw"></span><span class="eyebrow">Worked solution</span></summary>
+<details class="answers"><summary><span class="tw"></span><span class="eyebrow">Worked solution</span><span class="hint">Try it first, then open.</span></summary>
 <div class="ak-body">
-<p>Numbers: gcd(20, 15) = 5. Variables: the powers present are x³ and x²; the lowest is x², so x² comes out (you can't pull x³ from the x² term). GCF = 5x².<br>Divide: 20x³ ÷ 5x² = 4x, and 15x² ÷ 5x² = 3.<br>20x³ + 15x² = 5x²(4x + 3)<br>Check: 5x²·4x + 5x²·3 = 20x³ + 15x². ✓</p>
+<p>Numbers: gcd(20, 15) = 5. Variables: the powers present are x³ and x²; the lowest is x², so x² comes out (you can't pull x³ from the x² term). GCF = 5x².<br>Divide: 20x³ ÷ 5x² = 4x, and 15x² ÷ 5x² = 3.<br>20x³ + 15x² = 5x²(4x + 3)<br>Check: 5x²·4x + 5x²·3 = 20x³ + 15x².</p>
 <p class="ans"><b>Answer:</b> 5*x**2*(4*x+3)</p></div></details>
 </div>
 <div class="tproblem" id="11.1.T4">
 <a class="refcode" href="#11.1.T4">11.1.T4</a>
 <p>Factor out the GCF completely: 24x⁴ − 36x². (Light stretch — the inside still has an x², and that's fine.)</p>
-<details class="answers"><summary><span class="tw"></span><span class="eyebrow">Worked solution</span></summary>
+<details class="answers"><summary><span class="tw"></span><span class="eyebrow">Worked solution</span><span class="hint">Try it first, then open.</span></summary>
 <div class="ak-body">
-<p>Numbers: gcd(24, 36) = 12. Variables: powers x⁴ and x²; lowest is x². GCF = 12x².<br>Divide: 24x⁴ ÷ 12x² = 2x², and −36x² ÷ 12x² = −3.<br>24x⁴ − 36x² = 12x²(2x² − 3)<br>Check: 12x²·2x² − 12x²·3 = 24x⁴ − 36x². ✓<br>Is the inside done? 2x² − 3 has no common factor and is not a difference of squares over the integers (3 isn't a perfect square and 2 isn't either), so 12x²(2x² − 3) is fully factored. A near-miss to avoid: pulling only 6x² gives 6x²(4x² − 6), but the inside still shares a 2 — not the greatest.</p>
+<p>Numbers: gcd(24, 36) = 12. Variables: powers x⁴ and x²; lowest is x². GCF = 12x².<br>Divide: 24x⁴ ÷ 12x² = 2x², and −36x² ÷ 12x² = −3.<br>24x⁴ − 36x² = 12x²(2x² − 3)<br>Check: 12x²·2x² − 12x²·3 = 24x⁴ − 36x².<br>Is the inside done? 2x² − 3 has no common factor and is not a difference of squares over the integers (3 isn't a perfect square and 2 isn't either), so 12x²(2x² − 3) is fully factored. A near-miss to avoid: pulling only 6x² gives 6x²(4x² − 6), but the inside still shares a 2 — not the greatest.</p>
 <p class="ans"><b>Answer:</b> 12*x**2*(2*x**2-3)</p></div></details>
 </div></section>
-<section><h2>Lesson 11.2: Factoring trinomials x²+bx+c</h2>
+<section class="tset"><h2>Lesson 11.2: Factoring trinomials x²+bx+c</h2>
 <div class="tproblem" id="11.2.T1">
 <a class="refcode" href="#11.2.T1">11.2.T1</a>
 <p>Factor: x² + 8x + 12.</p>
-<details class="answers"><summary><span class="tw"></span><span class="eyebrow">Worked solution</span></summary>
+<details class="answers"><summary><span class="tw"></span><span class="eyebrow">Worked solution</span><span class="hint">Try it first, then open.</span></summary>
 <div class="ak-body">
-<p>Need two numbers that multiply to c = 12 and add to b = 8. Since c &gt; 0 the two numbers share a sign, and b &gt; 0 forces both positive. Pairs of 12: 1·12 (sum 13), 2·6 (sum 8) ✓, 3·4 (sum 7). The pair is 2 and 6.<br>x² + 8x + 12 = (x + 2)(x + 6)<br>Check: x² + 6x + 2x + 12 = x² + 8x + 12. ✓</p>
+<p>Need two numbers that multiply to c = 12 and add to b = 8. Since c &gt; 0 the two numbers share a sign, and b &gt; 0 forces both positive. Pairs of 12: 1·12 (sum 13), 2·6 (sum 8), 3·4 (sum 7). The pair is 2 and 6.<br>x² + 8x + 12 = (x + 2)(x + 6)<br>Check: x² + 6x + 2x + 12 = x² + 8x + 12.</p>
 <p class="ans"><b>Answer:</b> (x+2)*(x+6)</p></div></details>
 </div>
 <div class="tproblem" id="11.2.T2">
 <a class="refcode" href="#11.2.T2">11.2.T2</a>
 <p>Factor: x² − 9x + 20. Reason about the signs first.</p>
-<details class="answers"><summary><span class="tw"></span><span class="eyebrow">Worked solution</span></summary>
+<details class="answers"><summary><span class="tw"></span><span class="eyebrow">Worked solution</span><span class="hint">Try it first, then open.</span></summary>
 <div class="ak-body">
-<p>Two numbers multiply to c = 20 and add to b = −9. c &gt; 0 ⇒ same sign; b &lt; 0 ⇒ both negative. Negative pairs of 20: (−1)(−20) sum −21, (−2)(−10) sum −12, (−4)(−5) sum −9 ✓. The pair is −4 and −5.<br>x² − 9x + 20 = (x − 4)(x − 5)<br>Check: x² − 5x − 4x + 20 = x² − 9x + 20. ✓</p>
+<p>Two numbers multiply to c = 20 and add to b = −9. c &gt; 0 ⇒ same sign; b &lt; 0 ⇒ both negative. Negative pairs of 20: (−1)(−20) sum −21, (−2)(−10) sum −12, (−4)(−5) sum −9. The pair is −4 and −5.<br>x² − 9x + 20 = (x − 4)(x − 5)<br>Check: x² − 5x − 4x + 20 = x² − 9x + 20.</p>
 <p class="ans"><b>Answer:</b> (x-4)*(x-5)</p></div></details>
 </div>
 <div class="tproblem" id="11.2.T3">
 <a class="refcode" href="#11.2.T3">11.2.T3</a>
 <p>Factor: x² + 4x − 21.</p>
-<details class="answers"><summary><span class="tw"></span><span class="eyebrow">Worked solution</span></summary>
+<details class="answers"><summary><span class="tw"></span><span class="eyebrow">Worked solution</span><span class="hint">Try it first, then open.</span></summary>
 <div class="ak-body">
-<p>Two numbers multiply to c = −21 and add to b = +4. c &lt; 0 ⇒ opposite signs; the number with the larger absolute value carries the sign of b (positive). Pairs of 21: 1·21, 3·7. We need a difference of 4 with the bigger one positive: +7 and −3 (product −21, sum +4) ✓.<br>x² + 4x − 21 = (x + 7)(x − 3)<br>Check: x² − 3x + 7x − 21 = x² + 4x − 21. ✓</p>
+<p>Two numbers multiply to c = −21 and add to b = +4. c &lt; 0 ⇒ opposite signs; the number with the larger absolute value carries the sign of b (positive). Pairs of 21: 1·21, 3·7. We need a difference of 4 with the bigger one positive: +7 and −3 (product −21, sum +4).<br>x² + 4x − 21 = (x + 7)(x − 3)<br>Check: x² − 3x + 7x − 21 = x² + 4x − 21.</p>
 <p class="ans"><b>Answer:</b> (x+7)*(x-3)</p></div></details>
 </div>
 <div class="tproblem" id="11.2.T4">
 <a class="refcode" href="#11.2.T4">11.2.T4</a>
 <p>Factorable or prime? Decide for x² + 5x + 11 by listing the factor pairs out loud. (Light stretch — apply the stopping rule.)</p>
-<details class="answers"><summary><span class="tw"></span><span class="eyebrow">Worked solution</span></summary>
+<details class="answers"><summary><span class="tw"></span><span class="eyebrow">Worked solution</span><span class="hint">Try it first, then open.</span></summary>
 <div class="ak-body">
 <p>Need two numbers multiplying to c = 11 and adding to b = 5. c &gt; 0 and b &gt; 0 ⇒ both positive. 11 is prime, so the only positive pair is 1·11, which sums to 12 — not 5. No other integer pair multiplies to 11. The finite search is exhausted with no pair summing to 5.<br>Verdict: x² + 5x + 11 is prime (irreducible over the integers). 'Prime' here means the completed search came up empty — not a giveup. We do not reach for fractions or decimals; over the integers there is no factorization, and nothing to multiply back.</p>
 <p class="ans"><b>Answer:</b> prime (irreducible over the integers)</p></div></details>
 </div></section>
-<section><h2>Lesson 11.3: Special patterns</h2>
+<section class="tset"><h2>Lesson 11.3: Special patterns</h2>
 <div class="tproblem" id="11.3.T1">
 <a class="refcode" href="#11.3.T1">11.3.T1</a>
 <p>Factor: x² − 36.</p>
-<details class="answers"><summary><span class="tw"></span><span class="eyebrow">Worked solution</span></summary>
+<details class="answers"><summary><span class="tw"></span><span class="eyebrow">Worked solution</span><span class="hint">Try it first, then open.</span></summary>
 <div class="ak-body">
-<p>Two terms with a minus between two perfect squares ⇒ difference of squares, a² − b² = (a + b)(a − b). Here a = √(x²) = x and b = √36 = 6.<br>x² − 36 = (x + 6)(x − 6)<br>Check: x² − 6x + 6x − 36 = x² − 36 (the middle terms cancel). ✓<br>Note: x² + 36 (a plus) would be a sum of squares — prime over the integers; difference of squares needs the minus.</p>
+<p>Two terms with a minus between two perfect squares ⇒ difference of squares, a² − b² = (a + b)(a − b). Here a = √(x²) = x and b = √36 = 6.<br>x² − 36 = (x + 6)(x − 6)<br>Check: x² − 6x + 6x − 36 = x² − 36 (the middle terms cancel).<br>Note: x² + 36 (a plus) would be a sum of squares — prime over the integers; difference of squares needs the minus.</p>
 <p class="ans"><b>Answer:</b> (x+6)*(x-6)</p></div></details>
 </div>
 <div class="tproblem" id="11.3.T2">
 <a class="refcode" href="#11.3.T2">11.3.T2</a>
 <p>Factor: x² + 14x + 49.</p>
-<details class="answers"><summary><span class="tw"></span><span class="eyebrow">Worked solution</span></summary>
+<details class="answers"><summary><span class="tw"></span><span class="eyebrow">Worked solution</span><span class="hint">Try it first, then open.</span></summary>
 <div class="ak-body">
-<p>Both ends are perfect squares: √(x²) = x and √49 = 7. Test the middle: 2·x·7 = 14x — matches the middle term, so it's a perfect-square trinomial. The middle sign (+) becomes the sign inside.<br>x² + 14x + 49 = (x + 7)²<br>Check: (x + 7)(x + 7) = x² + 7x + 7x + 49 = x² + 14x + 49. ✓</p>
+<p>Both ends are perfect squares: √(x²) = x and √49 = 7. Test the middle: 2·x·7 = 14x — matches the middle term, so it's a perfect-square trinomial. The middle sign (+) becomes the sign inside.<br>x² + 14x + 49 = (x + 7)²<br>Check: (x + 7)(x + 7) = x² + 7x + 7x + 49 = x² + 14x + 49.</p>
 <p class="ans"><b>Answer:</b> (x+7)**2</p></div></details>
 </div>
 <div class="tproblem" id="11.3.T3">
 <a class="refcode" href="#11.3.T3">11.3.T3</a>
 <p>Factor: 25x² − 4. Mind the square roots of the coefficients.</p>
-<details class="answers"><summary><span class="tw"></span><span class="eyebrow">Worked solution</span></summary>
+<details class="answers"><summary><span class="tw"></span><span class="eyebrow">Worked solution</span><span class="hint">Try it first, then open.</span></summary>
 <div class="ak-body">
-<p>Difference of squares with coefficients. 25x² = (5x)² so a = 5x; 4 = 2² so b = 2.<br>25x² − 4 = (5x + 2)(5x − 2)<br>Check: 25x² − 10x + 10x − 4 = 25x² − 4. ✓<br>Watch: √(25x²) is 5x, not 25x — writing (25x + 2)(25x − 2) would multiply back to 625x² − 4, wrong.</p>
+<p>Difference of squares with coefficients. 25x² = (5x)² so a = 5x; 4 = 2² so b = 2.<br>25x² − 4 = (5x + 2)(5x − 2)<br>Check: 25x² − 10x + 10x − 4 = 25x² − 4.<br>Watch: √(25x²) is 5x, not 25x — writing (25x + 2)(25x − 2) would multiply back to 625x² − 4, wrong.</p>
 <p class="ans"><b>Answer:</b> (5*x+2)*(5*x-2)</p></div></details>
 </div>
 <div class="tproblem" id="11.3.T4">
 <a class="refcode" href="#11.3.T4">11.3.T4</a>
 <p>Factor completely: 5x² − 45. (Light stretch — GCF first, then look for a pattern.)</p>
-<details class="answers"><summary><span class="tw"></span><span class="eyebrow">Worked solution</span></summary>
+<details class="answers"><summary><span class="tw"></span><span class="eyebrow">Worked solution</span><span class="hint">Try it first, then open.</span></summary>
 <div class="ak-body">
-<p>Always try the GCF first. Both coefficients are divisible by 5: 5x² − 45 = 5(x² − 9). Now the inside x² − 9 is a difference of squares (a = x, b = 3): x² − 9 = (x + 3)(x − 3).<br>5x² − 45 = 5(x + 3)(x − 3)<br>Check: 5(x + 3)(x − 3) = 5(x² − 9) = 5x² − 45. ✓<br>The 5 must stay out front — (x + 3)(x − 3) alone would only give x² − 9. Notice the difference of squares wasn't visible until the GCF came out: that's why GCF goes first.</p>
+<p>Always try the GCF first. Both coefficients are divisible by 5: 5x² − 45 = 5(x² − 9). Now the inside x² − 9 is a difference of squares (a = x, b = 3): x² − 9 = (x + 3)(x − 3).<br>5x² − 45 = 5(x + 3)(x − 3)<br>Check: 5(x + 3)(x − 3) = 5(x² − 9) = 5x² − 45.<br>The 5 must stay out front — (x + 3)(x − 3) alone would only give x² − 9. Notice the difference of squares wasn't visible until the GCF came out: that's why GCF goes first.</p>
 <p class="ans"><b>Answer:</b> 5*(x+3)*(x-3)</p></div></details>
 </div></section>
-<section><h2>Mixed review (interleaving)</h2>
-<p class="subtitle">Problems that mix skills from across the unit.</p>
+<section class="tset"><h2>Mixed review</h2>
+<p class="subtitle">Problems that mix skills from across the unit — good for spacing earlier work back in.</p>
 <div class="tproblem" id="11.R.T1">
 <a class="refcode" href="#11.R.T1">11.R.T1</a>
 <p>Factor out the GCF: 18x² + 24x.</p>
-<details class="answers"><summary><span class="tw"></span><span class="eyebrow">Worked solution</span></summary>
+<details class="answers"><summary><span class="tw"></span><span class="eyebrow">Worked solution</span><span class="hint">Try it first, then open.</span></summary>
 <div class="ak-body">
-<p>Numbers: gcd(18, 24) = 6. Variables: both terms have an x, lowest power x¹. GCF = 6x.<br>Divide: 18x² ÷ 6x = 3x, and 24x ÷ 6x = 4.<br>18x² + 24x = 6x(3x + 4)<br>Check: 6x·3x + 6x·4 = 18x² + 24x. ✓ (Stopping at 3x(6x + 8) or 2x(9x + 12) isn't the greatest — the inside still shares a factor.)</p>
+<p>Numbers: gcd(18, 24) = 6. Variables: both terms have an x, lowest power x¹. GCF = 6x.<br>Divide: 18x² ÷ 6x = 3x, and 24x ÷ 6x = 4.<br>18x² + 24x = 6x(3x + 4)<br>Check: 6x·3x + 6x·4 = 18x² + 24x. (Stopping at 3x(6x + 8) or 2x(9x + 12) isn't the greatest — the inside still shares a factor.)</p>
 <p class="ans"><b>Answer:</b> 6*x*(3*x+4)</p></div></details>
 </div>
 <div class="tproblem" id="11.R.T2">
 <a class="refcode" href="#11.R.T2">11.R.T2</a>
 <p>Factor: x² − 3x − 18.</p>
-<details class="answers"><summary><span class="tw"></span><span class="eyebrow">Worked solution</span></summary>
+<details class="answers"><summary><span class="tw"></span><span class="eyebrow">Worked solution</span><span class="hint">Try it first, then open.</span></summary>
 <div class="ak-body">
-<p>Two numbers multiply to c = −18 and add to b = −3. c &lt; 0 ⇒ opposite signs; the larger-absolute-value number carries b's sign (negative). Pairs of 18: 1·18, 2·9, 3·6. We need a difference of 3 with the bigger one negative: −6 and +3 (product −18, sum −3) ✓.<br>x² − 3x − 18 = (x − 6)(x + 3)<br>Check: x² + 3x − 6x − 18 = x² − 3x − 18. ✓</p>
+<p>Two numbers multiply to c = −18 and add to b = −3. c &lt; 0 ⇒ opposite signs; the larger-absolute-value number carries b's sign (negative). Pairs of 18: 1·18, 2·9, 3·6. We need a difference of 3 with the bigger one negative: −6 and +3 (product −18, sum −3).<br>x² − 3x − 18 = (x − 6)(x + 3)<br>Check: x² + 3x − 6x − 18 = x² − 3x − 18.</p>
 <p class="ans"><b>Answer:</b> (x-6)*(x+3)</p></div></details>
 </div>
 <div class="tproblem" id="11.R.T3">
 <a class="refcode" href="#11.R.T3">11.R.T3</a>
 <p>Factor: x² − 64.</p>
-<details class="answers"><summary><span class="tw"></span><span class="eyebrow">Worked solution</span></summary>
+<details class="answers"><summary><span class="tw"></span><span class="eyebrow">Worked solution</span><span class="hint">Try it first, then open.</span></summary>
 <div class="ak-body">
-<p>Two terms, a minus between two perfect squares ⇒ difference of squares. a = √(x²) = x, b = √64 = 8.<br>x² − 64 = (x + 8)(x − 8)<br>Check: x² − 8x + 8x − 64 = x² − 64. ✓</p>
+<p>Two terms, a minus between two perfect squares ⇒ difference of squares. a = √(x²) = x, b = √64 = 8.<br>x² − 64 = (x + 8)(x − 8)<br>Check: x² − 8x + 8x − 64 = x² − 64.</p>
 <p class="ans"><b>Answer:</b> (x+8)*(x-8)</p></div></details>
 </div>
 <div class="tproblem" id="11.R.T4">
 <a class="refcode" href="#11.R.T4">11.R.T4</a>
 <p>Factorable or prime? Decide for x² + x + 7 by listing the factor pairs.</p>
-<details class="answers"><summary><span class="tw"></span><span class="eyebrow">Worked solution</span></summary>
+<details class="answers"><summary><span class="tw"></span><span class="eyebrow">Worked solution</span><span class="hint">Try it first, then open.</span></summary>
 <div class="ak-body">
 <p>Need two numbers multiplying to c = 7 and adding to b = 1. c &gt; 0 and b &gt; 0 ⇒ both positive. 7 is prime, so the only positive pair is 1·7, summing to 8 — not 1. No other integer pair multiplies to 7. Search exhausted.<br>Verdict: x² + x + 7 is prime (irreducible over the integers). The completed pair list is the proof; there is no integer factorization to multiply back.</p>
 <p class="ans"><b>Answer:</b> prime (irreducible over the integers)</p></div></details>
@@ -156,24 +205,113 @@
 <div class="tproblem" id="11.R.T5">
 <a class="refcode" href="#11.R.T5">11.R.T5</a>
 <p>Factor completely: 3x² − 30x + 75. (Stretch — pull the GCF, then check the leftover for a pattern.)</p>
-<details class="answers"><summary><span class="tw"></span><span class="eyebrow">Worked solution</span></summary>
+<details class="answers"><summary><span class="tw"></span><span class="eyebrow">Worked solution</span><span class="hint">Try it first, then open.</span></summary>
 <div class="ak-body">
-<p>GCF first: every coefficient (3, 30, 75) is divisible by 3, so 3x² − 30x + 75 = 3(x² − 10x + 25). Now look at the inside: both ends are perfect squares (√(x²) = x, √25 = 5) and the middle 2·x·5 = 10x matches — a perfect-square trinomial with a minus, so x² − 10x + 25 = (x − 5)².<br>3x² − 30x + 75 = 3(x − 5)²<br>Check: 3(x − 5)² = 3(x² − 10x + 25) = 3x² − 30x + 75. ✓<br>Keep the 3 out front — it's part of the complete factorization.</p>
+<p>GCF first: every coefficient (3, 30, 75) is divisible by 3, so 3x² − 30x + 75 = 3(x² − 10x + 25). Now look at the inside: both ends are perfect squares (√(x²) = x, √25 = 5) and the middle 2·x·5 = 10x matches — a perfect-square trinomial with a minus, so x² − 10x + 25 = (x − 5)².<br>3x² − 30x + 75 = 3(x − 5)²<br>Check: 3(x − 5)² = 3(x² − 10x + 25) = 3x² − 30x + 75.<br>Keep the 3 out front — it's part of the complete factorization.</p>
 <p class="ans"><b>Answer:</b> 3*(x-5)**2</p></div></details>
 </div></section>
+<nav class="pagenav" aria-label="Previous and next page">
+<a class="pn-prev" href="unit-10.html"><span class="pn-dir">&larr;&nbsp;Back</span><span class="pn-title">Unit 10</span></a>
+<a class="pn-next" href="unit-12.html"><span class="pn-dir">Next&nbsp;&rarr;</span><span class="pn-title">Unit 12</span></a>
+</nav>
 </main>
-<footer><p>Generated from the unit source by <code>_verification/build_textbook.py</code>. Math by KaTeX.</p></footer>
+<footer><p>A friendly Algebra 1 textbook, made to be read alongside the Claude tutor. Math by KaTeX.</p></footer>
+</div>
+</div>
+<div id="rc-tip" role="tooltip" aria-hidden="true"></div>
+<div id="rc-toast" role="status" aria-live="polite" aria-hidden="true"></div>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
 <script>
 document.addEventListener("DOMContentLoaded", function () {
   renderMathInElement(document.body, {delimiters: [{left: "$$", right: "$$", display: true}], throwOnError: false});
-  var t = document.getElementById("theme"), root = document.documentElement;
-  t.addEventListener("click", function () {
+  var root = document.documentElement, body = document.body;
+  document.getElementById("theme").addEventListener("click", function () {
     root.classList.toggle("dark");
     localStorage.setItem("a1-theme", root.classList.contains("dark") ? "dark" : "light");
   });
+  var menu = document.getElementById("menu");
+  menu.addEventListener("click", function () {
+    var open = body.classList.toggle("nav-open");
+    menu.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+  var sn = document.getElementById("sidenav");
+  if (sn) sn.addEventListener("click", function (e) { if (e.target.closest("a")) body.classList.remove("nav-open"); });
 });
+</script>
+<script>
+(function () {
+  var tip = document.getElementById("rc-tip"), toast = document.getElementById("rc-toast");
+  if (!tip || !toast) return;
+  var toastT = 0, active = null;
+  function hideTip() {
+    tip.classList.remove("show"); tip.setAttribute("aria-hidden", "true");
+    if (active) { active.removeAttribute("aria-describedby"); active = null; }
+  }
+  function showTip(a) {
+    var p = a.getAttribute("data-prompt"); if (!p) return;
+    tip.textContent = "";
+    var h = document.createElement("span"); h.className = "rc-tip-h";
+    h.textContent = "Tutor prompt (click the code to copy):";
+    var q = document.createElement("span"); q.className = "rc-tip-q"; q.textContent = p;
+    tip.appendChild(h); tip.appendChild(q);
+    tip.setAttribute("aria-hidden", "false"); tip.classList.add("show");
+    if (active && active !== a) active.removeAttribute("aria-describedby");
+    active = a; a.setAttribute("aria-describedby", "rc-tip");  // expose the prompt text to screen readers
+    var r = a.getBoundingClientRect(), t = tip.getBoundingClientRect();
+    var top = r.top - t.height - 8;
+    if (top < 8) {                                  // no room above: place below, then clamp to the viewport
+      top = r.bottom + 8;
+      if (top + t.height > window.innerHeight - 8) top = Math.max(8, window.innerHeight - t.height - 8);
+    }
+    var left = Math.max(8, Math.min(r.left + r.width / 2 - t.width / 2, window.innerWidth - t.width - 8));
+    tip.style.top = top + "px"; tip.style.left = left + "px";
+  }
+  function showToast(msg) {
+    toast.textContent = msg; toast.classList.add("show"); toast.setAttribute("aria-hidden", "false");
+    if (toastT) clearTimeout(toastT);
+    toastT = setTimeout(function () {
+      toast.classList.remove("show"); toast.setAttribute("aria-hidden", "true");
+    }, 2600);
+  }
+  function fallbackCopy(text, ok) {
+    try {
+      var ta = document.createElement("textarea"); ta.value = text;
+      ta.style.position = "fixed"; ta.style.top = "-1000px"; ta.style.opacity = "0";
+      document.body.appendChild(ta); ta.focus(); ta.select();
+      var done = document.execCommand("copy"); document.body.removeChild(ta);
+      if (done) { ok(); } else { showToast("Select the prompt above and copy it."); }
+    } catch (e) { showToast("Select the prompt above and copy it."); }
+  }
+  function copyText(text, ok) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(ok, function () { fallbackCopy(text, ok); });
+    } else { fallbackCopy(text, ok); }
+  }
+  document.addEventListener("pointerover", function (e) {
+    var a = e.target.closest && e.target.closest(".refcode"); if (a) showTip(a);
+  });
+  document.addEventListener("pointerout", function (e) {
+    var a = e.target.closest && e.target.closest(".refcode");
+    if (a && !a.contains(e.relatedTarget)) hideTip();
+  });
+  document.addEventListener("focusin", function (e) {
+    var a = e.target.closest && e.target.closest(".refcode"); if (a) showTip(a);
+  });
+  document.addEventListener("focusout", function (e) {
+    if (e.target.closest && e.target.closest(".refcode")) hideTip();
+  });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") hideTip(); });
+  window.addEventListener("scroll", hideTip, true);
+  window.addEventListener("resize", hideTip);
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest && e.target.closest(".refcode"); if (!a) return;
+    e.preventDefault();
+    copyText(a.getAttribute("data-prompt") || a.textContent, function () {
+      showToast("Copied. Paste it into Claude to start.");
+    });
+  });
+})();
 </script>
 </body>
 </html>

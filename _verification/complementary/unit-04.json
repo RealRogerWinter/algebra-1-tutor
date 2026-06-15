@@ -130,7 +130,7 @@
       "expr": "4*3-1",
       "answer": "11",
       "prompt": "The linear table x: 0,1,2,3 → y: −1,3,7,11 has even x-steps. Read off its equation, then use the equation to confirm the output at x=3. (Light stretch — table → equation → check.)",
-      "solution": "Find the constant step: 3−(−1)=4, 7−3=4, 11−7=4 → +4 per step, so 4 sits in front of x. The value at x=0 is −1, the constant added. That gives the equation y=4x−1. Now confirm against the last row using the equation: at x=3, 4(3)−1=12−1=11, which matches the table's y=11. ✓ This interleaves lesson 4.3's table→equation move with evaluating to check (lesson 4.2)."
+      "solution": "Find the constant step: 3−(−1)=4, 7−3=4, 11−7=4 → +4 per step, so 4 sits in front of x. The value at x=0 is −1, the constant added. That gives the equation y=4x−1. Now confirm against the last row using the equation: at x=3, 4(3)−1=12−1=11, which matches the table's y=11. This interleaves lesson 4.3's table→equation move with evaluating to check (lesson 4.2)."
     }
   ]
 }

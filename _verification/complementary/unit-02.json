@@ -8,7 +8,7 @@
       "var": "x",
       "answer": "7",
       "prompt": "Solve for x:  x + 8 = 15.  Then check your answer by substituting it back.",
-      "solution": "The +8 sits next to x; the inverse of adding 8 is subtracting 8. Do it to both sides so the scale stays level:\n$$x+8=15 \\;\\xrightarrow{\\,-8\\,}\\; x=7$$\nThe +8 goes to zero, leaving x alone. Check in the original: 7 + 8 = 15. ✓"
+      "solution": "The +8 sits next to x; the inverse of adding 8 is subtracting 8. Do it to both sides so the scale stays level:\n$$x+8=15 \\;\\xrightarrow{\\,-8\\,}\\; x=7$$\nThe +8 goes to zero, leaving x alone. Check in the original: 7 + 8 = 15."
     },
     {
       "id": "2.1.T2",
@@ -17,7 +17,7 @@
       "var": "x",
       "answer": "17",
       "prompt": "Solve for x:  x − 13 = 4.  Prove it is right without me.",
-      "solution": "We are subtracting 13 from x, so undo it by adding 13 to both sides:\n$$x-13=4 \\;\\xrightarrow{\\,+13\\,}\\; x=17$$\nThe −13 goes to zero. Check: 17 − 13 = 4. ✓"
+      "solution": "We are subtracting 13 from x, so undo it by adding 13 to both sides:\n$$x-13=4 \\;\\xrightarrow{\\,+13\\,}\\; x=17$$\nThe −13 goes to zero. Check: 17 − 13 = 4."
     },
     {
       "id": "2.1.T3",
@@ -26,7 +26,7 @@
       "var": "x",
       "answer": "9",
       "prompt": "Solve for x:  7x = 63.  What inverse operation undoes the 7 in front, and why does the 7 go to one?",
-      "solution": "Here x is multiplied by 7, so the inverse is dividing both sides by 7:\n$$7x=63 \\;\\xrightarrow{\\,\\div 7\\,}\\; x=9$$\nThe coefficient goes to one because 7/7 = 1, and 1x = x. Check: 7(9) = 63. ✓"
+      "solution": "Here x is multiplied by 7, so the inverse is dividing both sides by 7:\n$$7x=63 \\;\\xrightarrow{\\,\\div 7\\,}\\; x=9$$\nThe coefficient goes to one because 7/7 = 1, and 1x = x. Check: 7(9) = 63."
     },
     {
       "id": "2.1.T4",
@@ -35,7 +35,7 @@
       "var": "x",
       "answer": "36",
       "prompt": "Solve for x:  x/4 = 9.  (A light stretch: the answer is bigger than you might first guess.)",
-      "solution": "x is divided by 4, so undo it by multiplying both sides by 4:\n$$\\frac{x}{4}=9 \\;\\xrightarrow{\\,\\times 4\\,}\\; x=36$$\nDividing by 4 then multiplying by 4 takes the left side back to x (it goes to one times x). Check: 36/4 = 9. ✓ Notice that dividing made x larger than 9, not smaller — the original was already cut into quarters."
+      "solution": "x is divided by 4, so undo it by multiplying both sides by 4:\n$$\\frac{x}{4}=9 \\;\\xrightarrow{\\,\\times 4\\,}\\; x=36$$\nDividing by 4 then multiplying by 4 takes the left side back to x (it goes to one times x). Check: 36/4 = 9. Notice that dividing made x larger than 9, not smaller — the original was already cut into quarters."
     },
 
     {
@@ -45,7 +45,7 @@
       "var": "x",
       "answer": "6",
       "prompt": "Solve for x:  3x + 5 = 23.  Tell me why you peel off the +5 before dividing.",
-      "solution": "This was built by multiplying x by 3, then adding 5 — so undo in the opposite order: shoes off first (subtract 5), then socks (divide by 3).\n$$3x+5=23 \\;\\xrightarrow{\\,-5\\,}\\; 3x=18 \\;\\xrightarrow{\\,\\div 3\\,}\\; x=6$$\nThe +5 is on the outside, so it comes off first; stripping it keeps the numbers whole. Check: 3(6) + 5 = 18 + 5 = 23. ✓"
+      "solution": "This was built by multiplying x by 3, then adding 5 — so undo in the opposite order: shoes off first (subtract 5), then socks (divide by 3).\n$$3x+5=23 \\;\\xrightarrow{\\,-5\\,}\\; 3x=18 \\;\\xrightarrow{\\,\\div 3\\,}\\; x=6$$\nThe +5 is on the outside, so it comes off first; stripping it keeps the numbers whole. Check: 3(6) + 5 = 18 + 5 = 23."
     },
     {
       "id": "2.2.T2",
@@ -54,7 +54,7 @@
       "var": "x",
       "answer": "8",
       "prompt": "Solve for x:  5x − 8 = 32.",
-      "solution": "Undo the −8 first (add 8 to both sides), then undo the ×5 (divide by 5):\n$$5x-8=32 \\;\\xrightarrow{\\,+8\\,}\\; 5x=40 \\;\\xrightarrow{\\,\\div 5\\,}\\; x=8$$\nCheck: 5(8) − 8 = 40 − 8 = 32. ✓"
+      "solution": "Undo the −8 first (add 8 to both sides), then undo the ×5 (divide by 5):\n$$5x-8=32 \\;\\xrightarrow{\\,+8\\,}\\; 5x=40 \\;\\xrightarrow{\\,\\div 5\\,}\\; x=8$$\nCheck: 5(8) − 8 = 40 − 8 = 32."
     },
     {
       "id": "2.2.T3",
@@ -63,7 +63,7 @@
       "var": "x",
       "answer": "18",
       "prompt": "Solve for x:  x/3 + 4 = 10.",
-      "solution": "Strip the +4 first (subtract 4), then undo the ÷3 (multiply by 3):\n$$\\frac{x}{3}+4=10 \\;\\xrightarrow{\\,-4\\,}\\; \\frac{x}{3}=6 \\;\\xrightarrow{\\,\\times 3\\,}\\; x=18$$\nCheck: 18/3 + 4 = 6 + 4 = 10. ✓"
+      "solution": "Strip the +4 first (subtract 4), then undo the ÷3 (multiply by 3):\n$$\\frac{x}{3}+4=10 \\;\\xrightarrow{\\,-4\\,}\\; \\frac{x}{3}=6 \\;\\xrightarrow{\\,\\times 3\\,}\\; x=18$$\nCheck: 18/3 + 4 = 6 + 4 = 10."
     },
     {
       "id": "2.2.T4",
@@ -72,7 +72,7 @@
       "var": "x",
       "answer": "-4",
       "prompt": "Solve for x:  9 − 3x = 21.  (Light stretch — watch the sign on the variable term, and don't be surprised by a negative answer.)",
-      "solution": "Keep the operation sign separate from the number's sign: the term is −3x. Subtract 9 from both sides, then divide by −3.\n$$9-3x=21 \\;\\xrightarrow{\\,-9\\,}\\; -3x=12 \\;\\xrightarrow{\\,\\div(-3)\\,}\\; x=-4$$\nDividing a positive by a negative gives a negative: 12 / (−3) = −4. Check (this is where a sign slip would show): 9 − 3(−4) = 9 + 12 = 21. ✓ A negative solution is a real, valid answer."
+      "solution": "Keep the operation sign separate from the number's sign: the term is −3x. Subtract 9 from both sides, then divide by −3.\n$$9-3x=21 \\;\\xrightarrow{\\,-9\\,}\\; -3x=12 \\;\\xrightarrow{\\,\\div(-3)\\,}\\; x=-4$$\nDividing a positive by a negative gives a negative: 12 / (−3) = −4. Check (this is where a sign slip would show): 9 − 3(−4) = 9 + 12 = 21. A negative solution is a real, valid answer."
     },
 
     {
@@ -104,7 +104,7 @@
       "kind": "manual",
       "answer": "The error is in distributing the negative: −2 × −3 should be +6, not −6. Correct: 6 − 2(x − 3) = 6 − 2x + 6 = −2x + 12.",
       "prompt": "A student simplifies 6 − 2(x − 3) like this:  6 − 2(x − 3) = 6 − 2x − 6 = −2x.  Find the exact line where it breaks, fix it, and confirm with x = 1.  (Light stretch — this is the #1 sign trap.)",
-      "solution": "The break is in the distribution. The −2 must greet every term inside, including the −3: −2 × −3 = +6 (a negative times a negative is positive), not −6. So the correct second line is 6 − 2x + 6, which combines to −2x + 12 — not −2x.\n\nConfirm with x = 1: the original is 6 − 2(1 − 3) = 6 − 2(−2) = 6 + 4 = 10. The student's −2x gives −2(1) = −2 (wrong). The corrected −2x + 12 gives −2(1) + 12 = 10. ✓"
+      "solution": "The break is in the distribution. The −2 must greet every term inside, including the −3: −2 × −3 = +6 (a negative times a negative is positive), not −6. So the correct second line is 6 − 2x + 6, which combines to −2x + 12 — not −2x.\n\nConfirm with x = 1: the original is 6 − 2(1 − 3) = 6 − 2(−2) = 6 + 4 = 10. The student's −2x gives −2(1) = −2 (wrong). The corrected −2x + 12 gives −2(1) + 12 = 10."
     },
 
     {
@@ -114,7 +114,7 @@
       "var": "x",
       "answer": "5",
       "prompt": "Solve for x:  7x + 2 = 4x + 17.  Which side did you move the variable to, and why that one?",
-      "solution": "Both pans have boxes and coins. Move the smaller variable term (4x) to avoid negatives — subtract 4x from both sides (the 4x on the right goes to zero):\n$$7x+2=4x+17 \\;\\xrightarrow{\\,-4x\\,}\\; 3x+2=17 \\;\\xrightarrow{\\,-2\\,}\\; 3x=15 \\;\\xrightarrow{\\,\\div 3\\,}\\; x=5$$\nCheck: 7(5) + 2 = 37 and 4(5) + 17 = 37. ✓"
+      "solution": "Both pans have boxes and coins. Move the smaller variable term (4x) to avoid negatives — subtract 4x from both sides (the 4x on the right goes to zero):\n$$7x+2=4x+17 \\;\\xrightarrow{\\,-4x\\,}\\; 3x+2=17 \\;\\xrightarrow{\\,-2\\,}\\; 3x=15 \\;\\xrightarrow{\\,\\div 3\\,}\\; x=5$$\nCheck: 7(5) + 2 = 37 and 4(5) + 17 = 37."
     },
     {
       "id": "2.4.T2",
@@ -123,7 +123,7 @@
       "var": "x",
       "answer": "4",
       "prompt": "Solve for x:  5x − 3 = 2x + 9.",
-      "solution": "Subtract the smaller variable term, 2x, from both sides, then gather constants:\n$$5x-3=2x+9 \\;\\xrightarrow{\\,-2x\\,}\\; 3x-3=9 \\;\\xrightarrow{\\,+3\\,}\\; 3x=12 \\;\\xrightarrow{\\,\\div 3\\,}\\; x=4$$\nCheck: 5(4) − 3 = 17 and 2(4) + 9 = 17. ✓"
+      "solution": "Subtract the smaller variable term, 2x, from both sides, then gather constants:\n$$5x-3=2x+9 \\;\\xrightarrow{\\,-2x\\,}\\; 3x-3=9 \\;\\xrightarrow{\\,+3\\,}\\; 3x=12 \\;\\xrightarrow{\\,\\div 3\\,}\\; x=4$$\nCheck: 5(4) − 3 = 17 and 2(4) + 9 = 17."
     },
     {
       "id": "2.4.T3",
@@ -132,7 +132,7 @@
       "var": "x",
       "answer": "4",
       "prompt": "Solve for x:  3(x + 4) = x + 20.  Why must you distribute before gathering the x's?",
-      "solution": "Tidy each side first: the left side has a factor wrapped around (x + 4), so distribute the 3 before any terms can move across.\n$$3(x+4)=x+20 \\;\\xrightarrow{\\,\\text{distribute}\\,}\\; 3x+12=x+20 \\;\\xrightarrow{\\,-x\\,}\\; 2x+12=20 \\;\\xrightarrow{\\,-12\\,}\\; 2x=8 \\;\\xrightarrow{\\,\\div 2\\,}\\; x=4$$\nYou distribute first because the 3 multiplies the whole group (x + 4); until it is handed out, the 3x is still locked inside the parentheses and you cannot legally combine it with the x on the right. Check: 3(4 + 4) = 24 and 4 + 20 = 24. ✓"
+      "solution": "Tidy each side first: the left side has a factor wrapped around (x + 4), so distribute the 3 before any terms can move across.\n$$3(x+4)=x+20 \\;\\xrightarrow{\\,\\text{distribute}\\,}\\; 3x+12=x+20 \\;\\xrightarrow{\\,-x\\,}\\; 2x+12=20 \\;\\xrightarrow{\\,-12\\,}\\; 2x=8 \\;\\xrightarrow{\\,\\div 2\\,}\\; x=4$$\nYou distribute first because the 3 multiplies the whole group (x + 4); until it is handed out, the 3x is still locked inside the parentheses and you cannot legally combine it with the x on the right. Check: 3(4 + 4) = 24 and 4 + 20 = 24."
     },
     {
       "id": "2.4.T4",
@@ -149,7 +149,7 @@
       "var": "x",
       "answer": "18",
       "prompt": "Solve for x:  (1/3)x = 6.  Use a reciprocal.",
-      "solution": "The reciprocal of 1/3 is 3/1 = 3. Multiply both sides by 3 (this makes the coefficient go to one, since (1/3)·3 = 1):\n$$\\tfrac13 x=6 \\;\\xrightarrow{\\,\\times 3\\,}\\; x=18$$\nCheck: (1/3)(18) = 6. ✓"
+      "solution": "The reciprocal of 1/3 is 3/1 = 3. Multiply both sides by 3 (this makes the coefficient go to one, since (1/3)·3 = 1):\n$$\\tfrac13 x=6 \\;\\xrightarrow{\\,\\times 3\\,}\\; x=18$$\nCheck: (1/3)(18) = 6."
     },
     {
       "id": "2.6.T2",
@@ -158,7 +158,7 @@
       "var": "x",
       "answer": "12",
       "prompt": "Solve for x:  x/2 + x/3 = 10.  Clear the fractions first — what number clears both, and why?",
-      "solution": "The denominators are 2 and 3; the LCM is 6, the smallest number both divide. Multiply every term on both sides by 6 (the balance stays level only if the whole equation is multiplied):\n$$\\frac{x}{2}+\\frac{x}{3}=10 \\;\\xrightarrow{\\,\\times 6\\,}\\; 3x+2x=60 \\;\\Rightarrow\\; 5x=60 \\;\\Rightarrow\\; x=12$$\nCheck: 12/2 + 12/3 = 6 + 4 = 10. ✓"
+      "solution": "The denominators are 2 and 3; the LCM is 6, the smallest number both divide. Multiply every term on both sides by 6 (the balance stays level only if the whole equation is multiplied):\n$$\\frac{x}{2}+\\frac{x}{3}=10 \\;\\xrightarrow{\\,\\times 6\\,}\\; 3x+2x=60 \\;\\Rightarrow\\; 5x=60 \\;\\Rightarrow\\; x=12$$\nCheck: 12/2 + 12/3 = 6 + 4 = 10."
     },
     {
       "id": "2.6.T3",
@@ -167,7 +167,7 @@
       "var": "x",
       "answer": "12",
       "prompt": "Solve for x:  (3/4)x + 2 = 11.",
-      "solution": "First strip the +2 (subtract 2 from both sides), then undo the (3/4) coefficient by multiplying by its reciprocal 4/3:\n$$\\tfrac34 x+2=11 \\;\\xrightarrow{\\,-2\\,}\\; \\tfrac34 x=9 \\;\\xrightarrow{\\,\\times \\tfrac43\\,}\\; x=9\\cdot\\tfrac43=12$$\nCheck: (3/4)(12) + 2 = 9 + 2 = 11. ✓"
+      "solution": "First strip the +2 (subtract 2 from both sides), then undo the (3/4) coefficient by multiplying by its reciprocal 4/3:\n$$\\tfrac34 x+2=11 \\;\\xrightarrow{\\,-2\\,}\\; \\tfrac34 x=9 \\;\\xrightarrow{\\,\\times \\tfrac43\\,}\\; x=9\\cdot\\tfrac43=12$$\nCheck: (3/4)(12) + 2 = 9 + 2 = 11."
     },
     {
       "id": "2.6.T4",
@@ -176,7 +176,7 @@
       "var": "x",
       "answer": "21/2",
       "prompt": "Solve for x:  (2/3)x = 7.  State the answer exactly.  (Light stretch — the solution is itself a fraction; don't round it.)",
-      "solution": "Multiply both sides by the reciprocal of 2/3, which is 3/2:\n$$\\tfrac23 x=7 \\;\\xrightarrow{\\,\\times \\tfrac32\\,}\\; x=7\\cdot\\tfrac32=\\frac{21}{2}$$\nAn exact fraction is the answer — 21/2 (that is 10½); don't round to 10 or 11. Check: (2/3)·(21/2) = 42/6 = 7. ✓"
+      "solution": "Multiply both sides by the reciprocal of 2/3, which is 3/2:\n$$\\tfrac23 x=7 \\;\\xrightarrow{\\,\\times \\tfrac32\\,}\\; x=7\\cdot\\tfrac32=\\frac{21}{2}$$\nAn exact fraction is the answer — 21/2 (that is 10½); don't round to 10 or 11. Check: (2/3)·(21/2) = 42/6 = 7."
     },
 
     {
@@ -186,7 +186,7 @@
       "var": "x",
       "answer": "-5",
       "prompt": "Solve for x:  6 − 2x = 16.  (Mixed review — two-step, and mind the sign.)",
-      "solution": "The variable term is −2x. Subtract 6 from both sides, then divide by −2:\n$$6-2x=16 \\;\\xrightarrow{\\,-6\\,}\\; -2x=10 \\;\\xrightarrow{\\,\\div(-2)\\,}\\; x=-5$$\nCheck: 6 − 2(−5) = 6 + 10 = 16. ✓ A negative answer is perfectly valid."
+      "solution": "The variable term is −2x. Subtract 6 from both sides, then divide by −2:\n$$6-2x=16 \\;\\xrightarrow{\\,-6\\,}\\; -2x=10 \\;\\xrightarrow{\\,\\div(-2)\\,}\\; x=-5$$\nCheck: 6 − 2(−5) = 6 + 10 = 16. A negative answer is perfectly valid."
     },
     {
       "id": "2.R.T2",
@@ -194,7 +194,7 @@
       "expr": "4-3*(x-2)",
       "answer": "-3*x+10",
       "prompt": "Simplify:  4 − 3(x − 2).  (Mixed review — distribute the negative carefully, then combine.)",
-      "solution": "Distribute −3 to every term inside: −3·x = −3x and −3·(−2) = +6 (negative times negative is positive). Then combine constants:\n$$4-3(x-2) = 4-3x+6 = -3x+10$$\nA common wrong answer is 4 − 3x − 6 = −3x − 2, from giving −3 × −2 the wrong sign. Check at x = 1: original 4 − 3(1 − 2) = 4 − 3(−1) = 7; rewrite −3(1) + 10 = 7. ✓"
+      "solution": "Distribute −3 to every term inside: −3·x = −3x and −3·(−2) = +6 (negative times negative is positive). Then combine constants:\n$$4-3(x-2) = 4-3x+6 = -3x+10$$\nA common wrong answer is 4 − 3x − 6 = −3x − 2, from giving −3 × −2 the wrong sign. Check at x = 1: original 4 − 3(1 − 2) = 4 − 3(−1) = 7; rewrite −3(1) + 10 = 7."
     },
     {
       "id": "2.R.T3",
@@ -203,7 +203,7 @@
       "var": "x",
       "answer": "9",
       "prompt": "Solve for x:  2(x − 4) = x + 1.  (Mixed review — tidy each side first, then gather.)",
-      "solution": "Distribute the 2 (positive 2 over a subtraction keeps the −8): 2(x − 4) = 2x − 8. Then gather:\n$$2(x-4)=x+1 \\;\\xrightarrow{\\,\\text{distribute}\\,}\\; 2x-8=x+1 \\;\\xrightarrow{\\,-x\\,}\\; x-8=1 \\;\\xrightarrow{\\,+8\\,}\\; x=9$$\nCheck: 2(9 − 4) = 2(5) = 10 and 9 + 1 = 10. ✓"
+      "solution": "Distribute the 2 (positive 2 over a subtraction keeps the −8): 2(x − 4) = 2x − 8. Then gather:\n$$2(x-4)=x+1 \\;\\xrightarrow{\\,\\text{distribute}\\,}\\; 2x-8=x+1 \\;\\xrightarrow{\\,-x\\,}\\; x-8=1 \\;\\xrightarrow{\\,+8\\,}\\; x=9$$\nCheck: 2(9 − 4) = 2(5) = 10 and 9 + 1 = 10."
     },
     {
       "id": "2.R.T4",
@@ -212,7 +212,7 @@
       "var": "x",
       "answer": "12",
       "prompt": "Solve for x:  x/4 + x/6 = 5.  (Mixed review — clear the fractions.)",
-      "solution": "Denominators 4 and 6 have LCM 12. Multiply every term by 12:\n$$\\frac{x}{4}+\\frac{x}{6}=5 \\;\\xrightarrow{\\,\\times 12\\,}\\; 3x+2x=60 \\;\\Rightarrow\\; 5x=60 \\;\\Rightarrow\\; x=12$$\nCheck: 12/4 + 12/6 = 3 + 2 = 5. ✓"
+      "solution": "Denominators 4 and 6 have LCM 12. Multiply every term by 12:\n$$\\frac{x}{4}+\\frac{x}{6}=5 \\;\\xrightarrow{\\,\\times 12\\,}\\; 3x+2x=60 \\;\\Rightarrow\\; 5x=60 \\;\\Rightarrow\\; x=12$$\nCheck: 12/4 + 12/6 = 3 + 2 = 5."
     },
     {
       "id": "2.R.T5",

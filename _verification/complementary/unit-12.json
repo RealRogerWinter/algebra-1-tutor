@@ -78,7 +78,7 @@
       "var": "x",
       "answer": "-6,1",
       "prompt": "Solve (x+6)(x-1)=0 without expanding.",
-      "solution": "By the zero-product property, a product is 0 only if a factor is 0. So x+6=0 or x-1=0. Solve each little equation: x+6=0 ⇒ x=-6; x-1=0 ⇒ x=1. Answer: x=-6 or x=1. (Note x+6=0 gives -6, not +6.) Check: (-6+6)(-6-1)=0·(-7)=0. ✓"
+      "solution": "By the zero-product property, a product is 0 only if a factor is 0. So x+6=0 or x-1=0. Solve each little equation: x+6=0 ⇒ x=-6; x-1=0 ⇒ x=1. Answer: x=-6 or x=1. (Note x+6=0 gives -6, not +6.) Check: (-6+6)(-6-1)=0·(-7)=0."
     },
     {
       "id": "12.3.T2",
@@ -86,7 +86,7 @@
       "expr": "x**2+9*x+20",
       "answer": "(x+4)*(x+5)",
       "prompt": "Factor x²+9x+20, then check by expanding.",
-      "solution": "Find two numbers that multiply to +20 and add to +9: 4 and 5 (4·5=20, 4+5=9). So x²+9x+20=(x+4)(x+5). Check by expanding (FOIL): (x+4)(x+5)=x²+5x+4x+20=x²+9x+20. ✓ (This is the factoring step that 12.3 solving relies on; to solve x²+9x+20=0 you'd then set each factor to 0, giving x=-4 or x=-5.)"
+      "solution": "Find two numbers that multiply to +20 and add to +9: 4 and 5 (4·5=20, 4+5=9). So x²+9x+20=(x+4)(x+5). Check by expanding (FOIL): (x+4)(x+5)=x²+5x+4x+20=x²+9x+20. (This is the factoring step that 12.3 solving relies on; to solve x²+9x+20=0 you'd then set each factor to 0, giving x=-4 or x=-5.)"
     },
     {
       "id": "12.3.T3",
@@ -95,7 +95,7 @@
       "var": "x",
       "answer": "7,-3",
       "prompt": "Solve x²-4x-21=0 by factoring.",
-      "solution": "It's already set equal to 0. Find two numbers that multiply to -21 and add to -4: -7 and +3 (-7·3=-21, -7+3=-4). Factor: (x-7)(x+3)=0. Zero-product property: x-7=0 ⇒ x=7; x+3=0 ⇒ x=-3. Answer: x=7 or x=-3. Watch the signs — x+3=0 gives -3. Check x=7: 49-28-21=0. ✓"
+      "solution": "It's already set equal to 0. Find two numbers that multiply to -21 and add to -4: -7 and +3 (-7·3=-21, -7+3=-4). Factor: (x-7)(x+3)=0. Zero-product property: x-7=0 ⇒ x=7; x+3=0 ⇒ x=-3. Answer: x=7 or x=-3. Watch the signs — x+3=0 gives -3. Check x=7: 49-28-21=0."
     },
     {
       "id": "12.3.T4",
@@ -122,7 +122,7 @@
       "var": "x",
       "answer": "-3,-7",
       "prompt": "Solve x²+10x+21=0 by completing the square.",
-      "solution": "Move the constant: x²+10x=-21. Add (10/2)²=25 to BOTH sides (keep the balance): x²+10x+25=-21+25, so (x+5)²=4. Take ±√ of both sides: x+5=±2. Then x=-5±2, giving x=-3 or x=-7. Check x=-3: 9-30+21=0. ✓"
+      "solution": "Move the constant: x²+10x=-21. Add (10/2)²=25 to BOTH sides (keep the balance): x²+10x+25=-21+25, so (x+5)²=4. Take ±√ of both sides: x+5=±2. Then x=-5±2, giving x=-3 or x=-7. Check x=-3: 9-30+21=0."
     },
     {
       "id": "12.4.T3",
@@ -131,7 +131,7 @@
       "var": "x",
       "answer": "2,6",
       "prompt": "Solve x²-8x+12=0 by completing the square.",
-      "solution": "Move the constant: x²-8x=-12. Add (-8/2)²=(-4)²=16 to both sides: x²-8x+16=-12+16, so (x-4)²=4. (The sign of b/2 matters: half of -8 is -4, so the square is (x-4)², not (x+4)².) Then x-4=±2 ⇒ x=4±2 ⇒ x=2 or x=6. Check x=6: 36-48+12=0. ✓"
+      "solution": "Move the constant: x²-8x=-12. Add (-8/2)²=(-4)²=16 to both sides: x²-8x+16=-12+16, so (x-4)²=4. (The sign of b/2 matters: half of -8 is -4, so the square is (x-4)², not (x+4)².) Then x-4=±2 ⇒ x=4±2 ⇒ x=2 or x=6. Check x=6: 36-48+12=0."
     },
     {
       "id": "12.4.T4",
@@ -237,7 +237,7 @@
       "var": "x",
       "answer": "5,-7",
       "prompt": "Solve x²+2x-35=0 by factoring.",
-      "solution": "Two numbers multiplying to -35 and adding to +2: +7 and -5 (7·(-5)=-35, 7+(-5)=2). Factor: (x+7)(x-5)=0. Zero-product property: x+7=0 ⇒ x=-7; x-5=0 ⇒ x=5. Answer: x=5 or x=-7. (Lesson 12.3.) Check x=5: 25+10-35=0. ✓"
+      "solution": "Two numbers multiplying to -35 and adding to +2: +7 and -5 (7·(-5)=-35, 7+(-5)=2). Factor: (x+7)(x-5)=0. Zero-product property: x+7=0 ⇒ x=-7; x-5=0 ⇒ x=5. Answer: x=5 or x=-7. (Lesson 12.3.) Check x=5: 25+10-35=0."
     },
     {
       "id": "12.R.T4",
@@ -253,7 +253,7 @@
       "kind": "manual",
       "answer": "w(w+5)=66 -> w^2+5w-66=0 -> (w-6)(w+11)=0 -> w=6 or w=-11; reject w=-11 (a width can't be negative), so width=6, length=11. Rectangle is 6 by 11.",
       "prompt": "A rectangle's length is 5 more than its width, and its area is 66. Let the width be w. Set up an equation, solve it, and explain why one root is rejected. (Word problem — model it, then reject the impossible root.)",
-      "solution": "Model: length = w+5, area = w(w+5)=66. Expand to standard form: w²+5w-66=0. Factor (multiply to -66, add to +5: +11 and -6): (w-6)(w+11)=0 ⇒ w=6 or w=-11. Both are real algebraic roots, but a width cannot be negative, so reject w=-11. Keep w=6: the width is 6 and the length is 6+5=11 — a 6 by 11 rectangle (area 66 ✓). This is the 'reject the impossible root' move: the algebra gives two roots; the context decides which one answers the question. (Interleaves modeling + 12.3 factoring + reading the answer back into the situation.)"
+      "solution": "Model: length = w+5, area = w(w+5)=66. Expand to standard form: w²+5w-66=0. Factor (multiply to -66, add to +5: +11 and -6): (w-6)(w+11)=0 ⇒ w=6 or w=-11. Both are real algebraic roots, but a width cannot be negative, so reject w=-11. Keep w=6: the width is 6 and the length is 6+5=11 — a 6 by 11 rectangle (area 66). This is the 'reject the impossible root' move: the algebra gives two roots; the context decides which one answers the question. (Interleaves modeling + 12.3 factoring + reading the answer back into the situation.)"
     }
   ]
 }

@@ -40,7 +40,7 @@
       "var": "x",
       "answer": "3",
       "prompt": "Solve the proportion x/5 = 12/20.",
-      "solution": "Cross-multiplication is just \"clear both denominators\": multiply both sides by 5 and by 20. That gives 20·x = 5·12, i.e. 20x = 60, so x = 3. Check: 3/5 = 12/20 (both equal 0.6). ✓"
+      "solution": "Cross-multiplication is just \"clear both denominators\": multiply both sides by 5 and by 20. That gives 20·x = 5·12, i.e. 20x = 60, so x = 3. Check: 3/5 = 12/20 (both equal 0.6)."
     },
     {
       "id": "3.2.T2",
@@ -49,7 +49,7 @@
       "var": "x",
       "answer": "6",
       "prompt": "Solve the proportion 4/x = 10/15. (Here x ≠ 0, since 4/x must be defined.)",
-      "solution": "Cross-multiply (clear both denominators): 4·15 = 10·x, so 60 = 10x, giving x = 6. Check: 4/6 = 10/15 (both reduce to ⅔). ✓ Note x ≠ 0 was required for 4/x to make sense — and 6 ≠ 0, so we're fine."
+      "solution": "Cross-multiply (clear both denominators): 4·15 = 10·x, so 60 = 10x, giving x = 6. Check: 4/6 = 10/15 (both reduce to ⅔). Note x ≠ 0 was required for 4/x to make sense — and 6 ≠ 0, so we're fine."
     },
     {
       "id": "3.2.T3",
@@ -74,7 +74,7 @@
       "expr": "(30/100)*90",
       "answer": "27",
       "prompt": "What is 30% of 90?",
-      "solution": "This is the \"find the part\" type: part = percent × whole, with the percent as a decimal. 30% = 0.30, so 0.30 × 90 = 27. (Check against the skeleton part/whole = percent/100: 27/90 = 30/100. ✓)"
+      "solution": "This is the \"find the part\" type: part = percent × whole, with the percent as a decimal. 30% = 0.30, so 0.30 × 90 = 27. (Check against the skeleton part/whole = percent/100: 27/90 = 30/100.)"
     },
     {
       "id": "3.3.T2",
@@ -91,7 +91,7 @@
       "var": "x",
       "answer": "45",
       "prompt": "18 is 40% of what number?",
-      "solution": "This is the \"find the whole\" type. part = percent × whole, so 0.40 · w = 18. Divide both sides by 0.40 (a Unit 2 one-step solve): w = 18 / 0.40 = 45. (Check: 0.40 × 45 = 18. ✓)"
+      "solution": "This is the \"find the whole\" type. part = percent × whole, so 0.40 · w = 18. Divide both sides by 0.40 (a Unit 2 one-step solve): w = 18 / 0.40 = 45. (Check: 0.40 × 45 = 18.)"
     },
     {
       "id": "3.3.T4",
@@ -117,7 +117,7 @@
       "var": "x",
       "answer": "9",
       "prompt": "Solve the proportion 3/8 = x/24. Before solving, will x be bigger or smaller than 3?",
-      "solution": "Since 24 is 3 times 8, x must be 3 times 3 — so x will be BIGGER than 3 (expect 9). Cross-multiply (clear both denominators): 3·24 = 8·x, so 72 = 8x, giving x = 9. Check: 3/8 = 9/24 (both reduce to ⅜). ✓"
+      "solution": "Since 24 is 3 times 8, x must be 3 times 3 — so x will be BIGGER than 3 (expect 9). Cross-multiply (clear both denominators): 3·24 = 8·x, so 72 = 8x, giving x = 9. Check: 3/8 = 9/24 (both reduce to ⅜)."
     },
     {
       "id": "3.R.T3",
@@ -126,7 +126,7 @@
       "var": "x",
       "answer": "40",
       "prompt": "24 is 60% of what number?",
-      "solution": "\"Find the whole\" type: part = percent × whole, so 0.60 · w = 24. Divide both sides by 0.60: w = 24 / 0.60 = 40. (Check: 0.60 × 40 = 24. ✓ Or as a proportion, 24/w = 60/100 ⇒ 60w = 2400 ⇒ w = 40.)"
+      "solution": "\"Find the whole\" type: part = percent × whole, so 0.60 · w = 24. Divide both sides by 0.60: w = 24 / 0.60 = 40. (Check: 0.60 × 40 = 24. Or as a proportion, 24/w = 60/100 ⇒ 60w = 2400 ⇒ w = 40.)"
     },
     {
       "id": "3.R.T4",
