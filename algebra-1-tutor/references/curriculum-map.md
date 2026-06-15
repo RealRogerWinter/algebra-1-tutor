@@ -48,7 +48,8 @@ Functions (Unit 4) are a **backbone, not a side topic** — once introduced, nar
 - 2.2 Two-step equations
 - 2.3 Combining like terms & the distributive property
 - 2.4 Variables on both sides
-- 2.5 Equations with fractions (incl. Fraction Refreshers A: common denominators, B: reciprocals)
+- 2.5 Fraction refresher (Refresher A: common denominators; B: reciprocals)
+- 2.6 Equations with fractions
 
 **Unit 3 — Proportional Reasoning**
 - 3.1 Ratios and rates (unit rate = the seed of slope)

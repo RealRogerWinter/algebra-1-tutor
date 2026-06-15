@@ -43,7 +43,7 @@ The same move handles every one-step equation; only the operation you undo chang
 
 Read each worked example slowly, a line at a time, and ask why each line follows from the one above before you go on. The whole pattern is in these four. Each one isolates x with the inverse operation, then checks by substituting the answer back.
 
-**Worked examples** (each isolates with the inverse, then checks):
+**Worked examples:**
 
 *Addition, undo by subtracting:*
 {#2.1.w1}
@@ -84,19 +84,39 @@ A set that mixes the four types feels harder than drilling one kind, and that's 
 **Practice problems:**
 
 *Add (undo by subtracting):*
-1. x+5=12  2. x+9=14  3. x+7=7  4. 11+x=20  5. x+3=8
+1. x+5=12
+2. x+9=14
+3. x+7=7
+4. 11+x=20
+5. x+3=8
 
 *Subtract (undo by adding):*
-6. x-4=10  7. x-6=1  8. x-2=9  9. x-8=0  10. x-5=12
+6. x-4=10
+7. x-6=1
+8. x-2=9
+9. x-8=0
+10. x-5=12
 
 *Multiply (undo by dividing):*
-11. 4x=20  12. 3x=21  13. 6x=6  14. 5x=45  15. 7x=28
+11. 4x=20
+12. 3x=21
+13. 6x=6
+14. 5x=45
+15. 7x=28
 
 *Divide (undo by multiplying):*
-16. x/2=6  17. x/3=4  18. x/5=2  19. x/4=8  20. x/6=3
+16. x/2=6
+17. x/3=4
+18. x/5=2
+19. x/4=8
+20. x/6=3
 
 *Mixed (pick the right inverse):*
-21. x+14=23  22. 9x=54  23. x-7=15  24. x/8=3  25. x+6=19
+21. x+14=23
+22. 9x=54
+23. x-7=15
+24. x/8=3
+25. x+6=19
 
 **Answer key:**
 1) 7  2) 5  3) 0  4) 9  5) 5  6) 14  7) 7  8) 11  9) 8  10) 17  11) 5  12) 7  13) 1  14) 9  15) 4  16) 12  17) 12  18) 10  19) 32  20) 18  21) 9  22) 6  23) 22  24) 24  25) 13
@@ -155,16 +175,27 @@ The practice below mixes the problem types, so you have to spot which layer to u
 **Practice problems:**
 
 *Multiply-then-add:*
-1. 2x+1=9  2. 3x+4=19  3. 5x+2=27  4. 4x+7=23
+1. 2x+1=9
+2. 3x+4=19
+3. 5x+2=27
+4. 4x+7=23
 
 *Multiply-then-subtract:*
-5. 3x-5=10  6. 6x-4=20  7. 2x-9=1  8. 7x-3=25
+5. 3x-5=10
+6. 6x-4=20
+7. 2x-9=1
+8. 7x-3=25
 
 *Division type:*
-9. x/2+3=8  10. x/4-1=2  11. x/3+5=9  12. x/5-2=0
+9. x/2+3=8
+10. x/4-1=2
+11. x/3+5=9
+12. x/5-2=0
 
 *Flipped format (don't assume x is on the left):*
-13. 8+2x=14  14. 10=4x-2  15. 3x+6=6
+13. 8+2x=14
+14. 10=4x-2
+15. 3x+6=6
 
 **Answer key:**
 1) 4  2) 5  3) 5  4) 4  5) 5  6) 4  7) 5  8) 4  9) 10  10) 12  11) 12  12) 10  13) 3  14) 3  15) 0
@@ -232,19 +263,29 @@ You can now combine like terms by counting matching boxes, distribute a number a
 
 The set below is deliberately mixed, and several problems lead with a negative so the sign work stays sharp.
 
-**Practice problems** (mix of combine and distribute; several lead with a negative):
+**Practice problems:**
 
 *Combine like terms:*
-1. 4x+3x  2. 9x-2x  3. 5x+2-x  4. 6+3x-4+x  5. 2x+5x-3x
+1. 4x+3x
+2. 9x-2x
+3. 5x+2-x
+4. 6+3x-4+x
+5. 2x+5x-3x
 
 *Distribute:*
-6. 3(x+2)  7. 5(x-3)  8. 4(2x+1)
+6. 3(x+2)
+7. 5(x-3)
+8. 4(2x+1)
 
 *Distribute a leading negative:*
-9. -(x-7)  10. -(2x+5)
+9. -(x-7)
+10. -(2x+5)
 
 *Distribute, then combine:*
-11. 2x+3(x+4)  12. 10-3(x-2)  13. 4-2(x+3)  14. 6(x-1)-2x
+11. 2x+3(x+4)
+12. 10-3(x-2)
+13. 4-2(x+3)
+14. 6(x-1)-2x
 
 **Answer key:**
 1) 7x  2) 7x  3) 4x+2  4) 4x+2  5) 4x  6) 3x+6  7) 5x-15  8) 8x+4  9) -x+7  10) -2x-5  11) 5x+12  12) -3x+16  13) -2x-2  14) 4x-6
@@ -299,7 +340,9 @@ So far every equation has had **exactly one** solution. That's the common case, 
 
 You don't decide which outcome it is up front. Run the usual procedure, and if the x's disappear, stop and ask one question: is what's left actually true? In balance terms, if both pans were secretly identical, the scale stays level no matter what the box holds, and that's an identity. If the pans can never match, no box-weight will balance them, and that's a contradiction.
 
-**Worked examples (one of each outcome, keep the substitution habit even here):**
+Here's one worked example of each outcome. Keep the substitution habit even when the variable disappears.
+
+**Worked examples:**
 
 *Conditional, the usual one solution:*
 {#2.4.w5}
@@ -354,16 +397,32 @@ Several of these land on a negative, and several are an identity or a contradict
 **Practice problems:**
 
 *Gather variables (positive answers):*
-1. 6x+1=4x+9  2. 8x-5=3x+10  3. 5x+3=2x+18  4. 7x-2=5x+8  5. 9x+4=6x+19  6. 4x-7=x+5
+1. 6x+1=4x+9
+2. 8x-5=3x+10
+3. 5x+3=2x+18
+4. 7x-2=5x+8
+5. 9x+4=6x+19
+6. 4x-7=x+5
 
 *Negative answers:*
-7. 3x+8=7x+20  8. 2x-9=5x+3
+7. 3x+8=7x+20
+8. 2x-9=5x+3
 
 *Distribute first, then gather:*
-9. 3(x+2)=x+10  10. 2(x-1)=4x+6  11. 5x-4=3(x+2)  12. 4(x-3)=2x+2
+9. 3(x+2)=x+10
+10. 2(x-1)=4x+6
+11. 5x-4=3(x+2)
+12. 4(x-3)=2x+2
 
 *Three outcomes. Decide: one solution, all real numbers, or no solution? (Gather, then read the leftover statement.)*
-13. 4x+5=2x+13  14. 3x+5=3x+5  15. 2x+3=2x+5  16. 6x+1=2x+13  17. 2(x+3)=2x+6  18. 5x+2=5x-9  19. 3(x-4)=3x-12  20. 4(x+1)=2(2x+5)
+13. 4x+5=2x+13
+14. 3x+5=3x+5
+15. 2x+3=2x+5
+16. 6x+1=2x+13
+17. 2(x+3)=2x+6
+18. 5x+2=5x-9
+19. 3(x-4)=3x-12
+20. 4(x+1)=2(2x+5)
 
 *Strategy choice. Solve, then say which first move (divide-first vs. distribute-first) was cleaner and why:*
 21. 5(x+2)=35
@@ -376,11 +435,13 @@ Several of these land on a negative, and several are an identity or a contradict
 
 ---
 
-## Lesson 2.5: Equations with fractions (with two Fraction Refreshers)
+## Lesson 2.5: Fraction refresher
 
-Fractions show up all through the units ahead, so it's worth getting steady with them here. Many adults stalled on fractions years ago, so before the lesson proper there are two short refreshers that repair the foundation first. If fractions already feel solid, you can skip straight past them to the lesson. A good way to test yourself: glance at (2/3)x = 6. If you know how to start, move on; if you hesitate, the refreshers are exactly what you need.
+Fractions turn up all through the units ahead (in slope, in rates, in proportions), so it's worth getting steady with them before you start solving equations that contain them. Many adults stalled on fractions years ago. If that's you, nothing here is out of reach; this short lesson rebuilds the two pieces you'll lean on next.
 
-There are two ways to solve an equation with fractions in it, and both reduce it to the whole-number equations you already solve. The first handles a single fraction stuck to the variable, by multiplying by its **reciprocal**. The second handles fractions scattered around the equation, by **clearing** them all at once. The refreshers build the two pieces those methods need.
+You need just two skills. The first is adding and subtracting fractions by giving them a common size. The second is the reciprocal, a flipped fraction, which is how you undo a fraction that's multiplying the variable. The next lesson puts both to work, so firm them up here first.
+
+If fractions already feel solid, you can move through this quickly. A good way to test yourself: glance at (2/3)x = 6. If you know how to start, skim; if you hesitate, this is exactly the ground to walk slowly.
 
 ### Fraction Refresher A: Common Denominators
 
@@ -396,7 +457,16 @@ $$\frac34+\frac16:\quad \text{LCM}(4,6)=12,\quad \frac34=\frac{9}{12},\ \frac16=
 A quick self-check on any fraction answer: picture roughly where it sits between the nearest whole numbers and ask whether its size makes sense. 11/12 is just under 1, which fits adding two parts that are each less than a whole.
 
 **Practice (add/subtract; reduce your answer):**
-1. 1/4+2/4  2. 1/3+1/6  3. 1/2+1/4  4. 2/3+1/4  5. 3/4-1/2  6. 5/6-1/3  7. 1/2+1/5  8. 3/8+1/4  9. 2/3-1/6  10. 1/2+1/3+1/6
+1. 1/4+2/4
+2. 1/3+1/6
+3. 1/2+1/4
+4. 2/3+1/4
+5. 3/4-1/2
+6. 5/6-1/3
+7. 1/2+1/5
+8. 3/8+1/4
+9. 2/3-1/6
+10. 1/2+1/3+1/6
 
 **Key (verified):** 1) 3/4  2) 1/2  3) 3/4  4) 11/12  5) 1/4  6) 1/2  7) 7/10  8) 5/8  9) 1/2  10) 1
 
@@ -410,18 +480,28 @@ $$\frac23 x = 6 \;\xrightarrow{\,\times \frac32\,}\; x = 6\cdot\frac32 = 9 \qqua
 The 2/3 times 3/2 goes to one, leaving x alone, and 6 times 3/2 is 9. The check puts it back: two-thirds of 9 is 6.
 
 **Practice, name the reciprocal:**
-1. 5/8  2. 1/9  3. 6  4. 11/4
+1. 5/8
+2. 1/9
+3. 6
+4. 11/4
 
 **Practice, solve using a reciprocal:**
-5. (1/2)x=7  6. (2/5)x=4  7. (3/4)x=6  8. (2/3)x=10  9. (5/6)x=5  10. (3/2)x=9
+5. (1/2)x=7
+6. (2/5)x=4
+7. (3/4)x=6
+8. (2/3)x=10
+9. (5/6)x=5
+10. (3/2)x=9
 
 **Key (verified):** 1) 8/5  2) 9  3) 1/6  4) 4/11  5) 14  6) 10  7) 8  8) 15  9) 6  10) 6
 
 ---
 
-### The lesson proper: solving equations with fractions
+## Lesson 2.6: Equations with fractions
 
-With the two refreshers in hand, here are the two strategies, each turning a fraction equation into a plain one.
+Now put those two fraction skills to work. An equation with a fraction in it can look intimidating, but every one turns back into the whole-number equations you already solve. There are two ways in, and you've just refreshed both: multiply by a reciprocal when a single fraction multiplies x, or clear the fractions when they're scattered through the equation.
+
+Here are the two strategies, each turning a fraction equation into a plain one.
 
 **(1) Single fraction coefficient → multiply by the reciprocal** (Refresher B). When one fraction multiplies x, multiply both sides by its reciprocal so the coefficient goes to one:
 $$\frac23 x=6 \;\xrightarrow{\,\times \frac32\,}\; x=9 \qquad \text{Check: } \frac23(9)=6$$
@@ -434,19 +514,19 @@ The one thing to hold onto: every term gets multiplied, including the right side
 **Worked examples:**
 
 *Reciprocal method:*
-{#2.5.w1}
+{#2.6.w1}
 $$\frac23 x=6 \xrightarrow{\times \frac32} x=9 \qquad \text{Check: } \frac23(9)=6$$
 
 *Clear-the-fractions method:*
-{#2.5.w2}
+{#2.6.w2}
 $$\frac{x}{2}+\frac{x}{3}=5 \xrightarrow{\times 6} 3x+2x=30 \Rightarrow 5x=30 \Rightarrow x=6 \qquad \text{Check: } 3+2=5$$
 
 *Reciprocal with a bigger numerator:*
-{#2.5.w3}
+{#2.6.w3}
 $$\frac34 x=9 \xrightarrow{\times \frac43} x=12 \qquad \text{Check: } \frac34(12)=9$$
 
 *An answer that's itself a fraction (a fraction is a perfectly good solution):*
-{#2.5.w4}
+{#2.6.w4}
 $$\frac23 x=5 \xrightarrow{\times \frac32} x=\frac{15}{2} \qquad \text{Check: } \frac23\cdot\frac{15}{2}=\frac{30}{6}=5$$
 Don't round 15/2 to 7 or 8. An exact fraction *is* the answer, the same way zero was a fine answer back in Lesson 2.1. The check confirms it: two-thirds of 15/2 is 30/6, which is 5.
 
@@ -455,9 +535,9 @@ Here's a clean reciprocal case to get the method moving before the practice mixe
 A slip to watch for now that you've solved a few cleanly: when you clear fractions, the multiplier has to hit *every* term, including any plain constant and the right side. Forgetting one is the usual error. And the adding-across mistake from Refresher A can creep back, turning x/2 + x/3 into x/5. The fix is the same, since halves and thirds are different-sized pieces and must be renamed before they combine.
 
 **Check for understanding (transfer):**
-1. {#2.5.c1} Solve (2/5)x = 8 two ways, by reciprocal and by multiplying through by 5, and confirm they agree. (Reciprocal: multiply by 5/2 to get x = 20. Clearing: multiply both sides by 5 to get 2x = 40, so x = 20. Both give 20; check (2/5)(20) = 8.)
-2. {#2.5.c2} In x/2 + x/4 = 6, what number clears *both* fractions, and why that one? (The LCM of 2 and 4 is 4; multiplying every term by 4 gives 2x + x = 24, so 3x = 24 and x = 8. Check: 8/2 + 8/4 = 4 + 2 = 6.)
-3. {#2.5.c3} Why does multiplying by 3/2 make (2/3)x *go to one* times x? (Because 2/3 × 3/2 = 6/6 = 1, so the coefficient becomes 1 and 1x is just x.)
+1. {#2.6.c1} Solve (2/5)x = 8 two ways, by reciprocal and by multiplying through by 5, and confirm they agree. (Reciprocal: multiply by 5/2 to get x = 20. Clearing: multiply both sides by 5 to get 2x = 40, so x = 20. Both give 20; check (2/5)(20) = 8.)
+2. {#2.6.c2} In x/2 + x/4 = 6, what number clears *both* fractions, and why that one? (The LCM of 2 and 4 is 4; multiplying every term by 4 gives 2x + x = 24, so 3x = 24 and x = 8. Check: 8/2 + 8/4 = 4 + 2 = 6.)
+3. {#2.6.c3} Why does multiplying by 3/2 make (2/3)x *go to one* times x? (Because 2/3 × 3/2 = 6/6 = 1, so the coefficient becomes 1 and 1x is just x.)
 
 You can now solve an equation with fractions either by multiplying by the reciprocal of a single fraction coefficient or by clearing all the fractions with a common denominator, and you can trust a fractional answer as exact.
 
@@ -466,23 +546,28 @@ The practice below pulls both methods together, and two heads-up notes are built
 **Practice problems:**
 
 *Reciprocal method (single fraction coefficient):*
-1. (1/2)x=5  2. (2/3)x=8  3. (3/5)x=9  4. (5/2)x=10
+1. (1/2)x=5
+2. (2/3)x=8
+3. (3/5)x=9
+4. (5/2)x=10
 
-*Clear the fractions (common denominator), items 5, 6, 7, 9:*
-5. x/2+x/4=6  6. x/3+x/6=3  7. x/2-x/5=3  9. x/4+x/2=9
+*Clear the fractions (common denominator):*
+5. x/2+x/4=6
+6. x/3+x/6=3
+7. x/2-x/5=3
+8. x/4+x/2=9
 
-*Mixed (fraction coefficient with a constant), items 8, 10:*
-8. (2/3)x+1=7  10. (3/4)x-2=4
+*Mixed (fraction coefficient with a constant):*
+9. (2/3)x+1=7
+10. (3/4)x-2=4
 
 *Fractional answer (the solution is itself a fraction, state it exactly):*
 11. (2/5)x=3
 
-*(Heads up: by type, 8 and 9 read out of their number order. Match each problem to the answer key by its number, not its position.)*
-
 **Answer key:**
-1) 10  2) 12  3) 15  4) 4  5) 8  6) 6  7) 10  8) 9  9) 12  10) 8  11) 15/2
+1) 10  2) 12  3) 15  4) 4  5) 8  6) 6  7) 10  8) 12  9) 9  10) 8  11) 15/2
 
-*Substitution spot-checks:* #5: 8/2+8/4=4+2=6. #7: 10/2-10/5=5-2=3. #8: (2/3)(9)+1=6+1=7. #11: (2/5)(15/2)=30/10=3 — a fraction is a fine solution.
+*Substitution spot-checks:* #5: 8/2+8/4=4+2=6. #7: 10/2-10/5=5-2=3. #8: 12/4+12/2=3+6=9. #9: (2/3)(9)+1=6+1=7. #11: (2/5)(15/2)=30/10=3 — a fraction is a fine solution.
 
 ---
 
