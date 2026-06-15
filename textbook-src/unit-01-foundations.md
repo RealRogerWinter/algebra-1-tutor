@@ -109,19 +109,35 @@ Mixed practice feels harder than repeating one kind of problem, and that's the p
 
 ## Lesson 1.2: The number system & the number line
 
-When you solve 2x = 7 later on, the answer is 3.5. The instinct is to assume you slipped. You didn't; 3.5 is a real, ordinary number. To see why, start with one picture that holds every number you'll meet: the number line.
+When you solve 2x = 7 later on, the answer is 3.5. That might look like an odd answer, but 3.5 is a real, ordinary number. To see where it fits, start with one picture that holds every number you'll meet: the number line.
 
 Draw a straight line and mark 0 in the middle. The counting numbers (1, 2, 3, and so on, the ones you'd use to count apples) step off to the right. Their negatives, the mirror image on the other side of 0, step off to the left. Every number you'll meet lives somewhere on this one line {#1.2.f1}.
 
 The line is not only the evenly spaced ticks. Look between two ticks, say between 0 and 1, and there are more numbers sitting in the gap: 3/4 lands there, and so does 0.5. The in-between points are numbers too, and every gap is packed with them, no matter how far you zoom in.
 
-Now give the points on the line their names, building up the same picture one step at a time. The **counting numbers** are 1, 2, 3, and so on. Add 0 and you have the **whole numbers**. Add the negatives and you have the **integers**: …, −2, −1, 0, 1, 2, …, with no fractional part. The gap-fillers you can write as one whole number over another, like 3/4, are the **rational numbers**, and the integers are part of this group too, since 5 is just 5/1. Each name builds on the last, all on the one line.
+Now let's name the points on the line, one group at a time.
 
-Most points on that line are rational, but not all of them. A few numbers have decimals that run on forever *without* ever settling into a repeating pattern, so no fraction a/b ever lands exactly on them. Two famous ones are π = 3.14159… and √2 = 1.41421…. These are the **irrational numbers**.
+Start with the **counting numbers**: 1, 2, 3, and so on.
 
-The rationals and the irrationals together, every single point on the line with no gaps, are the **real numbers**. The "whole line" the picture just promised now has a proper name, and it's the ground algebra stands on.
+Add 0 to that group and you have the **whole numbers**.
 
-One more idea trips a lot of people here. A fraction bar or a decimal point is just how a number is *spelled*, not what it *is*. The number 5 can be written 5, or 5/1, or 5.0: three spellings, one point on the line. So you can't tell a number's type from how it's written. Work out its value first, then classify it.
+Now add the negatives too. That gives you the **integers**: …, −2, −1, 0, 1, 2, …, none of them split into parts.
+
+Then there are the in-between points, the ones you can write as one whole number over another, like 3/4. These are the **rational numbers**. The integers belong here as well, since a whole number like 5 is just 5/1.
+
+Each group grows out of the one before it, all on the same line.
+
+Most points on that line are rational, but not all of them.
+
+Some numbers have decimals that run on forever. That alone doesn't make them special: 0.333… runs on forever, yet it just repeats 3 over and over, and it's really the fraction 1/3. A few numbers, though, run on forever *and* never fall into a repeating pattern, so no fraction ever lands exactly on them.
+
+The most famous is π (say "pie"), written π = 3.14159…, the number that turns up whenever you measure circles; its decimal never ends and never repeats. Another is written √2 = 1.41421…. That √ is the square-root sign, and √2 just means the number that, times itself, gives 2; you won't compute it here, so read √2 as the name of one point on the line.
+
+Numbers like these are the **irrational numbers**.
+
+Put the rationals and the irrationals together and you have the **real numbers**. That's every single point on the line, with no gaps left over. So the "whole line" the picture promised finally has a name, and it's the ground algebra is built on.
+
+You've now met every kind of number on the line, from the counting numbers all the way out to the reals. Here's one last point, and it's a simple one once you see it. A fraction bar or a decimal point is just how a number is *spelled*, not what it *is*. The number 5 can be written 5, or 5/1, or 5.0: three spellings that all land on one point on the line. So you can't tell a number's type from how it's written. Work out its value first, then classify it.
 
 **New terms:**
 - {#1.2.d1} **Natural (counting) numbers:** 1, 2, 3, …
@@ -141,7 +157,7 @@ One more idea trips a lot of people here. A fraction bar or a decimal point is j
 5. Show three spellings of one number: 5 = 5/1 = 5.0. All three name the *same point* on the line, a useful reminder that how you write it doesn't change what it is.
 6. Classify √2 and π. Neither can be written as a ratio of integers, because their decimals never end and never repeat, so both are **irrational** (and therefore **real**, like every point on the line). Compare √9: it *looks* like a root, but √9 = 3, an **integer**. Value, not spelling.
 
-A point you can almost feel on the line, before any rule: split one pizza among 6 people instead of 4. Whose slice is smaller? The 6-way slice. That's why 1/6 is less than 1/4, even though 6 is the bigger number on the bottom. More people sharing means smaller pieces. Keep that picture; it keeps fraction sizes honest later.
+One habit worth carrying into the practice below: when a number is written as a fraction or a decimal, work out its value before you label it. A few of the problems coming up look like one type but turn out to be another.
 
 **Check for understanding (transfer):**
 - {#1.2.c1} Name a number that is rational but *not* an integer, and say how you know it's rational. (One answer: 0.5, because it's 1/2, a ratio of two integers, and it isn't a whole number.)
@@ -289,10 +305,13 @@ Read the two signs separately as you go: the first is the *operation* (subtract)
 
 Multiplying and dividing come down to counting signs. Same signs give a positive; different signs give a negative. So (−6)(3) = −18 and (−6)(−3) = 18; −20 ÷ 4 = −5 and −20 ÷ (−5) = 4. For a longer chain, just count the negative factors: an even count comes out positive, an odd count negative.
 
+That word *factor* is worth a quick name, since it just came up. When you multiply, the numbers you multiply are the **factors**, and the answer is the **product**: in 2 × 3 = 6, the factors are 2 and 3, and 6 is the product. Turn it around and you can talk about one number's factors: the factors of a number are the whole numbers that multiply to give it, the same ones that divide into it evenly with nothing left over. To find them, walk up from 1 and keep the ones that divide in cleanly. The factors of 6 are 1, 2, 3, and 6, since 1 × 6 and 2 × 3 both make 6; the factors of 12 are 1, 2, 3, 4, 6, and 12 {#1.4.f2}. Notice that 1 and the number itself are always on the list, and a few numbers, like 7, have only those two.
+
 **New terms:**
 - {#1.4.d1} **Opposite (additive inverse):** the same distance from 0 on the other side; the opposite of 5 is -5. Subtracting a number is the same as adding its opposite.
 - {#1.4.d2} **Absolute value |a|:** how far a is from 0 on the number line, a *distance*, so it is **never negative**. |5| = 5 and |-5| = 5 (both sit 5 units from 0); |0| = 0. Opposite and absolute value pair up: opposites share the same absolute value (|5| = |-5|) but have opposite signs.
 - {#1.4.d3} **Sign rules (×, ÷):** same signs → positive; different signs → negative. In a product, an **even** number of negative factors → positive; an **odd** number → negative.
+- {#1.4.d4} **Factor / product:** in a multiplication, each number being multiplied is a **factor**, and the result is the **product** (in 2 × 3 = 6, the factors are 2 and 3, and 6 is the product). The factors of a whole number are the whole numbers that divide it evenly: the factors of 6 are 1, 2, 3, 6. 1 and the number itself are always factors.
 
 **Worked examples:**
 

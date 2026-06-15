@@ -222,6 +222,7 @@ Pacing: a fluent adult may blow through 1.2–1.4 — let them; reserve the full
 - {#1.4.d1} **Opposite (additive inverse):** the same distance from 0 on the other side; the opposite of 5 is -5. Subtracting a number is the same as adding its opposite.
 - {#1.4.d2} **Absolute value |a|:** how far a is from 0 on the number line — a *distance*, so it is **never negative**. |5| = 5 and |-5| = 5 (both sit 5 units from 0); |0| = 0. Opposite and absolute value pair up: opposites share the same absolute value (|5| = |-5|) but have opposite signs.
 - {#1.4.d3} **Sign rules (×, ÷):** same signs → positive; different signs → negative. In a product, an **even** number of negative factors → positive; an **odd** number → negative.
+- {#1.4.d4} **Factor / product:** in a product, each number multiplied is a *factor*; the result is the *product* (in 2·3 = 6, the factors are 2 and 3, the product is 6). The factors of a whole number are the whole numbers that divide it evenly: factors of 6 = 1, 2, 3, 6; factors of 12 = 1, 2, 3, 4, 6, 12. 1 and the number itself are always factors. (Noun only here — the verb "to factor" and common factor / GCF wait for Unit 11.)
 
 **Teaching arc (concrete → pictorial → symbolic):**
 1. **Order on the number line.** Bigger negative = farther *left*. So -5 < -2 (a common surprise — 5 > 2 tempts the eye). Money framing (`metaphors.md`, Negatives A): owing $5 is worse off than owing $2, so -5 < -2. Name the distance: |a| is how far a sits from 0, ignoring direction, so |-5| = 5 > |-2| = 2 — -5 is farther left because its **distance from 0 is larger**, even though as a *value* -5 < -2 {#1.4.f1}. Keep **distance** (|a|, always ≥ 0) separate from **value** (which can be negative); blurring the two is what makes ordering negatives feel backwards.
@@ -245,7 +246,7 @@ Pacing: a fluent adult may blow through 1.2–1.4 — let them; reserve the full
 
 **Watch for:** `misconceptions.md` §3 — the negative-number cluster. *Tells:* -3 + (-5) = +8 (applying the multiplication rule to addition), 6 - (-2) = 4 (not seeing subtract-a-negative as adding), -5 > -2 (magnitude mistaken for value). *Repair:* switch representation — number line for add/subtract, money/debt for ordering and for subtracting a negative — never just repeat the rule.
 
-**Visuals to offer:** An **ASCII number line** is ideal here (`visuals.md`): show a hop, e.g. start at -3, move 5 left to -8. Pair with a sentence.
+**Visuals to offer:** {#1.4.f2} A **factor array** — 12 drawn as its rectangles 1·12, 2·6, 3·4, so a number's factors are the side lengths of the rectangles it can form. Also an **ASCII number line** (`visuals.md`): show a hop, e.g. start at -3, move 5 left to -8. Pair with a sentence.
 
 **Check for understanding (transfer):**
 - {#1.4.c1} "Which is greater, -7 or -3? Explain using the number line or debt."
