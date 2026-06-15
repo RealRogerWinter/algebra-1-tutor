@@ -11,7 +11,7 @@ The spine is deliberately ordered so each idea rests on the one before it. But a
 | # | Unit | What it's about | Assumes (prerequisites) |
 |---|------|-----------------|--------------------------|
 <!-- BEGIN GENERATED: units-at-a-glance -->
-| 1 | **Foundations & the Language of Algebra** | Variables, the equals sign as a balance, the number system & number line, order of operations, negative numbers, expressions vs. equations | Arithmetic only |
+| 1 | **Foundations & the Language of Algebra** | Variables, the equals sign as a balance, the number system & number line, order of operations, factors & exponents, negative numbers, expressions vs. equations | Arithmetic only |
 | 2 | **Solving Linear Equations** | One- and two-step equations, like terms, distributive property, variables on both sides, fractions in equations | Unit 1 (esp. negatives, order of operations) |
 | 3 | **Proportional Reasoning (the bridge to linearity)** | Ratios, rates, unit rate, proportions, percents | Unit 2 (solving), fraction comfort |
 | 4 | **Introducing Functions** | What a function is, f(x) notation, domain & range, table/graph/equation/words | Unit 2; helped by Unit 3 (rates) |
@@ -40,8 +40,9 @@ Functions (Unit 4) are a **backbone, not a side topic** — once introduced, nar
 - 1.1 Variables and the meaning of equations (the equals sign as a balance)
 - 1.2 The number system & the number line
 - 1.3 Order of operations
-- 1.4 Negative numbers
-- 1.5 Expressions vs. equations; evaluating expressions
+- 1.4 Factors and exponents
+- 1.5 Negative numbers
+- 1.6 Expressions vs. equations; evaluating expressions
 
 **Unit 2 — Solving Linear Equations**
 - 2.1 Inverse operations & one-step equations
@@ -120,7 +121,7 @@ Functions (Unit 4) are a **backbone, not a side topic** — once introduced, nar
 
 Keep it light and low-pressure — frame it as "let me find the right starting point for you, not a test." Ask a few, stop early once you see the level. After each, you're listening for *how* they think, not just the answer. Verify their answers before responding.
 
-1. **Negatives (Unit 1):** "What is 3 - (-4)?" *(Expected 7. If they say −1 or −7, start at 1.4.)*
+1. **Negatives (Unit 1):** "What is 3 - (-4)?" *(Expected 7. If they say −1 or −7, start at 1.5.)*
 2. **Order of operations (Unit 1):** "What is 8 - 3 + 2?" *(Expected 7. If they say 3, the same-tier left-to-right idea needs work — 1.3.)*
 3. **One/two-step solving (Unit 2):** "Solve 2x + 3 = 11." *(Expected x=4. Smooth? They're past Unit 2's start.)*
 4. **Fractions in equations (Unit 2):** "Solve (2/3)x = 6." *(Expected x=9. Hesitation points to the fraction refreshers in 2.5.)*

@@ -210,7 +210,7 @@ Test a point — x = 0 (inside): -6 < -2(0) = 0 ≤ 4 ✓. Check the endpoints t
 **Goal:** Read |x| as **distance from 0**, graph **y = |x|** (the V) and its simple shifts, and solve the **symmetric** cases |x| = k, |x| < k, |x| > k straight from that distance picture.
 **Why it matters:** Absolute value measures *how far*, ignoring direction — tolerance ("within 0.5 of target"), distance, magnitude. Centering on 0 keeps the algebra light and makes "within → *and* / outside → *or*" visible (the payoff of 8.2). *(Shifting the center off 0 — |x − 3| = 5, |2x − 1| = 7 — needs a two-case algebraic method that belongs to Algebra 2; it's flagged in the Reach note at the end.)*
 **New terms:**
-- {#8.3.d1} **Absolute value |x|:** the distance of x from 0 on the number line; always ≥ 0. |5| = 5 and |-5| = 5 — both are 5 units from 0 (callback to Unit 1.4).
+- {#8.3.d1} **Absolute value |x|:** the distance of x from 0 on the number line; always ≥ 0. |5| = 5 and |-5| = 5 — both are 5 units from 0 (callback to Unit 1.5).
 - {#8.3.d2} **The graph y = |x|:** a **V** with its vertex at the origin — the right arm rises at slope +1, the left arm at slope -1 — and it never dips below the x-axis, because an output that *is* a distance can't be negative.
 - {#8.3.d3} **Simple shifts of the V:** y = |x| + 2 lifts the whole V up 2; y = |x| − 3 drops it 3; y = |x − 1| slides it right 1 (the vertex moves to where the inside equals 0). These are *graph* moves read off the picture — not algebra to solve.
 

@@ -100,6 +100,36 @@
 
     {
       "id": "1.4.T1",
+      "kind": "manual",
+      "answer": "1, 2, 3, 5, 6, 10, 15, 30",
+      "prompt": "List all the factors of 30.",
+      "solution": "Walk up from 1 and keep the ones that divide 30 cleanly: 1, 2, 3, 5, 6, 10, 15, 30. They pair up to 30 — 1·30, 2·15, 3·10, 5·6 — which is how you know the list is complete."
+    },
+    {
+      "id": "1.4.T2",
+      "kind": "manual",
+      "answer": "prime",
+      "prompt": "Is 13 prime or composite? Say how you know.",
+      "solution": "Look for a factor other than 1 and 13: 2, 3, 4, 5, and 6 each leave a remainder, and past 6 the partners only repeat. So 13's only factors are 1 and itself — exactly two — which makes it prime."
+    },
+    {
+      "id": "1.4.T3",
+      "kind": "eval",
+      "expr": "3**3",
+      "answer": "27",
+      "prompt": "Evaluate 3³.",
+      "solution": "The base is 3 and the exponent is 3, so 3 is multiplied three times: 3³ = 3 · 3 · 3 = 27. (The exponent counts the factors of 3; it does not mean 3 × 3.)"
+    },
+    {
+      "id": "1.4.T4",
+      "kind": "manual",
+      "answer": "2³ · 3",
+      "prompt": "Write the prime factorization of 24, using an exponent where a prime repeats. (Light stretch.)",
+      "solution": "Break 24 down and keep splitting until only primes remain: 24 = 4 · 6 = (2 · 2)(2 · 3) = 2 · 2 · 2 · 3. The 2 repeats three times, so stack it under an exponent: 24 = 2³ · 3."
+    },
+
+    {
+      "id": "1.5.T1",
       "kind": "eval",
       "expr": "-6+(-8)",
       "answer": "-14",
@@ -107,7 +137,7 @@
       "solution": "Adding a negative moves further left on the number line: start at -6 and move 8 more to the left, landing at -14. (Two debts pile up: owing 6 and then owing 8 more means owing 14.) So -6 + (-8) = -14."
     },
     {
-      "id": "1.4.T2",
+      "id": "1.5.T2",
       "kind": "eval",
       "expr": "7-(-5)",
       "answer": "12",
@@ -115,7 +145,7 @@
       "solution": "Subtracting a negative is the same as adding its opposite: 7 - (-5) = 7 + 5 = 12. (A debt forgiven leaves you richer — two about-faces.) So 7 - (-5) = 12."
     },
     {
-      "id": "1.4.T3",
+      "id": "1.5.T3",
       "kind": "eval",
       "expr": "(-4)*(-3)*(2)",
       "answer": "24",
@@ -123,7 +153,7 @@
       "solution": "Count the negative factors: there are two of them, an even number, so the product is positive. Multiply the sizes: 4 × 3 × 2 = 24. So (-4)(-3)(2) = 24."
     },
     {
-      "id": "1.4.T4",
+      "id": "1.5.T4",
       "kind": "eval",
       "expr": "-3**2+(-2)*(-5)",
       "answer": "1",
@@ -132,14 +162,14 @@
     },
 
     {
-      "id": "1.5.T1",
+      "id": "1.6.T1",
       "kind": "manual",
       "answer": "expression",
       "prompt": "Is 4x - 7 an expression or an equation? How do you know, and what would you do with it?",
       "solution": "There is no equals sign, so it is an expression — a phrase that names a value once you know x. You don't \"solve\" it; you evaluate it by substituting a number for x. (An equation, by contrast, has an = and makes a claim you solve, like 4x - 7 = 5.) So: expression."
     },
     {
-      "id": "1.5.T2",
+      "id": "1.6.T2",
       "kind": "eval",
       "expr": "2*3+5",
       "answer": "11",
@@ -147,7 +177,7 @@
       "solution": "Substitute 3 for x — the reserved seat is filled: 2(3) + 5. Order of operations: multiply first, 2(3) = 6, then add, 6 + 5 = 11. So 2x + 5 at x = 3 is 11."
     },
     {
-      "id": "1.5.T3",
+      "id": "1.6.T3",
       "kind": "eval",
       "expr": "6-3*(-2)",
       "answer": "12",
@@ -155,7 +185,7 @@
       "solution": "Substitute -2 for x, keeping it in parentheses: 6 - 3(-2). Multiply first: 3(-2) = -6, so the expression is 6 - (-6). Subtracting a negative adds: 6 + 6 = 12. So 6 - 3x at x = -2 is 12."
     },
     {
-      "id": "1.5.T4",
+      "id": "1.6.T4",
       "kind": "eval",
       "expr": "(-3)**2-2*(-3)",
       "answer": "15",
@@ -178,7 +208,7 @@
       "expr": "-5-(-9)",
       "answer": "4",
       "prompt": "Evaluate: -5 - (-9).",
-      "solution": "Subtracting a negative is adding its opposite: -5 - (-9) = -5 + 9. Start at -5 and move 9 to the right, landing at 4. So -5 - (-9) = 4. (Lesson 1.4: separate the operation sign from the number's sign.)"
+      "solution": "Subtracting a negative is adding its opposite: -5 - (-9) = -5 + 9. Start at -5 and move 9 to the right, landing at 4. So -5 - (-9) = 4. (Lesson 1.5: separate the operation sign from the number's sign.)"
     },
     {
       "id": "1.R.T3",
@@ -194,7 +224,7 @@
       "expr": "10-2*(-3)",
       "answer": "16",
       "prompt": "Evaluate the expression 10 - 2x at x = -3. (Keep parentheses around the substituted value.)",
-      "solution": "Substitute -3 for x, in parentheses: 10 - 2(-3). Multiply first: 2(-3) = -6, so we have 10 - (-6). Subtracting a negative adds: 10 + 6 = 16. So 10 - 2x at x = -3 is 16. (Lessons 1.5 + 1.4 + 1.3 together: substitute, order of operations, signed arithmetic.)"
+      "solution": "Substitute -3 for x, in parentheses: 10 - 2(-3). Multiply first: 2(-3) = -6, so we have 10 - (-6). Subtracting a negative adds: 10 + 6 = 16. So 10 - 2x at x = -3 is 16. (Lessons 1.6 + 1.5 + 1.3 together: substitute, order of operations, signed arithmetic.)"
     },
     {
       "id": "1.R.T5",
@@ -202,7 +232,7 @@
       "expr": "(-2)**3+4*5",
       "answer": "12",
       "prompt": "Evaluate: (-2)³ + 4 × 5. (Light stretch — interleaves exponents on a negative, the sign rules, and order of operations.)",
-      "solution": "The parentheses mean the whole -2 is cubed: (-2)³ = (-2)(-2)(-2). Three negative factors is an odd count, so the result is negative: (-2)³ = -8. Next, multiply: 4 × 5 = 20. Then add: -8 + 20 = 12. So (-2)³ + 4 × 5 = 12. (Lessons 1.3 + 1.4: exponent tier first, then multiply, then add; count the negatives.)"
+      "solution": "The parentheses mean the whole -2 is cubed: (-2)³ = (-2)(-2)(-2). Three negative factors is an odd count, so the result is negative: (-2)³ = -8. Next, multiply: 4 × 5 = 20. Then add: -8 + 20 = 12. So (-2)³ + 4 × 5 = 12. (Lessons 1.3 + 1.5: exponent tier first, then multiply, then add; count the negatives.)"
     }
   ]
 }

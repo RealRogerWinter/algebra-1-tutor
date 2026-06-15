@@ -8,7 +8,7 @@ And when you come back to a new lesson, redo two or three problems from a lesson
 
 Here is what this first unit covers. You'll learn to read the equals sign so every later move makes sense, and map out the kinds of numbers so a strange-looking answer feels normal instead of wrong.
 
-You'll also get steady with order of operations and with negative numbers, and finally learn to tell apart the two things algebra is mostly made of. None of it needs anything beyond the arithmetic you already do.
+You'll also get steady with order of operations, meet the factors and exponents hiding inside ordinary numbers, work with negative numbers, and finally learn to tell apart the two things algebra is mostly made of. None of it needs anything beyond the arithmetic you already do.
 
 ---
 
@@ -283,13 +283,69 @@ A set that jumps between tiers asks more of you than a row of look-alikes, and t
 
 ---
 
-## Lesson 1.4: Negative numbers
+## Lesson 1.4: Factors and exponents
+
+This is a short one, and it pulls together a few words you'll lean on later. Start with two that come straight from multiplying. When you multiply, the numbers you multiply are the **factors**, and the answer is the **product**: in 2 × 3 = 6, the factors are 2 and 3, and 6 is the product.
+
+Turn that around and you can talk about one number's factors. The factors of a number are the whole numbers that multiply to give it, the same ones that divide into it evenly with nothing left over. To find them, walk up from 1 and keep the ones that divide in cleanly. The factors of 6 are 1, 2, 3, and 6, since 1 × 6 and 2 × 3 both make 6.
+
+Notice that the factors come in pairs that multiply to the number: 1 with 6, and 2 with 3. That pairing is why walking up from 1 finds them all, because each small factor points you to its partner. And two factors are always on the list no matter what: 1, and the number itself.
+
+The factors of 12 are 1, 2, 3, 4, 6, and 12. You can see why by laying 12 squares into rectangles: a 1 × 12 strip, a 2 × 6 block, and a 3 × 4 block. Each rectangle's two side lengths are a factor pair {#1.4.f1}.
+
+That pairing also sorts numbers into two kinds. A few numbers, like 7, have only the smallest possible list: 1 and themselves, two factors and no others. A number like that is **prime**. Most numbers have more, like 6 with its four factors, and those are **composite**. The number 1 is the odd one out: it has only a single factor, itself, so it counts as neither prime nor composite.
+
+Primes are the building blocks, and that's where **prime factorization** comes in. Take any whole number bigger than 1 and keep breaking it into factors until only primes are left. For 12, you might start 12 = 4 × 3, then break the 4 into 2 × 2, landing on 12 = 2 · 2 · 3. Every whole number bigger than 1 has exactly one such breakdown, apart from the order.
+
+Now to a piece of notation Lesson 1.3 already used but never named. When you saw 3², that small raised number is an **exponent**, and it's just shorthand for repeated multiplication. The **base** is the number being multiplied, the exponent counts how many copies, and the result is called a **power**. So 2³ = 2 · 2 · 2 = 8: base 2, multiplied three times.
+
+The trap to dodge is reading the exponent as "multiply by." In 2³ the 3 counts the factors of 2; it does not say "times 3." That's why 2³ is 8, not 6. Two of these have their own words: a base to the 2 is a **square** (5² = 25, read "5 squared"), and to the 3 a **cube** (2³ = 8, read "2 cubed").
+
+Exponents also tidy up a prime factorization. When a prime repeats, you can stack it under one exponent: 12 = 2 · 2 · 3 becomes 12 = 2² · 3. That compact form is the single spot where factors, primes, and exponents all meet on one line.
+
+**New terms:**
+- {#1.4.d1} **Factor / product:** in a multiplication, each number being multiplied is a **factor**, and the result is the **product** (in 2 × 3 = 6, the factors are 2 and 3, and 6 is the product). The factors of a whole number are the whole numbers that divide it evenly, with nothing left over: the factors of 12 are 1, 2, 3, 4, 6, and 12. 1 and the number itself are always factors. (Noun only here; "to factor" an expression waits for Unit 11.)
+- {#1.4.d2} **Prime / composite:** a **prime** number has exactly two factors, 1 and itself (2, 3, 5, 7, 11, …); a **composite** number has more than two (6 has 1, 2, 3, 6). 1 is neither prime nor composite, since it has only one factor.
+- {#1.4.d3} **Prime factorization:** writing a whole number as a product of primes only, e.g. 12 = 2 · 2 · 3. Every whole number bigger than 1 has exactly one such breakdown (apart from the order), so it ties factors and primes together.
+- {#1.4.d4} **Exponent / base / power:** an **exponent** is shorthand for repeated multiplication: in 2³ the **base** 2 is multiplied 3 times, 2³ = 2 · 2 · 2 = 8, and the whole thing (8) is a **power** of 2. A base to the 2 is a **square** (5² = 25), to the 3 a **cube** (2³ = 8).
+
+**Worked examples:**
+
+1. Find the factors of 24. Walk up from 1 and keep every number that divides 24 cleanly: 1, 2, 3, 4, 6, 8, 12, and 24. They come in pairs that multiply to 24, 1 · 24, 2 · 12, 3 · 8, and 4 · 6, which is why working up to the partner of each one finds them all.
+2. Prime or composite? 7 has only the factors 1 and 7, exactly two, so 7 is **prime**. 15 has 1, 3, 5, and 15, more than two, so 15 is **composite** (you can see it as 3 · 5).
+3. Read 2³. The base is 2 and the exponent is 3, so 2 is multiplied 3 times: 2³ = 2 · 2 · 2 = 8. The exponent counts how many factors of the base there are, not what to multiply by, so 2³ is 8, not 6.
+4. A square and a cube. 5² = 5 · 5 = 25 (5 squared), and 3³ = 3 · 3 · 3 = 27 (3 cubed). "Squared" is the exponent 2, "cubed" is the exponent 3.
+5. Write the prime factorization of 12. Break it into factors, then keep breaking until only primes are left: 12 = 4 · 3 = 2 · 2 · 3. Using an exponent for the repeated 2, that is 12 = 2² · 3.
+6. Write the prime factorization of 18. 18 = 2 · 9 = 2 · 3 · 3, which is 2 · 3² with an exponent on the repeated 3. Notice the exponent lands on whichever prime repeats, here the 3, not the 2.
+
+**Check for understanding (transfer):**
+- {#1.4.c1} List all the factors of 16, and name the pairs that multiply to 16. (1, 2, 4, 8, 16; the pairs are 1 · 16, 2 · 8, and 4 · 4. The 4 pairs with itself, which is why 16 is a perfect square.)
+- {#1.4.c2} Is 21 prime or composite? Say how you know. (Composite: besides 1 and 21 it also has the factors 3 and 7, since 3 · 7 = 21, so it has more than two factors.)
+- {#1.4.c3} Rewrite 2 · 2 · 2 · 2 using an exponent, then find its value. (Four factors of 2, so 2⁴ = 16.)
+
+You can now name a number's factors and the product they make, tell a prime from a composite, write a number as a stack of primes, and read an exponent as repeated multiplication, including squares and cubes.
+
+**Practice problems:**
+
+1. List all the factors of 18.
+2. Is 15 prime or composite?
+3. Is 11 prime or composite?
+4. Write the prime factorization of 20, using an exponent where a prime repeats.
+5. Evaluate 2³.
+6. Evaluate 5².
+
+**Answer key:**
+1. 1, 2, 3, 6, 9, 18 2. composite (3 · 5) 3. prime 4. 2² · 5 5. 8 6. 25
+
+---
+
+## Lesson 1.5: Negative numbers
 
 Negatives turn up in almost every answer from here on. Getting comfortable with them now means a later problem adds only one new wrinkle at a time, instead of two at once. The friendliest way in is to think of a negative as a debt: −5 means you owe $5.
 
 <!--illus:1-4-counters-->
 
-Start with which negative is *bigger*, because that's where the eye gets fooled. Would you rather owe $5 or owe $2? Owing less leaves you better off, so −2 is the bigger number and −5 is the smaller one, even though 5 is bigger than 2. On the number line it's the same story: the bigger the debt, the farther *left* you sit, and farther left means smaller {#1.4.f1}.
+Start with which negative is *bigger*, because that's where the eye gets fooled. Would you rather owe $5 or owe $2? Owing less leaves you better off, so −2 is the bigger number and −5 is the smaller one, even though 5 is bigger than 2. On the number line it's the same story: the bigger the debt, the farther *left* you sit, and farther left means smaller {#1.5.f1}.
 
 There are really two separate facts about −5 here, and keeping them apart is what makes negatives stop feeling backwards. One is its **value** (−5, which can be negative). The other is its **distance from 0**: how far it sits from 0, ignoring direction, which is 5, and a distance is never negative.
 
@@ -305,14 +361,10 @@ Read the two signs separately as you go: the first is the *operation* (subtract)
 
 Multiplying and dividing come down to counting signs. Same signs give a positive; different signs give a negative. So (−6)(3) = −18 and (−6)(−3) = 18; −20 ÷ 4 = −5 and −20 ÷ (−5) = 4. For a longer chain, just count the negative factors: an even count comes out positive, an odd count negative.
 
-That word *factor* is worth a quick name, since it just came up. When you multiply, the numbers you multiply are the **factors**, and the answer is the **product**: in 2 × 3 = 6, the factors are 2 and 3, and 6 is the product. Turn it around and you can talk about one number's factors: the factors of a number are the whole numbers that multiply to give it, the same ones that divide into it evenly with nothing left over. To find them, walk up from 1 and keep the ones that divide in cleanly. The factors of 6 are 1, 2, 3, and 6, since 1 × 6 and 2 × 3 both make 6; the factors of 12 are 1, 2, 3, 4, 6, and 12 {#1.4.f2}. Notice that 1 and the number itself are always on the list, and a few numbers, like 7, have only those two.
-
 **New terms:**
-- {#1.4.d1} **Opposite (additive inverse):** the same distance from 0 on the other side; the opposite of 5 is -5. Subtracting a number is the same as adding its opposite.
-- {#1.4.d2} **Absolute value |a|:** how far a is from 0 on the number line, a *distance*, so it is **never negative**. |5| = 5 and |-5| = 5 (both sit 5 units from 0); |0| = 0. Opposite and absolute value pair up: opposites share the same absolute value (|5| = |-5|) but have opposite signs.
-- {#1.4.d3} **Sign rules (×, ÷):** same signs → positive; different signs → negative. In a product, an **even** number of negative factors → positive; an **odd** number → negative.
-- {#1.4.d4} **Factor / product:** in a multiplication, each number being multiplied is a **factor**, and the result is the **product** (in 2 × 3 = 6, the factors are 2 and 3, and 6 is the product). The factors of a whole number are the whole numbers that divide it evenly: the factors of 6 are 1, 2, 3, 6. 1 and the number itself are always factors.
-
+- {#1.5.d1} **Opposite (additive inverse):** the same distance from 0 on the other side; the opposite of 5 is -5. Subtracting a number is the same as adding its opposite.
+- {#1.5.d2} **Absolute value |a|:** how far a is from 0 on the number line, a *distance*, so it is **never negative**. |5| = 5 and |-5| = 5 (both sit 5 units from 0); |0| = 0. Opposite and absolute value pair up: opposites share the same absolute value (|5| = |-5|) but have opposite signs.
+- {#1.5.d3} **Sign rules (×, ÷):** same signs → positive; different signs → negative. In a product, an **even** number of negative factors → positive; an **odd** number → negative.
 **Worked examples:**
 
 1. −3 + (−5) = −8. Two debts pile up; or stand on −3 and step 5 to the left.
@@ -331,9 +383,9 @@ Before the set mixes things up, reset on a clean one: −10 + 10. Start on −10
 There's a tidy-sounding rule that "two negatives make a positive." It's true for *multiplying*, but not for adding. Owing $3 and then owing $5 more leaves you owing $8, so −3 + (−5) = −8, not +8. When you see two negatives, check which operation you're actually doing before you reach for that rule.
 
 **Check for understanding (transfer):**
-- {#1.4.c1} Which is greater, −7 or −3? Explain with the number line or with debt. (−3, because owing $3 is better off than owing $7, and −3 sits to the right of −7 on the line.)
-- {#1.4.c2} Rewrite 6 − (−2) as an addition, then evaluate it. (6 − (−2) = 6 + 2 = 8, because subtracting a negative adds.)
-- {#1.4.c3} (−2)(−2)(−2): is the result positive or negative *before* you multiply, and how do you know? (Three negative factors, an odd count, so it's negative, which the arithmetic confirms: −8.)
+- {#1.5.c1} Which is greater, −7 or −3? Explain with the number line or with debt. (−3, because owing $3 is better off than owing $7, and −3 sits to the right of −7 on the line.)
+- {#1.5.c2} Rewrite 6 − (−2) as an addition, then evaluate it. (6 − (−2) = 6 + 2 = 8, because subtracting a negative adds.)
+- {#1.5.c3} (−2)(−2)(−2): is the result positive or negative *before* you multiply, and how do you know? (Three negative factors, an odd count, so it's negative, which the arithmetic confirms: −8.)
 
 You can now order negatives by thinking in debt, add and subtract by walking the line, turn subtracting-a-negative into adding, multiply and divide by counting signs, and read absolute value as a distance that's never negative.
 
@@ -374,7 +426,7 @@ When a set switches between adding, subtracting, multiplying, and dividing signs
 
 ---
 
-## Lesson 1.5: Expressions vs. equations; evaluating expressions
+## Lesson 1.6: Expressions vs. equations; evaluating expressions
 
 Algebra has two main characters, and a lot of early confusion comes from mixing them up. One is an *expression*, a phrase that names a value, like 3x + 2. The other is an *equation*, a full sentence making a claim, like 3x + 2 = 14.
 
@@ -390,7 +442,7 @@ Now just follow order of operations from Lesson 1.3: 3(4) is 12, then 12 + 2 is 
 
 <!--viz:interactive_equation#1-->
 
-And signs will show up, so here's one with a negative. Evaluate 5 − 2x at x = −1. Drop −1 into the seat, keeping it in parentheses so the signs stay visible: 5 − 2(−1). That's 5 − (−2), and subtracting a negative adds (straight from Lesson 1.4), so 5 + 2 = 7.
+And signs will show up, so here's one with a negative. Evaluate 5 − 2x at x = −1. Drop −1 into the seat, keeping it in parentheses so the signs stay visible: 5 − 2(−1). That's 5 − (−2), and subtracting a negative adds (straight from Lesson 1.5), so 5 + 2 = 7.
 
 The parentheses around the −1 are what save you here; without them it's easy to lose a sign.
 
@@ -399,9 +451,9 @@ One last thing to notice, not yet to formalize: structure matters. 2(x + 3) is n
 The input-to-output idea from Lesson 1.1 is hiding here too. Evaluating 3x + 2 at different values is feeding inputs through a machine: in goes 4, out comes 14. That machine gets a name later in the course; for now, just see that the same input-to-output pattern is here.
 
 **New terms:**
-- {#1.5.d1} **Expression:** a mathematical *phrase* with no equals sign, e.g. 3x + 2. It names a value once you know the variable; you **evaluate** it.
-- {#1.5.d2} **Equation:** a full *sentence* with an =, e.g. 3x + 2 = 14. It *claims* two things are equal; you **solve** it.
-- {#1.5.d3} **Evaluate / substitute:** replace the variable with a given number and compute (the reserved seat finally has its guest sit down).
+- {#1.6.d1} **Expression:** a mathematical *phrase* with no equals sign, e.g. 3x + 2. It names a value once you know the variable; you **evaluate** it.
+- {#1.6.d2} **Equation:** a full *sentence* with an =, e.g. 3x + 2 = 14. It *claims* two things are equal; you **solve** it.
+- {#1.6.d3} **Evaluate / substitute:** replace the variable with a given number and compute (the reserved seat finally has its guest sit down).
 
 **Worked examples:**
 
@@ -416,9 +468,9 @@ For one that just lets the method click, evaluate 2x + 1 at x = 5. The seat hold
 There's nothing to "solve" in an expression, only a value to find once you know the variable. And whenever you substitute a negative, wrap it in parentheses (5 − 2(−1), never 5 − 2−1); that one habit prevents most dropped-sign slips.
 
 **Check for understanding (transfer):**
-- {#1.5.c1} Is 7y an expression or an equation? How do you know, and what would you *do* with it? (An expression, because it has no equals sign, so you'd evaluate it once you know y, not solve it.)
-- {#1.5.c2} Evaluate 4x − 1 at x = 2, then at x = −2. What changed? (At x = 2: 4(2) − 1 = 7. At x = −2: 4(−2) − 1 = −8 − 1 = −9. Switching the input's sign flipped the first term from +8 to −8.)
-- {#1.5.c3} Does 2(x + 3) equal 2x + 3? Test it with x = 5. (No: 2(5 + 3) = 16 but 2(5) + 3 = 13, so they're different; the 2 has to reach the 3 inside as well.)
+- {#1.6.c1} Is 7y an expression or an equation? How do you know, and what would you *do* with it? (An expression, because it has no equals sign, so you'd evaluate it once you know y, not solve it.)
+- {#1.6.c2} Evaluate 4x − 1 at x = 2, then at x = −2. What changed? (At x = 2: 4(2) − 1 = 7. At x = −2: 4(−2) − 1 = −8 − 1 = −9. Switching the input's sign flipped the first term from +8 to −8.)
+- {#1.6.c3} Does 2(x + 3) equal 2x + 3? Test it with x = 5. (No: 2(5 + 3) = 16 but 2(5) + 3 = 13, so they're different; the 2 has to reach the 3 inside as well.)
 
 You can now tell an expression from an equation by spotting the equals sign, evaluate an expression by substituting and then computing in order, keep negatives safe inside parentheses, and see why the placement of a minus sign changes −2² and (−2)².
 
@@ -448,7 +500,7 @@ Deciding for each one whether to identify it or evaluate it is the work a page o
 
 *(Problems 11 and 12 are the ones to slow down on: 11 is a negative under an exponent, where (−2)² = 4, not −4, and 12 shows 2(x + 3) is not 2x + 3.)*
 
-**Negatives meet order of operations:** now that negatives from Lesson 1.4 are in hand, mix them back into the order of operations from Lesson 1.3. This is a common slip in early algebra, so it's worth a careful look. Watch the two cases side by side.
+**Negatives meet order of operations:** now that negatives from Lesson 1.5 are in hand, mix them back into the order of operations from Lesson 1.3. This is a common slip in early algebra, so it's worth a careful look. Watch the two cases side by side.
 
 Without parentheses, −2² means −(2²): the exponent binds *only* to the 2, and the leading minus is applied *after* squaring, so −2² = −(4) = −4. With parentheses, the whole −2 is squared: (−2)² = (−2)(−2) = 4.
 

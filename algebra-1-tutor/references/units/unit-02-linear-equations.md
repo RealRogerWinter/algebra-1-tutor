@@ -1,6 +1,6 @@
 # Unit 2: Solving Linear Equations
 
-> **Prerequisites:** Unit 1 — especially negative numbers (§1.4) and order of operations (§1.3), plus the equals sign as a *balance* (§1.1) and the variable as a *mystery box* (§1.5).
+> **Prerequisites:** Unit 1 — especially negative numbers (§1.5) and order of operations (§1.3), plus the equals sign as a *balance* (§1.1) and the variable as a *mystery box* (§1.6).
 > **By the end, the student can:**
 > - Solve one- and two-step linear equations using inverse operations, isolating the variable.
 > - Combine like terms and apply the distributive property — including distributing a negative — without losing a sign.
@@ -694,7 +694,7 @@ Don't "round" 15/2 to 7 or 8 — an exact fraction *is* the answer. Just as zero
 This is the same backbone used in 2.4 (variables on both sides) and 2.6 (equations with fractions) — point a stuck student here when an unfamiliar equation appears; the steps don't change, only how many you need.
 
 **Mix back in (interleaving, pedagogy.md):**
-- Keep slipping in **negative answers** (callback to Unit 1.4) — e.g. revisit 8-2x=14 and the both-sides negatives — so signs stay sharp.
+- Keep slipping in **negative answers** (callback to Unit 1.5) — e.g. revisit 8-2x=14 and the both-sides negatives — so signs stay sharp.
 - Re-run the **distributing-a-negative** trap (2.3) inside both-sides and fraction problems; it's the error most likely to relapse.
 - Warm up each session with a 60-second one-step or two-step solve before new material.
 - When you reach later units, **narrate solving in function language** where natural ("setting f(x)=0 is just solving an equation you already know how to solve").

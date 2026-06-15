@@ -260,7 +260,7 @@ Mastered: Units 1.1–2.2; comfortable with negatives
 Watch for: subtracting a negative still feels shaky
 Last problem: 3(x + 4) = 2x + 18
 Next up: finish 2.3 practice, then 2.4 (variables on both sides)
-Due for review: 1.4 signed arithmetic; 2.2 two-step (mix back in next session)
+Due for review: 1.5 signed arithmetic; 2.2 two-step (mix back in next session)
 Tone preference: medium detail
 ```
 

@@ -11,11 +11,11 @@
 
 ## Teaching this unit (orientation for the tutor)
 
-This unit builds the *language* the rest of the course speaks. The arc: first re-wire what = means (1.1), then map the terrain of numbers so later answers like 3.5 or -5 feel normal (1.2), then nail the two procedural skills everything rests on — order of operations (1.3) and signed arithmetic (1.4) — and finally separate the two central objects, *expressions* and *equations* (1.5).
+This unit builds the *language* the rest of the course speaks. The arc: first re-wire what = means (1.1), then map the terrain of numbers so later answers like 3.5 or -5 feel normal (1.2), then nail the procedural skills everything rests on — order of operations (1.3), factors and exponents (1.4), and signed arithmetic (1.5) — and finally separate the two central objects, *expressions* and *equations* (1.6).
 
 The single highest-leverage moment is 1.1: the **relational meaning of the equals sign** (see `misconceptions.md` §1). Front-load it and keep testing it with non-standard sentences (7 = 4+3, □ + 3 = 5 + 7) all unit long — every solving move later depends on it. The other big traps: same-tier left-to-right in order of operations (`misconceptions.md` §5), and the cluster of negative-number errors, especially subtracting a negative and ordering negatives (`misconceptions.md` §3).
 
-Pacing: a fluent adult may blow through 1.2–1.4 — let them; reserve the full concrete→pictorial→symbolic ceremony (`pedagogy.md`) for whatever actually snags. Thread a light **function preview**: an equation or rule turns an input into an output; we will *name* that idea (functions) in Unit 4. Use the mystery-box / reserved-seat variable metaphors (`metaphors.md`) and the money/number-line metaphors for negatives. Model the habit of **substituting an answer back to check** from day one — it self-catches most sign and order errors.
+Pacing: a fluent adult may blow through 1.2–1.5 — let them; reserve the full concrete→pictorial→symbolic ceremony (`pedagogy.md`) for whatever actually snags. Thread a light **function preview**: an equation or rule turns an input into an output; we will *name* that idea (functions) in Unit 4. Use the mystery-box / reserved-seat variable metaphors (`metaphors.md`) and the money/number-line metaphors for negatives. Model the habit of **substituting an answer back to check** from day one — it self-catches most sign and order errors.
 
 ---
 
@@ -116,7 +116,7 @@ Pacing: a fluent adult may blow through 1.2–1.4 — let them; reserve the full
 5. Show three spellings of one number: 5 = 5/1 = 5.0 — all the *same point* on the line.
 6. Classify √2 and π. Neither can be written as a ratio of integers — their decimals never end and never repeat — so both are **irrational** (and therefore **real**, like every point on the line). Contrast √9: it *looks* like a root, but √9 = 3, an **integer** — value, not spelling.
 
-**Watch for:** The belief that a number written as a fraction "must be a fraction" or that a decimal "can't be an integer." Problems 7 (10/2=5) and 8 (0.333… = 1/3) below are the instructive ones — *evaluate first, then classify*. Also pre-empt the negatives-ordering surprise that's coming in 1.4 ("which is farther left?"). Fraction-magnitude care connects to `misconceptions.md` §4.
+**Watch for:** The belief that a number written as a fraction "must be a fraction" or that a decimal "can't be an integer." Problems 7 (10/2=5) and 8 (0.333… = 1/3) below are the instructive ones — *evaluate first, then classify*. Also pre-empt the negatives-ordering surprise that's coming in 1.5 ("which is farther left?"). Fraction-magnitude care connects to `misconceptions.md` §4.
 
 **Visuals to offer:** {#1.2.f1} A clean **number line** (`visuals.md` Template 1 for a marked point, or a simple ASCII line) showing integers as ticks with 3/4, 2.5, and -2.5 placed in the gaps. Always pair with a one-sentence description.
 
@@ -213,19 +213,72 @@ Pacing: a fluent adult may blow through 1.2–1.4 — let them; reserve the full
 
 ---
 
-## Lesson 1.4: Negative numbers
+## Lesson 1.4: Factors and exponents
+
+**Goal:** Name a factor and a product, find all the factors of a whole number, tell a prime from a composite, write a prime factorization, and read an exponent as repeated multiplication (base, exponent, power, squares, cubes).
+**Why it matters:** These are the vocabulary and building blocks the later course quietly relies on. Factors and primes return as the multiplicative skeleton of a number; exponents were already *used* in 1.3 (3²) but never *named*, so this lesson backfills the idea before it has to do any real work. Keep it light — this is one of the shortest lessons in the book; the goal is fluent naming, not procedure.
+
+**New terms:**
+- {#1.4.d1} **Factor / product:** in a multiplication, each number being multiplied is a **factor**, and the result is the **product** (in 2 × 3 = 6, the factors are 2 and 3, and 6 is the product). The factors of a whole number are the whole numbers that divide it evenly, with nothing left over: the factors of 12 are 1, 2, 3, 4, 6, and 12. 1 and the number itself are always factors. (Noun only here; "to factor" an expression waits for Unit 11.)
+- {#1.4.d2} **Prime / composite:** a **prime** number has exactly two factors, 1 and itself (2, 3, 5, 7, 11, …); a **composite** number has more than two (6 has 1, 2, 3, 6). 1 is neither prime nor composite, since it has only one factor.
+- {#1.4.d3} **Prime factorization:** writing a whole number as a product of primes only, e.g. 12 = 2 · 2 · 3. Every whole number bigger than 1 has exactly one such breakdown (apart from the order), so it ties factors and primes together.
+- {#1.4.d4} **Exponent / base / power:** an **exponent** is shorthand for repeated multiplication: in 2³ the **base** 2 is multiplied 3 times, 2³ = 2 · 2 · 2 = 8, and the whole thing (8) is a **power** of 2. A base to the 2 is a **square** (5² = 25), to the 3 a **cube** (2³ = 8).
+
+**Teaching arc (concrete → pictorial → symbolic):**
+1. **Move the factor/product idea here and give it room.** Reuse what they already met in passing: when you multiply, each number you multiply is a *factor* and the answer is the *product* — in 2 × 3 = 6, the factors are 2 and 3, the product is 6. Then turn it around: the factors of a whole number are the whole numbers that divide it evenly, nothing left over.
+2. **Find factors by walking up from 1 (pictorial).** Model the search out loud: try 1, 2, 3, … and keep each one that divides in cleanly. The payoff to point out is that factors come in *pairs* that multiply to the number — for 12, that's 1 · 12, 2 · 6, 3 · 4 — which is why you only have to walk up until the partners start to repeat. Note that 1 and the number itself are always on the list. Offer the factor array here (see Visuals to offer): 12 as the rectangles 1×12, 2×6, 3×4, each rectangle's two side lengths being a factor pair.
+3. **Prime vs. composite from the pairs.** A number whose only factors are 1 and itself — exactly two — is **prime** (2, 3, 5, 7, 11, …); more than two factors makes it **composite** (6 has 1, 2, 3, 6). Flag the edge case deliberately: **1 is neither**, because it has only one factor.
+4. **Prime factorization ties it together.** Every whole number bigger than 1 breaks into a unique stack of primes: 12 = 2 · 2 · 3. Show the breaking-down move — split into any factor pair, then keep splitting any composite until only primes remain.
+5. **Backfill exponents (symbolic).** Name what 1.3 used but never defined: an exponent is shorthand for repeated multiplication, so 2³ = 2 · 2 · 2 = 8. Name the **base** (what's repeated), the **exponent** (how many factors), and the **power** (the result). Give **square** (exponent 2) and **cube** (exponent 3) their words. The single guard: the exponent counts how many factors, it is *not* a multiplier — 2³ is 8, not 6.
+6. **Close where the three ideas meet.** Rewrite a prime factorization compactly with an exponent: 12 = 2 · 2 · 3 = 2² · 3. This is the one place factors, primes, and exponents come together — let that be the takeaway, not a launch into common-factor work.
+
+**Worked examples:**
+
+1. Find the factors of 24. Walk up from 1 and keep every number that divides 24 cleanly: 1, 2, 3, 4, 6, 8, 12, and 24. They come in pairs that multiply to 24, 1 · 24, 2 · 12, 3 · 8, and 4 · 6, which is why working up to the partner of each one finds them all.
+2. Prime or composite? 7 has only the factors 1 and 7, exactly two, so 7 is **prime**. 15 has 1, 3, 5, and 15, more than two, so 15 is **composite** (you can see it as 3 · 5).
+3. Read 2³. The base is 2 and the exponent is 3, so 2 is multiplied 3 times: 2³ = 2 · 2 · 2 = 8. The exponent counts how many factors of the base there are, not what to multiply by, so 2³ is 8, not 6.
+4. A square and a cube. 5² = 5 · 5 = 25 (5 squared), and 3³ = 3 · 3 · 3 = 27 (3 cubed). "Squared" is the exponent 2, "cubed" is the exponent 3.
+5. Write the prime factorization of 12. Break it into factors, then keep breaking until only primes are left: 12 = 4 · 3 = 2 · 2 · 3. Using an exponent for the repeated 2, that is 12 = 2² · 3.
+6. Write the prime factorization of 18. 18 = 2 · 9 = 2 · 3 · 3, which is 2 · 3² with an exponent on the repeated 3. Notice the exponent lands on whichever prime repeats, here the 3, not the 2.
+
+**Watch for:** Three predictable snags.
+- **Exponent read as a multiplier.** *Tell:* 2³ = 6 (computed 2 × 3). *Repair:* read it aloud as "three factors of 2" and write them out, 2 · 2 · 2 — the exponent counts the factors, it doesn't multiply.
+- **1 miscounted as prime.** *Tell:* listing 1 among the primes, or calling 1 composite. *Repair:* count its factors — just one (itself) — so it fits neither bucket; primes need exactly two.
+- **Exponent put on the wrong prime, or every prime collapsed.** *Tell:* 18 = 2² · 3, or 12 = 6². *Repair:* the exponent attaches only to the prime that actually repeats and counts *how many times* — in 18 the 3 repeats (3²) while the lone 2 keeps exponent 1. Also keep "factor" a noun here: factors *of a number*; "factoring an expression," common factors / GCF, and any polynomial work belong to Unit 11, and exponent *rules* belong to Unit 10 — don't preview them.
+
+**Visuals to offer:** {#1.4.f1} The **factor array** — 12 drawn as its rectangles 1×12, 2×6, and 3×4 — makes a number's factors concrete as the side lengths of the rectangles it can form, and shows the factor pairs at a glance. Offer it the moment the factors of 12 come up. No other artifact is needed; the worked breakdowns carry primes and exponents.
+
+**Check for understanding (transfer):**
+- {#1.4.c1} List all the factors of 16, and name the pairs that multiply to 16. (1, 2, 4, 8, 16; the pairs are 1 · 16, 2 · 8, and 4 · 4. The 4 pairs with itself, which is why 16 is a perfect square.)
+- {#1.4.c2} Is 21 prime or composite? Say how you know. (Composite: besides 1 and 21 it also has the factors 3 and 7, since 3 · 7 = 21, so it has more than two factors.)
+- {#1.4.c3} Rewrite 2 · 2 · 2 · 2 using an exponent, then find its value. (Four factors of 2, so 2⁴ = 16.)
+
+**Practice problems:**
+1. List all the factors of 18.
+2. Is 15 prime or composite?
+3. Is 11 prime or composite?
+4. Write the prime factorization of 20, using an exponent where a prime repeats.
+5. Evaluate 2³.
+6. Evaluate 5².
+
+**Answer key:**
+1. 1, 2, 3, 6, 9, 18  2. composite (3 · 5)  3. prime  4. 2² · 5  5. 8  6. 25
+
+*(1 and 4 reuse the walk-up-from-1 search; 2 and 3 contrast composite against prime; 4 is the one place factors, primes, and exponents meet; 5 and 6 read an exponent as repeated multiplication — a cube and a square.)*
+
+---
+
+## Lesson 1.5: Negative numbers
 
 **Goal:** Add, subtract, multiply, and divide negative numbers fluently, including ordering them and the sign rules.
 **Why it matters:** Negatives appear in nearly every later answer. Making them automatic now means a future problem adds only *one* new difficulty, not two.
 
 **New terms:**
-- {#1.4.d1} **Opposite (additive inverse):** the same distance from 0 on the other side; the opposite of 5 is -5. Subtracting a number is the same as adding its opposite.
-- {#1.4.d2} **Absolute value |a|:** how far a is from 0 on the number line — a *distance*, so it is **never negative**. |5| = 5 and |-5| = 5 (both sit 5 units from 0); |0| = 0. Opposite and absolute value pair up: opposites share the same absolute value (|5| = |-5|) but have opposite signs.
-- {#1.4.d3} **Sign rules (×, ÷):** same signs → positive; different signs → negative. In a product, an **even** number of negative factors → positive; an **odd** number → negative.
-- {#1.4.d4} **Factor / product:** in a product, each number multiplied is a *factor*; the result is the *product* (in 2·3 = 6, the factors are 2 and 3, the product is 6). The factors of a whole number are the whole numbers that divide it evenly: factors of 6 = 1, 2, 3, 6; factors of 12 = 1, 2, 3, 4, 6, 12. 1 and the number itself are always factors. (Noun only here — the verb "to factor" and common factor / GCF wait for Unit 11.)
-
+- {#1.5.d1} **Opposite (additive inverse):** the same distance from 0 on the other side; the opposite of 5 is -5. Subtracting a number is the same as adding its opposite.
+- {#1.5.d2} **Absolute value |a|:** how far a is from 0 on the number line — a *distance*, so it is **never negative**. |5| = 5 and |-5| = 5 (both sit 5 units from 0); |0| = 0. Opposite and absolute value pair up: opposites share the same absolute value (|5| = |-5|) but have opposite signs.
+- {#1.5.d3} **Sign rules (×, ÷):** same signs → positive; different signs → negative. In a product, an **even** number of negative factors → positive; an **odd** number → negative.
 **Teaching arc (concrete → pictorial → symbolic):**
-1. **Order on the number line.** Bigger negative = farther *left*. So -5 < -2 (a common surprise — 5 > 2 tempts the eye). Money framing (`metaphors.md`, Negatives A): owing $5 is worse off than owing $2, so -5 < -2. Name the distance: |a| is how far a sits from 0, ignoring direction, so |-5| = 5 > |-2| = 2 — -5 is farther left because its **distance from 0 is larger**, even though as a *value* -5 < -2 {#1.4.f1}. Keep **distance** (|a|, always ≥ 0) separate from **value** (which can be negative); blurring the two is what makes ordering negatives feel backwards.
+1. **Order on the number line.** Bigger negative = farther *left*. So -5 < -2 (a common surprise — 5 > 2 tempts the eye). Money framing (`metaphors.md`, Negatives A): owing $5 is worse off than owing $2, so -5 < -2. Name the distance: |a| is how far a sits from 0, ignoring direction, so |-5| = 5 > |-2| = 2 — -5 is farther left because its **distance from 0 is larger**, even though as a *value* -5 < -2 {#1.5.f1}. Keep **distance** (|a|, always ≥ 0) separate from **value** (which can be negative); blurring the two is what makes ordering negatives feel backwards.
 2. **Add = walk the line.** Add a positive → move right; add a negative → move left (`metaphors.md`, Negatives B; `pedagogy.md` -2+5 script). -3 + (-5): start at -3, move 5 more left → -8.
 3. **Subtract = add the opposite.** 5 - 8 = 5 + (-8) = -3. And the slow, explicit one (see `misconceptions.md` §3): **subtracting a negative is adding** — 3 - (-4) = 3 + 4 = 7. Use the "two about-faces" or "a debt forgiven makes you richer" framing; do it deliberately, one negative at a time.
 4. **Multiply/divide — count the negatives.** Same signs → positive, different → negative: (-6)(3) = -18, (-6)(-3) = 18, -20 ÷ 4 = -5, -20 ÷ (-5) = 4. For chains, count negatives: even → positive, odd → negative.
@@ -242,16 +295,16 @@ Pacing: a fluent adult may blow through 1.2–1.4 — let them; reserve the full
 7. -20 ÷ 4 = -5 (different signs → negative).
 8. -20 ÷ (-5) = 4 (same signs → positive).
 9. Absolute value: |5| = 5, |-5| = 5, |0| = 0 — each is a *distance* from 0, never negative.
-10. Which is farther from 0, -8 or 3? |-8| = 8 and |3| = 3, so -8 is farther — even though -8 < 3 as values. (Distance vs. value, the 1.4 headline.)
+10. Which is farther from 0, -8 or 3? |-8| = 8 and |3| = 3, so -8 is farther — even though -8 < 3 as values. (Distance vs. value, the 1.5 headline.)
 
 **Watch for:** `misconceptions.md` §3 — the negative-number cluster. *Tells:* -3 + (-5) = +8 (applying the multiplication rule to addition), 6 - (-2) = 4 (not seeing subtract-a-negative as adding), -5 > -2 (magnitude mistaken for value). *Repair:* switch representation — number line for add/subtract, money/debt for ordering and for subtracting a negative — never just repeat the rule.
 
-**Visuals to offer:** {#1.4.f2} A **factor array** — 12 drawn as its rectangles 1·12, 2·6, 3·4, so a number's factors are the side lengths of the rectangles it can form. Also an **ASCII number line** (`visuals.md`): show a hop, e.g. start at -3, move 5 left to -8. Pair with a sentence.
+**Visuals to offer:** An **ASCII number line** is ideal here (`visuals.md`): show a hop, e.g. start at -3, move 5 left to -8. Pair with a sentence.
 
 **Check for understanding (transfer):**
-- {#1.4.c1} "Which is greater, -7 or -3? Explain using the number line or debt."
-- {#1.4.c2} "Rewrite 6 - (-2) as an addition, then evaluate it."
-- {#1.4.c3} "(-2)(-2)(-2) — is the result positive or negative *before* you multiply? How do you know?"
+- {#1.5.c1} "Which is greater, -7 or -3? Explain using the number line or debt."
+- {#1.5.c2} "Rewrite 6 - (-2) as an addition, then evaluate it."
+- {#1.5.c3} "(-2)(-2)(-2) — is the result positive or negative *before* you multiply? How do you know?"
 
 **Practice problems:**
 
@@ -288,19 +341,19 @@ Pacing: a fluent adult may blow through 1.2–1.4 — let them; reserve the full
 
 ---
 
-## Lesson 1.5: Expressions vs. equations; evaluating expressions
+## Lesson 1.6: Expressions vs. equations; evaluating expressions
 
 **Goal:** Distinguish an *expression* from an *equation*, and evaluate an expression by substituting a value for its variable.
 **Why it matters:** These are the two central objects of algebra. An expression *has a value* once you know the variable; an equation *makes a claim*. Confusing them ("solving" an expression, or "evaluating" an equation) derails everything that follows.
 
 **New terms:**
-- {#1.5.d1} **Expression:** a mathematical *phrase* with no equals sign — e.g. 3x + 2. It names a value once you know the variable; you **evaluate** it.
-- {#1.5.d2} **Equation:** a full *sentence* with an = — e.g. 3x + 2 = 14. It *claims* two things are equal; you **solve** it.
-- {#1.5.d3} **Evaluate / substitute:** replace the variable with a given number and compute (use the reserved-seat metaphor — the person finally sits down, `metaphors.md`, Variables B).
+- {#1.6.d1} **Expression:** a mathematical *phrase* with no equals sign — e.g. 3x + 2. It names a value once you know the variable; you **evaluate** it.
+- {#1.6.d2} **Equation:** a full *sentence* with an = — e.g. 3x + 2 = 14. It *claims* two things are equal; you **solve** it.
+- {#1.6.d3} **Evaluate / substitute:** replace the variable with a given number and compute (use the reserved-seat metaphor — the person finally sits down, `metaphors.md`, Variables B).
 
 **Teaching arc (concrete → pictorial → symbolic):**
 1. **Phrase vs. sentence.** An expression is a *noun phrase* ("three more than twice a number"); an equation is a full *sentence* with a verb, the =, claiming a balance. The tell is simply: **is there an equals sign?**
-2. **Evaluate by substitution.** To evaluate 3x + 2 at x = 4: the box x holds 4, so 3(4) + 2 = 14. Then a signed one — evaluate 5 - 2x at x = -1: 5 - 2(-1) = 5 + 2 = 7 (callback to 1.4: subtracting a negative). Order of operations (1.3) applies inside every evaluation.
+2. **Evaluate by substitution.** To evaluate 3x + 2 at x = 4: the box x holds 4, so 3(4) + 2 = 14. Then a signed one — evaluate 5 - 2x at x = -1: 5 - 2(-1) = 5 + 2 = 7 (callback to 1.5: subtracting a negative). Order of operations (1.3) applies inside every evaluation.
 3. **Read the structure (lightly).** Order and grouping matter: a - b is **not** b - a (5 - 2 ≠ 2 - 5); and 2(x+3) is **not** 2x + 3 — the 2 multiplies *everything* in the parentheses (a preview of the distributive property in Unit 2). Don't formalize yet; just notice it.
 4. **Function preview (light).** "Evaluating 3x+2 at different inputs is exactly the input→output machine from 1.1: feed in 4, out comes 14. When we name that machine in Unit 4, we'll write it f(x) = 3x + 2 and f(4) = 14."
 
@@ -317,9 +370,9 @@ Pacing: a fluent adult may blow through 1.2–1.4 — let them; reserve the full
 **Visuals to offer:** None needed. If structure confuses, a quick area-model box for 2(x+3) in LaTeX (`visuals.md`, area-model section) previews distribution.
 
 **Check for understanding (transfer):**
-- {#1.5.c1} "Is 7y an expression or an equation? How do you know, and what would you *do* with it?"
-- {#1.5.c2} "Evaluate 4x - 1 at x = 2, then at x = -2. What changed?"
-- {#1.5.c3} "Does 2(x + 3) equal 2x + 3? Test it with x = 5."
+- {#1.6.c1} "Is 7y an expression or an equation? How do you know, and what would you *do* with it?"
+- {#1.6.c2} "Evaluate 4x - 1 at x = 2, then at x = -2. What changed?"
+- {#1.6.c3} "Does 2(x + 3) equal 2x + 3? Test it with x = 5."
 
 **Practice problems:**
 
@@ -345,7 +398,7 @@ Pacing: a fluent adult may blow through 1.2–1.4 — let them; reserve the full
 
 *(11 previews exponents on a negative — (-2)² = 4, not -4; 12 reinforces that grouping is not the same as 2x+3.)*
 
-**Order-of-operations with signed numbers (1.3 + 1.4 callback):** Now that negatives (1.4) are in hand, mix them back into order of operations (1.3) — this is where the single most common pitfall lives. Run this short interleaved set, and contrast the two headliners out loud:
+**Order-of-operations with signed numbers (1.3 + 1.5 callback):** Now that negatives (1.5) are in hand, mix them back into order of operations (1.3) — this is where the single most common pitfall lives. Run this short interleaved set, and contrast the two headliners out loud:
 - **−2² = −4** but **(−2)² = 4.** Without parentheses, the exponent binds *only* to the 2, and the leading minus is applied *after* squaring: −2² means −(2²) = −(4) = −4. With parentheses, the whole −2 is squared: (−2)² = (−2)(−2) = 4. Say it as: "no parentheses → square first, then take the opposite." (See `misconceptions.md` §3 and §5.)
 
 *Evaluate (mind the sign and the exponent's reach):*
@@ -364,10 +417,10 @@ Pacing: a fluent adult may blow through 1.2–1.4 — let them; reserve the full
 
 ## Wrap-up & interleaving
 
-**Consolidate:** the relational = (1.1) is the spine — keep judging non-standard true/false/open sentences in later sessions. The four-tier order of operations (1.3) and signed arithmetic (1.4) are the procedural workhorses; mix them into every future computation. The expression/equation distinction (1.5) sets up *all* of Unit 2.
+**Consolidate:** the relational = (1.1) is the spine — keep judging non-standard true/false/open sentences in later sessions. The four-tier order of operations (1.3) and signed arithmetic (1.5) are the procedural workhorses; mix them into every future computation. The expression/equation distinction (1.6) sets up *all* of Unit 2.
 
-**Mix back in (interleaving, `pedagogy.md`):** When starting Unit 2's solving, slip in one-step equations that land on a **negative** or **non-integer** answer (callbacks to 1.2 and 1.4) so those stay normal. Use a 60-second order-of-operations or signed-arithmetic warm-up before new material. Always model **substituting the answer back to check** — the self-verification habit seeded here.
+**Mix back in (interleaving, `pedagogy.md`):** When starting Unit 2's solving, slip in one-step equations that land on a **negative** or **non-integer** answer (callbacks to 1.2 and 1.5) so those stay normal. Use a 60-second order-of-operations or signed-arithmetic warm-up before new material. Always model **substituting the answer back to check** — the self-verification habit seeded here.
 
-**Threading forward:** the input→output preview in 1.1 and 1.5 is the seed of **functions** (Unit 4): "an equation/rule turns an input into an output; we'll name that machine f(x) later."
+**Threading forward:** the input→output preview in 1.1 and 1.6 is the seed of **functions** (Unit 4): "an equation/rule turns an input into an output; we'll name that machine f(x) later."
 
 **Progress Card should note:** Does the student read = as balance (not "compute")? Are they fluent with same-tier left-to-right and with negatives (especially subtracting a negative and ordering)? Can they tell an expression from an equation and evaluate by substitution? Flag any of these that are shaky — they're load-bearing for Unit 2.

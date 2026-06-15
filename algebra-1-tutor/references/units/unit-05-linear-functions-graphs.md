@@ -1,6 +1,6 @@
 # Unit 5: Linear Functions & Their Graphs
 
-> **Prerequisites:** Unit 3 (ratios, rates, **unit rate**) and Unit 4 (functions, f(x) notation, multiple representations). Comfort with negatives (Unit 1.4) and substituting into an expression (Unit 1.5) is assumed throughout.
+> **Prerequisites:** Unit 3 (ratios, rates, **unit rate**) and Unit 4 (functions, f(x) notation, multiple representations). Comfort with negatives (Unit 1.5) and substituting into an expression (Unit 1.6) is assumed throughout.
 > **By the end, the student can:**
 > - Plot and name ordered pairs and identify the four quadrants.
 > - Graph a linear equation from a table of values and test whether a point lies on a line.
@@ -464,7 +464,7 @@ $$y = \tfrac34 x - 2 \;\Rightarrow\; 4y = 3x - 8 \;\Rightarrow\; 3x - 4y = 8$$
 - **Unit 3 (rate):** every time slope appears, name it as the unit rate / rate of change — that's the conceptual glue.
 - **Unit 4 (functions):** evaluate f(0) to find the intercept; read a line off a table; use the vertical-line-test framing if a "line" is actually vertical (x=3 is not a function).
 - **Unit 2 (solving):** to graph 2x + y = 5 (standard form, 5.6) they must solve for y first; point-slope expansion reuses the distributive property (Unit 2.3, `misconceptions.md §7`).
-- **Negatives (Unit 1.4 / `misconceptions.md §3`):** the dominant error source here — slope sign, intercept sign, differences in the slope formula. Slip in a negative-laden problem regularly. The new **steepness-vs-direction** slope misconception (`misconceptions.md §8`) lives right here: sign is direction, magnitude is steepness.
+- **Negatives (Unit 1.5 / `misconceptions.md §3`):** the dominant error source here — slope sign, intercept sign, differences in the slope formula. Slip in a negative-laden problem regularly. The new **steepness-vs-direction** slope misconception (`misconceptions.md §8`) lives right here: sign is direction, magnitude is steepness.
 
 **Looking ahead:** Unit 6 turns words into these equations (modeling) — the m-as-rate / b-as-starting-value reading from 5.3–5.4 is exactly that bridge; Unit 7 graphs *two* lines to solve systems (and standard form from 5.6 is the form they often arrive in); Unit 8 shades regions bounded by lines. Solid slope-intercept fluency pays off in all three.
 
