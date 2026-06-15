@@ -11,5 +11,7 @@ def test_zip_has_key_content():
     names = {n.replace("\\", "/") for n in z.namelist()}
     assert "algebra-1-tutor/SKILL.md" in names
     assert "algebra-1-tutor/references/sources.md" in names      # bundled reference pack
-    assert sum(1 for n in names if "/figures/" in n) == 23       # bundled figures (12 original + 10 new §3b + 1.4.f2 factor array)
+    figs = [n for n in names if "/figures/" in n]
+    assert sum(1 for n in figs if n.endswith(".svg")) == 23       # deterministic SVGs
+    assert sum(1 for n in figs if n.endswith(".html")) == 40      # viz-figure artifacts
     assert z.testzip() is None
