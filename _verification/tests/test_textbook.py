@@ -1,4 +1,4 @@
-import glob, os
+import glob, os, re
 import build_textbook as bt
 
 
@@ -149,6 +149,29 @@ def test_answers_for_handles_parens_in_values():
         1: "2(x+3)", 2: "5(x+3)", 3: "3(2x-3)"}
 
 
+def test_answers_for_delim_detection_dot_key_ignores_paren_coords():
+    # unit-07 7.3: a DOT-delimited key whose value '(9, 3)' contains ', 3)'. Searching the key's own
+    # '.' delimiter must skip the ')' coordinate and find the real '3.' on the next line.
+    key = "1. (5, 3) — a\n2. (9, 3) — b\n3. (4, 1) — c"
+    assert bt._answers_for(key, [1, 2, 3]) == {1: "(5, 3) — a", 2: "(9, 3) — b", 3: "(4, 1) — c"}
+    # unit-01 1.1: value 'open (... is 4)' (paren) inside a DOT key must keep its trailing ')'
+    k2 = "1. true 2. false 3. open (true when the blank is 4) 4. 7 5. 7"
+    assert bt._answers_for(k2, [1, 2, 3, 4, 5])[3] == "open (true when the blank is 4)"
+    assert bt._answers_for(k2, [1, 2, 3, 4, 5])[4] == "7"
+
+
+def test_answers_for_strips_middot_separator():
+    # unit-12: ' · '-separated key, with a middot also inside a value '√(4·2)'
+    m = bt._answers_for("1. 4 · 2. 7 · 3. √(4·2)=2√2", [1, 2, 3])
+    assert m == {1: "4", 2: "7", 3: "√(4·2)=2√2"}
+
+
+def test_answers_for_bails_on_swallowed_marker():
+    # unit-04: an answer ending in the next problem's number ('... and 6.') would swallow marker 6;
+    # detect the value that becomes a stray '6. ...' and bail so the lesson falls back safely.
+    assert bt._answers_for("5. Not a function — gives both 5 and 6.  6. Function.", [5, 6]) is None
+
+
 def test_key_numbers_residual_not_claimed():
     assert bt._key_numbers("1) 7  2) 5  3) 0", {1, 2, 3, 4}) == {1, 2, 3}
     assert bt._key_numbers("13. -4 14. 4", {1, 2, 3}) == set()   # residual key keeps its box
@@ -173,8 +196,23 @@ def test_split_practice_block_carries_badge_and_multiline():
     items = bt._split_practice_block(body)
     assert items[0][0] == "prob" and items[0][1] == 1
     assert '<a class="refcode" id="2.1.1">2.1.1</a>' in items[0][2]
-    assert "Two trains leave at the same time. How far?" in items[0][2]
+    # continuation line is captured (joined with a newline, which _md_inline later renders as a space)
+    assert "Two trains leave at" in items[0][2] and "the same time. How far?" in items[0][2]
     assert items[1] == ("prob", 2, "Short one")
+
+
+def test_split_practice_block_ignores_sentence_ending_number():
+    # a number ending problem prose ('... sum to 47.') must NOT become a phantom problem (unit-06 bug)
+    body = ("1. Two consecutive integers sum to 47. Find them.\n"
+            "2. Two consecutive odd integers sum to 56. Find them.")
+    nums = [it[1] for it in bt._split_practice_block(body) if it[0] == "prob"]
+    assert nums == [1, 2]
+
+
+def test_md_inline_unwraps_stray_list():
+    # a fragment that begins with an enumerator must not leave a block <ol>/<li> inside a <span>
+    assert bt._md_inline("6. Function — inputs all distinct.") == "Function — inputs all distinct."
+    assert "<ol" not in bt._md_inline("2. Through (-1,4), slope -3.")
 
 
 LESSON_OK = (
@@ -216,6 +254,48 @@ def test_tutor_guide_answers_unchanged():
     unit = next(v for k, v in files.items() if k.startswith("unit-"))
     assert 'details class="answers"' in unit
     assert 'class="qcheck"' not in unit
+
+
+def test_pair_does_not_swallow_trailing_note():
+    # a paragraph after the answer key (e.g. '*Substitution spot-checks:*') must render on its own,
+    # not get glued into the last problem's reveal (unit-01/02/10/11/12 bug).
+    lesson = ("## Lesson 9.8: Demo\n\n"
+              "**Practice problems:**\n\n"
+              "1. x+5=12  2. x+9=14  3. x+7=7\n\n"
+              "**Answer key:**\n1) 7  2) 5  3) 0\n\n"
+              "*Spot-checks:* check #3 by substituting.\n\n---\n")
+    html = bt.md_to_body(lesson)
+    assert html.count('class="qcheck"') == 3
+    qa3 = html.split('to problem 3</span></summary><span class="qa">')[1][:40]
+    assert qa3.startswith("0<")                       # problem 3's reveal is just '0'
+    assert "Spot-checks" not in html.split('class="qa">0<')[0].rsplit("prow", 1)[-1]
+    assert "Spot-checks" in html                      # the note still renders somewhere on the page
+
+
+def test_pair_does_not_append_later_key_to_last_answer():
+    # a 1-3 set followed by a SEPARATE key for problems 4-6 (e.g. unit-01 1.5): problem 3's reveal
+    # must be just its answer, never the following key's content.
+    lesson = ("## Lesson 9.6: Demo\n\n"
+              "**Practice problems:**\n\n"
+              "1. a  2. b  3. c\n\n"
+              "**Answer key:**\n1) A  2) B  3) C\n\n"
+              "More text here.\n\n"
+              "**Answer key:**\n4) D  5) E  6) F\n\n---\n")
+    html = bt.md_to_body(lesson)
+    m = re.search(r'to problem 3</span></summary><span class="qa">(.*?)</span>', html, re.S)
+    assert m and m.group(1) == "C"                    # not 'C ... 4) D ...'
+    assert "4) D" in html                             # the 4-6 key still renders (its own box)
+
+
+def test_pair_falls_back_on_nonmonotonic_numbering():
+    # unit-08 8.3 'core' set lists problems out of order (… 9 then 8); that must fall back, not drop 8.
+    lesson = ("## Lesson 9.7: Demo\n\n"
+              "**Practice problems:**\n\n"
+              "1. a\n4. b\n9. c\n8. d\n10. e\n\n"
+              "**Answer key:**\n1. A\n4. B\n9. C\n8. D\n10. E\n\n---\n")
+    html = bt.md_to_body(lesson)
+    assert 'class="qcheck"' not in html               # not converted (out-of-order)
+    assert 'class="answers"' in html                  # safe single box instead
 
 
 def test_pair_build_is_deterministic():

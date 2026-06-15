@@ -292,46 +292,64 @@ _DIVIDER = ('<div class="ldiv" aria-hidden="true"><i></i>'
 
 
 # --- per-question answer reveal: pair each practice problem with its own revealable answer -------
-_PSUB_RE = re.compile(r'^\*[^*].*?\*$')   # a whole-line *italic sub-head* (single asterisks)
+# Marker disambiguation (calibrated to the unit sources, which vary widely):
+#  * Problems are authored one-per-line or packed with a 2-space gap, never split by a single space
+#    mid-prose -> a problem marker must sit at a STRONG boundary (start | newline | 2+ spaces). This
+#    stops a number that merely ends a sentence ("... sum to 47.") from being read as problem 47.
+#  * Answer keys vary (packed single-space in unit-01, 2-space in unit-02/11, one-per-line in
+#    unit-07, ' · '-separated in unit-12) and values legitimately contain ')'/'.'/'·' (ordered pairs
+#    '(9, 3)', factorisations '5(x+3)', 'is 4)'). So answers are parsed by (a) detecting the key's
+#    own marker delimiter ('.' vs ')') and searching only for that, (b) anchoring to each expected
+#    problem number in turn, and (c) validating that no extracted value is a swallowed next-marker.
+_PSUB_RE = re.compile(r'^\*[^*].*?\*$')                          # a whole-line *italic sub-head*
+_PROB_MARK = re.compile(r'(?:^|(?<=\n)|(?<=\s\s))(\d+)\.\s')     # problem marker at a strong boundary
+_BLOCK_WRAP = re.compile(r'^<(p|ol|ul|li)>\s*(.*?)\s*</\1>$', re.DOTALL)
 
 
 def _md_inline(s):
     """Render a short markdown fragment (a practice problem or an answer) to inline HTML. Core
-    markdown only (no toc/md_in_html) for deterministic, dependency-light output; strip the single
-    wrapping <p>. Inline raw HTML (refcode badges) and math sentinels pass through unchanged."""
+    markdown only (no toc/md_in_html) for deterministic, dependency-light output. Strip any single
+    wrapping block element — <p>, or a stray one-item <ol>/<ul>/<li> markdown emits when a fragment
+    happens to start with an enumerator — so the result is always phrasing content safe to drop into
+    a <span>. Inline raw HTML (refcode badges) and math sentinels pass through unchanged."""
     h = mdlib.markdown(s.strip(), output_format="html5").strip()
-    if h.startswith("<p>") and h.endswith("</p>"):
-        h = h[3:-4]
+    m = _BLOCK_WRAP.match(h)
+    while m:
+        h = m.group(2).strip()
+        m = _BLOCK_WRAP.match(h)
     return h.replace(' markdown="1"', '')
 
 
+def _flatten(text):
+    """Block body -> one string with line structure kept as '\\n' (so a line-start marker stays
+    detectable) and each line trimmed."""
+    return "\n".join(ln.strip() for ln in text.splitlines()).strip()
+
+
 def _split_practice_block(body):
-    """-> ordered list of ('sub', text) and ('prob', int, text). Problems may be packed several per
-    line and/or span continuation lines; sub-heads sit on their own italic lines. Monotonic problem
-    numbering tolerates gaps and ignores stray 'N.' inside problem text."""
+    """-> ordered list of ('sub', text) and ('prob', int, text), problems in document order (the
+    caller verifies they are strictly increasing). Problems may be packed several per line or run
+    one-per-line; sub-heads sit on their own italic lines. _PROB_MARK only fires at a strong boundary
+    so a number ending a sentence in problem prose is not mistaken for a marker."""
     segments, buf = [], []
     for raw in body.splitlines():
         st = raw.strip()
         if not st:
             continue
-        if _PSUB_RE.match(st) and not st.startswith("**"):
+        if _PSUB_RE.match(st):
             if buf:
-                segments.append(("content", " ".join(buf))); buf = []
+                segments.append(("content", "\n".join(buf))); buf = []
             segments.append(("sub", st.strip("*").strip()))
         else:
             buf.append(st)
     if buf:
-        segments.append(("content", " ".join(buf)))
+        segments.append(("content", "\n".join(buf)))
 
-    items, last = [], -1
+    items = []
     for kind, text in segments:
         if kind == "sub":
             items.append(("sub", text)); continue
-        marks = []
-        for m in re.finditer(r'(?:(?<=\s)|^)(\d+)\.\s', text):   # marker must start a token
-            num = int(m.group(1))
-            if num > last:
-                marks.append((m.start(), m.end(), num)); last = num
+        marks = [(m.start(), m.end(), int(m.group(1))) for m in _PROB_MARK.finditer(text)]
         for i, (_st, en, num) in enumerate(marks):
             stop = marks[i + 1][0] if i + 1 < len(marks) else len(text)
             items.append(("prob", num, text[en:stop].strip()))
@@ -385,10 +403,12 @@ def _practice_instr(header_line):
 
 
 def _scan_pa_blocks(lines):
-    """Yield (kind, start, end, instr, inner_text) for every Practice/Answer-key block. Fence-aware;
-    a block runs until the next practice/answer header, any other _LABELS label, or a heading/divider
-    stop. For practice, `inner_text` is the following problem lines only (the header's instructional
-    remainder is returned separately as `instr`); for answers, it includes any text after the bold."""
+    """Yield (kind, start, end, instr, inner_text) for every Practice/Answer-key block. Fence-aware.
+    A practice block runs until the next header/label/heading-or-divider stop. An ANSWER block is
+    bounded to its contiguous enumeration — it stops at the first blank line after content — so a
+    trailing note, a following teaching section, or a second practice set is NOT swallowed into the
+    last answer. For practice, `inner_text` is the following problem lines (the header's instructional
+    remainder is returned separately as `instr`); for answers it includes any text after the bold."""
     i, n, infence = 0, len(lines), False
     while i < n:
         ln = lines[i]
@@ -402,52 +422,78 @@ def _scan_pa_blocks(lines):
         after = ln.split("**", 2)
         after = after[2] if len(after) > 2 else ""
         body = [after] if (k == "answers" and after.strip()) else []
-        j, f2 = i + 1, False
+        j, f2, started = i + 1, False, bool(body)
         while j < n:
             l2 = lines[j]
             if l2.lstrip().startswith("```"):
                 f2 = not f2; body.append(l2); j += 1; continue
-            if not f2 and (_hdr_kind(l2) or _match_label(l2) or _STOP_RE.match(l2)):
-                break
+            if not f2:
+                if _hdr_kind(l2) or _match_label(l2) or _STOP_RE.match(l2):
+                    break
+                if k == "answers" and l2.strip() == "":
+                    if started:
+                        break                       # blank after the enumeration ends the key
+                    j += 1; continue                # skip blank(s) before it starts
+                if l2.strip():
+                    started = True
             body.append(l2); j += 1
         yield k, i, j, (_practice_instr(ln) if k == "practice" else ""), "\n".join(body).strip("\n")
         i = j
 
 
+def _detect_delim(s):
+    """The marker delimiter a key uses ('.' or ')'), from its first token-start marker, or None."""
+    m = re.search(r'(?:^|(?<=\s))\d+([).])\s', s)
+    return m.group(1) if m else None
+
+
 def _answers_for(key_text, nums):
-    """Extract answers for the ordered problem numbers `nums` by locating each number's marker
-    ('<n>)' or '<n>.', token-start) in sequence, advancing through the text. Anchoring to the
-    expected number (rather than scanning for 'any' marker) makes it immune to ')'/'.' inside answer
-    values — ordered pairs '(2, 3)', factorisations '5(x+3)', notes '… +1)'. Returns {n: answer} or
-    None if some number's marker is not found in order."""
-    s = " ".join(ln.strip() for ln in key_text.splitlines()).strip()
-    s = re.sub(r'^\*\([^)]*\)\*\s*', '', s)
+    """Extract answers for the ordered problem numbers `nums`. Detect the key's marker delimiter and
+    locate each expected number's '<n><delim> ' in sequence (token-start). Searching for the specific
+    expected number with the key's own delimiter makes it immune to the other delimiter inside a value
+    (e.g. 'is 4)' / '(9, 3)' in a '.'-keyed list) and to ')'/'.' inside parenthesised values. Strips a
+    trailing ' · ' item separator. Returns {n: answer}, or None if a marker is missing OR a value is
+    empty or is itself a swallowed next-marker (forcing graceful fallback)."""
+    s = re.sub(r'^\*\([^)]*\)\*\s*', '', _flatten(key_text))
+    delim = _detect_delim(s)
+    if not delim:
+        return None
+    d = re.escape(delim)
     spans, pos = [], 0
-    for n in nums:
-        m = re.compile(r'(?:(?<=\s)|^)%d[).]\s' % n).search(s, pos)
+    for nidx in nums:
+        m = re.compile(r'(?:^|(?<=\s))%d%s\s' % (nidx, d)).search(s, pos)
         if not m:
             return None
-        spans.append((n, m.start(), m.end())); pos = m.end()
+        spans.append((nidx, m.start(), m.end())); pos = m.end()
     out = {}
-    for i, (n, _st, en) in enumerate(spans):
+    for i, (nidx, _st, en) in enumerate(spans):
         stop = spans[i + 1][1] if i + 1 < len(spans) else len(s)
-        out[n] = s[en:stop].strip().rstrip(",;").strip()
+        val = re.sub(r'\s*·\s*$', '', s[en:stop].strip()).rstrip(",;").strip()
+        if not val or re.match(r'\d+[).]\s', val):       # empty, or a swallowed next-marker -> bail
+            return None
+        out[nidx] = val
     return out
 
 
 def _key_numbers(key_text, universe):
-    """Which of `universe` (the lesson's actual problem numbers) this answer block contains markers
-    for. Used only to decide whether a key is fully consumed and can be dropped; restricting to the
-    real problem numbers keeps a residual key (answers to non-practice prompts) from being dropped."""
-    s = " ".join(ln.strip() for ln in key_text.splitlines())
-    return {n for n in universe if re.search(r'(?:(?<=\s)|^)%d[).]\s' % n, s)}
+    """Which of `universe` (the lesson's actual problem numbers) this answer block has markers for,
+    using the key's own delimiter. Used only to decide whether a key is fully consumed and can be
+    dropped; restricting to real problem numbers keeps a residual key (answers to non-practice
+    prompts) from being dropped."""
+    s = re.sub(r'^\*\([^)]*\)\*\s*', '', _flatten(key_text))
+    delim = _detect_delim(s)
+    if not delim:
+        return set()
+    d = re.escape(delim)
+    return {nidx for nidx in universe if re.search(r'(?:^|(?<=\s))%d%s\s' % (nidx, d), s)}
 
 
 def _pair_practice_answers(text):
     """Convert each pairable Practice+Answer-key set in a lesson chunk to per-problem reveals and
-    delete the consumed answer key(s). A set converts only if every shown problem number has a
-    matching answer (anchored parse); otherwise it is left untouched for _blockify (graceful
-    fallback). Each set draws answers from the key block(s) that follow it (before the next set)."""
+    delete the consumed answer key(s). A set converts only if its problems parse to >=2 strictly
+    increasing numbers AND every one has a matching answer (anchored parse); otherwise it is left
+    untouched for _blockify (graceful fallback). Each set draws answers from the key block(s) that
+    follow it (before the next set)."""
     lines = text.split("\n")
     blocks = list(_scan_pa_blocks(lines))
     practices = sorted(([s, e, instr, _split_practice_block(inner)]
@@ -464,11 +510,18 @@ def _pair_practice_answers(text):
     edits, consumed = [], set()
     for idx, (ps, pe, instr, items) in enumerate(practices):
         nums = [it[1] for it in items if it[0] == "prob"]
+        if len(nums) < 2 or len(set(nums)) != len(nums) or nums != sorted(nums):
+            continue                                  # need >=2 problems, strictly increasing, no dups
         nxt = pstarts[idx + 1] if idx + 1 < len(pstarts) else len(lines) + 1
-        ktext = "\n".join(inner for as_, _ae, inner in answers if ps < as_ < nxt)
-        if len(nums) < 2:
-            continue
-        amap = _answers_for(ktext, nums)
+        # Accumulate the following key block(s) only until this set's numbers are covered, then stop.
+        # This both (a) skips a later key for OTHER problems (a 13-18 set after a 1-12 set) and
+        # (b) avoids appending a second strand's re-numbered 1-3 key onto the last answer of a 1-8 set.
+        want, parts, covered = set(nums), [], set()
+        for as_, _ae, inner in answers:
+            if not (ps < as_ < nxt) or want <= covered:
+                continue
+            parts.append(inner); covered |= _key_numbers(inner, want)
+        amap = _answers_for("\n".join(parts), nums)
         if amap is None:
             continue
         paired = [it if it[0] == "sub" else ("prob", it[1], it[2], amap[it[1]]) for it in items]
@@ -964,7 +1017,8 @@ html.dark .hero-art{filter:brightness(.9) saturate(.92)}
 .answers .ak-body{padding:.1rem 1.4rem 1.1rem; overflow-wrap:break-word} .answers .ak-body > :last-child{margin-bottom:0}
 
 /* ---- per-question answer reveal (textbook practice) ---- */
-.vh{position:absolute!important; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden;
+/* project visually-hidden helper, scoped to the reveal so the short '.vh' name can't hide anything else */
+.qcheck .vh{position:absolute!important; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden;
   clip:rect(0 0 0 0); white-space:nowrap; border:0}
 .practice-intro{color:var(--ink-soft); font-size:var(--step--1); margin:.2rem 0 .7rem}
 .practice-sub{font-weight:600; font-size:var(--step--1); color:var(--ink-soft); margin:1.3rem 0 .5rem}
@@ -983,7 +1037,9 @@ html.dark .hero-art{filter:brightness(.9) saturate(.92)}
 .qcheck .qa::before{content:"\2713"; font-weight:700}
 .qcheck:not([open]) .qa{display:none} .qcheck[open] .qa{display:inline-flex}
 @media (prefers-reduced-motion:no-preference){ .prow{transition:border-color .15s ease} }
-@media print{ .qcheck .qa{display:inline-flex} .qcheck > summary{display:none} }
+/* print: show every answer (even un-opened reveals) and hide the toggle. !important beats the
+   .qcheck:not([open]) .qa{display:none} screen rule, which has higher specificity. */
+@media print{ .qcheck .qa{display:inline-flex !important} .qcheck > summary{display:none} }
 
 /* ---- prev / next page nav ---- */
 .pagenav{display:flex; gap:1rem; justify-content:space-between; align-items:stretch;
