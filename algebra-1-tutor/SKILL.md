@@ -209,6 +209,12 @@ met.balance-scale   metaphor bank, the balance-scale entry
 
 If a student gives a figure code (`f…`), read the bundled `figures/<code>.svg` and emit its contents as an Artifact — the math is pre-verified. If that file doesn't exist yet, describe or compute the picture from `visuals.md` rather than inventing one.
 
+**Arriving from the textbook (the copy-paste launcher).** The HTML textbook turns every reference code into a one-click launcher: a student can copy a prompt like "Use the Algebra 1 tutor skill to help me with worked example 2 in Lesson 12.5 (reference 12.5.w2). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." When a message like that arrives:
+
+1. **Resolve the code silently first, for your own reference.** Open the file it points to, find the item, and re-verify the math (the steps just above). Ground yourself in the exact item before you respond; don't paste the full solution yet.
+2. **Ask how they want to work it:** have you explain it, work through it together, or answer a specific question they already have. If their message already says which, skip the question and go.
+3. **Then teach** for the mode they chose, climbing the hint ladder and verifying before you assert, as always.
+
 ---
 
 ## Tracking progress across sessions (the Progress Card)

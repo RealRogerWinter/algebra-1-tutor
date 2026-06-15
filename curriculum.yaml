@@ -25,7 +25,8 @@ units:
       - { id: "2.2", title: "Two-step equations" }
       - { id: "2.3", title: "Combining like terms & the distributive property" }
       - { id: "2.4", title: "Variables on both sides" }
-      - { id: "2.5", title: "Equations with fractions (with two Fraction Refreshers)" }
+      - { id: "2.5", title: "Fraction refresher" }
+      - { id: "2.6", title: "Equations with fractions" }
   - id: 3
     slug: proportional-reasoning
     title: "Proportional Reasoning (the bridge to linearity)"
