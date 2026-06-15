@@ -9,8 +9,8 @@ algebra with their hands instead of just reading it:
      sides keeps the equation balanced. A button takes 3 away from both
      sides until x sits alone, then a calm success state appears.
   2. An "evaluate" slider: drag x from -5..5 and watch 3x + 2 compute live.
-  3. A "do the same to both sides" stepper for ``2x = 8`` whose button
-     divides both sides by 2 and lands on x = 4.
+  3. A "do the same to both sides" stepper for ``4x = 20`` whose button
+     divides both sides by 4 and lands on x = 5.
 
 Every displayed number is computed (and double-checked against sympy in the
 module's verification), so a learner never reads a false value.
@@ -32,7 +32,7 @@ LESSONS = ["1.1", "1.5", "2.1"]
 
 # --------------------------------------------------------------------------
 # Verified facts (computed, not hand-typed). Cross-checked with sympy:
-#   solve(x + 3 = 7) -> 4 ;  solve(2x = 8) -> 4 ;  (3*x + 2) over -5..5
+#   solve(x + 3 = 7) -> 4 ;  solve(4x = 20) -> 5 ;  (3*x + 2) over -5..5
 # --------------------------------------------------------------------------
 def _eval_table():
     """3*x + 2 for x in -5..5, as a JS-ready list of [x, y] pairs."""
@@ -374,7 +374,7 @@ def _divide():
 
   <div class="{slug}-controls">
     <button type="button" class="iq-btn primary" data-act="div">
-      Divide both sides by 2</button>
+      Divide both sides by 4</button>
     <button type="button" class="iq-btn" data-act="reset">Start over</button>
   </div>
 </div>
@@ -397,7 +397,7 @@ def _divide():
   var btnDiv = root.querySelector('[data-act="div"]');
   var btnRst = root.querySelector('[data-act="reset"]');
 
-  // state: coef * x = total.  Start 2x = 8, split into `groups` equal columns.
+  // state: coef * x = total.  Start 4x = 20, split into `groups` equal columns.
   var coef, total, groups;
 
   function chip(){{ var d = document.createElement("div");
@@ -433,25 +433,26 @@ def _divide():
       noteEl.classList.add("win");
       btnDiv.disabled = true;
     }} else {{
-      noteEl.textContent = "2 equal x's share 8 equally \\u2014 split both "
-        + "sides into 2 matching groups.";
+      noteEl.textContent = coef + " equal x's share " + total + " equally "
+        + "\\u2014 split both sides into " + coef + " matching groups.";
       noteEl.classList.remove("win");
       btnDiv.disabled = false;
     }}
   }}
 
   function reset(){{
-    coef = 2; total = 8; groups = 1;   // 2x = 8
+    coef = 4; total = 20; groups = 1;   // 4x = 20
     btnDiv.disabled = false;
     render();
   }}
 
   btnDiv.addEventListener("click", function(){{
     if (coef === 1) return;
-    groups = coef;                     // show the 2 equal shares first...
+    var k = coef;                      // show the k equal shares first...
+    groups = k;
     render();
-    // ...then settle to one group => x = 4
-    coef = coef / 2; total = total / 2; groups = 1;
+    // ...then settle to one group => x = total / k
+    total = total / k; coef = 1; groups = 1;
     setTimeout(render, 480);
   }});
   btnRst.addEventListener("click", reset);
@@ -460,8 +461,8 @@ def _divide():
 }})();
 </script>'''
     return {
-        "caption": "Divide-both-sides stepper for 2x = 8: split each side into "
-                   "2 equal shares to reach x = 4.",
+        "caption": "Divide-both-sides stepper for 4x = 20: split each side into "
+                   "4 equal shares to reach x = 5.",
         "html": html,
     }
 

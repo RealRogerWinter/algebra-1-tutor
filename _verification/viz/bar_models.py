@@ -10,7 +10,7 @@ falsehood:
   (1) part-part-whole  18 = 7 + 11
   (2) 3x = 54          -> x = 18
   (3) 2x + 3 = 11      -> x = 4
-  (4) A = B + 5, A + B = 17 -> B = 6, A = 11
+  (4) Sam = Pat + 3, Pat + Sam = 27 -> Pat = 12, Sam = 15
 """
 
 TITLE = "Bar / tape diagrams"
@@ -189,47 +189,46 @@ def _two_step():
 
 
 # =================================================================================================
-# (4) Comparison : A is 5 more than B, together 17  ->  B = 6, A = 11   (lesson 6.2 / 2.1)
+# (4) Comparison : Sam is 3 more than Pat, together 27  ->  Pat = 12, Sam = 15   (lesson 6.2)
 # =================================================================================================
 def _comparison():
-    total, diff = 17, 5
-    b = (total - diff) // 2                             # 6
-    a = b + diff                                        # 11
-    assert a + b == total and a - b == diff
+    total, diff = 27, 3
+    p = (total - diff) // 2                             # 12  (Pat)
+    s = p + diff                                        # 15  (Sam)
+    assert p + s == total and s - p == diff
 
-    y = 18
-    # Both rows share the same scale; B's bar = b units, A's bar = a units, full bar = total units.
+    y = 22
+    # Both rows share the same scale; Pat's bar = p units, Sam's bar = s units, full bar = total.
     unit = BAR_W / total
-    wB = unit * b
-    wA = unit * a
-    rowgap = 14
-    yB = y
-    yA = y + BAR_H + rowgap
+    wP = unit * p
+    rowgap = 26                                         # room for the name label above each bar
+    yP = y
+    yS = y + BAR_H + rowgap
 
     body = [
-        # Row B
-        _seg(BAR_X0, wB, yB, GREEN, str(b)),
-        f'<text x="{BAR_X0 - 6}" y="{yB + BAR_H/2}" font-size="16" fill="{GREEN}" '
-        f'text-anchor="end" dominant-baseline="central">B</text>',
-        # Row A = B + 5  (the matching part, then the extra 5)
-        _seg(BAR_X0, wB, yA, GREEN, str(b)),
-        _seg(BAR_X0 + wB, unit * diff, yA, RED, str(diff)),
-        f'<text x="{BAR_X0 - 6}" y="{yA + BAR_H/2}" font-size="16" fill="{RED}" '
-        f'text-anchor="end" dominant-baseline="central">A</text>',
-        # brace on the right spanning both rows -> the total 17
-        _brace_right(BAR_X0 + BAR_W + 2, yB, yA + BAR_H, AXIS, f"17"),
+        # Row Pat: name just above the bar, value inside
+        f'<text x="{BAR_X0}" y="{yP - 6}" font-size="13" fill="{GREEN}" '
+        f'text-anchor="start">Pat</text>',
+        _seg(BAR_X0, wP, yP, GREEN, str(p)),
+        # Row Sam = Pat + 3: one matching Pat-part, then the extra 3
+        f'<text x="{BAR_X0}" y="{yS - 6}" font-size="13" fill="{RED}" '
+        f'text-anchor="start">Sam</text>',
+        _seg(BAR_X0, wP, yS, GREEN, str(p)),
+        _seg(BAR_X0 + wP, unit * diff, yS, RED, str(diff)),
+        # brace on the right spanning both rows -> the total 27
+        _brace_right(BAR_X0 + BAR_W + 2, yP, yS + BAR_H, AXIS, f"27"),
     ]
-    h = yA + BAR_H + 18
+    h = yS + BAR_H + 18
     svg = _svg_open(h) + "".join(body) + "</svg>"
     html = (
         '<figure style="margin:0">'
         f'{svg}'
         f'<figcaption style="margin-top:.4rem;color:var(--ink-soft)">'
-        f'A is one B plus 5 more. Two B-parts plus 5 make 17, so '
-        f'$$B = 6 \\quad\\text{{and}}\\quad A = 11.$$</figcaption>'
+        f'Sam is one Pat plus 3 more. Two Pat-parts plus 3 make 27, so '
+        f'$$\\text{{Pat}} = 12 \\quad\\text{{and}}\\quad \\text{{Sam}} = 15.$$</figcaption>'
         '</figure>'
     )
-    return {"caption": "A is 5 more than B and together 17: B = 6, A = 11", "html": html}
+    return {"caption": "Sam is 3 years older than Pat and together 27: Pat = 12, Sam = 15", "html": html}
 
 
 def _verify():
@@ -237,7 +236,7 @@ def _verify():
     assert 7 + 11 == 18
     assert 18 * 3 == 54
     assert 2 * 4 + 3 == 11
-    assert 6 + 11 == 17 and 11 - 6 == 5
+    assert 12 + 15 == 27 and 15 - 12 == 3
 
 
 _verify()

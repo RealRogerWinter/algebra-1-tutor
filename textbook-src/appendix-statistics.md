@@ -16,8 +16,6 @@ Picture five friends comparing quiz scores. Two questions come up almost on thei
 
 Here's a way to see all of it at once. Imagine dropping the scores onto a number line, one dot per score. The whole picture of "typical versus spread out" is right there: where the dots pile up is the center, and how far they reach is the spread.
 
-<!--viz:stats_charts#1-->
-
 The **mean** is the balance point of that line. It's the spot where the dots would balance if the line were a seesaw. The **median** is the dot with equal counts of dots on either side of it. And whether the dots sit in a tight clump or stretch far apart *is* the spread.
 
 <!--illus:a-1-mean-balance-->
@@ -51,6 +49,8 @@ This doesn't make the mean wrong. If those extreme values genuinely count, a tot
 Two small habits keep the mode from tripping you. First, "most often" can come up empty: if nothing repeats, there's no mode, and that's a normal answer, not a missed step. Second, a set can have more than one mode if two values tie for most frequent.
 
 Here's a clean case to get the method moving before the practice mixes things up. Find all four for {5, 5, 8}. Mean: (5+5+8)/3 = 18/3 = 6. Median: it's already ordered, and the middle value is 5. Mode: 5, which appears twice. Range: 8 − 5 = 3. Nothing tricky, just the four moves, once each.
+
+<!--viz:stats_charts#1-->
 
 **Check for understanding (transfer):**
 1. {#A.1.c1} A house on your street sells for $50,000, $60,000, and $55,000, and one mansion sells for $2,000,000. Would you describe the "typical" price with the mean or the median, and why? (The median, about $57,500, because the $2,000,000 sale is an outlier that drags the mean far above what's typical for the street.)

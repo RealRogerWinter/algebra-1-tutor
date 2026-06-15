@@ -21,7 +21,7 @@ TITLE = "Interactive graphs"
 KIND = "interactive"
 BLURB = ("Move a slider and the graph answers back: tilt and lift a line, walk a "
          "point along it, or open and close a parabola, all in real time.")
-LESSONS = ["5.4", "12.6"]
+LESSONS = ["5.2", "5.4", "12.6"]
 
 
 # --------------------------------------------------------------------------- #
@@ -407,8 +407,9 @@ def samples():
         {
             "caption": "Walk a point along the line. Drag the red dot (or focus it and "
                        "use the arrow keys); its coordinates update live, and they "
-                       "always satisfy the equation above. Starts at " + _eq_line(0.5, 1) + ".",
-            "html": _line_widget("linept", m0=0.5, b0=1, draggable=True, px0=2),
+                       "always satisfy the equation above. Starts at " + _eq_line(2, -1) + ", "
+                       "with the point at (3, 5).",
+            "html": _line_widget("linept", m0=2, b0=-1, draggable=True, px0=3),
         },
         {
             "caption": "Parabola stretcher: one slider sets a in " + _eq_parab(1) +
