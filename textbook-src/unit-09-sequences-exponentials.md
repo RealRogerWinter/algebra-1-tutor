@@ -22,6 +22,8 @@ Feed in 1, out comes the 1st number on the list. Feed in 2, out comes the 2nd. T
 
 What we're really after is the rule the machine is using. Look at 3, 7, 11, 15. What do you do to get from each term to the next? You add 4, every time. Now look at 2, 6, 18, 54. What's happening here? Each term is the one before times 3. Those are the two behaviors this lesson is built on, and they get names. **Add the same number each step** is an *arithmetic* sequence. **Multiply by the same number each step** is a *geometric* sequence.
 
+<!--illus:9-1-steps-vs-doubling-->
+
 Notice that you just said the rule out loud. "Each term is the one before, plus 4" is a complete recipe for building the list, as long as you also know where to start. That little phrase is what we'll call the *recursive* rule in a moment, and you understood it before any symbols showed up. The only catch is that it needs a starting number, or it has nowhere to begin.
 
 When you're not sure which kind of sequence you're looking at, there's one small tool that settles it every time. Write the terms in a row, and underneath, write the jumps between them. Do this two ways: write the *differences* (what you'd add) and the *ratios* (what you'd multiply by). Whichever one stays the same tells you the type.

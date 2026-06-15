@@ -209,6 +209,11 @@ html.dark figure.fig text[fill="#2980b9"],html.dark figure.fig [fill="#2980b9"]:
 html.dark figure.fig text[fill="#27ae60"]{fill:#69cf97} html.dark figure.fig text[fill="#8e44ad"]{fill:#c3a4e6}
 html.dark figure.fig line[stroke="#2980b9"]{stroke:#6fb0e8} html.dark figure.fig line[stroke="#8e44ad"]{stroke:#c3a4e6}
 
+/* ---- inline metaphor illustration (raster; warm, decorative but meaningful) ---- */
+figure.illus{margin:var(--s5) auto; max-width:30rem; text-align:center}
+figure.illus img.illus-art{width:100%; height:auto; border-radius:var(--radius); box-shadow:var(--shadow); display:block}
+html.dark figure.illus img.illus-art{filter:brightness(.92) saturate(.94)}
+
 /* ---- objectives blockquote & tables ---- */
 blockquote{margin:var(--s5) auto; padding:1rem 1.25rem; background:var(--tint-blue); border:1px solid var(--rule);
   border-left:3px solid var(--blue); border-radius:var(--radius); color:var(--ink)}

@@ -14,6 +14,8 @@ Before each new lesson, redo two or three problems from a lesson or two earlier 
 
 Exponents are just a shorthand for "multiply this by itself a few times." That's the whole idea, and every rule in this lesson comes straight out of it. The trick is to never let the shorthand pull you away from what it's counting.
 
+<!--illus:10-1-repeated-mult-->
+
 When you're unsure what a rule should be, you can always write the factors out and count them. That habit, more than any memorized rule, is what keeps you out of trouble here.
 
 These rules are the grammar of nearly every expression ahead: scientific notation in the next lesson, multiplying polynomials later in this one, and the two units after this. The way to make them stick is to see *why* each one is what it is, so that's how we'll build them.
@@ -137,6 +139,8 @@ You already did the hard part last lesson. Multiplying and dividing these number
 
 Start with what a power of ten actually does. Multiplying by 10 slides the decimal point one place to the right; dividing by 10 slides it one place left. So 10ⁿ is really a record of *how many places the point moved*. Take 5300. Picture the decimal point starting after the 5, at 5.3, and ask how far it has to travel to rebuild the full number: three places right gets you back to 5300. So 5300 = 5.3 × 10³. The exponent 3 is just the count of slides.
 
+<!--illus:10-2-sliding-decimal-->
+
 Small numbers work the same way, and this is where the negative exponents from last lesson come back. Take 0.00042. To get up to a single nonzero digit, 4.2, you slide the point four places to the *right*. But sliding right makes a number bigger, so to keep the value the same you must have started by dividing, and that's a negative exponent: 0.00042 = 4.2 × 10⁻⁴.
 
 The negative power of ten is the same reciprocal idea as x⁻ᵃ = 1/(xᵃ): it's a division written as an exponent.
@@ -232,6 +236,8 @@ First, the vocabulary, all on one example. Take 5x² − 3x + 2. It has three pi
 Now adding. Like terms have to match the variable *and* its power: 3x² and x² are both "x²-pieces," so they combine, while 3x² and 3x are different kinds and don't. Picture the x²-pieces and the x-pieces as two different kinds of box: you can only stack a box with its own kind. Add the coefficients within each kind and keep them sorted by degree:
 $$(3x^2+2x-1)+(x^2-5x+4) = (3+1)x^2+(2-5)x+(-1+4) = 4x^2-3x+3$$
 Nothing fancy: x²-pieces with x²-pieces, x-pieces with x-pieces, plain numbers with plain numbers.
+
+<!--illus:10-3-algebra-tiles-->
 
 Subtraction is the same idea with one step that's easy to fumble, so go slow here. Subtracting a whole polynomial means a −1 shakes hands with *every* term inside the second parentheses: every sign flips, not just the first. This is the exact "hand the minus to everyone" move from Unit 2, wearing new clothes:
 $$(2x^2+3x)-(x^2-x+2) = 2x^2+3x \;\underbrace{-x^2+x-2}_{\text{every sign flipped}} = x^2+4x-2$$
@@ -329,6 +335,8 @@ x & x^2 & 3x \\ \hline
 2 & 2x & 6
 \end{array}\qquad\Rightarrow\qquad x^2 + \underbrace{3x+2x}_{=\,5x} + 6 = x^2+5x+6$$
 There they are: four cells, x², 3x, 2x, and 6. The two in the middle, 3x and 2x, are the ones people drop, and they add up to the 5x that makes this a trinomial instead of just x² + 6.
+
+<!--illus:10-4-area-grid-->
 
 These same four products, taken in a fixed order, are sometimes called FOIL. The box is worth preferring, because it *shows you why a middle term exists* and keeps working when the pieces get bigger, where that shortcut runs out.
 

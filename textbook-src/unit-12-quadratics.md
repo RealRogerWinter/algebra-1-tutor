@@ -14,6 +14,8 @@ A word before you start, and it holds for every lesson here. You don't have to f
 
 Here's a picture to start from. A square has area 9. What's the length of one side? You're looking for a number that, multiplied by itself, gives 9. That's 3, because 3 × 3 = 9. Squaring a number asks "what's the area of a square with this side?" The **square root** asks the reverse: "the area is 9, so what's the side?" That reverse question is the idea of this lesson, and it's the exact tool you'll need later to undo an x². Without it, the answer to x² = 7 would have no name to write down.
 
+<!--illus:12-1-area-to-side-->
+
 Squaring and taking a square root undo each other, the same way the 2 power and the root sit on opposite sides of the move. So √9 = 3 because 3² = 9, and √25 = 5 because 5² = 25. When the number under the root is a perfect square, meaning some whole number squared, the root comes out as a tidy whole number.
 
 But not every number is that friendly. √9 is a clean 3, yet √7 is **irrational**: its decimal runs on forever without ever repeating, so no fraction lands exactly on it. That doesn't make √7 unfinished or wrong. √7 *is* the exact answer, the same way 1/3 is exact even though its decimal never stops.
@@ -227,6 +229,8 @@ Mixed practice feels harder, and that's what makes it last. Every problem's answ
 Start with a fact you can check by hand: (x + 3)² = x² + 6x + 9. Look at that constant, the 9. It's exactly (6/2)², half of the middle coefficient, squared. That's not a coincidence, and it's the lever for this whole lesson. If you're handed x² + 6x and want to *make* it into a perfect square, you now know precisely what to add: 9. Adding the right number to turn x² + bx into something-squared is called **completing the square**.
 
 There's a literal picture behind the name. Think of x² + 6x as an x-by-x square sitting next to two strips, each 3 by x (the 6x split into two 3x pieces laid along two sides). Those pieces almost form a bigger square, but there's a corner missing: a 3-by-3 block, area 9. Drop that block in and the figure becomes a complete square, (x + 3) on each side. The algebra is doing the same thing the picture is: filling in the missing corner.
+
+<!--illus:12-4-complete-square-->
 
 Why bother? Two reasons. It solves quadratics that won't factor with nice integers, and it's where the quadratic formula in the next lesson actually comes from. Seeing it once makes that formula feel earned instead of dropped on you.
 

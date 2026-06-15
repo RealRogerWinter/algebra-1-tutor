@@ -104,6 +104,73 @@ def _convert_anchors(text):
     return "\n".join(out)
 
 
+_ILLUS_RE = re.compile(r"<!--\s*illus:([a-z0-9-]+)\s*-->")
+
+# Inline metaphor illustrations (textbook-only). The student source carries a `<!--illus:slug-->`
+# marker at the metaphor sentence; the build swaps it for docs/assets/illus-<slug>.jpg with the
+# descriptive alt below (the alt carries the meaning if the image fails to load). These are NOT part
+# of the {#code} reference-code system, so the grammar / drift / figure lints never see them.
+_ILLUS = {
+    "1-1-mystery-box": "A balance scale with a covered box on one pan, picturing the equals sign as two sides held in balance.",
+    "1-3-tiers": "A four-tier stack with the bottom two tiers paired, picturing the tiers of the order of operations.",
+    "1-4-counters": "Two-colour counters with one positive and one negative paired off to make zero.",
+    "1-5-empty-chair": "A single reserved empty chair, picturing a variable waiting for a value to sit in.",
+    "2-1-cup-coins": "A balance scale holding a cup and coins, with the same number of coins lifted from both pans.",
+    "2-2-dressing": "Socks put on before shoes, picturing inverse steps undone in reverse order.",
+    "2-3-boxes-coins": "Three identical boxes beside two loose coins that cannot be combined together.",
+    "2-3-area-distribute": "A rectangle split into two cells, picturing a factor distributed across a sum.",
+    "2-4-both-pans": "Identical boxes removed from both pans of a balance scale by the same amount.",
+    "2-5-pizza-fractions": "A smaller one-sixth slice beside a larger one-quarter slice: more sharers means smaller pieces.",
+    "3-1-unit-rate": "The same goods priced per single item, picturing a unit rate.",
+    "3-2-cross-multiply": "Two fractions linked by a crossing X, picturing cross-multiplication.",
+    "3-3-percent-triangle": "A triangle linking a part, a whole, and a percent.",
+    "4-1-input-output": "One input entering a machine and a single output leaving it.",
+    "4-1-vertical-line-test": "A vertical line sweeping across a curve, picturing the vertical-line test.",
+    "4-2-trays": "A machine with an in-tray of allowed inputs and an out-tray of produced outputs.",
+    "5-3-staircase": "A staircase of equal rise-over-run steps climbing alongside a line, picturing slope.",
+    "6-1-phrase-equation": "A phrase card turning into an equation card, picturing translation into symbols.",
+    "6-2-drt": "A small road trip, picturing distance as rate multiplied by time.",
+    "7-2-substitution": "One quantity plugged in to replace another, picturing substitution.",
+    "7-3-add-equations": "Two equations stacked and added so that one variable cancels out.",
+    "7-4-parallel-identical": "Parallel lines that never meet beside one identical line: no solution versus infinitely many.",
+    "9-1-steps-vs-doubling": "Evenly spaced steps beside doubling jumps, picturing arithmetic versus geometric growth.",
+    "10-1-repeated-mult": "A power shown as several equal copies multiplied together.",
+    "10-2-sliding-decimal": "A decimal point sliding across scales of size, picturing scientific notation.",
+    "10-3-algebra-tiles": "Algebra tiles sorted into groups by kind, picturing combining like terms.",
+    "10-4-area-grid": "An area-model grid of cells, picturing the product of two binomials.",
+    "11-1-un-distribute": "An area model run backward, picturing pulling a common factor out.",
+    "11-2-area-reversed": "An area grid filled in reverse to recover its two binomial sides.",
+    "11-3-diff-squares": "Mirror-image squares, picturing the difference-of-squares pattern.",
+    "12-1-area-to-side": "A square's area giving back its side length, picturing a square root as un-squaring.",
+    "12-4-complete-square": "A partial square completed by adding a small corner piece.",
+    "a-1-mean-balance": "A row of dots balancing on a single point, picturing the mean as a balance point.",
+    "a-3-two-way-grid": "A clean two-by-two grid of cells, picturing a two-way table.",
+    "howto-what-is-algebra": "A gentle path winding toward a warm sunrise, picturing algebra as an inviting, worthwhile beginning.",
+    "howto-using-claude": "An open book with a friendly speech bubble beside it, picturing reading along with a helpful companion tutor.",
+}
+
+
+def _convert_illus(text):
+    """Swap each `<!--illus:slug-->` marker for an inline illustration figure when the asset
+    docs/assets/illus-<slug>.jpg exists (else drop the marker, keeping any other text on the line).
+    Fence-aware. Block-level HTML with blank lines around it passes through markdown untouched."""
+    out, infence = [], False
+    for ln in text.split("\n"):
+        if ln.lstrip().startswith("```"):
+            infence = not infence; out.append(ln); continue
+        m = None if infence else _ILLUS_RE.search(ln)
+        if m and os.path.exists(os.path.join(ASSETS_DIR, f"illus-{m.group(1)}.jpg")):
+            slug = m.group(1)
+            alt = _html.escape(_ILLUS.get(slug, ""))
+            out += ["", f'<figure class="illus"><img class="illus-art" src="../assets/illus-{slug}.jpg" '
+                        f'alt="{alt}" loading="lazy"></figure>', ""]
+        elif m:
+            out.append(_ILLUS_RE.sub("", ln))
+        else:
+            out.append(ln)
+    return "\n".join(out)
+
+
 _LIST_RE = re.compile(r"^\s*(?:[-*+]|\d+\.)\s")
 _BQ_LIST_RE = re.compile(r"^>\s*(?:[-*+]|\d+\.)\s")
 
@@ -243,6 +310,7 @@ _DIVIDER = ('<div class="ldiv" aria-hidden="true"><i></i>'
 
 def md_to_body(text):
     text, math = _protect_math(text)
+    text = _convert_illus(text)
     text = _id_worked_practice(text)
     text = _convert_anchors(text)
     text = _space_subheads(text)
@@ -674,6 +742,11 @@ html.dark figure.fig text[fill="#c0392b"],html.dark figure.fig [fill="#c0392b"]{
 html.dark figure.fig text[fill="#2980b9"],html.dark figure.fig [fill="#2980b9"]:not(line){fill:#6fb0e8}
 html.dark figure.fig text[fill="#27ae60"]{fill:#69cf97} html.dark figure.fig text[fill="#8e44ad"]{fill:#c3a4e6}
 html.dark figure.fig line[stroke="#2980b9"]{stroke:#6fb0e8} html.dark figure.fig line[stroke="#8e44ad"]{stroke:#c3a4e6}
+
+/* ---- inline metaphor illustration (raster; warm, decorative but meaningful) ---- */
+figure.illus{margin:var(--s5) auto; max-width:30rem; text-align:center}
+figure.illus img.illus-art{width:100%; height:auto; border-radius:var(--radius); box-shadow:var(--shadow); display:block}
+html.dark figure.illus img.illus-art{filter:brightness(.92) saturate(.94)}
 
 /* ---- objectives blockquote & tables ---- */
 blockquote{margin:var(--s5) auto; padding:1rem 1.25rem; background:var(--tint-blue); border:1px solid var(--rule);
