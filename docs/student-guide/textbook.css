@@ -171,7 +171,8 @@ html.dark .hero-art{filter:brightness(.9) saturate(.92)}
 .answers .ak-body{padding:.1rem 1.4rem 1.1rem; overflow-wrap:break-word} .answers .ak-body > :last-child{margin-bottom:0}
 
 /* ---- per-question answer reveal (textbook practice) ---- */
-.vh{position:absolute!important; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden;
+/* project visually-hidden helper, scoped to the reveal so the short '.vh' name can't hide anything else */
+.qcheck .vh{position:absolute!important; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden;
   clip:rect(0 0 0 0); white-space:nowrap; border:0}
 .practice-intro{color:var(--ink-soft); font-size:var(--step--1); margin:.2rem 0 .7rem}
 .practice-sub{font-weight:600; font-size:var(--step--1); color:var(--ink-soft); margin:1.3rem 0 .5rem}
@@ -190,7 +191,9 @@ html.dark .hero-art{filter:brightness(.9) saturate(.92)}
 .qcheck .qa::before{content:"¹3"; font-weight:700}
 .qcheck:not([open]) .qa{display:none} .qcheck[open] .qa{display:inline-flex}
 @media (prefers-reduced-motion:no-preference){ .prow{transition:border-color .15s ease} }
-@media print{ .qcheck .qa{display:inline-flex} .qcheck > summary{display:none} }
+/* print: show every answer (even un-opened reveals) and hide the toggle. !important beats the
+   .qcheck:not([open]) .qa{display:none} screen rule, which has higher specificity. */
+@media print{ .qcheck .qa{display:inline-flex !important} .qcheck > summary{display:none} }
 
 /* ---- prev / next page nav ---- */
 .pagenav{display:flex; gap:1rem; justify-content:space-between; align-items:stretch;
