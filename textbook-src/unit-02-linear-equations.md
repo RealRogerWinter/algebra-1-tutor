@@ -47,26 +47,21 @@ Read each worked example slowly, a line at a time, and ask why each line follows
 
 **Worked examples:**
 
-*Addition, undo by subtracting:*
-{#2.1.w1}
+{#2.1.w1} *Addition, undo by subtracting:*
 $$x+5=12 \;\xrightarrow{\,-5\,}\; x=7 \qquad \text{Check: } 7+5=12$$
 
-*Subtraction, undo by adding:*
-{#2.1.w2}
+{#2.1.w2} *Subtraction, undo by adding:*
 $$x-4=10 \;\xrightarrow{\,+4\,}\; x=14 \qquad \text{Check: } 14-4=10$$
 
-*Multiplication, undo by dividing:*
-{#2.1.w3}
+{#2.1.w3} *Multiplication, undo by dividing:*
 $$4x=20 \;\xrightarrow{\,\div 4\,}\; x=5 \qquad \text{Check: } 4(5)=20$$
 
-*Division, undo by multiplying:*
-{#2.1.w4}
+{#2.1.w4} *Division, undo by multiplying:*
 $$\frac{x}{2}=6 \;\xrightarrow{\,\times 2\,}\; x=12 \qquad \text{Check: } \frac{12}{2}=6$$
 
 In the multiplication one, dividing both sides by 4 makes the 4 in front go to one, since 4/4 is 1 and 1x is just x. That's the same "goes to one" idea you'll use any time a number is multiplying the variable.
 
-Here's a clean case to get the method moving before the practice mixes things up:
-{#2.1.w5}
+{#2.1.w5} Here's a clean case to get the method moving before the practice mixes things up:
 $$x+7=7 \;\xrightarrow{\,-7\,}\; x=0 \qquad \text{Check: } 0+7=7$$
 There's nothing wrong with x = 0. Zero is a perfectly good number, and it's the value that keeps this balance level. It also catches the most common way of misreading the equals sign.
 
@@ -145,24 +140,20 @@ Read each step and ask why it follows from the one above before you go on.
 
 **Worked examples:**
 
-*Multiply-then-add:*
-{#2.2.w1}
+{#2.2.w1} *Multiply-then-add:*
 $$2x+3=11 \;\xrightarrow{\,-3\,}\; 2x=8 \;\xrightarrow{\,\div 2\,}\; x=4 \qquad \text{Check: } 2(4)+3=8+3=11$$
 
-*Division type:*
-{#2.2.w2}
+{#2.2.w2} *Division type:*
 $$\frac{x}{3}-2=4 \;\xrightarrow{\,+2\,}\; \frac{x}{3}=6 \;\xrightarrow{\,\times 3\,}\; x=18 \qquad \text{Check: } \frac{18}{3}-2=6-2=4$$
 
-*Dividing by a negative:*
-{#2.2.w3}
+{#2.2.w3} *Dividing by a negative:*
 $$8-2x=14 \;\xrightarrow{\,-8\,}\; -2x=6 \;\xrightarrow{\,\div(-2)\,}\; x=-3 \qquad \text{Check: } 8-2(-3)=8+6=14$$
 
 That third one is worth slowing down for, because it's where a sign quietly goes missing. After you subtract 8, the left side is −2x, not 2x. The minus belongs to the term. So you divide both sides by −2, and 6 ÷ (−2) is −3.
 
 The check is where a slip would have shown up: 8 − 2(−3) means subtracting a negative, which adds, giving 8 + 6 = 14. A negative answer here isn't a warning sign. It's a real point on the line, and the check confirms it.
 
-Here's a clean one to get the rhythm back before you practice. The answer comes out to 0, which surprises people, but zero balances the scale just fine:
-{#2.2.w4}
+{#2.2.w4} Here's a clean one to get the rhythm back before you practice. The answer comes out to 0, which surprises people, but zero balances the scale just fine:
 $$3x+6=6 \;\xrightarrow{\,-6\,}\; 3x=0 \;\xrightarrow{\,\div 3\,}\; x=0 \qquad \text{Check: } 3(0)+6=6$$
 
 One slip is easy to make on the very first move, now that the layers are stacked: undoing in the wrong order. On 2x + 3 = 11, dividing by 2 *before* subtracting the 3 forces you to divide the 3 as well, which drags in a fraction and makes the numbers messy. The getting-dressed picture is the fix. Whatever went on last comes off first, so the +3 goes before the ×2.
@@ -239,24 +230,19 @@ Substitute x = 1 to see it: the original is −(1 − 4) = −(−3) = 3, and th
 
 **Worked examples:**
 
-*Combine like terms:*
-{#2.3.w1}
+{#2.3.w1} *Combine like terms:*
 $$3x+2x=5x$$
 
-*Combine, leaving unlike terms alone:*
-{#2.3.w2}
+{#2.3.w2} *Combine, leaving unlike terms alone:*
 $$7x-4x+2 = 3x+2 \quad(\text{the }+2\text{ has no like partner})$$
 
-*Distribute (positive):*
-{#2.3.w3}
+{#2.3.w3} *Distribute (positive):*
 $$2(x+4)=2x+8$$
 
-*Distribute a negative, the big sign trap:*
-{#2.3.w4}
+{#2.3.w4} *Distribute a negative, the big sign trap:*
 $$-(x-4) = -x+4 \qquad \text{Check at }x=1:\; -(1-4)=3 \;\text{ and }\; -1+4=3$$
 
-*Distribute a negative, then combine (the trap in full):*
-{#2.3.w5}
+{#2.3.w5} *Distribute a negative, then combine (the trap in full):*
 $$3-2(x-5) \;=\; 3 + (-2)(x) + (-2)(-5) \;=\; 3 - 2x + 10 \;=\; -2x+13$$
 Walk the last one slowly, because it's the whole skill in one line. The −2 reaches both terms inside: −2 times x is −2x, and −2 times −5 is +10 (a negative times a negative). Then 3 + 10 is 13, leaving −2x + 13. Check at x = 1: the original is 3 − 2(1 − 5) = 3 − 2(−4) = 3 + 8 = 11, and the rewrite −2(1) + 13 is also 11.
 
@@ -318,21 +304,17 @@ A small thing makes the numbers kinder: move the *smaller* variable term, so you
 
 **Worked examples:**
 
-*Standard:*
-{#2.4.w1}
+{#2.4.w1} *Standard:*
 $$5x+2=3x+10 \xrightarrow{-3x} 2x+2=10 \xrightarrow{-2} 2x=8 \xrightarrow{\div 2} x=4 \quad\text{Check: }22=22$$
 
-*Constants and variables both to move:*
-{#2.4.w2}
+{#2.4.w2} *Constants and variables both to move:*
 $$7x-3=2x+12 \xrightarrow{-2x} 5x-3=12 \xrightarrow{+3} 5x=15 \xrightarrow{\div 5} x=3 \quad\text{Check: }18=18$$
 
-*Negative answer (move the larger variable term, land below zero):*
-{#2.4.w3}
+{#2.4.w3} *Negative answer (move the larger variable term, land below zero):*
 $$4x+1=6x+9 \xrightarrow{-4x} 1=2x+9 \xrightarrow{-9} -8=2x \xrightarrow{\div 2} x=-4$$
 $$\text{Check: } 4(-4)+1=-15 \;\text{ and }\; 6(-4)+9=-15$$
 
-*Distribute first, then gather:*
-{#2.4.w4}
+{#2.4.w4} *Distribute first, then gather:*
 $$2(x-1)=x+5 \xrightarrow{\text{distribute}} 2x-2=x+5 \xrightarrow{-x} x-2=5 \xrightarrow{+2} x=7$$
 $$\text{Check: } 2(7-1)=12 \;\text{ and }\; 7+5=12$$
 
@@ -354,18 +336,15 @@ Here's one worked example of each outcome. Keep the substitution habit even when
 
 **Worked examples:**
 
-*Conditional, the usual one solution:*
-{#2.4.w5}
+{#2.4.w5} *Conditional, the usual one solution:*
 $$3(x-2)+4=2(x+1)-x \xrightarrow{\text{distribute}} 3x-2=x+2 \xrightarrow{-x} 2x-2=2 \xrightarrow{+2,\,\div 2} x=2$$
 $$\text{Check: } 3(2-2)+4=4 \;\text{ and }\; 2(2+1)-2=4$$
 
-*Identity, the x's go to zero, true statement, so all real numbers:*
-{#2.4.w6}
+{#2.4.w6} *Identity, the x's go to zero, true statement, so all real numbers:*
 $$2x+4=2(x+2) \xrightarrow{\text{distribute}} 2x+4=2x+4 \xrightarrow{-2x} 4=4 \;\text{ (always true)}$$
 The variable went to zero and left **4=4**, a true statement, so the answer is **infinitely many solutions (all real numbers).** You can sanity-check with two different numbers: at x = 0 both sides are 4; at x = 5 both sides are 14. They match for any x.
 
-*Contradiction, the x's go to zero, false statement, so no solution:*
-{#2.4.w7}
+{#2.4.w7} *Contradiction, the x's go to zero, false statement, so no solution:*
 $$2x+3=2x+5 \xrightarrow{-2x} 3=5 \;\text{(false)}$$
 The variable went to zero and left **3=5**, which is never true, so there's **no solution.** Sanity-check: at x = 0 the sides are 3 and 5; at x = 10 they're 23 and 25. The right side is always 2 bigger, so they can never be equal.
 
@@ -382,8 +361,7 @@ $$\textbf{Divide first:}\quad 3(x+2)=18 \xrightarrow{\div 3} x+2=6 \xrightarrow{
 
 Same answer (x = 4, and 3(4 + 2) = 18 checks). When the whole left side is multiplied by a number that divides the right side cleanly, as 3 goes into 18 evenly, dividing first is fewer steps and smaller numbers. But if the right side *weren't* a clean multiple, say 3(x + 2) = 20, dividing first gives x + 2 = 20/3 and drags a fraction through every later step, so distributing first keeps things whole longer. Both orders are valid. The skill is glancing ahead to pick the cleaner one for the equation in front of you, and which to use is your call.
 
-**One spot-the-error to read.** Here's a worked solution to 5 − 2(x − 1) = 9 with one broken line, shown beside the correct version so you can see exactly where they part ways. This is the distributing-a-negative trap from Lesson 2.3, now hiding inside a both-sides solve:
-{#2.4.w9}
+{#2.4.w9} **One spot-the-error to read.** Here's a worked solution to 5 − 2(x − 1) = 9 with one broken line, shown beside the correct version so you can see exactly where they part ways. This is the distributing-a-negative trap from Lesson 2.3, now hiding inside a both-sides solve:
 $$5-2(x-1)=9 \;\to\; 5-2x-2=9 \;\to\; 3-2x=9 \;\to\; -2x=6 \;\to\; x=-3$$
 The break is in the very first move. The −2 reaches the −1 inside as −2 × −1 = **+2**, not −2, so the correct second line is 5 − 2x **+ 2** = 9, which becomes 7 − 2x = 9, then −2x = 2, and **x = −1**. If you didn't spot it, that's fine. The fix is right here. Confirm x = −1 in the original: 5 − 2(−1 − 1) = 5 − 2(−2) = 5 + 4 = 9, which matches.
 
@@ -463,12 +441,14 @@ To find a common denominator, you have two options:
 - *Bulletproof:* multiply the denominators (4 and 6 → 24). This always works, though the answer may need reducing.
 - *Cleaner:* use the **LCM** (least common multiple) of the denominators (4 and 6 → 12), which keeps the numbers smaller.
 
-**Worked:**
+**Worked examples:**
 $$\frac34+\frac16:\quad \text{LCM}(4,6)=12,\quad \frac34=\frac{9}{12},\ \frac16=\frac{2}{12} \;\Rightarrow\; \frac{9}{12}+\frac{2}{12}=\frac{11}{12}$$
 
 A quick self-check on any fraction answer: picture roughly where it sits between the nearest whole numbers and ask whether its size makes sense. 11/12 is just under 1, which fits adding two parts that are each less than a whole.
 
-**Practice (add/subtract; reduce your answer):**
+**Practice problems:**
+
+*Add or subtract, then reduce:*
 1. 1/4+2/4
 2. 1/3+1/6
 3. 1/2+1/4
@@ -480,32 +460,36 @@ A quick self-check on any fraction answer: picture roughly where it sits between
 9. 2/3-1/6
 10. 1/2+1/3+1/6
 
-**Key (verified):** 1) 3/4  2) 1/2  3) 3/4  4) 11/12  5) 1/4  6) 1/2  7) 7/10  8) 5/8  9) 1/2  10) 1
+**Answer key:** 1) 3/4  2) 1/2  3) 3/4  4) 11/12  5) 1/4  6) 1/2  7) 7/10  8) 5/8  9) 1/2  10) 1
+
+---
 
 ### Fraction Refresher B: Reciprocals
 
 The **reciprocal** of a fraction is just the fraction flipped over, and a number times its reciprocal goes to one: 2/3 × 3/2 = 1. A whole number counts as itself "over 1," so its reciprocal flips too. 5 is 5/1, and its reciprocal is 1/5. Here's why this matters: to undo multiplication by a fraction, you multiply by its reciprocal. That's the inverse operation for a fraction coefficient, the same idea as dividing to undo a whole-number coefficient. So (2/3)x = 6 is solved by multiplying both sides by 3/2.
 
-**Worked:**
+**Worked examples:**
 $$\frac23 x = 6 \;\xrightarrow{\,\times \frac32\,}\; x = 6\cdot\frac32 = 9 \qquad \text{Check: } \frac23(9)=6$$
 
 The 2/3 times 3/2 goes to one, leaving x alone, and 6 times 3/2 is 9. The check puts it back: two-thirds of 9 is 6.
 
-**Practice, name the reciprocal:**
-1. 5/8
-2. 1/9
-3. 6
-4. 11/4
+**Practice problems:**
 
-**Practice, solve using a reciprocal:**
-5. (1/2)x=7
-6. (2/5)x=4
-7. (3/4)x=6
-8. (2/3)x=10
-9. (5/6)x=5
-10. (3/2)x=9
+*Name the reciprocal:*
+11. 5/8
+12. 1/9
+13. 6
+14. 11/4
 
-**Key (verified):** 1) 8/5  2) 9  3) 1/6  4) 4/11  5) 14  6) 10  7) 8  8) 15  9) 6  10) 6
+*Solve using a reciprocal:*
+15. (1/2)x=7
+16. (2/5)x=4
+17. (3/4)x=6
+18. (2/3)x=10
+19. (5/6)x=5
+20. (3/2)x=9
+
+**Answer key:** 11) 8/5  12) 9  13) 1/6  14) 4/11  15) 14  16) 10  17) 8  18) 15  19) 6  20) 6
 
 ---
 
@@ -527,20 +511,16 @@ The one thing to hold onto: every term gets multiplied, including the right side
 
 **Worked examples:**
 
-*Reciprocal method:*
-{#2.6.w1}
+{#2.6.w1} *Reciprocal method:*
 $$\frac23 x=6 \xrightarrow{\times \frac32} x=9 \qquad \text{Check: } \frac23(9)=6$$
 
-*Clear-the-fractions method:*
-{#2.6.w2}
+{#2.6.w2} *Clear-the-fractions method:*
 $$\frac{x}{2}+\frac{x}{3}=5 \xrightarrow{\times 6} 3x+2x=30 \Rightarrow 5x=30 \Rightarrow x=6 \qquad \text{Check: } 3+2=5$$
 
-*Reciprocal with a bigger numerator:*
-{#2.6.w3}
+{#2.6.w3} *Reciprocal with a bigger numerator:*
 $$\frac34 x=9 \xrightarrow{\times \frac43} x=12 \qquad \text{Check: } \frac34(12)=9$$
 
-*An answer that's itself a fraction (a fraction is a perfectly good solution):*
-{#2.6.w4}
+{#2.6.w4} *An answer that's itself a fraction (a fraction is a perfectly good solution):*
 $$\frac23 x=5 \xrightarrow{\times \frac32} x=\frac{15}{2} \qquad \text{Check: } \frac23\cdot\frac{15}{2}=\frac{30}{6}=5$$
 Don't round 15/2 to 7 or 8. An exact fraction *is* the answer, the same way zero was a fine answer back in Lesson 2.1. The check confirms it: two-thirds of 15/2 is 30/6, which is 5.
 
