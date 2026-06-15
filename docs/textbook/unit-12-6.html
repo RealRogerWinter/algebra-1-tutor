@@ -148,6 +148,115 @@
 <div class="hero"><div class="hero-text"><div class="kicker">Unit 12 · Lesson 12.6</div><h1>Graphing parabolas</h1></div><img class="hero-art" src="../assets/hero-12-6.jpg" alt=""></div>
 
 <p>Here's the picture the whole unit has been pointing at. A quadratic, graphed, is a smooth U, called a <strong>parabola</strong>. The solutions you've been finding are where that U crosses the x-axis, and a U usually crosses <em>twice</em>: once on the way down, once on the way back up. There are your two solutions, drawn.</p>
+<figure class="viz"><div class="parab-wrap" data-init="0">
+  <style>
+    .parab-wrap{max-width:380px;margin:0 auto;font-family:inherit}
+    .parab-wrap svg{width:100%;height:auto;display:block;
+      background:transparent;border-radius:var(--radius);touch-action:none}
+    .parab-eq{font:600 1.15rem "IBM Plex Mono",ui-monospace,Consolas,monospace;
+      color:var(--violet);text-align:center;margin:.5rem 0 .2rem;letter-spacing:.01em}
+    .parab-ctrl{display:grid;grid-template-columns:auto 1fr auto;gap:.5rem .7rem;
+      align-items:center;margin:.55rem .3rem 0;font-size:.92rem;color:var(--ink-soft)}
+    .parab-ctrl label{font-weight:600;color:var(--ink)}
+    .parab-ctrl output{font:600 .92rem "IBM Plex Mono",monospace;color:var(--ink);
+      min-width:2.4em;text-align:right}
+    .parab-wrap input[type=range]{width:100%;accent-color:var(--violet);
+      height:1.4rem;cursor:pointer}
+    .parab-wrap input[type=range]:focus-visible{outline:2px solid var(--violet);
+      outline-offset:3px;border-radius:6px}
+    .parab-hint{text-align:center;font-size:.82rem;color:var(--ink-soft);
+      margin:.5rem 0 0;opacity:.9}
+  </style>
+  <div class="parab-eq" id="parab-eq">y = x²</div>
+  <svg viewBox="0 0 360 360" xmlns="http://www.w3.org/2000/svg"
+       font-family="sans-serif" aria-label="coordinate grid with a movable parabola">
+    <line x1="30.0" y1="330.0" x2="30.0" y2="30.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="30.0" y1="330.0" x2="330.0" y2="330.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="55.0" y1="330.0" x2="55.0" y2="30.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="30.0" y1="305.0" x2="330.0" y2="305.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="80.0" y1="330.0" x2="80.0" y2="30.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="30.0" y1="280.0" x2="330.0" y2="280.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="105.0" y1="330.0" x2="105.0" y2="30.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="30.0" y1="255.0" x2="330.0" y2="255.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="130.0" y1="330.0" x2="130.0" y2="30.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="30.0" y1="230.0" x2="330.0" y2="230.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="155.0" y1="330.0" x2="155.0" y2="30.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="30.0" y1="205.0" x2="330.0" y2="205.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="205.0" y1="330.0" x2="205.0" y2="30.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="30.0" y1="155.0" x2="330.0" y2="155.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="230.0" y1="330.0" x2="230.0" y2="30.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="30.0" y1="130.0" x2="330.0" y2="130.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="255.0" y1="330.0" x2="255.0" y2="30.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="30.0" y1="105.0" x2="330.0" y2="105.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="280.0" y1="330.0" x2="280.0" y2="30.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="30.0" y1="80.0" x2="330.0" y2="80.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="305.0" y1="330.0" x2="305.0" y2="30.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="30.0" y1="55.0" x2="330.0" y2="55.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="330.0" y1="330.0" x2="330.0" y2="30.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="30.0" y1="30.0" x2="330.0" y2="30.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="30.0" y1="180.0" x2="330.0" y2="180.0" stroke="#888" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="180.0" y1="30.0" x2="180.0" y2="330.0" stroke="#888" stroke-width="2.5" stroke-linecap="round"/>
+    <text x="326.0" y="172.0" font-size="13" fill="#888" text-anchor="end">x</text>
+    <text x="188.0" y="41.0" font-size="13" fill="#888">y</text>
+    <text x="80.0" y="195.0" font-size="10" fill="#888" text-anchor="middle">-4</text>
+    <text x="174.0" y="283.5" font-size="10" fill="#888" text-anchor="end">-4</text>
+    <text x="130.0" y="195.0" font-size="10" fill="#888" text-anchor="middle">-2</text>
+    <text x="174.0" y="233.5" font-size="10" fill="#888" text-anchor="end">-2</text>
+    <text x="230.0" y="195.0" font-size="10" fill="#888" text-anchor="middle">2</text>
+    <text x="174.0" y="133.5" font-size="10" fill="#888" text-anchor="end">2</text>
+    <text x="280.0" y="195.0" font-size="10" fill="#888" text-anchor="middle">4</text>
+    <text x="174.0" y="83.5" font-size="10" fill="#888" text-anchor="end">4</text>
+    <path id="parab-curve" fill="none" stroke="#8e44ad" stroke-width="2.5"
+          stroke-linecap="round" stroke-linejoin="round"/>
+    <circle id="parab-vtx" r="4.5" fill="#8e44ad"/>
+  </svg>
+  <div class="parab-ctrl">
+    <label for="parab-a">stretch&nbsp;a</label>
+    <input id="parab-a" type="range" min="-2" max="2" step="0.5" value="1"
+       aria-label="coefficient a from negative 2 to 2">
+    <output id="parab-ao">1</output>
+  </div>
+  <p class="parab-hint">a&nbsp;&gt;&nbsp;0 opens up, a&nbsp;&lt;&nbsp;0 opens down,
+     bigger |a| makes it narrower. The vertex stays at the origin.</p>
+  <script>(function(){
+    var root=document.currentScript.parentNode;
+    if(!root||root.dataset.init==="1"){return;} root.dataset.init="1";
+
+  var LIM=6, W=360, PAD=30;
+  var SX=(W-2*PAD)/(2*LIM);
+  function px(x){return PAD+(x+LIM)*SX;}
+  function py(y){return PAD+(LIM-y)*SX;}
+  function fmt(v){v=Math.round(v*100)/100; return (v===Math.round(v))?(''+Math.round(v)):(''+v);}
+
+    var curve=root.querySelector("#parab-curve");
+    var vtx=root.querySelector("#parab-vtx");
+    var eq=root.querySelector("#parab-eq");
+    var sa=root.querySelector("#parab-a"), oa=root.querySelector("#parab-ao");
+    function eqText(a){
+      if(a===0)return "y = 0";
+      if(a===1)return "y = x\u00b2";
+      if(a===-1)return "y = -x\u00b2";
+      return "y = "+fmt(a)+"x\u00b2";
+    }
+    function draw(){
+      var a=parseFloat(sa.value); oa.textContent=fmt(a);
+      eq.textContent=eqText(a);
+      var d="", started=false;
+      for(var i=0;i<=120;i++){
+        var x=-LIM+(2*LIM)*i/120;
+        var y=a*x*x;
+        if(y<-LIM-0.5||y>LIM+0.5){ started=false; continue; } // pen up off-screen
+        d += (started?" L":"M")+px(x).toFixed(2)+" "+py(y).toFixed(2);
+        started=true;
+      }
+      curve.setAttribute("d", d || ("M"+px(0)+" "+py(0)));
+      vtx.setAttribute("cx",px(0)); vtx.setAttribute("cy",py(0));
+    }
+    sa.addEventListener("input",draw);
+    draw();
+  })();</script>
+</div><figcaption>Parabola stretcher: one slider sets a in y = x². Watch it open upward, flatten, then open downward as a passes through zero, with the vertex pinned at the origin.</figcaption></figure>
+
 <p>When a quadratic has just one solution, the U barely touches the axis at its lowest point (the discriminant was 0). When it has none, the whole U floats clear of the axis, above it or below it (the discriminant was negative). The graph re-explains everything from Lesson 12.5 in one image.</p>
 <p>That's the deep reason a quadratic usually has two solutions, and it ties the unit together: radicals, roots, the discriminant, and now the curve are all the same story. A quadratic is also just a function from Units 4 and 5: y = x² − 4 and f(x) = x² − 4 are the same object, and the "roots" are simply the inputs where the output is 0, which is where the graph meets the x-axis.</p>
 <p>To draw one well, work from numbers rather than guessing the shape. Pick a handful of x-values, compute the matching y for each, plot the points, and join them into a smooth U. The example below shows the line through those points <a class="refcode" id="12.6.f1" href="#12.6.f1" data-prompt="Use the Algebra 1 tutor skill to help me with the figure in Lesson 12.6 (reference 12.6.f1). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for the figure in Lesson 12.6">12.6.f1</a>, with the roots and vertex marked, alongside the table the curve was built from.</p>

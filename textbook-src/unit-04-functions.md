@@ -153,6 +153,8 @@ Here's the one thing to nail down right away, because the parentheses are doing 
 
 You can picture the same thing as a little machine with a readout. A number goes in the top, the rule runs inside, and the answer lights up on the display: drop in 2, and f(2) = 5 shows on the screen. That picture also gives you two words you'll need. Every input the machine is willing to accept is its **domain**. Every output that can ever light up on the display is its **range**.
 
+<!--viz:anatomy#4-->
+
 <!--illus:4-2-trays-->
 
 Now to the symbols themselves. The habit that will save you again and again is to write the input inside parentheses when you substitute, like this:

@@ -37,6 +37,8 @@ So "3 + x = 7" asks the balance question again: what number in the box keeps the
 
 There's one way to answer it that keeps working no matter how unfriendly the numbers get, and it's the move the rest of the course is built on: undo what was done to x. The 3 is added onto x, so undo it by subtracting 3. To keep the scale level you subtract from *both* pans, and when you take 3 away from x + 3, the +3 goes to zero, leaving x by itself.
 
+<!--viz:interactive_equation#0-->
+
 $$x + 3 = 7 \;\xrightarrow{\;-3 \text{ from both sides}\;}\; x = 4$$
 
 With small numbers you could also just ask the question out loud, "what plus 3 is 7?", and land on four. That's a fine quick check, and here it agrees. But undoing is the method to lean on, because it still works when the numbers don't let you guess.
@@ -115,6 +117,8 @@ The line is not only the evenly spaced ticks. Look between two ticks, say betwee
 
 Now give the points on the line their names, building up the same picture one step at a time. The **counting numbers** are 1, 2, 3, and so on. Add 0 and you have the **whole numbers**. Add the negatives and you have the **integers**: …, −2, −1, 0, 1, 2, …, with no fractional part. The gap-fillers you can write as one whole number over another, like 3/4, are the **rational numbers**, and the integers are part of this group too, since 5 is just 5/1. Each name builds on the last, all on the one line.
 
+<!--viz:anatomy#1-->
+
 Most points on that line are rational, but not all of them. A few numbers have decimals that run on forever *without* ever settling into a repeating pattern, so no fraction a/b ever lands exactly on them. Two famous ones are π = 3.14159… and √2 = 1.41421…. These are the **irrational numbers**.
 
 The rationals and the irrationals together, every single point on the line with no gaps, are the **real numbers**. The "whole line" the picture just promised now has a proper name, and it's the ground algebra stands on.
@@ -192,6 +196,8 @@ Here's the order, top to bottom:
 2. Exponents
 3. Multiply and divide, equally important, done left to right
 4. Add and subtract, equally important, done left to right
+
+<!--viz:flowcharts#0-->
 
 <!--illus:1-3-tiers-->
 
@@ -357,11 +363,15 @@ When a set switches between adding, subtracting, multiplying, and dividing signs
 
 Algebra has two main characters, and a lot of early confusion comes from mixing them up. One is an *expression*, a phrase that names a value, like 3x + 2. The other is an *equation*, a full sentence making a claim, like 3x + 2 = 14.
 
+<!--viz:anatomy#5-->
+
 You *evaluate* an expression; you *solve* an equation. Trying to "solve" an expression, or "evaluate" an equation, is like trying to answer a noun, and it derails what comes next.
 
 To tell them apart, look for an equals sign. An expression is a noun phrase, like "three more than twice a number," with no verb and no =. An equation is a full sentence, with the = acting as the verb that claims a balance. No equals sign, it's an expression; equals sign present, it's an equation.
 
 Evaluating an expression is where the mystery box pays off. Picture 3x + 2 as a row of seats reserved for a guest who hasn't arrived; x is the empty chair. "Evaluate at x = 4" is the guest sitting down: every x becomes a 4. So 3x + 2 at x = 4 is 3(4) + 2.
+
+<!--viz:interactive_equation#1-->
 
 <!--illus:1-5-empty-chair-->
 

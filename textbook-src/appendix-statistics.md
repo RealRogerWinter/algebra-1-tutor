@@ -16,7 +16,11 @@ Picture five friends comparing quiz scores. Two questions come up almost on thei
 
 Here's a way to see all of it at once. Imagine dropping the scores onto a number line, one dot per score. The whole picture of "typical versus spread out" is right there: where the dots pile up is the center, and how far they reach is the spread.
 
+<!--viz:stats_charts#1-->
+
 The **mean** is the balance point of that line. It's the spot where the dots would balance if the line were a seesaw. The **median** is the dot with equal counts of dots on either side of it. And whether the dots sit in a tight clump or stretch far apart *is* the spread.
+
+<!--viz:stats_charts#0-->
 
 <!--illus:a-1-mean-balance-->
 
@@ -182,6 +186,8 @@ As before, the mix is the point. Every problem has its answer at the end of the 
 ## Lesson A.3: Two-way tables
 
 Some data isn't a number at all; it's a label. "Owns a pet?" is yes or no; "lives in an apartment or a house?" is one or the other. Data sorted into groups like this is **categorical**, and when you have two such labels for each person, a **two-way table** is the clean way to see how they interact.
+
+<!--viz:stats_charts#2-->
 
 <!--illus:a-3-two-way-grid-->
 

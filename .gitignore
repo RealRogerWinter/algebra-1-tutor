@@ -13,3 +13,7 @@ Thumbs.db
 # Image-generation scratch + local API key (NEVER commit the key)
 _imgwork/
 *.key
+
+# Visual-element review gallery (regenerable via build_gallery.py; the viz/ modules + the
+# build tool are committed, but the generated preview page is not shipped)
+docs/preview/

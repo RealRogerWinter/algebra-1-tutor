@@ -148,6 +148,40 @@
 <div class="hero"><div class="hero-text"><div class="kicker">Unit 12 · Lesson 12.5</div><h1>The quadratic formula &amp; the discriminant</h1></div><img class="hero-art" src="../assets/hero-12-5.jpg" alt=""></div>
 
 <p>Factoring is quick when it works, and completing the square always works but is fiddly to redo every time. The quadratic formula is the way out: it's completing the square done <em>once, in general</em>, so you never have to grind through it again. You just read the three numbers a, b, and c off the equation and drop them in. It solves <em>every</em> quadratic, factorable or not, with rational answers or irrational ones. That's why it's the universal tool.</p>
+<figure class="viz"><figure style="margin:0;text-align:center"><svg viewBox="0 0 460 430" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif" style="width:100%;max-width:460px;height:auto" role="img" aria-label="Decision flowcharts">
+  <defs>
+    <marker id="qmd-arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M1,1 L9,5 L1,9" fill="none" stroke="#888" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <rect x="150" y="18" width="160" height="56" rx="14" ry="14" fill="#2980b9" fill-opacity="0.1" stroke="#2980b9" stroke-width="2.5" stroke-linejoin="round"/>
+  <text x="230.0" y="49.5" text-anchor="middle" font-size="13" font-weight="600" fill="#2980b9">Solve a quadratic</text>
+  <rect x="140" y="110" width="180" height="60" rx="14" ry="14" fill="#8e44ad" fill-opacity="0.1" stroke="#8e44ad" stroke-width="2.5" stroke-linejoin="round"/>
+  <text x="230.0" y="135.0" text-anchor="middle" font-size="13" font-weight="600" fill="#8e44ad">Is it just</text>
+  <text x="230.0" y="152.0" text-anchor="middle" font-size="11.5" font-weight="400" fill="#555">x² = k  ?</text>
+  <rect x="140" y="222" width="180" height="60" rx="14" ry="14" fill="#8e44ad" fill-opacity="0.1" stroke="#8e44ad" stroke-width="2.5" stroke-linejoin="round"/>
+  <text x="230.0" y="247.0" text-anchor="middle" font-size="13" font-weight="600" fill="#8e44ad">Does it factor</text>
+  <text x="230.0" y="264.0" text-anchor="middle" font-size="11.5" font-weight="400" fill="#555">easily?</text>
+  <rect x="340" y="112" width="108" height="56" rx="14" ry="14" fill="#27ae60" fill-opacity="0.1" stroke="#27ae60" stroke-width="2.5" stroke-linejoin="round"/>
+  <text x="394.0" y="135.0" text-anchor="middle" font-size="13" font-weight="600" fill="#27ae60">Square root</text>
+  <text x="394.0" y="152.0" text-anchor="middle" font-size="11.5" font-weight="400" fill="#555">both sides</text>
+  <rect x="340" y="224" width="108" height="56" rx="14" ry="14" fill="#27ae60" fill-opacity="0.1" stroke="#27ae60" stroke-width="2.5" stroke-linejoin="round"/>
+  <text x="394.0" y="247.0" text-anchor="middle" font-size="13" font-weight="600" fill="#27ae60">Factor</text>
+  <text x="394.0" y="264.0" text-anchor="middle" font-size="11.5" font-weight="400" fill="#555">(zero product)</text>
+  <rect x="140" y="338" width="180" height="60" rx="14" ry="14" fill="#a9740f" fill-opacity="0.1" stroke="#a9740f" stroke-width="2.5" stroke-linejoin="round"/>
+  <text x="230.0" y="363.0" text-anchor="middle" font-size="13" font-weight="600" fill="#a9740f">Quadratic</text>
+  <text x="230.0" y="380.0" text-anchor="middle" font-size="11.5" font-weight="400" fill="#555">formula</text>
+  <line x1="230.0" y1="76" x2="230.0" y2="107" stroke="#888" stroke-width="2.5" stroke-linecap="round" marker-end="url(#qmd-arrow)"/>
+  <line x1="230.0" y1="172" x2="230.0" y2="219" stroke="#888" stroke-width="2.5" stroke-linecap="round" marker-end="url(#qmd-arrow)"/>
+  <text x="214.0" y="200.0" text-anchor="middle" font-size="11" font-weight="600" fill="#c0392b">no</text>
+  <line x1="230.0" y1="284" x2="230.0" y2="335" stroke="#888" stroke-width="2.5" stroke-linecap="round" marker-end="url(#qmd-arrow)"/>
+  <text x="214.0" y="314.0" text-anchor="middle" font-size="11" font-weight="600" fill="#c0392b">no</text>
+  <line x1="322" y1="140.0" x2="337" y2="140.0" stroke="#27ae60" stroke-width="2.5" stroke-linecap="round" marker-end="url(#qmd-arrow)"/>
+  <text x="330.0" y="132.0" text-anchor="middle" font-size="11" font-weight="600" fill="#27ae60">yes</text>
+  <line x1="322" y1="252.0" x2="337" y2="252.0" stroke="#27ae60" stroke-width="2.5" stroke-linecap="round" marker-end="url(#qmd-arrow)"/>
+  <text x="330.0" y="244.0" text-anchor="middle" font-size="11" font-weight="600" fill="#27ae60">yes</text>
+</svg><figcaption style="margin-top:.6rem;font-size:.95em;color:#555">Three doors, in order. If stuck, the formula always works: $$x = \dfrac{-b \pm \sqrt{b^{2} - 4ac}}{2a}.$$</figcaption></figure><figcaption>Which method solves this quadratic? A small decision tree (lesson 12.5)</figcaption></figure>
+
 <p>For any quadratic written as ax² + bx + c = 0,</p>
 <p>$$x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}.$$</p>
 <p>That ± is the same one from every lesson in this unit: it's recovering the sign that squaring threw away. To use the formula well, read a, b, and c carefully, <em>with their signs</em>: for 2x² + 3x − 2 = 0, a = 2, b = 3, and c = −2, where the minus belongs to the c.</p>

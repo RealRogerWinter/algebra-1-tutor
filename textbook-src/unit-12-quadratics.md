@@ -8,6 +8,8 @@ Those surprises are that a squared equation usually has two answers, that a litt
 
 A word before you start, and it holds for every lesson here. You don't have to finish a lesson in one sitting. If a page stops landing, take a break and come back. A rest helps, and you lose nothing. And when you return for a new lesson, redo two or three problems from a lesson or two back from memory first. That small warm-up is one of the most useful habits you can keep.
 
+<!--viz:reference_cards#1-->
+
 ---
 
 ## Lesson 12.1: Square roots & simplifying radicals
@@ -167,6 +169,8 @@ Start with something you already trust about multiplying. If you multiply two nu
 
 Turn it on an equation. Suppose (x − 2)(x − 3) = 0. You've got two things multiplied together giving 0, so one of them must be 0: either x − 2 = 0 or x − 3 = 0. Each of those is a little one-step equation you can solve: x = 2 from the first, x = 3 from the second. So the quadratic has two solutions, 2 and 3, and you found them by reading off the factors {#12.3.f1}. This is the **zero-product property**, and it's the everyday method for the many quadratics that factor.
 
+<!--viz:example_graphs#1-->
+
 The one thing to hold onto: this trick works *only against zero*. Zero is special. It's the single value a product can reach only by one of its parts being zero. A product equal to 8 tells you nothing useful about the factors, because lots of pairs multiply to 8. So the first move, always, is to get the equation into the form (something) = 0, with everything on one side.
 
 Each factor-equals-zero gives a genuine solution, not just a candidate. Here's why: the property runs both ways. Forward: if the product is 0, some factor is 0, and that's what finds your x-values. Backward: if a factor *is* 0, then the whole product is 0, so that x truly makes the equation true. The substitution check at the end is exactly that backward direction confirming the root is real.
@@ -228,6 +232,8 @@ Mixed practice feels harder, and that's what makes it last. Every problem's answ
 
 Start with a fact you can check by hand: (x + 3)² = x² + 6x + 9. Look at that constant, the 9. It's exactly (6/2)², half of the middle coefficient, squared. That's not a coincidence, and it's the lever for this whole lesson. If you're handed x² + 6x and want to *make* it into a perfect square, you now know precisely what to add: 9. Adding the right number to turn x² + bx into something-squared is called **completing the square**.
 
+<!--viz:area_models#4-->
+
 There's a literal picture behind the name. Think of x² + 6x as an x-by-x square sitting next to two strips, each 3 by x (the 6x split into two 3x pieces laid along two sides). Those pieces almost form a bigger square, but there's a corner missing: a 3-by-3 block, area 9. Drop that block in and the figure becomes a complete square, (x + 3) on each side. The algebra is doing the same thing the picture is: filling in the missing corner.
 
 <!--illus:12-4-complete-square-->
@@ -288,6 +294,8 @@ Mixed practice feels harder on purpose, and that's what makes it last. Every ans
 ## Lesson 12.5: The quadratic formula & the discriminant
 
 Factoring is quick when it works, and completing the square always works but is fiddly to redo every time. The quadratic formula is the way out: it's completing the square done *once, in general*, so you never have to grind through it again. You just read the three numbers a, b, and c off the equation and drop them in. It solves *every* quadratic, factorable or not, with rational answers or irrational ones. That's why it's the universal tool.
+
+<!--viz:flowcharts#2-->
 
 For any quadratic written as ax² + bx + c = 0,
 
@@ -373,6 +381,8 @@ Mixed practice feels harder on purpose, and that's what makes it last to next we
 ## Lesson 12.6: Graphing parabolas
 
 Here's the picture the whole unit has been pointing at. A quadratic, graphed, is a smooth U, called a **parabola**. The solutions you've been finding are where that U crosses the x-axis, and a U usually crosses *twice*: once on the way down, once on the way back up. There are your two solutions, drawn.
+
+<!--viz:interactive_graph#2-->
 
 When a quadratic has just one solution, the U barely touches the axis at its lowest point (the discriminant was 0). When it has none, the whole U floats clear of the axis, above it or below it (the discriminant was negative). The graph re-explains everything from Lesson 12.5 in one image.
 

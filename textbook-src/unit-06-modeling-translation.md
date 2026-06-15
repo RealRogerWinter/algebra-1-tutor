@@ -177,6 +177,10 @@ So 60 adult and 40 child. Check: 60(8) + 40(5) = 480 + 200 = $680.
 
 After a few of these, the place that stays tricky is the second unknown. The natural instinct is to reach for a fresh letter, like q for quarters or s for Sam, and then you're stuck with two letters and one equation. The fix is the relationship already in the problem: "3 older than" or "the rest of the 15" tells you how to write the second quantity in terms of the first.
 
+<!--viz:bar_models#0-->
+
+<!--viz:bar_models#3-->
+
 One more to keep an eye on in distance problems: opposite directions add the distances, the same direction subtracts them, and in both cases the two objects share one time t. A quick sketch of two arrows from a point makes which-is-which obvious.
 
 Walk one short problem before the practice set. "Two consecutive integers sum to 11." Let n = the smaller, so the next is n + 1; then n + (n + 1) = 11, which gives 2n + 1 = 11, so n = 5. The integers are 5 and 6, and 5 + 6 = 11. Same four steps, friendly numbers.
