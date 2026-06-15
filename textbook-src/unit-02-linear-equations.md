@@ -2,11 +2,11 @@
 
 > This unit is about finding a hidden number when an equation tells you what it has to equal. It's the everyday workhorse of algebra, and once you have it, a lot of what comes later is just this same skill in longer form. It helps to have your work with negative numbers fresh, since a few answers here land below zero.
 
-This unit turns the question "what's the hidden number?" into a steady, repeatable procedure. It rests on one simple picture: an equals sign means the two sides balance, like a level scale. Every move you'll make is really the same move. You do the same thing to both sides so the scale stays level.
+This unit turns the question "what's the hidden number?" into a steady, repeatable procedure. It rests on one picture: an equals sign means the two sides balance, like a level scale. Every move you'll make is really the same move. You do the same thing to both sides so the scale stays level.
 
-A word that names what these equations have in common. A **linear equation** has its variable only to the first power. No x², no x in the bottom of a fraction, no two variables multiplied together. That's why they almost always have a single answer. The two exceptions, where there's no answer or every number is an answer, you'll meet near the end, in Lesson 2.4.
+A word that names what these equations have in common. A **linear equation** has its variable only to the first power. No x², no x in the bottom of a fraction, no two variables multiplied together. That's why they almost always have a single answer. A couple of them turn out to have no answer, or to be true for every number, but those are the rare cases.
 
-Two habits run through every example here, and they're worth adopting from the first page. The first is to **check by substituting back**. Once you find x, put it into the original equation and see that both sides match. It's your safety net, and it's the single most useful thing you'll carry into every later unit.
+Two habits run through every example here, and they're worth adopting from the first page. The first is to **check by substituting back**. Once you find x, put it into the original equation and see that both sides match. It's your safety net, and it's a habit you'll carry into every later unit.
 
 The second is a way of talking about the moves that keeps them honest. When a +5 leaves, it doesn't "cancel". It **goes to zero**, because you subtracted 5. When a coefficient leaves, it **goes to one**, because you divided. Saying it that way keeps the symbols from feeling like they vanish by magic.
 
@@ -46,20 +46,25 @@ Read each worked example slowly, a line at a time, and ask why each line follows
 **Worked examples** (each isolates with the inverse, then checks):
 
 *Addition, undo by subtracting:*
+{#2.1.w1}
 $$x+5=12 \;\xrightarrow{\,-5\,}\; x=7 \qquad \text{Check: } 7+5=12$$
 
 *Subtraction, undo by adding:*
+{#2.1.w2}
 $$x-4=10 \;\xrightarrow{\,+4\,}\; x=14 \qquad \text{Check: } 14-4=10$$
 
 *Multiplication, undo by dividing:*
+{#2.1.w3}
 $$4x=20 \;\xrightarrow{\,\div 4\,}\; x=5 \qquad \text{Check: } 4(5)=20$$
 
 *Division, undo by multiplying:*
+{#2.1.w4}
 $$\frac{x}{2}=6 \;\xrightarrow{\,\times 2\,}\; x=12 \qquad \text{Check: } \frac{12}{2}=6$$
 
 In the multiplication one, dividing both sides by 4 makes the 4 in front go to one, since 4/4 is 1 and 1x is just x. That's the same "goes to one" idea you'll use any time a number is multiplying the variable.
 
 Here's a clean case to get the method moving before the practice mixes things up:
+{#2.1.w5}
 $$x+7=7 \;\xrightarrow{\,-7\,}\; x=0 \qquad \text{Check: } 0+7=7$$
 There's nothing wrong with x = 0. Zero is a perfectly good number, and it's the value that keeps this balance level. It also catches the most common way of misreading the equals sign.
 
@@ -100,7 +105,7 @@ A set that mixes the four types feels harder than drilling one kind, and that's 
 
 ## Lesson 2.2: Two-step equations
 
-Most equations that come up in real life take two moves, not one. The good news is that there's nothing new to learn here. A two-step equation is just two of the one-step moves from 2.1, done in a row. The only fresh idea is *which one to undo first*, and an everyday picture settles that.
+Most equations that come up in real life take two moves, not one. There's nothing new to learn here, though. A two-step equation is just two of the one-step moves from 2.1, done in a row. The only fresh idea is *which one to undo first*, and an everyday picture settles that.
 
 Think about getting dressed. You put your socks on first, then your shoes. To get undressed you reverse that, taking the shoes off first, then the socks.
 
@@ -117,12 +122,15 @@ Read each step and ask why it follows from the one above before you go on.
 **Worked examples:**
 
 *Multiply-then-add:*
+{#2.2.w1}
 $$2x+3=11 \;\xrightarrow{\,-3\,}\; 2x=8 \;\xrightarrow{\,\div 2\,}\; x=4 \qquad \text{Check: } 2(4)+3=8+3=11$$
 
 *Division type:*
+{#2.2.w2}
 $$\frac{x}{3}-2=4 \;\xrightarrow{\,+2\,}\; \frac{x}{3}=6 \;\xrightarrow{\,\times 3\,}\; x=18 \qquad \text{Check: } \frac{18}{3}-2=6-2=4$$
 
 *Dividing by a negative:*
+{#2.2.w3}
 $$8-2x=14 \;\xrightarrow{\,-8\,}\; -2x=6 \;\xrightarrow{\,\div(-2)\,}\; x=-3 \qquad \text{Check: } 8-2(-3)=8+6=14$$
 
 That third one is worth slowing down for, because it's where a sign quietly goes missing. After you subtract 8, the left side is −2x, not 2x. The minus belongs to the term. So you divide both sides by −2, and 6 ÷ (−2) is −3.
@@ -130,6 +138,7 @@ That third one is worth slowing down for, because it's where a sign quietly goes
 The check is where a slip would have shown up: 8 − 2(−3) means subtracting a negative, which adds, giving 8 + 6 = 14. A negative answer here isn't a warning sign. It's a real point on the line, and the check confirms it.
 
 Here's a clean one to get the rhythm back before you practice. The answer comes out to 0, which surprises people, but zero balances the scale just fine:
+{#2.2.w4}
 $$3x+6=6 \;\xrightarrow{\,-6\,}\; 3x=0 \;\xrightarrow{\,\div 3\,}\; x=0 \qquad \text{Check: } 3(0)+6=6$$
 
 One slip is easy to make on the very first move, now that the layers are stacked: undoing in the wrong order. On 2x + 3 = 11, dividing by 2 *before* subtracting the 3 forces you to divide the 3 as well, which drags in a fraction and makes the numbers messy. The getting-dressed picture is the fix. Whatever went on last comes off first, so the +3 goes before the ×2.
@@ -141,7 +150,7 @@ One slip is easy to make on the very first move, now that the layers are stacked
 
 You can now solve a two-step equation by undoing the outer layer first, then the inner one, and checking the answer, even when it lands on a negative or on zero.
 
-Switching between problem types is the harder kind of practice, and the harder kind is what makes it stick. Each answer is at the end of the lesson, and if one stalls you, flip back to the worked example it's based on.
+The practice below mixes the problem types, so you have to spot which layer to undo first each time.
 
 **Practice problems:**
 
@@ -166,7 +175,7 @@ Switching between problem types is the harder kind of practice, and the harder k
 
 Before you can solve a messier equation, you have to tidy it: gather the pieces that belong together and clear away the parentheses. That's all this lesson is, housekeeping for expressions.
 
-Two of the moves here, the area picture especially, come back when you multiply binomials and factor in later units, so they're worth getting comfortable with now. And one of them, distributing a negative, is the place a sign goes missing more than anywhere else in algebra, so it gets extra care.
+Two of the moves here, the area picture especially, come back in later units, so they're worth getting comfortable with now. And one of them, distributing a negative, is the place a sign goes missing more than anywhere else in algebra, so it gets extra care.
 
 Start with combining, using the picture of a box that holds a hidden number. Picture 3x as three identical boxes, each holding the same hidden number, and 2x as two more of that same box. Put them together and you have five of that box: 3x + 2x = 5x. You're just counting boxes.
 
@@ -192,18 +201,23 @@ Substitute x = 1 to see it: the original is −(1 − 4) = −(−3) = 3, and th
 **Worked examples:**
 
 *Combine like terms:*
+{#2.3.w1}
 $$3x+2x=5x$$
 
 *Combine, leaving unlike terms alone:*
+{#2.3.w2}
 $$7x-4x+2 = 3x+2 \quad(\text{the }+2\text{ has no like partner})$$
 
 *Distribute (positive):*
+{#2.3.w3}
 $$2(x+4)=2x+8$$
 
 *Distribute a negative, the big sign trap:*
+{#2.3.w4}
 $$-(x-4) = -x+4 \qquad \text{Check at }x=1:\; -(1-4)=3 \;\text{ and }\; -1+4=3$$
 
 *Distribute a negative, then combine (the trap in full):*
+{#2.3.w5}
 $$3-2(x-5) \;=\; 3 + (-2)(x) + (-2)(-5) \;=\; 3 - 2x + 10 \;=\; -2x+13$$
 Walk the last one slowly, because it's the whole skill in one line. The −2 reaches both terms inside: −2 times x is −2x, and −2 times −5 is +10 (a negative times a negative). Then 3 + 10 is 13, leaving −2x + 13. Check at x = 1: the original is 3 − 2(1 − 5) = 3 − 2(−4) = 3 + 8 = 11, and the rewrite −2(1) + 13 is also 11.
 
@@ -216,7 +230,7 @@ After one clean run, here's the slip to know about. The tempting wrong answer is
 
 You can now combine like terms by counting matching boxes, distribute a number across parentheses so it reaches every term, and handle a leading negative without dropping its sign, checking with a quick substitution when a sign is in doubt.
 
-The set below is deliberately mixed, and several problems lead with a negative so the sign work stays sharp. Each answer is at the end of the lesson; if one stalls you, look back at the matching worked example.
+The set below is deliberately mixed, and several problems lead with a negative so the sign work stays sharp.
 
 **Practice problems** (mix of combine and distribute; several lead with a negative):
 
@@ -239,7 +253,7 @@ The set below is deliberately mixed, and several problems lead with a negative s
 
 ## Lesson 2.4: Variables on both sides
 
-Some questions naturally put the unknown on both sides at once. "When does plan A cost the same as plan B?" puts x in both prices. Solving these uses nothing new; it's a rehearsal of every habit so far, with one added first move. And it's where a linear equation finally reveals all three things it can do, which you'll meet in "The three outcomes" below.
+Some questions naturally put the unknown on both sides at once. "When does plan A cost the same as plan B?" puts x in both prices. Solving these uses nothing new; it's a rehearsal of every habit so far, with one added first move. It's also where you'll see all three things a linear equation can turn out to be: one solution, no solution, or true for every number.
 
 Picture the balance scale again, but now both pans hold boxes *and* coins. Take 5x + 2 = 3x + 10: the left pan has five boxes and 2 coins, the right has three boxes and 10 coins. To corner x, get all the boxes onto one pan by removing the same thing from both. Take 3x off each side, so the 3x on the right goes to zero, and you're left with 2x + 2 = 10, a familiar two-step equation:
 $$5x+2=3x+10 \;\xrightarrow{\,-3x\,}\; 2x+2=10 \;\xrightarrow{\,-2\,}\; 2x=8 \;\xrightarrow{\,\div 2\,}\; x=4$$
@@ -254,22 +268,26 @@ A small thing makes the numbers kinder: move the *smaller* variable term, so you
 **Worked examples:**
 
 *Standard:*
+{#2.4.w1}
 $$5x+2=3x+10 \xrightarrow{-3x} 2x+2=10 \xrightarrow{-2} 2x=8 \xrightarrow{\div 2} x=4 \quad\text{Check: }22=22$$
 
 *Constants and variables both to move:*
+{#2.4.w2}
 $$7x-3=2x+12 \xrightarrow{-2x} 5x-3=12 \xrightarrow{+3} 5x=15 \xrightarrow{\div 5} x=3 \quad\text{Check: }18=18$$
 
 *Negative answer (move the larger variable term, land below zero):*
+{#2.4.w3}
 $$4x+1=6x+9 \xrightarrow{-4x} 1=2x+9 \xrightarrow{-9} -8=2x \xrightarrow{\div 2} x=-4$$
 $$\text{Check: } 4(-4)+1=-15 \;\text{ and }\; 6(-4)+9=-15$$
 
 *Distribute first, then gather:*
+{#2.4.w4}
 $$2(x-1)=x+5 \xrightarrow{\text{distribute}} 2x-2=x+5 \xrightarrow{-x} x-2=5 \xrightarrow{+2} x=7$$
 $$\text{Check: } 2(7-1)=12 \;\text{ and }\; 7+5=12$$
 
 In the third one the variable terms don't subtract away cleanly to a positive, so the answer is −4. That's a real solution, and the check confirms it on both sides. In the fourth, the left side has parentheses, so you tidy first, distributing the 2 across (x − 1) to get 2x − 2, and only then gather the x's. Tidy each side before you move terms across, and the rest is the two-step move you already know.
 
-**The substitution check, when it doesn't match.** You'll lean on the check hard in this lesson, because there are more steps for a sign to slip in. A check that comes out unequal is the tool doing exactly what you built it for, so treat it as information, not a verdict. Here the likeliest culprit is a sign lost when you took a variable term off both pans, so re-run that subtraction first; the method itself is almost never the problem.
+**The substitution check, when it doesn't match.** You'll lean on the check hard in this lesson, because there are more steps for a sign to slip in. As back in 2.1, a check that doesn't match is the check working, not a verdict on you. Here the likeliest culprit is a sign lost when you took a variable term off both pans, so re-run that subtraction first; the method itself is almost never the problem.
 
 ### The three outcomes
 
@@ -284,14 +302,17 @@ You don't decide which outcome it is up front. Run the usual procedure, and if t
 **Worked examples (one of each outcome, keep the substitution habit even here):**
 
 *Conditional, the usual one solution:*
+{#2.4.w5}
 $$3(x-2)+4=2(x+1)-x \xrightarrow{\text{distribute}} 3x-2=x+2 \xrightarrow{-x} 2x-2=2 \xrightarrow{+2,\,\div 2} x=2$$
 $$\text{Check: } 3(2-2)+4=4 \;\text{ and }\; 2(2+1)-2=4$$
 
 *Identity, the x's go to zero, true statement, so all real numbers:*
+{#2.4.w6}
 $$2x+4=2(x+2) \xrightarrow{\text{distribute}} 2x+4=2x+4 \xrightarrow{-2x} 4=4 \;\text{ (always true)}$$
 The variable went to zero and left **4=4**, a true statement, so the answer is **infinitely many solutions (all real numbers).** You can sanity-check with two different numbers: at x = 0 both sides are 4; at x = 5 both sides are 14. They match for any x.
 
 *Contradiction, the x's go to zero, false statement, so no solution:*
+{#2.4.w7}
 $$2x+3=2x+5 \xrightarrow{-2x} 3=5 \;\text{(false)}$$
 The variable went to zero and left **3=5**, which is never true, so there's **no solution.** Sanity-check: at x = 0 the sides are 3 and 5; at x = 10 they're 23 and 25. The right side is always 2 bigger, so they can never be equal.
 
@@ -301,6 +322,7 @@ If the x's vanish, that isn't an error and it isn't x = 0. There's simply no x l
 
 For a multi-step equation there's often more than one correct first move. Take 3(x+2)=18. Both of these are right:
 
+{#2.4.w8}
 $$\textbf{Distribute first:}\quad 3(x+2)=18 \xrightarrow{\text{distribute}} 3x+6=18 \xrightarrow{-6} 3x=12 \xrightarrow{\div 3} x=4$$
 
 $$\textbf{Divide first:}\quad 3(x+2)=18 \xrightarrow{\div 3} x+2=6 \xrightarrow{-2} x=4$$
@@ -308,12 +330,13 @@ $$\textbf{Divide first:}\quad 3(x+2)=18 \xrightarrow{\div 3} x+2=6 \xrightarrow{
 Same answer (x = 4, and 3(4 + 2) = 18 checks). When the whole left side is multiplied by a number that divides the right side cleanly, as 3 goes into 18 evenly, dividing first is fewer steps and smaller numbers. But if the right side *weren't* a clean multiple, say 3(x + 2) = 20, dividing first gives x + 2 = 20/3 and drags a fraction through every later step, so distributing first keeps things whole longer. Both orders are valid. The skill is glancing ahead to pick the cleaner one for the equation in front of you, and which to use is your call.
 
 **One spot-the-error to read.** Here's a worked solution to 5 − 2(x − 1) = 9 with one broken line, shown beside the correct version so you can see exactly where they part ways. This is the distributing-a-negative trap from Lesson 2.3, now hiding inside a both-sides solve:
+{#2.4.w9}
 $$5-2(x-1)=9 \;\to\; 5-2x-2=9 \;\to\; 3-2x=9 \;\to\; -2x=6 \;\to\; x=-3$$
 The break is in the very first move. The −2 reaches the −1 inside as −2 × −1 = **+2**, not −2, so the correct second line is 5 − 2x **+ 2** = 9, which becomes 7 − 2x = 9, then −2x = 2, and **x = −1**. If you didn't spot it, that's fine. The fix is right here. Confirm x = −1 in the original: 5 − 2(−1 − 1) = 5 − 2(−2) = 5 + 4 = 9, which matches.
 
 A couple of slips worth naming, now that you've had a clean success at each. When you subtract a variable term, it has to come off *both* pans; subtracting 3x from the left only is the most common way a both-sides solve goes wrong.
 
-And watch the sign when you distribute a positive number over a subtraction: in 2(x − 1), the result is 2x − 2, not 2x − 1 or 2x + 2, because the 2 reaches the −1 and gives −2. A negative answer, by the way, is a real solution like any other. Let the substitution check settle any doubt.
+And watch the sign when you distribute a positive number over a subtraction: in 2(x − 1), the result is 2x − 2, not 2x − 1 or 2x + 2, because the 2 reaches the −1 and gives −2. Let the substitution check settle any doubt.
 
 If this lesson is getting heavy, that's reasonable. It folds together every move so far. It's fine to leave a problem and come back to it tomorrow; a break genuinely helps, and you haven't lost anything. When you return, re-read the balance-scale picture at the top first, since every move here is still just taking the same thing off both pans.
 
@@ -326,7 +349,7 @@ If this lesson is getting heavy, that's reasonable. It folds together every move
 
 You can now solve an equation with variables on both sides by gathering the boxes onto one pan and the numbers onto the other, recognize when the variable going to zero means all real numbers or no solution, and choose the cleaner of two valid first moves.
 
-Jumping between kinds of problem is harder than repeating one, which is exactly why it lasts. Several of these land on negatives or on a special case on purpose. Each answer is at the end of the lesson, and if one stalls you, flip back to the worked example it's based on.
+Several of these land on a negative, and several are an identity or a contradiction rather than the usual one solution.
 
 **Practice problems:**
 
@@ -355,7 +378,7 @@ Jumping between kinds of problem is harder than repeating one, which is exactly 
 
 ## Lesson 2.5: Equations with fractions (with two Fraction Refreshers)
 
-Fractions show up everywhere ahead, in slope, in proportions, in rates, so it's worth getting steady with them here. Many adults stalled on fractions years ago, so before the lesson proper there are two short refreshers that repair the foundation first. If fractions already feel solid, you can skip straight past them to the lesson. A good way to test yourself: glance at (2/3)x = 6. If you know how to start, move on; if you hesitate, the refreshers are exactly what you need.
+Fractions show up all through the units ahead, so it's worth getting steady with them here. Many adults stalled on fractions years ago, so before the lesson proper there are two short refreshers that repair the foundation first. If fractions already feel solid, you can skip straight past them to the lesson. A good way to test yourself: glance at (2/3)x = 6. If you know how to start, move on; if you hesitate, the refreshers are exactly what you need.
 
 There are two ways to solve an equation with fractions in it, and both reduce it to the whole-number equations you already solve. The first handles a single fraction stuck to the variable, by multiplying by its **reciprocal**. The second handles fractions scattered around the equation, by **clearing** them all at once. The refreshers build the two pieces those methods need.
 
@@ -411,15 +434,19 @@ The one thing to hold onto: every term gets multiplied, including the right side
 **Worked examples:**
 
 *Reciprocal method:*
+{#2.5.w1}
 $$\frac23 x=6 \xrightarrow{\times \frac32} x=9 \qquad \text{Check: } \frac23(9)=6$$
 
 *Clear-the-fractions method:*
+{#2.5.w2}
 $$\frac{x}{2}+\frac{x}{3}=5 \xrightarrow{\times 6} 3x+2x=30 \Rightarrow 5x=30 \Rightarrow x=6 \qquad \text{Check: } 3+2=5$$
 
 *Reciprocal with a bigger numerator:*
+{#2.5.w3}
 $$\frac34 x=9 \xrightarrow{\times \frac43} x=12 \qquad \text{Check: } \frac34(12)=9$$
 
 *An answer that's itself a fraction (a fraction is a perfectly good solution):*
+{#2.5.w4}
 $$\frac23 x=5 \xrightarrow{\times \frac32} x=\frac{15}{2} \qquad \text{Check: } \frac23\cdot\frac{15}{2}=\frac{30}{6}=5$$
 Don't round 15/2 to 7 or 8. An exact fraction *is* the answer, the same way zero was a fine answer back in Lesson 2.1. The check confirms it: two-thirds of 15/2 is 30/6, which is 5.
 
@@ -434,7 +461,7 @@ A slip to watch for now that you've solved a few cleanly: when you clear fractio
 
 You can now solve an equation with fractions either by multiplying by the reciprocal of a single fraction coefficient or by clearing all the fractions with a common denominator, and you can trust a fractional answer as exact.
 
-Practice that mixes the two methods is harder than drilling one, and that difficulty is the point. Two heads-up notes are built into the set below. Each answer is at the end of the lesson; if one stalls you, flip back to the worked example it matches.
+The practice below pulls both methods together, and two heads-up notes are built into it.
 
 **Practice problems:**
 

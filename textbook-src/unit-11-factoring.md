@@ -6,11 +6,11 @@
 
 Before you start a session, redo two or three problems from a lesson or two back from memory. It's a small warm-up, and it's one of the most useful things you can do to keep a skill from fading.
 
-Here's the one idea that ties this whole unit together: factoring is multiplying, run backward. In Unit 10 you took two factors and built a product; you filled in the area box. Here you're handed the finished product and asked to rebuild the factors: the same box, but now you're working out the edges.
+One idea runs through the whole unit: factoring is multiplying, run backward. In Unit 10 you took two factors and built a product; you filled in the area box. Here you're handed the finished product and asked to rebuild the factors: the same box, but now you're working out the edges.
 
 That backward move has a useful side effect. Because factoring undoes multiplying, you can always check your answer by multiplying it back out, and you must land on exactly what you started with. You'll use that check on every single example. If a factorization doesn't multiply back to the original, it's simply wrong, so you redo it, with no guessing whether it's right.
 
-One more thing to set down up front, because it makes "does this factor?" a question with a definite answer: in this unit, we factor over the integers. Every factor you write has whole-number coefficients. So the only honest endings are a clean integer factorization or the verdict **prime**. We don't reach for fractions, decimals, square roots, or anything fancier as factoring tools here. Those belong to Unit 12.
+One ground rule makes "does this factor?" a question with a definite answer: in this unit, we factor over the integers. Every factor you write has whole-number coefficients. So the only honest endings are a clean integer factorization or the verdict **prime**. We don't reach for fractions, decimals, square roots, or anything fancier as factoring tools here. Those belong to Unit 12.
 
 ---
 
@@ -44,25 +44,28 @@ One thing to name before it trips you up. When you divide 8x by 4x, you get 2, n
 - {#11.1.d2} **Greatest common factor (GCF):** the *largest* factor (biggest number times the most variables) that divides evenly into **every** term.
 - {#11.1.d3} **Factor (verb):** to rewrite a sum as a product, i.e. to *undo* distributing.
 
-Read each worked example slowly, a line at a time, and ask yourself why each step follows from the one before. That's what turns a worked example into something you can do yourself. Each one pulls the GCF, then checks by multiplying back.
-
 **Worked examples** (each pulls the GCF, then checks by multiplying back):
 
 *Numbers only:*
+{#11.1.w1}
 $$6x+9 \;=\; 3(2x+3) \qquad \text{Check: } 3\cdot 2x + 3\cdot 3 = 6x+9$$
 
 *Number and a variable:*
+{#11.1.w2}
 $$4x^2+8x \;=\; 4x(x+2) \qquad \text{Check: } 4x\cdot x + 4x\cdot 2 = 4x^2+8x$$
 
 *Higher powers, take the lowest power of x:*
+{#11.1.w3}
 $$15x^3-10x^2 \;=\; 5x^2(3x-2) \qquad \text{Check: } 5x^2\cdot 3x - 5x^2\cdot 2 = 15x^3-10x^2$$
 Both terms carry at least x², so x² comes out; the biggest number dividing 15 and 10 is 5, so 5 comes out. Together the GCF is 5x².
 
 *The "stopped too early" trap, done right:*
+{#11.1.w4}
 $$12x+18 \;=\; 6(2x+3) \qquad \text{Check: } 6\cdot 2x + 6\cdot 3 = 12x+18$$
 Here's the slip worth knowing now that you've factored a few cleanly. It's easy to pull out *a* common factor and stop, to write 2(6x + 9) or 3(4x + 6) and call it done. Those are common factors, but not the *greatest* one: look inside the parentheses and the pieces still share a factor. Only pulling the full 6 leaves an inside, 2x + 3, with nothing left to take. A quick self-check: after you factor, glance inside the parentheses and ask whether those terms *still* have something in common. If they do, you didn't take it all.
 
 *Variable factor with a negative inside:*
+{#11.1.w5}
 $$10x^2-25x \;=\; 5x(2x-5) \qquad \text{Check: } 5x\cdot 2x - 5x\cdot 5 = 10x^2-25x$$
 Notice the minus stayed put. When a term is subtracted, keep its sign as you pull the factor out, and the multiply-back check catches a dropped sign instantly.
 
@@ -119,7 +122,7 @@ When c is positive, the two numbers have the *same* sign, because their product 
 
 When c is negative, the two numbers have *opposite* signs, because their product is negative. Then the number with the larger size carries the sign of b.
 
-Take that slowly, because getting it backward is the most common trinomial mistake, and the multiply-back check will catch it every time the middle term comes out wrong.
+Take the signs slowly, in that order: c first, then b. And if one slips, the multiply-back check catches it, since the middle term comes out wrong.
 
 | signs | c | b | the two numbers | example |
 |---|---|---|---|---|
@@ -133,31 +136,37 @@ Take that slowly, because getting it backward is the most common trinomial mista
 - {#11.2.d2} **Prime (irreducible over the integers):** a trinomial that **cannot** be written as a product of two binomials with integer coefficients. When the two-number search comes up empty, the trinomial is prime. That's a real answer, not a failure.
 - {#11.2.d3} **Monic:** leading coefficient 1, i.e. the x² has no number in front (just x², not 3x²). Every trinomial in this lesson is monic. Trinomials like 2x²+7x+3, where the leading coefficient is not 1, factor by an extension of this method covered later.
 
-Read each worked example slowly, line by line, and ask why each one follows. Together they cover all four sign cases, and each is checked by multiplying back out, which, remember, is just a Unit 10 expansion.
+These cover all four sign cases. The check on each is just a Unit 10 expansion, run back to front.
 
 **Worked examples** (covering all sign cases; each checked by expanding back):
 
 *Both positive (c>0, b>0):*
+{#11.2.w1}
 $$x^2+5x+6=(x+2)(x+3) \qquad \text{Check: } x^2+3x+2x+6 = x^2+5x+6$$
 (2·3=6, 2+3=5.)
 
 *Both negative (c>0, b<0):*
+{#11.2.w2}
 $$x^2-5x+6=(x-2)(x-3) \qquad \text{Check: } x^2-3x-2x+6 = x^2-5x+6$$
 (c is positive, so same sign; b is negative, so both negative. (−2)(−3)=6, and (−2)+(−3)=−5.)
 
 *Opposite signs, sum positive (c<0, b>0):*
+{#11.2.w3}
 $$x^2+x-6=(x+3)(x-2) \qquad \text{Check: } x^2-2x+3x-6 = x^2+x-6$$
 (c is negative, so opposite signs; you need a product of −6 and a sum of +1, which is +3 and −2.)
 
 *Opposite signs, sum negative (c<0, b<0):*
+{#11.2.w4}
 $$x^2-x-6=(x-3)(x+2) \qquad \text{Check: } x^2+2x-3x-6 = x^2-x-6$$
 (Opposite signs again; product −6, sum −1, so the bigger number, 3, is the negative one.)
 
 *A bigger both-positive one:*
+{#11.2.w5}
 $$x^2+7x+12=(x+3)(x+4) \qquad \text{Check: } x^2+4x+3x+12 = x^2+7x+12$$
 (Pairs of 12: 1·12, 2·6, 3·4; only 3 + 4 gives 7.)
 
 *Opposite signs, larger gap:*
+{#11.2.w6}
 $$x^2-2x-15=(x-5)(x+3) \qquad \text{Check: } x^2+3x-5x-15 = x^2-2x-15$$
 (Product −15, sum −2, so −5 and +3; the bigger one, 5, is negative because b is negative.)
 
@@ -172,10 +181,12 @@ Not every trinomial factors over the integers, and saying so plainly matters, be
 Here's the rule that tells you when to stop. To factor x²+bx+c, list every integer pair that multiplies to c, then check each pair's sum against b. If no pair sums to b, stop: the trinomial is **prime (irreducible over the integers)**. Working through the whole list *is* the proof. It's the same "I actually checked" spirit as multiplying back, turned on the search itself. The key is that the list has to be *exhausted*: you've earned the word "prime" only after every pair has been tried, including the negative pairs when the signs call for them.
 
 *A prime one (c>0, b>0):*
+{#11.2.w7}
 $$x^2+2x+5 \;\Rightarrow\; \text{prime (irreducible over the integers)}$$
 Since c = 5 is positive, the two numbers would share a sign, and since b is positive, both would be positive. The only positive pair multiplying to 5 is 1·5, and that sums to 6, not 2. There's no other pair. The search is exhausted, so it's prime. There's nothing to multiply back here, and that's fine, because the finished list is the proof.
 
 *Another prime one:*
+{#11.2.w8}
 $$x^2+x+1 \;\Rightarrow\; \text{prime (irreducible over the integers)}$$
 Here c = 1 and b = 1. The only integer pairs multiplying to 1 are 1·1 (sum 2) and (−1)(−1) (sum −2); neither sums to 1. List exhausted, so it's prime.
 
@@ -185,7 +196,7 @@ Second, don't reach for non-integers to rescue a near-miss. You might notice tha
 
 And one trap that hides a prime answer: a GCF can disguise things. Take 2x²+4x+10. As written it looks unfactorable, but it isn't prime. Pull the 2 out first to get 2(x²+2x+5), and *then* the inside, x²+2x+5, is prime. So "factor completely" here means 2(x²+2x+5): the GCF out front, the prime piece left intact.
 
-This is the reason for a habit worth adopting now: always try the GCF before the two-number search. Pulling the shared factor leaves a smaller, friendlier trinomial inside, and it keeps you from wrongly calling something prime. (A fully worked GCF-first example waits for you at the end of 11.3.)
+This is the reason for a habit worth adopting now: always try the GCF before the two-number search. Pulling the shared factor leaves a smaller, friendlier trinomial inside, and it keeps you from wrongly calling something prime.
 
 A couple more places people stumble, both caught by the same multiply-back habit. One is declaring "prime" too soon: quitting after one or two pairs instead of all of them, or forgetting the negative pairs when c is positive and b is negative. Only an exhausted list earns the word.
 
@@ -229,7 +240,7 @@ You can now factor a monic trinomial by finding the two numbers that multiply to
 
 ## Lesson 11.3: Special patterns
 
-Two kinds of factoring show up so often that it pays to recognize them on sight, without running the full two-number search each time. The first is a **difference of squares**, like x²−9. The second is a **perfect-square trinomial**, like x²+6x+9. Learning to spot them saves work, and one of them comes with a warning that keeps you from chasing an answer that isn't there.
+Two kinds of factoring show up so often that it pays to recognize them on sight, without running the full two-number search each time. The first is a **difference of squares**, like x²−9. The second is a **perfect-square trinomial**, like x²+6x+9. Learning to spot them saves you the whole two-number search.
 
 Start with the difference of squares, and build it rather than just state it. Multiply (a+b)(a−b) with the area box from Unit 10:
 
@@ -258,24 +269,29 @@ These two patterns are really just *special cases* of Lesson 11.2. For a perfect
 - {#11.3.d2} **Difference of squares:** one perfect square *minus* another, a²-b².
 - {#11.3.d3} **Perfect-square trinomial:** a trinomial that is exactly (a±b)² multiplied out.
 
-Read each worked example a line at a time, and check the recognition step against the rule before moving on. Each is confirmed by multiplying back.
+In each example below, the recognition step comes first: confirm the pattern against the rule before writing the factors.
 
 **Worked examples** (each checked by multiplying back):
 
 *Difference of squares, basic:*
+{#11.3.w1}
 $$x^2-9=(x+3)(x-3) \qquad \text{Check: } x^2-3x+3x-9 = x^2-9$$
 
 *Difference of squares, larger:*
+{#11.3.w2}
 $$x^2-25=(x+5)(x-5) \qquad \text{Check: } x^2-5x+5x-25 = x^2-25$$
 
 *Difference of squares with a coefficient (4x²=(2x)²):*
+{#11.3.w3}
 $$4x^2-1=(2x+1)(2x-1) \qquad \text{Check: } 4x^2-2x+2x-1 = 4x^2-1$$
 
 *Perfect-square trinomial (plus):*
+{#11.3.w4}
 $$x^2+6x+9=(x+3)^2 \qquad \text{Check: } (x+3)(x+3)=x^2+3x+3x+9 = x^2+6x+9$$
 (√(x²)=x, √9=3, 2·x·3=6x.)
 
 *Perfect-square trinomial (minus):*
+{#11.3.w5}
 $$x^2-10x+25=(x-5)^2 \qquad \text{Check: } (x-5)(x-5)=x^2-5x-5x+25 = x^2-10x+25$$
 (√(x²)=x, √25=5, 2·x·5=10x; the minus makes it (x−5)².)
 
@@ -294,10 +310,12 @@ And the last is ignoring the middle sign in a perfect square, calling x²−10x+
 Here's where "always try the GCF first" pays off most. Pulling a common factor can turn a messy expression into a clean pattern that wasn't visible before, and forgetting to keep that GCF in your final answer is the classic "not fully factored" slip. Two worked-through examples, each done end to end.
 
 *GCF, then a perfect square:*
+{#11.3.w6}
 $$2x^2+12x+18 \;=\; 2(x^2+6x+9) \;=\; 2(x+3)^2 \qquad \text{Check: } 2(x^2+6x+9)=2x^2+12x+18$$
 Pull the 2, since every coefficient is even. The inside, x²+6x+9, is now a perfect square (√(x²)=x, √9=3, 2·x·3=6x). The 2 stays out front: 2(x+3)² is fully factored, and (x+3)² alone would be missing the 2.
 
 *GCF, then a difference of squares:*
+{#11.3.w7}
 $$3x^2-12 \;=\; 3(x^2-4) \;=\; 3(x+2)(x-2) \qquad \text{Check: } 3(x+2)(x-2)=3(x^2-4)=3x^2-12$$
 Pulling out 3 exposes x²−4, a difference of squares. Neither step was visible before the GCF came out, which is exactly why the GCF goes first.
 

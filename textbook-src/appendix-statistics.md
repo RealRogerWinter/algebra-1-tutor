@@ -1,6 +1,6 @@
 # Unit A: Data & Statistics
 
-This is the unit where statistics starts answering everyday questions about real piles of numbers. Things like test scores, prices, and survey answers. It is three short, mostly separate lessons, and they lean more on plain judgment than on heavy arithmetic.
+This is the unit where statistics starts answering everyday questions about real piles of numbers: test scores, prices, survey answers. It is three short, mostly separate lessons, and they lean more on plain judgment than on heavy arithmetic.
 
 The biggest idea in the whole unit is one sentence in Lesson A.2: two things moving together doesn't prove one causes the other. If you take only that away, the unit has paid for itself.
 
@@ -20,7 +20,7 @@ The **mean** is the balance point of that line. It's the spot where the dots wou
 
 Now the symbols, which are just shorthand for those pictures. The mean is the "fair share": add every value and divide by how many there are, the way you'd split a bill evenly. The median is the middle value once you put the list **in order**. The range is the biggest value minus the smallest. It's a first, quick measure of how far the data reaches.
 
-That ordering step in the median is small and easy to skip, so make it a habit from the start: line the numbers up smallest to largest *first*, then point to the middle. If there's an even count, there's no single middle dot, so you average the two middle ones.
+That ordering step in the median is small and easy to skip, so make it a habit from the start: line the numbers up smallest to largest *first*, then point to the middle. It matters because the middle of the unordered list is usually the wrong number. In {4, 8, 6, 5, 2} the middle as written is 6, but ordered it's 2, 4, 5, 6, 8 and the real middle is 5. If there's an even count, there's no single middle dot, so you average the two middle ones.
 
 **New terms:**
 - {#A.1.d1} **Mean (average):** add all the values, divide by how many there are. The "fair share" if everyone got the same.
@@ -34,9 +34,9 @@ Read each worked example slowly, one line at a time, and ask why each line follo
 
 **Worked examples:**
 
-1. Data set {4, 8, 6, 5, 2} (5 values). For the **mean**, add and divide by the count: (4+8+6+5+2)/5 = 25/5 = 5. For the **median**, order it first, 2, 4, 5, 6, 8, and the middle value is 5. For the **range**, take max − min: 8 − 2 = 6. No value repeats, so there's **no mode**. (Notice the median needed the ordering step; the unordered "middle" would have been 6, which is wrong.)
+1. Data set {4, 8, 6, 5, 2} (5 values). For the **mean**, add and divide by the count: (4+8+6+5+2)/5 = 25/5 = 5. For the **median**, order it first, 2, 4, 5, 6, 8, and the middle value is 5. For the **range**, take max − min: 8 − 2 = 6. No value repeats, so there's **no mode**.
 2. Data set {2, 2, 3, 9}, which has an even count of 4 values. The **mean** is (2+2+3+9)/4 = 16/4 = 4. For the **median**, order it (2, 2, 3, 9) and, because the count is even, average the two middle values: (2+3)/2 = 2.5. The **mode** is 2, the only value that appears twice, and the **range** is 9 − 2 = 7. Look at the gap the **9** opens up: it's an outlier, and it pulls the mean (4) up above the median (2.5). The median describes "typical" better here.
-3. Data set {3, 4, 5, 6, 30}. Spotting an outlier and watching what it does. Ordered, it's already 3, 4, 5, 6, **30**: four values clustered near 3 to 6, then one sitting far above the rest, so **30 is the outlier**. The **mean** is (3+4+5+6+30)/5 = 48/5 = 9.6, and the **median** is the middle of the ordered list, **5**. Already the mean (9.6) sits well above the median and above *every* clustered value. That gap is the outlier talking. Now drop the 30 and recompute on 3, 4, 5, 6: the mean falls all the way to (3+4+5+6)/4 = 18/4 = 4.5, while the median only shifts from 5 to (4+5)/2 = 4.5. So removing the outlier moved the mean by 5.1 but the median by only 0.5. The outlier dragged the *mean*; the *median* barely budged. That's exactly why the median is the fairer "typical" when an outlier is in the data.
+3. Data set {3, 4, 5, 6, 30}. Spotting an outlier and watching what it does. Ordered, it's already 3, 4, 5, 6, **30**: four values clustered near 3 to 6, then one sitting far above the rest, so **30 is the outlier**. The **mean** is (3+4+5+6+30)/5 = 48/5 = 9.6, and the **median** is the middle of the ordered list, **5**. Already the mean (9.6) sits well above the median and above *every* clustered value, which is the outlier's effect. Now drop the 30 and recompute on 3, 4, 5, 6: the mean falls all the way to (3+4+5+6)/4 = 18/4 = 4.5, while the median only shifts from 5 to (4+5)/2 = 4.5. So removing the outlier moved the mean by 5.1 but the median by only 0.5. The outlier dragged the *mean*; the *median* barely budged. That's exactly why the median is the fairer "typical" when an outlier is in the data.
 
 So the mean and the median can tell different stories, and the reason is always an outlier, a value sitting far from where the rest cluster. One ordinary salary list with a single CEO's pay tacked on is the classic case: the *mean* salary looks high, but the *median* reports the truer "typical" pay. Use the median when the data is **skewed** or has outliers.
 
@@ -147,7 +147,7 @@ And a prediction from that line is most trustworthy *near* the data it came from
 
 You can now read a scatter plot, check its form before trusting a line, describe its association and strength by eye, predict from a best-fit line, and keep correlation and causation apart.
 
-Mixed practice feels harder, and that's the point. Every problem has its answer at the end of the lesson, and the worked example it's based on is right above if one stalls you.
+As before, the mix is the point. Every problem has its answer at the end of the lesson, and the worked example it's based on is right above if one stalls you.
 
 **Practice problems:**
 *Predict using the given line of best fit. The line in problems 1 and 2 was built from data that ran from x = 1 to x = 6:*
@@ -200,6 +200,7 @@ That second kind, a rate within one group, is a **conditional relative frequency
 
 Here's the survey laid out, with 50 people sorted by whether they own a pet (rows) and whether they live in an apartment (columns):
 
+{#A.3.w1}
 $$\begin{array}{c|c|c|c}
  & \text{Apartment} & \text{House} & \textbf{Total} \\ \hline
 \text{Pet: Yes} & 6 & 24 & \mathbf{30} \\ \hline
@@ -213,6 +214,7 @@ Read the single worked example below slowly. It walks every move on this one tab
 
 To **read a count**, go straight to a cell: the people who own a pet *and* live in an apartment number 6, the top-left cell. For a **joint relative frequency** (a share of everyone), the fraction who own a pet is 30/50 = 3/5 = 60%. For a **conditional relative frequency** (a rate within one group), of the 20 apartment dwellers, the fraction who own a pet is 6/20 = 3/10 = 30%. Notice that the total you divide by changed with the question: the grand total 50 for "of everyone," the column total 20 for "of the apartment dwellers."
 
+{#A.3.w2}
 Now the question the table is really for: does owning a pet go with where you live? Compare the two conditional rates. Among apartment dwellers, the pet rate is 6/20 = 3/10 = **30%**. Among house dwellers, it's 24/30 = 4/5 = **80%**. Those are very different, 30% against 80%, so owning a pet and where you live **are associated**: house dwellers are far more likely to own a pet. (Each group also sits well off the overall 60%, which is another sign they differ.)
 
 If both groups had instead landed near 60%, the rates would be about equal and we'd say there's little or no association. Comparing the rates across rows or columns like this is exactly how a two-way table reveals association, the categorical cousin of A.2's positive/negative association.
@@ -231,7 +233,7 @@ And one note on the association itself: a single conditional rate tells you noth
 
 You can now build and read a two-way table, turn its counts into joint and conditional rates with the right denominator, and compare conditional rates across groups to decide whether two categories are associated.
 
-Mixed practice feels harder, and that's the point. Every problem has its answer at the end of the lesson, and the worked example above is the one to flip back to if a step stalls you.
+Same deal on the practice here. Every problem has its answer at the end of the lesson, and the worked example above is the one to flip back to if a step stalls you.
 
 **Practice problems**. Use this table of 50 students, *plays a sport* (rows) × *wears glasses* (columns):
 

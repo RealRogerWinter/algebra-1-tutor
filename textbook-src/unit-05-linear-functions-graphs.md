@@ -1,12 +1,12 @@
 # Unit 5: Linear Functions & Their Graphs
 
-> This unit is where lines come to life. You'll turn equations into pictures you can see, and learn to read a line the way you read a map: where it starts, which way it leans, and how steep it climbs. It pays off everywhere ahead, because so much of algebra is easier to grasp once you can picture it.
+> In this unit you'll turn equations into pictures, and learn to read a line the way you read a map: where it starts, which way it leans, and how steep it climbs. Picturing the algebra makes a lot of what's ahead easier to follow.
 >
 > It helps to have a few things fresh first: working with negative numbers, and dropping a number into an expression to see what comes out. A little comfort with rates, like "miles per hour," will feel familiar too. If any of that is rusty, a quick warm-up first will smooth the road.
 
-This is where a function stops being an abstract machine and becomes a picture you can read. The one idea threading through every lesson: a line *is* a linear function. The y = mx + b you'll meet and the f(x) = mx + b from Unit 4 are the same object wearing two name tags. It's the function machine from before, now drawn as a straight line.
+This is where a function becomes a picture you can read. The one idea threading through every lesson: a line *is* a linear function. The y = mx + b you'll meet and the f(x) = mx + b from Unit 4 are the same thing under two names. It's that same function machine, now drawn as a straight line.
 
-One callback up front dissolves most of the mystery. Slope, the headline idea of this unit, is not a new thing. It's the rate of change, which is the unit rate you met in Unit 3: "how much y changes for each 1 step in x." When slope shows up, you're meeting an old friend in new clothes.
+Here's the reassuring part up front. Slope, the main idea of this unit, isn't new. It's the rate of change, which is the unit rate you met in Unit 3: "how much y changes for each 1 step in x." So when slope shows up, you're meeting something you already know under a new name.
 
 Before each new lesson, redo two or three problems from a lesson or two back from memory first. That small warm-up keeps the earlier moves sharp. In this unit the earlier moves are substituting and signed arithmetic, and those are exactly what trips people up if they've gone rusty.
 
@@ -38,9 +38,13 @@ One case sits outside this scheme. If either coordinate is 0, the point isn't in
 
 Plot four points and name where each one lands, reading the signs as you go: (3,2), (-1,4), (0,-3), (-2,-2).
 
+{#5.1.w1}
 - (3,2): x is +, y is + → right 3, up 2 → **Quadrant I**.
+{#5.1.w2}
 - (-1,4): x is −, y is + → left 1, up 4 → **Quadrant II**.
+{#5.1.w3}
 - (0,-3): x is 0 → no left or right; down 3 → it sits **on the y-axis** (no quadrant).
+{#5.1.w4}
 - (-2,-2): both − → left 2, down 2 → **Quadrant III**.
 
 Here are those four points on the plane, with the quadrants labeled so you can see the sign pattern at a glance.
@@ -90,7 +94,7 @@ Start with the machine you already know. An equation like y = 2x − 1 is a func
 
 Put those input-and-output pairs in a **table of values**, the same input-to-output table from Unit 4, now headed for the grid. Each row is one (x, y) pair, which is one point. Plot the points and they fall in a straight row; draw the line through them.
 
-The one thing to hold on to: the line is *all* the points that work, not just the four you happened to compute. The four you plotted are a sample; the line is the whole family.
+Hold on to this: the line is *all* the points that work, not just the four you happened to compute. The four you plotted are a sample; the line is the whole family.
 
 Once the line is drawn, you can ask a sharp question about any point: is it **on the line** or not? A point is on the line exactly when its coordinates make the equation true.
 
@@ -102,6 +106,11 @@ To test (3, 5) on y = 2x − 1, substitute x = 3 and see what y the equation giv
 
 Graph y = 2x − 1, then test two points against it: (3, 5) and (3, 4). Work through the table a row at a time, and notice the negative input in the first row. That's the row most likely to bite, so compute it slowly.
 
+{#5.2.w1}
+{#5.2.w2}
+{#5.2.w3}
+{#5.2.w4}
+
 | x | 2x-1 | y |
 |----|--------|----|
 | −1 | 2(-1)-1 | −3 |
@@ -111,10 +120,12 @@ Graph y = 2x − 1, then test two points against it: (3, 5) and (3, 4). Work thr
 
 The points (-1,-3), (0,-1), (1,1), (2,3) fall in a straight line; here's that line, with the y-intercept (0, −1) marked {#5.2.f1}. Now the two membership tests, each just a substitution:
 
+{#5.2.w5}
 - (3,5): 2(3)-1 = 5. Since 5 = 5, the point is **on the line**.
+{#5.2.w6}
 - (3,4): 2(3)-1 = 5, but this point says y = 4. Since 5 ≠ 4, the point is **not on the line**.
 
-Two things trip people up here. First, "close" doesn't count for membership; it's exact. The substitution either matches or it doesn't, and a point a hair off the line is simply off it. Second, since this is a *linear* equation, the points are genuinely collinear, so if one plotted point refuses to line up with the others, the move is to recheck that point's arithmetic, not to bend the line to reach it. A wrong table makes a wrong picture, and the negative inputs are the usual culprit.
+Two things trip people up here. First, "close" doesn't count for membership; it's exact. The substitution either matches or it doesn't, and a point a hair off the line is simply off it. Second, since this is a *linear* equation, the points are genuinely collinear, so if one plotted point doesn't line up with the others, the move is to recheck that point's arithmetic, not to bend the line to reach it. A wrong table makes a wrong picture, and the negative inputs are the usual culprit.
 
 **Check for understanding (transfer):**
 1. {#5.2.c1} Without graphing, is (4, 7) on y = 2x - 1? Show how you know. (Substitute x = 4: 2(4) − 1 = 8 − 1 = 7. The equation gives y = 7 and the point's y is 7, so yes, it's on the line.)
@@ -123,7 +134,7 @@ Two things trip people up here. First, "close" doesn't count for membership; it'
 
 You can now build a table from a linear equation, plot it into a line, and test any point for membership by substituting and checking whether both sides match.
 
-Mixing the kinds together is meant to feel harder than repeating one; that difficulty is what carries the skill into next week. Every answer is at the end of the lesson, and if a problem stalls you, look back at the worked table above; it's there for exactly that.
+The problems mix building tables with testing membership. Every answer is at the end of the lesson, and if one stalls you, the worked table above is there to look back at.
 
 **Practice problems:**
 *Build the table for y = 3x + 2 (problems 1 to 4: find y for each x):*
@@ -145,7 +156,7 @@ Mixing the kinds together is meant to feel harder than repeating one; that diffi
 
 ## Lesson 5.3: Slope
 
-This is the heart of the unit, so give it the most time. Slope is the one number that captures how a line behaves, how steep it is and which way it tilts, and it's the number that drives everything in the next two lessons. The good news, again: slope isn't new. It's the rate of change, the graphical face of the **unit rate** you already met in Unit 3.
+This is the idea the next two lessons build on, so give it the most time. Slope is one number that tells you two things about a line: how steep it is and which way it tilts. And it isn't new: it's the rate of change, the graphical face of the **unit rate** you already met in Unit 3.
 
 Start there. In Unit 3, "60 miles per 1 hour" was a unit rate. Draw a graph of distance against time and that rate *is* the slope of the line: the miles you gain for each single hour. Slope is just rise per 1 of run: how much the output climbs for each 1 step you take across.
 
@@ -155,7 +166,7 @@ To put a number on it, you compare two points on the line. Going from one point 
 
 $$m = \frac{y_2 - y_1}{x_2 - x_1}$$
 
-The one discipline that keeps this honest: subtract the two y's and the two x's *in the same order*. Whichever point you call "first," use it first on the top and the bottom both. Mixing the order flips a sign and hands you the wrong tilt.
+There's one rule that keeps this honest: subtract the two y's and the two x's *in the same order*. Whichever point you call "first," use it first on the top and the bottom both. Mixing the order flips a sign and hands you the wrong tilt.
 
 There's a deeper reason this single number describes the whole line, and it's better seen than taken on faith. What makes a linear function linear is that its rate of change is **constant**: pick *any* two points on the line and the slope comes out the same. Said another way, equal steps in x always produce equal steps in y.
 
@@ -169,7 +180,7 @@ For y = 2x − 1, step x along 0, 1, 2, 3 and y runs −1, 1, 3, 5, up 2 every s
 
 1. Through (1,2) and (3,8):
 $$m = \frac{8 - 2}{3 - 1} = \frac{6}{2} = 3$$
-The slope is positive, so the line runs uphill from left to right. Read each line above and ask why it follows before moving on. That habit is what makes a worked example teach.
+The slope is positive, so the line runs uphill from left to right. The 6 on top is the rise (y climbed from 2 to 8) and the 2 on the bottom is the run (x moved from 1 to 3).
 
 2. Through (0,5) and (2,1):
 $$m = \frac{1 - 5}{2 - 0} = \frac{-4}{2} = -2$$
@@ -206,7 +217,7 @@ You can now compute slope from two points, name all four cases from the steepnes
 
 Here's a clean one to get the method moving before the set mixes things up: through (0, 0) and (3, 6), m = (6 − 0)/(3 − 0) = 6/3 = 2, a tidy positive slope, with no signs to track and no order to second-guess.
 
-The set below mixes the four cases with a couple of context problems, so consecutive ones often need a different first thought. Having to switch gears like that is harder in the moment and is what builds a skill you keep. Answers are at the end, and the worked examples above cover every type if one stalls you.
+The set below covers all four cases plus a couple of context problems. Answers are at the end, and the worked examples above cover every type if one stalls you.
 
 **Practice problems (find the slope through the two points):**
 1. (1,2) and (3,8)
@@ -240,7 +251,7 @@ This reading is clearest in a real situation. Take a phone bill, c = 5t + 30, wh
 
 To graph one by hand, plant the starting point, then walk the slope. Plot (0, b) on the y-axis. Then read the slope as rise over run. For m = 2, that's 2/1, so from the intercept go up 2 and right 1 and mark the next point. Connect them and you have the line. The intercept gives you the first point for free; the slope walks you to the next.
 
-One caution, the classic trap here: the sign travels with the number. In y = −3x + 5, the slope is −3, not 3, since the minus is part of it, and the y-intercept is 5. Read the sign that's *attached* to each number.
+Watch the sign here, because it travels with the number. In y = −3x + 5, the slope is −3, not 3, since the minus is part of it, and the y-intercept is 5. Read the sign that's *attached* to each number.
 
 **New terms:**
 - {#5.4.d1} **Slope-intercept form:** y = mx + b, where m is the slope and b is the **y-intercept**, the y-value where the line crosses the y-axis, at the point (0, b).
@@ -251,7 +262,7 @@ One caution, the classic trap here: the sign travels with the number. In y = −
 
 1. y = 2x + 1: the slope is m = 2 and the y-intercept is (0, 1). To graph it, plot (0, 1), then go up 2 and right 1 to reach (1, 3), and draw the line.
 
-2. y = -3x + 5: the slope is m = -3 (down 3 for each step right) and the y-intercept is (0, 5). The minus sign is part of the slope, the trap to watch. Since it's the flagship negative-slope picture, graph it: plot the intercept (0, 5), then step **down 3, right 1** to (1, 2), and again to (2, −1). Here's the line with those steps shown {#5.4.f1}.
+2. y = -3x + 5: the slope is m = -3 (down 3 for each step right) and the y-intercept is (0, 5). The minus sign is part of the slope, the trap to watch. Since this is the first negative slope you're graphing, work it through: plot the intercept (0, 5), then step **down 3, right 1** to (1, 2), and again to (2, −1). Here's the line with those steps shown {#5.4.f1}.
 
 | x | y = -3x + 5 | point |
 |----|----|----|
@@ -267,7 +278,7 @@ One caution, the classic trap here: the sign travels with the number. In y = −
 | 2 | −1 | (2,-1) |
 | 4 | 0 | (4,0) x-intercept |
 
-4. Read the meaning off the equation. A savings account follows s = 8w + 50, where w is weeks and s is dollars. Identify the slope and intercept and say what each *means*. The y-intercept is (0, 50): b = 50, so at w = 0 there's already $50 saved, the starting amount. The slope is m = 8: $8 is added each week, the saving rate, $8 per week. So s = 8w + 50 reads "start with $50, add $8 a week." You can evaluate it to predict ahead: s(5) = 8(5) + 50 = 40 + 50 = $90 after 5 weeks. Reading b as the starting value and m as the rate is the same move you'll use all through Unit 6.
+4. Read the meaning off the equation. A savings account follows s = 8w + 50, where w is weeks and s is dollars. Identify the slope and intercept and say what each *means*. The y-intercept is (0, 50): b = 50, so at w = 0 there's already $50 saved, the starting amount. The slope is m = 8: $8 is added each week, the saving rate, $8 per week. So s = 8w + 50 reads "start with $50, add $8 a week." You can evaluate it to predict ahead: s(5) = 8(5) + 50 = 40 + 50 = $90 after 5 weeks. Reading b as the starting value and m as the rate is the move that turns any such equation into a plain-English story.
 
 Here's a clean case to read before the practice turns mixed: in y = 4x − 7, the slope is 4 and the y-intercept is (0, −7). The 4 rides with the x, and the −7 stands alone with its sign. There's nothing more to it.
 
@@ -281,7 +292,7 @@ The most common confusion is mixing up the two roles. The m always rides *with t
 
 You can now read the slope and the y-intercept straight off y = mx + b (and off f(x) = mx + b), graph a line from them by planting the intercept and walking the slope, and read both numbers as a rate and a starting value in a real context.
 
-The practice mixes plain equations with context ones, so the first move changes from problem to problem. Choosing that move yourself each time is the work that sticks. Answers and the worked examples are right there if one stalls you.
+The practice mixes plain equations with context ones. Answers and the worked examples are right there if one stalls you.
 
 **Practice problems:**
 *Identify slope and y-intercept:*
@@ -308,7 +319,7 @@ The practice mixes plain equations with context ones, so the first move changes 
 
 ## Lesson 5.5: Writing equations of lines
 
-So far you've been handed an equation and asked to read or graph it. Now you'll run it the other way: given a couple of facts that pin a line down, write its equation. This is modeling with lines, and it feeds straight into Unit 6 (modeling) and Unit 7 (systems).
+So far you've been handed an equation and asked to read or graph it. Now you'll run it the other way: given a couple of facts that pin a line down, write its equation. This is modeling with lines, building the equation to match a situation instead of reading one off.
 
 A slope by itself doesn't pick out one line: there are infinitely many lines with slope 2, all parallel, sliding up and down the plane. But a slope *plus one point the line passes through* nails down exactly one line. **Point-slope form** is the tool built for precisely those two facts: y − y₁ = m(x − x₁), where (x₁, y₁) is your known point and m is the slope. Plug the two facts in, then tidy up into y = mx + b if you want the familiar form.
 
@@ -341,7 +352,7 @@ $$y = -\tfrac12 x$$
 
 A clean case to settle the method before practice: write the line through (1, 5) with slope -2. Point-slope gives y − 5 = −2(x − 1), so y = −2x + 2 + 5 = −2x + 7. Check: at x = 1, −2(1) + 7 = 5. One point, one slope, one line.
 
-When you expand point-slope, the slope greets *both* terms in the parentheses, so y − 3 = 4(x − 2) becomes y − 3 = 4x − 8, not 4x − 2; that's the distributing-to-everyone habit from Unit 2. And for perpendicular slopes, do *both* steps: flip *and* change the sign. Taking just the reciprocal (1/2) or just the negative (−2) is half the move; the negative reciprocal of 2 is −1/2, and the check is that 2 · (−1/2) = −1. If a check disagrees, that's the check earning its keep: re-run the distribution or the flip slowly; it's almost always a single sign, not the method.
+When you expand point-slope, the slope greets *both* terms in the parentheses, so y − 3 = 4(x − 2) becomes y − 3 = 4x − 8, not 4x − 2; that's the distributing-to-everyone habit from Unit 2. And for perpendicular slopes, do *both* steps: flip *and* change the sign. Taking just the reciprocal (1/2) or just the negative (−2) is half the move; the negative reciprocal of 2 is −1/2, and the check is that 2 · (−1/2) = −1. If that product isn't −1, you've done only half the flip; go back and do the other half.
 
 **Check for understanding (transfer):**
 1. {#5.5.c1} Write the equation of the line through (1, 5) with slope -2. Then verify it actually passes through that point. (y − 5 = −2(x − 1) → y = −2x + 7; check x = 1: −2(1) + 7 = 5, so it does pass through (1, 5).)
@@ -350,7 +361,7 @@ When you expand point-slope, the slope greets *both* terms in the parentheses, s
 
 You can now write a line from a point and a slope, from two points (slope first, then point-slope), and recognize parallel lines by equal slopes and perpendicular lines by negative-reciprocal slopes.
 
-This set mixes point-and-slope problems, two-point ones, and parallel/perpendicular ones, so you have to choose the first move each time. That choosing is the part that makes it stay. Answers are at the end, and the worked examples cover each kind.
+This set covers point-and-slope problems, two-point ones, and parallel/perpendicular ones. Answers are at the end, and the worked examples cover each kind.
 
 **Practice problems:**
 *Write the equation (point + slope):*
@@ -378,7 +389,7 @@ Start with what an intercept actually is: the spot where the line crosses an axi
 
 You already do half of this. Back in Lesson 5.4 you found the y-intercept by putting x = 0 (that's f(0) = b). The x-intercept is the very same move with the roles swapped: put y = 0 and solve for x.
 
-Two intercepts are two points, and two points draw a line, so plot the pair and connect them. One safety habit worth keeping: compute a *third* point as a checkpoint. If all three line up, you can trust the picture; if the third one misses, recheck your arithmetic before you draw, because a wrong graph is worse than no graph.
+Two intercepts are two points, and two points draw a line, so plot the pair and connect them. A safety habit worth keeping is to compute a *third* point as a checkpoint. If all three line up, you can trust the picture; if the third one misses, recheck your arithmetic before you draw, because a wrong graph is worse than no graph.
 
 Now standard form, Ax + By = C, where A, B, and C are integers (and A is kept positive by convention). It treats x and y even-handedly, with neither one solved for. That makes it tidy for reading off intercepts but useless for reading slope until you rearrange it.
 
@@ -423,7 +434,7 @@ And one edge case: a line through the origin, like y = 2x, crosses both axes at 
 
 You can now find an x-intercept by setting y = 0, graph a line fast from its two intercepts with a third point as a checkpoint, and move between standard form and slope-intercept form in both directions.
 
-The practice mixes finding intercepts, converting in each direction, and graphing, so the first step shifts from one problem to the next. Working out which step to take is exactly what makes the skill durable. Answers and the worked examples are there if one stalls you.
+The practice covers finding intercepts, converting in each direction, and graphing. Answers and the worked examples are there if one stalls you.
 
 **Practice problems:**
 *Find the x-intercept (set y = 0):*

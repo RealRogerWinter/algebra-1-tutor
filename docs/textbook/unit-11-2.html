@@ -159,7 +159,7 @@ x &amp; x^2 &amp; ?x \\ \hline
 <p>The part that takes real care is the signs, and they aren't a guess: the signs of c and b <em>tell</em> you the signs of the two numbers. Here's how to read them. Look first at c.</p>
 <p>When c is positive, the two numbers have the <em>same</em> sign, because their product came out positive. Then b breaks the tie: if b is positive too, both numbers are positive, and if b is negative, both are negative.</p>
 <p>When c is negative, the two numbers have <em>opposite</em> signs, because their product is negative. Then the number with the larger size carries the sign of b.</p>
-<p>Take that slowly, because getting it backward is the most common trinomial mistake, and the multiply-back check will catch it every time the middle term comes out wrong.</p>
+<p>Take the signs slowly, in that order: c first, then b. And if one slips, the multiply-back check catches it, since the middle term comes out wrong.</p>
 <table>
 <thead>
 <tr>
@@ -208,27 +208,33 @@ x &amp; x^2 &amp; ?x \\ \hline
 <li><a class="refcode" id="11.2.d2" href="#11.2.d2">11.2.d2</a> <strong>Prime (irreducible over the integers):</strong> a trinomial that <strong>cannot</strong> be written as a product of two binomials with integer coefficients. When the two-number search comes up empty, the trinomial is prime. That's a real answer, not a failure.</li>
 <li><a class="refcode" id="11.2.d3" href="#11.2.d3">11.2.d3</a> <strong>Monic:</strong> leading coefficient 1, i.e. the x² has no number in front (just x², not 3x²). Every trinomial in this lesson is monic. Trinomials like 2x²+7x+3, where the leading coefficient is not 1, factor by an extension of this method covered later.</li>
 </ul>
-<p>Read each worked example slowly, line by line, and ask why each one follows. Together they cover all four sign cases, and each is checked by multiplying back out, which, remember, is just a Unit 10 expansion.</p>
+<p>These cover all four sign cases. The check on each is just a Unit 10 expansion, run back to front.</p>
 </div>
 <section class="worked">
 <p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19.5V15L15.5 4.5 19.5 8.5 9 19Z"/><path d="M13.5 6.5 17.5 10.5"/></svg>Worked example</span></p>
 <p>(covering all sign cases; each checked by expanding back):</p>
 <p><em>Both positive (c&gt;0, b&gt;0):</em>
+<a class="refcode" id="11.2.w1" href="#11.2.w1">11.2.w1</a>
 $$x^2+5x+6=(x+2)(x+3) \qquad \text{Check: } x^2+3x+2x+6 = x^2+5x+6$$
 (2·3=6, 2+3=5.)</p>
 <p><em>Both negative (c&gt;0, b&lt;0):</em>
+<a class="refcode" id="11.2.w2" href="#11.2.w2">11.2.w2</a>
 $$x^2-5x+6=(x-2)(x-3) \qquad \text{Check: } x^2-3x-2x+6 = x^2-5x+6$$
 (c is positive, so same sign; b is negative, so both negative. (−2)(−3)=6, and (−2)+(−3)=−5.)</p>
 <p><em>Opposite signs, sum positive (c&lt;0, b&gt;0):</em>
+<a class="refcode" id="11.2.w3" href="#11.2.w3">11.2.w3</a>
 $$x^2+x-6=(x+3)(x-2) \qquad \text{Check: } x^2-2x+3x-6 = x^2+x-6$$
 (c is negative, so opposite signs; you need a product of −6 and a sum of +1, which is +3 and −2.)</p>
 <p><em>Opposite signs, sum negative (c&lt;0, b&lt;0):</em>
+<a class="refcode" id="11.2.w4" href="#11.2.w4">11.2.w4</a>
 $$x^2-x-6=(x-3)(x+2) \qquad \text{Check: } x^2+2x-3x-6 = x^2-x-6$$
 (Opposite signs again; product −6, sum −1, so the bigger number, 3, is the negative one.)</p>
 <p><em>A bigger both-positive one:</em>
+<a class="refcode" id="11.2.w5" href="#11.2.w5">11.2.w5</a>
 $$x^2+7x+12=(x+3)(x+4) \qquad \text{Check: } x^2+4x+3x+12 = x^2+7x+12$$
 (Pairs of 12: 1·12, 2·6, 3·4; only 3 + 4 gives 7.)</p>
 <p><em>Opposite signs, larger gap:</em>
+<a class="refcode" id="11.2.w6" href="#11.2.w6">11.2.w6</a>
 $$x^2-2x-15=(x-5)(x+3) \qquad \text{Check: } x^2+3x-5x-15 = x^2-2x-15$$
 (Product −15, sum −2, so −5 and +3; the bigger one, 5, is negative because b is negative.)</p>
 <p>With a few correct ones behind you, here's a slip that's easy to make. The mix-up is reasoning the signs backward: writing x²−5x+6 as (x+2)(x+3) when both numbers should be negative, or putting the minus on the wrong number in x²+x−6. When this happens, the multiply-back check gives the wrong middle term, which is your signal.</p>
@@ -238,15 +244,17 @@ $$x^2-2x-15=(x-5)(x+3) \qquad \text{Check: } x^2+3x-5x-15 = x^2-2x-15$$
 <p>Not every trinomial factors over the integers, and saying so plainly matters, because the alternative is hunting forever for an answer that isn't there. The two-number search has a <em>finite</em> list to check, just the factor pairs of c, so it can genuinely run out. When it does, the trinomial is <strong>prime</strong>, and that's the correct, complete answer, not a sign you failed.</p>
 <p>Here's the rule that tells you when to stop. To factor x²+bx+c, list every integer pair that multiplies to c, then check each pair's sum against b. If no pair sums to b, stop: the trinomial is <strong>prime (irreducible over the integers)</strong>. Working through the whole list <em>is</em> the proof. It's the same "I actually checked" spirit as multiplying back, turned on the search itself. The key is that the list has to be <em>exhausted</em>: you've earned the word "prime" only after every pair has been tried, including the negative pairs when the signs call for them.</p>
 <p><em>A prime one (c&gt;0, b&gt;0):</em>
+<a class="refcode" id="11.2.w7" href="#11.2.w7">11.2.w7</a>
 $$x^2+2x+5 \;\Rightarrow\; \text{prime (irreducible over the integers)}$$
 Since c = 5 is positive, the two numbers would share a sign, and since b is positive, both would be positive. The only positive pair multiplying to 5 is 1·5, and that sums to 6, not 2. There's no other pair. The search is exhausted, so it's prime. There's nothing to multiply back here, and that's fine, because the finished list is the proof.</p>
 <p><em>Another prime one:</em>
+<a class="refcode" id="11.2.w8" href="#11.2.w8">11.2.w8</a>
 $$x^2+x+1 \;\Rightarrow\; \text{prime (irreducible over the integers)}$$
 Here c = 1 and b = 1. The only integer pairs multiplying to 1 are 1·1 (sum 2) and (−1)(−1) (sum −2); neither sums to 1. List exhausted, so it's prime.</p>
 <p>Two honest cautions about "prime." First, "prime" doesn't mean "I gave up." It means you finished a finite search and it came up empty, so always list the pairs and read off the sums, the way the examples above do.</p>
 <p>Second, don't reach for non-integers to rescue a near-miss. You might notice that x²+5x+9 <em>almost</em> works and feel tempted to try fractions or decimals. Hold the line: over the integers it's prime, full stop. Other tools for these come in Unit 12.</p>
 <p>And one trap that hides a prime answer: a GCF can disguise things. Take 2x²+4x+10. As written it looks unfactorable, but it isn't prime. Pull the 2 out first to get 2(x²+2x+5), and <em>then</em> the inside, x²+2x+5, is prime. So "factor completely" here means 2(x²+2x+5): the GCF out front, the prime piece left intact.</p>
-<p>This is the reason for a habit worth adopting now: always try the GCF before the two-number search. Pulling the shared factor leaves a smaller, friendlier trinomial inside, and it keeps you from wrongly calling something prime. (A fully worked GCF-first example waits for you at the end of 11.3.)</p>
+<p>This is the reason for a habit worth adopting now: always try the GCF before the two-number search. Pulling the shared factor leaves a smaller, friendlier trinomial inside, and it keeps you from wrongly calling something prime.</p>
 <p>A couple more places people stumble, both caught by the same multiply-back habit. One is declaring "prime" too soon: quitting after one or two pairs instead of all of them, or forgetting the negative pairs when c is positive and b is negative. Only an exhausted list earns the word.</p>
 <p>The other is skipping the check entirely, accepting, say, (x+2)(x+3) for x²+6x+6 without expanding. Always multiply back, because the middle term is where errors surface. (And as it happens, x²+6x+6 is itself prime: no integer pair multiplies to 6 and adds to 6.)</p>
 <p>If a problem still isn't landing after you've walked the signs and the pairs, it's fine to leave it and come back tomorrow. A break genuinely helps, and you haven't lost anything. When you return, re-read the area-box picture at the top of the lesson first; that's the version of this idea everything else is built on.</p>

@@ -8,7 +8,7 @@ It feels like a detour and it isn't. Pulling a method back from memory is a few 
 
 An inequality is an equation with a direction. Almost everything you already do to solve an equation carries straight over: isolate the variable with balanced moves.
 
-There's exactly one new rule, and it's the source of most slips in the whole unit. So the first lesson spends real time on it, and on a check that catches it every time.
+There's exactly one new rule, and it's the source of most slips in the whole unit. So the first lesson spends its time on that rule, and on a check that catches it every time.
 
 After that, the unit chains two conditions together, reads absolute value as plain distance, and finally lifts the whole picture into two variables, where the answer becomes a shaded region instead of a line.
 
@@ -51,11 +51,13 @@ Read each worked example slowly, a line at a time, and ask why each line follows
 
 **Worked examples:**
 
+{#8.1.w1}
 *Example 1, no flip.* Solve x + 3 < 7.
 The +3 is added onto x, so undo it: subtract 3 from both sides, which sends the +3 to zero and leaves x alone. That gives x < 4. The sign didn't move, because subtracting doesn't flip it.
 Graph: an open circle at 4, since < leaves the boundary out, and shade left toward the smaller values.
 Now test a point. Try x = 0, which is in "x < 4." Back in the original: 0 + 3 = 3, and 3 < 7 is true. (And 0 < 4 fits the answer too.) So the answer holds: **x < 4**.
 
+{#8.1.w2}
 *Example 2, two steps, no flip.* Solve 2x − 1 ≥ 5.
 Undo the −1 first by adding 1 to both sides: 2x ≥ 6. Now x is multiplied by 2, so divide both sides by 2 to free it. You're dividing by a *positive* 2, so the sign stays put: x ≥ 3.
 Graph: a filled circle at 3, since ≥ includes the boundary, and shade right.
@@ -65,13 +67,17 @@ If a test ever *doesn't* come out true, you haven't failed. Your check just did 
 
 Now the move worth slowing down for. With a *positive* coefficient, an inequality behaves just like an equation. The moment a *negative* coefficient appears, the flip enters.
 
+{#8.1.w3}
 *Example 3, the flip.* Solve −2x < 6.
 Here x is multiplied by −2, so divide both sides by −2 to free it. Dividing by a negative flips the sign, so < becomes >: x > −3.
 Graph: an open circle at −3, and shade right.
-Test x = 0, which is in "x > −3": the original is −2(0) = 0, and 0 < 6 is true; and 0 > −3 fits. This is where the test pays off: if you'd forgotten to flip and written x < −3, then 0 would be shut out of your answer, yet 0 plainly makes the original true. The test would have caught the missing flip on the spot. Solution: **x > −3**.
+Test x = 0, which is in "x > −3": the original is −2(0) = 0, and 0 < 6 is true; and 0 > −3 fits. Solution: **x > −3**.
+
+This is where testing a point earns its keep. Had you forgotten to flip and written x < −3, then 0 would be shut out of your answer, even though 0 plainly makes the original true. The test would have caught the missing flip on the spot.
 
 A bare −x, as in the next example, hides the same trap. Reading −x as "negative x" can tempt you to leave the sign alone, but −x is −1 times x, and undoing that −1 means dividing by a negative, so the flip still applies.
 
+{#8.1.w4}
 *Example 4, the −x trap.* Solve 5 − x > 2.
 Subtract 5 from both sides: −x > −3. Now x is multiplied by −1, so divide both sides by −1, and that flips the sign: x < 3.
 Test x = 0: in the original, 5 − 0 = 5, and 5 > 2 is true; and 0 < 3 fits. Solution: **x < 3**.
@@ -93,7 +99,7 @@ One way people get stuck early is treating an inequality like it has a single an
 2. {#8.1.c2} Two people solve −x < 4. One writes x < −4, the other x > −4. Use x = 0 to decide who's right and say how you know. (Put x = 0 in the original: −0 = 0, and 0 < 4 is true, so 0 must be in the answer. It fits x > −4 but not x < −4, so x > −4 is correct. The −1 was divided out, which flips the sign.)
 3. {#8.1.c3} In words, describe the number-line graph of x ≤ 2: which circle, and which way do you shade? (A filled circle at 2, because ≤ includes the boundary, then shade left toward the smaller numbers.)
 
-A mixed set is harder than a page of one kind of problem, and that difficulty is doing the real work of making the skill last. Every problem below has its answer at the end of the lesson, and if one stalls you, flip back to the worked example it's based on. That's what it's there for. Watch especially for Set B, where a negative coefficient means a flip is coming, and close every problem by testing a point.
+A mixed set is harder than a page of one kind of problem, and that difficulty is what makes the skill last. Every problem below has its answer at the end of the lesson, and if one stalls you, flip back to the worked example it's based on. Watch especially for Set B, where a negative coefficient means a flip is coming, and close every problem by testing a point.
 
 **Practice problems** (solve; then describe the number-line graph in words: which circle and which way you shade):
 
@@ -161,23 +167,28 @@ The solving follows the picture. For a chained *and*, you do the same move to **
 
 **Worked examples:**
 
+{#8.2.w1}
 *Example 1, "and" (three-part).* Solve -1 < x + 2 < 4.
 The middle has a +2 you want to clear, so subtract 2. To keep the whole chain balanced, subtract it from all three parts at once: -1 − 2 < x < 4 − 2, which is -3 < x < 2.
 Graph: open circles at -3 and 2 (both signs strict), shade the segment between them.
 Test a point from inside, x = 0: in the original, 0 + 2 = 2, and -1 < 2 < 4 is true. Solution: **-3 < x < 2**.
 
+{#8.2.w2}
 *Example 2, "and" with a division.* Solve 3 ≤ 2x - 1 ≤ 9.
 Add 1 to all three parts: 4 ≤ 2x ≤ 10. Now divide all three by 2; it's a positive 2, so no sign flips: 2 ≤ x ≤ 5.
 Graph: filled circles at 2 and 5 (both inclusive), shade between. Solution: **2 ≤ x ≤ 5**.
 
+{#8.2.w3}
 *Example 3, "or".* Solve x < -1 **or** x > 3.
 This one is already solved. It's two separate conditions, so there's nothing to isolate. Graph: an open circle at -1 shading left, and an open circle at 3 shading right, with nothing in the middle. Solution: **x < -1 or x > 3**.
 
+{#8.2.w4}
 *Example 4, "or" needing work.* Solve 2x ≤ -4 **or** x - 3 > 2.
 Solve each piece on its own. Left: divide 2x ≤ -4 by the positive 2 to get x ≤ -2. Right: add 3 to x − 3 > 2 to get x > 5. Then put them together. Graph: a filled circle at -2 shading left, and an open circle at 5 shading right. Solution: **x ≤ -2 or x > 5**.
 
 The flip rule hasn't gone anywhere. It still applies to a chained inequality, and there it touches *both* signs at once.
 
+{#8.2.w5}
 *Example 5, three-part, divide by a negative (flip BOTH signs).* Solve -6 < -2x ≤ 4.
 The middle is -2x, so divide all three parts by -2. Dividing by a negative flips each sign: the < and the ≤ both turn around, giving -6/-2 > x ≥ 4/-2, that is 3 > x ≥ -2.
 That's correct, but it's awkward to read with the bigger number on the left. Rewrite it left-to-right in increasing order: reading 3 > x ≥ -2 backwards gives **-2 ≤ x < 3**. Notice only the *positions* moved. The strict end stayed strict and the inclusive end stayed inclusive, so the 3 keeps its open mark and the -2 keeps its filled one.
@@ -193,7 +204,7 @@ The second shows up when the two conditions don't actually overlap. "x > 5 and x
 2. {#8.2.c2} Why does x > 5 **and** x < 1 have no solution, while x > 5 **or** x < 1 has lots? Describe both graphs. (No number is above 5 and below 1 at once, so the *and* has no solution and its graph is empty. The *or* needs only one condition, so it covers everything below 1 together with everything above 5: two rays heading opposite ways.)
 3. {#8.2.c3} You solve a three-part inequality and divide all parts by -2. What happens to the two inequality signs, and how would testing a point confirm it? (Dividing by a negative flips both signs at once. To confirm, pick a number from your final segment, put it in the original, and check it makes a true statement; testing the endpoints shows which is included and which isn't.)
 
-These problems mix *and* with *or* on purpose, since having to tell them apart each time is what gets the difference to stick. Each problem's answer is at the end of the lesson, and if one stalls you, look back at the worked example it matches. Notice as you go that *and* problems should collapse to one segment and *or* problems should open into two rays. If your picture comes out the other way, that's a cue to re-read the joining word.
+These problems mix *and* with *or* on purpose, since having to tell them apart each time is what gets the difference to stick. The answers and the matching worked examples are at the end of the lesson if you get stuck. Notice as you go that *and* problems should collapse to one segment and *or* problems should open into two rays. If your picture comes out the other way, that's a cue to re-read the joining word.
 
 **Practice problems** (solve and describe the graph: segment-between for *and*, two rays for *or*):
 
@@ -250,14 +261,19 @@ One setup step comes before you read any of those off: get the absolute value by
 
 **Worked examples:**
 
+{#8.3.w1}
 *Example: inclusive "within".* Solve |x| ≤ 2. This asks for the numbers within 2 of 0, and the ≤ includes the boundary, so -2 ≤ x ≤ 2. Filled circles at -2 and 2, shade the segment between. Solution: **-2 ≤ x ≤ 2**.
 
+{#8.3.w2}
 *Example: the graph y = |x|.* Plot (-2,2), (-1,1), (0,0), (1,1), (2,2): a **V** with vertex (0,0), arms at slope ±1, resting on the x-axis. Then y = |x| − 2 is the same V dropped 2, with vertex (0,-2), and y = |x − 1| is it slid right 1, with vertex (1,0). Nothing to solve here, you're just reading the picture.
 
+{#8.3.w3}
 *Example: "outside" (or).* Solve |x| > 2. This asks for the numbers more than 2 from 0, which is **x < -2 or x > 2**. Open circles at -2 and 2, shade outward in two rays.
 
+{#8.3.w4}
 *Example: isolate first.* Solve 2|x| ≤ 8. Divide both sides by 2 first; it's a positive 2, so nothing flips: |x| ≤ 4. That's the numbers within 4 of 0, so **-4 ≤ x ≤ 4**. Filled circles at -4 and 4, shade between.
 
+{#8.3.w5}
 *Example: no solution / all reals.* Distance is never negative, so you can read these straight off the picture without any algebra. |x| = -3 has **no solution**, because nothing sits a negative distance from 0. |x| < -2 has **no solution** for the same reason: no distance is below -2. And |x| > -1 is true for **every** real x, since every distance is more than -1.
 
 That last example points at the trap to watch here. It's tempting to give |x| = k a single answer and stop, but distance runs both ways, so expect two: x = k and x = −k (the lone exception is k = 0).
@@ -303,11 +319,15 @@ This part is here so you can see where the idea goes next. It isn't part of the 
 
 When the center moves off 0, as in |x − 3| = 5 or |2x − 1| = 7, you can't just read x = ±k anymore. The move is to split into **two cases** (the inside equals +k, or the inside equals −k), solve each, and name the answer set. Here's that method on one example.
 
+{#8.3.w6}
 *w1: |x − 3| = 5.* Two cases: x − 3 = 5 → x = 8, or x − 3 = -5 → x = -2. Solutions: **x = 8 or x = -2**. Check: |8 − 3| = 5, |-2 − 3| = 5. *(Pictured: "distance 5 from 3.")*
 
 *A few more, same idea.*
+{#8.3.w7}
 *w2: |x − 3| < 5.* Within 5 of 3 → -5 < x − 3 < 5 → -2 < x < 8 (interval (-2, 8)).
+{#8.3.w8}
 *w3: |x − 3| > 5.* More than 5 from 3 → x − 3 < -5 or x − 3 > 5 → x < -2 or x > 8.
+{#8.3.w9}
 *w4: |x + 2| = 3.* |x + 2| = |x − (-2)|, distance 3 from -2 → x = 1 or x = -5.
 
 *Reach practice (optional):*
@@ -332,13 +352,14 @@ In Unit 5, the answer to a two-variable equation like y = 2x + 1 was a line, eve
 
 Think about y > 2x + 1. It's asking, for each point, "is the output bigger than what the line gives?" Put another way, "which points sit *above* the line y = 2x + 1?" The line itself is the dividing fence: above it the inequality is true, below it false. So the answer isn't the fence, it's the whole field on one side of it. That field is called a **half-plane**, and the line is its **boundary** {#8.4.f1}.
 
-Two decisions turn that idea into a graph. First, whether the boundary line is drawn solid or dashed, which is the same open-versus-filled choice from Lesson 8.1 in a new costume. If the inequality is strict (< or >), the boundary itself isn't included, so you draw it **dashed**. If it's inclusive (≤ or ≥), the boundary counts, so you draw it **solid**. Second, which side to shade, and here there's a reliable method that never makes you guess.
+Once the boundary is drawn, two decisions turn it into a finished graph:
 
-To pick the side, **test a point** that isn't on the line, drop it into the inequality, and see if it makes a true statement. If it does, shade the side that point is on; if it doesn't, shade the other side.
+1. **Dashed or solid?** This is the same open-versus-filled choice from Lesson 8.1 in a new costume. If the inequality is strict (< or >), the boundary itself isn't included, so you draw it **dashed**. If it's inclusive (≤ or ≥), the boundary counts, so you draw it **solid**.
+2. **Which side to shade?** Here there's a reliable method that never makes you guess: **test a point** that isn't on the line, drop it into the inequality, and see if it makes a true statement. If it does, shade the side that point is on; if it doesn't, shade the other side.
 
 The easiest test point is almost always the origin, (0,0), because the arithmetic is trivial, unless the line runs through the origin, in which case you pick any other off-line point. And say the test out loud as you do it, because hearing it keeps you honest: "at (0,0), is 0 > 1? No, so shade the other side."
 
-So the whole procedure is three steps: graph the boundary (compute two points the Unit 5 way, then make it dashed or solid), test an off-line point and shade the side that comes out true, and state that test in words. Compute the boundary points rather than eyeballing them; a small sign slip there throws off the whole line.
+So you graph the boundary, mark it dashed or solid, and let a tested point pick the side. Compute the two boundary points rather than eyeballing them; a small sign slip there throws off the whole line.
 
 For a **system**, meaning two or more inequalities that must all hold at once, you graph each region the same way, then keep only where they **overlap**. The overlap is the set of points that satisfy every inequality together, and you confirm it by testing a point that should be inside all of them.
 
@@ -350,18 +371,22 @@ For a **system**, meaning two or more inequalities that must all hold at once, y
 
 **Worked examples:**
 
+{#8.4.w1}
 *Example 1, strict, dashed.* Graph y > 2x + 1.
 Boundary: y = 2x + 1, through (0,1) and (1,3). It's strict (>), so draw it **dashed**: the line itself isn't part of the answer.
 Test (0,0): is 0 > 2(0) + 1 = 1? That's 0 > 1, which is **false**, so shade the side *not* containing the origin. Region: everything above the dashed line.
 
+{#8.4.w2}
 *Example 2, inclusive, solid.* Graph y ≤ -x + 3.
 Boundary: y = -x + 3, through (0,3) and (3,0). It's inclusive (≤), so draw it **solid**: the line is included.
 Test (0,0): is 0 ≤ -0 + 3 = 3? That's 0 ≤ 3, which is **true**, so shade the side containing the origin. Region: the line and everything below it.
 
+{#8.4.w3}
 *Example 3, fractional slope, dashed.* Graph y < (1/2)x - 2.
 Boundary: y = (1/2)x - 2, through (0,-2) and (2,-1). Strict (<), so **dashed**.
 Test (0,0): is 0 < (1/2)(0) - 2 = -2? That's 0 < -2, which is **false**, so shade the other side. Region: below the dashed line.
 
+{#8.4.w4}
 *Example 4, a system.* Graph the system y ≥ x - 1 **and** y ≤ -x + 3.
 Take them one at a time. Boundary 1: y = x - 1, **solid** (inclusive); test (0,0): is 0 ≥ -1? **True**, so shade the side with the origin. Boundary 2: y = -x + 3, **solid**; test (0,0): is 0 ≤ 3? **True**, so shade the side with the origin again.
 The solution is the **overlap** of the two shaded regions, a wedge that contains the origin, fenced by both solid lines. Confirm it with a point inside the overlap, say (1,0): 0 ≥ 1 − 1 = 0 is true, and 0 ≤ -1 + 3 = 2 is true, so (1,0) belongs to both.
@@ -375,7 +400,7 @@ And if the boundary runs through the origin, the origin sits *on* the fence and 
 2. {#8.4.c2} Your boundary line passes through (0,0). Why can't you use the origin as your test point, and what would you use instead? (Because (0,0) is on the boundary, it can't tell you which side is the solution. It's on the fence, not on either side. Pick any point not on the line, such as (1,0), and test that.)
 3. {#8.4.c3} A system is y > x and y < 4. Describe the solution region: which two boundaries, dashed or solid, and roughly where the overlap sits. (Both boundaries are dashed: the line y = x and the horizontal line y = 4. The overlap is the region above y = x and below y = 4, a wedge opening to the left, where points satisfy both at once.)
 
-Working a mixed set takes more effort than grinding one type, and that effort is exactly what carries the skill to next week. Answers are at the end of the lesson, and a stalled problem means flip back to the matching worked example. For each one, name the boundary line, say dashed or solid, run the test point out loud, and then state which side to shade.
+For each problem, name the boundary line, say dashed or solid, run the test point out loud, and then state which side to shade. The answers are at the end of the lesson, with a worked example to match each problem.
 
 **Practice problems** (for each: name the boundary line, dashed or solid, the test point with its true/false result, and which side to shade):
 
@@ -407,4 +432,4 @@ You can now solve a one-variable inequality the same way you solve an equation, 
 
 You can graph a solution with the right circle and direction, chain conditions with *and* (the overlap) and *or* (the union), read absolute value as distance from 0 to handle |x| = k, |x| < k, and |x| > k, and graph a two-variable inequality or a system as a shaded region picked out by a test point.
 
-The thread through all of it is the same: solve as you always have, then let a tested point tell you the answer is real.
+One habit runs through all of it: solve the way you always have, then test a point in the original to confirm the answer.

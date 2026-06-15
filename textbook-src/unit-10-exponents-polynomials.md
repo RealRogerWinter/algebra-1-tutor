@@ -16,11 +16,11 @@ Exponents are just a shorthand for "multiply this by itself a few times." That's
 
 When you're unsure what a rule should be, you can always write the factors out and count them. That habit, more than any memorized rule, is what keeps you out of trouble here.
 
-These rules are the grammar of nearly every expression ahead: scientific notation in the next lesson, multiplying polynomials later in this one, and all of the two units after this. So it's worth getting them solid, and the way to make them solid is to see *why* each one is what it is.
+These rules are the grammar of nearly every expression ahead: scientific notation in the next lesson, multiplying polynomials later in this one, and the two units after this. The way to make them stick is to see *why* each one is what it is, so that's how we'll build them.
 
 Here's the first one, built from the ground up. Take x² · x³. Don't reach for a rule yet. Just write out what each piece means and count:
 $$x^2\cdot x^3 = (x\cdot x)(x\cdot x\cdot x) = x^5$$
-Line up the x's: two of them, then three more, five in all. When you multiply two powers of the same base, you're pooling all their factors into one pile, so the exponents **add**. Hold onto that single picture: pool the factors, count them. It settles the most common mix-up in the whole lesson before it can start.
+Line up the x's: two of them, then three more, five in all. When you multiply two powers of the same base, you're pooling all their factors into one pile, so the exponents **add**. Hold onto that single picture: pool the factors, count them. Once that habit is in place, the add-versus-multiply mix-up later in this lesson has much less to grab onto.
 
 Division works the same way, read in reverse. Take x⁵ over x²:
 $$\frac{x^5}{x^2} = \frac{x\cdot x\cdot x\cdot x\cdot x}{x\cdot x} = x^3$$
@@ -59,24 +59,31 @@ Read each worked example slowly, a line at a time, and ask why each line follows
 **Worked examples:**
 
 *Product rule, add the exponents:*
+{#10.1.w1}
 $$x^4\cdot x^3 = x^{4+3}=x^7$$
 
 *The trap, done right (add, don't multiply):*
+{#10.1.w2}
 $$x^2\cdot x^3 = x^{2+3}=x^5 \quad(\text{not }x^6;\ \text{count: }(xx)(xxx)=xxxxx)$$
 
 *Quotient rule, subtract:*
+{#10.1.w3}
 $$\frac{x^7}{x^2}=x^{7-2}=x^5$$
 
 *Power of a power, multiply:*
+{#10.1.w4}
 $$(x^2)^3 = x^{2\cdot 3}=x^6$$
 
 *Power of a product, exponent reaches the coefficient too:*
+{#10.1.w5}
 $$(2x)^3 = 2^3 x^3 = 8x^3$$
 
 *Zero & negative:*
+{#10.1.w6}
 $$x^0 = 1 \qquad\qquad x^{-2}=\frac{1}{x^2}$$
 
 *Quotient landing negative (ties the two ideas together):*
+{#10.1.w7}
 $$\frac{x^3}{x^5}=x^{3-5}=x^{-2}=\frac{1}{x^2}$$
 
 The slip that catches the most people here is using the wrong rule between two that look alike: writing x² · x³ = x⁶, or (x²)³ = x⁵. The pull is to run the same operation in both cases, since the expressions look so similar.
@@ -126,7 +133,7 @@ The set below mixes the rules together on purpose, which is harder than repeatin
 
 Some numbers are too long to read comfortably: the distance to a star, the width of an atom. Scientific notation is a tidy way to write them, with one digit, a decimal tail, and a power of ten that records how big the number really is.
 
-The good news is you already did the hard part last lesson. Multiplying and dividing these numbers is just the exponent rules from 10.1, applied to powers of ten.
+You already did the hard part last lesson. Multiplying and dividing these numbers is just the exponent rules from 10.1, applied to powers of ten.
 
 Start with what a power of ten actually does. Multiplying by 10 slides the decimal point one place to the right; dividing by 10 slides it one place left. So 10ⁿ is really a record of *how many places the point moved*. Take 5300. Picture the decimal point starting after the 5, at 5.3, and ask how far it has to travel to rebuild the full number: three places right gets you back to 5300. So 5300 = 5.3 × 10³. The exponent 3 is just the count of slides.
 
@@ -143,27 +150,34 @@ Once a number is in this form, multiplying and dividing splits into two easy job
 **Worked examples:**
 
 *Large number → scientific notation:*
+{#10.2.w1}
 $$5300 = 5.3\times 10^3 \qquad(\text{check: } 5.3\times 1000 = 5300)$$
 
 *Small number → scientific notation (negative exponent):*
+{#10.2.w2}
 $$0.00042 = 4.2\times 10^{-4} \qquad(\text{check: } 4.2\div 10^{4}=0.00042)$$
 
 *Multiply, multiply the a's and add the exponents:*
+{#10.2.w3}
 $$(3\times 10^4)(2\times 10^3) = (3\cdot 2)\times 10^{4+3} = 6\times 10^7$$
 
 *Divide, divide the a's and subtract the exponents:*
+{#10.2.w4}
 $$\frac{8\times 10^5}{2\times 10^2} = \frac{8}{2}\times 10^{5-2} = 4\times 10^3$$
 
 *Mixed signs in the exponent (callback to 10.1):*
+{#10.2.w5}
 $$(4\times 10^6)(2\times 10^{-2}) = 8\times 10^{6+(-2)} = 8\times 10^4$$
 
-*Renormalize UP, the coefficient product reaches 10 or more (the most common operations slip):*
+*Renormalize UP, the coefficient product reaches 10 or more:*
+{#10.2.w6}
 $$(6\times 10^4)(5\times 10^3) = (6\cdot 5)\times 10^{4+3} = 30\times 10^7$$
 Stop. 30 is **not** in [1,10), so 30×10⁷ is not yet scientific notation. Renormalize: write 30 as 3.0×10¹, then fold that extra power of ten into the exponent (the product rule again):
 $$30\times 10^7 = 3.0\times 10^1\times 10^7 = 3\times 10^8$$
 The decimal slid one place left (30→3.0), so the exponent went **up** by 1 (7→8). Sanity check: bigger coefficient shrunk ⇒ exponent must grow to keep the value the same. (Verify: 30×10⁷ = 300,000,000 = 3×10⁸.)
 
 *Renormalize DOWN, a division coefficient drops below 1:*
+{#10.2.w7}
 $$\frac{2\times 10^3}{8\times 10^5} = \frac{2}{8}\times 10^{3-5} = 0.25\times 10^{-2}$$
 Stop. 0.25 is **below** 1, so this isn't scientific notation either. Renormalize the other way: 0.25 = 2.5×10⁻¹, and folding in that 10⁻¹ drops the exponent by 1:
 $$0.25\times 10^{-2} = 2.5\times 10^{-1}\times 10^{-2} = 2.5\times 10^{-3}$$
@@ -237,21 +251,27 @@ If they *hadn't* matched, that wouldn't be a failure. Your check would have just
 
 **Worked examples:**
 
+{#10.3.w1}
 *Naming (no arithmetic):* 3x²-7 → binomial, degree 2, leading coefficient 3.
 
 *Standard form:*
+{#10.3.w2}
 $$2+5x^2-3x \;\Rightarrow\; 5x^2-3x+2$$
 
 *Add:*
+{#10.3.w3}
 $$(3x^2+2x-1)+(x^2-5x+4) = 4x^2-3x+3$$
 
 *Add (a term cancels to zero):*
+{#10.3.w4}
 $$(x^2+6x+2)+(3x^2-6x-7) = 4x^2+0x-5 = 4x^2-5$$
 
 *Subtract, distribute the negative (the #1 trap here):*
+{#10.3.w5}
 $$(2x^2+3x)-(x^2-x+2) = x^2+4x-2 \qquad\text{Check at }x=1:\; 5-2=3 \;\text{ and }\; 1+4-2=3$$
 
 *Subtract, three terms each:*
+{#10.3.w6}
 $$(5x^2-2x+1)-(2x^2+3x-4) = 3x^2-5x+5$$
 
 In that fourth example, notice the 6x and the −6x added to nothing and the term simply dropped out: 4x² + 0x − 5 is just 4x² − 5. A term going to zero isn't something missing; it's a real result, and you write what's left.
@@ -321,19 +341,24 @@ Same four products, same middle term, no grid. Pick whichever picture you find e
 **Worked examples:**
 
 *Monomial × binomial, distribute:*
+{#10.4.w1}
 $$3x(x+4)=3x^2+12x$$
 
 *Binomial × binomial, the area box:*
+{#10.4.w2}
 $$(x+2)(x+3)=x^2+5x+6 \quad(\text{middle term }3x+2x=5x)$$
 
 *A negative in one binomial (watch signs):*
+{#10.4.w3}
 $$(x-3)(x-4)=x^2-4x-3x+12=x^2-7x+12$$
 
-*Difference of squares, middle term vanishes (preview of Unit 11 special pattern):*
+*Difference of squares, the middle term vanishes:*
+{#10.4.w4}
 $$(x-4)(x+4)=x^2+4x-4x-16=x^2-16$$
-The +4x and -4x cancel, and that's *why* (a-b)(a+b)=a²-b². Unit 11.3 will run this backward.
+The +4x and -4x cancel, and that's *why* (a-b)(a+b)=a²-b².
 
-*Squaring a binomial, the middle term is doubled (preview of perfect-square trinomials):*
+*Squaring a binomial, the middle term is doubled:*
+{#10.4.w5}
 $$(x+3)^2=(x+3)(x+3)=x^2+3x+3x+9=x^2+6x+9$$
 Note that (x+3)²≠x²+9. The middle 6x is the whole point.
 

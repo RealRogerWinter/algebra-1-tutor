@@ -42,21 +42,25 @@ Teach the flip's **why** (the 2<3 → -2 ? -3 argument above, `misconceptions.md
 
 **Worked examples:**
 
+{#8.1.w1}
 *Example 1 — no flip.* Solve x + 3 < 7.
 Subtract 3 from both sides: x < 4.
 Graph: **open circle** at 4 (strict), shade **left** (toward smaller values).
 Test a point: try x = 0. Original: 0 + 3 = 3 < 7, and 0 < 4 — agree. Solution: **x < 4**.
 
+{#8.1.w2}
 *Example 2 — two steps, no flip.* Solve 2x - 1 ≥ 5.
 Add 1: 2x ≥ 6. Divide by **+2** (positive → no flip): x ≥ 3.
 Graph: **filled circle** at 3 (inclusive), shade **right**.
 Test x = 4: 2(4) - 1 = 7 ≥ 5, and 4 ≥ 3. Solution: **x ≥ 3**.
 
+{#8.1.w3}
 *Example 3 — the flip.* Solve -2x < 6.
 Divide both sides by **-2** → **flip** the sign: x > -3.
 Graph: **open circle** at -3, shade **right**.
 Test x = 0: original -2(0) = 0 < 6; is 0 > -3? — agree. (Had we forgotten to flip and written x < -3, then 0 would be *excluded* even though it makes the original true — the test catches it.) Solution: **x > -3**.
 
+{#8.1.w4}
 *Example 4 — the -x trap.* Solve 5 - x > 2.
 Subtract 5: -x > -3. Now divide by -1 → **flip**: x < 3.
 Test x = 0: 5 - 0 = 5 > 2; is 0 < 3?. Solution: **x < 3**.
@@ -132,21 +136,26 @@ Test x = 0: 5 - 0 = 5 > 2; is 0 < 3?. Solution: **x < 3**.
 
 **Worked examples:**
 
+{#8.2.w1}
 *Example 1 — "and" (three-part).* Solve -1 < x + 2 < 4.
 Subtract 2 from **all three** parts: -1 - 2 < x < 4 - 2, i.e. -3 < x < 2.
 Graph: open circles at -3 and 2, shade the segment **between**.
 Test x = 0 (inside): -1 < 0+2=2 < 4. Solution: **-3 < x < 2**.
 
+{#8.2.w2}
 *Example 2 — "and" with a division.* Solve 3 ≤ 2x - 1 ≤ 9.
 Add 1 to all parts: 4 ≤ 2x ≤ 10. Divide all by +2 (positive → no flip): 2 ≤ x ≤ 5.
 Graph: filled circles at 2 and 5, shade between. Solution: **2 ≤ x ≤ 5**.
 
+{#8.2.w3}
 *Example 3 — "or".* Solve x < -1 **or** x > 3.
 Already solved — two rays. Graph: open circle at -1 shading **left**, open circle at 3 shading **right**; nothing in the middle. Solution: **x < -1 or x > 3**.
 
+{#8.2.w4}
 *Example 4 — "or" needing work.* Solve 2x ≤ -4 **or** x - 3 > 2.
 Left: x ≤ -2. Right: x > 5. Graph: filled circle at -2 shading left, open circle at 5 shading right. Solution: **x ≤ -2 or x > 5**.
 
+{#8.2.w5}
 *Example 5 — three-part, divide by a negative (flip BOTH signs).* Solve -6 < -2x ≤ 4.
 Divide **all three** parts by **-2** → **flip both** signs: -6/-2 > x ≥ 4/-2, i.e. 3 > x ≥ -2.
 Rewrite left-to-right in **increasing** order (smaller number on the left): reading 3 > x ≥ -2 backwards gives **-2 ≤ x < 3**. (The strict end stays strict and the inclusive end stays inclusive — only their positions move, so the 3 keeps its open/strict mark and -2 keeps its filled/inclusive one.)
@@ -216,14 +225,19 @@ Test a point — x = 0 (inside): -6 < -2(0) = 0 ≤ 4 ✓. Check the endpoints t
 
 **Worked examples** (the mastery set — symmetric, centered at 0; quote a code like 8.3.w7 to revisit one):
 
+{#8.3.w1}
 *w5 — inclusive "within".* Solve |x| ≤ 2. Within 2 of 0, inclusive → -2 ≤ x ≤ 2. Filled circles at -2 and 2, shade between. Solution: **-2 ≤ x ≤ 2**.
 
+{#8.3.w2}
 *w6 — the graph y = |x|.* Plot (-2,2), (-1,1), (0,0), (1,1), (2,2): a **V** with vertex (0,0), arms at slope ±1, resting on the x-axis. y = |x| − 2 is the same V dropped 2 (vertex (0,-2)); y = |x − 1| is it slid right 1 (vertex (1,0)). No solving here — just read the picture.
 
+{#8.3.w3}
 *w7 — "outside" (or).* Solve |x| > 2. More than 2 from 0 → **x < -2 or x > 2**. Open circles at -2 and 2, shade outward (two rays).
 
+{#8.3.w4}
 *w8 — isolate first.* Solve 2|x| ≤ 8. Divide by 2 (positive → no flip): |x| ≤ 4. Within 4 of 0 → **-4 ≤ x ≤ 4**. Filled circles at -4 and 4, shade between.
 
+{#8.3.w5}
 *w9 — no solution / all reals.* Distance is never negative, so read these straight off the picture: |x| = -3 has **no solution**; |x| < -2 has **no solution**; |x| > -1 is true for **every** real x (**all real numbers**).
 
 **Watch for:**
@@ -272,11 +286,15 @@ When the center moves off 0 — |x − 3| = 5, |2x − 1| = 7 — you can't just
 
 *The general method, one worked example.*
 
+{#8.3.w6}
 *w1 — |x − 3| = 5.* Two cases: x − 3 = 5 → x = 8, or x − 3 = -5 → x = -2. Solutions: **x = 8 or x = -2**. Check: |8 − 3| = 5, |-2 − 3| = 5. *(Pictured: "distance 5 from 3.")*
 
 *A few more, same idea.*
+{#8.3.w7}
 *w2 — |x − 3| < 5.* Within 5 of 3 → -5 < x − 3 < 5 → -2 < x < 8 (interval (-2, 8)).
+{#8.3.w8}
 *w3 — |x − 3| > 5.* More than 5 from 3 → x − 3 < -5 or x − 3 > 5 → x < -2 or x > 8.
+{#8.3.w9}
 *w4 — |x + 2| = 3.* |x + 2| = |x − (-2)|, distance 3 from -2 → x = 1 or x = -5.
 
 *Reach practice (optional):*
@@ -316,18 +334,22 @@ When the center moves off 0 — |x − 3| = 5, |2x − 1| = 7 — you can't just
 
 **Worked examples:**
 
+{#8.4.w1}
 *Example 1 — strict, dashed.* Graph y > 2x + 1.
 Boundary y = 2x + 1 (points (0,1) and (1,3)), **dashed** (strict).
 Test (0,0): 0 > 2(0)+1 = 1? **False** → shade the side **not** containing the origin (above the line). Region: everything above the dashed line.
 
+{#8.4.w2}
 *Example 2 — inclusive, solid.* Graph y ≤ -x + 3.
 Boundary y = -x + 3 (points (0,3) and (3,0)), **solid** (inclusive).
 Test (0,0): 0 ≤ -0 + 3 = 3? **True** → shade the side **containing** the origin (below the line). Region: the line and everything below it.
 
+{#8.4.w3}
 *Example 3 — fractional slope, dashed.* Graph y < (1/2)x - 2.
 Boundary y = (1/2)x - 2 (points (0,-2) and (2,-1)), **dashed**.
 Test (0,0): 0 < (1/2)(0) - 2 = -2? **False** → shade the **other** side (below the line). Region: below the dashed line.
 
+{#8.4.w4}
 *Example 4 — a system.* Graph the system y ≥ x - 1 **and** y ≤ -x + 3.
 Boundary 1: y = x - 1, **solid**; test (0,0): 0 ≥ -1? **True** → shade the side with the origin (above/left).
 Boundary 2: y = -x + 3, **solid**; test (0,0): 0 ≤ 3? **True** → shade the side with the origin (below/left).

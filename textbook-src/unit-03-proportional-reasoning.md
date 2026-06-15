@@ -18,7 +18,7 @@ Before each new lesson, redo two or three problems from a lesson or two back fro
 
 Suppose you drove 120 miles in 2 hours. How far did you go in *one* hour, on average? You split the 120 across the 2 hours and get 60 miles. That split is the whole idea of this lesson.
 
-You took a comparison of two amounts and boiled it down to "per one hour." That per-one number, 60 miles per hour, is what the real world runs on: miles per hour, price per item, words per minute.
+You took a comparison of two amounts and boiled it down to "per one hour." That per-one number, 60 miles per hour, is what the real world runs on: price per item, words per minute.
 
 Here's the idea built up slowly, because the "per one" move is the one to get solid.
 
@@ -106,7 +106,7 @@ Mixing the problem types feels harder than drilling one kind in a row, and that 
 
 Say 4 apples cost \$3. At that same price, what do 10 apples cost? The two words doing all the work are *same price*.
 
-The price-per-apple doesn't change just because you bought more, so the comparison "apples to dollars" stays equal even as both numbers grow. Two equal comparisons like that, set side by side, are a proportion. Most of scaling, from recipes to maps to currency, is exactly this move.
+The price-per-apple doesn't change just because you bought more, so the comparison "apples to dollars" stays equal even as both numbers grow. Two equal comparisons like that, set side by side, are a proportion. Most of scaling, from recipes to map distances, is exactly this move.
 
 Start with the picture: stack the two comparisons as equal fractions, keeping the same unit on top on both sides.
 
@@ -159,7 +159,7 @@ Before you set up any proportion, say your plan in a sentence: when this quantit
 
 You can now set up a proportion, explain cross-multiplication as clearing both bottoms, solve the leftover equation with your Unit 2 moves, and stop to check whether a situation is direct or inverse before you set it up.
 
-The problems below come shuffled rather than sorted by type, which is harder but makes the moves stick. Each one has its answer at the end of the lesson, and a stalled problem is your cue to reread the matching worked example. One of these isn't a direct proportion, so stay alert for it.
+The problems below are shuffled rather than sorted by type. Answers are at the end of the lesson, and a stalled problem is your cue to reread the matching worked example. One of these isn't a direct proportion, so stay alert for it.
 
 **Practice problems:**
 
@@ -242,7 +242,7 @@ You can now move among fractions, decimals, and percents, solve all three percen
 
 The thread running through this whole unit is one number: the "per one" amount. It's the unit rate in a price, the constant ratio in a direct proportion, and the per-hundred in a percent. In Unit 4 it becomes the constant in your first clean function, and in Unit 5 it becomes the slope of a line. You'll meet it again there.
 
-These come mixed instead of grouped by type, the harder arrangement that makes the skill last. Each has its answer at the end of the lesson, and if one stalls you, reread the worked example it matches. The last two take two steps; the rest are one of the three types.
+These come mixed instead of grouped by type. Answers are at the end of the lesson, and if one stalls you, reread the worked example it matches. The last two take two steps; the rest are one of the three types.
 
 **Practice problems:**
 

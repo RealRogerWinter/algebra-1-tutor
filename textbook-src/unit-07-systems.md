@@ -37,19 +37,23 @@ Notice that a solution here is an *ordered pair*, not a single number. This is t
 
 **Worked examples:**
 
-Read each of these slowly, line by line, and ask why each step follows from the one before. The first time we check an answer, there's a note on what to do if a check ever comes out wrong, because it will sometimes.
+Read each of these slowly, line by line, and ask why each step follows from the one before.
 
+{#7.1.w1}
 *Example 1, the canonical one.* Solve y = x + 1 and y = −x + 5 by graphing.
 From the table above, both lines pass through (2, 3), so that's the only point on both. Now confirm it by putting (2, 3) into **both** equations, not just one, because the answer has to satisfy both at once. First equation: is 3 = 2 + 1? Yes. Second equation: is 3 = −2 + 5? Yes. Both are true, so the solution is (2, 3).
 
 If a check like that ever *doesn't* come out true, you haven't failed. Your check just did its job and caught something before it counted. That's the whole reason we check. Go back to your first step and re-run the arithmetic slowly. A mismatch is almost always one sign or one small slip, not the whole method falling apart.
 
+{#7.1.w2}
 *Example 2, a horizontal line.* Solve y = 2x and y = 6.
 The equation y = 6 is a flat line sitting at height 6. Every point on it has y = 6, no matter the x. The line y = 2x climbs steadily, and you want to know when it reaches that same height of 6. It does when 2x = 6, that is, when x = 3. So the crossing is (3, 6). Check both: is 6 = 2(3)? Yes, since 2(3) = 6. And is 6 = 6? Yes. Solution: (3, 6).
 
+{#7.1.w3}
 *Example 3.* Solve y = x + 2 and y = −x + 4.
 Build a small table and look for the matching row. At x = 1, the first equation gives 1 + 2 = 3, and the second gives −1 + 4 = 3. They agree, so the lines cross at (1, 3). Check both: 3 = 1 + 2, and 3 = −1 + 4. Both true. Solution: (1, 3).
 
+{#7.1.w4}
 *Example 4, the limitation, on purpose.* Solve y = 2x and y = x + 1 but suppose the answer weren't clean. Here it is clean: they meet at (1, 2), since 2 = 2(1) and 2 = 1 + 1, both true. But picture a different system whose lines crossed at, say, (2.5, −1.3). Could you read those numbers off a graph you drew by hand? You couldn't. The best you'd manage is "somewhere near there." That's the honest limit of graphing, and it's exactly why the next two lessons give you methods that produce the exact answer without any squinting.
 
 That's the trade graphing makes. It shows the meaning of a system clearly, because you can *see* the solution as a crossing point, but it only reliably reads off whole-number crossings. When the intersection looks like it falls between the gridlines, that's not your cue to guess a decimal. It's your cue to reach for substitution or elimination, the methods in the next two lessons.
@@ -92,18 +96,20 @@ Think of y as a mystery box with one number hidden inside. Suppose the first equ
 
 The payoff is what makes the swap worth doing. The second equation has two unknowns, x and y, and you can't solve one equation in two unknowns. But the moment you replace y with 2x, that equation has only x in it. One equation, one unknown, the kind you've been solving since Unit 2. The crossing point falls out as soon as a single variable is left standing.
 
-The full move, start to finish: isolate a variable in one equation, substitute that expression into the *other* equation, solve the one-variable equation you're left with, back-substitute to find the partner coordinate, and check both. That last "find the partner" step is the one people skip, so it's built into the first example.
+The full move, start to finish: isolate a variable in one equation, substitute that expression into the *other* equation, solve the one-variable equation you're left with, back-substitute to find the partner coordinate, and check both. That last "find the partner" step is the one people skip most, so watch for it.
 
 **New terms:**
 - {#7.2.d1} **Substitution:** replacing a variable with an expression equal to it. Because each variable denotes the *same* number in both equations, an expression equal to (say) y in one equation may stand in for y in the other.
 
 **Worked examples:**
 
+{#7.2.w1}
 *Example 1.* Solve y = 2x and x + y = 9.
 Here y is already alone. The first equation tells you the box holds 2x. So in the second equation, wherever you see y, pour in 2x:
 $$x + 2x = 9 \;\Rightarrow\; 3x = 9 \;\Rightarrow\; x = 3.$$
 Why this works: x plus 2x is three x's, so 3x = 9, and dividing both sides by 3 gives x = 3. But you're not done. You have x, not the pair. Go back and find y: since y = 2x, y = 2(3) = 6. So the solution is (3, 6). Check both: is 6 = 2(3)? Yes. Is 3 + 6 = 9? Yes. Solution: (3, 6).
 
+{#7.2.w2}
 *Example 2, isolate first.* Solve x = y + 1 and 2x + y = 8.
 This time x is the one already alone: x = y + 1. Substitute y + 1 in place of x in the second equation:
 $$2(y + 1) + y = 8 \;\Rightarrow\; 2y + 2 + y = 8 \;\Rightarrow\; 3y + 2 = 8 \;\Rightarrow\; 3y = 6 \;\Rightarrow\; y = 2.$$
@@ -111,11 +117,13 @@ Step by step: the 2 outside the parentheses has to reach *everything* inside, so
 
 That distributing step is the one to slow down on. It's tempting to write 2(y + 1) as 2y + 1, sending the 2 to only the first thing inside. But the 2 has to greet everyone in the parentheses, so it's 2y + 2. A quick way to catch it: count the terms inside, and make sure the outside number reached every one.
 
+{#7.2.w3}
 *Example 3, watch the distribution.* Solve y = x − 2 and x + y = 10.
 y is alone, so substitute x − 2 for y in the second equation:
 $$x + (x - 2) = 10 \;\Rightarrow\; 2x - 2 = 10 \;\Rightarrow\; 2x = 12 \;\Rightarrow\; x = 6.$$
 The x plus another x makes 2x, and the −2 comes along, so 2x − 2 = 10; add 2 to both sides for 2x = 12, then divide by 2 to get x = 6. Partner: y = x − 2 = 6 − 2 = 4. Solution (6, 4). Check both: is 4 = 6 − 2? Yes. Is 6 + 4 = 10? Yes. Solution: (6, 4).
 
+{#7.2.w4}
 *Example 4, isolate when nothing is alone yet.* Solve x + y = 7 and 2x + y = 11 by substitution.
 Neither variable is alone here, so make one alone first. The first equation is the easy one to rearrange: subtract x from both sides to get y = 7 − x. Now substitute 7 − x for y in the second equation:
 $$2x + (7 - x) = 11 \;\Rightarrow\; x + 7 = 11 \;\Rightarrow\; x = 4.$$
@@ -165,7 +173,7 @@ That's the whole engine: combine the two equations so one variable's terms go to
 
 When the matching terms have *opposite* signs, like +y and −y, you **add** to make them go to zero. When they have the *same* sign, like 2x in one equation and 2x in the other, you **subtract** one equation from the other so they go to zero. Add for opposites, subtract for matches.
 
-And what if nothing lines up at all, with no pair of matching or opposite coefficients? Then you **scale** first: multiply an entire equation, both sides and every term, by a number that makes one pair line up. Multiplying a whole equation by a number is just resizing both pans of the scale equally, so it stays balanced and the line it describes doesn't change. Once a pair matches or opposes, you're back to the add-or-subtract move.
+And what if nothing lines up at all, with no pair of matching or opposite coefficients? Then you **scale** first: multiply an entire equation, both sides and every term, by a number that makes one pair line up. Multiplying a whole equation by a positive number is just resizing both pans of the scale by the same amount, so it stays level and the line it describes doesn't change. Once a pair matches or opposes, you're back to the add-or-subtract move.
 
 **New terms:**
 - {#7.3.d1} **Elimination (linear combination):** combining two equations so that one variable's terms sum to zero ("go to zero"), removing it.
@@ -173,11 +181,13 @@ And what if nothing lines up at all, with no pair of matching or opposite coeffi
 
 **Worked examples:**
 
+{#7.3.w1}
 *Example 1, add to send a variable to zero.* Solve x + y = 10 and x − y = 4.
 The y-terms are +y and −y, opposites, so **add** the two equations to send them to zero:
 $$(x + y) + (x - y) = 10 + 4 \;\Rightarrow\; 2x = 14 \;\Rightarrow\; x = 7.$$
 Adding down the left: x + x is 2x, and +y plus −y is zero, so 2x is all that's left; on the right, 10 + 4 is 14. Divide by 2 to get x = 7. Now the partner: put x = 7 back into x + y = 10, giving 7 + y = 10, so y = 3. Solution (7, 3). Check both: is 7 + 3 = 10? Yes. Is 7 − 3 = 4? Yes. Solution: (7, 3).
 
+{#7.3.w2}
 *Example 2, subtract to send a variable to zero.* Solve 2x + 3y = 12 and 2x − y = 4.
 Here the x-terms match: 2x in each, same sign. So **subtract** the second equation from the first to send the 2x to zero:
 $$(2x + 3y) - (2x - y) = 12 - 4 \;\Rightarrow\; 4y = 8 \;\Rightarrow\; y = 2.$$
@@ -185,9 +195,11 @@ Watch the subtraction carefully, because it's the place a sign goes missing. Sub
 
 That sign-flip on subtraction is the classic slip in this lesson. When you subtract the second equation, the −y inside it becomes +y, not −y. Every sign turns over. If you forget and leave it, you'd get 3y − y = 2y instead of 4y, and the answer comes out wrong. A good guard is the check at the end: if your pair doesn't satisfy both equations, a flipped sign in the subtraction is the first place to look.
 
+{#7.3.w3}
 *Example 3, subtract, coefficients already matched the other variable.* Solve x + y = 7 and 2x + y = 11.
 The y-terms match (a +y in each), so **subtract** to send them to zero. Take the first from the second: (2x + y) − (x + y) = 11 − 7, which gives x = 4 (the y's go to zero, 2x − x is x, and 11 − 7 is 4). Partner: 4 + y = 7, so y = 3. Solution (4, 3). Check both: is 4 + 3 = 7? Yes. Is 2(4) + 3 = 11? Yes. Solution: (4, 3). (This is the same system you solved by substitution in 7.2. Same answer, a different road to it. When two methods both fit, the choice is yours; pick whichever looks cleaner for the system in front of you.)
 
+{#7.3.w4}
 *Example 4, scaling required.* Solve 3x + 2y = 16 and x + y = 6.
 Nothing matches yet: 3x and x don't agree, and 2y and y don't agree. So **scale** first. Multiply the *entire* second equation by 2, both sides and every term, to make the y-coefficients match: 2(x + y) = 2(6) becomes 2x + 2y = 12. Now the y-terms are both +2y, so subtract this from the first equation:
 $$(3x + 2y) - (2x + 2y) = 16 - 12 \;\Rightarrow\; x = 4.$$
@@ -195,6 +207,7 @@ The +2y terms go to zero, 3x − 2x is x, and 16 − 12 is 4, so x = 4. Partner:
 
 When you scale, multiply *every* term and *both* sides. Doubling only the left side, or only the x-term, tips the scale and changes the equation. The way to keep it honest is to hand the multiplier to each piece, the same as distributing.
 
+{#7.3.w5}
 *Example 5, add, opposite y-coefficients.* Solve 3x + 2y = 12 and 5x − 2y = 4.
 The y-terms are +2y and −2y, opposites already, no scaling needed. So **add**:
 $$(3x + 2y) + (5x - 2y) = 12 + 4 \;\Rightarrow\; 8x = 16 \;\Rightarrow\; x = 2.$$
@@ -244,7 +257,7 @@ The three outcomes are easiest to hold as one picture, tied to the slopes you kn
 | **are parallel** (same slope, different intercept) | **no solution**, they never meet | a **false** statement, e.g. 0 = 5 |
 | **are the same line** (identical after simplifying) | **infinitely many**, every point on the line works | an always-**true** statement, e.g. 0 = 0 |
 
-One thing about these cases surprises people the first time. When you solve a normal system, the variables stay around long enough to give you a value. But in these two special cases, the variables all vanish partway through, and what's left over is the signal that tells you which case you're in.
+These two cases work differently from a normal system, and it catches people off guard the first time. When you solve a normal system, the variables stay around long enough to give you a value. But in these two special cases, the variables all vanish partway through, and what's left over is the signal that tells you which case you're in.
 
 If the leftover statement is **false**, like 0 = 5, no numbers can ever make it true, so there's **no solution**: that's the parallel case. If the leftover is always **true**, like 0 = 0, then every point already works, so there are **infinitely many**: that's the same-line case. So when the x's and y's disappear, don't panic; read the statement they leave behind.
 
@@ -257,32 +270,39 @@ For the word problems in the second half, the move is the one from Unit 6, now d
 
 **Worked examples:**
 
+{#7.4.w1}
 *Example 1, no solution (parallel).* Solve y = 2x + 1 and y = 2x − 3.
 Both have y alone, so substitute the first into the second: 2x + 1 = 2x − 3. Now subtract 2x from both sides, and the x's vanish: 1 = −3. That's **false**. No number anywhere makes 1 equal −3. So there's **no solution.** And it lines up with the picture: both lines have slope 2 but different intercepts, so they're parallel and never meet.
 
+{#7.4.w2}
 *Example 2, no solution in standard form.* Solve 2x − y = 3 and 4x − 2y = 1.
 Scale the first equation by 2 to match the second's x-term: 2(2x − y) = 2(3) gives 4x − 2y = 6. Now subtract the second equation from it: (4x − 2y) − (4x − 2y) = 6 − 1. The whole left side goes to zero, leaving 0 = 5, which is **false**. So **no solution.** (The two lines are parallel; the scaling just made it visible.)
 
+{#7.4.w3}
 *Example 3, infinitely many (same line).* Solve x + y = 4 and 2x + 2y = 8.
 Look closely: the second equation is just the first one times 2. To confirm with the algebra, scale the first by 2 to get 2x + 2y = 8, then subtract the second: 0 = 0, always **true**. The two equations are the very same line, so there are **infinitely many solutions**. Every point on x + y = 4 works, such as (0, 4), (1, 3), and (4, 0). "Infinitely many" isn't a vague shrug, though; it's a precise set: it's *all* the pairs (x, y) with x + y = 4. Describing it in those plain words is enough.
 
 A warning right where these two cases get mixed up: it's easy to call 0 = 0 "no solution" and 0 = 5 "infinitely many," because both feel like dead ends. They're backwards. A **true** leftover means *everything* works, so infinitely many; a **false** leftover means *nothing* works, so none. Anchor it on the meaning: true says yes to every point, false says yes to no point.
 
+{#7.4.w4}
 *Example 4, an application with tickets.* A theater sells adult tickets at $8 and child tickets at $5. One night it sold **200 tickets** for **$1300** total. How many of each?
 Start by naming the unknowns and turning each fact into an equation. Let a = adult tickets and c = child tickets. One fact counts tickets, the other counts dollars:
 $$a + c = 200 \qquad 8a + 5c = 1300.$$
 Substitution is clean here. From the first equation, c = 200 − a. Pour that into the second: 8a + 5(200 − a) = 1300. Distribute the 5 to both terms inside: 8a + 1000 − 5a = 1300. Combine the a's: 3a + 1000 = 1300, so 3a = 300 and a = 100. Partner: c = 200 − 100 = 100. Now check against the story: 100 + 100 = 200 tickets, and 8(100) + 5(100) = 800 + 500 = 1300 dollars. Both fit, so it's **100 adult, 100 child.**
 
+{#7.4.w5}
 *Example 5, an application with coins, less symmetric.* A jar has **15 coins**, all quarters and dimes, worth **$2.70** (270 cents). How many of each?
 Let q = quarters and d = dimes. One equation counts coins, the other counts cents (a quarter is 25 cents, a dime is 10):
 $$q + d = 15 \qquad 25q + 10d = 270.$$
 Elimination fits well. Scale the first equation by 10 so the d-terms match: 10q + 10d = 150. Subtract that from the second: (25q + 10d) − (10q + 10d) = 270 − 150, so the d's go to zero and 15q = 120, giving q = 8. Partner: d = 15 − 8 = 7. Check the story: 8 + 7 = 15 coins, and 25(8) + 10(7) = 200 + 70 = 270 cents. Both fit, so it's **8 quarters, 7 dimes.**
 
+{#7.4.w6}
 *Example 6, an application with a mixture.* How many liters of a **20%** salt solution and a **50%** salt solution should you mix to make **30 liters** of a **30%** solution?
 Let x = liters of the 20% solution and y = liters of the 50% solution. One equation counts liters of liquid, the other counts liters of actual salt. The target, 30 L at 30%, holds 0.30 · 30 = 9 L of salt:
 $$x + y = 30 \qquad 0.20x + 0.50y = 9.$$
 Decimals are easier to handle cleared, so multiply the salt equation by 10: 2x + 5y = 90. Then scale the liter equation by 2: 2x + 2y = 60. Subtract: (2x + 5y) − (2x + 2y) = 90 − 60, the x's go to zero, and 3y = 30, so y = 10. Partner: x = 30 − 10 = 20. Check the story: 20 + 10 = 30 liters, and the salt is 0.20(20) + 0.50(10) = 4 + 5 = 9 L, which is 30% of 30. Both fit: **20 L of the 20% solution, 10 L of the 50%.** (This is built like a coin problem: one equation counts the amount of liquid, one counts the active ingredient.)
 
+{#7.4.w7}
 *Example 7, an application with perimeter.* A rectangle's **length is 4 more than its width**, and its **perimeter is 28**. Find the length and width as a system.
 Let l = length and w = width. The two facts become two equations. Perimeter is the distance all the way around, which for a rectangle is twice the length plus twice the width:
 $$l = w + 4 \qquad 2l + 2w = 28.$$

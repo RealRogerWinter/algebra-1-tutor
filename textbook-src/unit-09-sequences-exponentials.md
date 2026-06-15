@@ -20,7 +20,7 @@ Here's a way to picture it that connects back to Unit 4. There, a function was a
 
 Feed in 1, out comes the 1st number on the list. Feed in 2, out comes the 2nd. The position in the list is the input; the number sitting there is the output. So a sequence really *is* a function. Its inputs just happen to be 1, 2, 3, and so on. We write the 1st term as a_1, the 2nd as a_2, and the term in position n as a_n.
 
-What we're really after is the rule the machine is using. Look at 3, 7, 11, 15. What do you do to get from each term to the next? You add 4, every time. Now look at 2, 6, 18, 54. What's happening here? Each term is the one before times 3. Those are the two behaviors this whole lesson turns on, and they get names. **Add the same number each step** is an *arithmetic* sequence. **Multiply by the same number each step** is a *geometric* sequence.
+What we're really after is the rule the machine is using. Look at 3, 7, 11, 15. What do you do to get from each term to the next? You add 4, every time. Now look at 2, 6, 18, 54. What's happening here? Each term is the one before times 3. Those are the two behaviors this lesson is built on, and they get names. **Add the same number each step** is an *arithmetic* sequence. **Multiply by the same number each step** is a *geometric* sequence.
 
 Notice that you just said the rule out loud. "Each term is the one before, plus 4" is a complete recipe for building the list, as long as you also know where to start. That little phrase is what we'll call the *recursive* rule in a moment, and you understood it before any symbols showed up. The only catch is that it needs a starting number, or it has nowhere to begin.
 
@@ -35,7 +35,7 @@ When you're not sure which kind of sequence you're looking at, there's one small
 
 For the first list the differences are all +4, while the ratios aren't constant, so it's arithmetic. For the second the ratios are all ×3, so it's geometric. When a sequence has you guessing, compute both rows and look for the one that holds steady. That table is the whole classification tool.
 
-Now to the symbols, and there are two honest ways to write any of these sequences. They describe the same list; they just answer different questions.
+There are two ways to write any of these sequences in symbols. They describe the same list; they just answer different questions.
 
 The first is the *step-by-step* way, the one you already spoke aloud. It says how to get each term from the one right before it. For an arithmetic sequence with common difference d, that's a_n = a_{n−1} + d, and you have to state the first term a_1 separately so it has somewhere to start. For a geometric sequence with common ratio r, it's a_n = r·a_{n−1}, again with a_1 given. This is called the **recursive** rule, and it mirrors exactly what you do by hand: take the last number, do the one move, write the next number.
 
@@ -50,7 +50,7 @@ One more thing, and it's the precise reason a sequence isn't quite the same as t
 
 So if you plot the terms of 3, 7, 11, 15 as points (1, 3), (2, 7), (3, 11), (4, 15), you get a row of **separate dots**, not a connected line. The dots happen to sit exactly on the line y = 4n − 1, but the sequence is only the dots. This is what we mean by a **discrete domain**: the inputs come in separate, countable steps with nothing in between.
 
-The line that runs through the dots is a continuous parent that fills in the gaps; the sequence itself doesn't. An arithmetic sequence is a linear function looked at only on the counting numbers. A geometric sequence is an exponential function, the kind you'll meet in the next lesson, looked at only on those same whole-number inputs.
+The line that runs through the dots is a continuous parent that fills in the gaps; the sequence itself doesn't. An arithmetic sequence is a linear function looked at only on the counting numbers. A geometric sequence is an exponential function looked at only on those same whole-number inputs.
 
 **New terms:**
 - {#9.1.d1} **Sequence:** an ordered list of numbers, called **terms**. The 1st term is a_1, the 2nd is a_2, and the nth is a_n.
@@ -92,7 +92,7 @@ The translation is just reading off the shared a_1 and r: r=2 is both the recurs
 
 Notice the same two moves under every example: find what's constant (a difference or a ratio), then read off a_1 and that constant. With those in hand, either form is yours to write.
 
-Now for the trap worth knowing, and it's a common one here. Once a list keeps climbing, it's tempting to call it arithmetic just because the numbers are getting bigger. But 2, 6, 18, 54 climbs by *multiplying*, not by adding. The differences are 4, 12, 36, which aren't equal, while the ratios are a steady ×3.
+Once a list keeps climbing, it's tempting to call it arithmetic just because the numbers are getting bigger. But 2, 6, 18, 54 climbs by *multiplying*, not by adding. The differences are 4, 12, 36, which aren't equal, while the ratios are a steady ×3.
 
 The fix is the diagnostic table: when in doubt, compute *both* the jumps and the ×-factors between terms, and see which one stays the same. "Going up" doesn't decide it; "going up by the same amount" versus "going up by the same multiple" does.
 
@@ -154,11 +154,11 @@ Start with the contrast, in money. A linear pattern is repeated *adding*: you pu
 
 Two quick stories to hold onto. Five bacteria become 10, then 20, then 40: doubling, so you multiply by 2 each step. And an $80 phone that loses half its value a year goes 80, 40, 20, 10, multiplying by 0.5 each step. One climbs, one falls, but both *multiply*.
 
-Before the function itself, one move trips almost everyone, so it's worth slowing down on: turning a percent change into a number you multiply by. If something grows 10%, you don't multiply by 0.10. Think about what "+10%" actually means. You keep the whole 100% you already have *and* add another 10% on top. That's 110% of what you started with, which is ×1.10.
+Before the function itself, here's the one move that most often goes wrong: turning a percent change into a number you multiply by. If something grows 10%, you don't multiply by 0.10. Think about what "+10%" actually means. You keep the whole 100% you already have *and* add another 10% on top. That's 110% of what you started with, which is ×1.10.
 
 The same logic runs the other way: "−20%" means you lose a fifth and *keep* the other 80%, so it's ×0.80, not 0.20 and not 1.20. The factor is always "how much of the previous amount you've got afterward." A useful way to see it: +10% is p + 0.10p = 1.10p, the original plus a tenth of it.
 
-Now the function. An exponential function is written y = a·bˣ. The a is the amount you start with, and the b is what you multiply by each step. The thing that makes it *exponential* rather than linear is where the x sits: up in the exponent. In a linear function the variable is multiplied; here it's the power, so each step multiplies the whole running total again.
+An exponential function is written y = a·bˣ. The a is the amount you start with, and the b is what you multiply by each step. The thing that makes it *exponential* rather than linear is where the x sits: up in the exponent. In a linear function the variable is multiplied; here it's the power, so each step multiplies the whole running total again.
 
 There's a fence around which a and b are allowed, and each part of the fence earns its place. The starting amount a can't be 0, because 0·bˣ is just 0 forever: no growth, nothing to model.
 
@@ -217,7 +217,7 @@ So $133.10. (Note b=1.10, *not* 0.10: you keep your 100% and add 10%.) **Interpr
 
 If one of your own answers ever fails its check, where you put a number back and the two sides don't agree, that's not failure, it's the check doing its job and catching something before it counted. Go back to your first step and re-run the arithmetic slowly. With these, a mismatch is almost always rounding too early or slipping on the percent-to-factor step, not the whole method.
 
-Now the slips worth naming, after seeing the method work. The most common is the percent-to-factor one from the top of the lesson, resurfacing under pressure: using 0.10 for "+10%" (which forgets the 100% you already have) or −0.20 / 1.20 for "−20%." Anchor it back to keeping: "+10%" means you still have all of it *plus* a tenth, so ×1.10; "−20%" means you *keep* 80%, so ×0.80.
+With the method working, here are the slips to watch for. The most common is the percent-to-factor one from the top of the lesson, resurfacing under pressure: using 0.10 for "+10%" (which forgets the 100% you already have) or −0.20 / 1.20 for "−20%." Anchor it back to keeping: "+10%" means you still have all of it *plus* a tenth, so ×1.10; "−20%" means you *keep* 80%, so ×0.80.
 
 The next one is treating 2ˣ as if it were 2x, applying the "add the same each step" reflex to a "multiply the same each step" object. You'd expect this to give 2, 4, 6, 8; the exponential actually gives 2, 4, 8, 16. The cure is the side-by-side table you just read: ask whether the *jump* is the same or the *×-factor* is the same.
 
@@ -240,7 +240,7 @@ For the second, table A adds 3 each step (constant difference), so it's linear; 
 
 For the third, no: even though y = 100x starts far ahead, an increasing exponential overtakes any line eventually, so 2ˣ will pass 100x and then pull away for good. The doubling keeps compounding while the line only adds a fixed 100 each step.
 
-Jumping between problem types is harder than grinding one kind, and that difficulty is what makes the skill hold. Each problem's answer waits at the end of the lesson, and when one stalls you, the worked example it's built on is the place to look. The classify-the-table pair and the percent-and-factor groups deliberately sit next to each other so you keep switching between "is it a difference or a ratio?" and "is this growth or decay?"
+As in the last lesson, the set ahead mixes problem types on purpose, which feels harder and is exactly what makes the skill hold; the answers are at the end, and the worked example behind a problem is there when one stalls you. The classify-the-table pair and the percent-and-factor groups sit next to each other so you keep switching between "is it a difference or a ratio?" and "is this growth or decay?"
 
 **Practice problems:**
 *Evaluate the exponential function:*

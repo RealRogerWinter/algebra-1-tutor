@@ -54,24 +54,31 @@ $$\frac{x^2}{x^5}=x^{2-5}=x^{-3}\quad\text{and}\quad\frac{x^2}{x^5}=\frac{1}{x^3
 **Worked examples** (each names the rule):
 
 *Product rule — add the exponents:*
+{#10.1.w1}
 $$x^4\cdot x^3 = x^{4+3}=x^7$$
 
 *The trap, done right — add, don't multiply:*
+{#10.1.w2}
 $$x^2\cdot x^3 = x^{2+3}=x^5 \quad(\text{not }x^6;\ \text{count: }(xx)(xxx)=xxxxx)$$
 
 *Quotient rule — subtract:*
+{#10.1.w3}
 $$\frac{x^7}{x^2}=x^{7-2}=x^5$$
 
 *Power of a power — multiply:*
+{#10.1.w4}
 $$(x^2)^3 = x^{2\cdot 3}=x^6$$
 
 *Power of a product — exponent reaches the coefficient too:*
+{#10.1.w5}
 $$(2x)^3 = 2^3 x^3 = 8x^3$$
 
 *Zero & negative:*
+{#10.1.w6}
 $$x^0 = 1 \qquad\qquad x^{-2}=\frac{1}{x^2}$$
 
 *Quotient landing negative (ties the two ideas together):*
+{#10.1.w7}
 $$\frac{x^3}{x^5}=x^{3-5}=x^{-2}=\frac{1}{x^2}$$
 
 **Watch for:**
@@ -130,27 +137,34 @@ $$\frac{x^3}{x^5}=x^{3-5}=x^{-2}=\frac{1}{x^2}$$
 **Worked examples:**
 
 *Large number → scientific notation:*
+{#10.2.w1}
 $$5300 = 5.3\times 10^3 \qquad(\text{check: } 5.3\times 1000 = 5300)$$
 
 *Small number → scientific notation (negative exponent):*
+{#10.2.w2}
 $$0.00042 = 4.2\times 10^{-4} \qquad(\text{check: } 4.2\div 10^{4}=0.00042)$$
 
 *Multiply — multiply the a's, add the exponents:*
+{#10.2.w3}
 $$(3\times 10^4)(2\times 10^3) = (3\cdot 2)\times 10^{4+3} = 6\times 10^7$$
 
 *Divide — divide the a's, subtract the exponents:*
+{#10.2.w4}
 $$\frac{8\times 10^5}{2\times 10^2} = \frac{8}{2}\times 10^{5-2} = 4\times 10^3$$
 
 *Mixed signs in the exponent (callback to 10.1):*
+{#10.2.w5}
 $$(4\times 10^6)(2\times 10^{-2}) = 8\times 10^{6+(-2)} = 8\times 10^4$$
 
 *Renormalize UP — the coefficient product reaches 10 or more (the most common operations slip):*
+{#10.2.w6}
 $$(6\times 10^4)(5\times 10^3) = (6\cdot 5)\times 10^{4+3} = 30\times 10^7$$
 Stop — 30 is **not** in [1,10), so 30×10⁷ is not yet scientific notation. Renormalize: write 30 as 3.0×10¹, then fold that extra power of ten into the exponent (the product rule again):
 $$30\times 10^7 = 3.0\times 10^1\times 10^7 = 3\times 10^8$$
 The decimal slid one place left (30→3.0), so the exponent went **up** by 1 (7→8). Sanity check: bigger coefficient shrunk ⇒ exponent must grow to keep the value the same. (Verify: 30×10⁷ = 300,000,000 = 3×10⁸.)
 
 *Renormalize DOWN — a division coefficient drops below 1:*
+{#10.2.w7}
 $$\frac{2\times 10^3}{8\times 10^5} = \frac{2}{8}\times 10^{3-5} = 0.25\times 10^{-2}$$
 Stop — 0.25 is **below** 1, so this isn't scientific notation either. Renormalize the other way: 0.25 = 2.5×10⁻¹, and folding in that 10⁻¹ drops the exponent by 1:
 $$0.25\times 10^{-2} = 2.5\times 10^{-1}\times 10^{-2} = 2.5\times 10^{-3}$$
@@ -215,21 +229,27 @@ Note the -x became +x and the +2 became -2. Verify by substituting x=1: original
 
 **Worked examples:**
 
+{#10.3.w1}
 *Naming (no arithmetic):* 3x²-7 → binomial, degree 2, leading coefficient 3.
 
 *Standard form:*
+{#10.3.w2}
 $$2+5x^2-3x \;\Rightarrow\; 5x^2-3x+2$$
 
 *Add:*
+{#10.3.w3}
 $$(3x^2+2x-1)+(x^2-5x+4) = 4x^2-3x+3$$
 
 *Add (a term cancels to zero):*
+{#10.3.w4}
 $$(x^2+6x+2)+(3x^2-6x-7) = 4x^2+0x-5 = 4x^2-5$$
 
 *Subtract — distribute the negative (the #1 trap here):*
+{#10.3.w5}
 $$(2x^2+3x)-(x^2-x+2) = x^2+4x-2 \qquad\text{Check at }x=1:\; 5-2=3 \;\text{ and }\; 1+4-2=3$$
 
 *Subtract — three terms each:*
+{#10.3.w6}
 $$(5x^2-2x+1)-(2x^2+3x-4) = 3x^2-5x+5$$
 
 **Watch for:**
@@ -287,19 +307,24 @@ The two **middle cells** (3x and 2x) are exactly what people forget. Prefer this
 **Worked examples:**
 
 *Monomial × binomial — distribute:*
+{#10.4.w1}
 $$3x(x+4)=3x^2+12x$$
 
 *Binomial × binomial — the area box:*
+{#10.4.w2}
 $$(x+2)(x+3)=x^2+5x+6 \quad(\text{middle term }3x+2x=5x)$$
 
 *A negative in one binomial (watch signs):*
+{#10.4.w3}
 $$(x-3)(x-4)=x^2-4x-3x+12=x^2-7x+12$$
 
 *Difference of squares — middle term vanishes (preview of Unit 11 special pattern):*
+{#10.4.w4}
 $$(x-4)(x+4)=x^2+4x-4x-16=x^2-16$$
 The +4x and -4x cancel — that's *why* (a-b)(a+b)=a²-b². Flag it: Unit 11.3 will run this backward.
 
 *Squaring a binomial — the middle term is doubled (preview of perfect-square trinomials):*
+{#10.4.w5}
 $$(x+3)^2=(x+3)(x+3)=x^2+3x+3x+9=x^2+6x+9$$
 Stress: (x+3)²≠x²+9. The middle 6x is the whole point (misconceptions.md §7).
 

@@ -42,21 +42,26 @@ Read each worked example slowly, a line at a time, and ask why each line follows
 
 **Worked examples:**
 
+{#6.1.w1}
 *Example 1: phrase to expression (order trap).* "3 less than 4 times a number." Let x = the number, so you have a name for the box before anything else. "4 times a number" is 4x. Then "3 less than 4x" takes 3 *away from* 4x:
 $$4x - 3$$
 Not 3 − 4x. That would be starting from 3 and taking 4x away, a different quantity. Check with x = 10: "3 less than 40" is 37, and 4(10) − 3 = 37. The number test agrees, so the order is right.
 
+{#6.1.w2}
 *Example 2: phrase to expression (two actions).* "A number doubled, then increased by 7." Let x = the number. Do the actions in order: double it first, which is 2x, then increase that by 7:
 $$2x + 7$$
 
+{#6.1.w3}
 *Example 3: sentence to equation, then solve.* "7 less than 4 times a number is 9." Let x = the number. The word *is* marks the equals sign. The left side, "7 less than 4x," is 4x − 7; the right side is 9. Now it's an ordinary two-step solve:
 $$4x - 7 = 9 \;\Rightarrow\; 4x = 16 \;\Rightarrow\; x = 4$$
 Check in the original words, not just the symbols: 4 times 4 is 16; 7 less than 16 is 9. That matches the sentence, so x = 4 is right. (If a check like this ever doesn't match, you haven't failed; the check just caught something before it counted. Go back to your first step and re-run the arithmetic slowly. A mismatch is almost always one sign or one small slip, not the whole method.)
 
+{#6.1.w4}
 *Example 4: sentence to equation, then solve.* "The sum of a number and 12 is 20." Let x = the number. "The sum of a number and 12" is x + 12, and "is 20" is the equals sign with 20 on the right:
 $$x + 12 = 20 \;\Rightarrow\; x = 8$$
 Check: 8 + 12 = 20.
 
+{#6.1.w5}
 *Example 5: the reversal trap (a relationship, not a number).* "There are 6 students for every professor; s students, p professors. Write the equation." The tempting move is to read left to right and write 6s = p, but read the structure instead. Students are the bigger group, six times as many of them. The cleanest way to see it is to try the smaller quantity as 1: with 1 professor there are 6 students, so s = 6p. Confirm with another: p = 2 gives s = 12, which is twelve students and two professors, a 6-to-1 ratio. (This is the same "test with a number" move from the order trap, used on a relationship.)
 
 Most of the trouble in this lesson comes from order on "less than" and "subtracted from": "3 less than a number" reads so naturally as 3 − x. After you've set one up correctly, the self-check is the number test from Example 1. Substitute a value and watch the wrong order contradict the plain-English meaning.
@@ -118,42 +123,49 @@ The method is four steps, and you use it every single time:
 3. **Solve** with your Unit 2 tools.
 4. **Check in the original words,** not just in your equation. Re-read the problem and confirm the numbers fit the story.
 
-That fourth step matters more than it looks. An answer can perfectly satisfy an equation you built *wrong*, and only re-reading the story catches that. The move in step 1, writing the second unknown in terms of the first, is what keeps everything to one variable and one equation. It's also the exact habit that makes substitution feel natural when you reach Unit 7.
+That fourth step matters more than it looks. An answer can perfectly satisfy an equation you built *wrong*, and only re-reading the story catches that. The move in step 1, writing the second unknown in terms of the first, is what keeps everything to one variable and one equation, so a single solve does the whole job.
 
 **New terms:**
 - {#6.2.d1} **Consecutive integers:** integers in a row, each one more than the last: n, n+1, n+2, … For consecutive **even** or **odd** integers, the gap is 2: n, n+2, n+4, … (This same gap-of-2 form fits both even and odd runs; which one you get depends only on the starting value n. So if solving gives a non-integer n, say n = 74/3, that total simply has *no* such consecutive run, and the fractional answer is the signal.)
 - {#6.2.d2} **Distance-rate-time relationship:** d = rt, where distance equals rate (speed) times time. (Slope from Unit 5 *is* a rate; on a distance-vs-time graph the speed is the slope.)
 - {#6.2.d3} **Value problem:** total *value* = (value of each item) × (number of items), summed over the kinds of items (e.g. dimes worth $0.10 each).
 
-Read these worked examples a line at a time. Watch how every one runs the same four steps even as the stories change; that sameness is what you're learning to see.
+As you work through the examples below, watch how every one runs the same four steps even as the stories change. That sameness is the thing you're learning to see.
 
 **Worked examples:**
 
+{#6.2.ex1}
 *Example 1: number (consecutive integers).* "Three consecutive integers sum to 33. Find them." First name the unknown: let n = the smallest. Since each is one more than the last, the next two are n + 1 and n + 2. That's the second and third written in terms of the first. Now the structure: the three sum to 33.
 $$n + (n + 1) + (n + 2) = 33 \;\Rightarrow\; 3n + 3 = 33 \;\Rightarrow\; 3n = 30 \;\Rightarrow\; n = 10$$
 So the integers are 10, 11, 12. Check in words: 10 + 11 + 12 = 33. The story holds.
 
+{#6.2.ex2}
 *Example 2: number (consecutive even).* "Three consecutive even integers sum to 78." Let n = the smallest even integer. Consecutive even integers step by 2, so the next two are n + 2 and n + 4.
 $$n + (n + 2) + (n + 4) = 78 \;\Rightarrow\; 3n + 6 = 78 \;\Rightarrow\; n = 24$$
 Integers: 24, 26, 28. Check: 24 + 26 + 28 = 78, and all three are even.
 
+{#6.2.ex3}
 *Example 3: age.* "Sam is 3 years older than Pat. Together their ages total 27. How old is each?" Two unknowns, so define one and write the other in terms of it: let p = Pat's age, then Sam's age is p + 3. Keeping it to one variable is what lets a single equation do the work.
 $$p + (p + 3) = 27 \;\Rightarrow\; 2p + 3 = 27 \;\Rightarrow\; 2p = 24 \;\Rightarrow\; p = 12$$
 Pat is 12, and Sam is 12 + 3 = 15. Check in words: Sam (15) is 3 more than Pat (12), and 12 + 15 = 27. Both parts of the story check out.
 
+{#6.2.ex4}
 *Example 4: distance (d = rt).* "A car travels at 60 mph. How long to go 180 miles?" Let t = the time in hours. Use d = rt with the distance d = 180 and the rate r = 60:
 $$60t = 180 \;\Rightarrow\; t = 3$$
 3 hours. Check: 60 × 3 = 180 miles.
 
+{#6.2.ex5}
 *Example 5: distance (two objects).* "Two cars leave the same point in opposite directions, one at 50 mph and one at 70 mph. After how many hours are they 360 miles apart?" Both cars travel for the same time, so one letter covers both: let t = the time in hours. Going opposite ways, the distance between them is the *sum* of the two distances, 50t + 70t.
 $$50t + 70t = 360 \;\Rightarrow\; 120t = 360 \;\Rightarrow\; t = 3$$
 3 hours. Check: in 3 hours one car goes 150 miles, the other 210; 150 + 210 = 360.
 
+{#6.2.ex6}
 *Example 6: value (coins).* "A jar has 15 coins, all dimes and quarters, worth $2.55 total. How many of each?" Let d = the number of dimes. The rest of the 15 coins are quarters, so that's 15 − d, the second unknown written in terms of the first. Each dime is worth $0.10 and each quarter $0.25, so the total value in dollars is:
 $$0.10d + 0.25(15 - d) = 2.55$$
 $$0.10d + 3.75 - 0.25d = 2.55 \;\Rightarrow\; -0.15d = -1.20 \;\Rightarrow\; d = 8$$
 So 8 dimes and 15 − 8 = 7 quarters. Notice everything stayed in dollars from the start; mixing in cents partway is where value problems usually go wrong. Check in words: that's 15 coins, worth 8(0.10) + 7(0.25) = 0.80 + 1.75 = $2.55.
 
+{#6.2.ex7}
 *Example 7: value (tickets).* "100 tickets sold: adult $8, child $5, for $680 total. How many adult tickets?" Let a = the number of adult tickets; the rest are child tickets, 100 − a. Value, all in dollars:
 $$8a + 5(100 - a) = 680 \;\Rightarrow\; 8a + 500 - 5a = 680 \;\Rightarrow\; 3a = 180 \;\Rightarrow\; a = 60$$
 So 60 adult and 40 child. Check: 60(8) + 40(5) = 480 + 200 = $680.
@@ -221,9 +233,9 @@ Once you have the line, predicting is just evaluating the function, the same ski
 
 Two words go with prediction, and they're worth meeting once here. Predicting *inside* the range your data actually covers is **interpolation**, and it's the more trustworthy kind. Predicting *outside* that range is **extrapolation**, and it gets riskier the farther out you reach, because you're trusting the trend to hold where you have no points. Both terms come back in Unit A.
 
-The most useful thing a trend line tells you is usually not the prediction but what the slope and intercept *mean*. Don't stop at the numbers. Take f(x) = 3x + 2 for (hours practiced, free throws made). The slope 3 is a rate: about 3 more free throws made for each extra hour of practice, the same "so much for every one" idea as d = rt in the last lesson. The intercept 2 is the predicted makes with zero practice, the value when x = 0. Reading those two numbers in plain words is what lets a line actually tell you something, and it's what Unit A builds on.
+The most useful thing a trend line tells you is usually not the prediction but what the slope and intercept *mean*. Don't stop at the numbers. Take f(x) = 3x + 2 for (hours practiced, free throws made). The slope 3 is a rate: about 3 more free throws made for each extra hour of practice, the same "so much for every one" idea as d = rt in the last lesson. The intercept 2 is the predicted makes with zero practice, the value when x = 0. Reading those two numbers in plain words is what lets a line actually tell you something.
 
-One caution before the examples, because it's the easiest thing to overclaim. A trend showing two things move together does not prove one *causes* the other. Ice-cream sales and drownings both climb in summer, but ice cream doesn't cause drownings. Hot weather drives both. A trend is real and useful; it just isn't proof of a cause.
+The easiest thing to overclaim here is cause. A trend showing two things move together does not prove one *causes* the other. Ice-cream sales and drownings both climb in summer, but ice cream doesn't cause drownings. Hot weather drives both. A trend is real and useful; it just isn't proof of a cause.
 
 **New terms:**
 - {#6.3.d1} **Scatter plot:** a graph of paired data (x, y) plotted as individual points, with no connecting line.
@@ -231,16 +243,19 @@ One caution before the examples, because it's the easiest thing to overclaim. A 
 - {#6.3.d3} **Line of best fit (trend line):** a single line drawn to pass as close as possible to all the points, summarizing the trend. It *is* a linear function, so you evaluate it to predict.
 - {#6.3.d4} **Correlation is not causation:** two quantities trending together does **not** prove one *causes* the other.
 
-The point table for the scatter plot above is (1,55), (2,60), (2,68), (3,70), (4,80), (5,86), (6,92). The cloud rises, so the association is positive. Read the worked examples a line at a time, especially how each one reads the slope and intercept back into the story.
+The point table for the scatter plot above is (1,55), (2,60), (2,68), (3,70), (4,80), (5,86), (6,92). The cloud rises, so the association is positive. In the examples below, pay special attention to how each one reads the slope and intercept back into the story.
 
 **Worked examples:**
 
+{#6.3.w1}
 *Example 1: read the trend.* The scatter plot above (hours studied vs. quiz score) rises from lower-left to upper-right. So the **association is positive**: more study hours tend to go with higher scores. Note "tend to": not every point obeys, which is exactly why it's a trend and not a rule.
 
+{#6.3.w2}
 *Example 2: predict, then interpret slope and intercept.* A study finds the best-fit line f(x) = 3x + 2 for (hours practiced, free throws made). Predict the makes for someone who practices x = 10 hours by evaluating the function:
 $$f(10) = 3(10) + 2 = 32 \text{ free throws.}$$
 The line *is* the model, so predicting is just the evaluation skill from Unit 5. Now read the parts in context: the slope 3 says about 3 more makes per extra hour practiced (a rate), and the intercept 2 is the predicted makes with no practice. One honest flag: if the data only ran up to a few practice hours, x = 10 reaches past it, so this prediction is an extrapolation. Trust it less than one inside the data's range.
 
+{#6.3.w3}
 *Example 3: negative association, prediction, and a causation caution.* A best-fit line for (daily screen-time hours x, hours of sleep y) is f(x) = −0.5x + 9. Predict the sleep for someone with x = 6 hours of screen time:
 $$f(6) = -0.5(6) + 9 = 6 \text{ hours of sleep.}$$
 The slope is negative, so this is a **negative association**: more of x goes with less of y. In context: the slope −0.5 means roughly half an hour less sleep per extra hour of screen time, and the intercept 9 is the predicted sleep with zero screen time. But hold the caution in mind: a downward trend doesn't *prove* screen time causes less sleep. Some other factor could be driving both. Correlation is not causation.

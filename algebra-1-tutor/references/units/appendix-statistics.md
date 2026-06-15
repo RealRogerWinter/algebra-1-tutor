@@ -201,6 +201,7 @@ Keep the standard habits from `SKILL.md` (verify arithmetic, never yes/no checks
 
 **Worked example:** 50 people surveyed — *owns a pet* (rows) × *lives in an apartment* (columns):
 
+{#A.3.w1}
 $$\begin{array}{c|c|c|c}
  & \text{Apartment} & \text{House} & \textbf{Total} \\ \hline
 \text{Pet: Yes} & 6 & 24 & \mathbf{30} \\ \hline
@@ -215,6 +216,7 @@ $$\begin{array}{c|c|c|c}
 - **Joint relative frequency (of everyone):** fraction who own a pet =30/50=3/5=60%.
 - **Conditional relative frequency (within a column):** of the 20 apartment dwellers, the fraction owning a pet =6/20=3/10=30%. (Note how the *total you divide by* changes with the question.)
 
+{#A.3.w2}
 **Does owning a pet go with where you live? (compare the conditional rates):**
 - Pet rate **among apartment dwellers** =6/20=3/10=**30%**.
 - Pet rate **among house dwellers** =24/30=4/5=**80%**.

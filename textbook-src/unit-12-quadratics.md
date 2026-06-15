@@ -6,13 +6,13 @@ This unit pulls together most of what came before. It rests on one small, steady
 
 Those surprises are that a squared equation usually has two answers, that a little ± sign shows up in every method, and that the graph is a U shape. They are one idea, not three separate rules.
 
-A word before you start, and it holds for every lesson here. You don't have to finish a lesson in one sitting. If a page stops landing, take a break and come back. That genuinely helps, and you lose nothing. And when you return for a new lesson, redo two or three problems from a lesson or two back from memory first. That small warm-up is one of the most useful habits you can keep.
+A word before you start, and it holds for every lesson here. You don't have to finish a lesson in one sitting. If a page stops landing, take a break and come back. A rest helps, and you lose nothing. And when you return for a new lesson, redo two or three problems from a lesson or two back from memory first. That small warm-up is one of the most useful habits you can keep.
 
 ---
 
 ## Lesson 12.1: Square roots & simplifying radicals
 
-Here's a picture to start from. A square has area 9. What's the length of one side? You're looking for a number that, multiplied by itself, gives 9. That's 3, because 3 × 3 = 9. Squaring a number asks "what's the area of a square with this side?" The **square root** asks the reverse: "the area is 9, so what's the side?" That reverse question is the whole idea of this lesson, and it's the exact tool you'll need later to undo an x². Without it, the answer to x² = 7 would have no name to write down.
+Here's a picture to start from. A square has area 9. What's the length of one side? You're looking for a number that, multiplied by itself, gives 9. That's 3, because 3 × 3 = 9. Squaring a number asks "what's the area of a square with this side?" The **square root** asks the reverse: "the area is 9, so what's the side?" That reverse question is the idea of this lesson, and it's the exact tool you'll need later to undo an x². Without it, the answer to x² = 7 would have no name to write down.
 
 Squaring and taking a square root undo each other, the same way the 2 power and the root sit on opposite sides of the move. So √9 = 3 because 3² = 9, and √25 = 5 because 5² = 25. When the number under the root is a perfect square, meaning some whole number squared, the root comes out as a tidy whole number.
 
@@ -99,7 +99,7 @@ $$x^2=9\;\Rightarrow\; x=\pm\sqrt9=\pm3.$$
 
 That ± is just shorthand for "two answers at once": x = ±3 means x = 3 or x = −3. This whole move has a name, the **Square-Root Property**, and it has two branches, depending on the sign of the number you're taking the root of.
 
-When that number is zero or positive, you get the two roots (collapsing to a single x = 0 when the number is 0). When it's negative, there's no real solution at all, because no real number squared can land on a negative. That second branch isn't a special exception to patch over later. It's half of the rule, and it comes straight back in Lesson 12.5.
+When that number is zero or positive, you get the two roots (collapsing to a single x = 0 when the number is 0). When it's negative, there's no real solution at all, because no real number squared can land on a negative. That second branch isn't a special exception to patch over later. It's half of the rule, and you'll lean on it again before the unit is out.
 
 The negative branch is worth seeing once now so it doesn't rattle you later. Take x² = −4. No real number squared gives −4, because every real square is zero or positive (2² = 4 and (−2)² = 4; nothing real reaches −4). So the answer is "no real solution," and that *is* the answer. It's a finished, correct result, not a sign you did something wrong.
 
@@ -127,7 +127,7 @@ The substitution check above is how you'll know you're right when no one's there
 
 Here's a clean one to get the rhythm before the set turns mixed: solve x² = 1. The square root of 1 is 1, so x = ±1, meaning x = 1 or x = −1. Check: 1² = 1 and (−1)² = 1. Both land, both count.
 
-One slip deserves a callout now that you've done several correctly: writing only x = 3 for x² = 9 and stopping. That's the most natural mistake in the whole unit, and it comes from forgetting that squaring hid a sign. The fix is built into the method. Whenever you undo a square, write the ± first, before you fill in the number, so the second root can't slip away. (And if isolating ever leaves you with x² equal to a negative, don't force a ± onto it; the negative branch already told you the honest answer is "no real solution.")
+One slip deserves a callout now that you've done several correctly: writing only x = 3 for x² = 9 and stopping. That's the most natural mistake here, and it comes from forgetting that squaring hid a sign. The fix is built into the method. Whenever you undo a square, write the ± first, before you fill in the number, so the second root can't slip away. (And if isolating ever leaves you with x² equal to a negative, don't force a ± onto it; the negative branch already told you the honest answer is "no real solution.")
 
 **Check for understanding (transfer):**
 1. {#12.2.c1} Solve x² = 49. How many answers, and why isn't it just one? (x = ±7, so two answers, x = 7 or x = −7, because both 7² and (−7)² equal 49; squaring lost the sign, so both starts are valid.)
@@ -161,13 +161,13 @@ Mixed practice feels harder, and that's the point. It's what makes this stick. E
 
 ## Lesson 12.3: Solving by factoring (zero-product property)
 
-Start with something you already trust about multiplying. If you multiply two numbers and the result is 0, one of them *had* to be 0. There's simply no other way to reach zero. Two non-zero numbers never multiply to zero. That small, obvious fact is the engine of this lesson.
+Start with something you already trust about multiplying. If you multiply two numbers and the result is 0, one of them *had* to be 0. There's no other way to reach zero. Two non-zero numbers never multiply to zero. That small, obvious fact is the engine of this lesson.
 
 Turn it on an equation. Suppose (x − 2)(x − 3) = 0. You've got two things multiplied together giving 0, so one of them must be 0: either x − 2 = 0 or x − 3 = 0. Each of those is a little one-step equation you can solve: x = 2 from the first, x = 3 from the second. So the quadratic has two solutions, 2 and 3, and you found them by reading off the factors. This is the **zero-product property**, and it's the everyday method for the many quadratics that factor.
 
 The one thing to hold onto: this trick works *only against zero*. Zero is special. It's the single value a product can reach only by one of its parts being zero. A product equal to 8 tells you nothing useful about the factors, because lots of pairs multiply to 8. So the first move, always, is to get the equation into the form (something) = 0, with everything on one side.
 
-Each factor-equals-zero gives a genuine solution, not just a candidate, and it's worth seeing why. The property runs both ways. Forward: if the product is 0, some factor is 0, and that's what finds your x-values. Backward: if a factor *is* 0, then the whole product is 0, so that x truly makes the equation true. The substitution check at the end is exactly that backward direction confirming the root is real.
+Each factor-equals-zero gives a genuine solution, not just a candidate. Here's why: the property runs both ways. Forward: if the product is 0, some factor is 0, and that's what finds your x-values. Backward: if a factor *is* 0, then the whole product is 0, so that x truly makes the equation true. The substitution check at the end is exactly that backward direction confirming the root is real.
 
 And the factoring step itself is the reverse-distribute, area-box move from Unit 11, run to find the edges; once you've got the factors, each one set to zero is its own tiny equation.
 
@@ -230,7 +230,7 @@ There's a literal picture behind the name. Think of x² + 6x as an x-by-x square
 
 Why bother? Two reasons. It solves quadratics that won't factor with nice integers, and it's where the quadratic formula in the next lesson actually comes from. Seeing it once makes that formula feel earned instead of dropped on you.
 
-The move itself, on an equation, is short. Get the x² and x terms alone on one side, add (b/2)² to *both* sides (so the scale stays balanced, the same balance scale from Unit 2), factor the left side as a square, and finish with the ±√( ) of Lesson 12.2. Watch the worked examples for how the balance is kept on every line.
+The move itself, on an equation, is short. Get the x² and x terms alone on one side, add (b/2)² to *both* sides so the two sides stay equal, factor the left side as a square, and finish with the ±√( ) of Lesson 12.2. Watch the worked examples for how both sides are kept equal on every line.
 
 **New terms:**
 - {#12.4.d1} **Perfect-square trinomial:** a trinomial that factors as something squared, like x²+6x+9=(x+3)² (Unit 11.3).
@@ -289,7 +289,7 @@ For any quadratic written as ax² + bx + c = 0,
 
 $$x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}.$$
 
-That ± is the same one from every lesson in this unit: it's recovering the sign that squaring threw away. To use the formula well, read a, b, and c carefully, *with their signs*: for 2x² + 3x − 2 = 0, a = 2, b = 3, and c = −2, where the minus genuinely belongs to the c.
+That ± is the same one from every lesson in this unit: it's recovering the sign that squaring threw away. To use the formula well, read a, b, and c carefully, *with their signs*: for 2x² + 3x − 2 = 0, a = 2, b = 3, and c = −2, where the minus belongs to the c.
 
 Here's where the 2a on the bottom comes from, if you're curious. The general derivation first divides everything by a so the x² coefficient becomes 1, then completes the square (Lesson 12.4), and that division is exactly what leaves the 2a in the denominator. You don't have to redo it; the formula already did.
 
@@ -334,7 +334,7 @@ Now the slips this formula invites, named after a few clean runs. The biggest by
 
 Next, sign errors in the discriminant, especially −4ac when c is negative, which makes that piece *add* (as in example 2). And remember that b² is always positive even when b is negative ((−5)² = 25; this is the same care as telling −3² from (−3)²).
 
-Another is dividing only part of the top by 2a: the entire −b ± √( ) sits over 2a, so keep the fraction bar running full width. And the negative-discriminant result, "no real solution," is a real and correct finding, not a mistake to fix; the graph in the next lesson will show the U simply missing the axis.
+Another is dividing only part of the top by 2a: the entire −b ± √( ) sits over 2a, so keep the fraction bar running full width. And the negative-discriminant result, "no real solution," is a real and correct finding, not a mistake to fix; the graph in the next lesson will show the U missing the axis entirely.
 
 If a check ever comes out wrong, that's the safety net working, not a verdict. Re-run the arithmetic from the first step. Most often it's a single sign, the −b or one piece of the discriminant, that slipped.
 
@@ -440,10 +440,10 @@ Mixed practice feels harder on purpose, and that's what makes it last. Every ans
 
 ## A short word problems strand (where the two solutions mean something)
 
-Try these once the methods feel solid. The algebra isn't harder here. The point is that a quadratic from a real situation still hands you two roots, and the situation decides which one to keep. Sometimes both roots are real and only one fits the question; that's the "reject the impossible root" move, and it's where "two solutions" and "no real solution" stop being mechanics and start meaning something. Solve each by whichever method is cleanest (factoring is enough for all three below), then read your answer back into the story.
+Try these once the methods feel solid. The algebra isn't harder here. A quadratic from a real situation still gives you two roots, and you keep the one that fits the question. Sometimes both roots are real and only one makes sense; that's the "reject the impossible root" move, and it's where "two solutions" and "no real solution" stop being mechanics and start to mean something. Solve each by whichever method is cleanest (factoring is enough for all three below), then read your answer back into the story.
 
 **Worked example (model it, then reject a root):** *A ball is thrown straight up; its height in feet after t seconds is h=-16t²+32t. When does it hit the ground (h=0)?*
-Set -16t²+32t=0, factor -16t(t-2)=0 ⇒ t=0 or t=2. Both are real, but in context **t=0 is the launch instant** (height 0 because it just left the hand) and **t=2 is the landing**, so it hits the ground at t=2 seconds. The algebra offered two roots; the situation told us which one answers the question. Before you start one of these, it helps to name your plan in a sentence: what are you solving for, and which root will the story let you keep?
+Set -16t²+32t=0, factor -16t(t-2)=0 ⇒ t=0 or t=2. Both are real, but in context **t=0 is the launch instant** (height 0 because it just left the hand) and **t=2 is the landing**, so it hits the ground at t=2 seconds. Two roots came out of the math; only one answers the question. Before you start one of these, it helps to name your plan in a sentence: what are you solving for, and which root fits the story?
 
 **Application practice (state both roots, then the one that fits, and why):**
 1. A ball's height is h=-16t²+48t feet after t seconds. Find both times its height is 0, and say which is the launch and which is the landing.
@@ -457,7 +457,7 @@ Set -16t²+32t=0, factor -16t(t-2)=0 ⇒ t=0 or t=2. Both are real, but in conte
 
 ## Quadratics reference (choosing a solving method)
 
-Keep this box handy for when you're staring at a quadratic and wondering which tool to grab. The first job is triage: pick the cleanest method for the shape in front of you, then solve. You have four tools, and the choice is genuinely yours. Picking one on purpose, rather than always defaulting to the same one, is part of the skill.
+Keep this box handy for when you're staring at a quadratic and wondering which tool to grab. The first job is triage: pick the cleanest method for the shape in front of you, then solve. You have four tools, and the choice is yours. Picking one on purpose, rather than always defaulting to the same one, is part of the skill.
 
 **Pick by the shape of the equation:**
 - **Looks like (something)² = k, with no plain x term?** Use the **Square-Root Property (12.2)**: isolate the square, then x = ±√k if k ≥ 0 (no real solution if k < 0). Cleanest for x² = 9 (→ x = ±3), 3x² = 27, (x + 1)² = 5. No need to drag the formula into these.
@@ -471,7 +471,7 @@ Keep this box handy for when you're staring at a quadratic and wondering which t
 - **Quadratic formula (12.5), universal.**
 $$x=\dfrac{-b\pm\sqrt{b^2-4ac}}{2a}$$
 Works on *every* quadratic; read a, b, c (signs included) straight off ax² + bx + c = 0. The discriminant b² − 4ac pre-counts the real solutions (> 0 two, with a perfect square → rational, else irrational; = 0 one repeated root; < 0 none).
-- **Completing the square (12.4), the formula's origin.** Add (b/2)² to both sides to build a perfect square, then ±√( ). Rarely the quickest for a numeric answer, but it's *where the formula comes from* and is worth seeing once.
+- **Completing the square (12.4), the formula's origin.** Add (b/2)² to both sides to build a perfect square, then ±√( ). Rarely the quickest for a numeric answer, but it's the move the quadratic formula is built from.
 
 The ± runs through all four, and the parabola (12.6) shows why: a U usually crosses the x-axis **twice** because **squaring lost the sign**, the single idea this whole unit recovers.
 

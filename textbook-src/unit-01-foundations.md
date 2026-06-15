@@ -16,34 +16,34 @@ You'll also get steady with order of operations and with negative numbers, and f
 
 You already know how to work with numbers. Algebra adds just one new idea: sometimes a number is hidden, and we use a letter to stand for it until we track it down.
 
-Start with the equals sign, because almost everything ahead leans on reading it the right way. It's tempting to read "=" as "now write the answer." It actually means "the same as": picture a balance scale, with both sides level.
+Start with the equals sign, because almost everything ahead leans on reading it the right way. The equals sign means the same value: whatever is on the left is worth exactly what's on the right.
 
-Here's that picture in full. Imagine an old balance scale with two pans. On the left pan you put 8 coins and 4 more; on the right pan, some coins and 5 more. For the scale to rest level, the two pans have to weigh the same.
+Here's a picture for it. Imagine an old balance scale with two pans. If the two pans rest level, the weights on them are equal; that's all "=" claims, that the two sides weigh the same.
 
-The left pan holds 12, so the right pan also has to come to 12. That means the unknown pile holds 7. You didn't "compute" anything off to the side; you asked what keeps the two sides equal. That's what the equals sign is really about.
+So read x + 3 = 7 as that scale resting level: the left pan holds x and 3, the right pan holds 7, and they balance. Here is the one rule to remember: whatever you do to one pan, you do to the other, or it tips.
 
-So a sentence with an "=" in it is a claim that two things have the same value. That claim can be true, false, or, when a piece is still hidden, neither yet. Try reading each of these as a balance and saying which it is:
+Reading "=" this way turns a string of symbols into a sentence. On its own, "4 + 3" is just a phrase, the name of a number, the way "the cost of two coffees" names an amount; it doesn't say anything yet. Drop an "=" in and you get a full sentence, with "=" acting as the verb: "4 + 3 = 7" claims the left side and the right side have the same value. A claim like that can be true, false, or, when a piece is still hidden, neither yet. Try reading each of these as a balance and saying which it is:
 
 - 7 = 4 + 3. The right pan is 7, the left pan is 7. They match, so it's **true**. The single number sits on the left, which can look "backwards" until you remember = just means *same as*.
 - 8 = 8. Nothing to work out, both pans already weigh 8. Still **true**.
 - 5 + 2 = 9. The left pan is 7, the right is 9. They don't match, so it's **false**.
 - □ + 3 = 5 + 7. The right pan is 12, and the left pan won't balance it until the box holds 9. Until you fill the box, it's neither true nor false. It's **open**.
 
-That box is where algebra begins. Instead of an empty box we usually write a letter, say x, and call it a **variable**. A variable isn't shorthand for an object. The x doesn't mean "apples." It's a closed box with a number hidden inside that we don't know yet, and every copy of the same letter in one problem holds that same hidden number.
+That box is where algebra begins. Instead of an empty box we usually write a letter, say x, and call it a **variable**: a closed box with a number hidden inside that we don't know yet.
 
 So "3 + x = 7" asks the balance question again: what number in the box keeps the two sides equal?
 
-Once you read it that way, there are two honest roads to the answer, and they agree. The first is just to ask the question out loud: what plus 3 is 7? Four.
-
-The second works even when the numbers aren't friendly, and it's the move the rest of the course is built on. The 3 is added onto x, so undo it: subtract 3. To keep the scale level you subtract from *both* pans, and when you take 3 away from x + 3, the +3 goes to zero, leaving x by itself.
+There's one way to answer it that keeps working no matter how unfriendly the numbers get, and it's the move the rest of the course is built on: undo what was done to x. The 3 is added onto x, so undo it by subtracting 3. To keep the scale level you subtract from *both* pans, and when you take 3 away from x + 3, the +3 goes to zero, leaving x by itself.
 
 $$x + 3 = 7 \;\xrightarrow{\;-3 \text{ from both sides}\;}\; x = 4$$
+
+With small numbers you could also just ask the question out loud, "what plus 3 is 7?", and land on four. That's a fine quick check, and here it agrees. But undoing is the method to lean on, because it still works when the numbers don't let you guess.
 
 Now do the one move worth building into a habit today: check it. Put your answer back into the original and see if both sides match. Here x = 4, so the left side is 4 + 3 = 7, which matches the right. So x = 4 is correct.
 
 If a check ever *doesn't* match, you haven't failed. Your check just did its job and caught something before it counted. That's exactly what it's for. Go back to your first step and re-run the arithmetic slowly; a mismatch is almost always one sign or one small slip, not the whole method.
 
-One small thing here comes back as a big thing in Unit 4. The rule "+3" took an input and turned it into an output: feed in 4, out comes 7. An equation pins down the output and asks you for the input. We'll give that input-to-output idea its own name much later; for now just notice it's there.
+Notice one small thing in passing. The rule "+3" took an input and turned it into an output: feed in 4, out comes 7. An equation pins down the output and asks you for the input. That input-to-output idea gets its own name later in the course; for now just notice it's there.
 
 **New terms:**
 - {#1.1.d1} **Variable:** a letter that stands in for a number we don't know yet (not a label for an object). Every copy of the same letter in one problem holds the *same* hidden number.
@@ -54,7 +54,7 @@ Read each worked example slowly, a line at a time, and ask why each line follows
 
 **Worked examples:**
 
-1. Fill the blank so it stays true: 8 + 4 = □ + 5. The left pan is 12, so the right pan has to reach 12 too; that means □ + 5 = 12, so the box holds 7. (Filling 9 here is the calculator habit. You computed 8 + 4 and forgot the right pan still has a +5 to balance.)
+1. Fill the blank so it stays true: 8 + 4 = □ + 5. The left pan is 12, so the right pan has to reach 12 too; that means □ + 5 = 12, so the box holds 7.
 2. True, false, or open? 7 = 4 + 3. Both pans weigh 7, so it's **true**. The lone 7 on the left doesn't make it backwards; = just means the two sides match.
 3. Solve by undoing: x + 3 = 7. The 3 is added on, so subtract 3 from both sides; the +3 goes to zero and x = 4. Check: 4 + 3 = 7, which matches.
 4. Solve by undoing: 2x = 10. Here x is multiplied by 2, so undo with the opposite, division: divide both sides by 2 and x = 5. Check: 2(5) = 10, which matches.
@@ -62,9 +62,11 @@ Read each worked example slowly, a line at a time, and ask why each line follows
 
 Notice that the move only ever does the opposite of what was done to x: undo adding with subtracting, undo multiplying with dividing, and always to both sides. That's the same idea each time, even though the numbers and operations change. Even so, x/3 = 6 is not automatically "the same as" x + 5 = 12; if undoing a division still feels new, treat it as new and check your answer.
 
+Look back at that first example for a moment. It's natural to compute 8 + 4 and write 12, or 9, in the box; that's the calculator habit, where "=" means the answer goes next. But the box plus 5 has to balance 12, so the box holds 7. If you catch yourself writing the running total in the blank, that's the habit talking, and the fix is to come back to the scale and ask what makes the two pans weigh the same.
+
 Try a clean one before the practice mixes things up: solve x − 6 = 0. The 6 is subtracted, so add 6 to both sides; x = 6. Check: 6 − 6 = 0, which matches. Nothing tricky, just the undo move, once.
 
-One more reading habit worth keeping. A letter is "some number we don't know yet," so read 5x as "five of whatever the box holds," never as the digits 5 and x stuck side by side.
+One more reading habit worth keeping. A letter is some number we don't know yet, not a label for a thing like "apples," so read 5x as "five of whatever the box holds," never as the digits 5 and x stuck side by side. And every copy of x in one problem holds that same hidden number, so if the box turns out to be 6, then 5x is 30, not 56.
 
 **Check for understanding (transfer):**
 - {#1.1.c1} Fill the blank so it stays true: 6 + □ = 4 + 5, and put into words how you know. (The right side is 9, so the left side has to reach 9; 6 plus the box must be 9, so the box is 3.)
@@ -103,19 +105,19 @@ Mixed practice feels harder than repeating one kind of problem, and that's the p
 
 ## Lesson 1.2: The number system & the number line
 
-When you solve 2x = 7 later on, the answer is 3.5. The instinct is to assume you slipped somewhere. You didn't. 3.5 is a real, ordinary number. This lesson lays out the kinds of numbers there are and puts them all on one picture, so an answer like 3.5, or −5, or even √2 arrives looking normal rather than like a mistake.
+When you solve 2x = 7 later on, the answer is 3.5. The instinct is to assume you slipped. You didn't; 3.5 is a real, ordinary number. To see why, start with one picture that holds every number you'll meet: the number line.
 
-Think of the kinds of numbers as nested boxes, each one bigger than the last. Start with the **counting numbers**: 1, 2, 3, and so on, the ones you'd use to count apples. Toss in 0 and you have the **whole numbers**. Add the negatives, the mirror image on the other side of 0, and you have the **integers**: …, −2, −1, 0, 1, 2, …, with no fractional part. Allow ratios next, one number divided by another, and you reach the **rational numbers**.
+Draw a straight line and mark 0 in the middle. The counting numbers (1, 2, 3, and so on, the ones you'd use to count apples) step off to the right. Their negatives, the mirror image on the other side of 0, step off to the left. Every number you'll meet lives somewhere on this one line {#1.2.f1}.
 
-Each box sits inside the next: every counting number is whole, every whole number is an integer, every integer is rational.
+The line is not only the evenly spaced ticks. Look between two ticks, say between 0 and 1, and there are more numbers sitting in the gap: 3/4 lands there, and so does 0.5. The in-between points are numbers too, and every gap is packed with them, no matter how far you zoom in.
 
-The picture that holds all of this is the number line. Draw a straight line, mark 0 in the middle, and space the integers out as even ticks, positives going right and negatives going left. Now the part that matters most: between any two ticks there are infinitely many more numbers. The values 3/4, 2.5, and 0.333… all live in the gaps between the whole-number marks {#1.2.f1}. Algebra doesn't stay on the ticks; it uses the whole line.
+Now give the points on the line their names, building up the same picture one step at a time. The **counting numbers** are 1, 2, 3, and so on. Add 0 and you have the **whole numbers**. Add the negatives and you have the **integers**: …, −2, −1, 0, 1, 2, …, with no fractional part. The gap-fillers you can write as one whole number over another, like 3/4, are the **rational numbers**, and the integers are part of this group too, since 5 is just 5/1. Each name builds on the last, all on the one line.
 
 Most points on that line are rational, but not all of them. A few numbers have decimals that run on forever *without* ever settling into a repeating pattern, so no fraction a/b ever lands exactly on them. Two famous ones are π = 3.14159… and √2 = 1.41421…. These are the **irrational numbers**.
 
 The rationals and the irrationals together, every single point on the line with no gaps, are the **real numbers**. The "whole line" the picture just promised now has a proper name, and it's the ground algebra stands on.
 
-One more idea quietly causes a lot of trouble. A fraction bar or a decimal point is just how a number is *spelled*, not what it *is*. The number 5 can be written 5, or 5/1, or 5.0: three spellings, one point on the line. So you can't tell a number's type from how it's written. Work out its value first, then classify it.
+One more idea trips a lot of people here. A fraction bar or a decimal point is just how a number is *spelled*, not what it *is*. The number 5 can be written 5, or 5/1, or 5.0: three spellings, one point on the line. So you can't tell a number's type from how it's written. Work out its value first, then classify it.
 
 **New terms:**
 - {#1.2.d1} **Natural (counting) numbers:** 1, 2, 3, …
@@ -180,19 +182,24 @@ Sorting different kinds of number in one set is harder than drilling one kind, a
 
 ## Lesson 1.3: Order of operations
 
-When two people read 2 + 3 × 4, they need to land on the same value, or nothing in algebra would be reliable. Order of operations is just the shared agreement that makes that happen. And the mistakes here are *systematic*, not random: they cluster on a few predictable spots, so once you see those spots, they stop catching you.
+Read 2 + 3 × 4 two different ways and you get two different answers. Add first: 2 + 3 is 5, then 5 × 4 is 20. Multiply first: 3 × 4 is 12, then 2 + 12 is 14. Both used real arithmetic, but they can't both be right, because a written expression has to mean exactly one thing. So everyone agrees on one order to read it in, and that agreement is the order of operations.
 
-There's a common memory hook for this order, the word PEMDAS. It's a fine reminder, but it's misleading in one way: it reads like six ranked steps when it's really **four tiers**, and two of the tiers are ties.
+Here's the order, top to bottom:
 
-Picture four shelves, top to bottom. The top shelf is **grouping**: parentheses, square brackets [ ], and, less obviously, the fraction bar. Next shelf down, **exponents**. Then one shelf shared by **multiply and divide** as equal partners. Then one shelf shared by **add and subtract**, also equal partners. You work the top shelf first; within a shared shelf you go left to right.
+1. Parentheses and other grouping symbols
+2. Exponents
+3. Multiply and divide, equally important, done left to right
+4. Add and subtract, equally important, done left to right
 
-That "equal partners, left to right" idea is the whole game, so watch it work on the spots that trip people:
+Within the bottom two lines you work in reading order, left to right, the way you read a sentence. Multiply and divide aren't ranked against each other; they're equal, so you just take them in the order they come. Same for add and subtract. If you already know PEMDAS, you can keep it; just write it stacked, with MD on one line and AS on the next, so each of those pairs is read left to right.
 
-- 12 ÷ 2 × 3. Multiply and divide share a shelf, so read left to right: 12 ÷ 2 is 6, then 6 × 3 is 18. (The instinct to do the × first, getting 2, is the trap. There's no "multiply before divide.")
-- 8 − 3 + 2. Add and subtract share a shelf too, so left to right again: 8 − 3 is 5, then 5 + 2 is 7. (Not 3, which is what doing the + first would give.)
-- 2 × 3². Exponents sit on a higher shelf than multiplying, so square first: 3² is 9, then 2 × 9 is 18. (Not 36, which is multiplying before squaring.)
+Now watch the order work on the spots that trip people, reading each one left to right within its line:
 
-The top shelf, grouping, can change the answer outright. Compare 2 + 3 × 4 = 14 with (2 + 3) × 4 = 20: same digits, but the parentheses force the addition first. Square brackets [ ] group exactly the way parentheses do.
+- 12 ÷ 2 × 3. Divide and multiply are on the same line, so read left to right: 12 ÷ 2 is 6, then 6 × 3 is 18.
+- 8 − 3 + 2. Subtract and add are on the same line too, so left to right again: 8 − 3 is 5, then 5 + 2 is 7.
+- 2 × 3². Exponents come before multiplying, so square first: 3² is 9, then 2 × 9 is 18.
+
+Grouping, the top line, can change the answer outright. Compare 2 + 3 × 4 = 14 with (2 + 3) × 4 = 20: same digits, but the parentheses force the addition first. Square brackets [ ] group exactly the way parentheses do.
 
 And the fraction bar is a grouping symbol in disguise: in (12 − 2)/(3 + 2) the bar means "finish the whole top and the whole bottom first, then divide," giving 10/5, then 2.
 
@@ -201,21 +208,21 @@ And the fraction bar is a grouping symbol in disguise: in (12 − 2)/(3 + 2) the
 
 **Worked examples:**
 
-1. 2 + 3 × 4. Multiply is the higher shelf, so do it first: 2 + 12, then add to get 14.
-2. (2 + 3) × 4. Grouping is the top shelf, so the parentheses go first: 5 × 4, then 20.
-3. 8 − 3 + 2. Both are on the add/subtract shelf, so left to right: 8 − 3 is 5, then 5 + 2 = 7. Reading left to right is what keeps this from becoming 3.
-4. 12 ÷ 2 × 3. Both on the multiply/divide shelf, so left to right: 12 ÷ 2 is 6, then 6 × 3 = 18. Not 2.
-5. 2 + 3² × 2. Exponent first (top of what's here): 2 + 9 × 2; then the multiply shelf: 2 + 18; then add to get 20.
+1. 2 + 3 × 4. Multiply comes before add, so do it first: 2 + 12, then add to get 14.
+2. (2 + 3) × 4. Grouping comes first, so the parentheses go first: 5 × 4, then 20.
+3. 8 − 3 + 2. Subtract and add are equally important, so left to right: 8 − 3 is 5, then 5 + 2 = 7. Reading left to right is what keeps this from becoming 3.
+4. 12 ÷ 2 × 3. Divide and multiply are equally important, so left to right: 12 ÷ 2 is 6, then 6 × 3 = 18. Not 2.
+5. 2 + 3² × 2. Exponent first: 2 + 9 × 2; then multiply: 2 + 18; then add to get 20.
 6. 10 − 2 × (3 + 1). Grouping first: 10 − 2 × 4; then multiply: 10 − 8; then subtract to get 2.
-7. (12 − 2)/(3 + 2). The fraction bar groups, so finish top and bottom before dividing: 10/5, then 2. The bar quietly says "do the whole numerator and the whole denominator first."
+7. (12 − 2)/(3 + 2). The fraction bar groups, so finish top and bottom before dividing: 10/5, then 2.
 
-One clean case to settle the shelves in your hands: 18 ÷ 3 + 3. The multiply/divide shelf outranks adding, so divide first: 18 ÷ 3 is 6, then 6 + 3 = 9. One higher-shelf step, then the addition.
+One clean case to get the order moving: 18 ÷ 3 + 3. Divide comes before add, so divide first: 18 ÷ 3 is 6, then 6 + 3 = 9. One higher step, then the addition.
 
-When two operations sit on the same shelf, the only question to ask is: reading left to right, which comes first? That single question handles every same-shelf case.
+When two operations are equally important, the only question to ask is: reading left to right, which comes first? That single question handles every same-line case.
 
 **Check for understanding (transfer):**
-- {#1.3.c1} Without computing all the way, in 20 ÷ 4 × 2, which operation happens first, and why? (The ÷, because divide and multiply share a shelf and ÷ is further left; so 20 ÷ 4 is 5, then 5 × 2 = 10.)
-- {#1.3.c2} Why does 2 × 3² come out to 18, not 36? (The exponent is on a higher shelf than the multiply, so 3² = 9 happens first, then 2 × 9 = 18; multiplying first would be using the wrong shelf order.)
+- {#1.3.c1} Without computing all the way, in 20 ÷ 4 × 2, which operation happens first, and why? (The ÷, because divide and multiply are equally important and ÷ is further left; so 20 ÷ 4 is 5, then 5 × 2 = 10.)
+- {#1.3.c2} Why does 2 × 3² come out to 18, not 36? (The exponent comes before the multiply, so 3² = 9 happens first, then 2 × 9 = 18; multiplying first would be taking the steps out of order.)
 - {#1.3.c3} Put parentheses into 2 + 3 × 4 to make it equal 20. (Group the addition: (2 + 3) × 4 = 5 × 4 = 20.)
 
 You can now read an expression as four tiers instead of six steps, handle multiply/divide and add/subtract as left-to-right ties, and treat parentheses, brackets, and the fraction bar as the grouping that goes first.
@@ -345,11 +352,9 @@ And signs will show up, so here's one with a negative. Evaluate 5 − 2x at x = 
 
 The parentheses around the −1 are what save you here; without them it's easy to lose a sign.
 
-One last thing to notice, not yet to formalize: structure matters. 2(x + 3) is not the same as 2x + 3, because the 2 multiplies *everything* inside the parentheses, not just the x. You can see it with a number. At x = 3, 2(3 + 3) = 12 but 2(3) + 3 = 9.
+One last thing to notice, not yet to formalize: structure matters. 2(x + 3) is not the same as 2x + 3, because the 2 multiplies *everything* inside the parentheses, not just the x. You can see it with a number. At x = 3, 2(3 + 3) = 12 but 2(3) + 3 = 9. There's a proper rule behind this that comes later in the course; for now, just respect the parentheses.
 
-We'll make that into a proper rule in Unit 2; for now, just respect the parentheses.
-
-The input-to-output idea from Lesson 1.1 is hiding here too. Evaluating 3x + 2 at different values is feeding inputs through a machine: in goes 4, out comes 14. When we name that machine in Unit 4, we'll write it f(x) = 3x + 2 and read f(4) = 14.
+The input-to-output idea from Lesson 1.1 is hiding here too. Evaluating 3x + 2 at different values is feeding inputs through a machine: in goes 4, out comes 14. That machine gets a name later in the course; for now, just see that the same input-to-output pattern is here.
 
 **New terms:**
 - {#1.5.d1} **Expression:** a mathematical *phrase* with no equals sign, e.g. 3x + 2. It names a value once you know the variable; you **evaluate** it.

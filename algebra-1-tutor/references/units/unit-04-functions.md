@@ -42,15 +42,19 @@ Always restate the definition as a one-liner the student can repeat: *"Each inpu
 
 **Worked examples:**
 
+{#4.1.w1}
 *Example 1 — a set of pairs (no formula needed).* Is {(1,2),(2,4),(3,6),(4,8)} a function?
 This is just a *pairing* — a list matching inputs to outputs, with no rule or formula written anywhere. That is fine; a function is the pairing itself. Inputs are 1,2,3,4 — all different, each appears once, so each input is paired with exactly one output. **Yes, a function.**
 
+{#4.1.w2}
 *Example 2 — a repeated output (still fine).* Is {(1,5),(2,5),(3,5)} a function?
 The output 5 repeats, but look at the *inputs*: 1,2,3, each appears once with one output. Repeated outputs are allowed. **Yes, a function.** (This is the "two buttons, same snack" case.)
 
+{#4.1.w3}
 *Example 3 — a split input (broken).* Is {(1,2),(1,3),(2,4)} a function?
 Input 1 is paired with both 2 *and* 3 — one input, two outputs. **No, not a function.**
 
+{#4.1.w4}
 *Example 4 — a table.*
 
 | input x | 0 | 1 | 2 | 0 |
@@ -59,6 +63,7 @@ Input 1 is paired with both 2 *and* 3 — one input, two outputs. **No, not a fu
 
 Input 0 appears twice, giving 4 once and 9 once — two outputs for one input. **No, not a function.**
 
+{#4.1.w5}
 *Example 5 — a graph (vertical line test).* A non-vertical straight line such as y=2x+1: sweep a vertical line across it — it touches exactly once everywhere. **Function.** A circle centered at the origin, or a sideways "U" (a parabola opening rightward): a vertical line through the middle hits it **twice**. **Not a function.**
 One straight line is the exception: a **vertical** line such as x=3 is *not* a function — every point on it shares the same input x=3, so that single input has infinitely many outputs. It is the cleanest case of "one input, many outputs."
 
@@ -138,20 +143,25 @@ For domain and range, stay concrete: from a *table or list*, the domain is just 
 
 **Worked examples:**
 
+{#4.2.w1}
 *Example 1 — f(x)=3x-1 at several inputs.*
 $$f(2)=3(2)-1=6-1=5,\quad f(0)=3(0)-1=-1,\quad f(-2)=3(-2)-1=-6-1=-7.$$
 Note the parentheses around -2: they keep the sign honest (`misconceptions.md` §3).
 
+{#4.2.w2}
 *Example 2 — "not multiplication."* If a student writes f(2)=f·2: there is no number f; f is the *name of the rule*. f(2) is "the rule's output at 2." Re-evaluate together: 3(2)-1=5.
 
+{#4.2.w3}
 *Example 3 — g(x)=x²+1.*
 $$g(3)=3^2+1=9+1=10,\quad g(0)=0+1=1,\quad g(-2)=(-2)^2+1=4+1=5.$$
 Stress (-2)²=4, not -4 — square the *whole* input (`misconceptions.md` §3, the -3² vs (-3)² tell).
 
+{#4.2.w4}
 *Example 4 — evaluate at an expression.* With f(x)=3x-1:
 $$f(2a)=3(2a)-1=6a-1.$$
 "Whatever sits in the parentheses goes everywhere x was."
 
+{#4.2.w5}
 *Example 5 — domain & range from a table.* For
 
 | x | 1 | 2 | 3 | 4 |
@@ -160,6 +170,7 @@ $$f(2a)=3(2a)-1=6a-1.$$
 
 **Domain** = {1,2,3,4}; **Range** = {5,7,9} (list each output once).
 
+{#4.2.w6}
 *Example 6 — discrete vs. continuous domain (why braces for one, "all reals" for the other).* This is the difference between Example 5's table and the line f(x)=3x−1.
 - A **table or pair-list** gives a **discrete** domain — a handful of *separate* inputs. You plot them as separate dots and list them in braces. Concrete case: tickets cost \$12 each, so the cost of n tickets is t(n)=12n. You can buy 0, 1, 2, 3, … tickets but never 2.5, so the domain is the *separate* whole numbers {0,1,2,3,…} — separate dots, **don't connect them**.
 - A **line** like f(x)=3x−1 accepts **every** real number in between — there are no gaps — so its domain is **continuous**: an unbroken line, described in words as "all real numbers." Concrete case: a candle's height after t hours, for any t from 0 to 5; time can be 2.5 hours or 2.501 hours, so the inputs fill the whole range and the graph is an unbroken curve.
@@ -241,6 +252,7 @@ So the form of the answer follows the domain: a discrete domain → list in brac
 
 **Worked examples:**
 
+{#4.3.w1}
 *Example 1 — build a table from f(x)=2x+1; note the constant step.*
 
 | x | 0 | 1 | 2 | 3 |
@@ -249,6 +261,7 @@ So the form of the answer follows the domain: a discrete domain → list in brac
 
 Output differences: 3-1=2, 5-3=2, 7-5=2 — **constant +2** for each +1 in x. **Linear.** That constant +2 is the rate of change (the future slope).
 
+{#4.3.w2}
 *Example 2 — contrast with y=x².*
 
 | x | 0 | 1 | 2 | 3 |
@@ -257,6 +270,7 @@ Output differences: 3-1=2, 5-3=2, 7-5=2 — **constant +2** for each +1 in x. **
 
 Differences: 1-0=1, 4-1=3, 9-4=5 — 1,3,5, **not constant**. **Nonlinear** (this curve is a parabola — preview of Unit 12).
 
+{#4.3.w3}
 *Example 3 — linear-or-not from a table (no equation given).*
 
 | x | 1 | 2 | 3 | 4 |
@@ -265,6 +279,7 @@ Differences: 1-0=1, 4-1=3, 9-4=5 — 1,3,5, **not constant**. **Nonlinear** (thi
 
 Equal x-steps of +1; output steps 3,3,3 — constant. **Linear.** (Rule: y=3x-2.)
 
+{#4.3.w4}
 *Example 4 — same relationship, four faces (translate in both directions).*
 - **Words:** "start at \$1, add \$2 each step."
 - **Equation:** f(x)=2x+1.
@@ -273,6 +288,7 @@ Equal x-steps of +1; output steps 3,3,3 — constant. **Linear.** (Rule: y=3x-2.
 
 All four describe one function, and the skill runs **both ways**: given the equation you can *build the table* (plug in x=0,1,2,3 to get 1,3,5,7), and given the table you can *read off the equation* (the constant step +2 is the number in front of x, and the value at x=0 is the +1, so f(x)=2x+1). Practice going each direction, not just left-to-right.
 
+{#4.3.w5}
 *Example 5 — both directions explicitly (table ↔ equation).*
 - **Equation → table.** From g(x)=5x−2, build the table at x=0,1,2,3: g(0)=−2, g(1)=3, g(2)=8, g(3)=13.
 

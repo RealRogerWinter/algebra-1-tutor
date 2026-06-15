@@ -49,18 +49,22 @@ Both lines pass through (2, 3) — that shared row *is* the solution.
 
 **Worked examples:**
 
+{#7.1.w1}
 *Example 1 — the canonical one.* Solve y = x + 1 and y = -x + 5 by graphing.
 Graph both (table above). They cross at (2, 3).
 Check in **both**: 3 = 2 + 1 and 3 = -2 + 5. Solution: (2, 3).
 
+{#7.1.w2}
 *Example 2 — a horizontal line.* Solve y = 2x and y = 6.
 y = 6 is the flat line at height 6. y = 2x climbs; it reaches height 6 when x = 3. Crossing: (3, 6).
 Check: 6 = 2(3) and 6 = 6.
 
+{#7.1.w3}
 *Example 3.* Solve y = x + 2 and y = -x + 4.
 Table: at x = 1, first gives 3, second gives 3. They cross at (1, 3).
 Check: 3 = 1 + 2 and 3 = -1 + 4.
 
+{#7.1.w4}
 *Example 4 — the limitation, on purpose.* Solve y = 2x and y = x + 1 but suppose the answer weren't clean. Here it is clean — they meet at (1, 2): 2 = 2(1), 2 = 1 + 1. Now ask: *"What if two lines crossed at (2.5, -1.3)? Could you read that off a hand-drawn graph?"* You couldn't — and that's exactly why we need substitution and elimination next.
 
 **Watch for:**
@@ -111,22 +115,26 @@ Check: 3 = 1 + 2 and 3 = -1 + 4.
 
 **Worked examples:**
 
+{#7.2.w1}
 *Example 1.* Solve y = 2x and x + y = 9.
 y is already isolated. Substitute 2x for y in the second:
 $$x + 2x = 9 \;\Rightarrow\; 3x = 9 \;\Rightarrow\; x = 3.$$
 Back-substitute: y = 2(3) = 6. Solution (3, 6).
 Check: 6 = 2(3) and 3 + 6 = 9.
 
+{#7.2.w2}
 *Example 2 — isolate first.* Solve x = y + 1 and 2x + y = 8.
 x is isolated. Substitute y + 1 for x:
 $$2(y + 1) + y = 8 \;\Rightarrow\; 2y + 2 + y = 8 \;\Rightarrow\; 3y + 2 = 8 \;\Rightarrow\; 3y = 6 \;\Rightarrow\; y = 2.$$
 Back-substitute: x = 2 + 1 = 3. Solution (3, 2).
 Check: 3 = 2 + 1 and 2(3) + 2 = 8.
 
+{#7.2.w3}
 *Example 3 — watch the distribution.* Solve y = x - 2 and x + y = 10.
 Substitute: x + (x - 2) = 10 ⇒ 2x - 2 = 10 ⇒ 2x = 12 ⇒ x = 6. Then y = 6 - 2 = 4. Solution (6, 4).
 Check: 4 = 6 - 2 and 6 + 4 = 10.
 
+{#7.2.w4}
 *Example 4 — isolate when nothing is alone yet.* Solve x + y = 7 and 2x + y = 11 by substitution.
 Isolate y in the first: y = 7 - x. Substitute: 2x + (7 - x) = 11 ⇒ x + 7 = 11 ⇒ x = 4. Then y = 7 - 4 = 3. Solution (4, 3).
 Check: 4 + 3 = 7 and 2(4) + 3 = 11. (Note: this same system is a natural fit for elimination — preview 7.3.)
@@ -182,28 +190,33 @@ Avoid the word "cancel" as magic — say the terms **go to zero** (what literall
 
 **Worked examples:**
 
+{#7.3.w1}
 *Example 1 — add to cancel.* Solve x + y = 10 and x - y = 4.
 The y-terms are opposites. **Add** the equations:
 $$(x + y) + (x - y) = 10 + 4 \;\Rightarrow\; 2x = 14 \;\Rightarrow\; x = 7.$$
 Back-substitute into x + y = 10: 7 + y = 10 ⇒ y = 3. Solution (7, 3).
 Check: 7 + 3 = 10 and 7 - 3 = 4.
 
+{#7.3.w2}
 *Example 2 — subtract to cancel.* Solve 2x + 3y = 12 and 2x - y = 4.
 The x-terms match (2x each). **Subtract** the second from the first so 2x goes to zero:
 $$(2x + 3y) - (2x - y) = 12 - 4 \;\Rightarrow\; 4y = 8 \;\Rightarrow\; y = 2.$$
 Back-substitute into 2x - y = 4: 2x - 2 = 4 ⇒ 2x = 6 ⇒ x = 3. Solution (3, 2).
 Check: 2(3) + 3(2) = 12 and 2(3) - 2 = 4.
 
+{#7.3.w3}
 *Example 3 — subtract, coefficients already matched the other variable.* Solve x + y = 7 and 2x + y = 11.
 The y-terms match. **Subtract**: (2x + y) - (x + y) = 11 - 7 ⇒ x = 4. Then 4 + y = 7 ⇒ y = 3. Solution (4, 3).
 Check: 4 + 3 = 7 and 2(4) + 3 = 11.
 
+{#7.3.w4}
 *Example 4 — scaling required.* Solve 3x + 2y = 16 and x + y = 6.
 Nothing matches yet. **Scale** the second equation by 2 so the y-coefficients agree: 2(x + y) = 2(6) ⇒ 2x + 2y = 12. Now subtract it from the first:
 $$(3x + 2y) - (2x + 2y) = 16 - 12 \;\Rightarrow\; x = 4.$$
 Back-substitute into x + y = 6: y = 2. Solution (4, 2).
 Check: 3(4) + 2(2) = 16 and 4 + 2 = 6.
 
+{#7.3.w5}
 *Example 5 — add, opposite y-coefficients.* Solve 3x + 2y = 12 and 5x - 2y = 4.
 The y-terms are +2y and -2y. **Add**:
 $$(3x + 2y) + (5x - 2y) = 12 + 4 \;\Rightarrow\; 8x = 16 \;\Rightarrow\; x = 2.$$
@@ -270,33 +283,40 @@ Check: 3(2) + 2(3) = 12 and 5(2) - 2(3) = 4.
 
 **Worked examples:**
 
+{#7.4.w1}
 *Example 1 — no solution (parallel).* Solve y = 2x + 1 and y = 2x - 3.
 Substitute: 2x + 1 = 2x - 3. Subtract 2x from both sides: 1 = -3 — **false**. No (x, y) can fix that. **No solution.** (Both have slope 2, different intercepts → parallel, per Unit 5.)
 
+{#7.4.w2}
 *Example 2 — no solution in standard form.* Solve 2x - y = 3 and 4x - 2y = 1.
 Scale eq.1 by 2: 4x - 2y = 6. Subtract eq.2: (4x - 2y) - (4x - 2y) = 6 - 1 ⇒ 0 = 5 — **false**. **No solution.**
 
+{#7.4.w3}
 *Example 3 — infinitely many (same line).* Solve x + y = 4 and 2x + 2y = 8.
 Eq.2 is just eq.1 times 2. Scale eq.1 by 2: 2x + 2y = 8. Subtract eq.2: 0 = 0 — always **true**. The two equations are the same line; **infinitely many solutions** (every point on x + y = 4, e.g. (0,4), (1,3), (4,0)). "Infinitely many" isn't vague — it's a *precise* set: **all (x, y) with x + y = 4**. (For a stronger student you can write that as {(x, y) | x + y = 4}, but the plain-English description is enough.)
 
+{#7.4.w4}
 *Example 4 — application (tickets).* A theater sells adult tickets at $8 and child tickets at $5. One night it sold **200 tickets** for **$1300** total. How many of each?
 Let a = adult tickets, c = child tickets.
 $$a + c = 200 \qquad 8a + 5c = 1300.$$
 Solve by substitution: c = 200 - a, so 8a + 5(200 - a) = 1300 ⇒ 8a + 1000 - 5a = 1300 ⇒ 3a = 300 ⇒ a = 100. Then c = 100.
 Check: 100 + 100 = 200 and 8(100) + 5(100) = 800 + 500 = 1300. **100 adult, 100 child.**
 
+{#7.4.w5}
 *Example 5 — application (coins, less symmetric).* A jar has **15 coins**, all quarters and dimes, worth **$2.70** (270 cents). How many of each?
 Let q = quarters, d = dimes.
 $$q + d = 15 \qquad 25q + 10d = 270.$$
 Eliminate d: scale eq.1 by 10 → 10q + 10d = 150; subtract from eq.2 → 15q = 120 ⇒ q = 8. Then d = 7.
 Check: 8 + 7 = 15 and 25(8) + 10(7) = 200 + 70 = 270. **8 quarters, 7 dimes.**
 
+{#7.4.w6}
 *Example 6 — application (mixture).* This is the true *mixture* the objectives promise — two strengths blended to a target strength. "How many liters of a **20%** salt solution and a **50%** salt solution should you mix to make **30 liters** of a **30%** solution?"
 Let x = liters of 20% solution, y = liters of 50% solution. One equation counts **liters**, the other counts **salt** (the 30 L of 30% holds 0.30 · 30 = 9 L of salt):
 $$x + y = 30 \qquad 0.20x + 0.50y = 9.$$
 Elimination is cleanest if you first clear decimals — multiply the salt equation by 10: 2x + 5y = 90. Scale the liter equation by 2: 2x + 2y = 60. Subtract: (2x + 5y) − (2x + 2y) = 90 − 60 ⇒ 3y = 30 ⇒ y = 10. Then x = 30 − 10 = 20.
 Check in the story: 20 + 10 = 30 liters, and salt 0.20(20) + 0.50(10) = 4 + 5 = 9 L = 30% of 30. **20 L of the 20% solution, 10 L of the 50%.** (Same structure as a coin problem: one equation counts the *amount*, one counts the *active ingredient*.)
 
+{#7.4.w7}
 *Example 7 — application (perimeter).* A rectangle's **length is 4 more than its width**, and its **perimeter is 28**. Find the length and width as a system.
 Let l = length, w = width. The two facts give two equations:
 $$l = w + 4 \qquad 2l + 2w = 28.$$

@@ -148,7 +148,7 @@
 
 
 <p>Some numbers are too long to read comfortably: the distance to a star, the width of an atom. Scientific notation is a tidy way to write them, with one digit, a decimal tail, and a power of ten that records how big the number really is.</p>
-<p>The good news is you already did the hard part last lesson. Multiplying and dividing these numbers is just the exponent rules from 10.1, applied to powers of ten.</p>
+<p>You already did the hard part last lesson. Multiplying and dividing these numbers is just the exponent rules from 10.1, applied to powers of ten.</p>
 <p>Start with what a power of ten actually does. Multiplying by 10 slides the decimal point one place to the right; dividing by 10 slides it one place left. So 10ⁿ is really a record of <em>how many places the point moved</em>. Take 5300. Picture the decimal point starting after the 5, at 5.3, and ask how far it has to travel to rebuild the full number: three places right gets you back to 5300. So 5300 = 5.3 × 10³. The exponent 3 is just the count of slides.</p>
 <p>Small numbers work the same way, and this is where the negative exponents from last lesson come back. Take 0.00042. To get up to a single nonzero digit, 4.2, you slide the point four places to the <em>right</em>. But sliding right makes a number bigger, so to keep the value the same you must have started by dividing, and that's a negative exponent: 0.00042 = 4.2 × 10⁻⁴.</p>
 <p>The negative power of ten is the same reciprocal idea as x⁻ᵃ = 1/(xᵃ): it's a division written as an exponent.</p>
@@ -163,21 +163,28 @@
 <section class="worked">
 <p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19.5V15L15.5 4.5 19.5 8.5 9 19Z"/><path d="M13.5 6.5 17.5 10.5"/></svg>Worked example</span></p>
 <p><em>Large number → scientific notation:</em>
+<a class="refcode" id="10.2.w1" href="#10.2.w1">10.2.w1</a>
 $$5300 = 5.3\times 10^3 \qquad(\text{check: } 5.3\times 1000 = 5300)$$</p>
 <p><em>Small number → scientific notation (negative exponent):</em>
+<a class="refcode" id="10.2.w2" href="#10.2.w2">10.2.w2</a>
 $$0.00042 = 4.2\times 10^{-4} \qquad(\text{check: } 4.2\div 10^{4}=0.00042)$$</p>
 <p><em>Multiply, multiply the a's and add the exponents:</em>
+<a class="refcode" id="10.2.w3" href="#10.2.w3">10.2.w3</a>
 $$(3\times 10^4)(2\times 10^3) = (3\cdot 2)\times 10^{4+3} = 6\times 10^7$$</p>
 <p><em>Divide, divide the a's and subtract the exponents:</em>
+<a class="refcode" id="10.2.w4" href="#10.2.w4">10.2.w4</a>
 $$\frac{8\times 10^5}{2\times 10^2} = \frac{8}{2}\times 10^{5-2} = 4\times 10^3$$</p>
 <p><em>Mixed signs in the exponent (callback to 10.1):</em>
+<a class="refcode" id="10.2.w5" href="#10.2.w5">10.2.w5</a>
 $$(4\times 10^6)(2\times 10^{-2}) = 8\times 10^{6+(-2)} = 8\times 10^4$$</p>
-<p><em>Renormalize UP, the coefficient product reaches 10 or more (the most common operations slip):</em>
+<p><em>Renormalize UP, the coefficient product reaches 10 or more:</em>
+<a class="refcode" id="10.2.w6" href="#10.2.w6">10.2.w6</a>
 $$(6\times 10^4)(5\times 10^3) = (6\cdot 5)\times 10^{4+3} = 30\times 10^7$$
 Stop. 30 is <strong>not</strong> in [1,10), so 30×10⁷ is not yet scientific notation. Renormalize: write 30 as 3.0×10¹, then fold that extra power of ten into the exponent (the product rule again):
 $$30\times 10^7 = 3.0\times 10^1\times 10^7 = 3\times 10^8$$
 The decimal slid one place left (30→3.0), so the exponent went <strong>up</strong> by 1 (7→8). Sanity check: bigger coefficient shrunk ⇒ exponent must grow to keep the value the same. (Verify: 30×10⁷ = 300,000,000 = 3×10⁸.)</p>
 <p><em>Renormalize DOWN, a division coefficient drops below 1:</em>
+<a class="refcode" id="10.2.w7" href="#10.2.w7">10.2.w7</a>
 $$\frac{2\times 10^3}{8\times 10^5} = \frac{2}{8}\times 10^{3-5} = 0.25\times 10^{-2}$$
 Stop. 0.25 is <strong>below</strong> 1, so this isn't scientific notation either. Renormalize the other way: 0.25 = 2.5×10⁻¹, and folding in that 10⁻¹ drops the exponent by 1:
 $$0.25\times 10^{-2} = 2.5\times 10^{-1}\times 10^{-2} = 2.5\times 10^{-3}$$
