@@ -1,0 +1,5 @@
+# Large, reproducible raw eval data (full transcripts + per-judge grades).
+# The aggregates (benchmark.json) and written findings (FINDINGS.md, LIFT.md) ARE committed;
+# the raw dumps live locally and in the workflow task outputs, and regenerate from the workflows.
+iteration-*/raw-result.json
+iteration-*/analysis/*-raw.json
