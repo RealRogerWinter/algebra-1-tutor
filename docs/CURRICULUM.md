@@ -5,6 +5,8 @@ The finalized Algebra 1 course is a **hybrid**: the familiar traditional skills 
 The full machine-readable map (with the prerequisite graph and a placement check) lives in
 [`algebra-1-tutor/references/curriculum-map.md`](../algebra-1-tutor/references/curriculum-map.md).
 
+You can read the whole course as a textbook online at <https://realrogerwinter.github.io/algebra-1-tutor/>.
+
 ## What changed from a plain traditional sequence
 
 - **Equals sign front‑loaded** as a relational *balance* in Unit 1 — the single most predictive early‑algebra misconception.

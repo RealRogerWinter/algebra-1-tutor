@@ -4,7 +4,7 @@ the *generated SVGs* are shipped/bundled).
 Every figure is computed SVG from coordinate data backed by a reproducible spec, then sympy-accuracy
 -checked, then written to algebra-1-tutor/figures/<code>.svg and bundled into the skill. The tutor
 reads the local SVG and re-emits it as an Artifact (no runtime fetch; math exact). This supersedes
-the runtime "compute coordinates and eyeball" approach (handoff §6, REBUILD_BRIEF R2).
+the runtime "compute coordinates and eyeball" approach.
 
 CLI:
   python _verification/figures.py            # (re)generate all SVGs
@@ -329,7 +329,7 @@ FIGURES = [
      "points": [(1, 2), (2, 3), (3, 3), (4, 5), (5, 6)], "fit": {"m": 1, "b": 1},
      "caption": "scatter + best fit y = x + 1"},
 
-    # --- New deterministic figures (IMAGE_PLAN.md §3b): math-bearing, reuse/extend renderers ------
+    # --- Additional deterministic figures: math-bearing, reuse/extend existing renderers ----------
     # Unit 1 — negatives as distance on the line
     {"code": "1.4.f1", "lesson": "1.4", "type": "number_line", "min": -6, "max": 6,
      "ticks": [-6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6],

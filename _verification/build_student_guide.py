@@ -66,7 +66,7 @@ def build_site(ssot):
 <p>Their real use is pointing. Say "explain 12.5.w2" or "walk me through 5.3.4," and the tutor pulls that exact item up and works through it with you, re-checking the math as it goes. The <a href="../tutor-guide/index.html">tutor guide</a>'s extra problems use codes too, with a <code>T</code> in them, like <code>5.4.T1</code>.</p>
 
 <h2>The roadmap</h2>
-<p class="subtitle">Twelve units and a statistics appendix, in a sensible order. Each card opens it in the textbook — start at the top, or jump to what you need.</p>
+<p class="subtitle">Thirteen units in a sensible order, from foundations to the quadratics capstone and a final unit on data and statistics. Each card opens it in the textbook — start at the top, or jump to what you need.</p>
 {_roadmap(ssot)}
 """
     page = bt._lesson_page("Your path through Algebra 1", body, bt._ssot_model(ssot), "", None, None,

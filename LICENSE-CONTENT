@@ -1,0 +1,45 @@
+Course content license — Creative Commons Attribution-NonCommercial 4.0 International
+====================================================================================
+
+SPDX-License-Identifier: CC-BY-NC-4.0
+
+The course content in this repository is licensed under the Creative Commons
+Attribution-NonCommercial 4.0 International License (CC BY-NC 4.0).
+
+WHAT THIS COVERS
+  - the Agent Skill and its lessons: `algebra-1-tutor/` (SKILL.md, the reference
+    banks, the per-unit lessons, and the bundled figure SVGs)
+  - the student-facing textbook prose: `textbook-src/`
+  - the generated website: the HTML and CSS under `docs/`
+
+  (Code and build tooling are under the MIT License — see `LICENSE`.
+  AI-generated raster images in `docs/assets/` are CC0 — see
+  `docs/assets/README.md`.)
+
+YOU ARE FREE TO
+  - Share — copy and redistribute the material in any medium or format
+  - Adapt — remix, transform, and build upon the material
+
+UNDER THE FOLLOWING TERMS
+  - Attribution — you must give appropriate credit, provide a link to this
+    license, and indicate if changes were made.
+  - NonCommercial — you may not use the material for commercial purposes.
+  - No additional restrictions — you may not apply legal terms or technological
+    measures that legally restrict others from doing anything the license
+    permits.
+
+SUGGESTED ATTRIBUTION
+  "Algebra 1 Tutor" by RealRogerWinter, used under CC BY-NC 4.0.
+
+FULL LEGAL TEXT
+  This is a human-readable summary of (and not a substitute for) the license.
+  The complete legal code is incorporated here by reference and is available at:
+    https://creativecommons.org/licenses/by-nc/4.0/legalcode
+  The summary (deed) is at:
+    https://creativecommons.org/licenses/by-nc/4.0/
+
+NOTE ON SOURCES
+  This content is original. Third-party materials (OpenStax, the Common Core
+  State Standards, and the cited research) are referenced as further reading
+  only; none of their text is reproduced or adapted here. See
+  `algebra-1-tutor/references/sources.md`.
