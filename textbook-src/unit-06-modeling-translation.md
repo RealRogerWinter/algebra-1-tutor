@@ -118,6 +118,8 @@ The problems below mix the phrase and sentence types on purpose, which is harder
 
 The four families in this lesson are number, age, distance, and value problems. Together they cover most of the word problems you'll meet in Algebra 1 and well past it. The four labels matter less than the one method that handles all of them, the same setup routine you'll reuse for systems in Unit 7 and for any real model. (One note on scope: percent-concentration mixtures, the "blend 20% and 50% to get 30%" kind, need two variables and wait for Unit 7. Here "value" means coins, tickets, and the like.)
 
+<!--viz:bar_models#3-->
+
 The method is four steps, and you use it every single time:
 
 1. **Define the variable in words.** Write "let x = ____" and finish the sentence. If two things are unknown, write the second *in terms of* the first, using the relationship the problem gives you. This is the step everything else rests on; don't skip it.
@@ -126,6 +128,8 @@ The method is four steps, and you use it every single time:
 4. **Check in the original words,** not just in your equation. Re-read the problem and confirm the numbers fit the story.
 
 That fourth step matters more than it looks. An answer can perfectly satisfy an equation you built *wrong*, and only re-reading the story catches that. The move in step 1, writing the second unknown in terms of the first, is what keeps everything to one variable and one equation, so a single solve does the whole job.
+
+<!--viz:bar_models#0-->
 
 **New terms:**
 - {#6.2.d1} **Consecutive integers:** integers in a row, each one more than the last: n, n+1, n+2, … For consecutive **even** or **odd** integers, the gap is 2: n, n+2, n+4, … (This same gap-of-2 form fits both even and odd runs; which one you get depends only on the starting value n. So if solving gives a non-integer n, say n = 74/3, that total simply has *no* such consecutive run, and the fractional answer is the signal.)

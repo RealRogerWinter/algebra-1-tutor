@@ -13,6 +13,7 @@ CLI:
 """
 import argparse, glob, html as _html, os, re, sys
 import markdown as mdlib
+import importlib.util
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO_ROOT = os.path.dirname(HERE)
@@ -296,6 +297,86 @@ def _convert_illus(text):
     return "\n".join(out)
 
 
+# --- viz: embed a candidate visual element from _verification/viz/<module>.py -------------------
+_VIZ_DIR = os.path.join(HERE, "viz")
+_VIZ_RE = re.compile(r"<!--\s*viz:([a-z0-9_]+)#(\d+)\s*-->")
+_VIZ_CACHE = {}
+
+
+def _viz_module(name):
+    """Import a viz module by file path (cached). Returns the module, or None if missing/broken."""
+    if name not in _VIZ_CACHE:
+        fp = os.path.join(_VIZ_DIR, name + ".py")
+        mod = None
+        if os.path.exists(fp):
+            try:
+                spec = importlib.util.spec_from_file_location("viz_" + name, fp)
+                mod = importlib.util.module_from_spec(spec)
+                spec.loader.exec_module(mod)
+            except Exception:
+                mod = None
+        _VIZ_CACHE[name] = mod
+    return _VIZ_CACHE[name]
+
+
+_VIZ_CODE_MAP = None
+
+
+def _viz_code(module, index):
+    """The SSOT figure code for a viz sample, from figures.VIZ_FIGURES (None if unregistered)."""
+    global _VIZ_CODE_MAP
+    if _VIZ_CODE_MAP is None:
+        _VIZ_CODE_MAP = {}
+        try:
+            import viz_figures as _figmod
+            for f in getattr(_figmod, "VIZ_FIGURES", []):
+                _VIZ_CODE_MAP[(f["module"], int(f["index"]))] = f["code"]
+        except Exception:
+            pass
+    return _VIZ_CODE_MAP.get((module, int(index)))
+
+
+def _convert_viz(text):
+    """Swap each `<!--viz:module#index-->` marker for that module's sample, wrapped in a figure.
+    Fence-aware; a missing module/index drops the marker. The figure HTML is STASHED behind a
+    sentinel and restored AFTER markdown (see md_to_body + _restore_viz): viz HTML contains $$ math
+    and \\textcolor{#hex}{...} whose `{#hex}` would otherwise be eaten by the {#code} anchor pass and
+    mangled by markdown. Returns (text_with_sentinels, blocks)."""
+    blocks, out, infence = [], [], False
+    for ln in text.split("\n"):
+        if ln.lstrip().startswith("```"):
+            infence = not infence; out.append(ln); continue
+        m = None if infence else _VIZ_RE.search(ln)
+        if m:
+            mod = _viz_module(m.group(1))
+            sample = None
+            if mod is not None:
+                try:
+                    sample = mod.samples()[int(m.group(2))]
+                except Exception:
+                    sample = None
+            if sample is not None:
+                code = _viz_code(m.group(1), int(m.group(2)))
+                cap = _html.escape(sample.get("caption", ""))
+                figcap = (f'<b>Figure {code}</b> &mdash; {cap}' if code else cap)
+                fid = f' id="fig-{code}"' if code else ""
+                fig = (f'<figure class="fig viz"{fid}>{sample["html"]}'
+                       f'<figcaption>{figcap}</figcaption></figure>')
+                out += ["", f"\x00V{len(blocks)}\x00", ""]
+                blocks.append(fig)
+            else:
+                out.append(_VIZ_RE.sub("", ln))
+        else:
+            out.append(ln)
+    return "\n".join(out), blocks
+
+
+def _restore_viz(htmltext, blocks):
+    for i, b in enumerate(blocks):
+        htmltext = htmltext.replace(f"<p>\x00V{i}\x00</p>", b).replace(f"\x00V{i}\x00", b)
+    return htmltext
+
+
 _LIST_RE = re.compile(r"^\s*(?:[-*+]|\d+\.)\s")
 _BQ_LIST_RE = re.compile(r"^>\s*(?:[-*+]|\d+\.)\s")
 
@@ -524,7 +605,7 @@ def _render_practice(items, instr=""):
                 f'<div class="prow">'
                 f'<span class="prob">{lead}{prob_html}</span>'
                 f'<details class="qcheck"><summary>'
-                f'<span class="qc-label">Reveal answer</span>'
+                f'<span class="qc-show">Reveal answer</span><span class="qc-hide">Hide</span>'
                 f'<span class="vh"> to problem {num}</span></summary>'
                 f'<span class="qa">{_md_inline(ans)}</span></details></div>')
     out.append("</section>")
@@ -701,6 +782,7 @@ def md_to_body(text, launcher=False):
     math = [_stack_chain(b) for b in math]   # stack long solve-chains so they wrap (no h-scroll)
     text = _protect_sets(text, math)         # typeset numeric set-literals {..} as inline math
     text = _convert_illus(text)
+    text, vizblocks = _convert_viz(text)
     text = _id_worked_practice(text)
     text = _convert_anchors(text, launcher)
     text = _pair_practice_answers(text)
@@ -713,6 +795,7 @@ def md_to_body(text, launcher=False):
     body = body.replace(' markdown="1"', '')
     body = body.replace("<hr />", _DIVIDER).replace("<hr>", _DIVIDER)  # decorative lesson dividers
     body = body.replace(chr(92) + "$", "$")  # python-markdown leaves \$ literal; show currency as $ (math $$ stays protected)
+    body = _restore_viz(body, vizblocks)
     return _restore_math(body, math)
 
 
@@ -1114,7 +1197,7 @@ hr{border:0; border-top:1px solid var(--rule); margin:var(--s6) 0}
 main{max-width:var(--wide); margin:0 auto; padding:1rem 1.3rem 4rem}
 main > *{max-width:var(--measure); margin-inline:auto}
 main > figure.fig, main > .worked, main > .practice, main > .answers, main > .hero,
-main > table, main > .katex-display, main > .lesson-list, main > .pagenav, main > .tset{max-width:var(--wide)}
+main > table, main > .katex-display, main > .lesson-list, main > .pagenav, main > .tset, main > figure.viz{max-width:var(--wide)}
 footer{max-width:var(--measure); margin:var(--s7) auto 0; padding:1.1rem 1.3rem; color:var(--ink-soft);
   font-size:var(--step--1); border-top:1px solid var(--rule)}
 
@@ -1213,11 +1296,12 @@ html.dark .hero-art{filter:brightness(.9) saturate(.92)}
 .qcheck{margin-left:auto; flex:0 0 auto}
 .qcheck > summary{cursor:pointer; list-style:none; display:inline-flex; align-items:center}
 .qcheck > summary::-webkit-details-marker{display:none}
-.qcheck .qc-label{font-size:var(--step--1); font-weight:600; color:var(--leaf);
+.qcheck .qc-show, .qcheck .qc-hide{font-size:var(--step--1); font-weight:600; color:var(--leaf);
   border:1px solid var(--leaf); border-radius:999px; padding:.28rem .7rem; background:var(--tint-leaf, transparent)}
-.qcheck[open] .qc-label{color:var(--ink-soft); border-color:var(--rule)}
+.qcheck[open] .qc-hide{color:var(--ink-soft); border-color:var(--rule)}   /* muted 'Hide' once open */
+.qcheck:not([open]) .qc-hide{display:none} .qcheck[open] .qc-show{display:none}
 .qcheck .qa{align-items:center; gap:.4rem; margin-left:.55rem; font-weight:600; color:var(--leaf)}
-.qcheck .qa::before{content:"\2713"; font-weight:700}
+.qcheck .qa::before{content:"\u2713"; font-weight:700}
 .qcheck:not([open]) .qa{display:none} .qcheck[open] .qa{display:inline-flex}
 @media (prefers-reduced-motion:no-preference){ .prow{transition:border-color .15s ease} }
 /* print: show every answer (even un-opened reveals) and hide the toggle. The screen rule
@@ -1267,6 +1351,14 @@ html.dark figure.fig line[stroke="#2980b9"]{stroke:#6fb0e8} html.dark figure.fig
 figure.illus{margin:var(--s5) auto; max-width:30rem; text-align:center}
 figure.illus img.illus-art{width:100%; height:auto; border-radius:var(--radius); box-shadow:var(--shadow); display:block}
 html.dark figure.illus img.illus-art{filter:brightness(.92) saturate(.94)}
+
+/* ---- viz: candidate visual elements embedded in lessons (svg / html / interactive) ---- */
+figure.viz{margin:var(--s6) auto; max-width:var(--wide); background:var(--card); border:1px solid var(--rule);
+  border-radius:var(--radius); padding:1.1rem 1.2rem .8rem; box-shadow:var(--shadow); overflow:hidden}
+figure.viz figcaption{color:var(--ink-soft); font-size:var(--step--1); margin-top:.7rem; text-align:center}
+figure.viz svg{max-width:100%; height:auto}
+figure.viz .katex-display{overflow-x:auto}
+figure.viz input[type=range]{width:100%; max-width:24rem}
 
 /* ---- objectives blockquote & tables ---- */
 blockquote{margin:var(--s5) auto; padding:1rem 1.25rem; background:var(--tint-blue); border:1px solid var(--rule);

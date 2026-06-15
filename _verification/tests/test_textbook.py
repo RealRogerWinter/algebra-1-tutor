@@ -177,6 +177,24 @@ def test_key_numbers_residual_not_claimed():
     assert bt._key_numbers("13. -4 14. 4", {1, 2, 3}) == set()   # residual key keeps its box
 
 
+def test_qcheck_checkmark_not_octal_mangled():
+    # The reveal's leading glyph must be a real CSS escape for the U+2713 check mark, NOT Python's
+    # octal escape \271 ('¹') + '3' — that mangling shipped 'content:"¹3"' in front of every answer.
+    css = bt.CSS
+    assert "¹" not in css                                 # no stray superscript-one anywhere
+    assert "✓" in css                                     # the real U+2713 check mark is present
+
+
+def test_reveal_label_toggles_open_closed():
+    # closed shows 'Reveal answer', open shows 'Hide' (so an opened reveal reads as a clean check +
+    # answer, not 'Reveal answer ✓ 9'). Both texts stay in the DOM, toggled by CSS, for a stable name.
+    html = bt.md_to_body(LESSON_OK)
+    assert 'class="qc-show">Reveal answer</span><span class="qc-hide">Hide</span>' in html
+    css = bt.CSS
+    assert ".qcheck[open] .qc-show{display:none}" in css         # 'Reveal answer' hidden once open
+    assert ".qcheck:not([open]) .qc-hide{display:none}" in css   # 'Hide' hidden while closed
+
+
 def test_split_practice_block_packed_and_subheads():
     body = ("*Add (undo by subtracting):*\n"
             "1. x+5=12  2. x+9=14  3. x+7=7\n"

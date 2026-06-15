@@ -20,8 +20,6 @@ Start with the equals sign, because almost everything ahead leans on reading it 
 
 Here's a picture for it. Imagine an old balance scale with two pans. If the two pans rest level, the weights on them are equal; that's all "=" claims, that the two sides weigh the same.
 
-<!--illus:1-1-mystery-box-->
-
 So read x + 3 = 7 as that scale resting level: the left pan holds x and 3, the right pan holds 7, and they balance. Here is the one rule to remember: whatever you do to one pan, you do to the other, or it tips.
 
 Reading "=" this way turns a string of symbols into a sentence. On its own, "4 + 3" is just a phrase, the name of a number, the way "the cost of two coffees" names an amount; it doesn't say anything yet. Drop an "=" in and you get a full sentence, with "=" acting as the verb: "4 + 3 = 7" claims the left side and the right side have the same value. A claim like that can be true, false, or, when a piece is still hidden, neither yet. Try reading each of these as a balance and saying which it is:
@@ -33,9 +31,13 @@ Reading "=" this way turns a string of symbols into a sentence. On its own, "4 +
 
 That box is where algebra begins. Instead of an empty box we usually write a letter, say x, and call it a **variable**: a closed box with a number hidden inside that we don't know yet.
 
+<!--illus:1-1-mystery-box-->
+
 So "3 + x = 7" asks the balance question again: what number in the box keeps the two sides equal?
 
 There's one way to answer it that keeps working no matter how unfriendly the numbers get, and it's the move the rest of the course is built on: undo what was done to x. The 3 is added onto x, so undo it by subtracting 3. To keep the scale level you subtract from *both* pans, and when you take 3 away from x + 3, the +3 goes to zero, leaving x by itself.
+
+<!--viz:interactive_equation#0-->
 
 $$x + 3 = 7 \;\xrightarrow{\;-3 \text{ from both sides}\;}\; x = 4$$
 
@@ -193,7 +195,7 @@ Here's the order, top to bottom:
 3. Multiply and divide, equally important, done left to right
 4. Add and subtract, equally important, done left to right
 
-<!--illus:1-3-tiers-->
+<!--viz:flowcharts#0-->
 
 Within the bottom two lines you work in reading order, left to right, the way you read a sentence. Multiply and divide aren't ranked against each other; they're equal, so you just take them in the order they come. Same for add and subtract.
 
@@ -366,6 +368,8 @@ Evaluating an expression is where the mystery box pays off. Picture 3x + 2 as a 
 <!--illus:1-5-empty-chair-->
 
 Now just follow order of operations from Lesson 1.3: 3(4) is 12, then 12 + 2 is 14. Write the steps out, 3(4) + 2 = 12 + 2 = 14, rather than jumping straight to 14, because the careful-substitution habit is what keeps signs and order from slipping.
+
+<!--viz:interactive_equation#1-->
 
 And signs will show up, so here's one with a negative. Evaluate 5 − 2x at x = −1. Drop −1 into the seat, keeping it in parentheses so the signs stay visible: 5 − 2(−1). That's 5 − (−2), and subtracting a negative adds (straight from Lesson 1.4), so 5 + 2 = 7.
 

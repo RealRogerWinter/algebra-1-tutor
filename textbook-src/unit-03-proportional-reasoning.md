@@ -20,13 +20,15 @@ Suppose you drove 120 miles in 2 hours. How far did you go in *one* hour, on ave
 
 You took a comparison of two amounts and boiled it down to "per one hour." That per-one number, 60 miles per hour, is what the real world runs on: price per item, words per minute.
 
-<!--illus:3-1-unit-rate-->
+<!--viz:double_number_lines#0-->
 
 Here's the idea built up slowly, because the "per one" move is the one to get solid.
 
 Start with the picture. Lay the trip out as a tiny two-row table: 2 hours sits across from 120 miles. You want the bottom row, the one that starts with a single hour.
 
 Halve the hours to reach 1, and halve the miles to match: 1 hour sits across from 60 miles. That bottom row, the one with a 1 in it, is the unit rate.
+
+<!--illus:3-1-unit-rate-->
 
 Now the symbols, which are just shorthand for that table. A rate is a fraction, one quantity over the other, and "per one" means making the bottom number 1. So divide the top and the bottom by the same amount until the bottom is 1:
 
@@ -109,6 +111,9 @@ Mixing the problem types feels harder than drilling one kind in a row, and that 
 Say 4 apples cost \$3. At that same price, what do 10 apples cost? The two words doing all the work are *same price*.
 
 The price-per-apple doesn't change just because you bought more, so the comparison "apples to dollars" stays equal even as both numbers grow. Two equal comparisons like that, set side by side, are a proportion. Most of scaling, from recipes to map distances, is exactly this move.
+
+<!--viz:double_number_lines#1-->
+
 
 Start with the picture: stack the two comparisons as equal fractions, keeping the same unit on top on both sides.
 
@@ -195,9 +200,10 @@ The problems below are shuffled rather than sorted by type. Answers are at the e
 
 A percent is a count out of 100. Picture a 10-by-10 grid of 100 little squares: 25% is just 25 of them shaded. That's all the word means: "per hundred."
 
-<!--illus:3-3-percent-triangle-->
-
 Once you see it as a part out of 100, percents stop being a separate topic and become the proportions you just practiced, with the bottom always set to 100.
+
+<!--viz:double_number_lines#2-->
+
 
 It helps to have a few conversions so automatic you don't compute them: 1/2 is 0.5 is 50%, and 1/4 is 0.25 is 25%. Anchor those, and the rest follow by the same logic.
 
@@ -210,6 +216,8 @@ Every percent question hands you two of those three slots and asks for the third
 - **Find the part:** 20% of 80 is 0.20 × 80 = 16.
 - **Find the percent:** 15 is what percent of 60? That's 15/60 = 0.25 = 25%.
 - **Find the whole:** 12 is 30% of what? Then 0.30 × w = 12, so w = 40.
+
+<!--illus:3-3-percent-triangle-->
 
 Percent change is the same skeleton with one specific choice of whole: the value you *started* from. A rise from \$40 to \$50 is (50 − 40)/40 = 25%, an increase; a drop from \$80 to \$60 is (80 − 60)/80 = 25%, a decrease.
 

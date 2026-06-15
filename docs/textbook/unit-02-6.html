@@ -148,7 +148,67 @@
 <div class="hero"><div class="hero-text"><div class="kicker">Unit 2 · Lesson 2.6</div><h1>Equations with fractions</h1></div><img class="hero-art" src="../assets/hero-2-6.jpg" alt=""></div>
 
 <p>Now put those two fraction skills to work. An equation with a fraction in it can look intimidating, but every one turns back into the whole-number equations you already solve. There are two ways in, and you've just refreshed both: multiply by a reciprocal when a single fraction multiplies x, or clear the fractions when they're scattered through the equation.</p>
+<figure class="illus"><img class="illus-art" src="../assets/illus-2-6-clear-fractions.jpg" alt="A fraction circle with an arrow to a solid whole circle, picturing clearing the fractions to get a whole-number equation." loading="lazy"></figure>
+
 <p>Here are the two strategies, each turning a fraction equation into a plain one.</p>
+<figure class="fig viz" id="fig-2.6.f1">
+<style>
+.awe{
+  --awe-x:#2980b9; --awe-k:#a9740f;
+  max-width:30rem; margin:0 auto;
+  background:var(--card); border:1px solid var(--rule);
+  border-left:4px solid var(--blue);
+  border-radius:var(--radius); box-shadow:var(--shadow);
+  padding:1.15rem 1.35rem 1.3rem;
+}
+.awe-head{
+  font-weight:600; color:var(--blue);
+  font-size:.82rem; letter-spacing:.04em; text-transform:uppercase;
+  margin:0 0 .15rem;
+}
+.awe-prompt{
+  color:var(--ink-soft); font-size:.95rem; margin:0 0 .35rem;
+}
+.awe-step{
+  background:var(--paper);
+  border:1px solid var(--rule); border-radius:var(--radius-sm,11px);
+  padding:.5rem .85rem; text-align:center;
+}
+.awe-step .katex{ font-size:1.18em; }
+.awe-step.is-answer{
+  border-color:var(--leaf);
+  box-shadow:inset 0 0 0 1px var(--leaf);
+}
+.awe-conn{
+  display:flex; align-items:center; justify-content:center; gap:.6rem;
+  margin:.32rem auto; color:var(--ink-soft);
+  font-size:.86rem; line-height:1.3;
+}
+.awe-conn::before,.awe-conn::after{
+  content:""; height:1px; flex:1 1 1.4rem; max-width:2.4rem;
+  background:var(--rule);
+}
+.awe-conn .op{
+  display:inline-block; padding:.12rem .6rem;
+  background:var(--card); border:1px solid var(--rule);
+  border-radius:999px; white-space:nowrap;
+}
+.awe-conn .arr{ color:var(--blue); font-weight:600; }
+.awe-legend{
+  display:flex; flex-wrap:wrap; gap:.4rem 1.1rem;
+  margin:.85rem 0 0; padding-top:.7rem;
+  border-top:1px solid var(--rule);
+  color:var(--ink-soft); font-size:.82rem;
+}
+.awe-legend b{ font-weight:600; }
+.awe-legend .sw{
+  display:inline-block; width:.7rem; height:.7rem; border-radius:3px;
+  vertical-align:-1px; margin-right:.32rem;
+}
+.awe-legend .sw-x{ background:var(--awe-x); }
+.awe-legend .sw-k{ background:var(--awe-k); }
+</style>
+<div class="awe" id="awe-fractions"><p class="awe-head">Worked example</p><p class="awe-prompt">Solve for x:  x/2 + x/3 = 5.</p><div class="awe-step">$$\textcolor{#2980b9}{\dfrac{x}{2}} + \textcolor{#2980b9}{\dfrac{x}{3}} = \textcolor{#a9740f}{5}$$</div><div class="awe-conn"><span class="arr">&#8595;</span><span class="op">multiply every term by&nbsp;6 (the LCD)</span></div><div class="awe-step">$$\textcolor{#2980b9}{3x} + \textcolor{#2980b9}{2x} = \textcolor{#a9740f}{30}$$</div><div class="awe-conn"><span class="arr">&#8595;</span><span class="op">combine the x&#8209;terms</span></div><div class="awe-step">$$\textcolor{#2980b9}{5x} = \textcolor{#a9740f}{30}$$</div><div class="awe-conn"><span class="arr">&#8595;</span><span class="op">divide both sides by&nbsp;5</span></div><div class="awe-step is-answer">$$\textcolor{#2980b9}{x} = \textcolor{#a9740f}{6}$$</div><div class="awe-legend"><span><span class="sw sw-x"></span><b>x&#8209;terms</b></span><span><span class="sw sw-k"></span><b>constants</b></span></div></div><figcaption><b>Figure 2.6.f1</b> &mdash; Clear the fractions: x/2 + x/3 = 5</figcaption></figure>
 <p><strong>(1) Single fraction coefficient → multiply by the reciprocal</strong> (Refresher B). When one fraction multiplies x, multiply both sides by its reciprocal so the coefficient goes to one:
 $$\begin{aligned}
 &amp;\frac23 x=6 \\
@@ -165,8 +225,6 @@ $$\begin{aligned}
 \end{aligned}$$
 $$\text{Check: } \frac{6}{2}+\frac{6}{3}=3+2=5$$
 The one thing to hold onto: every term gets multiplied, including the right side. It's the flyers idea again. The ×6 has to reach everyone, or the scale stops balancing.</p>
-<figure class="illus"><img class="illus-art" src="../assets/illus-2-6-clear-fractions.jpg" alt="A fraction circle with an arrow to a solid whole circle, picturing clearing the fractions to get a whole-number equation." loading="lazy"></figure>
-
 <section class="worked">
 <p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19.5V15L15.5 4.5 19.5 8.5 9 19Z"/><path d="M13.5 6.5 17.5 10.5"/></svg>Worked example</span></p>
 <p><a class="refcode" id="2.6.w1" href="#2.6.w1" data-prompt="Use the Algebra 1 tutor skill to help me with worked example 1 in Lesson 2.6 (reference 2.6.w1). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for worked example 1 in Lesson 2.6">2.6.w1</a> <em>Reciprocal method:</em>
@@ -211,20 +269,20 @@ Don't round 15/2 to 7 or 8. An exact fraction <em>is</em> the answer, the same w
 <section class="practice">
 <span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4.5" width="15.5" height="15.5" rx="2.5"/><path d="M7.5 10 9 11.5 12 8.5"/><path d="M14 10H16.5"/><path d="M7.5 15H16.5"/></svg>Practice</span>
 <p class="practice-sub">Reciprocal method (single fraction coefficient):</p>
-<div class="prow"><span class="prob"><a class="refcode" id="2.6.1" href="#2.6.1" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 1 in Lesson 2.6 (reference 2.6.1). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 1 in Lesson 2.6">2.6.1</a> (1/2)x=5</span><details class="qcheck"><summary><span class="qc-label">Reveal answer</span><span class="vh"> to problem 1</span></summary><span class="qa">10</span></details></div>
-<div class="prow"><span class="prob"><a class="refcode" id="2.6.2" href="#2.6.2" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 2 in Lesson 2.6 (reference 2.6.2). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 2 in Lesson 2.6">2.6.2</a> (2/3)x=8</span><details class="qcheck"><summary><span class="qc-label">Reveal answer</span><span class="vh"> to problem 2</span></summary><span class="qa">12</span></details></div>
-<div class="prow"><span class="prob"><a class="refcode" id="2.6.3" href="#2.6.3" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 3 in Lesson 2.6 (reference 2.6.3). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 3 in Lesson 2.6">2.6.3</a> (3/5)x=9</span><details class="qcheck"><summary><span class="qc-label">Reveal answer</span><span class="vh"> to problem 3</span></summary><span class="qa">15</span></details></div>
-<div class="prow"><span class="prob"><a class="refcode" id="2.6.4" href="#2.6.4" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 4 in Lesson 2.6 (reference 2.6.4). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 4 in Lesson 2.6">2.6.4</a> (5/2)x=10</span><details class="qcheck"><summary><span class="qc-label">Reveal answer</span><span class="vh"> to problem 4</span></summary><span class="qa">4</span></details></div>
+<div class="prow"><span class="prob"><a class="refcode" id="2.6.1" href="#2.6.1" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 1 in Lesson 2.6 (reference 2.6.1). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 1 in Lesson 2.6">2.6.1</a> (1/2)x=5</span><details class="qcheck"><summary><span class="qc-show">Reveal answer</span><span class="qc-hide">Hide</span><span class="vh"> to problem 1</span></summary><span class="qa">10</span></details></div>
+<div class="prow"><span class="prob"><a class="refcode" id="2.6.2" href="#2.6.2" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 2 in Lesson 2.6 (reference 2.6.2). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 2 in Lesson 2.6">2.6.2</a> (2/3)x=8</span><details class="qcheck"><summary><span class="qc-show">Reveal answer</span><span class="qc-hide">Hide</span><span class="vh"> to problem 2</span></summary><span class="qa">12</span></details></div>
+<div class="prow"><span class="prob"><a class="refcode" id="2.6.3" href="#2.6.3" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 3 in Lesson 2.6 (reference 2.6.3). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 3 in Lesson 2.6">2.6.3</a> (3/5)x=9</span><details class="qcheck"><summary><span class="qc-show">Reveal answer</span><span class="qc-hide">Hide</span><span class="vh"> to problem 3</span></summary><span class="qa">15</span></details></div>
+<div class="prow"><span class="prob"><a class="refcode" id="2.6.4" href="#2.6.4" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 4 in Lesson 2.6 (reference 2.6.4). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 4 in Lesson 2.6">2.6.4</a> (5/2)x=10</span><details class="qcheck"><summary><span class="qc-show">Reveal answer</span><span class="qc-hide">Hide</span><span class="vh"> to problem 4</span></summary><span class="qa">4</span></details></div>
 <p class="practice-sub">Clear the fractions (common denominator):</p>
-<div class="prow"><span class="prob"><a class="refcode" id="2.6.5" href="#2.6.5" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 5 in Lesson 2.6 (reference 2.6.5). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 5 in Lesson 2.6">2.6.5</a> x/2+x/4=6</span><details class="qcheck"><summary><span class="qc-label">Reveal answer</span><span class="vh"> to problem 5</span></summary><span class="qa">8</span></details></div>
-<div class="prow"><span class="prob"><a class="refcode" id="2.6.6" href="#2.6.6" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 6 in Lesson 2.6 (reference 2.6.6). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 6 in Lesson 2.6">2.6.6</a> x/3+x/6=3</span><details class="qcheck"><summary><span class="qc-label">Reveal answer</span><span class="vh"> to problem 6</span></summary><span class="qa">6</span></details></div>
-<div class="prow"><span class="prob"><a class="refcode" id="2.6.7" href="#2.6.7" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 7 in Lesson 2.6 (reference 2.6.7). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 7 in Lesson 2.6">2.6.7</a> x/2-x/5=3</span><details class="qcheck"><summary><span class="qc-label">Reveal answer</span><span class="vh"> to problem 7</span></summary><span class="qa">10</span></details></div>
-<div class="prow"><span class="prob"><a class="refcode" id="2.6.8" href="#2.6.8" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 8 in Lesson 2.6 (reference 2.6.8). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 8 in Lesson 2.6">2.6.8</a> x/4+x/2=9</span><details class="qcheck"><summary><span class="qc-label">Reveal answer</span><span class="vh"> to problem 8</span></summary><span class="qa">12</span></details></div>
+<div class="prow"><span class="prob"><a class="refcode" id="2.6.5" href="#2.6.5" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 5 in Lesson 2.6 (reference 2.6.5). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 5 in Lesson 2.6">2.6.5</a> x/2+x/4=6</span><details class="qcheck"><summary><span class="qc-show">Reveal answer</span><span class="qc-hide">Hide</span><span class="vh"> to problem 5</span></summary><span class="qa">8</span></details></div>
+<div class="prow"><span class="prob"><a class="refcode" id="2.6.6" href="#2.6.6" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 6 in Lesson 2.6 (reference 2.6.6). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 6 in Lesson 2.6">2.6.6</a> x/3+x/6=3</span><details class="qcheck"><summary><span class="qc-show">Reveal answer</span><span class="qc-hide">Hide</span><span class="vh"> to problem 6</span></summary><span class="qa">6</span></details></div>
+<div class="prow"><span class="prob"><a class="refcode" id="2.6.7" href="#2.6.7" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 7 in Lesson 2.6 (reference 2.6.7). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 7 in Lesson 2.6">2.6.7</a> x/2-x/5=3</span><details class="qcheck"><summary><span class="qc-show">Reveal answer</span><span class="qc-hide">Hide</span><span class="vh"> to problem 7</span></summary><span class="qa">10</span></details></div>
+<div class="prow"><span class="prob"><a class="refcode" id="2.6.8" href="#2.6.8" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 8 in Lesson 2.6 (reference 2.6.8). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 8 in Lesson 2.6">2.6.8</a> x/4+x/2=9</span><details class="qcheck"><summary><span class="qc-show">Reveal answer</span><span class="qc-hide">Hide</span><span class="vh"> to problem 8</span></summary><span class="qa">12</span></details></div>
 <p class="practice-sub">Mixed (fraction coefficient with a constant):</p>
-<div class="prow"><span class="prob"><a class="refcode" id="2.6.9" href="#2.6.9" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 9 in Lesson 2.6 (reference 2.6.9). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 9 in Lesson 2.6">2.6.9</a> (2/3)x+1=7</span><details class="qcheck"><summary><span class="qc-label">Reveal answer</span><span class="vh"> to problem 9</span></summary><span class="qa">9</span></details></div>
-<div class="prow"><span class="prob"><a class="refcode" id="2.6.10" href="#2.6.10" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 10 in Lesson 2.6 (reference 2.6.10). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 10 in Lesson 2.6">2.6.10</a> (3/4)x-2=4</span><details class="qcheck"><summary><span class="qc-label">Reveal answer</span><span class="vh"> to problem 10</span></summary><span class="qa">8</span></details></div>
+<div class="prow"><span class="prob"><a class="refcode" id="2.6.9" href="#2.6.9" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 9 in Lesson 2.6 (reference 2.6.9). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 9 in Lesson 2.6">2.6.9</a> (2/3)x+1=7</span><details class="qcheck"><summary><span class="qc-show">Reveal answer</span><span class="qc-hide">Hide</span><span class="vh"> to problem 9</span></summary><span class="qa">9</span></details></div>
+<div class="prow"><span class="prob"><a class="refcode" id="2.6.10" href="#2.6.10" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 10 in Lesson 2.6 (reference 2.6.10). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 10 in Lesson 2.6">2.6.10</a> (3/4)x-2=4</span><details class="qcheck"><summary><span class="qc-show">Reveal answer</span><span class="qc-hide">Hide</span><span class="vh"> to problem 10</span></summary><span class="qa">8</span></details></div>
 <p class="practice-sub">Fractional answer (the solution is itself a fraction, state it exactly):</p>
-<div class="prow"><span class="prob"><a class="refcode" id="2.6.11" href="#2.6.11" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 11 in Lesson 2.6 (reference 2.6.11). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 11 in Lesson 2.6">2.6.11</a> (2/5)x=3</span><details class="qcheck"><summary><span class="qc-label">Reveal answer</span><span class="vh"> to problem 11</span></summary><span class="qa">15/2</span></details></div>
+<div class="prow"><span class="prob"><a class="refcode" id="2.6.11" href="#2.6.11" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 11 in Lesson 2.6 (reference 2.6.11). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 11 in Lesson 2.6">2.6.11</a> (2/5)x=3</span><details class="qcheck"><summary><span class="qc-show">Reveal answer</span><span class="qc-hide">Hide</span><span class="vh"> to problem 11</span></summary><span class="qa">15/2</span></details></div>
 </section>
 <p><em>Substitution spot-checks:</em> #5: 8/2+8/4=4+2=6. #7: 10/2-10/5=5-2=3. #8: 12/4+12/2=3+6=9. #9: (2/3)(9)+1=6+1=7. #11: (2/5)(15/2)=30/10=3 — a fraction is a fine solution.</p>
 </div>

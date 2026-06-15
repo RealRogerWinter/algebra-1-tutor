@@ -40,10 +40,10 @@ def _counts(ssot):
 def build_site(ssot):
     bt = _bt()
     u, l, f, c = _counts(ssot)
-    core = sum(1 for x in ssot.units if str(x.id) != "A")
     lede = (f"A complete, self-paced Algebra 1 course for an adult who knows arithmetic: a friendly "
             f"textbook to read and a one-on-one tutor to learn with, plus extra practice when you want "
-            f"it. {core} units and a statistics appendix, {l} lessons in all, each quotable by a short code.")
+            f"it. {u} units and {l} lessons in all, from foundations to a quadratics capstone plus a "
+            f"core unit on data and statistics, each quotable by a short code.")
     body = f"""<ul class="units">
 <li><a href="student-guide/index.html"><b>Student guide</b></a><br><span class="u">Start here: how the course works and how to learn with the tutor.</span></li>
 <li><a href="textbook/index.html"><b>Textbook</b></a><br><span class="u">The lessons in full — worked examples, practice, and {f} computed figures, each with a reference code you can deep-link or quote.</span></li>

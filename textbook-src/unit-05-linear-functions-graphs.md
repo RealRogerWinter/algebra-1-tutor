@@ -6,9 +6,13 @@
 
 This is where a function becomes a picture you can read. The one idea threading through every lesson: a line *is* a linear function. The y = mx + b you'll meet and the f(x) = mx + b from Unit 4 are the same thing under two names. It's that same function machine, now drawn as a straight line.
 
+<!--viz:concept_map#1-->
+
 Here's the reassuring part up front. Slope, the main idea of this unit, isn't new. It's the rate of change, which is the unit rate you met in Unit 3: "how much y changes for each 1 step in x." So when slope shows up, you're meeting something you already know under a new name.
 
 Before each new lesson, redo two or three problems from a lesson or two back from memory first. That small warm-up keeps the earlier moves sharp. In this unit the earlier moves are substituting and signed arithmetic, and those are exactly what trips people up if they've gone rusty.
+
+<!--viz:reference_cards#0-->
 
 ---
 
@@ -27,6 +31,8 @@ The two axes cut the flat grid into four regions, called **quadrants**. They're 
 $$\text{I: }(+,+)\qquad \text{II: }(-,+)\qquad \text{III: }(-,-)\qquad \text{IV: }(+,-)$$
 
 A useful habit: before you plot a point, read its two signs and predict the quadrant from them alone. The signs are the address; the picture just confirms it.
+
+<!--viz:interactive_graph#1-->
 
 One case sits outside this scheme. If either coordinate is 0, the point isn't in any quadrant. It's sitting right *on* an axis. A point like (0, −3) hasn't gone left or right at all, so it rests on the y-axis, on the border between two quadrants rather than inside one. That's worth flagging now, because it's easy to feel you must name a quadrant for every point and force one where there isn't any.
 
@@ -160,6 +166,8 @@ This is the idea the next two lessons build on, so give it the most time. Slope 
 
 Start there. In Unit 3, "60 miles per 1 hour" was a unit rate. Draw a graph of distance against time and that rate *is* the slope of the line: the miles you gain for each single hour. Slope is just rise per 1 of run: how much the output climbs for each 1 step you take across.
 
+<!--viz:example_graphs#0-->
+
 Now a picture for steepness: stairs and ramps. A gentle wheelchair ramp barely rises as you walk along it, a small slope. A steep staircase climbs a lot for each step forward, a big slope. Walk *downhill* and the slope is negative. Stand on a flat landing, going forward but not up at all, and the slope is zero. And a wall going straight up has no "forward" to speak of: you can't move across at all, so its slope is undefined. Those are the four cases, and they're just descriptions of how steep and which way.
 
 <!--illus:5-3-staircase-->
@@ -249,9 +257,13 @@ This is the form you'll reach for most. Once a line is written as y = mx + b, yo
 
 Read it as a starting point and a steady pace. The b is where you begin on the y-axis, your starting value, the output before anything happens. The m is your rate of climb from there, the same Unit-3 rate: how much the output changes for each 1 step of input. That's the whole equation: start at b, then climb at rate m.
 
+<!--viz:anatomy#0-->
+
 This reading is clearest in a real situation. Take a phone bill, c = 5t + 30, where t is gigabytes used. The 30 is a $30 base charge you pay before using any data, the starting value, the cost at t = 0. The 5 is $5 per gigabyte, the rate. So you read the equation as "start at $30, add $5 for each gigabyte," not as two loose numbers. In the function form f(x) = mx + b it's the same story: f(0) = b, so feeding 0 into the machine returns the starting value, the intercept.
 
 To graph one by hand, plant the starting point, then walk the slope. Plot (0, b) on the y-axis. Then read the slope as rise over run. For m = 2, that's 2/1, so from the intercept go up 2 and right 1 and mark the next point. Connect them and you have the line. The intercept gives you the first point for free; the slope walks you to the next.
+
+<!--viz:interactive_graph#0-->
 
 Watch the sign here, because it travels with the number. In y = −3x + 5, the slope is −3, not 3, since the minus is part of it, and the y-intercept is 5. Read the sign that's *attached* to each number.
 
@@ -394,6 +406,8 @@ You already do half of this. Back in Lesson 5.4 you found the y-intercept by put
 Two intercepts are two points, and two points draw a line, so plot the pair and connect them. A safety habit worth keeping is to compute a *third* point as a checkpoint. If all three line up, you can trust the picture; if the third one misses, recheck your arithmetic before you draw, because a wrong graph is worse than no graph.
 
 Now standard form, Ax + By = C, where A, B, and C are integers (and A is kept positive by convention). It treats x and y even-handedly, with neither one solved for. That makes it tidy for reading off intercepts but useless for reading slope until you rearrange it.
+
+<!--viz:anatomy#3-->
 
 To get the intercepts, the same zero-out move works: set y = 0 for the x-intercept, set x = 0 for the y-intercept. To get the slope, isolate y, the Unit-2 move: Ax + By = C becomes y = −(A/B)x + C/B, so the slope is −A/B and the y-intercept is C/B.
 

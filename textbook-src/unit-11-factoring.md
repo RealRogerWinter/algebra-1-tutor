@@ -116,9 +116,9 @@ x & x^2 & ?x \\ \hline
 
 The two unknown edges have to multiply to 6 (that's the corner cell), and their x-terms have to add to 5x (that's the middle). Which is exactly one question, and it's the question behind every trinomial: what two numbers multiply to c and add to b?
 
-<!--illus:11-2-area-reversed-->
-
 So the method is a search for two numbers. List the pairs that multiply to c, and pick the pair that adds to b. For x²+5x+6, the pairs multiplying to 6 are 1·6 and 2·3; only 2 + 3 gives 5. So the factors are (x+2)(x+3).
+
+<!--viz:area_models#2-->
 
 The part that takes real care is the signs, and they aren't a guess: the signs of c and b *tell* you the signs of the two numbers. Here's how to read them. Look first at c.
 

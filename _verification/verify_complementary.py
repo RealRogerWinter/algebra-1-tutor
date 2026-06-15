@@ -2,7 +2,7 @@
 
 These are NEW, original problems (parallel forms of the textbook skills, different numbers/contexts)
 authored for the tutor guide so the tutor can hand a student a *fresh* similar problem. They live in
-their own namespace so codes never collide with textbook codes (REBUILD_BRIEF R1, handoff §5):
+their own namespace so codes never collide with textbook codes (see CONTRIBUTING.md -> "Reference codes"):
   per-lesson : scope.lesson.T<n>   e.g. 5.4.T1, 12.3.T7
   unit review: scope.R.T<n>        e.g. 5.R.T1   (the unit-level mixed-review / interleaving set)
 

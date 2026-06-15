@@ -14,9 +14,11 @@ Before each new lesson, redo two or three problems from a lesson or two earlier 
 
 Exponents are just a shorthand for "multiply this by itself a few times." That's the whole idea, and every rule in this lesson comes straight out of it. The trick is to never let the shorthand pull you away from what it's counting.
 
-<!--illus:10-1-repeated-mult-->
+<!--viz:anatomy#2-->
 
 When you're unsure what a rule should be, you can always write the factors out and count them. That habit, more than any memorized rule, is what keeps you out of trouble here.
+
+<!--illus:10-1-repeated-mult-->
 
 These rules are the grammar of nearly every expression ahead: scientific notation in the next lesson, multiplying polynomials later in this one, and the two units after this. The way to make them stick is to see *why* each one is what it is, so that's how we'll build them.
 
@@ -336,9 +338,9 @@ x & x^2 & 3x \\ \hline
 \end{array}\qquad\Rightarrow\qquad x^2 + \underbrace{3x+2x}_{=\,5x} + 6 = x^2+5x+6$$
 There they are: four cells, x², 3x, 2x, and 6. The two in the middle, 3x and 2x, are the ones people drop, and they add up to the 5x that makes this a trinomial instead of just x² + 6.
 
-<!--illus:10-4-area-grid-->
-
 These same four products, taken in a fixed order, are sometimes called FOIL. The box is worth preferring, because it *shows you why a middle term exists* and keeps working when the pieces get bigger, where that shortcut runs out.
+
+<!--viz:area_models#1-->
 
 If the grid isn't your thing, there's a second way to see the same thing: distribute twice. First the x greets both terms in the second parentheses, then the 2 greets both:
 $$x(x+3)+2(x+3)=x^2+3x+2x+6=x^2+5x+6$$

@@ -169,6 +169,169 @@
 <p>The two axes cut the flat grid into four regions, called <strong>quadrants</strong>. They're numbered with Roman numerals I, II, III, IV, starting in the top-right and going counter-clockwise. You don't have to memorize a chart for them, because the signs tell you everything. In the top-right, both coordinates are positive: (+, +). Move counter-clockwise and one sign flips at a time:</p>
 <p>$$\text{I: }(+,+)\qquad \text{II: }(-,+)\qquad \text{III: }(-,-)\qquad \text{IV: }(+,-)$$</p>
 <p>A useful habit: before you plot a point, read its two signs and predict the quadrant from them alone. The signs are the address; the picture just confirms it.</p>
+<figure class="fig viz" id="fig-5.1.f2"><div class="linept-wrap" data-init="0">
+  <style>
+    .linept-wrap{max-width:380px;margin:0 auto;font-family:inherit}
+    .linept-wrap svg{width:100%;height:auto;display:block;
+      background:transparent;border-radius:var(--radius);touch-action:none}
+    .linept-eq{font:600 1.15rem "IBM Plex Mono",ui-monospace,Consolas,monospace;
+      color:var(--blue);text-align:center;margin:.5rem 0 .2rem;letter-spacing:.01em}
+    .linept-ctrl{display:grid;grid-template-columns:auto 1fr auto;gap:.5rem .7rem;
+      align-items:center;margin:.55rem .3rem 0;font-size:.92rem;color:var(--ink-soft)}
+    .linept-ctrl label{font-weight:600;color:var(--ink)}
+    .linept-ctrl output{font:600 .92rem "IBM Plex Mono",monospace;color:var(--ink);
+      min-width:2.4em;text-align:right}
+    .linept-wrap input[type=range]{width:100%;accent-color:var(--blue);
+      height:1.4rem;cursor:pointer}
+    .linept-wrap input[type=range]:focus-visible{outline:2px solid var(--blue);
+      outline-offset:3px;border-radius:6px}
+    .linept-row{text-align:center;margin:.55rem 0 0;font-size:.95rem;color:var(--ink-soft)}
+    .linept-hint{display:block;font-size:.8rem;color:var(--ink-soft);
+      margin-top:.15rem;opacity:.85}
+  </style>
+  <div class="linept-eq" id="linept-eq">y = x</div>
+  <svg viewBox="0 0 360 360" xmlns="http://www.w3.org/2000/svg"
+       font-family="sans-serif" aria-label="coordinate grid with a movable line">
+    <line x1="30.0" y1="330.0" x2="30.0" y2="30.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="30.0" y1="330.0" x2="330.0" y2="330.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="55.0" y1="330.0" x2="55.0" y2="30.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="30.0" y1="305.0" x2="330.0" y2="305.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="80.0" y1="330.0" x2="80.0" y2="30.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="30.0" y1="280.0" x2="330.0" y2="280.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="105.0" y1="330.0" x2="105.0" y2="30.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="30.0" y1="255.0" x2="330.0" y2="255.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="130.0" y1="330.0" x2="130.0" y2="30.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="30.0" y1="230.0" x2="330.0" y2="230.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="155.0" y1="330.0" x2="155.0" y2="30.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="30.0" y1="205.0" x2="330.0" y2="205.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="205.0" y1="330.0" x2="205.0" y2="30.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="30.0" y1="155.0" x2="330.0" y2="155.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="230.0" y1="330.0" x2="230.0" y2="30.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="30.0" y1="130.0" x2="330.0" y2="130.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="255.0" y1="330.0" x2="255.0" y2="30.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="30.0" y1="105.0" x2="330.0" y2="105.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="280.0" y1="330.0" x2="280.0" y2="30.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="30.0" y1="80.0" x2="330.0" y2="80.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="305.0" y1="330.0" x2="305.0" y2="30.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="30.0" y1="55.0" x2="330.0" y2="55.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="330.0" y1="330.0" x2="330.0" y2="30.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="30.0" y1="30.0" x2="330.0" y2="30.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="30.0" y1="180.0" x2="330.0" y2="180.0" stroke="#888" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="180.0" y1="30.0" x2="180.0" y2="330.0" stroke="#888" stroke-width="2.5" stroke-linecap="round"/>
+    <text x="326.0" y="172.0" font-size="13" fill="#888" text-anchor="end">x</text>
+    <text x="188.0" y="41.0" font-size="13" fill="#888">y</text>
+    <text x="80.0" y="195.0" font-size="10" fill="#888" text-anchor="middle">-4</text>
+    <text x="174.0" y="283.5" font-size="10" fill="#888" text-anchor="end">-4</text>
+    <text x="130.0" y="195.0" font-size="10" fill="#888" text-anchor="middle">-2</text>
+    <text x="174.0" y="233.5" font-size="10" fill="#888" text-anchor="end">-2</text>
+    <text x="230.0" y="195.0" font-size="10" fill="#888" text-anchor="middle">2</text>
+    <text x="174.0" y="133.5" font-size="10" fill="#888" text-anchor="end">2</text>
+    <text x="280.0" y="195.0" font-size="10" fill="#888" text-anchor="middle">4</text>
+    <text x="174.0" y="83.5" font-size="10" fill="#888" text-anchor="end">4</text>
+    <line id="linept-line" stroke="#2980b9" stroke-width="2.5" stroke-linecap="round"/>
+    <circle id="linept-yint" r="4.5" fill="#27ae60"/>
+    <line id="linept-drop" stroke="#c0392b" stroke-width="1.4" stroke-dasharray="3 3" opacity="0.6"/><circle id="linept-pt" r="8" fill="#c0392b" tabindex="0" role="slider" aria-label="point on the line, use left and right arrow keys" style="cursor:grab;outline:none"/>
+  </svg>
+  <div class="linept-ctrl">
+    <label for="linept-m">slope&nbsp;m</label>
+    <input id="linept-m" type="range" min="-3" max="3" step="0.5" value="0.5"
+       aria-label="slope m from negative 3 to 3">
+    <output id="linept-mo">0.5</output>
+    <label for="linept-b">intercept&nbsp;b</label>
+    <input id="linept-b" type="range" min="-5" max="5" step="1" value="1"
+       aria-label="y-intercept b from negative 5 to 5">
+    <output id="linept-bo">1</output>
+  </div>
+  <div class="linept-row">point&nbsp;<b id="linept-xy" style="color:var(--rose)">(0, 0)</b><span class="linept-hint">drag the red dot, or focus it and press ← / →</span></div>
+  <script>(function(){
+    var root=document.currentScript.parentNode;
+    if(!root||root.dataset.init==="1"){return;} root.dataset.init="1";
+    
+  var LIM=6, W=360, PAD=30;
+  var SX=(W-2*PAD)/(2*LIM);
+  function px(x){return PAD+(x+LIM)*SX;}
+  function py(y){return PAD+(LIM-y)*SX;}
+  function fmt(v){v=Math.round(v*100)/100; return (v===Math.round(v))?(''+Math.round(v)):(''+v);}
+
+    var DRAG=true;
+    var line=root.querySelector("#linept-line");
+    var yint=root.querySelector("#linept-yint");
+    var eq=root.querySelector("#linept-eq");
+    var sm=root.querySelector("#linept-m"), sb=root.querySelector("#linept-b");
+    var om=root.querySelector("#linept-mo"), ob=root.querySelector("#linept-bo");
+    var pt=root.querySelector("#linept-pt");
+    var drop=root.querySelector("#linept-drop");
+    var xy=root.querySelector("#linept-xy");
+    var ptx=2;   // graph x of the draggable point (clamped to [-LIM,LIM])
+
+    function eqText(m,b){
+      var s = (m===0)?"":(m===1)?"x":(m===-1)?"-x":(fmt(m)+"x");
+      var t;
+      if(b===0){ t = s?"":"0"; }
+      else if(s===""){ t = fmt(b); }
+      else { t = (b>0? " + ":" - ")+fmt(Math.abs(b)); }
+      return "y = " + ((s||t)? (s+t) : "0");
+    }
+    // y on the line at graph-x, clamped so the segment stays inside the box.
+    function lineEndpoints(m,b){
+      // draw across full width; clip y visually via the viewBox (fine for LIM range)
+      return [[-LIM, m*(-LIM)+b],[LIM, m*LIM+b]];
+    }
+    function draw(){
+      var m=parseFloat(sm.value), b=parseFloat(sb.value);
+      om.textContent=fmt(m); ob.textContent=fmt(b);
+      var e=lineEndpoints(m,b);
+      line.setAttribute("x1",px(e[0][0])); line.setAttribute("y1",py(e[0][1]));
+      line.setAttribute("x2",px(e[1][0])); line.setAttribute("y2",py(e[1][1]));
+      yint.setAttribute("cx",px(0)); yint.setAttribute("cy",py(b));
+      eq.textContent=eqText(m,b);
+      if(DRAG){
+        if(ptx<-LIM)ptx=-LIM; if(ptx>LIM)ptx=LIM;
+        var yv=m*ptx+b;
+        pt.setAttribute("cx",px(ptx)); pt.setAttribute("cy",py(yv));
+        // dotted drop-line to the x-axis
+        drop.setAttribute("x1",px(ptx)); drop.setAttribute("y1",py(yv));
+        drop.setAttribute("x2",px(ptx)); drop.setAttribute("y2",py(0));
+        xy.textContent="("+fmt(ptx)+",\u00a0"+fmt(yv)+")";
+        pt.setAttribute("aria-valuetext","x equals "+fmt(ptx)+", y equals "+fmt(yv));
+      }
+    }
+    sm.addEventListener("input",draw); sb.addEventListener("input",draw);
+
+    if(DRAG && pt){
+      var svg=line.ownerSVGElement;
+      function gx(evt){ // pointer clientX -> graph x (inverse of px())
+        var r=svg.getBoundingClientRect();
+        var sxpx=(evt.clientX-r.left)*(W/r.width); // into viewBox px
+        var gxv=(sxpx-PAD)/SX-LIM;
+        gxv=Math.round(gxv*2)/2;                   // snap to half-units
+        if(gxv<-LIM)gxv=-LIM; if(gxv>LIM)gxv=LIM; return gxv;
+      }
+      var dragging=false;
+      pt.addEventListener("pointerdown",function(e){
+        dragging=true; pt.setPointerCapture(e.pointerId);
+        pt.style.cursor="grabbing"; e.preventDefault();
+      });
+      pt.addEventListener("pointermove",function(e){
+        if(!dragging)return; ptx=gx(e); draw();
+      });
+      function release(e){
+        dragging=false; pt.style.cursor="grab";
+        if(e&&e.pointerId!=null&&pt.releasePointerCapture){
+          try{pt.releasePointerCapture(e.pointerId);}catch(_){}
+        }
+      }
+      pt.addEventListener("pointerup",release);
+      pt.addEventListener("pointercancel",release);
+      pt.addEventListener("keydown",function(e){
+        var step=(e.key==="ArrowLeft")?-0.5:(e.key==="ArrowRight")?0.5:0;
+        if(step!==0){ ptx+=step; if(ptx<-LIM)ptx=-LIM; if(ptx>LIM)ptx=LIM;
+          draw(); e.preventDefault(); }
+      });
+    }
+    draw();
+  })();</script>
+</div><figcaption><b>Figure 5.1.f2</b> &mdash; Walk a point along the line. Drag the red dot (or focus it and use the arrow keys); its coordinates update live, and they always satisfy the equation above. Starts at y = 0.5x + 1.</figcaption></figure>
 <p>One case sits outside this scheme. If either coordinate is 0, the point isn't in any quadrant. It's sitting right <em>on</em> an axis. A point like (0, −3) hasn't gone left or right at all, so it rests on the y-axis, on the border between two quadrants rather than inside one. That's worth flagging now, because it's easy to feel you must name a quadrant for every point and force one where there isn't any.</p>
 <div class="cl-terms">
 <p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6.5C9.5 5 6 5 3.5 6.5V18C6 16.5 9.5 16.5 12 18C14.5 16.5 18 16.5 20.5 18V6.5C18 5 14.5 5 12 6.5Z"/><path d="M12 6.5V18"/></svg>New words</span></p>
@@ -248,17 +411,17 @@
 <section class="practice">
 <span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4.5" width="15.5" height="15.5" rx="2.5"/><path d="M7.5 10 9 11.5 12 8.5"/><path d="M14 10H16.5"/><path d="M7.5 15H16.5"/></svg>Practice</span>
 <p class="practice-sub">Name the quadrant (or axis):</p>
-<div class="prow"><span class="prob"><a class="refcode" id="5.1.1" href="#5.1.1" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 1 in Lesson 5.1 (reference 5.1.1). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 1 in Lesson 5.1">5.1.1</a> (5, 3)</span><details class="qcheck"><summary><span class="qc-label">Reveal answer</span><span class="vh"> to problem 1</span></summary><span class="qa">Quadrant I</span></details></div>
-<div class="prow"><span class="prob"><a class="refcode" id="5.1.2" href="#5.1.2" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 2 in Lesson 5.1 (reference 5.1.2). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 2 in Lesson 5.1">5.1.2</a> (-4, -1)</span><details class="qcheck"><summary><span class="qc-label">Reveal answer</span><span class="vh"> to problem 2</span></summary><span class="qa">Quadrant III</span></details></div>
-<div class="prow"><span class="prob"><a class="refcode" id="5.1.3" href="#5.1.3" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 3 in Lesson 5.1 (reference 5.1.3). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 3 in Lesson 5.1">5.1.3</a> (-2, 6)</span><details class="qcheck"><summary><span class="qc-label">Reveal answer</span><span class="vh"> to problem 3</span></summary><span class="qa">Quadrant II</span></details></div>
-<div class="prow"><span class="prob"><a class="refcode" id="5.1.4" href="#5.1.4" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 4 in Lesson 5.1 (reference 5.1.4). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 4 in Lesson 5.1">5.1.4</a> (3, -5)</span><details class="qcheck"><summary><span class="qc-label">Reveal answer</span><span class="vh"> to problem 4</span></summary><span class="qa">Quadrant IV</span></details></div>
-<div class="prow"><span class="prob"><a class="refcode" id="5.1.5" href="#5.1.5" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 5 in Lesson 5.1 (reference 5.1.5). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 5 in Lesson 5.1">5.1.5</a> (8, -2)</span><details class="qcheck"><summary><span class="qc-label">Reveal answer</span><span class="vh"> to problem 5</span></summary><span class="qa">Quadrant IV</span></details></div>
-<div class="prow"><span class="prob"><a class="refcode" id="5.1.6" href="#5.1.6" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 6 in Lesson 5.1 (reference 5.1.6). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 6 in Lesson 5.1">5.1.6</a> (-6, 1)</span><details class="qcheck"><summary><span class="qc-label">Reveal answer</span><span class="vh"> to problem 6</span></summary><span class="qa">Quadrant II</span></details></div>
-<div class="prow"><span class="prob"><a class="refcode" id="5.1.7" href="#5.1.7" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 7 in Lesson 5.1 (reference 5.1.7). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 7 in Lesson 5.1">5.1.7</a> (4, 0)</span><details class="qcheck"><summary><span class="qc-label">Reveal answer</span><span class="vh"> to problem 7</span></summary><span class="qa">on the x-axis (no quadrant)</span></details></div>
-<div class="prow"><span class="prob"><a class="refcode" id="5.1.8" href="#5.1.8" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 8 in Lesson 5.1 (reference 5.1.8). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 8 in Lesson 5.1">5.1.8</a> (0, 7)</span><details class="qcheck"><summary><span class="qc-label">Reveal answer</span><span class="vh"> to problem 8</span></summary><span class="qa">on the y-axis (no quadrant)</span></details></div>
-<div class="prow"><span class="prob"><a class="refcode" id="5.1.9" href="#5.1.9" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 9 in Lesson 5.1 (reference 5.1.9). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 9 in Lesson 5.1">5.1.9</a> (0, 0)</span><details class="qcheck"><summary><span class="qc-label">Reveal answer</span><span class="vh"> to problem 9</span></summary><span class="qa">the origin (no quadrant)</span></details></div>
+<div class="prow"><span class="prob"><a class="refcode" id="5.1.1" href="#5.1.1" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 1 in Lesson 5.1 (reference 5.1.1). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 1 in Lesson 5.1">5.1.1</a> (5, 3)</span><details class="qcheck"><summary><span class="qc-show">Reveal answer</span><span class="qc-hide">Hide</span><span class="vh"> to problem 1</span></summary><span class="qa">Quadrant I</span></details></div>
+<div class="prow"><span class="prob"><a class="refcode" id="5.1.2" href="#5.1.2" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 2 in Lesson 5.1 (reference 5.1.2). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 2 in Lesson 5.1">5.1.2</a> (-4, -1)</span><details class="qcheck"><summary><span class="qc-show">Reveal answer</span><span class="qc-hide">Hide</span><span class="vh"> to problem 2</span></summary><span class="qa">Quadrant III</span></details></div>
+<div class="prow"><span class="prob"><a class="refcode" id="5.1.3" href="#5.1.3" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 3 in Lesson 5.1 (reference 5.1.3). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 3 in Lesson 5.1">5.1.3</a> (-2, 6)</span><details class="qcheck"><summary><span class="qc-show">Reveal answer</span><span class="qc-hide">Hide</span><span class="vh"> to problem 3</span></summary><span class="qa">Quadrant II</span></details></div>
+<div class="prow"><span class="prob"><a class="refcode" id="5.1.4" href="#5.1.4" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 4 in Lesson 5.1 (reference 5.1.4). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 4 in Lesson 5.1">5.1.4</a> (3, -5)</span><details class="qcheck"><summary><span class="qc-show">Reveal answer</span><span class="qc-hide">Hide</span><span class="vh"> to problem 4</span></summary><span class="qa">Quadrant IV</span></details></div>
+<div class="prow"><span class="prob"><a class="refcode" id="5.1.5" href="#5.1.5" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 5 in Lesson 5.1 (reference 5.1.5). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 5 in Lesson 5.1">5.1.5</a> (8, -2)</span><details class="qcheck"><summary><span class="qc-show">Reveal answer</span><span class="qc-hide">Hide</span><span class="vh"> to problem 5</span></summary><span class="qa">Quadrant IV</span></details></div>
+<div class="prow"><span class="prob"><a class="refcode" id="5.1.6" href="#5.1.6" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 6 in Lesson 5.1 (reference 5.1.6). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 6 in Lesson 5.1">5.1.6</a> (-6, 1)</span><details class="qcheck"><summary><span class="qc-show">Reveal answer</span><span class="qc-hide">Hide</span><span class="vh"> to problem 6</span></summary><span class="qa">Quadrant II</span></details></div>
+<div class="prow"><span class="prob"><a class="refcode" id="5.1.7" href="#5.1.7" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 7 in Lesson 5.1 (reference 5.1.7). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 7 in Lesson 5.1">5.1.7</a> (4, 0)</span><details class="qcheck"><summary><span class="qc-show">Reveal answer</span><span class="qc-hide">Hide</span><span class="vh"> to problem 7</span></summary><span class="qa">on the x-axis (no quadrant)</span></details></div>
+<div class="prow"><span class="prob"><a class="refcode" id="5.1.8" href="#5.1.8" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 8 in Lesson 5.1 (reference 5.1.8). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 8 in Lesson 5.1">5.1.8</a> (0, 7)</span><details class="qcheck"><summary><span class="qc-show">Reveal answer</span><span class="qc-hide">Hide</span><span class="vh"> to problem 8</span></summary><span class="qa">on the y-axis (no quadrant)</span></details></div>
+<div class="prow"><span class="prob"><a class="refcode" id="5.1.9" href="#5.1.9" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 9 in Lesson 5.1 (reference 5.1.9). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 9 in Lesson 5.1">5.1.9</a> (0, 0)</span><details class="qcheck"><summary><span class="qc-show">Reveal answer</span><span class="qc-hide">Hide</span><span class="vh"> to problem 9</span></summary><span class="qa">the origin (no quadrant)</span></details></div>
 <p class="practice-sub">Plot &amp; locate:</p>
-<div class="prow"><span class="prob"><a class="refcode" id="5.1.10" href="#5.1.10" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 10 in Lesson 5.1 (reference 5.1.10). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 10 in Lesson 5.1">5.1.10</a> Plot (-3, 1) and name its quadrant.</span><details class="qcheck"><summary><span class="qc-label">Reveal answer</span><span class="vh"> to problem 10</span></summary><span class="qa">left 3, up 1 → Quadrant II.</span></details></div>
+<div class="prow"><span class="prob"><a class="refcode" id="5.1.10" href="#5.1.10" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 10 in Lesson 5.1 (reference 5.1.10). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 10 in Lesson 5.1">5.1.10</a> Plot (-3, 1) and name its quadrant.</span><details class="qcheck"><summary><span class="qc-show">Reveal answer</span><span class="qc-hide">Hide</span><span class="vh"> to problem 10</span></summary><span class="qa">left 3, up 1 → Quadrant II.</span></details></div>
 </section>
 </div>
 <nav class="pagenav" aria-label="Previous and next page">

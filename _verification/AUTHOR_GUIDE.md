@@ -6,8 +6,13 @@ You are authoring ONE unit file for an **Algebra 1 tutoring skill that runs on C
 The unit file is **read by the tutor (an AI), not shown directly to students**. Write it as clear teaching *guidance + content the tutor draws from* — not as student-facing prose, and not as a worksheet. The persona, teaching methods, hint ladder, verification habit, LaTeX rules, and visual rules are ALREADY defined in sibling files (`SKILL.md`, `references/misconceptions.md`, `references/metaphors.md`, `references/visuals.md`, `references/pedagogy.md`). **Do not duplicate them — reference them by name** where relevant.
 
 ## Write TWO files
-1. **Unit content:** `C:\Users\18084\algebra\algebra-1-tutor\references\units\unit-NN-slug.md` (use a two-digit NN and a short slug, e.g. `unit-02-linear-equations.md`).
-2. **Verification data:** `C:\Users\18084\algebra\_verification\unit-NN.json`.
+
+Paths are relative to the repo root.
+
+1. **Unit content:** `algebra-1-tutor/references/units/unit-NN-slug.md` (two-digit NN and a short slug, e.g. `unit-02-linear-equations.md`).
+2. **Verification data:** `_verification/unit-NN.json`.
+
+> This guide covers the **tutor-facing** unit file. The course also ships a warm **student-facing** rewrite under `textbook-src/` that must keep the same math, answers, and reference codes. See [`CONTRIBUTING.md`](../CONTRIBUTING.md) for the dual-source workflow, the house voice, and the full edit-and-verify loop.
 
 ## Conventions
 - Display math in **`$$...$$`** blocks. **Inline math is plain Unicode** (x², √12, ½, ±, ≤, →) — **never** `\(...\)` or lone `$...$` (they show as raw text on Claude.ai). Escape literal currency as `\$`.
@@ -16,9 +21,22 @@ The unit file is **read by the tutor (an AI), not shown directly to students**. 
 - Reference the right misconception section (e.g. "see misconceptions.md §3 negatives") and the right visual template (e.g. "visuals.md Template 3 — parabola") rather than re-explaining them.
 - If your unit introduces or uses functions, thread **function language** (e.g. "this line *is* a function; f(x)=2x+1 names it") per the course design.
 
+## Notation reference (inline math → Unicode)
+
+Display math goes in `$$ … $$` blocks (LaTeX is fine inside). **Inline** math is plain Unicode — never `\(…\)`, `\[…\]`, or single-`$…$`, and no `\macro` outside a `$$` block (`check_notation.py` flags these). Common conversions:
+
+- Exponents → superscripts: `x^2` → x², `x^3` → x³, `^{-2}` → ⁻², `^n` → ⁿ (digits ⁰¹²³⁴⁵⁶⁷⁸⁹, plus ⁻ ⁿ).
+- Fractions → slash form; parenthesize when multiplied by a variable: `2/3`, `(2/3)x`, `x/3`.
+- Roots and symbols: √12, ±, ∓, ≤, ≥, ≠, ×, ·, ÷, →, ⇒, ≈, ∞, π, θ, °.
+- Inside markdown **table cells**, use ASCII (`x^2`, `-3`, `1/2`) — Unicode superscripts and fraction glyphs can drop out in some table renderers.
+- Currency is a bare `$` in prose, kept well clear of any `$$` block.
+- No emoji and no ✓/✗ marks; confirm correctness by writing "Correct" or showing the substitution.
+
+Promote anything too tangled for clean inline Unicode (stacked fractions, big radicals, the quadratic formula) into its own `$$ … $$` block rather than forcing ugly inline text.
+
 ## Reference-code anchors
 
-Referenceable items carry an inline **reference code** so a student (and the HTML textbook) can point to one exact thing (see `SKILL.md` → "Reference codes"; full grammar in `RESEARCH_REDTEAM_HANDOFF.md` §5). Add anchors as you author, in document order.
+Referenceable items carry an inline **reference code** so a student (and the HTML textbook) can point to one exact thing (see `SKILL.md` → "Reference codes"; full grammar in [`CONTRIBUTING.md`](../CONTRIBUTING.md) → "Reference codes"). Add anchors as you author, in document order.
 
 - **Syntax:** `{#code}`. Trailing on a heading (`## Template 1 — … {#vis.t1}`); leading on a list item or bold-led paragraph, right after the marker (`- {#1.1.d1} **Variable:** …`). Plain text, no backslashes, so `check_notation.py` stays clean. **Never** anchor the `# Unit N:` H1 or a `## Lesson N.M:` header — `generate.py` parses those lines.
 - **Tags:** `scope.lesson.tag+index`. `d` definition (new term), `c` transfer-check, `h` how-to/procedure, `f` figure (reserve the anchor where a figure will live — do not draw it; figures are Phase 3). `w` worked example and bare-number practice already exist as JSON ids.

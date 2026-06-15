@@ -150,8 +150,6 @@
 <p>You already know how to work with numbers. Algebra adds just one new idea: sometimes a number is hidden, and we use a letter to stand for it until we track it down.</p>
 <p>Start with the equals sign, because almost everything ahead leans on reading it the right way. The equals sign means the same value: whatever is on the left is worth exactly what's on the right.</p>
 <p>Here's a picture for it. Imagine an old balance scale with two pans. If the two pans rest level, the weights on them are equal; that's all "=" claims, that the two sides weigh the same.</p>
-<figure class="illus"><img class="illus-art" src="../assets/illus-1-1-mystery-box.jpg" alt="A balance scale with a covered box on one pan, picturing the equals sign as two sides held in balance." loading="lazy"></figure>
-
 <p>So read x + 3 = 7 as that scale resting level: the left pan holds x and 3, the right pan holds 7, and they balance. Here is the one rule to remember: whatever you do to one pan, you do to the other, or it tips.</p>
 <p>Reading "=" this way turns a string of symbols into a sentence. On its own, "4 + 3" is just a phrase, the name of a number, the way "the cost of two coffees" names an amount; it doesn't say anything yet. Drop an "=" in and you get a full sentence, with "=" acting as the verb: "4 + 3 = 7" claims the left side and the right side have the same value. A claim like that can be true, false, or, when a piece is still hidden, neither yet. Try reading each of these as a balance and saying which it is:</p>
 <ul>
@@ -161,8 +159,181 @@
 <li>□ + 3 = 5 + 7. The right pan is 12, and the left pan won't balance it until the box holds 9. Until you fill the box, it's neither true nor false. It's <strong>open</strong>.</li>
 </ul>
 <p>That box is where algebra begins. Instead of an empty box we usually write a letter, say x, and call it a <strong>variable</strong>: a closed box with a number hidden inside that we don't know yet.</p>
+<figure class="illus"><img class="illus-art" src="../assets/illus-1-1-mystery-box.jpg" alt="A balance scale with a covered box on one pan, picturing the equals sign as two sides held in balance." loading="lazy"></figure>
+
 <p>So "3 + x = 7" asks the balance question again: what number in the box keeps the two sides equal?</p>
 <p>There's one way to answer it that keeps working no matter how unfriendly the numbers get, and it's the move the rest of the course is built on: undo what was done to x. The 3 is added onto x, so undo it by subtracting 3. To keep the scale level you subtract from <em>both</em> pans, and when you take 3 away from x + 3, the +3 goes to zero, leaving x by itself.</p>
+<figure class="fig viz" id="fig-1.1.f1">
+<div class="bal-wrap viz-iq" data-slug="bal">
+  <style>
+    .bal-wrap{max-width:30rem;margin-inline:auto}
+    .bal-svg{max-width:100%;height:auto;display:block;margin-inline:auto}
+    .bal-eq{text-align:center;font-size:1.45rem;letter-spacing:.01em;
+      margin:.2rem 0 .1rem;color:var(--ink)}
+    .bal-eq .v{color:var(--violet);font-weight:600}
+    .bal-note{text-align:center;color:var(--ink-soft);
+      font-size:.95rem;min-height:1.3em;margin-bottom:.6rem}
+    .bal-note.win{color:var(--leaf);font-weight:600}
+    .bal-controls{display:flex;gap:.6rem;justify-content:center;
+      flex-wrap:wrap;margin-top:.2rem}
+    .iq-btn{font:inherit;font-size:.95rem;cursor:pointer;
+      padding:.5rem .9rem;border-radius:var(--radius-sm,11px);
+      border:1.5px solid var(--rule);background:var(--card);
+      color:var(--ink);box-shadow:var(--shadow);
+      transition:transform .12s ease,border-color .12s ease,
+        background .12s ease,opacity .12s ease}
+    .iq-btn:hover:not(:disabled){transform:translateY(-1px);
+      border-color:var(--blue)}
+    .iq-btn:active:not(:disabled){transform:translateY(0)}
+    .iq-btn:focus-visible{outline:2.5px solid var(--blue);
+      outline-offset:2px}
+    .iq-btn.primary{border-color:var(--blue);color:var(--blue)}
+    .iq-btn:disabled{opacity:.45;cursor:default;box-shadow:none}
+  </style>
+
+  <p class="bal-eq" aria-live="polite"></p>
+  <p class="bal-note" aria-live="polite">Both pans weigh the same, so the
+    scale is level. Keep it that way.</p>
+  
+<svg viewBox="0 0 320 230" xmlns="http://www.w3.org/2000/svg"
+     font-family="inherit" class="bal-svg" aria-hidden="true">
+  <!-- base + stand -->
+  <line x1="160" y1="70" x2="160" y2="178" stroke="#888" stroke-width="2.5"
+        stroke-linecap="round"/>
+  <line x1="116" y1="182" x2="204" y2="182" stroke="#888" stroke-width="2.5"
+        stroke-linecap="round"/>
+  <circle cx="160" cy="70" r="6" fill="#888"/>
+  <!-- level beam -->
+  <line x1="48" y1="70" x2="272" y2="70" stroke="#8e44ad" stroke-width="2.5"
+        stroke-linecap="round"/>
+  <!-- hangers -->
+  <line x1="78" y1="70" x2="78" y2="104" stroke="#888" stroke-width="2"
+        stroke-linecap="round"/>
+  <line x1="242" y1="70" x2="242" y2="104" stroke="#888" stroke-width="2"
+        stroke-linecap="round"/>
+  <!-- pans -->
+  <path d="M40 104 Q78 138 116 104" fill="none" stroke="#2980b9"
+        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M204 104 Q242 138 280 104" fill="none" stroke="#2980b9"
+        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- contents are filled in by script, into these groups -->
+  <g class="bal-left"></g>
+  <g class="bal-right"></g>
+</svg>
+  <p style="text-align:center;color:var(--ink-soft);font-size:.92rem;
+    margin:.5rem 0 0">Goal: get the blue&nbsp;<b style="color:var(--blue)">x</b>
+    box alone.</p>
+  <div class="bal-controls">
+    <button type="button" class="iq-btn primary" data-act="sub">
+      Take 3 from both sides</button>
+    <button type="button" class="iq-btn" data-act="reset">Start over</button>
+  </div>
+</div>
+
+<script>
+(function(){
+  var slug = "bal";
+  // Find the most recently inserted, not-yet-initialised widget of this kind.
+  var roots = document.querySelectorAll('.'+slug+'-wrap[data-slug="'+slug+'"]');
+  var root = null;
+  for (var i = roots.length - 1; i >= 0; i--) {
+    if (!roots[i].dataset.iqReady) { root = roots[i]; break; }
+  }
+  if (!root) return;
+  root.dataset.iqReady = "1";
+
+  var SVGNS = "http://www.w3.org/2000/svg";
+  var leftG  = root.querySelector('.'+slug+'-left');
+  var rightG = root.querySelector('.'+slug+'-right');
+  var eqEl   = root.querySelector('.'+slug+'-eq');
+  var noteEl = root.querySelector('.'+slug+'-note');
+  var btnSub = root.querySelector('[data-act="sub"]');
+  var btnRst = root.querySelector('[data-act="reset"]');
+
+  // state: left side = one x-box + `units` unit weights; right side = `right`.
+  var units, right;
+
+  function unitDot(g, cx, cy){
+    var c = document.createElementNS(SVGNS, "circle");
+    c.setAttribute("cx", cx); c.setAttribute("cy", cy);
+    c.setAttribute("r", 7);
+    c.setAttribute("fill", "#c0392b");
+    c.setAttribute("opacity", "0.92");
+    g.appendChild(c);
+  }
+  function xBox(g, cx, cy){
+    var r = document.createElementNS(SVGNS, "rect");
+    var w = 30, h = 24;
+    r.setAttribute("x", cx - w/2); r.setAttribute("y", cy - h/2);
+    r.setAttribute("width", w);    r.setAttribute("height", h);
+    r.setAttribute("rx", 6);
+    r.setAttribute("fill", "none");
+    r.setAttribute("stroke", "#2980b9");
+    r.setAttribute("stroke-width", "2.5");
+    g.appendChild(r);
+    var t = document.createElementNS(SVGNS, "text");
+    t.setAttribute("x", cx); t.setAttribute("y", cy);
+    t.setAttribute("text-anchor", "middle");
+    t.setAttribute("dominant-baseline", "central");
+    t.setAttribute("font-style", "italic");
+    t.setAttribute("font-size", "15");
+    t.setAttribute("fill", "#2980b9");
+    t.textContent = "x";
+    g.appendChild(t);
+  }
+  // Lay items in a tidy row, centred under a pan whose centre x is `cx`.
+  function rowAt(g, cx, hasX, dots){
+    while (g.firstChild) g.removeChild(g.firstChild);
+    var items = (hasX ? 1 : 0) + dots;
+    var step = 20, y = 92;
+    var startX = cx - (items - 1) * step / 2;
+    var k = 0;
+    if (hasX) { xBox(g, startX + k * step, y); k++; }
+    for (var d = 0; d < dots; d++) { unitDot(g, startX + k * step, y); k++; }
+  }
+
+  function solved(){ return units === 0; }
+
+  function draw(){
+    rowAt(leftG, 78, true, units);          // left pan centre x = 78
+    rowAt(rightG, 242, false, right);       // right pan centre x = 242
+
+    var leftStr = "x" + (units > 0 ? " + " + units : "");
+    eqEl.innerHTML = leftStr + " = <span class=\"v\">" + right + "</span>";
+
+    if (solved()) {
+      noteEl.textContent = "Balanced and solved \u2014 x weighs " + right
+        + ".  x = " + right;
+      noteEl.classList.add("win");
+      btnSub.disabled = true;
+    } else {
+      noteEl.textContent = "Still balanced. Take 3 more from each side to free x.";
+      noteEl.classList.remove("win");
+      btnSub.disabled = false;
+    }
+  }
+
+  function reset(){
+    units = 3; right = 7;     // x + 3 = 7
+    btnSub.disabled = false;
+    draw();
+    noteEl.textContent = "Both pans weigh the same, so the scale is level. "
+      + "Keep it that way.";
+    noteEl.classList.remove("win");
+  }
+
+  btnSub.addEventListener("click", function(){
+    if (solved()) return;
+    // Same operation, both sides => stays balanced.
+    units -= 3; right -= 3;   // -> x = 4
+    if (units < 0) units = 0;
+    draw();
+  });
+  btnRst.addEventListener("click", reset);
+
+  reset();
+})();
+</script><figcaption><b>Figure 1.1.f1</b> &mdash; Balance scale for x + 3 = 7: subtract 3 from both pans, the beam stays level, x is freed (x = 4).</figcaption></figure>
 <p>$$\begin{aligned}
 &amp;x + 3 = 7 \\
 &amp;\xrightarrow{\;-3 \text{ from both sides}\;}\; x = 4
@@ -206,21 +377,21 @@
 <section class="practice">
 <span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4.5" width="15.5" height="15.5" rx="2.5"/><path d="M7.5 10 9 11.5 12 8.5"/><path d="M14 10H16.5"/><path d="M7.5 15H16.5"/></svg>Practice</span>
 <p class="practice-sub">Judge true / false / open (write which):</p>
-<div class="prow"><span class="prob"><a class="refcode" id="1.1.1" href="#1.1.1" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 1 in Lesson 1.1 (reference 1.1.1). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 1 in Lesson 1.1">1.1.1</a> 6 = 2 + 4</span><details class="qcheck"><summary><span class="qc-label">Reveal answer</span><span class="vh"> to problem 1</span></summary><span class="qa">true</span></details></div>
-<div class="prow"><span class="prob"><a class="refcode" id="1.1.2" href="#1.1.2" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 2 in Lesson 1.1 (reference 1.1.2). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 2 in Lesson 1.1">1.1.2</a> 3 + 5 = 9</span><details class="qcheck"><summary><span class="qc-label">Reveal answer</span><span class="vh"> to problem 2</span></summary><span class="qa">false</span></details></div>
-<div class="prow"><span class="prob"><a class="refcode" id="1.1.3" href="#1.1.3" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 3 in Lesson 1.1 (reference 1.1.3). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 3 in Lesson 1.1">1.1.3</a> □ + 2 = 6</span><details class="qcheck"><summary><span class="qc-label">Reveal answer</span><span class="vh"> to problem 3</span></summary><span class="qa">open (true when the blank is 4)</span></details></div>
+<div class="prow"><span class="prob"><a class="refcode" id="1.1.1" href="#1.1.1" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 1 in Lesson 1.1 (reference 1.1.1). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 1 in Lesson 1.1">1.1.1</a> 6 = 2 + 4</span><details class="qcheck"><summary><span class="qc-show">Reveal answer</span><span class="qc-hide">Hide</span><span class="vh"> to problem 1</span></summary><span class="qa">true</span></details></div>
+<div class="prow"><span class="prob"><a class="refcode" id="1.1.2" href="#1.1.2" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 2 in Lesson 1.1 (reference 1.1.2). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 2 in Lesson 1.1">1.1.2</a> 3 + 5 = 9</span><details class="qcheck"><summary><span class="qc-show">Reveal answer</span><span class="qc-hide">Hide</span><span class="vh"> to problem 2</span></summary><span class="qa">false</span></details></div>
+<div class="prow"><span class="prob"><a class="refcode" id="1.1.3" href="#1.1.3" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 3 in Lesson 1.1 (reference 1.1.3). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 3 in Lesson 1.1">1.1.3</a> □ + 2 = 6</span><details class="qcheck"><summary><span class="qc-show">Reveal answer</span><span class="qc-hide">Hide</span><span class="vh"> to problem 3</span></summary><span class="qa">open (true when the blank is 4)</span></details></div>
 <p class="practice-sub">Fill the blank so the sentence stays true:</p>
-<div class="prow"><span class="prob"><a class="refcode" id="1.1.4" href="#1.1.4" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 4 in Lesson 1.1 (reference 1.1.4). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 4 in Lesson 1.1">1.1.4</a> 8 + 4 = □ + 5</span><details class="qcheck"><summary><span class="qc-label">Reveal answer</span><span class="vh"> to problem 4</span></summary><span class="qa">7</span></details></div>
-<div class="prow"><span class="prob"><a class="refcode" id="1.1.5" href="#1.1.5" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 5 in Lesson 1.1 (reference 1.1.5). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 5 in Lesson 1.1">1.1.5</a> 10 = □ + 3</span><details class="qcheck"><summary><span class="qc-label">Reveal answer</span><span class="vh"> to problem 5</span></summary><span class="qa">7</span></details></div>
+<div class="prow"><span class="prob"><a class="refcode" id="1.1.4" href="#1.1.4" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 4 in Lesson 1.1 (reference 1.1.4). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 4 in Lesson 1.1">1.1.4</a> 8 + 4 = □ + 5</span><details class="qcheck"><summary><span class="qc-show">Reveal answer</span><span class="qc-hide">Hide</span><span class="vh"> to problem 4</span></summary><span class="qa">7</span></details></div>
+<div class="prow"><span class="prob"><a class="refcode" id="1.1.5" href="#1.1.5" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 5 in Lesson 1.1 (reference 1.1.5). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 5 in Lesson 1.1">1.1.5</a> 10 = □ + 3</span><details class="qcheck"><summary><span class="qc-show">Reveal answer</span><span class="qc-hide">Hide</span><span class="vh"> to problem 5</span></summary><span class="qa">7</span></details></div>
 <p class="practice-sub">Solve by inspection or by undoing (show the undo step):</p>
-<div class="prow"><span class="prob"><a class="refcode" id="1.1.6" href="#1.1.6" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 6 in Lesson 1.1 (reference 1.1.6). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 6 in Lesson 1.1">1.1.6</a> x + 3 = 7</span><details class="qcheck"><summary><span class="qc-label">Reveal answer</span><span class="vh"> to problem 6</span></summary><span class="qa">x=4</span></details></div>
-<div class="prow"><span class="prob"><a class="refcode" id="1.1.7" href="#1.1.7" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 7 in Lesson 1.1 (reference 1.1.7). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 7 in Lesson 1.1">1.1.7</a> x + 4 = 9</span><details class="qcheck"><summary><span class="qc-label">Reveal answer</span><span class="vh"> to problem 7</span></summary><span class="qa">x=5</span></details></div>
-<div class="prow"><span class="prob"><a class="refcode" id="1.1.8" href="#1.1.8" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 8 in Lesson 1.1 (reference 1.1.8). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 8 in Lesson 1.1">1.1.8</a> x - 2 = 5</span><details class="qcheck"><summary><span class="qc-label">Reveal answer</span><span class="vh"> to problem 8</span></summary><span class="qa">x=7</span></details></div>
-<div class="prow"><span class="prob"><a class="refcode" id="1.1.9" href="#1.1.9" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 9 in Lesson 1.1 (reference 1.1.9). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 9 in Lesson 1.1">1.1.9</a> 2x = 10</span><details class="qcheck"><summary><span class="qc-label">Reveal answer</span><span class="vh"> to problem 9</span></summary><span class="qa">x=5</span></details></div>
-<div class="prow"><span class="prob"><a class="refcode" id="1.1.10" href="#1.1.10" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 10 in Lesson 1.1 (reference 1.1.10). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 10 in Lesson 1.1">1.1.10</a> x/3 = 4</span><details class="qcheck"><summary><span class="qc-label">Reveal answer</span><span class="vh"> to problem 10</span></summary><span class="qa">x=12</span></details></div>
-<div class="prow"><span class="prob"><a class="refcode" id="1.1.11" href="#1.1.11" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 11 in Lesson 1.1 (reference 1.1.11). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 11 in Lesson 1.1">1.1.11</a> 5 + x = 12</span><details class="qcheck"><summary><span class="qc-label">Reveal answer</span><span class="vh"> to problem 11</span></summary><span class="qa">x=7</span></details></div>
-<div class="prow"><span class="prob"><a class="refcode" id="1.1.12" href="#1.1.12" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 12 in Lesson 1.1 (reference 1.1.12). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 12 in Lesson 1.1">1.1.12</a> x - 6 = 0</span><details class="qcheck"><summary><span class="qc-label">Reveal answer</span><span class="vh"> to problem 12</span></summary><span class="qa">x=6</span></details></div>
-<div class="prow"><span class="prob"><a class="refcode" id="1.1.13" href="#1.1.13" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 13 in Lesson 1.1 (reference 1.1.13). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 13 in Lesson 1.1">1.1.13</a> 4x = 20</span><details class="qcheck"><summary><span class="qc-label">Reveal answer</span><span class="vh"> to problem 13</span></summary><span class="qa">x=5</span></details></div>
+<div class="prow"><span class="prob"><a class="refcode" id="1.1.6" href="#1.1.6" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 6 in Lesson 1.1 (reference 1.1.6). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 6 in Lesson 1.1">1.1.6</a> x + 3 = 7</span><details class="qcheck"><summary><span class="qc-show">Reveal answer</span><span class="qc-hide">Hide</span><span class="vh"> to problem 6</span></summary><span class="qa">x=4</span></details></div>
+<div class="prow"><span class="prob"><a class="refcode" id="1.1.7" href="#1.1.7" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 7 in Lesson 1.1 (reference 1.1.7). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 7 in Lesson 1.1">1.1.7</a> x + 4 = 9</span><details class="qcheck"><summary><span class="qc-show">Reveal answer</span><span class="qc-hide">Hide</span><span class="vh"> to problem 7</span></summary><span class="qa">x=5</span></details></div>
+<div class="prow"><span class="prob"><a class="refcode" id="1.1.8" href="#1.1.8" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 8 in Lesson 1.1 (reference 1.1.8). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 8 in Lesson 1.1">1.1.8</a> x - 2 = 5</span><details class="qcheck"><summary><span class="qc-show">Reveal answer</span><span class="qc-hide">Hide</span><span class="vh"> to problem 8</span></summary><span class="qa">x=7</span></details></div>
+<div class="prow"><span class="prob"><a class="refcode" id="1.1.9" href="#1.1.9" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 9 in Lesson 1.1 (reference 1.1.9). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 9 in Lesson 1.1">1.1.9</a> 2x = 10</span><details class="qcheck"><summary><span class="qc-show">Reveal answer</span><span class="qc-hide">Hide</span><span class="vh"> to problem 9</span></summary><span class="qa">x=5</span></details></div>
+<div class="prow"><span class="prob"><a class="refcode" id="1.1.10" href="#1.1.10" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 10 in Lesson 1.1 (reference 1.1.10). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 10 in Lesson 1.1">1.1.10</a> x/3 = 4</span><details class="qcheck"><summary><span class="qc-show">Reveal answer</span><span class="qc-hide">Hide</span><span class="vh"> to problem 10</span></summary><span class="qa">x=12</span></details></div>
+<div class="prow"><span class="prob"><a class="refcode" id="1.1.11" href="#1.1.11" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 11 in Lesson 1.1 (reference 1.1.11). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 11 in Lesson 1.1">1.1.11</a> 5 + x = 12</span><details class="qcheck"><summary><span class="qc-show">Reveal answer</span><span class="qc-hide">Hide</span><span class="vh"> to problem 11</span></summary><span class="qa">x=7</span></details></div>
+<div class="prow"><span class="prob"><a class="refcode" id="1.1.12" href="#1.1.12" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 12 in Lesson 1.1 (reference 1.1.12). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 12 in Lesson 1.1">1.1.12</a> x - 6 = 0</span><details class="qcheck"><summary><span class="qc-show">Reveal answer</span><span class="qc-hide">Hide</span><span class="vh"> to problem 12</span></summary><span class="qa">x=6</span></details></div>
+<div class="prow"><span class="prob"><a class="refcode" id="1.1.13" href="#1.1.13" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 13 in Lesson 1.1 (reference 1.1.13). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 13 in Lesson 1.1">1.1.13</a> 4x = 20</span><details class="qcheck"><summary><span class="qc-show">Reveal answer</span><span class="qc-hide">Hide</span><span class="vh"> to problem 13</span></summary><span class="qa">x=5</span></details></div>
 </section>
 </div>
 <nav class="pagenav" aria-label="Previous and next page">

@@ -2,7 +2,7 @@
 tooling). Same chrome and CSS as the textbook — a left unit rail, a hero, and prev/next nav — so the
 guide reads as part of the same book. Each unit is a page of fresh, parallel-form problems with
 collapsible worked solutions; there is a How-to-use intro and a catalog index. Data from
-_verification/complementary/*.json (REBUILD_BRIEF R1).
+_verification/complementary/*.json.
 
   python _verification/build_tutor_guide.py            # (re)generate docs/tutor-guide/
   python _verification/build_tutor_guide.py --check    # verify committed pages are current

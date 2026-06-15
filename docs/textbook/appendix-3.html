@@ -148,9 +148,51 @@
 <div class="hero"><div class="hero-text"><div class="kicker">Appendix · Lesson A.3</div><h1>Two-way tables</h1></div><img class="hero-art" src="../assets/hero-A-3.jpg" alt=""></div>
 
 <p>Some data isn't a number at all; it's a label. "Owns a pet?" is yes or no; "lives in an apartment or a house?" is one or the other. Data sorted into groups like this is <strong>categorical</strong>, and when you have two such labels for each person, a <strong>two-way table</strong> is the clean way to see how they interact.</p>
+<figure class="fig viz" id="fig-A.3.f1"><div style="max-width:440px;margin:0 auto">
+  <table style="border-collapse:collapse;width:100%;background:var(--card);border-radius:var(--radius-sm);overflow:hidden;font-size:.95em">
+    <caption style="color:var(--ink-soft);font-size:.85em;text-align:left;padding-bottom:.3rem">Where people live vs. owning a pet (n = 25)</caption>
+    <thead>
+      <tr>
+        <th style="border:1px solid var(--rule);padding:.45rem .6rem;background:var(--card-2)"></th>
+        <th style="border:1px solid var(--rule);padding:.45rem .6rem;background:var(--card-2);text-align:center">Has a pet</th>
+        <th style="border:1px solid var(--rule);padding:.45rem .6rem;background:var(--card-2);text-align:center">No pet</th>
+        <th style="border:1px solid var(--rule);padding:.45rem .6rem;background:var(--card-2);text-align:center">Total</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th style="border:1px solid var(--rule);padding:.45rem .6rem;background:var(--card-2);text-align:left">Apartment</th>
+        <td style="border:1px solid var(--rule);padding:.45rem .6rem;text-align:center">3</td>
+        <td style="border:1px solid var(--rule);padding:.45rem .6rem;text-align:center">7</td>
+        <td style="border:1px solid var(--rule);padding:.45rem .6rem;text-align:center;color:var(--ink-soft)">10</td>
+      </tr>
+      <tr>
+        <th style="border:1px solid var(--rule);padding:.45rem .6rem;background:var(--card-2);text-align:left">House</th>
+        <td style="border:1px solid var(--rule);padding:.45rem .6rem;text-align:center;background:rgba(169,116,15,0.16);outline:2px solid #a9740f;outline-offset:-2px;font-weight:700;color:#a9740f">12</td>
+        <td style="border:1px solid var(--rule);padding:.45rem .6rem;text-align:center">3</td>
+        <td style="border:1px solid var(--rule);padding:.45rem .6rem;text-align:center;color:var(--ink-soft)">15</td>
+      </tr>
+      <tr>
+        <th style="border:1px solid var(--rule);padding:.45rem .6rem;background:var(--card-2);text-align:left">Total</th>
+        <td style="border:1px solid var(--rule);padding:.45rem .6rem;text-align:center;color:var(--ink-soft)">15</td>
+        <td style="border:1px solid var(--rule);padding:.45rem .6rem;text-align:center;color:var(--ink-soft)">10</td>
+        <td style="border:1px solid var(--rule);padding:.45rem .6rem;text-align:center;color:var(--ink-soft);font-weight:700">25</td>
+      </tr>
+    </tbody>
+  </table>
+  <p style="margin:.7rem 0 0;color:var(--ink-soft);font-size:.92em;line-height:1.5">
+    The gold cell is the busy corner. Comparing across rows:
+  </p>
+  $$\text{apartment}:\ \frac{3}{10}=0.30=30\%
+     \qquad \text{house}:\ \frac{12}{15}=0.80=80\%$$
+  <p style="margin:.4rem 0 0;color:var(--ink-soft);font-size:.92em;line-height:1.5">
+    80% of house-dwellers have a pet versus 30% in apartments,
+    so where you live and owning a pet are <strong style="color:var(--ink)">associated</strong>.
+  </p>
+</div><figcaption><b>Figure A.3.f1</b> &mdash; Two-way table with row and column totals; the highlighted cell and the two row percentages reveal an association.</figcaption></figure>
+<p>Picture a survey of 50 people, each answering both questions. Every person falls into one of four buckets: pet-and-apartment, pet-and-house, no-pet-and-apartment, no-pet-and-house. A two-way table is just a grid with one bucket per inner cell.</p>
 <figure class="illus"><img class="illus-art" src="../assets/illus-a-3-two-way-grid.jpg" alt="A clean two-by-two grid of cells, picturing a two-way table." loading="lazy"></figure>
 
-<p>Picture a survey of 50 people, each answering both questions. Every person falls into one of four buckets: pet-and-apartment, pet-and-house, no-pet-and-apartment, no-pet-and-house. A two-way table is just a grid with one bucket per inner cell.</p>
 <p>Lay it out as a grid with the totals written along the edges, and a useful check comes for free: the row totals and the column totals both have to add up to the same grand total. If they don't, a cell got misread.</p>
 <p>Reading the table is two moves. A <strong>count</strong> you read straight off a cell: how many people are in that bucket. A <strong>relative frequency</strong> turns a count into a fraction or percent of some total. The one thing to get right is <em>which</em> total you divide by, because that changes with the question. "What share of everyone owns a pet?" divides by the grand total. "Of the apartment dwellers, what share owns a pet?" divides by the apartment column's total, a rate <em>within one group</em>. Same cell sometimes, different denominator, different question.</p>
 <p>That second kind, a rate within one group, is a <strong>conditional relative frequency</strong>, and it's the one that answers the real question a two-way table is for: <em>does one category go with the other?</em> You answer it by comparing the conditional rate across groups. If apartment dwellers own pets at a clearly different rate than house dwellers do, then where you live and owning a pet are <strong>associated</strong>. If the two rates come out about equal, there's little or no association. That's the same idea as the positive/negative association from the scatter plots in A.2, now told with counts instead of dots.</p>
