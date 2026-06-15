@@ -241,6 +241,9 @@ def md_to_body(text):
     text = _blockify(text)
     text = _ensure_list_blank_lines(text)
     body = mdlib.markdown(text, extensions=["extra", "sane_lists", "toc", "md_in_html"], output_format="html5")
+    # md_in_html strips the internal markdown="1" directive on some Python/lib versions but leaves it on
+    # others (e.g. CPython 3.11.9 vs 3.11.15) — remove any residue so the output is byte-identical everywhere.
+    body = body.replace(' markdown="1"', '')
     body = body.replace("<hr />", _DIVIDER).replace("<hr>", _DIVIDER)  # decorative lesson dividers
     return _restore_math(body, math)
 
