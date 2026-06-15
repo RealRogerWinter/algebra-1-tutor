@@ -3,18 +3,22 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Unit 9: Sequences &amp; Exponential Functions — Algebra 1</title>
+<title>Sequences &amp; Exponential Functions — Algebra 1</title>
+<script>try{if(localStorage.getItem("a1-theme")==="dark")document.documentElement.classList.add("dark");}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..40,500..600&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="textbook.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous">
 </head>
-<body>
+<body data-surface="textbook">
 <header class="topbar">
-  <nav><a href="index.html">Contents</a> &nbsp;·&nbsp; <a href="unit-08.html">&larr; Unit 8</a> &nbsp;·&nbsp; <a href="unit-10.html">Unit 10 &rarr;</a></nav>
-  <button id="theme" type="button" aria-label="Toggle dark mode">◐</button>
+  <nav><a class="home" href="index.html">Algebra&nbsp;1</a> &nbsp;·&nbsp; <a href="unit-08.html">&larr;&nbsp;Unit 8</a> &nbsp;·&nbsp; <a href="unit-10.html">Unit 10&nbsp;&rarr;</a></nav>
+  <span class="sp"></span>
+  <button id="theme" type="button" aria-label="Toggle light or dark theme">◐ Theme</button>
 </header>
 <main>
-<h1>Unit 9: Sequences &amp; Exponential Functions</h1>
-<p class="subtitle">Arithmetic/geometric sequences as functions, exponential growth & decay, linear vs. exponential</p>
+<div class="hero"><div class="hero-text"><div class="kicker">Unit 9</div><h1>Sequences &amp; Exponential Functions</h1><p class="lede">Arithmetic/geometric sequences as functions, exponential growth &amp; decay, linear vs. exponential</p></div><img class="hero-art" src="../assets/exponential.jpg" alt=""></div>
 
 <blockquote>
 <p><strong>What's worth having fresh:</strong> the function idea from Unit 4 — feed in an input, get back exactly one output, written f(x). It helps to remember linear functions from Unit 5 as the "add the same amount each step" family, because this unit keeps holding new things up against them. You'll also lean on exponents from Unit 1 and on substituting a number into an expression.
@@ -32,7 +36,7 @@
 <p>This is a shorter unit, and it rests on one idea you can hold in a single sentence. Some patterns grow by <strong>adding the same amount each step</strong>. Others grow by <strong>multiplying by the same amount each step</strong>. That one difference — add the same versus multiply the same — separates the two families you'll meet here, and it's the thing to keep in mind on every page.</p>
 <p>You'll start with sequences, which are just ordered lists of numbers, because they make that contrast something you can count on your fingers. Then you'll meet exponential functions, which are the smooth, grown-up version of the multiplying pattern, and the kind of thing that describes money earning interest or a population doubling.</p>
 <p>Before each new sitting, redo two or three problems from a lesson or two back from memory first. It's a small warm-up, and it does more for you than re-reading.</p>
-<hr>
+<div class="ldiv" aria-hidden="true"><i></i><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3.5 20.5 12 12 20.5 3.5 12Z"/></svg><i></i></div>
 <h2 id="lesson-91-arithmetic-geometric-sequences-as-functions">Lesson 9.1: Arithmetic &amp; geometric sequences as functions</h2>
 <p>A sequence is just an ordered list of numbers, like 3, 7, 11, 15, and so on. Nothing exotic — you already make lists like this whenever you count by fives or read off a row of dates. What turns it into algebra is one question: what are you <em>doing</em> to get from each number to the next?</p>
 <p>Here's a way to picture it that connects back to something you've already met. Back in Unit 4, a function was a machine: you feed in a number, and out comes exactly one number. A sequence is that same machine, fed the counting numbers in order. Feed in 1, out comes the 1st number on the list. Feed in 2, out comes the 2nd. The position in the list is the input; the number sitting there is the output. So a sequence really <em>is</em> a function — its inputs just happen to be 1, 2, 3, and so on. We write the 1st term as a_1, the 2nd as a_2, and the term in position n as a_n.</p>
@@ -88,47 +92,50 @@
 $$\text{geometric:}\quad a_n = r\cdot a_{n-1},\ a_1\text{ given}\qquad\Longleftrightarrow\qquad a_n = a_1\cdot r^{\,n-1}$$</p>
 <p>Moving between the two forms is easier than it looks, because they share their parts. The d (or r) in the step-by-step rule is the <em>same</em> d (or r) in the jump-ahead rule, and a_1 is the same in both. So once you've read off the first term and the common difference or ratio, you can write either form.</p>
 <p>One more thing, and it's the precise reason a sequence isn't quite the same as the line or curve it resembles. The inputs to a sequence are only the counting numbers: 1, 2, 3, and so on. There's no "term 1.5." You can't ask the machine for a number it has no button for. So if you plot the terms of 3, 7, 11, 15 as points (1, 3), (2, 7), (3, 11), (4, 15), you get a row of <strong>separate dots</strong>, not a connected line. The dots happen to sit exactly on the line y = 4n − 1, but the sequence is only the dots. This is what we mean by a <strong>discrete domain</strong>: the inputs come in separate, countable steps with nothing in between. The line that runs through the dots is a continuous parent that fills in the gaps; the sequence itself doesn't. An arithmetic sequence is a linear function looked at only on the counting numbers, and a geometric sequence is an exponential function — the kind you'll meet in the next lesson — looked at only on those same whole-number inputs.</p>
-<p><strong>New terms:</strong></p>
+<div class="cl-terms">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6.5C9.5 5 6 5 3.5 6.5V18C6 16.5 9.5 16.5 12 18C14.5 16.5 18 16.5 20.5 18V6.5C18 5 14.5 5 12 6.5Z"/><path d="M12 6.5V18"/></svg>New words</span></p>
 <ul>
-<li><a class="refcode" id="9.1.d1" href="#9.1.d1">#9.1.d1</a> <strong>Sequence:</strong> an ordered list of numbers, called <strong>terms</strong>. The 1st term is a_1, the 2nd is a_2, and the nth is a_n.</li>
-<li><a class="refcode" id="9.1.d2" href="#9.1.d2">#9.1.d2</a> <strong>Term number n:</strong> the position in the list — 1, 2, 3, ... This is the <strong>input</strong>; the term a_n is the <strong>output</strong>. So a sequence <em>is a function</em> whose domain is the counting numbers.</li>
-<li><a class="refcode" id="9.1.d3" href="#9.1.d3">#9.1.d3</a> <strong>Discrete domain:</strong> because the inputs are only the counting numbers 1, 2, 3, … (you can't ask for "term 1.5"), the sequence's graph is a set of <strong>separate dots</strong>, not a connected curve. This is what distinguishes a sequence from the linear/exponential function it resembles (whose domain is <em>all</em> real numbers).</li>
-<li><a class="refcode" id="9.1.d4" href="#9.1.d4">#9.1.d4</a> <strong>Arithmetic sequence:</strong> each term is the previous one <strong>plus a fixed number</strong>, the <strong>common difference d</strong>. (Constant <em>difference</em>.)</li>
-<li><a class="refcode" id="9.1.d5" href="#9.1.d5">#9.1.d5</a> <strong>Geometric sequence:</strong> each term is the previous one <strong>times a fixed number</strong>, the <strong>common ratio r</strong> (with r ≠ 0 and a_1 ≠ 0 — since we're multiplying, a 0 anywhere would kill the pattern). (Constant <em>ratio</em>.)</li>
-<li><a class="refcode" id="9.1.d6" href="#9.1.d6">#9.1.d6</a> <strong>Recursive vs. explicit rule:</strong> a <strong>recursive</strong> rule says how to get each term <em>from the one before</em> (you must already know the previous term): arithmetic a_n = a_{n-1} + d, geometric a_n = r·a_{n-1}, with the <strong>first term a_1 stated separately</strong>. An <strong>explicit</strong> rule <em>jumps straight to term n</em> from the term number alone: arithmetic a_n = a_1 + (n-1)d, geometric a_n = a_1 · r^(n-1). They describe the <em>same</em> sequence — the recursive one is the "step-by-step" view, the explicit one is the "skip ahead" view, and you should be able to translate between them.</li>
+<li><a class="refcode" id="9.1.d1" href="#9.1.d1">9.1.d1</a> <strong>Sequence:</strong> an ordered list of numbers, called <strong>terms</strong>. The 1st term is a_1, the 2nd is a_2, and the nth is a_n.</li>
+<li><a class="refcode" id="9.1.d2" href="#9.1.d2">9.1.d2</a> <strong>Term number n:</strong> the position in the list — 1, 2, 3, ... This is the <strong>input</strong>; the term a_n is the <strong>output</strong>. So a sequence <em>is a function</em> whose domain is the counting numbers.</li>
+<li><a class="refcode" id="9.1.d3" href="#9.1.d3">9.1.d3</a> <strong>Discrete domain:</strong> because the inputs are only the counting numbers 1, 2, 3, … (you can't ask for "term 1.5"), the sequence's graph is a set of <strong>separate dots</strong>, not a connected curve. This is what distinguishes a sequence from the linear/exponential function it resembles (whose domain is <em>all</em> real numbers).</li>
+<li><a class="refcode" id="9.1.d4" href="#9.1.d4">9.1.d4</a> <strong>Arithmetic sequence:</strong> each term is the previous one <strong>plus a fixed number</strong>, the <strong>common difference d</strong>. (Constant <em>difference</em>.)</li>
+<li><a class="refcode" id="9.1.d5" href="#9.1.d5">9.1.d5</a> <strong>Geometric sequence:</strong> each term is the previous one <strong>times a fixed number</strong>, the <strong>common ratio r</strong> (with r ≠ 0 and a_1 ≠ 0 — since we're multiplying, a 0 anywhere would kill the pattern). (Constant <em>ratio</em>.)</li>
+<li><a class="refcode" id="9.1.d6" href="#9.1.d6">9.1.d6</a> <strong>Recursive vs. explicit rule:</strong> a <strong>recursive</strong> rule says how to get each term <em>from the one before</em> (you must already know the previous term): arithmetic a_n = a_{n-1} + d, geometric a_n = r·a_{n-1}, with the <strong>first term a_1 stated separately</strong>. An <strong>explicit</strong> rule <em>jumps straight to term n</em> from the term number alone: arithmetic a_n = a_1 + (n-1)d, geometric a_n = a_1 · r^(n-1). They describe the <em>same</em> sequence — the recursive one is the "step-by-step" view, the explicit one is the "skip ahead" view, and you should be able to translate between them.</li>
 </ul>
 <p>Read each worked example slowly, a line at a time, and ask why each line follows from the one above before you go on. The first two show the explicit rule doing its job; the last two show how the diagnostic table decides the type.</p>
-<p><strong>Worked examples:</strong></p>
+</div>
+<section class="worked">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19.5V15L15.5 4.5 19.5 8.5 9 19Z"/><path d="M13.5 6.5 17.5 10.5"/></svg>Worked example</span></p>
 <ol>
 <li>
-<p><a class="refcode" id="9.1.w1" href="#9.1.w1">#9.1.w1</a> <strong>Arithmetic</strong> 3, 7, 11, 15, ...: consecutive differences 7-3=4, 11-7=4, 15-11=4 are all 4, so d=4, a_1=3. Find a_10:
+<p><a class="refcode" id="9.1.w1" href="#9.1.w1">9.1.w1</a> <strong>Arithmetic</strong> 3, 7, 11, 15, ...: consecutive differences 7-3=4, 11-7=4, 15-11=4 are all 4, so d=4, a_1=3. Find a_10:
 $$a_{10} = 3 + (10-1)\cdot 4 = 3 + 9\cdot 4 = 3 + 36 = 39$$
 The (10−1) is the nine steps from the first term out to the tenth. To be sure, you could list all ten and land on 39 the slow way; the formula just spares you the listing.</p>
 </li>
 <li>
-<p><a class="refcode" id="9.1.w2" href="#9.1.w2">#9.1.w2</a> <strong>Geometric</strong> 2, 6, 18, 54, ...: consecutive ratios 6/2=3, 18/6=3, 54/18=3 are all 3, so r=3, a_1=2. Find a_5:
+<p><a class="refcode" id="9.1.w2" href="#9.1.w2">9.1.w2</a> <strong>Geometric</strong> 2, 6, 18, 54, ...: consecutive ratios 6/2=3, 18/6=3, 54/18=3 are all 3, so r=3, a_1=2. Find a_5:
 $$a_5 = 2\cdot 3^{\,5-1} = 2\cdot 3^{4} = 2\cdot 81 = 162$$
 The exponent is 5−1=4 because reaching the 5th term means multiplying by 3 four times. Check by walking it: 2 → 6 → 18 → 54 → 162. Same answer.</p>
 </li>
 <li>
-<p><a class="refcode" id="9.1.w3" href="#9.1.w3">#9.1.w3</a> <strong>Which type?</strong> 5, 8, 11, 14, ...: differences are all +3 and the ratios (8/5, 11/8, ...) are <em>not</em> constant → <strong>arithmetic</strong>, d=3. Next term: 14+3 = 17.</p>
+<p><a class="refcode" id="9.1.w3" href="#9.1.w3">9.1.w3</a> <strong>Which type?</strong> 5, 8, 11, 14, ...: differences are all +3 and the ratios (8/5, 11/8, ...) are <em>not</em> constant → <strong>arithmetic</strong>, d=3. Next term: 14+3 = 17.</p>
 </li>
 <li>
-<p><a class="refcode" id="9.1.w4" href="#9.1.w4">#9.1.w4</a> <strong>Which type?</strong> 4, 12, 36, 108, ...: ratios are all ×3 (differences 8, 24, 72 are not constant) → <strong>geometric</strong>, r=3. Next term: 108·3 = 324.</p>
+<p><a class="refcode" id="9.1.w4" href="#9.1.w4">9.1.w4</a> <strong>Which type?</strong> 4, 12, 36, 108, ...: ratios are all ×3 (differences 8, 24, 72 are not constant) → <strong>geometric</strong>, r=3. Next term: 108·3 = 324.</p>
 </li>
 <li>
-<p><a class="refcode" id="9.1.w5" href="#9.1.w5">#9.1.w5</a> <strong>A descending arithmetic sequence</strong> 10, 7, 4, 1, ...: d = -3. Find a_8:
+<p><a class="refcode" id="9.1.w5" href="#9.1.w5">9.1.w5</a> <strong>A descending arithmetic sequence</strong> 10, 7, 4, 1, ...: d = -3. Find a_8:
 $$a_8 = 10 + (8-1)(-3) = 10 + 7(-3) = 10 - 21 = -11$$
 The sequence is going <em>down</em>, so d is negative — keep the minus attached to the 3 all the way through, and the answer lands below zero, which is exactly right for a list that's still dropping.</p>
 </li>
 <li>
-<p><a class="refcode" id="9.1.w6" href="#9.1.w6">#9.1.w6</a> <strong>Arithmetic, both forms (recursive ↔ explicit).</strong> 4, 9, 14, 19, ...: differences are all +5, so a_1=4, d=5. <strong>Recursive:</strong> a_1 = 4, a_n = a_{n-1} + 5. <strong>Explicit:</strong> a_n = 4 + (n-1)·5. Find a_6 <strong>both ways</strong> and confirm they match.
+<p><a class="refcode" id="9.1.w6" href="#9.1.w6">9.1.w6</a> <strong>Arithmetic, both forms (recursive ↔ explicit).</strong> 4, 9, 14, 19, ...: differences are all +5, so a_1=4, d=5. <strong>Recursive:</strong> a_1 = 4, a_n = a_{n-1} + 5. <strong>Explicit:</strong> a_n = 4 + (n-1)·5. Find a_6 <strong>both ways</strong> and confirm they match.
 $$\text{recursive: } 4 \to 9 \to 14 \to 19 \to 24 \to 29 \quad(\text{step +5 five times, } a_6=29)$$
 $$\text{explicit: } a_6 = 4 + (6-1)\cdot 5 = 4 + 5\cdot 5 = 4 + 25 = 29 \checkmark$$
 Same answer, 29 — the recursive form walks term by term; the explicit form skips straight to it.</p>
 </li>
 <li>
-<p><a class="refcode" id="9.1.w7" href="#9.1.w7">#9.1.w7</a> <strong>Geometric, both forms (recursive ↔ explicit).</strong> 3, 6, 12, 24, ...: ratios are all ×2, so a_1=3, r=2. <strong>Recursive:</strong> a_1 = 3, a_n = 2·a_{n-1}. <strong>Explicit:</strong> a_n = 3·2^(n-1). Find a_5 <strong>both ways</strong>:
+<p><a class="refcode" id="9.1.w7" href="#9.1.w7">9.1.w7</a> <strong>Geometric, both forms (recursive ↔ explicit).</strong> 3, 6, 12, 24, ...: ratios are all ×2, so a_1=3, r=2. <strong>Recursive:</strong> a_1 = 3, a_n = 2·a_{n-1}. <strong>Explicit:</strong> a_n = 3·2^(n-1). Find a_5 <strong>both ways</strong>:
 $$\text{recursive: } 3 \to 6 \to 12 \to 24 \to 48 \quad(\times 2 \text{ four times, } a_5=48)$$
 $$\text{explicit: } a_5 = 3\cdot 2^{\,5-1} = 3\cdot 2^{4} = 3\cdot 16 = 48 \checkmark$$
 The translation is just reading off the shared a_1 and r: r=2 is both the recursive multiplier and the explicit base.</p>
@@ -139,60 +146,61 @@ The translation is just reading off the shared a_1 and r: r=2 is both the recurs
 <p>A second slip hides in the n−1. You'd expect the 10th term to use a 10 somewhere, so it's natural to write a_10 = 3 + 10·4. But term 1 takes zero steps, so the 10th term is only nine steps out from the first, and the rule gives 3 + 9·4. If an answer comes out exactly one d too big (or one extra factor of r), this is almost always why. Say it to yourself: a_1 is the <em>first</em> term, already sitting there for free.</p>
 <p>One more, quieter than the others. A recursive rule on its own — say a_n = a_{n−1} − 2 — can't actually produce a single number, because it doesn't know where to start. It's a complete machine missing its first input. So a recursive rule always needs its first term named alongside it; without a_1, there's nothing to step away from.</p>
 <p>Try one clean example first, while the practice is still all one type. Take the arithmetic sequence 2, 5, 8, 11. The difference is +3, the first term is 2, so the next term is just 11 + 3 = 14. No formula needed — only the one move, once. If you want, write its explicit rule too: a_n = 2 + (n−1)·3.</p>
-<p><strong>Check for understanding (transfer):</strong></p>
+</section>
+<div class="cl-check">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M9.6 9.6a2.6 2.6 0 1 1 3.3 2.5c-.9.3-1.4.9-1.4 1.8"/><circle cx="11.5" cy="16.6" r=".9" fill="currentColor" stroke="none"/></svg>Check yourself</span></p>
 <ol>
-<li><a class="refcode" id="9.1.c1" href="#9.1.c1">#9.1.c1</a> "Is 1, 5, 25, 125, ... arithmetic or geometric, and how can you <em>prove</em> it from the numbers — not just by feel?"</li>
-<li><a class="refcode" id="9.1.c2" href="#9.1.c2">#9.1.c2</a> "An arithmetic sequence starts at 6 with d = 4. Without listing all of them, what's the 20th term, and why is it 6 + 19·4 and not 6 + 20·4?"</li>
-<li><a class="refcode" id="9.1.c3" href="#9.1.c3">#9.1.c3</a> "Two sequences both start 2, ... — one is arithmetic with d=2, the other geometric with r=2. Write the first four terms of each. Where do they split apart?"</li>
-<li><a class="refcode" id="9.1.c4" href="#9.1.c4">#9.1.c4</a> "An arithmetic sequence is given recursively as a_1 = 9, a_n = a_{n-1} − 2. Write its <strong>explicit</strong> rule, and explain how you read d and a_1 straight off the recursive form."</li>
+<li><a class="refcode" id="9.1.c1" href="#9.1.c1">9.1.c1</a> "Is 1, 5, 25, 125, ... arithmetic or geometric, and how can you <em>prove</em> it from the numbers — not just by feel?"</li>
+<li><a class="refcode" id="9.1.c2" href="#9.1.c2">9.1.c2</a> "An arithmetic sequence starts at 6 with d = 4. Without listing all of them, what's the 20th term, and why is it 6 + 19·4 and not 6 + 20·4?"</li>
+<li><a class="refcode" id="9.1.c3" href="#9.1.c3">9.1.c3</a> "Two sequences both start 2, ... — one is arithmetic with d=2, the other geometric with r=2. Write the first four terms of each. Where do they split apart?"</li>
+<li><a class="refcode" id="9.1.c4" href="#9.1.c4">9.1.c4</a> "An arithmetic sequence is given recursively as a_1 = 9, a_n = a_{n-1} − 2. Write its <strong>explicit</strong> rule, and explain how you read d and a_1 straight off the recursive form."</li>
 </ol>
 <p>These have short reachable answers. For the first, compute both the differences (4, 20, 100 — not constant) and the ratios (5, 5, 5 — constant), so it's geometric with r = 5; that's what "prove it from the numbers" means. For the second, the 20th term is 19 steps from the first, so a_20 = 6 + 19·4 = 82, and using 20 would count one step too many. For the third, the arithmetic one is 2, 4, 6, 8 and the geometric one is 2, 4, 8, 16 — they agree through the first two terms and split at the third, where adding 2 gives 6 but doubling gives 8. For the fourth, the recursive form shows a_1 = 9 and the step is −2, so d = −2, giving the explicit rule a_n = 9 + (n−1)(−2).</p>
 <p>Mixed practice feels harder than repeating one kind of problem, and that's the point — it's what makes a skill last to next week. Every problem below has its answer at the end of the lesson, and if one stalls you, flip back to the worked example it's based on. That's what it's there for. Watch the first group especially: consecutive problems switch between arithmetic and geometric on purpose, so you have to decide the type before you do anything else.</p>
-<p><strong>Practice problems:</strong>
-<em>Find the common difference d or ratio r, and state the type:</em></p>
+</div>
+<section class="practice">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4.5" width="15.5" height="15.5" rx="2.5"/><path d="M7.5 10 9 11.5 12 8.5"/><path d="M14 10H16.5"/><path d="M7.5 15H16.5"/></svg>Practice</span></p>
+<p><em>Find the common difference d or ratio r, and state the type:</em></p>
 <ol>
-<li><a class="refcode" id="9.1.1" href="#9.1.1">#9.1.1</a> 5, 8, 11, 14, ...</li>
-<li><a class="refcode" id="9.1.2" href="#9.1.2">#9.1.2</a> 3, 6, 12, 24, ...</li>
-<li><a class="refcode" id="9.1.3" href="#9.1.3">#9.1.3</a> 10, 7, 4, 1, ...</li>
-<li>
-<p><a class="refcode" id="9.1.4" href="#9.1.4">#9.1.4</a> 1, 5, 25, 125, ...
-<em>Continue the sequence (give the next two terms):</em></p>
-</li>
-<li>
-<p><a class="refcode" id="9.1.5" href="#9.1.5">#9.1.5</a> 2, 9, 16, 23, ...</p>
-</li>
-<li><a class="refcode" id="9.1.6" href="#9.1.6">#9.1.6</a> 4, 12, 36, ...</li>
-<li>
-<p><a class="refcode" id="9.1.7" href="#9.1.7">#9.1.7</a> 100, 90, 80, ...
-<em>Find the requested term using the rule:</em></p>
-</li>
-<li>
-<p><a class="refcode" id="9.1.8" href="#9.1.8">#9.1.8</a> Arithmetic 5, 8, 11, 14, ...: find a_10.</p>
-</li>
-<li><a class="refcode" id="9.1.9" href="#9.1.9">#9.1.9</a> Geometric 2, 6, 18, 54, ...: find a_5.</li>
-<li><a class="refcode" id="9.1.10" href="#9.1.10">#9.1.10</a> Geometric 3, 6, 12, 24, ...: find a_7.</li>
-<li><a class="refcode" id="9.1.11" href="#9.1.11">#9.1.11</a> Arithmetic 10, 7, 4, 1, ...: find a_8.</li>
-<li>
-<p><a class="refcode" id="9.1.12" href="#9.1.12">#9.1.12</a> Geometric 2, 4, 8, 16, ...: find a_10.
-<em>Write the recursive rule, then find the term explicitly:</em></p>
-</li>
-<li>
-<p><a class="refcode" id="9.1.13" href="#9.1.13">#9.1.13</a> Arithmetic 6, 11, 16, 21, ...: write the recursive rule (with a_1), then find a_8 with the explicit rule.</p>
-</li>
-<li>
-<p><a class="refcode" id="9.1.14" href="#9.1.14">#9.1.14</a> Geometric 2, 10, 50, 250, ...: write the recursive rule (with a_1), then find a_5 with the explicit rule.
-<em>Given the recursive rule, find the requested term:</em></p>
-</li>
-<li>
-<p><a class="refcode" id="9.1.15" href="#9.1.15">#9.1.15</a> Arithmetic given by a_1 = 20, a_n = a_{n-1} − 4: find a_6.</p>
-</li>
-<li><a class="refcode" id="9.1.16" href="#9.1.16">#9.1.16</a> Geometric given by a_1 = 1, a_n = 3·a_{n-1}: find a_5.</li>
+<li><a class="refcode" id="9.1.1" href="#9.1.1">9.1.1</a> 5, 8, 11, 14, ...</li>
+<li><a class="refcode" id="9.1.2" href="#9.1.2">9.1.2</a> 3, 6, 12, 24, ...</li>
+<li><a class="refcode" id="9.1.3" href="#9.1.3">9.1.3</a> 10, 7, 4, 1, ...</li>
+<li><a class="refcode" id="9.1.4" href="#9.1.4">9.1.4</a> 1, 5, 25, 125, ...</li>
 </ol>
-<p><strong>Answer key:</strong></p>
+<p><em>Continue the sequence (give the next two terms):</em></p>
+<ol start="5">
+<li><a class="refcode" id="9.1.5" href="#9.1.5">9.1.5</a> 2, 9, 16, 23, ...</li>
+<li><a class="refcode" id="9.1.6" href="#9.1.6">9.1.6</a> 4, 12, 36, ...</li>
+<li><a class="refcode" id="9.1.7" href="#9.1.7">9.1.7</a> 100, 90, 80, ...</li>
+</ol>
+<p><em>Find the requested term using the rule:</em></p>
+<ol start="8">
+<li><a class="refcode" id="9.1.8" href="#9.1.8">9.1.8</a> Arithmetic 5, 8, 11, 14, ...: find a_10.</li>
+<li><a class="refcode" id="9.1.9" href="#9.1.9">9.1.9</a> Geometric 2, 6, 18, 54, ...: find a_5.</li>
+<li><a class="refcode" id="9.1.10" href="#9.1.10">9.1.10</a> Geometric 3, 6, 12, 24, ...: find a_7.</li>
+<li><a class="refcode" id="9.1.11" href="#9.1.11">9.1.11</a> Arithmetic 10, 7, 4, 1, ...: find a_8.</li>
+<li><a class="refcode" id="9.1.12" href="#9.1.12">9.1.12</a> Geometric 2, 4, 8, 16, ...: find a_10.</li>
+</ol>
+<p><em>Write the recursive rule, then find the term explicitly:</em></p>
+<ol start="13">
+<li><a class="refcode" id="9.1.13" href="#9.1.13">9.1.13</a> Arithmetic 6, 11, 16, 21, ...: write the recursive rule (with a_1), then find a_8 with the explicit rule.</li>
+<li><a class="refcode" id="9.1.14" href="#9.1.14">9.1.14</a> Geometric 2, 10, 50, 250, ...: write the recursive rule (with a_1), then find a_5 with the explicit rule.</li>
+</ol>
+<p><em>Given the recursive rule, find the requested term:</em></p>
+<ol start="15">
+<li><a class="refcode" id="9.1.15" href="#9.1.15">9.1.15</a> Arithmetic given by a_1 = 20, a_n = a_{n-1} − 4: find a_6.</li>
+<li><a class="refcode" id="9.1.16" href="#9.1.16">9.1.16</a> Geometric given by a_1 = 1, a_n = 3·a_{n-1}: find a_5.</li>
+</ol>
+</section>
+<details class="answers">
+<summary><span class="tw"></span><span class="eyebrow">Answers</span><span class="hint">Try each one yourself first, then open to check.</span></summary>
+<div class="ak-body">
 <ol>
 <li>d = 3, <strong>arithmetic</strong> · 2. r = 2, <strong>geometric</strong> · 3. d = -3, <strong>arithmetic</strong> · 4. r = 5, <strong>geometric</strong> · 5. d=7 → next two: 30, 37 · 6. r=3 → next two: 108, 324 · 7. d=-10 → next two: 70, 60 · 8. a_10 = 5 + (10-1)·3 = 32 · 9. a_5 = 2·3⁴ = 162 · 10. a_7 = 3·2⁶ = 192 · 11. a_8 = 10 + 7(-3) = -11 · 12. a_10 = 2·2⁹ = 1024 · 13. recursive a_1 = 6, a_n = a_{n-1} + 5; explicit a_8 = 6 + (8-1)·5 = 41 · 14. recursive a_1 = 2, a_n = 5·a_{n-1}; explicit a_5 = 2·5⁴ = 1250 · 15. a_6 = 20 + (6-1)(-4) = 0 · 16. a_5 = 1·3⁴ = 81.</li>
 </ol>
-<hr>
+</div>
+</details>
+<div class="ldiv" aria-hidden="true"><i></i><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3.5 20.5 12 12 20.5 3.5 12Z"/></svg><i></i></div>
 <h2 id="lesson-92-exponential-growth-decay-linear-vs-exponential">Lesson 9.2: Exponential growth &amp; decay; linear vs. exponential</h2>
 <p>The last lesson's geometric sequence — multiply by the same number each step — was a row of separate dots. This lesson fills in the gaps between them and lets the input be any number, not just 1, 2, 3. That smooth version is an <strong>exponential function</strong>, and it's how you describe money earning interest, a population breeding, or a phone losing value year after year.</p>
 <p>Start with the contrast, in money. A linear pattern is repeated <em>adding</em>: you put $5 under the mattress every week, the same five dollars each time. An exponential pattern is repeated <em>multiplying</em>: your money grows by the same <em>percent</em> each step, so the actual dollar amount you add gets bigger and bigger, because a percent of a larger pile is more dollars. Two quick stories to hold onto. Five bacteria become 10, then 20, then 40 — doubling, so you multiply by 2 each step. And an $80 phone that loses half its value a year goes 80, 40, 20, 10 — multiplying by 0.5 each step. One climbs, one falls, but both <em>multiply</em>.</p>
@@ -249,9 +257,10 @@ The translation is just reading off the shared a_1 and r: r=2 is both the recurs
 </table>
 <p>Read down the columns. The line adds 2 every row, a constant difference. The exponential <em>doubles</em> every row, a constant ratio. They're equal in two places, at x = 1 and again at x = 2 (the rows where both read 2, and both read 4). Between those two points the curve actually dips a hair below the line. At x = 1.5 the line is at 3 but 2^1.5 is about 2.83. You can't see that in a whole-number table, but it's real if you graph it. Then from x = 3 onward the exponential pulls ahead and never looks back: 8 beats 6, and the gap only widens after that. That's the headline about growth: an <em>increasing</em> exponential (b &gt; 1) eventually overtakes <em>any</em> straight line, no matter how steep the line is. A <em>decaying</em> exponential (0 &lt; b &lt; 1) does the reverse — it sinks toward 0 and overtakes nothing that's rising.</p>
 <p>To classify a table on your own, use the exact tool from the last lesson, now with family names attached. Check whether consecutive outputs share a constant <em>difference</em> (that's linear) or a constant <em>ratio</em> (that's exponential). Same diagnostic, new vocabulary.</p>
-<p><strong>New terms:</strong></p>
+<div class="cl-terms">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6.5C9.5 5 6 5 3.5 6.5V18C6 16.5 9.5 16.5 12 18C14.5 16.5 18 16.5 20.5 18V6.5C18 5 14.5 5 12 6.5Z"/><path d="M12 6.5V18"/></svg>New words</span></p>
 <ul>
-<li><a class="refcode" id="9.2.d1" href="#9.2.d1">#9.2.d1</a> <strong>Exponential function (well-defined):</strong><blockquote>
+<li><a class="refcode" id="9.2.d1" href="#9.2.d1">9.2.d1</a> <strong>Exponential function (well-defined):</strong><blockquote>
 <p><strong>f(x) = a·bˣ</strong>, where <strong>a ≠ 0</strong> is the starting amount and <strong>b</strong> is the growth/decay factor, a number with <strong>b &gt; 0 and b ≠ 1</strong>.</p>
 <p>Each restriction earns its place: <strong>a ≠ 0</strong> (if a = 0 then a·bˣ = 0 for every x — it collapses to the constant 0, not a growth model); <strong>b &gt; 0</strong> (if b ≤ 0 then bˣ isn't a real number for some inputs — e.g. with b = −4 the input x = ½ asks for √(−4), which is not a real number); <strong>b ≠ 1</strong> (if b = 1 then bˣ = 1 always, so f(x) = a — the constant a, with nothing growing or decaying).</p>
 </blockquote>
@@ -259,32 +268,34 @@ The translation is just reading off the shared a_1 and r: r=2 is both the recurs
 </ul>
 <p>The variable is in the <strong>exponent</strong> — that's what makes it exponential, not linear.</p>
 <ul>
-<li><a class="refcode" id="9.2.d2" href="#9.2.d2">#9.2.d2</a> <strong>Starting amount a:</strong> the value when x=0 (since b⁰=1, f(0)=a). Like the y-intercept's role, but now it's a <em>multiplier</em> the growth builds on. <strong>Interpret it in context:</strong> a is the amount you start with <em>before any growth/decay</em> — the initial population, the price when new, the deposit before interest.</li>
-<li><a class="refcode" id="9.2.d3" href="#9.2.d3">#9.2.d3</a> <strong>Growth/decay factor b:</strong> what you <strong>multiply by</strong> each step (the continuous-function analogue of the common ratio r — same role, now allowed at every real x). b&gt;1 → <strong>growth</strong>; 0&lt;b&lt;1 → <strong>decay</strong>. <strong>Interpret it in context:</strong> b is "what fraction of the previous amount you have after one period," so it directly <em>reads off</em> the percent change — <strong>b = 1.05 means +5% per period</strong> (you keep 100% and add 5%), <strong>b = 1.20 means +20%</strong>, <strong>b = 0.90 means −10%</strong> (you keep 90%, lose 10%), <strong>b = 0.5 means −50%</strong> (halves). The "+5%" lives in the <em>digits past the 1</em>; a b below 1 is a <em>loss</em> of (1 − b).</li>
-<li><a class="refcode" id="9.2.d4" href="#9.2.d4">#9.2.d4</a> <strong>Percent ↔ factor:</strong> "+p%" → b = 1 + p/100 (e.g. +10% → 1.10); "−p%" → b = 1 - p/100 (e.g. −20% → 0.80). Run it backward too: given b, the per-period change is (b − 1)·100% (positive = growth, negative = decay).</li>
+<li><a class="refcode" id="9.2.d2" href="#9.2.d2">9.2.d2</a> <strong>Starting amount a:</strong> the value when x=0 (since b⁰=1, f(0)=a). Like the y-intercept's role, but now it's a <em>multiplier</em> the growth builds on. <strong>Interpret it in context:</strong> a is the amount you start with <em>before any growth/decay</em> — the initial population, the price when new, the deposit before interest.</li>
+<li><a class="refcode" id="9.2.d3" href="#9.2.d3">9.2.d3</a> <strong>Growth/decay factor b:</strong> what you <strong>multiply by</strong> each step (the continuous-function analogue of the common ratio r — same role, now allowed at every real x). b&gt;1 → <strong>growth</strong>; 0&lt;b&lt;1 → <strong>decay</strong>. <strong>Interpret it in context:</strong> b is "what fraction of the previous amount you have after one period," so it directly <em>reads off</em> the percent change — <strong>b = 1.05 means +5% per period</strong> (you keep 100% and add 5%), <strong>b = 1.20 means +20%</strong>, <strong>b = 0.90 means −10%</strong> (you keep 90%, lose 10%), <strong>b = 0.5 means −50%</strong> (halves). The "+5%" lives in the <em>digits past the 1</em>; a b below 1 is a <em>loss</em> of (1 − b).</li>
+<li><a class="refcode" id="9.2.d4" href="#9.2.d4">9.2.d4</a> <strong>Percent ↔ factor:</strong> "+p%" → b = 1 + p/100 (e.g. +10% → 1.10); "−p%" → b = 1 - p/100 (e.g. −20% → 0.80). Run it backward too: given b, the per-period change is (b − 1)·100% (positive = growth, negative = decay).</li>
 </ul>
 <p>Read these slowly too. Notice the check sitting inside several of them — substituting back is how you know the value is right, not a chore added at the end.</p>
-<p><strong>Worked examples:</strong></p>
+</div>
+<section class="worked">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19.5V15L15.5 4.5 19.5 8.5 9 19Z"/><path d="M13.5 6.5 17.5 10.5"/></svg>Worked example</span></p>
 <ol>
 <li>
-<p><a class="refcode" id="9.2.w1" href="#9.2.w1">#9.2.w1</a> <strong>Growth, +10% per year.</strong> $100 invested at +10%/yr → a=100, b=1.10, so y = 100·1.1ˣ. Value after 3 years:
+<p><a class="refcode" id="9.2.w1" href="#9.2.w1">9.2.w1</a> <strong>Growth, +10% per year.</strong> $100 invested at +10%/yr → a=100, b=1.10, so y = 100·1.1ˣ. Value after 3 years:
 $$y = 100\cdot 1.1^{3} = 100\cdot 1.331 = 133.10$$
 So $133.10. (Note b=1.10, <em>not</em> 0.10: you keep your 100% and add 10%.) <strong>Interpret:</strong> a=100 is the deposit before any interest; b=1.10 says the balance is 110% of the year before, i.e. +10% each year. <strong>Rounding discipline:</strong> here 1.1³ = 1.331 <em>exactly</em>, so the value is exactly $133.10 — it happens to land on a whole cent. In general, carry the <strong>exact</strong> value through and round money to the nearest cent only at the <em>very end</em> (this is the "decimal drift" rule below, at its natural home).</p>
 </li>
 <li>
-<p><a class="refcode" id="9.2.w2" href="#9.2.w2">#9.2.w2</a> <strong>Doubling population.</strong> 5, 10, 20, 40, ... — multiply by 2 each year → a=5, b=2, y = 5·2ˣ. Check: x=3 ⇒ 5·2³ = 40. This is the geometric sequence of 9.1 (a₁=5, r=2) as its <strong>continuous</strong> function: the sequence is just the dots at x = 1, 2, 3, …, and y = 5·2ˣ is the curve filling in every x between them (here r becomes the base b).</p>
+<p><a class="refcode" id="9.2.w2" href="#9.2.w2">9.2.w2</a> <strong>Doubling population.</strong> 5, 10, 20, 40, ... — multiply by 2 each year → a=5, b=2, y = 5·2ˣ. Check: x=3 ⇒ 5·2³ = 40. This is the geometric sequence of 9.1 (a₁=5, r=2) as its <strong>continuous</strong> function: the sequence is just the dots at x = 1, 2, 3, …, and y = 5·2ˣ is the curve filling in every x between them (here r becomes the base b).</p>
 </li>
 <li>
-<p><a class="refcode" id="9.2.w3" href="#9.2.w3">#9.2.w3</a> <strong>Decay, halving.</strong> An $80 value halved each year → a=80, b=0.5, y = 80·0.5ˣ: 80, 40, 20, 10, ... Since 0&lt;0.5&lt;1, it's <strong>decay</strong>. Value after 3 years: 80·0.5³ = 80·0.125 = 10.</p>
+<p><a class="refcode" id="9.2.w3" href="#9.2.w3">9.2.w3</a> <strong>Decay, halving.</strong> An $80 value halved each year → a=80, b=0.5, y = 80·0.5ˣ: 80, 40, 20, 10, ... Since 0&lt;0.5&lt;1, it's <strong>decay</strong>. Value after 3 years: 80·0.5³ = 80·0.125 = 10.</p>
 </li>
 <li>
-<p><a class="refcode" id="9.2.w4" href="#9.2.w4">#9.2.w4</a> <strong>Percent → factor drill.</strong> "+5%" → b=1.05; "−20%" → b=0.80; "doubles" → b=2; "halves" → b=0.5. E.g. a town of 1000 growing 5%/yr after 2 yr: 1000·1.05² = 1102.50.</p>
+<p><a class="refcode" id="9.2.w4" href="#9.2.w4">9.2.w4</a> <strong>Percent → factor drill.</strong> "+5%" → b=1.05; "−20%" → b=0.80; "doubles" → b=2; "halves" → b=0.5. E.g. a town of 1000 growing 5%/yr after 2 yr: 1000·1.05² = 1102.50.</p>
 </li>
 <li>
-<p><a class="refcode" id="9.2.w5" href="#9.2.w5">#9.2.w5</a> <strong>Classify a table.</strong> 3, 6, 12, 24: differences 3,6,12 (not constant) but ratios 2,2,2 (constant) → <strong>exponential</strong>, b=2. Versus 3, 6, 9, 12: differences 3,3,3 constant → <strong>linear</strong>, slope 3.</p>
+<p><a class="refcode" id="9.2.w5" href="#9.2.w5">9.2.w5</a> <strong>Classify a table.</strong> 3, 6, 12, 24: differences 3,6,12 (not constant) but ratios 2,2,2 (constant) → <strong>exponential</strong>, b=2. Versus 3, 6, 9, 12: differences 3,3,3 constant → <strong>linear</strong>, slope 3.</p>
 </li>
 <li>
-<p><a class="refcode" id="9.2.w6" href="#9.2.w6">#9.2.w6</a> <strong>Interpret in context (read what a and b <em>mean</em>).</strong> A town's population is y = 1500·1.05ˣ, with x in years. Don't just compute — <em>say what the model claims</em>: a=1500 is the <strong>starting population</strong> (year 0, before any growth); b=1.05 means each year the population is <strong>105% of the year before</strong>, i.e. it <strong>grows 5% per year</strong>. Value after 2 years: 1500·1.05² = 1653.75 ≈ 1654 people. Contrast a decay model y = 2000·0.9ˣ (a piece of equipment): a=2000 is the <strong>value when new</strong>, b=0.9 means it keeps <strong>90% of its value each year</strong>, i.e. <strong>loses 10% per year</strong>; after 2 years 2000·0.9² = 1620. The skill: turn b into a sentence — "+5% a year" or "−10% a year" — and a into "the amount before anything happens."</p>
+<p><a class="refcode" id="9.2.w6" href="#9.2.w6">9.2.w6</a> <strong>Interpret in context (read what a and b <em>mean</em>).</strong> A town's population is y = 1500·1.05ˣ, with x in years. Don't just compute — <em>say what the model claims</em>: a=1500 is the <strong>starting population</strong> (year 0, before any growth); b=1.05 means each year the population is <strong>105% of the year before</strong>, i.e. it <strong>grows 5% per year</strong>. Value after 2 years: 1500·1.05² = 1653.75 ≈ 1654 people. Contrast a decay model y = 2000·0.9ˣ (a piece of equipment): a=2000 is the <strong>value when new</strong>, b=0.9 means it keeps <strong>90% of its value each year</strong>, i.e. <strong>loses 10% per year</strong>; after 2 years 2000·0.9² = 1620. The skill: turn b into a sentence — "+5% a year" or "−10% a year" — and a into "the amount before anything happens."</p>
 </li>
 </ol>
 <p>If one of your own answers ever fails its check — you put a number back and the two sides don't agree — that's not failure, it's the check doing its job and catching something before it counted. Go back to your first step and re-run the arithmetic slowly. With these, a mismatch is almost always rounding too early or slipping on the percent-to-factor step, not the whole method.</p>
@@ -294,59 +305,62 @@ So $133.10. (Note b=1.10, <em>not</em> 0.10: you keep your 100% and add 10%.) <s
 <p>A couple of smaller ones round it out. When you evaluate a·bˣ, do the exponent <em>first</em>, then multiply by a — it's a·(bˣ), not (a·b)ˣ. And keep the growth-versus-decay direction straight: b above 1 grows, b between 0 and 1 shrinks, so b = 0.5 is decay, never growth. Finally, the well-defined fence is there to stop you from calling things exponential that aren't: y = (−2)ˣ, y = 1ˣ, and y = 0·2ˣ all break a rule (a negative base isn't real at fractional inputs, b = 1 is just the constant a, and a = 0 is just the constant 0).</p>
 <p>One last habit, the decimal one, because it's where careful work quietly goes wrong. Don't round in the middle — round only at the end. In the first worked example, 1.1³ is <em>exactly</em> 1.331, so the balance is exactly $133.10; if you'd rounded 1.1³ to, say, 1.33 partway through, you'd drift off the true value. Carry the exact number through your arithmetic and round money to the nearest cent only at the very last step.</p>
 <p>Here's a clean case to settle the method before the practice mixes things up. Evaluate y = 3·2ˣ at x = 2. The exponent first: 2² = 4. Then multiply by the 3: 3·4 = 12. Exponent, then multiply — that order, every time.</p>
-<p><strong>Check for understanding (transfer):</strong></p>
+</section>
+<div class="cl-check">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M9.6 9.6a2.6 2.6 0 1 1 3.3 2.5c-.9.3-1.4.9-1.4 1.8"/><circle cx="11.5" cy="16.6" r=".9" fill="currentColor" stroke="none"/></svg>Check yourself</span></p>
 <ol>
-<li><a class="refcode" id="9.2.c1" href="#9.2.c1">#9.2.c1</a> "A $200 laptop loses 20% of its value each year. Write the function y = a·bˣ, and find its value after 2 years. What's b, and why isn't it 0.20?"</li>
-<li><a class="refcode" id="9.2.c2" href="#9.2.c2">#9.2.c2</a> "Here are two tables. A: 4, 7, 10, 13. B: 4, 8, 16, 32. Which is linear, which is exponential, and what's the giveaway in each?"</li>
-<li><a class="refcode" id="9.2.c3" href="#9.2.c3">#9.2.c3</a> "Linear y = 100x starts way ahead of exponential y = 2ˣ at x=1. Will the line stay ahead forever? Explain what eventually happens."</li>
+<li><a class="refcode" id="9.2.c1" href="#9.2.c1">9.2.c1</a> "A $200 laptop loses 20% of its value each year. Write the function y = a·bˣ, and find its value after 2 years. What's b, and why isn't it 0.20?"</li>
+<li><a class="refcode" id="9.2.c2" href="#9.2.c2">9.2.c2</a> "Here are two tables. A: 4, 7, 10, 13. B: 4, 8, 16, 32. Which is linear, which is exponential, and what's the giveaway in each?"</li>
+<li><a class="refcode" id="9.2.c3" href="#9.2.c3">9.2.c3</a> "Linear y = 100x starts way ahead of exponential y = 2ˣ at x=1. Will the line stay ahead forever? Explain what eventually happens."</li>
 </ol>
 <p>Worked solutions, so a wrong turn shows you where. For the first, losing 20% means keeping 80%, so b = 0.80 (not 0.20, which would be the part lost, not the part kept), the function is y = 200·0.8ˣ, and after 2 years y = 200·0.8² = 200·0.64 = 128. For the second, table A adds 3 each step (constant difference), so it's linear; table B doubles each step (constant ratio), so it's exponential — the giveaway is difference-versus-ratio. For the third, no: even though y = 100x starts far ahead, an increasing exponential overtakes any line eventually, so 2ˣ will pass 100x and then pull away for good — the doubling keeps compounding while the line only adds a fixed 100 each step.</p>
 <p>Jumping between problem types is harder than grinding one kind, and that difficulty is what makes the skill hold. Each problem's answer waits at the end of the lesson, and when one stalls you, the worked example it's built on is the place to look. The classify-the-table pair and the percent-and-factor groups deliberately sit next to each other so you keep switching between "is it a difference or a ratio?" and "is this growth or decay?"</p>
-<p><strong>Practice problems:</strong>
-<em>Evaluate the exponential function:</em></p>
+</div>
+<section class="practice">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4.5" width="15.5" height="15.5" rx="2.5"/><path d="M7.5 10 9 11.5 12 8.5"/><path d="M14 10H16.5"/><path d="M7.5 15H16.5"/></svg>Practice</span></p>
+<p><em>Evaluate the exponential function:</em></p>
 <ol>
-<li><a class="refcode" id="9.2.1" href="#9.2.1">#9.2.1</a> y = 5·2ˣ at x=3.</li>
-<li><a class="refcode" id="9.2.2" href="#9.2.2">#9.2.2</a> y = 80·0.5ˣ at x=3.</li>
-<li><a class="refcode" id="9.2.3" href="#9.2.3">#9.2.3</a> y = 100·1.1ˣ at x=2.</li>
-<li><a class="refcode" id="9.2.4" href="#9.2.4">#9.2.4</a> y = 200·0.8ˣ at x=2.</li>
-<li><a class="refcode" id="9.2.5" href="#9.2.5">#9.2.5</a> y = 3·2ˣ at x=4.</li>
+<li><a class="refcode" id="9.2.1" href="#9.2.1">9.2.1</a> y = 5·2ˣ at x=3.</li>
+<li><a class="refcode" id="9.2.2" href="#9.2.2">9.2.2</a> y = 80·0.5ˣ at x=3.</li>
+<li><a class="refcode" id="9.2.3" href="#9.2.3">9.2.3</a> y = 100·1.1ˣ at x=2.</li>
+<li><a class="refcode" id="9.2.4" href="#9.2.4">9.2.4</a> y = 200·0.8ˣ at x=2.</li>
+<li><a class="refcode" id="9.2.5" href="#9.2.5">9.2.5</a> y = 3·2ˣ at x=4.</li>
+<li><a class="refcode" id="9.2.6" href="#9.2.6">9.2.6</a> y = 100·1.1ˣ at x=3.</li>
+</ol>
+<p><em>Growth or decay? Give the factor b:</em></p>
+<ol start="7">
+<li><a class="refcode" id="9.2.7" href="#9.2.7">9.2.7</a> A quantity that <strong>doubles</strong> each step.</li>
+<li><a class="refcode" id="9.2.8" href="#9.2.8">9.2.8</a> A quantity that <strong>−20%</strong> each step.</li>
+<li><a class="refcode" id="9.2.9" href="#9.2.9">9.2.9</a> A quantity that <strong>+5%</strong> each step.</li>
 <li>
-<p><a class="refcode" id="9.2.6" href="#9.2.6">#9.2.6</a> y = 100·1.1ˣ at x=3.
-<em>Growth or decay? Give the factor b:</em></p>
-</li>
-<li>
-<p><a class="refcode" id="9.2.7" href="#9.2.7">#9.2.7</a> A quantity that <strong>doubles</strong> each step.</p>
-</li>
-<li><a class="refcode" id="9.2.8" href="#9.2.8">#9.2.8</a> A quantity that <strong>−20%</strong> each step.</li>
-<li><a class="refcode" id="9.2.9" href="#9.2.9">#9.2.9</a> A quantity that <strong>+5%</strong> each step.</li>
-<li>
-<p><a class="refcode" id="9.2.10" href="#9.2.10">#9.2.10</a> A quantity that <strong>halves</strong> each step.
+<p><a class="refcode" id="9.2.10" href="#9.2.10">9.2.10</a> A quantity that <strong>halves</strong> each step.
 <em>Linear or exponential? (classify the table)</em></p>
 </li>
 <li>
-<p><a class="refcode" id="9.2.11" href="#9.2.11">#9.2.11</a> 2, 5, 8, 11, ...</p>
+<p><a class="refcode" id="9.2.11" href="#9.2.11">9.2.11</a> 2, 5, 8, 11, ...</p>
 </li>
-<li>
-<p><a class="refcode" id="9.2.12" href="#9.2.12">#9.2.12</a> 2, 6, 18, 54, ...
-<em>Interpret in context (say what a and b mean, then evaluate):</em></p>
-</li>
-<li>
-<p><a class="refcode" id="9.2.13" href="#9.2.13">#9.2.13</a> A population is y = 1500·1.05ˣ (x in years). What is the starting population, what does b say about the yearly change (in %), and what's the population after 2 years?</p>
-</li>
-<li>
-<p><a class="refcode" id="9.2.14" href="#9.2.14">#9.2.14</a> A machine's value is y = 2000·0.9ˣ (x in years). What is its value when new, what does b say about the yearly change (in %), and what's its value after 2 years?
-<em>Read the factor back as a percent (growth or decay, and how much per period):</em></p>
-</li>
-<li>
-<p><a class="refcode" id="9.2.15" href="#9.2.15">#9.2.15</a> b = 1.20.</p>
-</li>
-<li><a class="refcode" id="9.2.16" href="#9.2.16">#9.2.16</a> b = 0.85.</li>
+<li><a class="refcode" id="9.2.12" href="#9.2.12">9.2.12</a> 2, 6, 18, 54, ...</li>
 </ol>
-<p><strong>Answer key:</strong></p>
+<p><em>Interpret in context (say what a and b mean, then evaluate):</em></p>
+<ol start="13">
+<li><a class="refcode" id="9.2.13" href="#9.2.13">9.2.13</a> A population is y = 1500·1.05ˣ (x in years). What is the starting population, what does b say about the yearly change (in %), and what's the population after 2 years?</li>
+<li><a class="refcode" id="9.2.14" href="#9.2.14">9.2.14</a> A machine's value is y = 2000·0.9ˣ (x in years). What is its value when new, what does b say about the yearly change (in %), and what's its value after 2 years?</li>
+</ol>
+<p><em>Read the factor back as a percent (growth or decay, and how much per period):</em></p>
+<ol start="15">
+<li><a class="refcode" id="9.2.15" href="#9.2.15">9.2.15</a> b = 1.20.</li>
+<li><a class="refcode" id="9.2.16" href="#9.2.16">9.2.16</a> b = 0.85.</li>
+</ol>
+</section>
+<details class="answers">
+<summary><span class="tw"></span><span class="eyebrow">Answers</span><span class="hint">Try each one yourself first, then open to check.</span></summary>
+<div class="ak-body">
 <ol>
 <li>5·2³ = 40 · 2. 80·0.5³ = 10 · 3. 100·1.1² = 121 · 4. 200·0.8² = 128 · 5. 3·2⁴ = 48 · 6. 100·1.1³ = 133.10 · 7. <strong>growth</strong>, b = 2 · 8. <strong>decay</strong>, b = 0.80 · 9. <strong>growth</strong>, b = 1.05 · 10. <strong>decay</strong>, b = 0.5 · 11. <strong>linear</strong> (constant difference +3) · 12. <strong>exponential</strong> (constant ratio ×3) · 13. start = <strong>1500</strong> people; b=1.05 → <strong>+5% per year</strong> (growth); after 2 yr 1500·1.05² = <strong>1653.75 ≈ 1654</strong> · 14. value when new = <strong>$2000</strong>; b=0.9 → <strong>−10% per year</strong> (decay); after 2 yr 2000·0.9² = <strong>1620</strong> ($1620) · 15. <strong>growth, +20%</strong> per period (since b − 1 = 0.20) · 16. <strong>decay, −15%</strong> per period (since b − 1 = −0.15).</li>
 </ol>
-<hr>
+</div>
+</details>
+<div class="ldiv" aria-hidden="true"><i></i><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3.5 20.5 12 12 20.5 3.5 12Z"/></svg><i></i></div>
 <p>You can now spot the one contrast this unit is built on — add the same each step is linear, multiply by the same each step is exponential — and you can work both sides of it: classify a list or table, write a sequence step by step or in one jump and move between the two, reach any term with a_n = a_1 + (n−1)d or a_n = a_1·r^(n−1), and turn a percent into a factor b and read a factor back as a percent. Keep the exponential fence in view as you go: y = a·bˣ needs a ≠ 0, b &gt; 0, and b ≠ 1.</p>
 </main>
 <footer><p>Generated from the unit source by <code>_verification/build_textbook.py</code>. Math by KaTeX.</p></footer>
@@ -356,7 +370,6 @@ So $133.10. (Note b=1.10, <em>not</em> 0.10: you keep your 100% and add 10%.) <s
 document.addEventListener("DOMContentLoaded", function () {
   renderMathInElement(document.body, {delimiters: [{left: "$$", right: "$$", display: true}], throwOnError: false});
   var t = document.getElementById("theme"), root = document.documentElement;
-  if (localStorage.getItem("a1-theme") === "dark") root.classList.add("dark");
   t.addEventListener("click", function () {
     root.classList.toggle("dark");
     localStorage.setItem("a1-theme", root.classList.contains("dark") ? "dark" : "light");

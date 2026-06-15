@@ -3,18 +3,22 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Unit 10: Exponents &amp; Polynomials — Algebra 1</title>
+<title>Exponents &amp; Polynomials — Algebra 1</title>
+<script>try{if(localStorage.getItem("a1-theme")==="dark")document.documentElement.classList.add("dark");}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..40,500..600&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="textbook.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous">
 </head>
-<body>
+<body data-surface="textbook">
 <header class="topbar">
-  <nav><a href="index.html">Contents</a> &nbsp;·&nbsp; <a href="unit-09.html">&larr; Unit 9</a> &nbsp;·&nbsp; <a href="unit-11.html">Unit 11 &rarr;</a></nav>
-  <button id="theme" type="button" aria-label="Toggle dark mode">◐</button>
+  <nav><a class="home" href="index.html">Algebra&nbsp;1</a> &nbsp;·&nbsp; <a href="unit-09.html">&larr;&nbsp;Unit 9</a> &nbsp;·&nbsp; <a href="unit-11.html">Unit 11&nbsp;&rarr;</a></nav>
+  <span class="sp"></span>
+  <button id="theme" type="button" aria-label="Toggle light or dark theme">◐ Theme</button>
 </header>
 <main>
-<h1>Unit 10: Exponents &amp; Polynomials</h1>
-<p class="subtitle">Exponent rules, scientific notation, polynomial operations, FOIL/area model</p>
+<div class="hero"><div class="hero-text"><div class="kicker">Unit 10</div><h1>Exponents &amp; Polynomials</h1><p class="lede">Exponent rules, scientific notation, polynomial operations, FOIL/area model</p></div><img class="hero-art" src="../assets/areamodel.jpg" alt=""></div>
 
 <blockquote>
 <p><strong>What's worth having fresh:</strong> from Unit 1, exponents as repeated multiplication, order of operations, and the difference between −3² and (−3)². From Unit 2, the distributive property, combining like terms, and the habit of handing the minus sign to <em>every</em> term inside parentheses. None of it is heavy; a quick redo of two or three of those problems from memory before you start will make this unit feel familiar.
@@ -27,7 +31,7 @@
 </ul>
 </blockquote>
 <p>This unit opens the back third of the course, and it all points one direction: building expressions up. You'll learn to multiply things out — to take (x + 2)(x + 3) and turn it into x² + 5x + 6. The very next unit runs the same machinery backward, so the work you put in here pays off twice. Before each new lesson, redo two or three problems from a lesson or two earlier from memory; that small warm-up keeps the older moves sharp while the new ones land.</p>
-<hr>
+<div class="ldiv" aria-hidden="true"><i></i><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3.5 20.5 12 12 20.5 3.5 12Z"/></svg><i></i></div>
 <h2 id="lesson-101-exponent-rules-including-zero-negative-exponents">Lesson 10.1: Exponent rules (including zero &amp; negative exponents)</h2>
 <p>Exponents are just a shorthand for "multiply this by itself a few times." That's the whole idea, and every rule in this lesson comes straight out of it. The trick is to never let the shorthand pull you away from what it's counting. When you're unsure what a rule should be, you can always write the factors out and count them — and that habit, more than any memorized rule, is what keeps you out of trouble here.</p>
 <p>These rules are the grammar of nearly every expression ahead: scientific notation in the next lesson, multiplying polynomials later in this one, and all of the two units after this. So it's worth getting them solid, and the way to make them solid is to see <em>why</em> each one is what it is.</p>
@@ -51,14 +55,17 @@ So x⁰ = 1 isn't a decree someone made up; it's forced. The rule you already tr
 <p>Negative exponents come from the same move, just with more on the bottom than the top. Take x² over x⁵, and again read it two ways. The quotient rule gives x²⁻⁵ = x⁻³. Counting factors gives something you can see: two factors on top pair off with two on the bottom and go to one, leaving three factors stranded <em>on the bottom</em> — that's 1/(x³). Same quantity, two descriptions:
 $$\frac{x^2}{x^5}=x^{2-5}=x^{-3}\quad\text{and}\quad\frac{x^2}{x^5}=\frac{1}{x^3}\;\Rightarrow\;x^{-3}=\frac{1}{x^3}$$
 So a negative exponent means <em>reciprocal</em> — flip it to the other floor of the fraction. It does not mean the number is negative. For positive x, x⁻³ is a perfectly ordinary positive number; the minus sign is an instruction to flip, not a sign on the value.</p>
-<p><strong>New terms:</strong></p>
+<div class="cl-terms">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6.5C9.5 5 6 5 3.5 6.5V18C6 16.5 9.5 16.5 12 18C14.5 16.5 18 16.5 20.5 18V6.5C18 5 14.5 5 12 6.5Z"/><path d="M12 6.5V18"/></svg>New words</span></p>
 <ul>
-<li><a class="refcode" id="10.1.d1" href="#10.1.d1">#10.1.d1</a> <strong>Base</strong> and <strong>exponent:</strong> in x⁵, x is the base, 5 is the exponent; x⁵ means x multiplied by itself 5 times.</li>
-<li><a class="refcode" id="10.1.d2" href="#10.1.d2">#10.1.d2</a> <strong>Zero exponent:</strong> x⁰=1 (for x≠0).</li>
-<li><a class="refcode" id="10.1.d3" href="#10.1.d3">#10.1.d3</a> <strong>Negative exponent:</strong> x⁻ᵃ=1/(xᵃ) — a negative exponent means "reciprocal," <em>not</em> a negative number.</li>
+<li><a class="refcode" id="10.1.d1" href="#10.1.d1">10.1.d1</a> <strong>Base</strong> and <strong>exponent:</strong> in x⁵, x is the base, 5 is the exponent; x⁵ means x multiplied by itself 5 times.</li>
+<li><a class="refcode" id="10.1.d2" href="#10.1.d2">10.1.d2</a> <strong>Zero exponent:</strong> x⁰=1 (for x≠0).</li>
+<li><a class="refcode" id="10.1.d3" href="#10.1.d3">10.1.d3</a> <strong>Negative exponent:</strong> x⁻ᵃ=1/(xᵃ) — a negative exponent means "reciprocal," <em>not</em> a negative number.</li>
 </ul>
 <p>Read each worked example slowly, a line at a time, and ask why each line follows from the one above before you go on. Each one names the rule it's using, so you can match the move to its reason.</p>
-<p><strong>Worked examples:</strong></p>
+</div>
+<section class="worked">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19.5V15L15.5 4.5 19.5 8.5 9 19Z"/><path d="M13.5 6.5 17.5 10.5"/></svg>Worked example</span></p>
 <p><em>Product rule — add the exponents:</em>
 $$x^4\cdot x^3 = x^{4+3}=x^7$$</p>
 <p><em>The trap, done right — add, don't multiply:</em>
@@ -76,50 +83,62 @@ $$\frac{x^3}{x^5}=x^{3-5}=x^{-2}=\frac{1}{x^2}$$</p>
 <p>The slip that catches the most people here is using the wrong rule between two that look alike: writing x² · x³ = x⁶, or (x²)³ = x⁵. The pull is to run the same operation in both cases, since the expressions look so similar. The fix is always the same, and you already have it: write the x's out and count. x² · x³ is (xx)(xxx), five x's, so x⁵. (x²)³ is x² three times over, six x's, so x⁶. The quick check is to ask yourself, "am I multiplying two separate powers, or raising one power to another?" — add for the first, multiply for the second.</p>
 <p>One more place to watch is the power-of-a-product rule, because it's easy to leave the coefficient behind. In (2x)³, the exponent greets <em>everything</em> inside the parentheses, the 2 included: it's 2³x³ = 8x³, not 2x³. The 3 is sitting on the whole 2x, not just the x. The same question settles its zero-exponent cousin: in 5x⁰ there are no parentheses, so the exponent touches only the x, giving 5 · 1 = 5; but (5x)⁰ puts the whole 5x under the exponent, giving 1. Before you apply a 0 or a power, ask what the base actually is — just the x, or the whole thing?</p>
 <p>Try one clean problem before the practice mixes things up. Simplify y⁵ · y. The lone y is y¹, so add the exponents: y⁵ · y¹ = y⁶. Nothing subtle there: just the product rule, once, with the silent exponent of 1 made visible.</p>
-<p><strong>Check for understanding (transfer):</strong></p>
+</section>
+<div class="cl-check">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M9.6 9.6a2.6 2.6 0 1 1 3.3 2.5c-.9.3-1.4.9-1.4 1.8"/><circle cx="11.5" cy="16.6" r=".9" fill="currentColor" stroke="none"/></svg>Check yourself</span></p>
 <ol>
-<li><a class="refcode" id="10.1.c1" href="#10.1.c1">#10.1.c1</a> Why does x² · x³ add the exponents but (x²)³ multiply them? Convince yourself by counting x's, and write the count out. (x² · x³ = (xx)(xxx) = five x's = x⁵; (x²)³ = x² · x² · x² = six x's = x⁶.)</li>
-<li><a class="refcode" id="10.1.c2" href="#10.1.c2">#10.1.c2</a> Use the quotient rule on x⁴/x⁴ two different ways to explain why x⁰ = 1. (By the rule, x⁴⁻⁴ = x⁰; but anything over itself is 1; so x⁰ = 1.)</li>
-<li><a class="refcode" id="10.1.c3" href="#10.1.c3">#10.1.c3</a> Suppose someone says x⁻³ is a negative number. What would you show them to fix that? (Re-derive it from x²/x⁵: two factors pair off and go to one, three are left on the bottom, so x⁻³ = 1/(x³) — a reciprocal, positive for positive x.)</li>
+<li><a class="refcode" id="10.1.c1" href="#10.1.c1">10.1.c1</a> Why does x² · x³ add the exponents but (x²)³ multiply them? Convince yourself by counting x's, and write the count out. (x² · x³ = (xx)(xxx) = five x's = x⁵; (x²)³ = x² · x² · x² = six x's = x⁶.)</li>
+<li><a class="refcode" id="10.1.c2" href="#10.1.c2">10.1.c2</a> Use the quotient rule on x⁴/x⁴ two different ways to explain why x⁰ = 1. (By the rule, x⁴⁻⁴ = x⁰; but anything over itself is 1; so x⁰ = 1.)</li>
+<li><a class="refcode" id="10.1.c3" href="#10.1.c3">10.1.c3</a> Suppose someone says x⁻³ is a negative number. What would you show them to fix that? (Re-derive it from x²/x⁵: two factors pair off and go to one, three are left on the bottom, so x⁻³ = 1/(x³) — a reciprocal, positive for positive x.)</li>
 </ol>
 <p>You can now simplify with all four rules, and you can rebuild the zero and negative cases from scratch whenever memory wobbles. That rebuilding is what keeps you from learning them backward.</p>
 <p>The set below mixes the rules together on purpose, which is harder than repeating one kind of problem and also what makes a skill last to next week. Every problem has its answer at the end of the lesson, and if one stalls you, the worked examples just above are built on the same moves. Item 18 is worth a careful look: it runs a negative exponent the <em>other</em> direction, as something you start with rather than land on.</p>
-<p><strong>Practice problems:</strong></p>
+</div>
+<section class="practice">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4.5" width="15.5" height="15.5" rx="2.5"/><path d="M7.5 10 9 11.5 12 8.5"/><path d="M14 10H16.5"/><path d="M7.5 15H16.5"/></svg>Practice</span></p>
 <p><em>Product rule:</em></p>
 <ol>
-<li><a class="refcode" id="10.1.1" href="#10.1.1">#10.1.1</a> x⁴·x³  2. x²·x³  3. y⁵·y  4. a³·a⁴·a²</li>
+<li><a class="refcode" id="10.1.1" href="#10.1.1">10.1.1</a> x⁴·x³  2. x²·x³  3. y⁵·y  4. a³·a⁴·a²</li>
 </ol>
 <p><em>Quotient rule:</em></p>
 <ol start="5">
-<li><a class="refcode" id="10.1.2" href="#10.1.2">#10.1.2</a> (x⁷)/(x²)  6. (y⁶)/(y⁴)  7. (a⁵)/a</li>
+<li><a class="refcode" id="10.1.2" href="#10.1.2">10.1.2</a> (x⁷)/(x²)  6. (y⁶)/(y⁴)  7. (a⁵)/a</li>
 </ol>
 <p><em>Power rules:</em></p>
 <ol start="8">
-<li><a class="refcode" id="10.1.3" href="#10.1.3">#10.1.3</a> (x²)³  9. (y³)⁴  10. (xy)³  11. (2x)³</li>
+<li><a class="refcode" id="10.1.3" href="#10.1.3">10.1.3</a> (x²)³  9. (y³)⁴  10. (xy)³  11. (2x)³</li>
 </ol>
 <p><em>Zero &amp; negative exponents:</em></p>
 <ol start="12">
-<li><a class="refcode" id="10.1.4" href="#10.1.4">#10.1.4</a> x⁰  13. 5x⁰  14. x⁻²  15. (x³)/(x⁵)</li>
+<li><a class="refcode" id="10.1.4" href="#10.1.4">10.1.4</a> x⁰  13. 5x⁰  14. x⁻²  15. (x³)/(x⁵)</li>
 </ol>
 <p><em>Mixed (combine rules):</em></p>
 <ol start="16">
-<li><a class="refcode" id="10.1.5" href="#10.1.5">#10.1.5</a> (x²·x⁴)/(x³)  17. (3x²)(4x⁵)  18. x⁵·x⁻²</li>
+<li><a class="refcode" id="10.1.5" href="#10.1.5">10.1.5</a> (x²·x⁴)/(x³)  17. (3x²)(4x⁵)  18. x⁵·x⁻²</li>
 </ol>
 <p>(Item 18 uses a negative exponent as an <em>input</em> rather than an answer: x⁵·x⁻² = x⁵⁺⁽⁻²⁾ = x³ — the product rule with a negative exponent, the reverse of items 14–15 where the negative exponent was the <em>result</em>. The answer is positive because 5 + (−2) = 3.)</p>
-<p><strong>Answer key:</strong>
-1) x⁷  2) x⁵  3) y⁶  4) a⁹  5) x⁵  6) y²  7) a⁴  8) x⁶  9) y¹²  10) x³y³  11) 8x³  12) 1  13) 5  14) 1/(x²)  15) 1/(x²)  16) x³  17) 12x⁷  18) x³</p>
-<hr>
+</section>
+<details class="answers">
+<summary><span class="tw"></span><span class="eyebrow">Answers</span><span class="hint">Try each one yourself first, then open to check.</span></summary>
+<div class="ak-body">
+<p>1) x⁷  2) x⁵  3) y⁶  4) a⁹  5) x⁵  6) y²  7) a⁴  8) x⁶  9) y¹²  10) x³y³  11) 8x³  12) 1  13) 5  14) 1/(x²)  15) 1/(x²)  16) x³  17) 12x⁷  18) x³</p>
+</div>
+</details>
+<div class="ldiv" aria-hidden="true"><i></i><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3.5 20.5 12 12 20.5 3.5 12Z"/></svg><i></i></div>
 <h2 id="lesson-102-scientific-notation">Lesson 10.2: Scientific notation</h2>
 <p>Some numbers are too long to read comfortably — the distance to a star, the width of an atom. Scientific notation is a tidy way to write them: one digit, a decimal tail, and a power of ten that records how big the number really is. The good news is you already did the hard part last lesson. Multiplying and dividing these numbers is just the exponent rules from 10.1, applied to powers of ten.</p>
 <p>Start with what a power of ten actually does. Multiplying by 10 slides the decimal point one place to the right; dividing by 10 slides it one place left. So 10ⁿ is really a record of <em>how many places the point moved</em>. Take 5300. Picture the decimal point starting after the 5, at 5.3, and ask how far it has to travel to rebuild the full number: three places right gets you back to 5300. So 5300 = 5.3 × 10³. The exponent 3 is just the count of slides.</p>
 <p>Small numbers work the same way, and this is where the negative exponents from last lesson come back. Take 0.00042. To get up to a single nonzero digit, 4.2, you slide the point four places to the <em>right</em>. But sliding right makes a number bigger, so to keep the value the same you must have started by dividing — that's a negative exponent: 0.00042 = 4.2 × 10⁻⁴. The negative power of ten is the same reciprocal idea as x⁻ᵃ = 1/(xᵃ): it's a division written as an exponent.</p>
 <p>Once a number is in this form, multiplying and dividing splits into two easy jobs. Handle the front numbers (the coefficients) on their own, and handle the powers of ten with the rules you already know: multiplying tens adds the exponents, dividing tens subtracts them. Then, if the front number lands outside its allowed range, slide it back and adjust the power of ten to match.</p>
-<p><strong>New terms:</strong></p>
+<div class="cl-terms">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6.5C9.5 5 6 5 3.5 6.5V18C6 16.5 9.5 16.5 12 18C14.5 16.5 18 16.5 20.5 18V6.5C18 5 14.5 5 12 6.5Z"/><path d="M12 6.5V18"/></svg>New words</span></p>
 <ul>
-<li><a class="refcode" id="10.2.d1" href="#10.2.d1">#10.2.d1</a> <strong>Scientific notation:</strong> a number written as a×10ⁿ, where a (the <strong>coefficient</strong>) satisfies 1≤|a|&lt;10 and n is an integer. (Plain English: exactly one nonzero digit before the decimal point. The absolute-value bars let the coefficient be negative for a negative number — e.g. -5300 = -5.3×10³, where |-5.3|=5.3 is in range. Every example in this lesson is positive, so 1≤a&lt;10 is the working form here, but state the rule with |a| so it stays true for negatives.)</li>
-<li><a class="refcode" id="10.2.d2" href="#10.2.d2">#10.2.d2</a> <strong>Standard form</strong> (here): the ordinary way to write the number, e.g. 5300.</li>
+<li><a class="refcode" id="10.2.d1" href="#10.2.d1">10.2.d1</a> <strong>Scientific notation:</strong> a number written as a×10ⁿ, where a (the <strong>coefficient</strong>) satisfies 1≤|a|&lt;10 and n is an integer. (Plain English: exactly one nonzero digit before the decimal point. The absolute-value bars let the coefficient be negative for a negative number — e.g. -5300 = -5.3×10³, where |-5.3|=5.3 is in range. Every example in this lesson is positive, so 1≤a&lt;10 is the working form here, but state the rule with |a| so it stays true for negatives.)</li>
+<li><a class="refcode" id="10.2.d2" href="#10.2.d2">10.2.d2</a> <strong>Standard form</strong> (here): the ordinary way to write the number, e.g. 5300.</li>
 </ul>
-<p><strong>Worked examples:</strong></p>
+</div>
+<section class="worked">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19.5V15L15.5 4.5 19.5 8.5 9 19Z"/><path d="M13.5 6.5 17.5 10.5"/></svg>Worked example</span></p>
 <p><em>Large number → scientific notation:</em>
 $$5300 = 5.3\times 10^3 \qquad(\text{check: } 5.3\times 1000 = 5300)$$</p>
 <p><em>Small number → scientific notation (negative exponent):</em>
@@ -143,34 +162,43 @@ The decimal slid one place right (0.25→2.5), so the exponent went <strong>down
 <p>The rule running underneath all of this is the coefficient window: a proper coefficient sits at 1 or above and below 10 — exactly one nonzero digit before the decimal point. If your arithmetic lands outside that window, slide the decimal back into it and adjust the power of ten by the number of places you slid: a left slide bumps the exponent up, a right slide drops it down.</p>
 <p>Now that you've seen it done, two slips are worth naming. The first is leaving the coefficient out of range. You might write 53 × 10² or 0.53 × 10⁴ for 5300, and both <em>equal</em> 5300, but neither is scientific notation, because the coefficient has to be at least 1 and under 10. The second shows up after multiplying or dividing: it's tempting to stop at 30 × 10⁷ and call it done, since the value is right. The value is right; the form isn't. Ask yourself the window question every time. Is my coefficient at least 1 and under 10? If not, slide and adjust. And for small numbers, the sign of the exponent is easy to get backward, so run a quick test: is the number bigger or smaller than 1? Smaller than 1 means a negative power of ten.</p>
 <p>One clean problem to reset on before the practice. Write 720,000 in scientific notation. The decimal sits after the last zero; slide it left to land just after the 7, giving 7.2, and count the slides: five places. Sliding left means the original was bigger, so the exponent is positive: 7.2 × 10⁵. One coefficient, one count of the slides, and you're there.</p>
-<p><strong>Check for understanding (transfer):</strong></p>
+</section>
+<div class="cl-check">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M9.6 9.6a2.6 2.6 0 1 1 3.3 2.5c-.9.3-1.4.9-1.4 1.8"/><circle cx="11.5" cy="16.6" r=".9" fill="currentColor" stroke="none"/></svg>Check yourself</span></p>
 <ol>
-<li><a class="refcode" id="10.2.c1" href="#10.2.c1">#10.2.c1</a> Is 42×10³ in proper scientific notation? If not, fix it and explain the rule. (No — 42 is out of range; slide one place left and bump the exponent: 4.2×10⁴. The coefficient must be at least 1 and under 10.)</li>
-<li><a class="refcode" id="10.2.c2" href="#10.2.c2">#10.2.c2</a> Without computing the full number, what's (2×10⁵)(4×10³)? Which exponent rule did you just use? (Multiply the coefficients, add the exponents: 8×10⁸ — the product rule on base 10.)</li>
-<li><a class="refcode" id="10.2.c3" href="#10.2.c3">#10.2.c3</a> Why does a number <em>smaller</em> than 1 get a <em>negative</em> power of ten? (You divide by tens to make a number that small, and a negative exponent is exactly that division: 10⁻ⁿ = 1/10ⁿ.)</li>
+<li><a class="refcode" id="10.2.c1" href="#10.2.c1">10.2.c1</a> Is 42×10³ in proper scientific notation? If not, fix it and explain the rule. (No — 42 is out of range; slide one place left and bump the exponent: 4.2×10⁴. The coefficient must be at least 1 and under 10.)</li>
+<li><a class="refcode" id="10.2.c2" href="#10.2.c2">10.2.c2</a> Without computing the full number, what's (2×10⁵)(4×10³)? Which exponent rule did you just use? (Multiply the coefficients, add the exponents: 8×10⁸ — the product rule on base 10.)</li>
+<li><a class="refcode" id="10.2.c3" href="#10.2.c3">10.2.c3</a> Why does a number <em>smaller</em> than 1 get a <em>negative</em> power of ten? (You divide by tens to make a number that small, and a negative exponent is exactly that division: 10⁻ⁿ = 1/10ⁿ.)</li>
 </ol>
 <p>You can now move a number between standard and scientific form by counting decimal slides, multiply and divide in scientific form with the exponent rules, and catch a result that's slipped out of the coefficient window and slide it back.</p>
 <p>These problems jump between converting, multiplying, and dividing, which is the kind of switching that builds a lasting skill. Each answer is at the end of the lesson, and the worked examples above cover every move they ask for, so flip back whenever one stalls you. The last three deliberately push the coefficient out of range so you get practice sliding it home.</p>
-<p><strong>Practice problems:</strong></p>
+</div>
+<section class="practice">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4.5" width="15.5" height="15.5" rx="2.5"/><path d="M7.5 10 9 11.5 12 8.5"/><path d="M14 10H16.5"/><path d="M7.5 15H16.5"/></svg>Practice</span></p>
 <p><em>Convert to standard form (write the full number):</em></p>
 <ol>
-<li><a class="refcode" id="10.2.1" href="#10.2.1">#10.2.1</a> 5.3×10³  2. 6.7×10⁴  3. 4.2×10⁻⁴  4. 9.1×10⁻³</li>
+<li><a class="refcode" id="10.2.1" href="#10.2.1">10.2.1</a> 5.3×10³  2. 6.7×10⁴  3. 4.2×10⁻⁴  4. 9.1×10⁻³</li>
 </ol>
 <p><em>Convert to scientific notation:</em></p>
 <ol start="5">
-<li><a class="refcode" id="10.2.2" href="#10.2.2">#10.2.2</a> 720,000  6. 0.0305</li>
+<li><a class="refcode" id="10.2.2" href="#10.2.2">10.2.2</a> 720,000  6. 0.0305</li>
 </ol>
 <p><em>Multiply or divide (leave in scientific notation):</em></p>
 <ol start="7">
-<li><a class="refcode" id="10.2.3" href="#10.2.3">#10.2.3</a> (3×10⁴)(2×10³)  8. (8×10⁵)/(2×10²)  9. (4×10⁶)(2×10⁻²)  10. (9×10⁸)/(3×10⁵)</li>
+<li><a class="refcode" id="10.2.3" href="#10.2.3">10.2.3</a> (3×10⁴)(2×10³)  8. (8×10⁵)/(2×10²)  9. (4×10⁶)(2×10⁻²)  10. (9×10⁸)/(3×10⁵)</li>
 </ol>
 <p><em>Multiply or divide, then renormalize so 1≤coefficient&lt;10:</em></p>
 <ol start="11">
-<li><a class="refcode" id="10.2.4" href="#10.2.4">#10.2.4</a> (4×10⁵)(5×10⁶)  12. (7×10²)(8×10³)  13. (3×10⁵)/(6×10²)</li>
+<li><a class="refcode" id="10.2.4" href="#10.2.4">10.2.4</a> (4×10⁵)(5×10⁶)  12. (7×10²)(8×10³)  13. (3×10⁵)/(6×10²)</li>
 </ol>
-<p><strong>Answer key:</strong>
-1) 5300  2) 67,000  3) 0.00042  4) 0.0091  5) 7.2×10⁵  6) 3.05×10⁻²  7) 6×10⁷  8) 4×10³  9) 8×10⁴  10) 3×10³  11) 2×10¹² (from 20×10¹¹ — slide left, exponent +1)  12) 5.6×10⁶ (from 56×10⁵ — slide left, exponent +1)  13) 5×10² (from 0.5×10³ — slide right, exponent −1)</p>
-<hr>
+</section>
+<details class="answers">
+<summary><span class="tw"></span><span class="eyebrow">Answers</span><span class="hint">Try each one yourself first, then open to check.</span></summary>
+<div class="ak-body">
+<p>1) 5300  2) 67,000  3) 0.00042  4) 0.0091  5) 7.2×10⁵  6) 3.05×10⁻²  7) 6×10⁷  8) 4×10³  9) 8×10⁴  10) 3×10³  11) 2×10¹² (from 20×10¹¹ — slide left, exponent +1)  12) 5.6×10⁶ (from 56×10⁵ — slide left, exponent +1)  13) 5×10² (from 0.5×10³ — slide right, exponent −1)</p>
+</div>
+</details>
+<div class="ldiv" aria-hidden="true"><i></i><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3.5 20.5 12 12 20.5 3.5 12Z"/></svg><i></i></div>
 <h2 id="lesson-103-polynomials-terms-degree-standard-form-add-subtract">Lesson 10.3: Polynomials — terms, degree, standard form; add &amp; subtract</h2>
 <p>A polynomial is just a sum of terms like 3x² + 2x − 1 — number-times-a-power pieces, added up. It's the noun the next three units are about, so this lesson gives the parts their names and then does the two easiest things you can do with them: add and subtract. The adding is nothing new; it's Unit 2's "combine like terms" with fresh vocabulary. The subtracting hides one genuine trap, and most of the lesson's care goes there.</p>
 <p>First, the vocabulary, all on one example. Take 5x² − 3x + 2. It has three pieces, so it's a <strong>trinomial</strong>. Its highest power is 2, so its <strong>degree</strong> is 2. The number riding the highest-power term is its <strong>leading coefficient</strong>, here 5. And it's already in <strong>standard form</strong>, meaning its terms run from highest power down to lowest. A useful way to see why the plain number sits last: think of 2 as 2x⁰, since x⁰ = 1. That makes it the lowest-degree term, so it naturally ends the line.</p>
@@ -180,16 +208,19 @@ Nothing fancy: x²-pieces with x²-pieces, x-pieces with x-pieces, plain numbers
 <p>Subtraction is the same idea with one step that's easy to fumble, so go slow here. Subtracting a whole polynomial means a −1 shakes hands with <em>every</em> term inside the second parentheses — every sign flips, not just the first. This is the exact "hand the minus to everyone" move from Unit 2, wearing new clothes:
 $$(2x^2+3x)-(x^2-x+2) = 2x^2+3x \;\underbrace{-x^2+x-2}_{\text{every sign flipped}} = x^2+4x-2$$
 Watch the two that bite: the −x inside became +x, and the +2 became −2. The first term flipping is obvious; it's these later ones that get left alone by accident. And here's the move that catches it for you — put a simple number in for x and check both sides. At x = 1, the original is (2 + 3) − (1 − 1 + 2) = 5 − 2 = 3, and the result is 1 + 4 − 2 = 3. They match, so the signs are right. If they <em>hadn't</em> matched, that wouldn't be a failure — your check would have just caught a slipped sign before it cost you anything. The next move would be to go back and re-run the flips one term at a time, because a mismatch here is almost always one sign left unflipped, not a broken method.</p>
-<p><strong>New terms:</strong></p>
+<div class="cl-terms">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6.5C9.5 5 6 5 3.5 6.5V18C6 16.5 9.5 16.5 12 18C14.5 16.5 18 16.5 20.5 18V6.5C18 5 14.5 5 12 6.5Z"/><path d="M12 6.5V18"/></svg>New words</span></p>
 <ul>
-<li><a class="refcode" id="10.3.d1" href="#10.3.d1">#10.3.d1</a> <strong>Polynomial:</strong> a sum of terms, each a real number (the coefficient) times a whole-number power of a variable (e.g. 3x²+2x-1). The "whole-number power" part is what matters most: it rules out negative and fractional exponents, which is exactly what separates a polynomial from the rational/radical expressions seen in 10.1.</li>
-<li><a class="refcode" id="10.3.d2" href="#10.3.d2">#10.3.d2</a> <strong>Term / coefficient:</strong> a single piece separated by + or -; the coefficient is its number part (in 3x², the coefficient is 3).</li>
-<li><a class="refcode" id="10.3.d3" href="#10.3.d3">#10.3.d3</a> <strong>Monomial / binomial / trinomial:</strong> a polynomial with 1 / 2 / 3 terms.</li>
-<li><a class="refcode" id="10.3.d4" href="#10.3.d4">#10.3.d4</a> <strong>Degree:</strong> the highest exponent in the polynomial (3x²+2x-1 has degree 2). The degree of a single term is its exponent; a nonzero constant has degree 0 (read it as cx⁰, since x⁰=1 — so the 2 in 3x²+2x-1 is a degree-0 term, and a lone "7" has degree 0). This is <em>why</em> the constant sits last in standard form: it's the lowest-degree (x⁰) term.</li>
-<li><a class="refcode" id="10.3.d5" href="#10.3.d5">#10.3.d5</a> <strong>Standard form:</strong> terms written in <strong>descending</strong> order of degree (highest power first).</li>
-<li><a class="refcode" id="10.3.d6" href="#10.3.d6">#10.3.d6</a> <strong>Leading coefficient:</strong> the coefficient of the highest-degree term (once in standard form).</li>
+<li><a class="refcode" id="10.3.d1" href="#10.3.d1">10.3.d1</a> <strong>Polynomial:</strong> a sum of terms, each a real number (the coefficient) times a whole-number power of a variable (e.g. 3x²+2x-1). The "whole-number power" part is what matters most: it rules out negative and fractional exponents, which is exactly what separates a polynomial from the rational/radical expressions seen in 10.1.</li>
+<li><a class="refcode" id="10.3.d2" href="#10.3.d2">10.3.d2</a> <strong>Term / coefficient:</strong> a single piece separated by + or -; the coefficient is its number part (in 3x², the coefficient is 3).</li>
+<li><a class="refcode" id="10.3.d3" href="#10.3.d3">10.3.d3</a> <strong>Monomial / binomial / trinomial:</strong> a polynomial with 1 / 2 / 3 terms.</li>
+<li><a class="refcode" id="10.3.d4" href="#10.3.d4">10.3.d4</a> <strong>Degree:</strong> the highest exponent in the polynomial (3x²+2x-1 has degree 2). The degree of a single term is its exponent; a nonzero constant has degree 0 (read it as cx⁰, since x⁰=1 — so the 2 in 3x²+2x-1 is a degree-0 term, and a lone "7" has degree 0). This is <em>why</em> the constant sits last in standard form: it's the lowest-degree (x⁰) term.</li>
+<li><a class="refcode" id="10.3.d5" href="#10.3.d5">10.3.d5</a> <strong>Standard form:</strong> terms written in <strong>descending</strong> order of degree (highest power first).</li>
+<li><a class="refcode" id="10.3.d6" href="#10.3.d6">10.3.d6</a> <strong>Leading coefficient:</strong> the coefficient of the highest-degree term (once in standard form).</li>
 </ul>
-<p><strong>Worked examples:</strong></p>
+</div>
+<section class="worked">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19.5V15L15.5 4.5 19.5 8.5 9 19Z"/><path d="M13.5 6.5 17.5 10.5"/></svg>Worked example</span></p>
 <p><em>Naming (no arithmetic):</em> 3x²-7 → binomial, degree 2, leading coefficient 3.</p>
 <p><em>Standard form:</em>
 $$2+5x^2-3x \;\Rightarrow\; 5x^2-3x+2$$</p>
@@ -204,35 +235,44 @@ $$(5x^2-2x+1)-(2x^2+3x-4) = 3x^2-5x+5$$</p>
 <p>In that fourth example, notice the 6x and the −6x added to nothing and the term simply dropped out — 4x² + 0x − 5 is just 4x² − 5. A term going to zero isn't something missing; it's a real result, and you write what's left.</p>
 <p>The slip to keep an eye on is the one the subtraction examples are built around: flipping only the first sign after a minus. It's easy to write (2x² + 3x) − (x² − x + 2) as x² + 2x + 2, leaving the −x and the +2 alone. The cause is natural — the parentheses make it feel like the minus belongs to the whole group rather than to each piece. The cure is the substitution check you just saw: a mismatch at x = 1 points straight at a sign you didn't flip. The other thing people do is fuse unlike terms, writing 3x² + 2x as 5x² or 5x³. Those are different kinds of box; an x²-piece and an x-piece can't be stacked, so 3x² + 2x just stays as it is.</p>
 <p>Settle on one clean problem before the set mixes things up: name the type, degree, and leading coefficient of 7x⁵. One term, so it's a monomial; its highest (and only) power is 5, so degree 5; and the number on that term is 7, the leading coefficient. You're just reading the parts off the page.</p>
-<p><strong>Check for understanding (transfer):</strong></p>
+</section>
+<div class="cl-check">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M9.6 9.6a2.6 2.6 0 1 1 3.3 2.5c-.9.3-1.4.9-1.4 1.8"/><circle cx="11.5" cy="16.6" r=".9" fill="currentColor" stroke="none"/></svg>Check yourself</span></p>
 <ol>
-<li><a class="refcode" id="10.3.c1" href="#10.3.c1">#10.3.c1</a> Name the type, degree, and leading coefficient of 4x³ − x + 9, then put 7 − 2x² in standard form. (Trinomial, degree 3, leading coefficient 4; and 7 − 2x² becomes −2x² + 7.)</li>
-<li><a class="refcode" id="10.3.c2" href="#10.3.c2">#10.3.c2</a> Subtract (x² − 4x + 5) − (2x² − 4x − 1), then prove the signs are right by testing x = 1. (Flip every sign in the second group: x² − 4x + 5 − 2x² + 4x + 1 = −x² + 6. Check at x = 1: original (1 − 4 + 5) − (2 − 4 − 1) = 2 − (−3) = 5, and −1 + 6 = 5.)</li>
-<li><a class="refcode" id="10.3.c3" href="#10.3.c3">#10.3.c3</a> Why can't 3x² and 3x be combined, even though both have a 3 and an x? (They're different kinds of term — one is an x²-piece, the other an x-piece — and only terms with the same variable <em>and</em> the same power combine.)</li>
+<li><a class="refcode" id="10.3.c1" href="#10.3.c1">10.3.c1</a> Name the type, degree, and leading coefficient of 4x³ − x + 9, then put 7 − 2x² in standard form. (Trinomial, degree 3, leading coefficient 4; and 7 − 2x² becomes −2x² + 7.)</li>
+<li><a class="refcode" id="10.3.c2" href="#10.3.c2">10.3.c2</a> Subtract (x² − 4x + 5) − (2x² − 4x − 1), then prove the signs are right by testing x = 1. (Flip every sign in the second group: x² − 4x + 5 − 2x² + 4x + 1 = −x² + 6. Check at x = 1: original (1 − 4 + 5) − (2 − 4 − 1) = 2 − (−3) = 5, and −1 + 6 = 5.)</li>
+<li><a class="refcode" id="10.3.c3" href="#10.3.c3">10.3.c3</a> Why can't 3x² and 3x be combined, even though both have a 3 and an x? (They're different kinds of term — one is an x²-piece, the other an x-piece — and only terms with the same variable <em>and</em> the same power combine.)</li>
 </ol>
 <p>You can now name a polynomial's parts, write it in standard form, add by combining like terms, and subtract with every sign flipped — and check that subtraction with a quick substitution so a missed sign never slips past you.</p>
 <p>The problems below shuffle naming, adding, and subtracting together, the kind of switching that makes a skill stay put. Each answer is at the end of the lesson, and the worked examples above match every problem here. The subtraction problems are where the sign trap lives, so run a substitution check on each one. That habit is the main thing this lesson is teaching.</p>
-<p><strong>Practice problems:</strong></p>
+</div>
+<section class="practice">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4.5" width="15.5" height="15.5" rx="2.5"/><path d="M7.5 10 9 11.5 12 8.5"/><path d="M14 10H16.5"/><path d="M7.5 15H16.5"/></svg>Practice</span></p>
 <p><em>Name the type, degree, and leading coefficient:</em></p>
 <ol>
-<li><a class="refcode" id="10.3.1" href="#10.3.1">#10.3.1</a> 3x-7  2. x²-4x+1  3. 7x⁵</li>
+<li><a class="refcode" id="10.3.1" href="#10.3.1">10.3.1</a> 3x-7  2. x²-4x+1  3. 7x⁵</li>
 </ol>
 <p><em>Write in standard form:</em></p>
 <ol start="4">
-<li><a class="refcode" id="10.3.2" href="#10.3.2">#10.3.2</a> 2+5x²-3x  5. 4x-1+x³</li>
+<li><a class="refcode" id="10.3.2" href="#10.3.2">10.3.2</a> 2+5x²-3x  5. 4x-1+x³</li>
 </ol>
 <p><em>Add:</em></p>
 <ol start="6">
-<li><a class="refcode" id="10.3.3" href="#10.3.3">#10.3.3</a> (3x²+2x-1)+(x²-5x+4)  7. (2x²+3x)+(4x²-x+5)  8. (x²+6x+2)+(3x²-6x-7)</li>
+<li><a class="refcode" id="10.3.3" href="#10.3.3">10.3.3</a> (3x²+2x-1)+(x²-5x+4)  7. (2x²+3x)+(4x²-x+5)  8. (x²+6x+2)+(3x²-6x-7)</li>
 </ol>
 <p><em>Subtract (distribute the negative to every term):</em></p>
 <ol start="9">
-<li><a class="refcode" id="10.3.4" href="#10.3.4">#10.3.4</a> (2x²+3x)-(x²-x+2)  10. (5x²-2x+1)-(2x²+3x-4)  11. (4x²+x)-(x²+x-6)  12. (x³+2x-3)-(x³-x+5)</li>
+<li><a class="refcode" id="10.3.4" href="#10.3.4">10.3.4</a> (2x²+3x)-(x²-x+2)  10. (5x²-2x+1)-(2x²+3x-4)  11. (4x²+x)-(x²+x-6)  12. (x³+2x-3)-(x³-x+5)</li>
 </ol>
-<p><strong>Answer key:</strong>
-1) binomial, degree 1, leading coefficient 3.  2) trinomial, degree 2, leading coefficient 1.  3) monomial, degree 5, leading coefficient 7.  4) 5x²-3x+2  5) x³+4x-1  6) 4x²-3x+3  7) 6x²+2x+5  8) 4x²-5  9) x²+4x-2  10) 3x²-5x+5  11) 3x²+6  12) 3x-8</p>
+</section>
+<details class="answers">
+<summary><span class="tw"></span><span class="eyebrow">Answers</span><span class="hint">Try each one yourself first, then open to check.</span></summary>
+<div class="ak-body">
+<p>1) binomial, degree 1, leading coefficient 3.  2) trinomial, degree 2, leading coefficient 1.  3) monomial, degree 5, leading coefficient 7.  4) 5x²-3x+2  5) x³+4x-1  6) 4x²-3x+3  7) 6x²+2x+5  8) 4x²-5  9) x²+4x-2  10) 3x²-5x+5  11) 3x²+6  12) 3x-8</p>
 <p><em>Substitution spot-checks:</em> #9 at x=1: 5-2=3, 1+4-2=3. #12 at x=1: (1+2-3)-(1-1+5)=0-5=-5, and 3(1)-8=-5 (the x³'s subtract to zero).</p>
-<hr>
+</div>
+</details>
+<div class="ldiv" aria-hidden="true"><i></i><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3.5 20.5 12 12 20.5 3.5 12Z"/></svg><i></i></div>
 <h2 id="lesson-104-multiplying-polynomials">Lesson 10.4: Multiplying polynomials</h2>
 <p>This is the forward direction of the course's main thread: you take (x + 2)(x + 3) and multiply it out to x² + 5x + 6. The next unit hands you x² + 5x + 6 and asks you to find the pieces it came from — so multiplying out now is the very thing you'll learn to undo. There's one spot where almost everyone loses a piece, the <em>middle</em> term, and the area box in this lesson is built to make that piece impossible to miss.</p>
 <p>Start with the simpler case: a single term times a polynomial. The factor outside the parentheses hands a flyer to <em>everyone</em> inside, skipping no one. So 3x(x + 4) gives 3x · x and 3x · 4:
@@ -248,8 +288,12 @@ There they are: four cells, x², 3x, 2x, and 6. The two in the middle, 3x and 2x
 <p>If the grid isn't your thing, there's a second way to see the same thing: distribute twice. First the x greets both terms in the second parentheses, then the 2 greets both:
 $$x(x+3)+2(x+3)=x^2+3x+2x+6=x^2+5x+6$$
 Same four products, same middle term, no grid. Pick whichever picture you find easier to keep straight — they give the same answer because they <em>are</em> the same work.</p>
-<p><strong>New terms:</strong> none new — this is the distributive property (Unit 2) applied once (monomial × polynomial) or twice (binomial × binomial).</p>
-<p><strong>Worked examples:</strong></p>
+<div class="cl-terms">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6.5C9.5 5 6 5 3.5 6.5V18C6 16.5 9.5 16.5 12 18C14.5 16.5 18 16.5 20.5 18V6.5C18 5 14.5 5 12 6.5Z"/><path d="M12 6.5V18"/></svg>New words</span></p>
+<p>none new — this is the distributive property (Unit 2) applied once (monomial × polynomial) or twice (binomial × binomial).</p>
+</div>
+<section class="worked">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19.5V15L15.5 4.5 19.5 8.5 9 19Z"/><path d="M13.5 6.5 17.5 10.5"/></svg>Worked example</span></p>
 <p><em>Monomial × binomial — distribute:</em>
 $$3x(x+4)=3x^2+12x$$</p>
 <p><em>Binomial × binomial — the area box:</em>
@@ -265,35 +309,44 @@ Note that (x+3)²≠x²+9. The middle 6x is the whole point.</p>
 <p>Two of those deserve a second look. In the difference-of-squares example, the two middle cells, +4x and −4x, go to zero together, which is the whole reason (x − 4)(x + 4) collapses to just x² − 16. And in the last one, squaring a binomial, the tempting move is to square each piece and write x² + 9. But (x + 3)² means (x + 3)(x + 3), and running the box gives a middle term of 3x + 3x = 6x. So (x + 3)² is x² + 6x + 9; the 6x is exactly the part that gets dropped, and catching it is what the example is for.</p>
 <p>Across all of these, the error to watch for is the missing middle term: writing (x + 2)(x + 3) as x² + 6, or (x + 3)² as x² + 9. It happens when only the first-and-last products get written down. The box is the cure, because it makes the question concrete. Every part of the width meets every part of the height, so there are <em>four</em> cells, not two; if you only have two terms, ask where the middle cells went. When a sign is in play, fill each cell with its <em>signed</em> product (x · −4 is −4x) and then add, and a substitution check at x = 1 will flag any sign that went astray.</p>
 <p>Run the box on one clean problem before the set mixes things up. Expand (x + 5)(x + 1). The four cells are x², x, 5x, and 5; the middle two, x and 5x, add to 6x; so it's x² + 6x + 5. Four cells, then collect the middle pair, and that's the whole method.</p>
-<p><strong>Check for understanding (transfer):</strong></p>
+</section>
+<div class="cl-check">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M9.6 9.6a2.6 2.6 0 1 1 3.3 2.5c-.9.3-1.4.9-1.4 1.8"/><circle cx="11.5" cy="16.6" r=".9" fill="currentColor" stroke="none"/></svg>Check yourself</span></p>
 <ol>
-<li><a class="refcode" id="10.4.c1" href="#10.4.c1">#10.4.c1</a> Expand (x + 2)(x + 5) with the area box, and point to where the middle term 7x comes from. (Four cells: x², 5x, 2x, 10; the middle pair 5x + 2x is the 7x, giving x² + 7x + 10.)</li>
-<li><a class="refcode" id="10.4.c2" href="#10.4.c2">#10.4.c2</a> Why does (x − 5)(x + 5) have <em>no</em> middle term, but (x − 5)(x − 5) does? (In the first, the middle cells are −5x and +5x, which go to zero, leaving x² − 25; in the second they're −5x and −5x, which add to −10x, giving x² − 10x + 25.)</li>
-<li><a class="refcode" id="10.4.c3" href="#10.4.c3">#10.4.c3</a> Suppose someone writes (x + 4)² = x² + 16. Show them — with the box — exactly what they dropped. (Running (x + 4)(x + 4) gives middle cells 4x and 4x; they add to 8x, so the answer is x² + 8x + 16 — the dropped piece is the 8x.)</li>
+<li><a class="refcode" id="10.4.c1" href="#10.4.c1">10.4.c1</a> Expand (x + 2)(x + 5) with the area box, and point to where the middle term 7x comes from. (Four cells: x², 5x, 2x, 10; the middle pair 5x + 2x is the 7x, giving x² + 7x + 10.)</li>
+<li><a class="refcode" id="10.4.c2" href="#10.4.c2">10.4.c2</a> Why does (x − 5)(x + 5) have <em>no</em> middle term, but (x − 5)(x − 5) does? (In the first, the middle cells are −5x and +5x, which go to zero, leaving x² − 25; in the second they're −5x and −5x, which add to −10x, giving x² − 10x + 25.)</li>
+<li><a class="refcode" id="10.4.c3" href="#10.4.c3">10.4.c3</a> Suppose someone writes (x + 4)² = x² + 16. Show them — with the box — exactly what they dropped. (Running (x + 4)(x + 4) gives middle cells 4x and 4x; they add to 8x, so the answer is x² + 8x + 16 — the dropped piece is the 8x.)</li>
 </ol>
 <p>You can now multiply a single term across a polynomial, multiply two binomials with the area box, and reliably produce the middle term — including the cases where it doubles or vanishes. Hold onto each (x + 2)(x + 3) → x² + 5x + 6 you do: the next unit starts from the right-hand side and hunts for the left, and this same box is the tool you'll fill in reverse.</p>
 <p>The set below mixes monomial products with binomial products instead of grouping them, which is harder in the moment and better for remembering. Each answer is at the end of the lesson, and the worked examples above cover every move below, so flip back whenever one stalls you. The last three are the special patterns: watch for a vanishing middle term in one and a doubled one in the others.</p>
-<p><strong>Practice problems:</strong></p>
+</div>
+<section class="practice">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4.5" width="15.5" height="15.5" rx="2.5"/><path d="M7.5 10 9 11.5 12 8.5"/><path d="M14 10H16.5"/><path d="M7.5 15H16.5"/></svg>Practice</span></p>
 <p><em>Monomial × polynomial (distribute):</em></p>
 <ol>
-<li><a class="refcode" id="10.4.1" href="#10.4.1">#10.4.1</a> 3x(x+4)  2. 2x(3x-5)  3. -4x(x²-2x+1)</li>
+<li><a class="refcode" id="10.4.1" href="#10.4.1">10.4.1</a> 3x(x+4)  2. 2x(3x-5)  3. -4x(x²-2x+1)</li>
 </ol>
 <p><em>Binomial × binomial (use the area box):</em></p>
 <ol start="4">
-<li><a class="refcode" id="10.4.2" href="#10.4.2">#10.4.2</a> (x+2)(x+3)  5. (x+5)(x+1)  6. (x-2)(x+7)  7. (x-3)(x-4)</li>
+<li><a class="refcode" id="10.4.2" href="#10.4.2">10.4.2</a> (x+2)(x+3)  5. (x+5)(x+1)  6. (x-2)(x+7)  7. (x-3)(x-4)</li>
 </ol>
 <p><em>With a leading coefficient:</em></p>
 <ol start="8">
-<li><a class="refcode" id="10.4.3" href="#10.4.3">#10.4.3</a> (2x+1)(x+3)  9. (3x-2)(x+5)</li>
+<li><a class="refcode" id="10.4.3" href="#10.4.3">10.4.3</a> (2x+1)(x+3)  9. (3x-2)(x+5)</li>
 </ol>
 <p><em>Special patterns (preview of Unit 11):</em></p>
 <ol start="10">
-<li><a class="refcode" id="10.4.4" href="#10.4.4">#10.4.4</a> (x-4)(x+4)  11. (x+3)²  12. (x-5)²</li>
+<li><a class="refcode" id="10.4.4" href="#10.4.4">10.4.4</a> (x-4)(x+4)  11. (x+3)²  12. (x-5)²</li>
 </ol>
-<p><strong>Answer key:</strong>
-1) 3x²+12x  2) 6x²-10x  3) -4x³+8x²-4x  4) x²+5x+6  5) x²+6x+5  6) x²+5x-14  7) x²-7x+12  8) 2x²+7x+3  9) 3x²+13x-10  10) x²-16  11) x²+6x+9  12) x²-10x+25</p>
+</section>
+<details class="answers">
+<summary><span class="tw"></span><span class="eyebrow">Answers</span><span class="hint">Try each one yourself first, then open to check.</span></summary>
+<div class="ak-body">
+<p>1) 3x²+12x  2) 6x²-10x  3) -4x³+8x²-4x  4) x²+5x+6  5) x²+6x+5  6) x²+5x-14  7) x²-7x+12  8) 2x²+7x+3  9) 3x²+13x-10  10) x²-16  11) x²+6x+9  12) x²-10x+25</p>
 <p><em>Substitution spot-checks at x=1:</em> #6: (-1)(8)=-8, and 1+5-14=-8. #9: (1)(6)=6, and 3+13-10=6. #11: (4)²=16, and 1+6+9=16.</p>
-<hr>
+</div>
+</details>
+<div class="ldiv" aria-hidden="true"><i></i><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3.5 20.5 12 12 20.5 3.5 12Z"/></svg><i></i></div>
 <p>You've reached the end of building expressions up. You can simplify with the exponent rules and rebuild the zero and negative cases when memory slips; move a number between standard and scientific form and compute in scientific form; name and add and subtract polynomials with the subtraction signs handled; and multiply binomials with the area box, middle term and all. The next unit takes that last box and runs it backward: you'll be handed the finished area and asked to find the edges. Every (x + 2)(x + 3) → x² + 5x + 6 you practiced is one you're about to learn to read from right to left.</p>
 </main>
 <footer><p>Generated from the unit source by <code>_verification/build_textbook.py</code>. Math by KaTeX.</p></footer>
@@ -303,7 +356,6 @@ Note that (x+3)²≠x²+9. The middle 6x is the whole point.</p>
 document.addEventListener("DOMContentLoaded", function () {
   renderMathInElement(document.body, {delimiters: [{left: "$$", right: "$$", display: true}], throwOnError: false});
   var t = document.getElementById("theme"), root = document.documentElement;
-  if (localStorage.getItem("a1-theme") === "dark") root.classList.add("dark");
   t.addEventListener("click", function () {
     root.classList.toggle("dark");
     localStorage.setItem("a1-theme", root.classList.contains("dark") ? "dark" : "light");

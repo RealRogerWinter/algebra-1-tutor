@@ -3,23 +3,27 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Unit 7: Systems of Equations — Algebra 1</title>
+<title>Systems of Equations — Algebra 1</title>
+<script>try{if(localStorage.getItem("a1-theme")==="dark")document.documentElement.classList.add("dark");}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..40,500..600&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="textbook.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous">
 </head>
-<body>
+<body data-surface="textbook">
 <header class="topbar">
-  <nav><a href="index.html">Contents</a> &nbsp;·&nbsp; <a href="unit-06.html">&larr; Unit 6</a> &nbsp;·&nbsp; <a href="unit-08.html">Unit 8 &rarr;</a></nav>
-  <button id="theme" type="button" aria-label="Toggle dark mode">◐</button>
+  <nav><a class="home" href="index.html">Algebra&nbsp;1</a> &nbsp;·&nbsp; <a href="unit-06.html">&larr;&nbsp;Unit 6</a> &nbsp;·&nbsp; <a href="unit-08.html">Unit 8&nbsp;&rarr;</a></nav>
+  <span class="sp"></span>
+  <button id="theme" type="button" aria-label="Toggle light or dark theme">◐ Theme</button>
 </header>
 <main>
-<h1>Unit 7: Systems of Equations</h1>
-<p class="subtitle">Two equations, two unknowns: graphing, substitution, elimination, special cases</p>
+<div class="hero"><div class="hero-text"><div class="kicker">Unit 7</div><h1>Systems of Equations</h1><p class="lede">Two equations, two unknowns: graphing, substitution, elimination, special cases</p></div><img class="hero-art" src="../assets/systems.jpg" alt=""></div>
 
 <p>Before this unit, an equation like y = 2x + 1 had a whole line of answers — every point on that line fits it. This unit adds a second condition that has to hold at the same time, and that one extra demand usually pins the answer down to a single point.</p>
 <p>Keep one picture in mind the whole way through. Each equation draws a line. A pair of equations is asking: is there one point that sits on both lines at once? When there is, it's the place the two lines cross. Everything in this unit, whether graphing or substitution or elimination, is just a different way to find that crossing point. And one habit never changes: once you have an answer, put it back into both equations and make sure both come out true.</p>
 <p>Before each new lesson here, it helps to redo two or three problems from the lesson before from memory, then check them. Mixed, spaced practice like that feels harder in the moment, and that's exactly what makes a skill last to next week. Every set in this unit has its answers at the end of the lesson, so the help is always right there.</p>
-<hr>
+<div class="ldiv" aria-hidden="true"><i></i><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3.5 20.5 12 12 20.5 3.5 12Z"/></svg><i></i></div>
 <h2 id="lesson-71-solving-by-graphing">Lesson 7.1: Solving by graphing</h2>
 <p>Start with what a single equation already gives you. Write y = x + 1, and you don't get one answer — you get a whole line of them: (0, 1), (1, 2), (2, 3), and on forever. Write y = −x + 5, and that's a second line, its own endless list of points. Now ask a fair question: is there a single point that lives on <em>both</em> lines at the same time?</p>
 <p>That question is what a <strong>system</strong> asks. Two relationships, both true at once. And the answer, when there is one, is the point where the two lines cross — the one (x, y) that satisfies both equations together. From Unit 5 you know a line is really a function. So a system is asking: for what input do these two functions hand back the same output?</p>
@@ -32,13 +36,16 @@ x &amp; y = x+1 &amp; y = -x+5 \\ \hline
 4 &amp; 5 &amp; 1
 \end{array}$$</p>
 <p>Look at the row x = 2: both equations give y = 3. So both lines pass through (2, 3), and that shared point is the solution. The graph would show the two lines crossing right there — but you didn't need to eyeball it, because the table told you exactly.</p>
-<p><strong>New terms:</strong></p>
+<div class="cl-terms">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6.5C9.5 5 6 5 3.5 6.5V18C6 16.5 9.5 16.5 12 18C14.5 16.5 18 16.5 20.5 18V6.5C18 5 14.5 5 12 6.5Z"/><path d="M12 6.5V18"/></svg>New words</span></p>
 <ul>
-<li><a class="refcode" id="7.1.d1" href="#7.1.d1">#7.1.d1</a> <strong>System of equations:</strong> two (or more) equations considered together, asking for values that satisfy all of them at once.</li>
-<li><a class="refcode" id="7.1.d2" href="#7.1.d2">#7.1.d2</a> <strong>Solution of a system:</strong> an ordered pair (x, y) that makes <strong>every</strong> equation in the system true. A system may have <strong>one</strong> such pair, <strong>none</strong>, or <strong>infinitely many</strong> (see 7.4) — so don't assume there's exactly one until you've solved it.</li>
+<li><a class="refcode" id="7.1.d1" href="#7.1.d1">7.1.d1</a> <strong>System of equations:</strong> two (or more) equations considered together, asking for values that satisfy all of them at once.</li>
+<li><a class="refcode" id="7.1.d2" href="#7.1.d2">7.1.d2</a> <strong>Solution of a system:</strong> an ordered pair (x, y) that makes <strong>every</strong> equation in the system true. A system may have <strong>one</strong> such pair, <strong>none</strong>, or <strong>infinitely many</strong> (see 7.4) — so don't assume there's exactly one until you've solved it.</li>
 </ul>
 <p>Notice that a solution here is an <em>ordered pair</em>, not a single number. This is the one thing to hold onto for the whole unit: you're not done when you know x, you're done when you have both x and y. Finding x = 2 and walking away is finishing half the problem.</p>
-<p><strong>Worked examples:</strong></p>
+</div>
+<section class="worked">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19.5V15L15.5 4.5 19.5 8.5 9 19Z"/><path d="M13.5 6.5 17.5 10.5"/></svg>Worked example</span></p>
 <p>Read each of these slowly, line by line, and ask why each step follows from the one before. The first time we check an answer, there's a note on what to do if a check ever comes out wrong, because it will sometimes.</p>
 <p><em>Example 1 — the canonical one.</em> Solve y = x + 1 and y = −x + 5 by graphing.
 From the table above, both lines pass through (2, 3), so that's the only point on both. Now confirm it by putting (2, 3) into <strong>both</strong> equations — not just one, because the answer has to satisfy both at once. First equation: is 3 = 2 + 1? Yes. Second equation: is 3 = −2 + 5? Yes. Both are true, so the solution is (2, 3).</p>
@@ -49,27 +56,32 @@ The equation y = 6 is a flat line sitting at height 6 — every point on it has 
 Build a small table and look for the matching row. At x = 1, the first equation gives 1 + 2 = 3, and the second gives −1 + 4 = 3. They agree, so the lines cross at (1, 3). Check both: 3 = 1 + 2, and 3 = −1 + 4. Both true. Solution: (1, 3).</p>
 <p><em>Example 4 — the limitation, on purpose.</em> Solve y = 2x and y = x + 1 but suppose the answer weren't clean. Here it is clean: they meet at (1, 2), since 2 = 2(1) and 2 = 1 + 1, both true. But picture a different system whose lines crossed at, say, (2.5, −1.3). Could you read those numbers off a graph you drew by hand? You couldn't. The best you'd manage is "somewhere near there." That's the honest limit of graphing, and it's exactly why the next two lessons give you methods that produce the exact answer without any squinting.</p>
 <p>That's the trade graphing makes. It shows the meaning of a system clearly, because you can <em>see</em> the solution as a crossing point, but it only reliably reads off whole-number crossings. When the intersection looks like it falls between the gridlines, that's not your cue to guess a decimal; it's your cue to reach for substitution or elimination, the methods in the next two lessons.</p>
-<p><strong>Check for understanding (transfer):</strong></p>
+</section>
+<div class="cl-check">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M9.6 9.6a2.6 2.6 0 1 1 3.3 2.5c-.9.3-1.4.9-1.4 1.8"/><circle cx="11.5" cy="16.6" r=".9" fill="currentColor" stroke="none"/></svg>Check yourself</span></p>
 <p>Each of these has a short answer below it, so you can check your thinking.</p>
 <ol>
-<li><a class="refcode" id="7.1.c1" href="#7.1.c1">#7.1.c1</a> "Without graphing yet — what does it <em>mean</em>, in words, that (2, 3) is the solution of a system? What two things must be true?" (It means the point (2, 3) lies on both lines at once — so putting x = 2, y = 3 into the first equation makes it true, <em>and</em> putting the same pair into the second equation makes it true. Both, not one.)</li>
-<li><a class="refcode" id="7.1.c2" href="#7.1.c2">#7.1.c2</a> "Two lines on the same plane never touch. What does that tell you about how many solutions the system has?" (None. If the lines never meet, there's no point that's on both, so no (x, y) satisfies both equations. You'll meet this case head-on in 7.4.)</li>
-<li><a class="refcode" id="7.1.c3" href="#7.1.c3">#7.1.c3</a> "If a system's solution were (1.5, 4.2), why would graphing by hand let you down — and what would you reach for instead?" (You can't read 1.5 and 4.2 off a hand-drawn grid with any confidence — the point falls between the lines you can draw. You'd switch to an algebraic method, substitution or elimination, to get the exact values.)</li>
+<li><a class="refcode" id="7.1.c1" href="#7.1.c1">7.1.c1</a> "Without graphing yet — what does it <em>mean</em>, in words, that (2, 3) is the solution of a system? What two things must be true?" (It means the point (2, 3) lies on both lines at once — so putting x = 2, y = 3 into the first equation makes it true, <em>and</em> putting the same pair into the second equation makes it true. Both, not one.)</li>
+<li><a class="refcode" id="7.1.c2" href="#7.1.c2">7.1.c2</a> "Two lines on the same plane never touch. What does that tell you about how many solutions the system has?" (None. If the lines never meet, there's no point that's on both, so no (x, y) satisfies both equations. You'll meet this case head-on in 7.4.)</li>
+<li><a class="refcode" id="7.1.c3" href="#7.1.c3">7.1.c3</a> "If a system's solution were (1.5, 4.2), why would graphing by hand let you down — and what would you reach for instead?" (You can't read 1.5 and 4.2 off a hand-drawn grid with any confidence — the point falls between the lines you can draw. You'd switch to an algebraic method, substitution or elimination, to get the exact values.)</li>
 </ol>
 <p><strong>Practice problems</strong> (solve by graphing / finding where the two lines meet; give the ordered pair and check both):</p>
 <p><em>Set A — one line is horizontal or through the origin</em></p>
 <ol>
-<li><a class="refcode" id="7.1.1" href="#7.1.1">#7.1.1</a> y = x and y = 4</li>
-<li><a class="refcode" id="7.1.2" href="#7.1.2">#7.1.2</a> y = 2x and y = 6</li>
-<li><a class="refcode" id="7.1.3" href="#7.1.3">#7.1.3</a> y = -x + 6 and y = x</li>
+<li><a class="refcode" id="7.1.1" href="#7.1.1">7.1.1</a> y = x and y = 4</li>
+<li><a class="refcode" id="7.1.2" href="#7.1.2">7.1.2</a> y = 2x and y = 6</li>
+<li><a class="refcode" id="7.1.3" href="#7.1.3">7.1.3</a> y = -x + 6 and y = x</li>
 </ol>
 <p><em>Set B — two slanted lines</em></p>
 <ol start="4">
-<li><a class="refcode" id="7.1.4" href="#7.1.4">#7.1.4</a> y = x + 2 and y = -x + 4</li>
-<li><a class="refcode" id="7.1.5" href="#7.1.5">#7.1.5</a> y = x - 1 and y = -x + 3</li>
-<li><a class="refcode" id="7.1.6" href="#7.1.6">#7.1.6</a> y = 2x - 1 and y = x + 1</li>
+<li><a class="refcode" id="7.1.4" href="#7.1.4">7.1.4</a> y = x + 2 and y = -x + 4</li>
+<li><a class="refcode" id="7.1.5" href="#7.1.5">7.1.5</a> y = x - 1 and y = -x + 3</li>
+<li><a class="refcode" id="7.1.6" href="#7.1.6">7.1.6</a> y = 2x - 1 and y = x + 1</li>
 </ol>
-<p><strong>Answer key:</strong></p>
+</div>
+<details class="answers">
+<summary><span class="tw"></span><span class="eyebrow">Answers</span><span class="hint">Try each one yourself first, then open to check.</span></summary>
+<div class="ak-body">
 <ol>
 <li>(4, 4) — 4 = 4, 4 = 4</li>
 <li>(3, 6) — 6 = 2(3), 6 = 6</li>
@@ -78,17 +90,22 @@ Build a small table and look for the matching row. At x = 1, the first equation 
 <li>(2, 1) — 1 = 2 - 1, 1 = -2 + 3</li>
 <li>(2, 3) — 3 = 2(2) - 1, 3 = 2 + 1</li>
 </ol>
-<hr>
+</div>
+</details>
+<div class="ldiv" aria-hidden="true"><i></i><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3.5 20.5 12 12 20.5 3.5 12Z"/></svg><i></i></div>
 <h2 id="lesson-72-substitution">Lesson 7.2: Substitution</h2>
 <p>Graphing showed you what a solution <em>is</em>. Now you'll find it exactly, with no graph to read. The trick rests on one fact you already trust: in a system, x means the same number in both equations, and so does y. The two equations aren't strangers — they describe the same pair of hidden numbers.</p>
 <p>Think of y as a mystery box with one number hidden inside. Suppose the first equation tells you outright what's in the box: y = 2x. That's not a different y from the one in the second equation — it's the <em>same</em> box, and you've just been told what it holds. So anywhere the second equation says y, you can pour in 2x instead, because they're equal. That swap is <strong>substitution</strong>.</p>
 <p>The payoff is what makes the swap worth doing. The second equation has two unknowns, x and y, and you can't solve one equation in two unknowns. But the moment you replace y with 2x, that equation has only x in it — one equation, one unknown, the kind you've been solving since Unit 2. The crossing point falls out as soon as a single variable is left standing.</p>
 <p>The full move, start to finish: isolate a variable in one equation, substitute that expression into the <em>other</em> equation, solve the one-variable equation you're left with, back-substitute to find the partner coordinate, and check both. That last "find the partner" step is the one people skip, so it's built into the first example.</p>
-<p><strong>New terms:</strong></p>
+<div class="cl-terms">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6.5C9.5 5 6 5 3.5 6.5V18C6 16.5 9.5 16.5 12 18C14.5 16.5 18 16.5 20.5 18V6.5C18 5 14.5 5 12 6.5Z"/><path d="M12 6.5V18"/></svg>New words</span></p>
 <ul>
-<li><a class="refcode" id="7.2.d1" href="#7.2.d1">#7.2.d1</a> <strong>Substitution:</strong> replacing a variable with an expression equal to it. Because each variable denotes the <em>same</em> number in both equations, an expression equal to (say) y in one equation may stand in for y in the other.</li>
+<li><a class="refcode" id="7.2.d1" href="#7.2.d1">7.2.d1</a> <strong>Substitution:</strong> replacing a variable with an expression equal to it. Because each variable denotes the <em>same</em> number in both equations, an expression equal to (say) y in one equation may stand in for y in the other.</li>
 </ul>
-<p><strong>Worked examples:</strong></p>
+</div>
+<section class="worked">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19.5V15L15.5 4.5 19.5 8.5 9 19Z"/><path d="M13.5 6.5 17.5 10.5"/></svg>Worked example</span></p>
 <p><em>Example 1.</em> Solve y = 2x and x + y = 9.
 Here y is already alone — the first equation tells you the box holds 2x. So in the second equation, wherever you see y, pour in 2x:
 $$x + 2x = 9 \;\Rightarrow\; 3x = 9 \;\Rightarrow\; x = 3.$$
@@ -108,24 +125,29 @@ $$2x + (7 - x) = 11 \;\Rightarrow\; x + 7 = 11 \;\Rightarrow\; x = 4.$$
 Here 2x − x is just x, so x + 7 = 11, and subtracting 7 gives x = 4. Partner: y = 7 − x = 7 − 4 = 3. Solution (4, 3). Check both: is 4 + 3 = 7? Yes. Is 2(4) + 3 = 11? Yes, since 8 + 3 = 11. Solution: (4, 3). (This same system has a matching pair of y-terms, which makes it a natural fit for the elimination method coming in 7.3 — you'll solve it that way too.)</p>
 <p>Which equation you substitute into matters too. You isolated y from the <em>first</em> equation, so you pour the result into the <em>second</em> one. If you pour it back into the first, the one you just got it from, everything collapses to something like 0 = 0, which is true but tells you nothing, because you've only said "the first equation equals itself." Always substitute into the other equation.</p>
 <p>Here's a clean one to get the method moving before the practice mixes things up. Solve y = 5 and x + y = 8. The first equation hands you y outright, so substitute 5 for y in the second: x + 5 = 8, which gives x = 3. Partner's already known, y = 5. Solution (3, 5). Check both: 5 = 5, and 3 + 5 = 8. When one equation just states a value like that, substitution is almost no work at all.</p>
-<p><strong>Check for understanding (transfer):</strong></p>
+</section>
+<div class="cl-check">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M9.6 9.6a2.6 2.6 0 1 1 3.3 2.5c-.9.3-1.4.9-1.4 1.8"/><circle cx="11.5" cy="16.6" r=".9" fill="currentColor" stroke="none"/></svg>Check yourself</span></p>
 <ol>
-<li><a class="refcode" id="7.2.c1" href="#7.2.c1">#7.2.c1</a> "In y = 2x and x + y = 9, why is it safe to write x + 2x = 9? What justifies swapping y for 2x?" (Because the first equation says y <em>equals</em> 2x — they're the same number — and y is the same number in both equations. Swapping equal things for equal things keeps the second equation true.)</li>
-<li><a class="refcode" id="7.2.c2" href="#7.2.c2">#7.2.c2</a> "You isolated y in equation one. Into <em>which</em> equation do you substitute, and why not the other?" (Into equation two, the one you didn't isolate from. Substituting back into equation one just restates it as something like 0 = 0 — true but empty — so it finds nothing.)</li>
-<li><a class="refcode" id="7.2.c3" href="#7.2.c3">#7.2.c3</a> "Make up a system where substitution is clearly the easier method than elimination, and say why." (Any system with a variable already alone, like y = 3x − 2 and x + y = 10 — you can pour 3x − 2 straight in with no rearranging. When a variable is sitting by itself, substitution is the short path.)</li>
+<li><a class="refcode" id="7.2.c1" href="#7.2.c1">7.2.c1</a> "In y = 2x and x + y = 9, why is it safe to write x + 2x = 9? What justifies swapping y for 2x?" (Because the first equation says y <em>equals</em> 2x — they're the same number — and y is the same number in both equations. Swapping equal things for equal things keeps the second equation true.)</li>
+<li><a class="refcode" id="7.2.c2" href="#7.2.c2">7.2.c2</a> "You isolated y in equation one. Into <em>which</em> equation do you substitute, and why not the other?" (Into equation two, the one you didn't isolate from. Substituting back into equation one just restates it as something like 0 = 0 — true but empty — so it finds nothing.)</li>
+<li><a class="refcode" id="7.2.c3" href="#7.2.c3">7.2.c3</a> "Make up a system where substitution is clearly the easier method than elimination, and say why." (Any system with a variable already alone, like y = 3x − 2 and x + y = 10 — you can pour 3x − 2 straight in with no rearranging. When a variable is sitting by itself, substitution is the short path.)</li>
 </ol>
 <p><strong>Practice problems</strong> (solve by substitution; give (x, y) and verify both):</p>
 <ol>
-<li><a class="refcode" id="7.2.1" href="#7.2.1">#7.2.1</a> y = 3x and x + y = 8</li>
-<li><a class="refcode" id="7.2.2" href="#7.2.2">#7.2.2</a> y = x + 4 and 2x + y = 10</li>
-<li><a class="refcode" id="7.2.3" href="#7.2.3">#7.2.3</a> x = 2y and x + y = 9</li>
-<li><a class="refcode" id="7.2.4" href="#7.2.4">#7.2.4</a> y = x - 1 and 3x + y = 11</li>
-<li><a class="refcode" id="7.2.5" href="#7.2.5">#7.2.5</a> x = y + 3 and x + 2y = 9</li>
-<li><a class="refcode" id="7.2.6" href="#7.2.6">#7.2.6</a> y = 2x + 1 and x + y = 7</li>
-<li><a class="refcode" id="7.2.7" href="#7.2.7">#7.2.7</a> y = 4x and 2x + y = 18</li>
-<li><a class="refcode" id="7.2.8" href="#7.2.8">#7.2.8</a> x = 3y and 2x - y = 10</li>
+<li><a class="refcode" id="7.2.1" href="#7.2.1">7.2.1</a> y = 3x and x + y = 8</li>
+<li><a class="refcode" id="7.2.2" href="#7.2.2">7.2.2</a> y = x + 4 and 2x + y = 10</li>
+<li><a class="refcode" id="7.2.3" href="#7.2.3">7.2.3</a> x = 2y and x + y = 9</li>
+<li><a class="refcode" id="7.2.4" href="#7.2.4">7.2.4</a> y = x - 1 and 3x + y = 11</li>
+<li><a class="refcode" id="7.2.5" href="#7.2.5">7.2.5</a> x = y + 3 and x + 2y = 9</li>
+<li><a class="refcode" id="7.2.6" href="#7.2.6">7.2.6</a> y = 2x + 1 and x + y = 7</li>
+<li><a class="refcode" id="7.2.7" href="#7.2.7">7.2.7</a> y = 4x and 2x + y = 18</li>
+<li><a class="refcode" id="7.2.8" href="#7.2.8">7.2.8</a> x = 3y and 2x - y = 10</li>
 </ol>
-<p><strong>Answer key:</strong></p>
+</div>
+<details class="answers">
+<summary><span class="tw"></span><span class="eyebrow">Answers</span><span class="hint">Try each one yourself first, then open to check.</span></summary>
+<div class="ak-body">
 <ol>
 <li>(2, 6) — 6 = 3(2), 2 + 6 = 8</li>
 <li>(2, 6) — 6 = 2 + 4, 2(2) + 6 = 10</li>
@@ -136,7 +158,9 @@ Here 2x − x is just x, so x + 7 = 11, and subtracting 7 gives x = 4. Partner: 
 <li>(3, 12) — 12 = 4(3), 2(3) + 12 = 18</li>
 <li>(6, 2) — 6 = 3(2), 2(6) - 2 = 10</li>
 </ol>
-<hr>
+</div>
+</details>
+<div class="ldiv" aria-hidden="true"><i></i><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3.5 20.5 12 12 20.5 3.5 12Z"/></svg><i></i></div>
 <h2 id="lesson-73-elimination">Lesson 7.3: Elimination</h2>
 <p>Substitution shines when a variable is already alone. But plenty of systems come written like this, 3x + 2y = 16 and x + y = 6, with nothing isolated and no clean way to isolate it without dragging in fractions. For those, there's a method built to handle them head-on, and it's the workhorse you'll lean on most in later math.</p>
 <p>The idea starts from the balance scale. Each equation is a level scale: the left side weighs exactly what the right side weighs. So if you have two true equations and you add their left sides together and their right sides together, the result is still balanced — still true. That's the move. You stack two equations and combine them, and if you've lined things up right, one variable disappears in the adding.</p>
@@ -144,12 +168,15 @@ Here 2x − x is just x, so x + 7 = 11, and subtracting 7 gives x = 4. Partner: 
 <p>That's the whole engine: combine the two equations so one variable's terms go to zero, solve what's left, then back-substitute for the partner and check both. The phrase to keep is "go to zero" — it's literally what happens when +y and −y add.</p>
 <p>When the matching terms have <em>opposite</em> signs, like +y and −y, you <strong>add</strong> to make them go to zero. When they have the <em>same</em> sign, like 2x in one equation and 2x in the other, you <strong>subtract</strong> one equation from the other so they go to zero. Add for opposites, subtract for matches.</p>
 <p>And what if nothing lines up at all — no pair of matching or opposite coefficients? Then you <strong>scale</strong> first: multiply an entire equation, both sides and every term, by a number that makes one pair line up. Multiplying a whole equation by a number is just resizing both pans of the scale equally, so it stays balanced and the line it describes doesn't change. Once a pair matches or opposes, you're back to the add-or-subtract move.</p>
-<p><strong>New terms:</strong></p>
+<div class="cl-terms">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6.5C9.5 5 6 5 3.5 6.5V18C6 16.5 9.5 16.5 12 18C14.5 16.5 18 16.5 20.5 18V6.5C18 5 14.5 5 12 6.5Z"/><path d="M12 6.5V18"/></svg>New words</span></p>
 <ul>
-<li><a class="refcode" id="7.3.d1" href="#7.3.d1">#7.3.d1</a> <strong>Elimination (linear combination):</strong> combining two equations so that one variable's terms sum to zero ("go to zero"), removing it.</li>
-<li><a class="refcode" id="7.3.d2" href="#7.3.d2">#7.3.d2</a> <strong>Scaling an equation:</strong> multiplying an <em>entire</em> equation by a number. Because both sides are multiplied equally, the line — and the solution — is unchanged (the balance scale stays level when you resize both pans by the same amount).</li>
+<li><a class="refcode" id="7.3.d1" href="#7.3.d1">7.3.d1</a> <strong>Elimination (linear combination):</strong> combining two equations so that one variable's terms sum to zero ("go to zero"), removing it.</li>
+<li><a class="refcode" id="7.3.d2" href="#7.3.d2">7.3.d2</a> <strong>Scaling an equation:</strong> multiplying an <em>entire</em> equation by a number. Because both sides are multiplied equally, the line — and the solution — is unchanged (the balance scale stays level when you resize both pans by the same amount).</li>
 </ul>
-<p><strong>Worked examples:</strong></p>
+</div>
+<section class="worked">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19.5V15L15.5 4.5 19.5 8.5 9 19Z"/><path d="M13.5 6.5 17.5 10.5"/></svg>Worked example</span></p>
 <p><em>Example 1 — add to cancel.</em> Solve x + y = 10 and x − y = 4.
 The y-terms are +y and −y, opposites, so <strong>add</strong> the two equations to send them to zero:
 $$(x + y) + (x - y) = 10 + 4 \;\Rightarrow\; 2x = 14 \;\Rightarrow\; x = 7.$$
@@ -170,28 +197,33 @@ The +2y terms go to zero, 3x − 2x is x, and 16 − 12 is 4, so x = 4. Partner:
 The y-terms are +2y and −2y — opposites already, no scaling needed. So <strong>add</strong>:
 $$(3x + 2y) + (5x - 2y) = 12 + 4 \;\Rightarrow\; 8x = 16 \;\Rightarrow\; x = 2.$$
 Down the left: 3x + 5x is 8x, and +2y plus −2y goes to zero; on the right, 12 + 4 is 16. So 8x = 16 and x = 2. Partner: put x = 2 into 3x + 2y = 12, giving 6 + 2y = 12, so 2y = 6 and y = 3. Solution (2, 3). Check both: is 3(2) + 2(3) = 12? Yes, since 6 + 6 = 12. Is 5(2) − 2(3) = 4? Yes, since 10 − 6 = 4. Solution: (2, 3).</p>
-<p><strong>Check for understanding (transfer):</strong></p>
+</section>
+<div class="cl-check">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M9.6 9.6a2.6 2.6 0 1 1 3.3 2.5c-.9.3-1.4.9-1.4 1.8"/><circle cx="11.5" cy="16.6" r=".9" fill="currentColor" stroke="none"/></svg>Check yourself</span></p>
 <ol>
-<li><a class="refcode" id="7.3.c1" href="#7.3.c1">#7.3.c1</a> "In 2x + 3y = 12 and 2x - y = 4, why subtract rather than add? What tells you which to do?" (The x-terms are both +2x — same sign, a match — so subtracting sends them to zero. If they'd been opposites, like +2x and −2x, you'd add instead. Same sign, subtract; opposite signs, add.)</li>
-<li><a class="refcode" id="7.3.c2" href="#7.3.c2">#7.3.c2</a> "Why is it legal to multiply x + y = 6 by 2? What stays true after you do?" (Because multiplying both sides equally keeps the scale balanced — 2(x + y) really does equal 2(6). The equation still describes the same line and the same solution; you've only rewritten it in a more useful size.)</li>
-<li><a class="refcode" id="7.3.c3" href="#7.3.c3">#7.3.c3</a> "Given 4x + 3y = 10 and 2x + y = 4, which equation would you scale and by what, to eliminate x? (Don't solve — just plan the move.)" (Scale the second equation by 2: 2(2x + y) = 2(4) gives 4x + 2y = 8. Now both equations have +4x, so subtracting sends x to zero.)</li>
+<li><a class="refcode" id="7.3.c1" href="#7.3.c1">7.3.c1</a> "In 2x + 3y = 12 and 2x - y = 4, why subtract rather than add? What tells you which to do?" (The x-terms are both +2x — same sign, a match — so subtracting sends them to zero. If they'd been opposites, like +2x and −2x, you'd add instead. Same sign, subtract; opposite signs, add.)</li>
+<li><a class="refcode" id="7.3.c2" href="#7.3.c2">7.3.c2</a> "Why is it legal to multiply x + y = 6 by 2? What stays true after you do?" (Because multiplying both sides equally keeps the scale balanced — 2(x + y) really does equal 2(6). The equation still describes the same line and the same solution; you've only rewritten it in a more useful size.)</li>
+<li><a class="refcode" id="7.3.c3" href="#7.3.c3">7.3.c3</a> "Given 4x + 3y = 10 and 2x + y = 4, which equation would you scale and by what, to eliminate x? (Don't solve — just plan the move.)" (Scale the second equation by 2: 2(2x + y) = 2(4) gives 4x + 2y = 8. Now both equations have +4x, so subtracting sends x to zero.)</li>
 </ol>
 <p><strong>Practice problems</strong> (solve by elimination; scale first where needed; give (x, y) and verify both):</p>
 <p><em>Set A — add or subtract directly</em></p>
 <ol>
-<li><a class="refcode" id="7.3.1" href="#7.3.1">#7.3.1</a> x + y = 8 and x - y = 2</li>
-<li><a class="refcode" id="7.3.2" href="#7.3.2">#7.3.2</a> x + y = 12 and x - y = 6</li>
-<li><a class="refcode" id="7.3.3" href="#7.3.3">#7.3.3</a> 2x + y = 9 and x - y = 3</li>
-<li><a class="refcode" id="7.3.4" href="#7.3.4">#7.3.4</a> 3x + y = 14 and x + y = 6</li>
-<li><a class="refcode" id="7.3.5" href="#7.3.5">#7.3.5</a> 2x + 3y = 13 and 2x + y = 7</li>
-<li><a class="refcode" id="7.3.6" href="#7.3.6">#7.3.6</a> x + 2y = 11 and x + y = 7</li>
+<li><a class="refcode" id="7.3.1" href="#7.3.1">7.3.1</a> x + y = 8 and x - y = 2</li>
+<li><a class="refcode" id="7.3.2" href="#7.3.2">7.3.2</a> x + y = 12 and x - y = 6</li>
+<li><a class="refcode" id="7.3.3" href="#7.3.3">7.3.3</a> 2x + y = 9 and x - y = 3</li>
+<li><a class="refcode" id="7.3.4" href="#7.3.4">7.3.4</a> 3x + y = 14 and x + y = 6</li>
+<li><a class="refcode" id="7.3.5" href="#7.3.5">7.3.5</a> 2x + 3y = 13 and 2x + y = 7</li>
+<li><a class="refcode" id="7.3.6" href="#7.3.6">7.3.6</a> x + 2y = 11 and x + y = 7</li>
 </ol>
 <p><em>Set B — scale first</em></p>
 <ol start="7">
-<li><a class="refcode" id="7.3.7" href="#7.3.7">#7.3.7</a> 3x + 2y = 16 and x + 4y = 22</li>
-<li><a class="refcode" id="7.3.8" href="#7.3.8">#7.3.8</a> 2x + y = 11 and 3x + 2y = 18</li>
+<li><a class="refcode" id="7.3.7" href="#7.3.7">7.3.7</a> 3x + 2y = 16 and x + 4y = 22</li>
+<li><a class="refcode" id="7.3.8" href="#7.3.8">7.3.8</a> 2x + y = 11 and 3x + 2y = 18</li>
 </ol>
-<p><strong>Answer key:</strong></p>
+</div>
+<details class="answers">
+<summary><span class="tw"></span><span class="eyebrow">Answers</span><span class="hint">Try each one yourself first, then open to check.</span></summary>
+<div class="ak-body">
 <ol>
 <li>(5, 3) — 5 + 3 = 8, 5 - 3 = 2</li>
 <li>(9, 3) — 9 + 3 = 12, 9 - 3 = 6</li>
@@ -202,7 +234,9 @@ Down the left: 3x + 5x is 8x, and +2y plus −2y goes to zero; on the right, 12 
 <li>(2, 5) — multiply eq.1 by 2 → 6x+4y=32, subtract eq.2 → 5x=10, x=2, y=5. 3(2)+2(5)=16, 2+4(5)=22</li>
 <li>(4, 3) — multiply eq.1 by 2 → 4x+2y=22, subtract eq.2 → x=4, y=3. 2(4)+3=11, 3(4)+2(3)=18</li>
 </ol>
-<hr>
+</div>
+</details>
+<div class="ldiv" aria-hidden="true"><i></i><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3.5 20.5 12 12 20.5 3.5 12Z"/></svg><i></i></div>
 <h2 id="lesson-74-special-cases-applications">Lesson 7.4: Special cases &amp; applications</h2>
 <p>Two lines usually cross at one point — but not always. Lay any two lines on a plane and exactly one of three things happens: they cross once, they run parallel and never meet, or they sit right on top of each other. This lesson handles the two unusual cases, and then puts the whole toolkit to work on word problems, which are the real reason systems are worth learning.</p>
 <p>The three outcomes are easiest to hold as one picture, tied to the slopes you know from Unit 5. Different slopes, and the lines tilt differently, so they have to cross somewhere: that's one solution. Same slope but different intercepts, and they march along parallel forever, never touching: that's no solution. Same slope <em>and</em> same intercept, and they're secretly the same line drawn twice, so every point on it works: that's infinitely many solutions.</p>
@@ -239,7 +273,8 @@ Down the left: 3x + 5x is 8x, and +2y plus −2y goes to zero; on the right, 12 
 <li><strong>Infinitely many solutions:</strong> the same-line case (one equation is just a multiple of the other). The variables vanish and you're left with something always <strong>true</strong> (like 0 = 0) — every point on the shared line works.</li>
 </ul>
 <p>For the word problems in the second half, the move is the one from Unit 6, now done twice: name your two unknowns, turn the two facts in the story into two equations, solve by whichever method fits, and check your answer against the <em>story</em>, not just the algebra. A useful habit when you write the two equations is to keep them on different units — one equation counting <em>how many</em> of something, the other counting <em>dollars</em> or <em>amount</em>. That keeps you from accidentally writing the same fact twice.</p>
-<p><strong>Worked examples:</strong></p>
+<section class="worked">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19.5V15L15.5 4.5 19.5 8.5 9 19Z"/><path d="M13.5 6.5 17.5 10.5"/></svg>Worked example</span></p>
 <p><em>Example 1 — no solution (parallel).</em> Solve y = 2x + 1 and y = 2x − 3.
 Both have y alone, so substitute the first into the second: 2x + 1 = 2x − 3. Now subtract 2x from both sides, and the x's vanish: 1 = −3. That's <strong>false</strong> — no number anywhere makes 1 equal −3. So there's <strong>no solution.</strong> And it lines up with the picture: both lines have slope 2 but different intercepts, so they're parallel and never meet.</p>
 <p><em>Example 2 — no solution in standard form.</em> Solve 2x − y = 3 and 4x − 2y = 1.
@@ -264,28 +299,35 @@ Let l = length and w = width. The two facts become two equations — and recall 
 $$l = w + 4 \qquad 2l + 2w = 28.$$
 Length is already alone, so substitute l = w + 4 into the perimeter equation: 2(w + 4) + 2w = 28. Distribute the 2: 2w + 8 + 2w = 28. Combine: 4w + 8 = 28, so 4w = 20 and w = 5. Partner: l = 5 + 4 = 9. Check the story: length 9 is 4 more than width 5, and the perimeter is 2(9) + 2(5) = 18 + 10 = 28. Both fit: <strong>width 5, length 9.</strong></p>
 <p>One last thing about word-problem answers: check them against the <em>story</em>, not only the math. If a system hands you a negative number of tickets or half a coin, the algebra may be flawless but the setup slipped somewhere — that strange answer is a signal to look back at how you wrote the two equations.</p>
-<p><strong>Check for understanding (transfer):</strong></p>
+</section>
+<div class="cl-check">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M9.6 9.6a2.6 2.6 0 1 1 3.3 2.5c-.9.3-1.4.9-1.4 1.8"/><circle cx="11.5" cy="16.6" r=".9" fill="currentColor" stroke="none"/></svg>Check yourself</span></p>
 <ol>
-<li><a class="refcode" id="7.4.c1" href="#7.4.c1">#7.4.c1</a> "You solve a system and reach 7 = 7. How many solutions, and what do the graphs look like?" (Infinitely many. A leftover that's always true means every point already works, so the two equations are the same line — one drawn right on top of the other.)</li>
-<li><a class="refcode" id="7.4.c2" href="#7.4.c2">#7.4.c2</a> "Two lines have the same slope. What two situations are still possible, and how does the algebra tell them apart?" (Either they're parallel with different intercepts — no solution, and the algebra leaves a false statement like 0 = 5 — or they're the same line — infinitely many, and the algebra leaves a true statement like 0 = 0. The leftover statement tells you which.)</li>
-<li><a class="refcode" id="7.4.c3" href="#7.4.c3">#7.4.c3</a> "A problem says '30 nickels and dimes worth $2.40.' Name your two variables and write the two equations — don't solve yet." (Let n = nickels and d = dimes. One equation counts coins, one counts cents: n + d = 30 and 5n + 10d = 240.)</li>
+<li><a class="refcode" id="7.4.c1" href="#7.4.c1">7.4.c1</a> "You solve a system and reach 7 = 7. How many solutions, and what do the graphs look like?" (Infinitely many. A leftover that's always true means every point already works, so the two equations are the same line — one drawn right on top of the other.)</li>
+<li><a class="refcode" id="7.4.c2" href="#7.4.c2">7.4.c2</a> "Two lines have the same slope. What two situations are still possible, and how does the algebra tell them apart?" (Either they're parallel with different intercepts — no solution, and the algebra leaves a false statement like 0 = 5 — or they're the same line — infinitely many, and the algebra leaves a true statement like 0 = 0. The leftover statement tells you which.)</li>
+<li><a class="refcode" id="7.4.c3" href="#7.4.c3">7.4.c3</a> "A problem says '30 nickels and dimes worth $2.40.' Name your two variables and write the two equations — don't solve yet." (Let n = nickels and d = dimes. One equation counts coins, one counts cents: n + d = 30 and 5n + 10d = 240.)</li>
 </ol>
-<p><strong>Practice problems:</strong></p>
+</div>
+<section class="practice">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4.5" width="15.5" height="15.5" rx="2.5"/><path d="M7.5 10 9 11.5 12 8.5"/><path d="M14 10H16.5"/><path d="M7.5 15H16.5"/></svg>Practice</span></p>
 <p><em>Set A — classify (one solution / none / infinitely many); if one, give it</em></p>
 <ol>
-<li><a class="refcode" id="7.4.1" href="#7.4.1">#7.4.1</a> y = 3x + 2 and y = 3x - 5</li>
-<li><a class="refcode" id="7.4.2" href="#7.4.2">#7.4.2</a> x + y = 5 and 3x + 3y = 15</li>
-<li><a class="refcode" id="7.4.3" href="#7.4.3">#7.4.3</a> y = x + 1 and y = -x + 7</li>
+<li><a class="refcode" id="7.4.1" href="#7.4.1">7.4.1</a> y = 3x + 2 and y = 3x - 5</li>
+<li><a class="refcode" id="7.4.2" href="#7.4.2">7.4.2</a> x + y = 5 and 3x + 3y = 15</li>
+<li><a class="refcode" id="7.4.3" href="#7.4.3">7.4.3</a> y = x + 1 and y = -x + 7</li>
 </ol>
 <p><em>Set B — applications (set up two equations, solve, check the story)</em></p>
 <ol start="4">
-<li><a class="refcode" id="7.4.4" href="#7.4.4">#7.4.4</a> Two numbers add to 30, and one is 6 more than the other. Find the numbers.</li>
-<li><a class="refcode" id="7.4.5" href="#7.4.5">#7.4.5</a> A snack stand: 2 burgers and 1 fries cost $11; 1 burger and 2 fries cost $10. Find the price of a burger and of fries.</li>
-<li><a class="refcode" id="7.4.6" href="#7.4.6">#7.4.6</a> A boat goes <strong>20 mph downstream</strong> (with the current) and <strong>4 mph upstream</strong> (against it). Find the boat's speed in still water and the speed of the current. (Hint: with the current the speeds add, against it they subtract.)</li>
-<li><a class="refcode" id="7.4.7" href="#7.4.7">#7.4.7</a> <em>(mixture)</em> How many milliliters of a <strong>10%</strong> acid solution and a <strong>40%</strong> acid solution make <strong>40 mL</strong> of a <strong>25%</strong> solution?</li>
-<li><a class="refcode" id="7.4.8" href="#7.4.8">#7.4.8</a> <em>(perimeter)</em> A rectangle's length is <strong>2 more than its width</strong> and its perimeter is <strong>24</strong>. Find the width and length.</li>
+<li><a class="refcode" id="7.4.4" href="#7.4.4">7.4.4</a> Two numbers add to 30, and one is 6 more than the other. Find the numbers.</li>
+<li><a class="refcode" id="7.4.5" href="#7.4.5">7.4.5</a> A snack stand: 2 burgers and 1 fries cost $11; 1 burger and 2 fries cost $10. Find the price of a burger and of fries.</li>
+<li><a class="refcode" id="7.4.6" href="#7.4.6">7.4.6</a> A boat goes <strong>20 mph downstream</strong> (with the current) and <strong>4 mph upstream</strong> (against it). Find the boat's speed in still water and the speed of the current. (Hint: with the current the speeds add, against it they subtract.)</li>
+<li><a class="refcode" id="7.4.7" href="#7.4.7">7.4.7</a> <em>(mixture)</em> How many milliliters of a <strong>10%</strong> acid solution and a <strong>40%</strong> acid solution make <strong>40 mL</strong> of a <strong>25%</strong> solution?</li>
+<li><a class="refcode" id="7.4.8" href="#7.4.8">7.4.8</a> <em>(perimeter)</em> A rectangle's length is <strong>2 more than its width</strong> and its perimeter is <strong>24</strong>. Find the width and length.</li>
 </ol>
-<p><strong>Answer key:</strong></p>
+</section>
+<details class="answers">
+<summary><span class="tw"></span><span class="eyebrow">Answers</span><span class="hint">Try each one yourself first, then open to check.</span></summary>
+<div class="ak-body">
 <ol>
 <li><strong>No solution</strong> — same slope 3, different intercepts (parallel); substituting gives 2 = -5, false.</li>
 <li><strong>Infinitely many</strong> — eq.2 is eq.1 times 3 (same line); reduces to 0 = 0.</li>
@@ -296,7 +338,9 @@ Length is already alone, so substitute l = w + 4 into the perimeter equation: 2(
 <li>Let x = mL of 10%, y = mL of 40%; one equation counts mL, one counts acid (25% of 40 = 10 mL): x + y = 40, 0.10x + 0.40y = 10. Clear decimals (×10): x + 4y = 100; subtract x + y = 40 → 3y = 60 ⇒ y = 20, then x = 20. <strong>20 mL of each</strong> (20 + 20 = 40; 0.10(20) + 0.40(20) = 2 + 8 = 10 mL acid).</li>
 <li>Let l = length, w = width: l = w + 2, 2l + 2w = 24. Substitute → 2(w + 2) + 2w = 24 ⇒ 4w + 4 = 24 ⇒ w = 5, then l = 7. <strong>Width 5, length 7</strong> (perimeter 2(7) + 2(5) = 24, and 7 = 5 + 2).</li>
 </ol>
-<hr>
+</div>
+</details>
+<div class="ldiv" aria-hidden="true"><i></i><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3.5 20.5 12 12 20.5 3.5 12Z"/></svg><i></i></div>
 <p>You can now solve a system three ways and tell which fits. Graphing shows you what a solution means, the one point on both lines, but only reads clean whole-number crossings. Substitution is the short path when a variable is already alone: pour its expression into the other equation and you're down to one unknown. Elimination is the workhorse for equations in standard form: scale if you need to, then add for opposite coefficients or subtract for matching ones, so a variable goes to zero. When the variables all vanish, read what's left: a false statement means no solution (parallel lines), a true one means infinitely many (the same line). And whichever road you take, the answer is an ordered pair, confirmed by putting it back into both equations.</p>
 </main>
 <footer><p>Generated from the unit source by <code>_verification/build_textbook.py</code>. Math by KaTeX.</p></footer>
@@ -306,7 +350,6 @@ Length is already alone, so substitute l = w + 4 into the perimeter equation: 2(
 document.addEventListener("DOMContentLoaded", function () {
   renderMathInElement(document.body, {delimiters: [{left: "$$", right: "$$", display: true}], throwOnError: false});
   var t = document.getElementById("theme"), root = document.documentElement;
-  if (localStorage.getItem("a1-theme") === "dark") root.classList.add("dark");
   t.addEventListener("click", function () {
     root.classList.toggle("dark");
     localStorage.setItem("a1-theme", root.classList.contains("dark") ? "dark" : "light");
