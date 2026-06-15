@@ -23,6 +23,40 @@ OUT_DIR = os.path.join(REPO_ROOT, "docs", "textbook")
 KATEX = "0.16.11"
 ANCHOR_RE = re.compile(r"\{#([^}\s]+)\}")
 FCODE_RE = re.compile(r"^(?:[1-9]|1[0-2]|A)\.\d+\.f\d+[a-z]?$")
+_CODE_RE = re.compile(r"^([0-9]+|[A-Z])\.(\d+)\.(.+)$")  # scope.lesson.item (3-part lesson codes only)
+
+
+def _label_for(code):
+    """Plain-words description of a reference code, for the launcher prompt. Pure function of the
+    code string (no SSOT lookup) so the generated prompt is deterministic. Two-part bank codes
+    (mis.3, vis.t1, met.<slug>) fall back to the bare code."""
+    m = _CODE_RE.match(code)
+    if not m:
+        return f"reference {code}"
+    scope, lesson, item = m.groups()
+    clause = f" in Lesson {scope}.{lesson}"
+    mw = re.match(r"^(?:w|ex)(\d+)([a-z]?)$", item)
+    if mw:
+        return f"worked example {mw.group(1)}" + (f", part {mw.group(2)}" if mw.group(2) else "") + clause
+    mp = re.match(r"^(\d+)([a-z]?)$", item)
+    if mp:
+        return f"practice problem {mp.group(1)}" + (f", part {mp.group(2)}" if mp.group(2) else "") + clause
+    if re.match(r"^d\d+$", item):
+        return "a key term" + clause
+    if re.match(r"^c\d+$", item):
+        return "a check-for-understanding question" + clause
+    if re.match(r"^f\d+[a-z]?$", item):
+        return "the figure" + clause
+    if re.match(r"^h\d+$", item):
+        return "a how-to" + clause
+    return f"reference {code}" + clause
+
+
+def _prompt_for(code):
+    """The ready-to-paste tutor-launch prompt for a reference code."""
+    return (f"Use the Algebra 1 tutor skill to help me with {_label_for(code)} "
+            f"(reference {code}). Pull it up, then ask whether I'd like you to explain it, "
+            f"work through it together, or answer a specific question.")
 
 
 def _ssot():
@@ -88,14 +122,31 @@ def _id_worked_practice(text):
     return "\n".join(lines)
 
 
-def _convert_anchors(text):
-    """Turn {#code} into a visible, linkable refcode badge; embed the bundled SVG for f-codes."""
+def _attr(s):
+    """Escape a string for an HTML double-quoted attribute, keeping apostrophes literal so the
+    prompt round-trips verbatim through python-markdown's raw-HTML passthrough (no entity that a
+    later markdown pass could double-escape)."""
+    return _html.escape(s, quote=False).replace('"', "&quot;")
+
+
+def _refcode_badge(code, launcher):
+    """The visible, linkable refcode badge. When launcher=True it also carries the tutor-launch
+    prompt (data-prompt) + an aria-label so the textbook's refcode script can show and copy it."""
+    base = f'<a class="refcode" id="{code}" href="#{code}"'
+    if not launcher:
+        return base + f">{code}</a>"
+    return (base + f' data-prompt="{_attr(_prompt_for(code))}"'
+            f' aria-label="{_attr("Copy a tutor prompt for " + _label_for(code))}">{code}</a>')
+
+
+def _convert_anchors(text, launcher=False):
+    """Turn {#code} into a visible, linkable refcode badge; embed the bundled SVG for f-codes.
+    launcher=True (the HTML textbook) also attaches the tutor-launcher prompt to each badge."""
     out = []
     for ln in text.split("\n"):
         fcodes = [c for c in ANCHOR_RE.findall(ln)
                   if FCODE_RE.match(c) and os.path.exists(os.path.join(FIG_DIR, c + ".svg"))]
-        ln = ANCHOR_RE.sub(
-            lambda m: f'<a class="refcode" id="{m.group(1)}" href="#{m.group(1)}">{m.group(1)}</a>', ln)
+        ln = ANCHOR_RE.sub(lambda m: _refcode_badge(m.group(1), launcher), ln)
         out.append(ln)
         for c in fcodes:
             svg = open(os.path.join(FIG_DIR, c + ".svg"), encoding="utf-8").read().strip()
@@ -240,10 +291,10 @@ _DIVIDER = ('<div class="ldiv" aria-hidden="true"><i></i>'
             '<path d="M12 3.5 20.5 12 12 20.5 3.5 12Z"/></svg><i></i></div>')
 
 
-def md_to_body(text):
+def md_to_body(text, launcher=False):
     text, math = _protect_math(text)
     text = _id_worked_practice(text)
-    text = _convert_anchors(text)
+    text = _convert_anchors(text, launcher)
     text = _space_subheads(text)
     text = _blockify(text)
     text = _ensure_list_blank_lines(text)
@@ -327,6 +378,85 @@ def _pagenav(prev_link, next_link):
     return "\n".join(parts)
 
 
+# delegated controller for the reference-code tutor launcher (textbook pages only). Vanilla JS,
+# no deps; event-delegated so it covers every .refcode badge; a position:fixed tooltip escapes the
+# overflow:hidden on .worked/.answers cards. Plain string (not f-string) so its braces stay literal.
+_REFCODE_JS = """
+(function () {
+  var tip = document.getElementById("rc-tip"), toast = document.getElementById("rc-toast");
+  if (!tip || !toast) return;
+  var toastT = 0, active = null;
+  function hideTip() {
+    tip.classList.remove("show"); tip.setAttribute("aria-hidden", "true");
+    if (active) { active.removeAttribute("aria-describedby"); active = null; }
+  }
+  function showTip(a) {
+    var p = a.getAttribute("data-prompt"); if (!p) return;
+    tip.textContent = "";
+    var h = document.createElement("span"); h.className = "rc-tip-h";
+    h.textContent = "Tutor prompt (click the code to copy):";
+    var q = document.createElement("span"); q.className = "rc-tip-q"; q.textContent = p;
+    tip.appendChild(h); tip.appendChild(q);
+    tip.setAttribute("aria-hidden", "false"); tip.classList.add("show");
+    if (active && active !== a) active.removeAttribute("aria-describedby");
+    active = a; a.setAttribute("aria-describedby", "rc-tip");  // expose the prompt text to screen readers
+    var r = a.getBoundingClientRect(), t = tip.getBoundingClientRect();
+    var top = r.top - t.height - 8;
+    if (top < 8) {                                  // no room above: place below, then clamp to the viewport
+      top = r.bottom + 8;
+      if (top + t.height > window.innerHeight - 8) top = Math.max(8, window.innerHeight - t.height - 8);
+    }
+    var left = Math.max(8, Math.min(r.left + r.width / 2 - t.width / 2, window.innerWidth - t.width - 8));
+    tip.style.top = top + "px"; tip.style.left = left + "px";
+  }
+  function showToast(msg) {
+    toast.textContent = msg; toast.classList.add("show"); toast.setAttribute("aria-hidden", "false");
+    if (toastT) clearTimeout(toastT);
+    toastT = setTimeout(function () {
+      toast.classList.remove("show"); toast.setAttribute("aria-hidden", "true");
+    }, 2600);
+  }
+  function fallbackCopy(text, ok) {
+    try {
+      var ta = document.createElement("textarea"); ta.value = text;
+      ta.style.position = "fixed"; ta.style.top = "-1000px"; ta.style.opacity = "0";
+      document.body.appendChild(ta); ta.focus(); ta.select();
+      var done = document.execCommand("copy"); document.body.removeChild(ta);
+      if (done) { ok(); } else { showToast("Select the prompt above and copy it."); }
+    } catch (e) { showToast("Select the prompt above and copy it."); }
+  }
+  function copyText(text, ok) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(ok, function () { fallbackCopy(text, ok); });
+    } else { fallbackCopy(text, ok); }
+  }
+  document.addEventListener("pointerover", function (e) {
+    var a = e.target.closest && e.target.closest(".refcode"); if (a) showTip(a);
+  });
+  document.addEventListener("pointerout", function (e) {
+    var a = e.target.closest && e.target.closest(".refcode");
+    if (a && !a.contains(e.relatedTarget)) hideTip();
+  });
+  document.addEventListener("focusin", function (e) {
+    var a = e.target.closest && e.target.closest(".refcode"); if (a) showTip(a);
+  });
+  document.addEventListener("focusout", function (e) {
+    if (e.target.closest && e.target.closest(".refcode")) hideTip();
+  });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") hideTip(); });
+  window.addEventListener("scroll", hideTip, true);
+  window.addEventListener("resize", hideTip);
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest && e.target.closest(".refcode"); if (!a) return;
+    e.preventDefault();
+    copyText(a.getAttribute("data-prompt") || a.textContent, function () {
+      showToast("Copied. Paste it into Claude to start.");
+    });
+  });
+})();
+"""
+
+
 # --- HTML template ------------------------------------------------------------------------------
 def _lesson_page(title, body, model, cur, prev_link=None, next_link=None, *, subtitle="",
                  surface="textbook", hero=None, kicker=""):
@@ -372,6 +502,8 @@ def _lesson_page(title, body, model, cur, prev_link=None, next_link=None, *, sub
 <footer><p>A friendly Algebra 1 textbook, made to be read alongside the Claude tutor. Math by KaTeX.</p></footer>
 </div>
 </div>
+<div id="rc-tip" role="tooltip" aria-hidden="true"></div>
+<div id="rc-toast" role="status" aria-live="polite" aria-hidden="true"></div>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@{KATEX}/dist/katex.min.js" crossorigin="anonymous"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@{KATEX}/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
 <script>
@@ -391,6 +523,7 @@ document.addEventListener("DOMContentLoaded", function () {{
   if (sn) sn.addEventListener("click", function (e) {{ if (e.target.closest("a")) body.classList.remove("nav-open"); }});
 }});
 </script>
+<script>{_REFCODE_JS}</script>
 </body>
 </html>
 """
@@ -708,6 +841,28 @@ section.ug h3{margin:.1rem 0 .4rem} section.ug :last-child{margin-bottom:0}
   .answers[open] .ak-body, details > *{display:revert} details{display:block} .answers summary{display:none}
   .worked,.practice li,figure.fig,blockquote,ul.units li{break-inside:avoid; box-shadow:none}
 }
+
+/* ---- reference-code tutor launcher (textbook surface only) ---- */
+body[data-surface="textbook"] .refcode{cursor:copy}
+body[data-surface="textbook"] #rc-tip{position:fixed; z-index:80; max-width:min(92vw,30rem); margin:0;
+  padding:.6rem .8rem; background:var(--card); color:var(--ink); border:1px solid var(--rule);
+  border-radius:var(--radius-sm); box-shadow:var(--shadow);
+  font:var(--step--1)/1.5 "Source Serif 4",var(--serif-math),Georgia,serif;
+  opacity:0; visibility:hidden; pointer-events:none}
+body[data-surface="textbook"] #rc-tip.show{opacity:1; visibility:visible}
+body[data-surface="textbook"] #rc-tip .rc-tip-h{display:block; font-weight:600; font-size:.82em;
+  letter-spacing:.01em; color:var(--ink-soft); margin-bottom:.25rem}
+body[data-surface="textbook"] #rc-tip .rc-tip-q{display:block; color:var(--ink)}
+body[data-surface="textbook"] #rc-toast{position:fixed; left:50%; bottom:1.4rem; transform:translateX(-50%);
+  z-index:90; background:var(--ink); color:var(--paper); border-radius:999px; padding:.55rem 1.1rem;
+  font:var(--step--1)/1.3 "Source Serif 4",Georgia,serif; box-shadow:var(--shadow);
+  opacity:0; visibility:hidden; pointer-events:none; max-width:92vw}
+body[data-surface="textbook"] #rc-toast.show{opacity:1; visibility:visible}
+@media (prefers-reduced-motion:no-preference){
+  body[data-surface="textbook"] #rc-tip{transition:opacity .12s ease}
+  body[data-surface="textbook"] #rc-toast{transition:opacity .18s ease, transform .18s ease}
+  body[data-surface="textbook"] #rc-toast.show{transform:translateX(-50%) translateY(-2px)}
+}
 """
 
 
@@ -732,7 +887,7 @@ def _index_html(ssot, model):
 
 def _intro_page(model, next_link):
     md = open(os.path.join(TEXTBOOK_SRC, "how-to-use.md"), encoding="utf-8").read()
-    body = _strip_lead(md_to_body(md), "h1")
+    body = _strip_lead(md_to_body(md, launcher=True), "h1")
     return _lesson_page("How to use this book", body, model, "how-to-use.html",
                         ("index.html", "All units"), next_link, kicker="Start here")
 
@@ -771,7 +926,7 @@ def build_site(ssot):
         ov = _overview_fname(u.id)
         kicker = "Appendix" if str(u.id) == "A" else f"Unit {u.id}"
         # overview page: hero + unit intro + a list of its lessons
-        intro_html = _strip_lead(md_to_body(intro), "h1")
+        intro_html = _strip_lead(md_to_body(intro, launcher=True), "h1")
         ll = ['<nav class="lesson-list" aria-label="Lessons in this unit"><ol>']
         for lid, lt, _c in lessons:
             ll.append(f'<li><a href="{_lesson_fname(lid)}"><b>Lesson {lid}</b>{_html.escape(lt)}</a></li>')
@@ -783,7 +938,7 @@ def build_site(ssot):
         # one page per lesson
         for lid, lt, chunk in lessons:
             fn = _lesson_fname(lid)
-            lbody = _strip_lead(md_to_body(chunk), "h2")
+            lbody = _strip_lead(md_to_body(chunk, launcher=True), "h2")
             pl2, nl2 = around(fn)
             files[fn] = _lesson_page(lt, lbody, model, fn, pl2, nl2, kicker=f"{kicker} · Lesson {lid}")
     return files
