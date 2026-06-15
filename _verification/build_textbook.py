@@ -291,10 +291,213 @@ _DIVIDER = ('<div class="ldiv" aria-hidden="true"><i></i>'
             '<path d="M12 3.5 20.5 12 12 20.5 3.5 12Z"/></svg><i></i></div>')
 
 
+# --- per-question answer reveal: pair each practice problem with its own revealable answer -------
+_PSUB_RE = re.compile(r'^\*[^*].*?\*$')   # a whole-line *italic sub-head* (single asterisks)
+
+
+def _md_inline(s):
+    """Render a short markdown fragment (a practice problem or an answer) to inline HTML. Core
+    markdown only (no toc/md_in_html) for deterministic, dependency-light output; strip the single
+    wrapping <p>. Inline raw HTML (refcode badges) and math sentinels pass through unchanged."""
+    h = mdlib.markdown(s.strip(), output_format="html5").strip()
+    if h.startswith("<p>") and h.endswith("</p>"):
+        h = h[3:-4]
+    return h.replace(' markdown="1"', '')
+
+
+def _split_practice_block(body):
+    """-> ordered list of ('sub', text) and ('prob', int, text). Problems may be packed several per
+    line and/or span continuation lines; sub-heads sit on their own italic lines. Monotonic problem
+    numbering tolerates gaps and ignores stray 'N.' inside problem text."""
+    segments, buf = [], []
+    for raw in body.splitlines():
+        st = raw.strip()
+        if not st:
+            continue
+        if _PSUB_RE.match(st) and not st.startswith("**"):
+            if buf:
+                segments.append(("content", " ".join(buf))); buf = []
+            segments.append(("sub", st.strip("*").strip()))
+        else:
+            buf.append(st)
+    if buf:
+        segments.append(("content", " ".join(buf)))
+
+    items, last = [], -1
+    for kind, text in segments:
+        if kind == "sub":
+            items.append(("sub", text)); continue
+        marks = []
+        for m in re.finditer(r'(?:(?<=\s)|^)(\d+)\.\s', text):   # marker must start a token
+            num = int(m.group(1))
+            if num > last:
+                marks.append((m.start(), m.end(), num)); last = num
+        for i, (_st, en, num) in enumerate(marks):
+            stop = marks[i + 1][0] if i + 1 < len(marks) else len(text)
+            items.append(("prob", num, text[en:stop].strip()))
+    return items
+
+
+def _render_practice(items, instr=""):
+    """Render converted practice items (each 'prob' carrying its paired answer) to raw HTML. Inner
+    problem/answer markdown is rendered up front via _md_inline (no md_in_html nesting). `instr` is
+    the header's instructional remainder (e.g. '(solve by graphing …)'), kept as an intro line."""
+    out = ['<section class="practice">',
+           f'<span class="eyebrow">{_ICONS.get("practice", "")}Practice</span>']
+    if instr:
+        out.append(f'<p class="practice-intro">{_md_inline(instr)}</p>')
+    for it in items:
+        if it[0] == "sub":
+            out.append(f'<p class="practice-sub">{_md_inline(it[1])}</p>')
+        else:
+            _, num, ptext, ans = it
+            out.append(
+                f'<div class="prow">'
+                f'<span class="prob"><span class="pnum">{num}.</span> {_md_inline(ptext)}</span>'
+                f'<details class="qcheck"><summary>'
+                f'<span class="qc-label">Reveal answer</span>'
+                f'<span class="vh"> to problem {num}</span></summary>'
+                f'<span class="qa">{_md_inline(ans)}</span></details></div>')
+    out.append("</section>")
+    return "\n".join(out)
+
+
+_PRAC_HDR = re.compile(r'^\*\*Practice problems?\b')   # broader than _blockify's colon-only label:
+_ANS_HDR = re.compile(r'^\*\*Answer key\b')             # also matches '… (instruction):**' / '… **(note)'
+
+
+def _hdr_kind(line):
+    """Broad practice/answer header detection for pairing (independent of _blockify's strict
+    _LABELS, which requires a colon *inside* the bold). Returns 'practice' | 'answers' | None."""
+    if _PRAC_HDR.match(line):
+        return "practice"
+    if _ANS_HDR.match(line):
+        return "answers"
+    return None
+
+
+def _practice_instr(header_line):
+    """The instructional remainder of a practice header, e.g. '**Practice problems** (solve by
+    graphing …):' -> '(solve by graphing …)'. Empty for a plain '**Practice problems:**'."""
+    t = header_line.replace("**", " ")
+    t = re.sub(r'^\s*Practice problems?\b', '', t).strip()
+    return re.sub(r'\s+', ' ', t.lstrip(":").strip())
+
+
+def _scan_pa_blocks(lines):
+    """Yield (kind, start, end, instr, inner_text) for every Practice/Answer-key block. Fence-aware;
+    a block runs until the next practice/answer header, any other _LABELS label, or a heading/divider
+    stop. For practice, `inner_text` is the following problem lines only (the header's instructional
+    remainder is returned separately as `instr`); for answers, it includes any text after the bold."""
+    i, n, infence = 0, len(lines), False
+    while i < n:
+        ln = lines[i]
+        if ln.lstrip().startswith("```"):
+            infence = not infence; i += 1; continue
+        if infence:
+            i += 1; continue
+        k = _hdr_kind(ln)
+        if not k:
+            i += 1; continue
+        after = ln.split("**", 2)
+        after = after[2] if len(after) > 2 else ""
+        body = [after] if (k == "answers" and after.strip()) else []
+        j, f2 = i + 1, False
+        while j < n:
+            l2 = lines[j]
+            if l2.lstrip().startswith("```"):
+                f2 = not f2; body.append(l2); j += 1; continue
+            if not f2 and (_hdr_kind(l2) or _match_label(l2) or _STOP_RE.match(l2)):
+                break
+            body.append(l2); j += 1
+        yield k, i, j, (_practice_instr(ln) if k == "practice" else ""), "\n".join(body).strip("\n")
+        i = j
+
+
+def _answers_for(key_text, nums):
+    """Extract answers for the ordered problem numbers `nums` by locating each number's marker
+    ('<n>)' or '<n>.', token-start) in sequence, advancing through the text. Anchoring to the
+    expected number (rather than scanning for 'any' marker) makes it immune to ')'/'.' inside answer
+    values — ordered pairs '(2, 3)', factorisations '5(x+3)', notes '… +1)'. Returns {n: answer} or
+    None if some number's marker is not found in order."""
+    s = " ".join(ln.strip() for ln in key_text.splitlines()).strip()
+    s = re.sub(r'^\*\([^)]*\)\*\s*', '', s)
+    spans, pos = [], 0
+    for n in nums:
+        m = re.compile(r'(?:(?<=\s)|^)%d[).]\s' % n).search(s, pos)
+        if not m:
+            return None
+        spans.append((n, m.start(), m.end())); pos = m.end()
+    out = {}
+    for i, (n, _st, en) in enumerate(spans):
+        stop = spans[i + 1][1] if i + 1 < len(spans) else len(s)
+        out[n] = s[en:stop].strip().rstrip(",;").strip()
+    return out
+
+
+def _key_numbers(key_text, universe):
+    """Which of `universe` (the lesson's actual problem numbers) this answer block contains markers
+    for. Used only to decide whether a key is fully consumed and can be dropped; restricting to the
+    real problem numbers keeps a residual key (answers to non-practice prompts) from being dropped."""
+    s = " ".join(ln.strip() for ln in key_text.splitlines())
+    return {n for n in universe if re.search(r'(?:(?<=\s)|^)%d[).]\s' % n, s)}
+
+
+def _pair_practice_answers(text):
+    """Convert each pairable Practice+Answer-key set in a lesson chunk to per-problem reveals and
+    delete the consumed answer key(s). A set converts only if every shown problem number has a
+    matching answer (anchored parse); otherwise it is left untouched for _blockify (graceful
+    fallback). Each set draws answers from the key block(s) that follow it (before the next set)."""
+    lines = text.split("\n")
+    blocks = list(_scan_pa_blocks(lines))
+    practices = sorted(([s, e, instr, _split_practice_block(inner)]
+                        for k, s, e, instr, inner in blocks if k == "practice"), key=lambda p: p[0])
+    answers = [(s, e, inner) for k, s, e, _instr, inner in blocks if k == "answers"]
+    if not practices or not answers:
+        return text
+
+    universe = set()
+    for _s, _e, _instr, items in practices:
+        universe |= {it[1] for it in items if it[0] == "prob"}
+    pstarts = [p[0] for p in practices]
+
+    edits, consumed = [], set()
+    for idx, (ps, pe, instr, items) in enumerate(practices):
+        nums = [it[1] for it in items if it[0] == "prob"]
+        nxt = pstarts[idx + 1] if idx + 1 < len(pstarts) else len(lines) + 1
+        ktext = "\n".join(inner for as_, _ae, inner in answers if ps < as_ < nxt)
+        if len(nums) < 2:
+            continue
+        amap = _answers_for(ktext, nums)
+        if amap is None:
+            continue
+        paired = [it if it[0] == "sub" else ("prob", it[1], it[2], amap[it[1]]) for it in items]
+        edits.append((ps, pe, ["", _render_practice(paired, instr), ""]))
+        consumed |= set(nums)
+
+    if not edits:
+        return text
+    for as_, ae, inner in answers:
+        provides = _key_numbers(inner, universe)
+        if provides and provides <= consumed:
+            edits.append((as_, ae, None))
+
+    edits.sort(key=lambda t: t[0])
+    out, prev = [], 0
+    for s, e, repl in edits:
+        out.extend(lines[prev:s])
+        if repl:
+            out.extend(repl)
+        prev = e
+    out.extend(lines[prev:])
+    return "\n".join(out)
+
+
 def md_to_body(text, launcher=False):
     text, math = _protect_math(text)
     text = _id_worked_practice(text)
     text = _convert_anchors(text, launcher)
+    text = _pair_practice_answers(text)
     text = _space_subheads(text)
     text = _blockify(text)
     text = _ensure_list_blank_lines(text)
@@ -759,6 +962,28 @@ html.dark .hero-art{filter:brightness(.9) saturate(.92)}
 .answers summary .eyebrow{color:var(--leaf); margin:0}
 .answers .hint{color:var(--ink-soft); font-size:var(--step--1)} .answers[open] .hint{display:none}
 .answers .ak-body{padding:.1rem 1.4rem 1.1rem; overflow-wrap:break-word} .answers .ak-body > :last-child{margin-bottom:0}
+
+/* ---- per-question answer reveal (textbook practice) ---- */
+.vh{position:absolute!important; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden;
+  clip:rect(0 0 0 0); white-space:nowrap; border:0}
+.practice-intro{color:var(--ink-soft); font-size:var(--step--1); margin:.2rem 0 .7rem}
+.practice-sub{font-weight:600; font-size:var(--step--1); color:var(--ink-soft); margin:1.3rem 0 .5rem}
+.prow{display:flex; gap:.5rem .9rem; align-items:baseline; flex-wrap:wrap; background:var(--card);
+  border:1px solid var(--rule); border-radius:var(--radius); padding:.7rem .9rem; margin:.6rem 0}
+.prow .prob{flex:1 1 60%; min-width:0; overflow-wrap:break-word}
+.prow .pnum{color:var(--ink-soft); margin-right:.3rem}
+.prow .katex{white-space:normal} .prow .katex-display{overflow-x:auto; margin:.3rem 0}
+.qcheck{margin-left:auto; flex:0 0 auto}
+.qcheck > summary{cursor:pointer; list-style:none; display:inline-flex; align-items:center}
+.qcheck > summary::-webkit-details-marker{display:none}
+.qcheck .qc-label{font-size:var(--step--1); font-weight:600; color:var(--leaf);
+  border:1px solid var(--leaf); border-radius:999px; padding:.28rem .7rem; background:var(--tint-leaf, transparent)}
+.qcheck[open] .qc-label{color:var(--ink-soft); border-color:var(--rule)}
+.qcheck .qa{align-items:center; gap:.4rem; margin-left:.55rem; font-weight:600; color:var(--leaf)}
+.qcheck .qa::before{content:"\2713"; font-weight:700}
+.qcheck:not([open]) .qa{display:none} .qcheck[open] .qa{display:inline-flex}
+@media (prefers-reduced-motion:no-preference){ .prow{transition:border-color .15s ease} }
+@media print{ .qcheck .qa{display:inline-flex} .qcheck > summary{display:none} }
 
 /* ---- prev / next page nav ---- */
 .pagenav{display:flex; gap:1rem; justify-content:space-between; align-items:stretch;
