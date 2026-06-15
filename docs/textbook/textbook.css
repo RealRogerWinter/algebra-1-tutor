@@ -32,7 +32,7 @@ html.dark body[data-surface="guide"]{--paper:#141a20; --card:#1c232b; --card-2:#
 html.dark body[data-surface="tutor"]{--paper:#1b1a16; --card:#24221c; --card-2:#1f1d18;}
 
 *{box-sizing:border-box}
-html{font-size:112.5%}
+html{font-size:112.5%; overflow-x:clip}   /* durable guard: a too-wide block can never scroll the page sideways */
 body{margin:0; background:var(--paper); color:var(--ink);
   font:var(--step-0)/var(--lh) "Source Serif 4",var(--serif-math),Georgia,serif;
   -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility; text-wrap:pretty;}
@@ -186,7 +186,7 @@ html.dark .hero-art{filter:brightness(.9) saturate(.92)}
 .prow{display:flex; gap:.5rem .9rem; align-items:baseline; flex-wrap:wrap; background:var(--card);
   border:1px solid var(--rule); border-radius:var(--radius); padding:.7rem .9rem; margin:.6rem 0}
 .prow .prob{flex:1 1 60%; min-width:0; overflow-wrap:break-word}
-.prow .pnum{color:var(--ink-soft); margin-right:.3rem}
+.prow .pnum{color:var(--ink-soft); margin-right:.3rem}   /* shown only on rows without a refcode badge */
 .prow .katex{white-space:normal} .prow .katex-display{overflow-x:auto; margin:.3rem 0}
 .qcheck{margin-left:auto; flex:0 0 auto}
 .qcheck > summary{cursor:pointer; list-style:none; display:inline-flex; align-items:center}
@@ -275,7 +275,7 @@ section.ug h3{margin:.1rem 0 .4rem} section.ug :last-child{margin-bottom:0}
 
 /* ---- mobile: the rail slides in over the page ---- */
 @media (max-width:62rem){
-  .shell{grid-template-columns:1fr}
+  .shell{grid-template-columns:minmax(0,1fr)}
   .menu{display:inline-flex; order:-1}
   .sidenav{position:fixed; top:0; left:0; height:100dvh; width:17rem; max-height:none; z-index:60;
     transform:translateX(-100%); transition:transform .2s ease; box-shadow:0 0 40px rgba(0,0,0,.3)}
@@ -292,6 +292,7 @@ section.ug h3{margin:.1rem 0 .4rem} section.ug :last-child{margin-bottom:0}
 
 /* ---- print (courtesy) ---- */
 @media print{
+  html{overflow-x:visible}   /* reset the screen-only clip guard so paged media can't drop content */
   .topbar,.sidenav,.pagenav{display:none} .shell{display:block} a{color:inherit; text-decoration:none}
   body,figure.fig{background-image:none}
   .answers[open] .ak-body, details > *{display:revert} details{display:block} .answers summary{display:none}
