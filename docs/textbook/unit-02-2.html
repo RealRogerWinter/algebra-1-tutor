@@ -153,14 +153,6 @@
 
 <p>Building 2x + 3 from x works the same way: you multiply by 2 (the sock), then add 3 (the shoe). So to get back to x, undo the last thing first. Take off the shoe by subtracting 3, then take off the sock by dividing by 2. That's why you strip away the +3 before you touch the ×2: it's the outermost layer.</p>
 <figure class="fig viz" id="fig-2.2.f1"><figure style="margin:0"><svg viewBox="0 0 480 118" xmlns="http://www.w3.org/2000/svg" width="100%" font-family="inherit" stroke-linecap="round" stroke-linejoin="round"><rect x="24" y="18" width="151.27" height="56" rx="10" ry="10" fill="#eaf2f8" stroke="#2980b9" stroke-width="2.5"/><text x="99.64" y="46.0" font-size="18" font-weight="600" fill="#2980b9" text-anchor="middle" dominant-baseline="central">x</text><rect x="183.27" y="18" width="151.27" height="56" rx="10" ry="10" fill="#eaf2f8" stroke="#2980b9" stroke-width="2.5"/><text x="258.91" y="46.0" font-size="18" font-weight="600" fill="#2980b9" text-anchor="middle" dominant-baseline="central">x</text><rect x="342.55" y="18" width="113.45" height="56" rx="10" ry="10" fill="#f9ebe9" stroke="#c0392b" stroke-width="2.5"/><text x="399.27" y="46.0" font-size="18" font-weight="600" fill="#c0392b" text-anchor="middle" dominant-baseline="central">3</text><path d="M 24 78 Q 24 88 132.0 88 T 240.0 93 M 456.0 78 Q 456.0 88 348.0 88 T 240.0 93" fill="none" stroke="#888" stroke-width="2"/><text x="240.0" y="112" font-size="15" fill="#888" text-anchor="middle">= 11</text></svg><figcaption style="margin-top:.4rem;color:var(--ink-soft)">Take away the 3, then split what is left between the two x-blocks: $$2x + 3 = 11 \;\Rightarrow\; 2x = 8 \;\Rightarrow\; x = 4.$$</figcaption></figure><figcaption><b>Figure 2.2.f1</b> &mdash; Two-step equation 2x + 3 = 11 gives x = 4</figcaption></figure>
-<p>Here's that in symbols, with the check built in, so you can see each layer come off:
-$$\begin{aligned}
-&amp;2x+3=11 \\
-&amp;\xrightarrow{\,-3\,}\; 2x=8 \\
-&amp;\xrightarrow{\,\div 2\,}\; x=4 \\
-&amp;\text{Check: } 2(4)+3=11
-\end{aligned}$$
-First subtract 3 from both sides; the +3 goes to zero and the equation reads 2x = 8. Now you're back to a one-step equation, the kind you've just been solving. Divide both sides by 2; the 2 in front goes to one and x = 4. Then check it in the original: 2(4) + 3 is 8 + 3, which is 11, matching the right side.</p>
 <figure class="fig viz" id="fig-2.2.f2">
 <style>
 .awe{

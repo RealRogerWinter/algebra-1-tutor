@@ -134,10 +134,6 @@ Building 2x + 3 from x works the same way: you multiply by 2 (the sock), then ad
 
 <!--viz:bar_models#2-->
 
-Here's that in symbols, with the check built in, so you can see each layer come off:
-$$2x+3=11 \;\xrightarrow{\,-3\,}\; 2x=8 \;\xrightarrow{\,\div 2\,}\; x=4 \qquad \text{Check: } 2(4)+3=11$$
-First subtract 3 from both sides; the +3 goes to zero and the equation reads 2x = 8. Now you're back to a one-step equation, the kind you've just been solving. Divide both sides by 2; the 2 in front goes to one and x = 4. Then check it in the original: 2(4) + 3 is 8 + 3, which is 11, matching the right side.
-
 <!--viz:annotated_examples#0-->
 
 Read each step and ask why it follows from the one above before you go on.
