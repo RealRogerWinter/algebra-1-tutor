@@ -155,6 +155,16 @@
 <p>You already do algebra in your head more often than you'd think. Algebra is just arithmetic with one new move: when a number is hidden, you let a letter stand in for it until you can work out what it is. That's the whole starting idea. The letter, often x, is a placeholder for a number you don't know yet, and the rest is the arithmetic you already do.</p>
 <p>Most real questions come with a hidden number in them. Three of you split a $54 dinner evenly, and you want each share: that's 3x = 54, and x is the share. You're doubling a recipe that calls for 3/4 cup of flour, and you want the new amount. You're driving 150 miles and want to know how long it takes at 50 miles an hour, or how much of your paycheck is left after rent. Each one is a relationship between quantities, with one piece unknown. Writing it with a letter lets you pin the unknown piece down instead of guessing.</p>
 <p>So algebra isn't a separate, harder kind of math sitting on top of arithmetic. It's a tool for answering questions you already care about, and it's a way of describing how quantities depend on each other so a pattern you've noticed can tell you what comes next. You learn it one small idea at a time, and each idea is a short step from the one before. If a page ever feels like too much at once, that's a sign to slow down, not a sign that this isn't for you. Plenty of capable adults meet algebra for the first time later on and do just fine, because every piece of it is built from arithmetic you already trust.</p>
+<h2 id="setting-up-the-tutor-in-claude">Setting up the tutor in Claude</h2>
+<p>The tutor is a free <strong>Claude skill</strong> — a small add-on that turns Claude into your Algebra 1 teacher, with this whole book already in front of it. You set it up once, and from then on Claude knows the lessons, the worked examples, and every practice problem by its code.</p>
+<p>The usual way is the Claude app or the website:</p>
+<ol>
+<li>Download <strong><a href="https://github.com/RealRogerWinter/algebra-1-tutor/raw/main/algebra-1-tutor.zip"><code>algebra-1-tutor.zip</code></a></strong> (the skill file).</li>
+<li>Open Claude — the <strong>desktop or mobile app</strong>, or <strong>claude.ai</strong> in a browser — and go to <strong>Settings</strong>. Turn on code execution under <strong>Capabilities</strong> (a recommended extra, not a requirement), then open <strong>Features</strong> and upload the <code>.zip</code> under <strong>Skills</strong>.</li>
+<li>Start a new chat and just say what you want. The tutor wakes up on its own whenever you ask about algebra, even if you never use the word.</li>
+</ol>
+<p>It works on the <strong>free plan</strong>. A larger model such as Opus tutors a little more sharply, but it isn't required, and the tutor checks its own arithmetic either way.</p>
+<p>(If you use <strong>Claude Code</strong>, the terminal tool for developers, you can install the same tutor with two commands — the <a href="https://github.com/RealRogerWinter/algebra-1-tutor#readme">project README</a> has them. There the graphs and notation don't render: math shows as raw text and figures as raw markup, so the app or website is the smoother place to learn.)</p>
 <h2 id="how-to-use-this-book-with-claude">How to use this book with Claude</h2>
 <figure class="illus"><img class="illus-art" src="../assets/illus-howto-using-claude.jpg" alt="An open book with a friendly speech bubble beside it, picturing reading along with a helpful companion tutor." loading="lazy"></figure>
 
@@ -168,6 +178,26 @@
 <li><strong>Get more practice.</strong> When a skill is almost solid and you want a few more to lock it in, ask for extra problems like the ones you just did.</li>
 <li><strong>Upload a photo of your handwritten work.</strong> Take a picture of what you wrote on paper and send it. Claude will read your steps, check them, and show you exactly where a line went sideways if one did.</li>
 </ul>
+<h3 id="a-walkthrough-getting-unstuck">A walkthrough: getting unstuck</h3>
+<p>Say you are working through Lesson 5.3 and practice problem <strong>5.3.4</strong> won't come out right — you keep getting a slope that doesn't match the key. Beside the problem in the online book is its short code, <code>5.3.4</code>. Copy it, open your tutor chat, and paste a short request:</p>
+<blockquote>
+<p><strong>You:</strong> Walk me through 5.3.4.</p>
+</blockquote>
+<p>Claude has the book in front of it, so it pulls up that exact problem — and starts where a good teacher would, with you:</p>
+<blockquote>
+<p><strong>Claude:</strong> Happy to. Before I show anything: what did you get, and where did it stop feeling right?</p>
+<p><strong>You:</strong> I found the slope but it came out positive, and the key says negative.</p>
+<p><strong>Claude:</strong> Let's check just that. Which two points did you use, and which one did you treat as the starting point?</p>
+</blockquote>
+<p>From there you go back and forth. You do the thinking; Claude nudges. When you spot the slip yourself — say you counted the run right-to-left, so the sign flipped — you fix it, and <em>that</em> is what makes it stick. If an explanation still doesn't land, say so: <em>"Can you show that a different way?"</em> and Claude reaches for another picture. When it finally clicks, ask for one more like it to be sure: <em>"Give me a similar one to try on my own."</em></p>
+<p>That is the whole rhythm: copy a code, ask, talk it through, then prove it to yourself.</p>
+<h3 id="or-let-claude-teach-the-whole-course">Or let Claude teach the whole course</h3>
+<p>You don't have to drive. If you would rather be taught, just say so:</p>
+<blockquote>
+<p><strong>You:</strong> I'd like to learn algebra from the beginning.</p>
+</blockquote>
+<p>Claude will start at Lesson 1.1 and take you through in order — explaining a little, then handing the work back to you, checking that an idea really landed before moving on, and meeting you where you are if you already know some of it. At a good stopping point, ask for a <strong>Progress Card</strong>: a short, readable note of where you are and what comes next. Paste it back at the start of your next chat and Claude picks up right where you left off, since each conversation otherwise begins fresh.</p>
+<p>Either way works, and you can switch between them — read on your own and call Claude in for the hard parts, or let it lead and read along. The book and the tutor are the same course, generated from one source, so they always agree.</p>
 <p>You don't need any of this to begin. Open the first lesson and start reading. Claude is there for the moments you want a hand, and asking for one is part of how this works, not a sign you're behind.</p>
 <nav class="pagenav" aria-label="Previous and next page">
 <a class="pn-prev" href="index.html"><span class="pn-dir">&larr;&nbsp;Back</span><span class="pn-title">All units</span></a>
