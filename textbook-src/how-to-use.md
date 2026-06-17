@@ -17,7 +17,7 @@ The tutor is a free **Claude skill** — a small add-on that turns Claude into y
 The usual way is the Claude app or the website:
 
 1. Download **[`algebra-1-tutor.zip`](https://github.com/RealRogerWinter/algebra-1-tutor/raw/main/algebra-1-tutor.zip)** (the skill file).
-2. Open Claude — the **desktop or mobile app**, or **claude.ai** in a browser — and go to **Settings**. Turn on code execution under **Capabilities** (a recommended extra, not a requirement), then open **Features** and upload the `.zip` under **Skills**.
+2. Open Claude — the **desktop or mobile app**, or **claude.ai** in a browser. Click **Customize** in the left menu, open **Skills**, click the **+** at the top, and choose **Create Skill → Upload a skill** to add the `.zip`.
 3. Start a new chat and just say what you want. The tutor wakes up on its own whenever you ask about algebra, even if you never use the word.
 
 It works on the **free plan**. A larger model such as Opus tutors a little more sharply, but it isn't required, and the tutor checks its own arithmetic either way.
@@ -42,7 +42,7 @@ A few things it's good for:
 
 ### A walkthrough: getting unstuck
 
-Say you are working through Lesson 5.3 and practice problem **5.3.4** won't come out right — you keep getting a slope that doesn't match the key. Beside the problem in the online book is its short code, `5.3.4`. Copy it, open your tutor chat, and paste a short request:
+Say you're working through Lesson 5.3 and practice problem **5.3.4** won't come out right — you keep getting a slope that doesn't match the key. Beside the problem in the online book is its short code, `5.3.4`. Copy it, open your tutor chat, and paste a short request:
 
 > **You:** Walk me through 5.3.4.
 
@@ -56,11 +56,11 @@ Claude has the book in front of it, so it pulls up that exact problem — and st
 
 From there you go back and forth. You do the thinking; Claude nudges. When you spot the slip yourself — say you counted the run right-to-left, so the sign flipped — you fix it, and *that* is what makes it stick. If an explanation still doesn't land, say so: *"Can you show that a different way?"* and Claude reaches for another picture. When it finally clicks, ask for one more like it to be sure: *"Give me a similar one to try on my own."*
 
-That is the whole rhythm: copy a code, ask, talk it through, then prove it to yourself.
+That's the whole rhythm: copy a code, ask, talk it through, then prove it to yourself.
 
 ### Or let Claude teach the whole course
 
-You don't have to drive. If you would rather be taught, just say so:
+You don't have to drive. If you'd rather be taught, just say so:
 
 > **You:** I'd like to learn algebra from the beginning.
 

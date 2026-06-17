@@ -6,15 +6,15 @@ A complete, self-paced **Algebra 1 course** for an adult who knows arithmetic an
 
 **[Download `algebra-1-tutor.zip`](https://github.com/RealRogerWinter/algebra-1-tutor/raw/main/algebra-1-tutor.zip)** — then, in the **Claude desktop or mobile app** or at **[claude.ai](https://claude.ai)**:
 
-1. Open **Settings → Capabilities** and turn on code execution (recommended, not required).
-2. Open **Settings → Features** and upload the `.zip` under **Skills**.
+1. Click **Customize** in the left menu, then open **Skills**.
+2. Click the **+** at the top, choose **Create Skill → Upload a skill**, and select the `.zip`.
 3. Start a chat and say what you want:
    - *"I'd like to learn algebra from the beginning."*
    - *"Help me with slope and y = mx + b — I have a test Friday."*
    - *"Walk me through 5.3.4."* — every item in the textbook has a short code you can quote.
    - Paste a **Progress Card** to resume a previous session.
 
-**It works on the free plan** (today backed by Sonnet 4.6). Larger models such as Opus tutor a little more sharply but aren't required. Code execution is a recommended enhancement, not a hard requirement: with it the tutor runs `sympy` to check answers and compute graphs; without it the tutor falls back to careful written-out substitution. The skill triggers on algebra topics even when you don't say "algebra" — "solve for x", "factor this", "what's a function".
+**It works on the free plan** (today backed by Sonnet 4.6). Larger models such as Opus tutor a little more sharply but aren't required. Code execution is recommended but optional: with it the tutor runs `sympy` to check answers and compute graphs; without it the tutor falls back to careful written-out substitution. The skill triggers on algebra topics even when you don't say "algebra" — "solve for x", "factor this", "what's a function".
 
 ### Using Claude Code?
 

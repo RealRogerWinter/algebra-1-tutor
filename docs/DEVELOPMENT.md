@@ -54,7 +54,7 @@ docker run --rm -v "$PWD":/work -w /work cimg/python:3.11 \
   bash -lc "pip install -q -r requirements.txt && python _verification/build_all.py --check"
 ```
 
-`build_skill.py` writes the `.zip` deterministically (it's the committed, installable package). Re-upload it via **Settings → Features** on Claude.ai to replace the previous version. Keep `SKILL.md` lean (push detail into reference files), the `description` under 1024 characters, and the `name` lowercase-hyphen with no "claude" or "anthropic".
+`build_skill.py` writes the `.zip` deterministically (it's the committed, installable package). Re-upload it on Claude.ai or the Claude app (**Customize → Skills → +**, then **Create Skill → Upload a skill**) to replace the previous version. Keep `SKILL.md` lean (push detail into reference files), the `description` under 1024 characters, and the `name` lowercase-hyphen with no "claude" or "anthropic".
 
 ## Run the full gate locally
 
