@@ -1,37 +1,37 @@
 # Algebra 1 Tutor
 
-A complete, self-paced **Algebra 1 course** for an adult who knows arithmetic and is meeting the rest of algebra for the first time. It comes in two forms that share one machine-verified source:
+A complete, self-paced **Algebra 1 course** for an adult who knows arithmetic and is meeting the rest of algebra for the first time. It comes as a patient **tutor you install into Claude** — a one-on-one teacher that works problems with you, diagnoses *why* a wrong answer went wrong, checks every answer, and draws the graphs — and as a free **browser textbook** you can read with no account. Both are built from one machine-verified source.
 
-1. **A textbook you read in your browser** — free, no account, no install.
-2. **An interactive tutor you install into Claude** — a patient one-on-one teacher that works problems with you, diagnoses *why* a wrong answer went wrong, and draws the graphs.
+## Install the tutor in Claude
 
-**Read the textbook online: <https://realrogerwinter.github.io/algebra-1-tutor/>**
+**[Download `algebra-1-tutor.zip`](https://github.com/RealRogerWinter/algebra-1-tutor/raw/main/algebra-1-tutor.zip)** — then, in the **Claude desktop or mobile app** or at **[claude.ai](https://claude.ai)**:
 
-Every answer in the course is checked with `sympy`, and the whole thing is generated from a single source of truth, so the textbook, the tutor, and the practice sets always agree.
-
----
-
-## Two ways to use it
-
-### 1. Read the textbook (no account needed)
-
-The full course is a website: **<https://realrogerwinter.github.io/algebra-1-tutor/>**. Worked examples to study, practice with per-question answers you can reveal, computed graphs, and a short reference code beside each item so you can point a tutor at one exact thing. It also includes a **student guide** (how to learn with the course) and a **tutor guide** (extra parallel-form practice).
-
-### 2. Install the interactive tutor in Claude
-
-The tutor is an uploadable [Agent Skill](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview) for **Claude.ai** and the **Claude desktop and mobile apps**.
-
-1. Download **`algebra-1-tutor.zip`** from this repo.
-2. In Claude: **Settings → Capabilities** and turn on code execution (recommended), then **Settings → Features** and upload the `.zip` under Skills.
-3. Start a chat — for example:
+1. Open **Settings → Capabilities** and turn on code execution (recommended, not required).
+2. Open **Settings → Features** and upload the `.zip` under **Skills**.
+3. Start a chat and say what you want:
    - *"I'd like to learn algebra from the beginning."*
-   - *"Help me with slope and y = mx + b, I have a test Friday."*
-   - *"Solve 8 − 2x = 14 with me."*
+   - *"Help me with slope and y = mx + b — I have a test Friday."*
+   - *"Walk me through 5.3.4."* — every item in the textbook has a short code you can quote.
    - Paste a **Progress Card** to resume a previous session.
 
-**It works on the free plan.** The skill runs on the free tier of Claude (today backed by Sonnet 4.6). Larger models such as Opus tend to tutor better — sharper diagnosis, clearer explanation — but they are not required. Code execution is a recommended enhancement, not a hard requirement: when it is available the tutor runs `sympy` to check answers and compute graphs; when it is not, `SKILL.md` tells the tutor to verify by careful, written-out substitution instead, so it degrades gracefully.
+**It works on the free plan** (today backed by Sonnet 4.6). Larger models such as Opus tutor a little more sharply but aren't required. Code execution is a recommended enhancement, not a hard requirement: with it the tutor runs `sympy` to check answers and compute graphs; without it the tutor falls back to careful written-out substitution. The skill triggers on algebra topics even when you don't say "algebra" — "solve for x", "factor this", "what's a function".
 
-The skill triggers on algebra topics even when you don't say "algebra" (for example "solve for x", "factor this", "what's a function").
+### Using Claude Code?
+
+Install the same tutor from the terminal:
+
+```
+/plugin marketplace add RealRogerWinter/algebra-1-tutor
+/plugin install algebra-1-tutor@algebra-1-tutor
+```
+
+The tutoring works the same, but graphs and `$$…$$` notation don't render in a terminal: math shows as raw text and figures as raw SVG markup, so the app or website is the smoother place to learn. New to skills? The [how-to-use guide](https://realrogerwinter.github.io/algebra-1-tutor/textbook/how-to-use.html) walks through setup and a first session.
+
+### Prefer to just read?
+
+The whole course is a free website — no account, no install: **<https://realrogerwinter.github.io/algebra-1-tutor/>**. Worked examples to study, practice with per-question answers you can reveal, computed graphs, and a short reference code beside each item so you can point the tutor at one exact thing. It also includes a **student guide** (how to learn with the course) and a **tutor guide** (extra parallel-form practice).
+
+Every answer in the course is checked with `sympy`, and the whole thing is generated from a single source of truth, so the textbook, the tutor, and the practice sets always agree.
 
 ---
 
@@ -82,6 +82,7 @@ See [docs/DEVELOPMENT.md](docs/DEVELOPMENT.md) to edit, re-verify, and repackage
 
 ```
 .
+├── .claude-plugin/marketplace.json  # Claude Code plugin marketplace (enables /plugin install)
 ├── curriculum.yaml             # Source of truth: units, lessons, prerequisites
 ├── algebra-1-tutor/            # The skill that gets packaged & uploaded (CC BY-NC)
 │   ├── SKILL.md                #   Operating manual: persona, pedagogy, verification, notation

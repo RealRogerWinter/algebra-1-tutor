@@ -1,0 +1,8 @@
+{
+  "name": "algebra-1-tutor",
+  "description": "A patient one-on-one Algebra 1 tutor — works problems with you, diagnoses why a wrong answer went wrong, checks every answer, and can teach the whole course from the beginning.",
+  "version": "1.0.0",
+  "author": {
+    "name": "RealRogerWinter"
+  }
+}

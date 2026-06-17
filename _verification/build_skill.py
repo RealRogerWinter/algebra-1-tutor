@@ -15,7 +15,9 @@ REPO_ROOT = os.path.dirname(HERE)
 SKILL_DIR = os.path.join(REPO_ROOT, "algebra-1-tutor")
 SKILL_FILE = os.path.join(REPO_ROOT, "algebra-1-tutor.skill")
 ZIP_FILE = os.path.join(REPO_ROOT, "algebra-1-tutor.zip")
-EXCLUDE = ("__pycache__", ".DS_Store", "Thumbs.db")
+EXCLUDE = ("__pycache__", ".DS_Store", "Thumbs.db", ".claude-plugin")  # .claude-plugin = Claude Code
+# plugin manifest (algebra-1-tutor/.claude-plugin/plugin.json); it's only for `/plugin install` in
+# Claude Code and must NOT ship inside the uploadable consumer .zip.
 _TEXT_EXT = (".md", ".svg", ".txt", ".html")
 
 
