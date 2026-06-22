@@ -16,7 +16,7 @@ You already have one number line from Lesson 1.2, a single line where every numb
 
 So take that number line and stand a second one upright, crossing the first at zero. <!--illus:4-1-coordinate-plane--> Now the page is a grid, like the lines on a map that let you name any spot. The across line is the **x-axis**, the up-and-down line is the **y-axis**, and the point where they cross is the **origin**, written (0, 0).
 
-Every point on the grid gets an address written (x, y). The first number is how far across: right is positive, left is negative. The second is how far up or down: up is positive, down is negative. You always read the across number first. That order is the whole idea, and it's why (3, 2) and (2, 3) are two different points, not one point written two ways.
+Every point on the grid gets an address written (x, y). The first number is how far across: right is positive, left is negative. The second is how far up or down: up is positive, down is negative. You always read the across number first. That order is the whole idea, and it's why (3, 2) and (2, 3) are two different points, not one point written two ways. {#4.1.f2}
 
 **New terms:**
 - {#4.1.d1} **Coordinate plane:** a flat grid made by two number lines crossing at right angles.

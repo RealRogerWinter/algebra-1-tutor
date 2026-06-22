@@ -373,6 +373,8 @@ FIGURES = [
     # Unit 4 — the coordinate plane intro; the two worked points plotted (no quadrant labels yet)
     {"code": "4.1.f1", "lesson": "4.1", "type": "plane", "xwindow": [-5, 5], "ywindow": [-5, 5],
      "marks": [(3, 2, "(3, 2)"), (-2, -1, "(-2, -1)")], "caption": "plotting (3, 2) and (-2, -1) on the plane"},
+    {"code": "4.1.f2", "lesson": "4.1", "type": "plane", "xwindow": [-5, 5], "ywindow": [-5, 5],
+     "marks": [(3, 2, "(3, 2)")], "caption": "the point (3, 2): three across, two up from the origin"},
     # Unit 5 — the coordinate plane; writing a line from a point + slope
     {"code": "5.1.f1", "lesson": "5.1", "type": "plane", "xwindow": [-5, 5], "ywindow": [-5, 5],
      "quadrants": [(2.7, 2.7, "(+, +)"), (-2.7, 2.7, "(-, +)"), (-2.7, -2.7, "(-, -)"), (2.7, -2.7, "(+, -)")],

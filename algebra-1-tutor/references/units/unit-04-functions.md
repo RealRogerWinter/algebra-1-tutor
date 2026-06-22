@@ -37,7 +37,7 @@ The arc is: (4.1) set up the **coordinate plane** every function will be picture
 
 **Teaching arc (concrete → pictorial → symbolic):**
 - **Concrete (one number line → two):** "You already have one number line from 1.2 — one number pins a spot *on* it. A flat page is bigger than a line, so one number can't say where (a seat in a row, a place on a map). You need two: *how far across*, then *how far up or down*." Stand a second number line upright crossing the first at zero. **One metaphor only — the map/two-number-lines on-ramp.** (Do *not* tell the Descartes-fly story.)
-- **Pictorial (the grid + an address):** the across line is the **x-axis**, the up-and-down line is the **y-axis**, their crossing is the **origin** (0, 0). Every point has an address (x, y): across first (right +, left −), then up/down (up +, down −). Make "across first" the whole game — (3, 2) and (2, 3) are different points.
+- **Pictorial (the grid + an address):** the across line is the **x-axis**, the up-and-down line is the **y-axis**, their crossing is the **origin** (0, 0). Every point has an address (x, y): across first (right +, left −), then up/down (up +, down −). Make "across first" the whole game — (3, 2) and (2, 3) are different points. {#4.1.f2}
 - **Symbolic (plot and read):** to *plot*, start at the origin, step the x-amount across, then the y-amount up/down. To *read* a dot, do it in reverse: how far across (sign tells left/right), then how far up/down. Always start at the origin.
 
 Restate the one-liner the student can repeat: *"Start at the origin; across first, then up or down."*
