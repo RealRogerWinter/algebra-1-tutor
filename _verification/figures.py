@@ -10,7 +10,7 @@ CLI:
   python _verification/figures.py            # (re)generate all SVGs
   python _verification/figures.py --check    # verify accuracy + staleness; write nothing
 """
-import argparse, os, sys
+import argparse, math, os, sys
 import sympy as sp
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -27,8 +27,29 @@ def _mapper(xmin, xmax, ymin, ymax, size=SIZE, pad=PAD):
         return (round(pad + (float(x) - xmin) * sx, 2), round(size - pad - (float(y) - ymin) * sy, 2))
     return M
 
-def _axes(M, xmin, xmax, ymin, ymax):
+GRID_STROKE = "#e8e8e8"   # light unit-grid lines (dark-mode override lives in build_textbook CSS)
+
+def _grid(M, xmin, xmax, ymin, ymax):
+    """Light gridlines at every integer, drawn with the SAME mapper as the axes and the plotted
+    points, so a point always lands exactly on a grid crossing. The x=0 / y=0 lines are left to
+    the bolder axes drawn on top."""
     parts = []
+    x = math.ceil(xmin)
+    while x <= xmax:
+        if x != 0:
+            gx, gy1 = M(x, ymax); _, gy2 = M(x, ymin)
+            parts.append(f'<line x1="{gx}" y1="{gy1}" x2="{gx}" y2="{gy2}" stroke="{GRID_STROKE}" stroke-width="1"/>')
+        x += 1
+    y = math.ceil(ymin)
+    while y <= ymax:
+        if y != 0:
+            gx1, gy = M(xmin, y); gx2, _ = M(xmax, y)
+            parts.append(f'<line x1="{gx1}" y1="{gy}" x2="{gx2}" y2="{gy}" stroke="{GRID_STROKE}" stroke-width="1"/>')
+        y += 1
+    return "\n  ".join(parts)
+
+def _axes(M, xmin, xmax, ymin, ymax):
+    parts = [_grid(M, xmin, xmax, ymin, ymax)]
     if ymin <= 0 <= ymax:                          # x-axis
         x1, y0 = M(xmin, 0); x2, _ = M(xmax, 0)
         parts.append(f'<line x1="{x1}" y1="{y0}" x2="{x2}" y2="{y0}" stroke="#888"/>')
@@ -37,7 +58,7 @@ def _axes(M, xmin, xmax, ymin, ymax):
         x0, yy1 = M(0, ymax); _, yy2 = M(0, ymin)
         parts.append(f'<line x1="{x0}" y1="{yy1}" x2="{x0}" y2="{yy2}" stroke="#888"/>')
         parts.append(f'<text x="{x0+4}" y="{yy1+8}" font-size="10" fill="#888">y</text>')
-    return "\n  ".join(parts)
+    return "\n  ".join(p for p in parts if p)
 
 def _svg(body, size=SIZE):
     return (f'<svg viewBox="0 0 {size} {size}" xmlns="http://www.w3.org/2000/svg" '

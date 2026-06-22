@@ -1,4 +1,19 @@
 <svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+  <line x1="18.0" y1="18.0" x2="18.0" y2="222.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="86.0" y1="18.0" x2="86.0" y2="222.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="120.0" y1="18.0" x2="120.0" y2="222.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="154.0" y1="18.0" x2="154.0" y2="222.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="188.0" y1="18.0" x2="188.0" y2="222.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="222.0" y1="18.0" x2="222.0" y2="222.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="18.0" y1="222.0" x2="222.0" y2="222.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="18.0" y1="199.33" x2="222.0" y2="199.33" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="18.0" y1="176.67" x2="222.0" y2="176.67" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="18.0" y1="131.33" x2="222.0" y2="131.33" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="18.0" y1="108.67" x2="222.0" y2="108.67" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="18.0" y1="86.0" x2="222.0" y2="86.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="18.0" y1="63.33" x2="222.0" y2="63.33" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="18.0" y1="40.67" x2="222.0" y2="40.67" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="18.0" y1="18.0" x2="222.0" y2="18.0" stroke="#e8e8e8" stroke-width="1"/>
   <line x1="18.0" y1="154.0" x2="222.0" y2="154.0" stroke="#888"/>
   <text x="216.0" y="150.0" font-size="10" fill="#888">x</text>
   <line x1="52.0" y1="18.0" x2="52.0" y2="222.0" stroke="#888"/>

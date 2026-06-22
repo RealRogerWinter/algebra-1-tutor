@@ -240,13 +240,12 @@ html.dark .hero-art{filter:brightness(.9) saturate(.92)}
 
 /* ---- figure (graph paper belongs here) ---- */
 figure.fig{margin:var(--s6) auto; background:var(--card); border-radius:var(--radius); padding:1.1rem 1.1rem .7rem;
-  box-shadow:var(--shadow); text-align:center; border:1px solid var(--rule);
-  background-image:linear-gradient(var(--rule) 1px,transparent 1px),linear-gradient(90deg,var(--rule) 1px,transparent 1px);
-  background-size:22px 22px}
+  box-shadow:var(--shadow); text-align:center; border:1px solid var(--rule)}
 figure.fig svg{max-width:100%; max-height:360px; height:auto; display:block; margin-inline:auto}
 figcaption{color:var(--ink-soft); font-size:var(--step--1); margin-top:.6rem; text-align:left}
 figcaption b,figcaption strong{color:var(--blue); font-weight:600}
 html.dark figure.fig [stroke="#888"]{stroke:#7c8590} html.dark figure.fig text[fill="#888"]{fill:#9aa3b0}
+html.dark figure.fig line[stroke="#e8e8e8"]{stroke:#2f343b}
 html.dark figure.fig text[fill="#c0392b"],html.dark figure.fig [fill="#c0392b"]{fill:#ef9b8e}
 html.dark figure.fig text[fill="#2980b9"],html.dark figure.fig [fill="#2980b9"]:not(line){fill:#6fb0e8}
 html.dark figure.fig text[fill="#27ae60"]{fill:#69cf97} html.dark figure.fig text[fill="#8e44ad"]{fill:#c3a4e6}
