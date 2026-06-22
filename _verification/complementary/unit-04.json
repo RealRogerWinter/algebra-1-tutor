@@ -1,29 +1,42 @@
 {
   "unit": "4",
   "problems": [
+    { "id": "4.1.T1", "kind": "manual",
+      "answer": "From the origin, go 3 right and 2 down. It sits below the x-axis, to the right.",
+      "prompt": "Describe how to plot (3, -2): how far across and which way, how far up or down and which way?",
+      "solution": "Read the address in order: x is 3 (across) and y is -2 (up/down). Start at the origin, step 3 to the right, then 2 down (down because the second number is negative). That lands the point below the x-axis on the right side." },
+    { "id": "4.1.T2", "kind": "manual",
+      "answer": "(-2, 4)",
+      "prompt": "A dot sits 2 units left of the origin and 4 units up. Write its ordered pair (x, y).",
+      "solution": "Across comes first: 2 to the left is x = -2 (left is negative). Up comes second: 4 up is y = 4. So the ordered pair is (-2, 4). The across number always goes first." },
+    { "id": "4.1.T3", "kind": "manual",
+      "answer": "No. (5,0) is 5 right along the x-axis; (0,5) is 5 up along the y-axis. Order matters.",
+      "prompt": "Is (5, 0) the same point as (0, 5)? Say yes or no and explain.",
+      "solution": "No. In (5, 0) the across number is 5 and the up number is 0, so you go 5 right and stay on the x-axis. In (0, 5) you go 0 across and 5 up, landing on the y-axis. Swapping the two numbers gives a different point — the first number is always the across one." },
+
     {
-      "id": "4.1.T1",
+      "id": "4.2.T1",
       "kind": "manual",
       "answer": "Function — outputs repeat (all 9) but the inputs 3, 6, 9 are distinct, so each input has exactly one output.",
       "prompt": "Is {(3,9),(6,9),(9,9)} a function? Say yes or no, and name the reason.",
       "solution": "Look only at the inputs: 3, 6, 9 — each appears once, so each input is paired with exactly one output. The output 9 repeating is fine (that's the \"different buttons, same snack\" case — repeats are only a problem on the input side). Yes, it is a function."
     },
     {
-      "id": "4.1.T2",
+      "id": "4.2.T2",
       "kind": "manual",
       "answer": "Not a function — input 7 is paired with both 2 and 5 (one input, two outputs).",
       "prompt": "Is {(7,2),(8,4),(7,5)} a function? Say yes or no, and name the input that breaks it.",
       "solution": "Scan the inputs: 7 shows up twice — once paired with 2 and once with 5. That's one input with two different outputs, which is exactly what a function may not do. The input 7 breaks it, so this is not a function. (Contrast: a repeated output would have been fine; it's the repeated input with conflicting outputs that fails.)"
     },
     {
-      "id": "4.1.T3",
+      "id": "4.2.T3",
       "kind": "manual",
       "answer": "Not a function — input 5 appears twice with outputs 0 and 8.",
       "prompt": "A table has inputs 5, 6, 5, 7 and outputs 0, 1, 8, 1. Is it a function? Explain.",
       "solution": "Line the pairs up: (5,0), (6,1), (5,8), (7,1). The input 5 appears twice and gives two different outputs, 0 and 8 — one input, two outputs. So it is not a function. The repeated output 1 (from inputs 6 and 7) is allowed; only the split input 5 matters."
     },
     {
-      "id": "4.1.T4",
+      "id": "4.2.T4",
       "kind": "manual",
       "answer": "Yes, it is a function. The vertical line test passes: every vertical line hits a horizontal line in exactly one point, so each input has exactly one output.",
       "prompt": "A graph is the horizontal line y=4 (flat, going left to right). Is it a function? Use the vertical line test to explain — and say what its one output always is.",
@@ -31,7 +44,7 @@
     },
 
     {
-      "id": "4.2.T1",
+      "id": "4.3.T1",
       "kind": "eval",
       "expr": "4*3-3",
       "answer": "9",
@@ -39,7 +52,7 @@
       "solution": "Substitute 3 for x, keeping it in parentheses: f(3)=4(3)−3. Multiply first: 4(3)=12. Then subtract: 12−3=9. So f(3)=9. (Remember f(3) means \"run 3 through the rule f,\" not f times 3.)"
     },
     {
-      "id": "4.2.T2",
+      "id": "4.3.T2",
       "kind": "eval",
       "expr": "(-3)**2-2",
       "answer": "7",
@@ -47,7 +60,7 @@
       "solution": "Substitute with parentheses around the input: g(−3)=(−3)²−2. Square the whole input: (−3)²=9 (a negative times a negative is positive — not −9). Then 9−2=7. So g(−3)=7."
     },
     {
-      "id": "4.2.T3",
+      "id": "4.3.T3",
       "kind": "eval",
       "expr": "2-5*(-2)",
       "answer": "12",
@@ -55,7 +68,7 @@
       "solution": "Substitute −2 in parentheses: q(−2)=2−5(−2). Multiply first: −5(−2)=+10 (negative times negative is positive). Then 2+10=12. So q(−2)=12. The parentheses are what keep the sign honest."
     },
     {
-      "id": "4.2.T4",
+      "id": "4.3.T4",
       "kind": "simplify",
       "expr": "4*(2*x)-3",
       "answer": "8*x-3",
@@ -64,7 +77,7 @@
     },
 
     {
-      "id": "4.3.T1",
+      "id": "4.4.T1",
       "kind": "eval",
       "expr": "6*4",
       "answer": "24",
@@ -72,14 +85,14 @@
       "solution": "Plug in each input: f(0)=0, f(1)=6, f(2)=12, f(3)=18, f(4)=6(4)=24. So the last output is f(4)=24. The outputs step up by a constant +6 each time (6−0, 12−6, 18−12, 24−18 are all 6), so the table is linear with rate of change +6."
     },
     {
-      "id": "4.3.T2",
+      "id": "4.4.T2",
       "kind": "manual",
       "answer": "Linear. Equal x-steps of +1 give equal output steps of −3 (4−7, 1−4, −2−1 are all −3), so the rate of change is constant at −3.",
       "prompt": "For the table x: 0,1,2,3 → y: 7,4,1,−2, the inputs step evenly. Is it linear or nonlinear, and what is its rate of change?",
       "solution": "First confirm the inputs step evenly: 0,1,2,3 go up by +1 each time. Now check the output differences: 4−7=−3, 1−4=−3, −2−1=−3 — all the same. Equal x-steps give equal output steps, so it is linear, with a constant rate of change of −3. (As a preview of Unit 5, that constant −3 is the slope, and the value 7 at x=0 gives the equation y=−3x+7.)"
     },
     {
-      "id": "4.3.T3",
+      "id": "4.4.T3",
       "kind": "eval",
       "expr": "4*3-5",
       "answer": "7",
@@ -87,7 +100,7 @@
       "solution": "Run each input through the rule: g(0)=4(0)−5=−5, g(1)=4(1)−5=−1, g(2)=4(2)−5=3, g(3)=4(3)−5=12−5=7. So g(3)=7. The outputs −5,−1,3,7 climb by a constant +4 each step, matching the 4 in front of x — linear."
     },
     {
-      "id": "4.3.T4",
+      "id": "4.4.T4",
       "kind": "manual",
       "answer": "Nonlinear. Output steps are 5, 7, 9 (not constant), so the rate of change changes — the graph curves rather than forming a straight line.",
       "prompt": "A table's outputs go 1, 6, 13, 22 for x = 1, 2, 3, 4. Linear or nonlinear? Tell how you know without graphing. (Light stretch.)",
@@ -100,14 +113,14 @@
       "expr": "2*(-4)+5",
       "answer": "-3",
       "prompt": "With h(x)=2x+5, find h(−4).",
-      "solution": "Substitute with parentheses: h(−4)=2(−4)+5. Multiply first: 2(−4)=−8. Then −8+5=−3. So h(−4)=−3. (This is lesson 4.2's evaluate-at-a-negative skill — and a free negatives + order-of-operations callback to Units 1–2.)"
+      "solution": "Substitute with parentheses: h(−4)=2(−4)+5. Multiply first: 2(−4)=−8. Then −8+5=−3. So h(−4)=−3. (This is lesson 4.3's evaluate-at-a-negative skill — and a free negatives + order-of-operations callback to Units 1–2.)"
     },
     {
       "id": "4.R.T2",
       "kind": "manual",
       "answer": "Not a function — input 0 is paired with both 5 and 9 (one input, two outputs). The output 5 repeating across inputs 0 and 1 is fine; the split input 0 is what breaks it.",
       "prompt": "Is {(0,5),(1,5),(2,8),(0,9)} a function? Say yes or no, name the input that breaks it, and say why the repeated output is not a problem.",
-      "solution": "Check the inputs: 0 appears twice, paired with 5 and with 9 — one input giving two outputs, which a function may not do, so it is not a function and input 0 is the culprit. The output 5 showing up for both 0 and 1 is allowed, because repeats are only a problem on the input side (two buttons can give the same snack). This interleaves lesson 4.1's one-output-per-input rule with the repeated-output trap."
+      "solution": "Check the inputs: 0 appears twice, paired with 5 and with 9 — one input giving two outputs, which a function may not do, so it is not a function and input 0 is the culprit. The output 5 showing up for both 0 and 1 is allowed, because repeats are only a problem on the input side (two buttons can give the same snack). This interleaves lesson 4.2's one-output-per-input rule with the repeated-output trap."
     },
     {
       "id": "4.R.T3",
@@ -115,14 +128,14 @@
       "expr": "(-3)**2+(-3)",
       "answer": "6",
       "prompt": "With g(x)=x²+x, find g(−3).",
-      "solution": "Substitute −3 in parentheses everywhere x appears: g(−3)=(−3)²+(−3). Square the whole input: (−3)²=9. Then add the second term: 9+(−3)=6. So g(−3)=6. Watch the squared term — (−3)²=9, not −9. (Lesson 4.2 sign care, with a quadratic rule.)"
+      "solution": "Substitute −3 in parentheses everywhere x appears: g(−3)=(−3)²+(−3). Square the whole input: (−3)²=9. Then add the second term: 9+(−3)=6. So g(−3)=6. Watch the squared term — (−3)²=9, not −9. (Lesson 4.3 sign care, with a quadratic rule.)"
     },
     {
       "id": "4.R.T4",
       "kind": "manual",
       "answer": "Nonlinear. With even x-steps of +1, the output steps are 2, 4, 8 (a doubling pattern), which are not constant — so the rate of change is not constant and the graph is not a straight line.",
       "prompt": "A table has x: 0,1,2,3 → y: 1,3,7,15. The inputs step evenly. Linear or nonlinear, and how can you tell?",
-      "solution": "Inputs 0,1,2,3 step by +1 each time, so compare output differences: 3−1=2, 7−3=4, 15−7=8. The steps 2,4,8 are not equal (they double), so the rate of change is not constant and the function is nonlinear — its graph curves. (This doubling previews exponential growth in Unit 9.) This mixes lesson 4.3's linear-vs-nonlinear test with the \"check x-steps are even first\" habit."
+      "solution": "Inputs 0,1,2,3 step by +1 each time, so compare output differences: 3−1=2, 7−3=4, 15−7=8. The steps 2,4,8 are not equal (they double), so the rate of change is not constant and the function is nonlinear — its graph curves. (This doubling previews exponential growth in Unit 9.) This mixes lesson 4.4's linear-vs-nonlinear test with the \"check x-steps are even first\" habit."
     },
     {
       "id": "4.R.T5",
@@ -130,7 +143,7 @@
       "expr": "4*3-1",
       "answer": "11",
       "prompt": "The linear table x: 0,1,2,3 → y: −1,3,7,11 has even x-steps. Read off its equation, then use the equation to confirm the output at x=3. (Light stretch — table → equation → check.)",
-      "solution": "Find the constant step: 3−(−1)=4, 7−3=4, 11−7=4 → +4 per step, so 4 sits in front of x. The value at x=0 is −1, the constant added. That gives the equation y=4x−1. Now confirm against the last row using the equation: at x=3, 4(3)−1=12−1=11, which matches the table's y=11. This interleaves lesson 4.3's table→equation move with evaluating to check (lesson 4.2)."
+      "solution": "Find the constant step: 3−(−1)=4, 7−3=4, 11−7=4 → +4 per step, so 4 sits in front of x. The value at x=0 is −1, the constant added. That gives the equation y=4x−1. Now confirm against the last row using the equation: at x=3, 4(3)−1=12−1=11, which matches the table's y=11. This interleaves lesson 4.4's table→equation move with evaluating to check (lesson 4.3)."
     }
   ]
 }

@@ -30,15 +30,15 @@ Pacing: 5.1 is quick and concrete (most adults half-know the coordinate plane �
 ## Lesson 5.1: The coordinate plane
 
 **Goal:** Plot and name ordered pairs (x, y) and identify which of the four quadrants (or axis) a point lies in.
-**Why it matters:** Every graph in the rest of algebra lives here {#5.1.f1}. A function's table of inputs/outputs becomes *points*, and a line is just infinitely many of them.
+**Why it matters:** The student met the plane in 4.1 (two number lines crossed at the origin, every point an across-then-up address) {#5.1.f1}. This lesson is the deepening: reading a point's quadrant from its signs and spacing axes evenly so a *line* graphs cleanly. Don't re-teach the plane from scratch; bridge from 4.1 and build.
 **New terms:**
-- {#5.1.d1} **Coordinate plane:** a flat grid made by two number lines crossing at right angles.
-- {#5.1.d2} **x-axis / y-axis:** the horizontal and vertical number lines. They cross at the **origin**, (0,0).
-- {#5.1.d3} **Ordered pair (x, y):** an address for a point — *x first* (how far across, right is +), *then y* (how far up/down, up is +). Order matters: (3,2)≠(2,3).
+- {#5.1.d1} **Coordinate plane** (from 4.1): the flat grid made by two number lines crossing at right angles.
+- {#5.1.d2} **x-axis / y-axis** (from 4.1): the horizontal and vertical number lines. They cross at the **origin**, (0,0).
+- {#5.1.d3} **Ordered pair (x, y)** (from 4.1): an address for a point — *x first* (how far across, right is +), *then y* (how far up/down, up is +). Order matters: (3,2)≠(2,3).
 - {#5.1.d4} **Quadrant:** one of the four regions the axes cut the plane into, numbered **I, II, III, IV** counter-clockwise starting top-right.
 
-**Teaching arc (concrete → pictorial → symbolic):**
-- **Concrete:** "It's a street map. The x-coordinate is how many blocks east/west; the y-coordinate is how many blocks north/south. You always say the east-west one first." Ask them to give *you* directions to a point before you give them any.
+**Teaching arc (recall → pictorial → symbolic):**
+- **Recall:** Re-anchor in one move; don't re-introduce the plane. "Plot (3, 2) for me — start at the origin, across first." That confirms the 4.1 across-then-up habit; then go straight to the new work, the quadrants. Don't reach for the street-map metaphor again; 4.1 owns it.
 - **Pictorial:** Offer the labeled-plane SVG artifact (Template 2 skeleton — axes only, then drop in the points). Show the four quadrants and the sign pattern. Have them predict the quadrant *before* plotting, from the signs alone.
 - **Symbolic:** Connect to the sign rule:
 
@@ -99,7 +99,7 @@ Offer the artifact (computed screen coords, Template 2 mapping): (3,2)→(170,70
 **Goal:** Build a table of values from a linear equation, plot the points, connect them into a line, and test whether a given point lies *on* the line by substitution.
 **Why it matters:** This is the bridge from "equation" to "picture." It also teaches the meaning of a solution to a two-variable equation — every point on the line is a solution; everything off it is not.
 **New terms:**
-- {#5.2.d1} **Table of values:** a list of x inputs and their computed y outputs — exactly the input→output table from Unit 4.3, now plotted.
+- {#5.2.d1} **Table of values:** a list of x inputs and their computed y outputs — exactly the input→output table from Unit 4.4, now plotted.
 - {#5.2.d2} **"On the line":** a point (a,b) is on the line when its coordinates make the equation true — i.e. substituting x=a gives y=b.
 
 **Teaching arc (concrete → pictorial → symbolic):**

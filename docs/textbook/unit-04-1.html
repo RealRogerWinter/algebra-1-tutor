@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>What is a function — Algebra 1</title>
+<title>What is a graph — Algebra 1</title>
 <script>try{if(localStorage.getItem("a1-theme")==="dark")document.documentElement.classList.add("dark");}catch(e){}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -55,11 +55,12 @@
 </ol>
 </li>
 <li class="active">
-<a class="snav-unit" href="unit-04.html">Unit 4. Introducing Functions</a>
+<a class="snav-unit" href="unit-04.html">Unit 4. Graphs &amp; Functions</a>
 <ol class="snav-lessons">
-<li><a class="snav-lesson cur" href="unit-04-1.html"><span class="ln">4.1</span> What is a function</a></li>
-<li><a class="snav-lesson" href="unit-04-2.html"><span class="ln">4.2</span> Function notation f(x), domain &amp; range</a></li>
-<li><a class="snav-lesson" href="unit-04-3.html"><span class="ln">4.3</span> Multiple representations; linear vs. nonlinear</a></li>
+<li><a class="snav-lesson cur" href="unit-04-1.html"><span class="ln">4.1</span> What is a graph</a></li>
+<li><a class="snav-lesson" href="unit-04-2.html"><span class="ln">4.2</span> What is a function</a></li>
+<li><a class="snav-lesson" href="unit-04-3.html"><span class="ln">4.3</span> Function notation f(x), domain &amp; range</a></li>
+<li><a class="snav-lesson" href="unit-04-4.html"><span class="ln">4.4</span> Multiple representations; linear vs. nonlinear</a></li>
 </ol>
 </li>
 <li class="">
@@ -146,136 +147,212 @@
 </aside>
 <div class="content">
 <main>
-<div class="hero"><div class="hero-text"><div class="kicker">Unit 4 · Lesson 4.1</div><h1>What is a function</h1></div><img class="hero-art" src="../assets/hero-4-1.jpg" alt=""></div>
+<div class="hero"><div class="hero-text"><div class="kicker">Unit 4 · Lesson 4.1</div><h1>What is a graph</h1></div><img class="hero-art" src="../assets/hero-4-1.jpg" alt=""></div>
 
-<p>Think about a vending machine for a moment. You press a button and you get exactly one snack. Press B4 today, you get pretzels. Press B4 tomorrow, you get pretzels again. Same button, same snack, every time.</p>
-<p>That reliable matching of each button to one snack is the whole idea behind a function. A function is a dependable pairing: each thing you put in comes back matched to exactly one thing.</p>
-<figure class="illus"><img class="illus-art" src="../assets/illus-4-1-input-output.jpg" alt="One input entering a machine and a single output leaving it." loading="lazy"></figure>
+<p>You already have one number line from Lesson 1.2, a single line where every number has its spot. One number is enough to pin a place along that line. But a flat page is bigger than a line. To point at a seat in a row, or a place on a map, one number can't say where; you need two, <em>how far across</em> and then <em>how far up or down</em>.</p>
+<figure class="illus"><img class="illus-art" src="../assets/illus-4-1-coordinate-plane.jpg" alt="Two number lines crossing at the center, with a single dot reached by going across and then up." loading="lazy"></figure>
 
-<p>Notice what the machine does <em>not</em> promise. It doesn't promise that every snack has its own button. Two different buttons can both dispense pretzels, and that's a perfectly good machine. Annoying, maybe, but not broken.</p>
-<p>What <em>would</em> count as broken is a button that gives pretzels sometimes and a soda other times. Press B4 and you can't tell what you'll get. That machine you'd kick.</p>
-<p>That asymmetry is the entire lesson, so say it slowly. Two inputs landing on the same output is fine. One input giving two different outputs is the thing a function never does. Repeats are only a problem on the input side.</p>
-<p>There's no formula anywhere in that vending machine, just a list of which button gives which snack. Hold onto that, because it's easy to assume a function has to be an equation. It doesn't. The pairing itself is the function, however it's written down.</p>
-<p>Here's that idea as a picture you can draw. Put the inputs in a column on the left, the outputs in a column on the right, and draw an arrow from each input to the output it's matched with.</p>
-<p>The reading rule follows the vending machine exactly: it's a function when every input on the left has exactly one arrow leaving it. Two arrows landing on the same right-hand value (two buttons, same snack) is fine. But two arrows <em>leaving</em> one left-hand value means that single input has two outputs, and that breaks it.</p>
-<p>Now the same idea on a graph, which is where you'll meet it most often. On a graph, an input is an x-value: a spot along the horizontal direction. "All the points sharing one input" is a single vertical line standing at that x.</p>
-<p>So sweep a vertical line slowly across the graph, left to right, and watch how many times it touches. If it never touches the graph in more than one place, every input has at most one output, and you've got a function. If a vertical line ever hits the graph in two places at once, that one input has two outputs, and it isn't.</p>
-<figure class="illus"><img class="illus-art" src="../assets/illus-4-1-vertical-line-test.jpg" alt="A vertical line sweeping across a curve, picturing the vertical-line test." loading="lazy"></figure>
+<p>Every point on the grid gets an address written (x, y). The first number is how far across: right is positive, left is negative. The second is how far up or down: up is positive, down is negative. You always read the across number first. That order is the whole idea, and it's why (3, 2) and (2, 3) are two different points, not one point written two ways. <a class="refcode" id="4.1.f1" href="#4.1.f1" data-prompt="Use the Algebra 1 tutor skill to help me with the figure in Lesson 4.1 (reference 4.1.f1). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for the figure in Lesson 4.1">4.1.f1</a></p>
+<figure class="fig" id="fig-4.1.f1"><svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+  <line x1="18.0" y1="18.0" x2="18.0" y2="222.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="38.4" y1="18.0" x2="38.4" y2="222.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="58.8" y1="18.0" x2="58.8" y2="222.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="79.2" y1="18.0" x2="79.2" y2="222.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="99.6" y1="18.0" x2="99.6" y2="222.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="140.4" y1="18.0" x2="140.4" y2="222.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="160.8" y1="18.0" x2="160.8" y2="222.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="181.2" y1="18.0" x2="181.2" y2="222.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="201.6" y1="18.0" x2="201.6" y2="222.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="222.0" y1="18.0" x2="222.0" y2="222.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="18.0" y1="222.0" x2="222.0" y2="222.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="18.0" y1="201.6" x2="222.0" y2="201.6" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="18.0" y1="181.2" x2="222.0" y2="181.2" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="18.0" y1="160.8" x2="222.0" y2="160.8" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="18.0" y1="140.4" x2="222.0" y2="140.4" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="18.0" y1="99.6" x2="222.0" y2="99.6" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="18.0" y1="79.2" x2="222.0" y2="79.2" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="18.0" y1="58.8" x2="222.0" y2="58.8" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="18.0" y1="38.4" x2="222.0" y2="38.4" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="18.0" y1="18.0" x2="222.0" y2="18.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="18.0" y1="120.0" x2="222.0" y2="120.0" stroke="#888"/>
+  <text x="216.0" y="116.0" font-size="10" fill="#888">x</text>
+  <line x1="120.0" y1="18.0" x2="120.0" y2="222.0" stroke="#888"/>
+  <text x="124.0" y="26.0" font-size="10" fill="#888">y</text>
+  <line x1="120.0" y1="79.2" x2="181.2" y2="79.2" stroke="#c0392b" stroke-width="1" stroke-dasharray="3 3"/>
+  <line x1="181.2" y1="120.0" x2="181.2" y2="79.2" stroke="#c0392b" stroke-width="1" stroke-dasharray="3 3"/>
+  <circle cx="181.2" cy="79.2" r="3.5" fill="#c0392b"/>
+  <text x="186.2" y="73.2" font-size="10" fill="#c0392b">(3, 2)</text>
+</svg><figcaption><b>Figure 4.1.f1</b></figcaption></figure>
 
-<p>This sweep has a name: the <strong>vertical line test</strong>. Walking your finger across the page as the imaginary line is a fine way to do it.</p>
-<p>A quick way to carry this in your pocket: <em>each input is paired with exactly one output, and repeats are only a problem on the input side.</em> Say it back to yourself; you'll use it constantly.</p>
 <div class="cl-terms">
 <p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6.5C9.5 5 6 5 3.5 6.5V18C6 16.5 9.5 16.5 12 18C14.5 16.5 18 16.5 20.5 18V6.5C18 5 14.5 5 12 6.5Z"/><path d="M12 6.5V18"/></svg>New words</span></p>
 <ul>
-<li><a class="refcode" id="4.1.d1" href="#4.1.d1" data-prompt="Use the Algebra 1 tutor skill to help me with a key term in Lesson 4.1 (reference 4.1.d1). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for a key term in Lesson 4.1">4.1.d1</a> <strong>Function:</strong> a <strong>pairing</strong> (a correspondence) that matches <strong>each input with exactly one output</strong>. The pairing can be given any way at all: a list of (input, output) pairs, a table, a graph, or a formula. What makes it a <em>function</em> is the one-output-per-input promise, not the form it comes in. (Heads-up: in 4.2 a <em>formula</em> like f(x)=3x−1 is called a <strong>rule</strong>. A rule is one common <em>way</em> to give a function's pairing, not the definition itself. A pair-list with no formula is still a function.)</li>
-<li><a class="refcode" id="4.1.d2" href="#4.1.d2" data-prompt="Use the Algebra 1 tutor skill to help me with a key term in Lesson 4.1 (reference 4.1.d2). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for a key term in Lesson 4.1">4.1.d2</a> <strong>Input / output:</strong> what you feed in, and what comes back, written as a pair (input, output). The inputs form one set and the outputs form another; in 4.2 those sets get the names <strong>domain</strong> and <strong>range</strong>. (Later the input is also called the variable and the output its value.)</li>
-<li><a class="refcode" id="4.1.d3" href="#4.1.d3" data-prompt="Use the Algebra 1 tutor skill to help me with a key term in Lesson 4.1 (reference 4.1.d3). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for a key term in Lesson 4.1">4.1.d3</a> <strong>Vertical line test:</strong> a graph is a function exactly when <strong>every vertical line</strong> hits it in <strong>at most one point</strong> (one hit, or none). If some vertical line hits the graph twice, that one input has two outputs, so it is not a function.</li>
+<li><a class="refcode" id="4.1.d1" href="#4.1.d1" data-prompt="Use the Algebra 1 tutor skill to help me with a key term in Lesson 4.1 (reference 4.1.d1). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for a key term in Lesson 4.1">4.1.d1</a> <strong>Coordinate plane:</strong> a flat grid made by two number lines crossing at right angles.</li>
+<li><a class="refcode" id="4.1.d2" href="#4.1.d2" data-prompt="Use the Algebra 1 tutor skill to help me with a key term in Lesson 4.1 (reference 4.1.d2). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for a key term in Lesson 4.1">4.1.d2</a> <strong>x-axis / y-axis:</strong> the across (horizontal) and up-and-down (vertical) number lines. They cross at the <strong>origin</strong>, (0, 0).</li>
+<li><a class="refcode" id="4.1.d3" href="#4.1.d3" data-prompt="Use the Algebra 1 tutor skill to help me with a key term in Lesson 4.1 (reference 4.1.d3). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for a key term in Lesson 4.1">4.1.d3</a> <strong>Ordered pair (x, y) / coordinates:</strong> a point's address: <em>x first</em> (how far across, right is +, left is −), <em>then y</em> (how far up or down, up is +, down is −). Order matters: (3, 2) ≠ (2, 3).</li>
+<li><a class="refcode" id="4.1.d4" href="#4.1.d4" data-prompt="Use the Algebra 1 tutor skill to help me with a key term in Lesson 4.1 (reference 4.1.d4). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for a key term in Lesson 4.1">4.1.d4</a> <strong>Plot:</strong> to mark the point for an ordered pair by starting at the origin and stepping across, then up or down.</li>
 </ul>
-<p>Read these next examples slowly, one at a time, and decide the answer in your head before you read the verdict. The whole skill is checking the input side, so practice spotting where to look.</p>
+<p>Work through these one at a time, and picture each step on the grid before you read the next line. The move to get comfortable with is starting at the origin every single time.</p>
 </div>
 <section class="worked">
 <p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19.5V15L15.5 4.5 19.5 8.5 9 19Z"/><path d="M13.5 6.5 17.5 10.5"/></svg>Worked example</span></p>
 <p><a class="refcode" id="4.1.w1" href="#4.1.w1" data-prompt="Use the Algebra 1 tutor skill to help me with worked example 1 in Lesson 4.1 (reference 4.1.w1). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for worked example 1 in Lesson 4.1">4.1.w1</a>
-<em>Example 1: a set of pairs (no formula needed).</em> Is \(\{(1,2),(2,4),(3,6),(4,8)\}\) a function?</p>
-<p>This is just a pairing, a list matching inputs to outputs, with no rule or formula written anywhere. That's allowed, because the pairing itself is the function. The inputs are 1, 2, 3, 4. Each one is different, each appears once, so each input is matched with exactly one output.</p>
-<p><strong>Yes, a function.</strong></p>
+<em>Example 1: plot (3, 2).</em> Start at the origin. The first number is 3, so step 3 to the right. The second number is 2, so step 2 up. Mark the point there. Across first, then up. <a class="refcode" id="4.1.f2" href="#4.1.f2" data-prompt="Use the Algebra 1 tutor skill to help me with the figure in Lesson 4.1 (reference 4.1.f2). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for the figure in Lesson 4.1">4.1.f2</a></p>
+<figure class="fig" id="fig-4.1.f2"><svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+  <line x1="18.0" y1="18.0" x2="18.0" y2="222.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="38.4" y1="18.0" x2="38.4" y2="222.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="58.8" y1="18.0" x2="58.8" y2="222.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="79.2" y1="18.0" x2="79.2" y2="222.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="99.6" y1="18.0" x2="99.6" y2="222.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="140.4" y1="18.0" x2="140.4" y2="222.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="160.8" y1="18.0" x2="160.8" y2="222.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="181.2" y1="18.0" x2="181.2" y2="222.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="201.6" y1="18.0" x2="201.6" y2="222.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="222.0" y1="18.0" x2="222.0" y2="222.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="18.0" y1="222.0" x2="222.0" y2="222.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="18.0" y1="201.6" x2="222.0" y2="201.6" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="18.0" y1="181.2" x2="222.0" y2="181.2" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="18.0" y1="160.8" x2="222.0" y2="160.8" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="18.0" y1="140.4" x2="222.0" y2="140.4" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="18.0" y1="99.6" x2="222.0" y2="99.6" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="18.0" y1="79.2" x2="222.0" y2="79.2" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="18.0" y1="58.8" x2="222.0" y2="58.8" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="18.0" y1="38.4" x2="222.0" y2="38.4" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="18.0" y1="18.0" x2="222.0" y2="18.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="18.0" y1="120.0" x2="222.0" y2="120.0" stroke="#888"/>
+  <text x="216.0" y="116.0" font-size="10" fill="#888">x</text>
+  <line x1="120.0" y1="18.0" x2="120.0" y2="222.0" stroke="#888"/>
+  <text x="124.0" y="26.0" font-size="10" fill="#888">y</text>
+  <line x1="120.0" y1="79.2" x2="181.2" y2="79.2" stroke="#c0392b" stroke-width="1" stroke-dasharray="3 3"/>
+  <line x1="181.2" y1="120.0" x2="181.2" y2="79.2" stroke="#c0392b" stroke-width="1" stroke-dasharray="3 3"/>
+  <circle cx="181.2" cy="79.2" r="3.5" fill="#c0392b"/>
+  <text x="186.2" y="73.2" font-size="10" fill="#c0392b">(3, 2)</text>
+</svg><figcaption><b>Figure 4.1.f2</b></figcaption></figure>
 <p><a class="refcode" id="4.1.w2" href="#4.1.w2" data-prompt="Use the Algebra 1 tutor skill to help me with worked example 2 in Lesson 4.1 (reference 4.1.w2). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for worked example 2 in Lesson 4.1">4.1.w2</a>
-<em>Example 2: a repeated output (still fine).</em> Is \(\{(1,5),(2,5),(3,5)\}\) a function?</p>
-<p>The output 5 shows up three times, which can look suspicious at first. But check the <em>inputs</em>: 1, 2, 3, each appearing once, each with a single output. A repeated output is allowed. This is the "two buttons, same snack" case.</p>
-<p><strong>Yes, a function.</strong></p>
+<em>Example 2: plot (−2, −1).</em> Start at the origin again. The first number is −2, so step 2 to the left (left because it's negative). The second number is −1, so step 1 down (down because it's negative). The point lands below and to the left of the origin. Same routine as before; only the directions change with the signs. Here it is on the plane <a class="refcode" id="4.1.f3" href="#4.1.f3" data-prompt="Use the Algebra 1 tutor skill to help me with the figure in Lesson 4.1 (reference 4.1.f3). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for the figure in Lesson 4.1">4.1.f3</a>.</p>
+<figure class="fig" id="fig-4.1.f3"><svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+  <line x1="18.0" y1="18.0" x2="18.0" y2="222.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="38.4" y1="18.0" x2="38.4" y2="222.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="58.8" y1="18.0" x2="58.8" y2="222.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="79.2" y1="18.0" x2="79.2" y2="222.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="99.6" y1="18.0" x2="99.6" y2="222.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="140.4" y1="18.0" x2="140.4" y2="222.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="160.8" y1="18.0" x2="160.8" y2="222.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="181.2" y1="18.0" x2="181.2" y2="222.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="201.6" y1="18.0" x2="201.6" y2="222.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="222.0" y1="18.0" x2="222.0" y2="222.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="18.0" y1="222.0" x2="222.0" y2="222.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="18.0" y1="201.6" x2="222.0" y2="201.6" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="18.0" y1="181.2" x2="222.0" y2="181.2" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="18.0" y1="160.8" x2="222.0" y2="160.8" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="18.0" y1="140.4" x2="222.0" y2="140.4" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="18.0" y1="99.6" x2="222.0" y2="99.6" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="18.0" y1="79.2" x2="222.0" y2="79.2" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="18.0" y1="58.8" x2="222.0" y2="58.8" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="18.0" y1="38.4" x2="222.0" y2="38.4" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="18.0" y1="18.0" x2="222.0" y2="18.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="18.0" y1="120.0" x2="222.0" y2="120.0" stroke="#888"/>
+  <text x="216.0" y="116.0" font-size="10" fill="#888">x</text>
+  <line x1="120.0" y1="18.0" x2="120.0" y2="222.0" stroke="#888"/>
+  <text x="124.0" y="26.0" font-size="10" fill="#888">y</text>
+  <line x1="120.0" y1="140.4" x2="79.2" y2="140.4" stroke="#c0392b" stroke-width="1" stroke-dasharray="3 3"/>
+  <line x1="79.2" y1="120.0" x2="79.2" y2="140.4" stroke="#c0392b" stroke-width="1" stroke-dasharray="3 3"/>
+  <circle cx="79.2" cy="140.4" r="3.5" fill="#c0392b"/>
+  <text x="84.2" y="134.4" font-size="10" fill="#c0392b">(-2, -1)</text>
+</svg><figcaption><b>Figure 4.1.f3</b></figcaption></figure>
 <p><a class="refcode" id="4.1.w3" href="#4.1.w3" data-prompt="Use the Algebra 1 tutor skill to help me with worked example 3 in Lesson 4.1 (reference 4.1.w3). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for worked example 3 in Lesson 4.1">4.1.w3</a>
-<em>Example 3: a split input (broken).</em> Is \(\{(1,2),(1,3),(2,4)\}\) a function?</p>
-<p>Look at the input 1: it's paired with 2 and also with 3. One input, two outputs, the broken-button case.</p>
-<p><strong>No, not a function.</strong></p>
+<em>Example 3: read a dot back into an address.</em> A dot sits 1 step left of the origin and 3 steps up. Left means the across number is negative, so x is −1; up means the second number is positive, so y is 3. Its address is (−1, 3). Reading a point is just plotting in reverse: see how far across, then how far up or down. <a class="refcode" id="4.1.f4" href="#4.1.f4" data-prompt="Use the Algebra 1 tutor skill to help me with the figure in Lesson 4.1 (reference 4.1.f4). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for the figure in Lesson 4.1">4.1.f4</a></p>
+<figure class="fig" id="fig-4.1.f4"><svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+  <line x1="18.0" y1="18.0" x2="18.0" y2="222.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="38.4" y1="18.0" x2="38.4" y2="222.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="58.8" y1="18.0" x2="58.8" y2="222.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="79.2" y1="18.0" x2="79.2" y2="222.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="99.6" y1="18.0" x2="99.6" y2="222.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="140.4" y1="18.0" x2="140.4" y2="222.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="160.8" y1="18.0" x2="160.8" y2="222.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="181.2" y1="18.0" x2="181.2" y2="222.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="201.6" y1="18.0" x2="201.6" y2="222.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="222.0" y1="18.0" x2="222.0" y2="222.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="18.0" y1="222.0" x2="222.0" y2="222.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="18.0" y1="201.6" x2="222.0" y2="201.6" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="18.0" y1="181.2" x2="222.0" y2="181.2" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="18.0" y1="160.8" x2="222.0" y2="160.8" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="18.0" y1="140.4" x2="222.0" y2="140.4" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="18.0" y1="99.6" x2="222.0" y2="99.6" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="18.0" y1="79.2" x2="222.0" y2="79.2" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="18.0" y1="58.8" x2="222.0" y2="58.8" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="18.0" y1="38.4" x2="222.0" y2="38.4" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="18.0" y1="18.0" x2="222.0" y2="18.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="18.0" y1="120.0" x2="222.0" y2="120.0" stroke="#888"/>
+  <text x="216.0" y="116.0" font-size="10" fill="#888">x</text>
+  <line x1="120.0" y1="18.0" x2="120.0" y2="222.0" stroke="#888"/>
+  <text x="124.0" y="26.0" font-size="10" fill="#888">y</text>
+  <line x1="120.0" y1="58.8" x2="99.6" y2="58.8" stroke="#c0392b" stroke-width="1" stroke-dasharray="3 3"/>
+  <line x1="99.6" y1="120.0" x2="99.6" y2="58.8" stroke="#c0392b" stroke-width="1" stroke-dasharray="3 3"/>
+  <circle cx="99.6" cy="58.8" r="3.5" fill="#c0392b"/>
+  <text x="104.6" y="52.8" font-size="10" fill="#c0392b">(-1, 3)</text>
+</svg><figcaption><b>Figure 4.1.f4</b></figcaption></figure>
 <p><a class="refcode" id="4.1.w4" href="#4.1.w4" data-prompt="Use the Algebra 1 tutor skill to help me with worked example 4 in Lesson 4.1 (reference 4.1.w4). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for worked example 4 in Lesson 4.1">4.1.w4</a>
-<em>Example 4: a table.</em> Is this table a function?</p>
-<table>
-<thead>
-<tr>
-<th>input x</th>
-<th>0</th>
-<th>1</th>
-<th>2</th>
-<th>0</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>output</td>
-<td>4</td>
-<td>5</td>
-<td>6</td>
-<td>9</td>
-</tr>
-</tbody>
-</table>
-<p>A table is read the same way; just scan the input row for a repeat. Input 0 appears twice, giving 4 once and 9 once. That's two outputs for one input.</p>
-<p><strong>No, not a function.</strong></p>
-<p><a class="refcode" id="4.1.w5" href="#4.1.w5" data-prompt="Use the Algebra 1 tutor skill to help me with worked example 5 in Lesson 4.1 (reference 4.1.w5). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for worked example 5 in Lesson 4.1">4.1.w5</a>
-<em>Example 5: a graph (vertical line test).</em> Is the graph a function? Try two shapes.</p>
-<p>First, a non-vertical straight line such as y=2x+1. Sweep a vertical line across it and it touches in exactly one spot everywhere you put it. <strong>Function.</strong></p>
-<p>Now a circle centered at the origin, or a sideways "U" (a parabola opening to the right). A vertical line through the middle cuts across it in <strong>two</strong> places at once. <strong>Not a function.</strong></p>
-<p>One straight line is the exception worth knowing. A <em>vertical</em> line such as x=3 is <strong>not</strong> a function: every point on it sits at the same input, x=3, so that single input is paired with infinitely many outputs. It's the cleanest possible example of one input with many outputs.</p>
-<p>Now that you've seen the right reading a few times, here's the slip that snares almost everyone at first. It's natural to decide that <em>any</em> repeat at all kills a function, a sensible-sounding "no repeats allowed" rule. But go back to the machine: two buttons giving the same snack doesn't break anything.</p>
-<p>So when a number repeats, don't reject it on sight. Look only at the input side, and ask whether one input is trying to give two different outputs. That, and only that, is what breaks a function.</p>
-<p>One more place to be careful, and it's about direction. The test line is <em>vertical</em>, not horizontal. An input is an x, and the line that gathers all the points sharing one x stands straight up and down. If you find yourself sliding a line up and down the page instead of across it, you're testing the wrong thing.</p>
+<em>Example 4: a list of pairs becomes a picture.</em> Take three pairs: (1, 2), (2, 4), (3, 6). Plot each one from the origin: 1 right and 2 up, then 2 right and 4 up, then 3 right and 6 up. Three dots. That is the real point of the grid: a list of number-pairs turns into something you can see. These three happen to fall in a row, but that's not a rule. Sometimes plotted pairs line up and sometimes they stay scattered; you'll see which, and when, later. <a class="refcode" id="4.1.f5" href="#4.1.f5" data-prompt="Use the Algebra 1 tutor skill to help me with the figure in Lesson 4.1 (reference 4.1.f5). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for the figure in Lesson 4.1">4.1.f5</a></p>
+<figure class="fig" id="fig-4.1.f5"><svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+  <line x1="18.0" y1="18.0" x2="18.0" y2="222.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="69.0" y1="18.0" x2="69.0" y2="222.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="94.5" y1="18.0" x2="94.5" y2="222.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="120.0" y1="18.0" x2="120.0" y2="222.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="145.5" y1="18.0" x2="145.5" y2="222.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="171.0" y1="18.0" x2="171.0" y2="222.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="196.5" y1="18.0" x2="196.5" y2="222.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="222.0" y1="18.0" x2="222.0" y2="222.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="18.0" y1="222.0" x2="222.0" y2="222.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="18.0" y1="171.0" x2="222.0" y2="171.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="18.0" y1="145.5" x2="222.0" y2="145.5" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="18.0" y1="120.0" x2="222.0" y2="120.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="18.0" y1="94.5" x2="222.0" y2="94.5" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="18.0" y1="69.0" x2="222.0" y2="69.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="18.0" y1="43.5" x2="222.0" y2="43.5" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="18.0" y1="18.0" x2="222.0" y2="18.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="18.0" y1="196.5" x2="222.0" y2="196.5" stroke="#888"/>
+  <text x="216.0" y="192.5" font-size="10" fill="#888">x</text>
+  <line x1="43.5" y1="18.0" x2="43.5" y2="222.0" stroke="#888"/>
+  <text x="47.5" y="26.0" font-size="10" fill="#888">y</text>
+  <line x1="43.5" y1="145.5" x2="69.0" y2="145.5" stroke="#c0392b" stroke-width="1" stroke-dasharray="3 3"/>
+  <line x1="69.0" y1="196.5" x2="69.0" y2="145.5" stroke="#c0392b" stroke-width="1" stroke-dasharray="3 3"/>
+  <circle cx="69.0" cy="145.5" r="3.5" fill="#c0392b"/>
+  <text x="74.0" y="139.5" font-size="10" fill="#c0392b">(1, 2)</text>
+  <line x1="43.5" y1="94.5" x2="94.5" y2="94.5" stroke="#c0392b" stroke-width="1" stroke-dasharray="3 3"/>
+  <line x1="94.5" y1="196.5" x2="94.5" y2="94.5" stroke="#c0392b" stroke-width="1" stroke-dasharray="3 3"/>
+  <circle cx="94.5" cy="94.5" r="3.5" fill="#c0392b"/>
+  <text x="99.5" y="88.5" font-size="10" fill="#c0392b">(2, 4)</text>
+  <line x1="43.5" y1="43.5" x2="120.0" y2="43.5" stroke="#c0392b" stroke-width="1" stroke-dasharray="3 3"/>
+  <line x1="120.0" y1="196.5" x2="120.0" y2="43.5" stroke="#c0392b" stroke-width="1" stroke-dasharray="3 3"/>
+  <circle cx="120.0" cy="43.5" r="3.5" fill="#c0392b"/>
+  <text x="125.0" y="37.5" font-size="10" fill="#c0392b">(3, 6)</text>
+</svg><figcaption><b>Figure 4.1.f5</b></figcaption></figure>
+<p>You'll notice the grid splits into four corners around the origin. Those corners get names in Unit 5; here you don't need them. Naming a direction, across-then-up, is all it takes to find any point.</p>
 </section>
 <div class="cl-check">
 <p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M9.6 9.6a2.6 2.6 0 1 1 3.3 2.5c-.9.3-1.4.9-1.4 1.8"/><circle cx="11.5" cy="16.6" r=".9" fill="currentColor" stroke="none"/></svg>Check yourself</span></p>
 <ol>
-<li><a class="refcode" id="4.1.c1" href="#4.1.c1" data-prompt="Use the Algebra 1 tutor skill to help me with a check-for-understanding question in Lesson 4.1 (reference 4.1.c1). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for a check-for-understanding question in Lesson 4.1">4.1.c1</a> Make a set of three pairs that is <em>not</em> a function, and say which input breaks it. (One answer: \(\{(2,1),(2,5),(3,9)\}\). The input 2 is paired with both 1 and 5, so that's the one that breaks it.)</li>
-<li><a class="refcode" id="4.1.c2" href="#4.1.c2" data-prompt="Use the Algebra 1 tutor skill to help me with a check-for-understanding question in Lesson 4.1 (reference 4.1.c2). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for a check-for-understanding question in Lesson 4.1">4.1.c2</a> Here's a table where the output 7 shows up three times. Can it still be a function, and what would you have to check? (Yes, it can: a repeated output is fine. Check the <em>inputs</em>: as long as no input appears twice with different outputs, it's a function.)</li>
-<li><a class="refcode" id="4.1.c3" href="#4.1.c3" data-prompt="Use the Algebra 1 tutor skill to help me with a check-for-understanding question in Lesson 4.1 (reference 4.1.c3). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for a check-for-understanding question in Lesson 4.1">4.1.c3</a> Why does the <em>vertical</em> line test, and not a horizontal one, decide it? (A vertical line gathers all the points that share one <em>input</em>; two hits means one input with two outputs, which is broken. A horizontal line would gather points that share one <em>output</em>, but two inputs sharing an output is allowed, so a horizontal line tests nothing about being a function.)</li>
+<li><a class="refcode" id="4.1.c1" href="#4.1.c1" data-prompt="Use the Algebra 1 tutor skill to help me with a check-for-understanding question in Lesson 4.1 (reference 4.1.c1). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for a check-for-understanding question in Lesson 4.1">4.1.c1</a> Is (4, 1) the same point as (1, 4)? (No. (4, 1) is 4 right then 1 up; (1, 4) is 1 right then 4 up. The two land in different spots, because the across number comes first.)</li>
+<li><a class="refcode" id="4.1.c2" href="#4.1.c2" data-prompt="Use the Algebra 1 tutor skill to help me with a check-for-understanding question in Lesson 4.1 (reference 4.1.c2). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for a check-for-understanding question in Lesson 4.1">4.1.c2</a> A dot sits 2 steps left and 2 steps down of the origin. Write its ordered pair. ((−2, −2): left makes the across number −2, down makes the second number −2.)</li>
+<li><a class="refcode" id="4.1.c3" href="#4.1.c3" data-prompt="Use the Algebra 1 tutor skill to help me with a check-for-understanding question in Lesson 4.1 (reference 4.1.c3). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for a check-for-understanding question in Lesson 4.1">4.1.c3</a> Where do you start to plot any point, and which number do you use first? (Start at the origin, and use x, the across number, first.)</li>
 </ol>
-<p>Mixing the kinds of problem feels harder than repeating one kind, and that's the point: switching between them is what makes the idea stick to next week. Every problem below has its answer at the end of the lesson, and if one stalls you, look back at the worked example it matches.</p>
-</div>
+<p>The problems below mix plotting points and reading them back, which takes a little more thought than doing one kind over and over. Every answer is at the end of the lesson if you want to check yourself.</p>
 <section class="practice">
-<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4.5" width="15.5" height="15.5" rx="2.5"/><path d="M7.5 10 9 11.5 12 8.5"/><path d="M14 10H16.5"/><path d="M7.5 15H16.5"/></svg>Practice</span></p>
-<p><em>A. Sets of pairs — function or not? (give the reason)</em></p>
-<ol>
-<li><a class="refcode" id="4.1.1" href="#4.1.1" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 1 in Lesson 4.1 (reference 4.1.1). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 1 in Lesson 4.1">4.1.1</a> \(\{(0,1),(1,2),(2,3)\}\)</li>
-<li><a class="refcode" id="4.1.2" href="#4.1.2" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 2 in Lesson 4.1 (reference 4.1.2). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 2 in Lesson 4.1">4.1.2</a> \(\{(2,4),(3,4),(5,4)\}\)</li>
-<li><a class="refcode" id="4.1.3" href="#4.1.3" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 3 in Lesson 4.1 (reference 4.1.3). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 3 in Lesson 4.1">4.1.3</a> \(\{(1,1),(1,2),(3,4)\}\)</li>
-<li><a class="refcode" id="4.1.4" href="#4.1.4" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 4 in Lesson 4.1 (reference 4.1.4). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 4 in Lesson 4.1">4.1.4</a> \(\{(-1,0),(0,1),(1,0)\}\)</li>
-<li><a class="refcode" id="4.1.5" href="#4.1.5" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 5 in Lesson 4.1 (reference 4.1.5). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 5 in Lesson 4.1">4.1.5</a> \(\{(5,5),(5,6)\}\)</li>
-</ol>
-<p><em>B. Tables — function or not?</em></p>
-<ol start="6">
-<li><a class="refcode" id="4.1.6" href="#4.1.6" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 6 in Lesson 4.1 (reference 4.1.6). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 6 in Lesson 4.1">4.1.6</a> inputs 1,2,3,4 → outputs 2,2,2,2</li>
-<li><a class="refcode" id="4.1.7" href="#4.1.7" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 7 in Lesson 4.1 (reference 4.1.7). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 7 in Lesson 4.1">4.1.7</a> inputs 3,4,3 → outputs 1,2,8</li>
-<li><a class="refcode" id="4.1.8" href="#4.1.8" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 8 in Lesson 4.1 (reference 4.1.8). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 8 in Lesson 4.1">4.1.8</a> inputs -2,-1,0,1 → outputs 4,1,0,1</li>
-</ol>
-<p><em>C. Descriptions / graphs — function or not?</em></p>
-<ol start="9">
-<li><a class="refcode" id="4.1.9" href="#4.1.9" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 9 in Lesson 4.1 (reference 4.1.9). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 9 in Lesson 4.1">4.1.9</a> "Each person is matched to their birth year." (input = person)</li>
-<li><a class="refcode" id="4.1.10" href="#4.1.10" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 10 in Lesson 4.1 (reference 4.1.10). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 10 in Lesson 4.1">4.1.10</a> "Each birth year is matched to a person born then." (input = year)</li>
-<li><a class="refcode" id="4.1.11" href="#4.1.11" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 11 in Lesson 4.1 (reference 4.1.11). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 11 in Lesson 4.1">4.1.11</a> The graph of a single non-vertical straight line.</li>
-<li><a class="refcode" id="4.1.12" href="#4.1.12" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 12 in Lesson 4.1 (reference 4.1.12). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 12 in Lesson 4.1">4.1.12</a> The graph of a circle.</li>
-<li><a class="refcode" id="4.1.13" href="#4.1.13" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 13 in Lesson 4.1 (reference 4.1.13). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 13 in Lesson 4.1">4.1.13</a> The graph of the vertical line x=3.</li>
-<li><a class="refcode" id="4.1.14" href="#4.1.14" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 14 in Lesson 4.1 (reference 4.1.14). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 14 in Lesson 4.1">4.1.14</a> "Each student is paired with the one chair they sit in." (input = student)</li>
-</ol>
+<span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4.5" width="15.5" height="15.5" rx="2.5"/><path d="M7.5 10 9 11.5 12 8.5"/><path d="M14 10H16.5"/><path d="M7.5 15H16.5"/></svg>Practice</span>
+<p class="practice-sub">A. Plot the point (start at the origin; across first, then up or down).</p>
+<div class="prow"><span class="prob"><a class="refcode" id="4.1.1" href="#4.1.1" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 1 in Lesson 4.1 (reference 4.1.1). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 1 in Lesson 4.1">4.1.1</a> (5, 1)</span><details class="qcheck"><summary><span class="qc-show">Reveal answer</span><span class="qc-hide">Hide</span><span class="vh"> to problem 1</span></summary><span class="qa">From the origin, 5 right and 1 up.</span></details></div>
+<div class="prow"><span class="prob"><a class="refcode" id="4.1.2" href="#4.1.2" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 2 in Lesson 4.1 (reference 4.1.2). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 2 in Lesson 4.1">4.1.2</a> (0, 3)</span><details class="qcheck"><summary><span class="qc-show">Reveal answer</span><span class="qc-hide">Hide</span><span class="vh"> to problem 2</span></summary><span class="qa">From the origin, 0 across and 3 up (it sits on the y-axis).</span></details></div>
+<div class="prow"><span class="prob"><a class="refcode" id="4.1.3" href="#4.1.3" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 3 in Lesson 4.1 (reference 4.1.3). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 3 in Lesson 4.1">4.1.3</a> (−3, 2)</span><details class="qcheck"><summary><span class="qc-show">Reveal answer</span><span class="qc-hide">Hide</span><span class="vh"> to problem 3</span></summary><span class="qa">From the origin, 3 left and 2 up.</span></details></div>
+<div class="prow"><span class="prob"><a class="refcode" id="4.1.4" href="#4.1.4" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 4 in Lesson 4.1 (reference 4.1.4). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 4 in Lesson 4.1">4.1.4</a> (2, −4)</span><details class="qcheck"><summary><span class="qc-show">Reveal answer</span><span class="qc-hide">Hide</span><span class="vh"> to problem 4</span></summary><span class="qa">From the origin, 2 right and 4 down.</span></details></div>
+<p class="practice-sub">B. Write the ordered pair.</p>
+<div class="prow"><span class="prob"><a class="refcode" id="4.1.5" href="#4.1.5" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 5 in Lesson 4.1 (reference 4.1.5). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 5 in Lesson 4.1">4.1.5</a> 3 across (right), 0 up or down</span><details class="qcheck"><summary><span class="qc-show">Reveal answer</span><span class="qc-hide">Hide</span><span class="vh"> to problem 5</span></summary><span class="qa">(3, 0).</span></details></div>
+<div class="prow"><span class="prob"><a class="refcode" id="4.1.6" href="#4.1.6" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 6 in Lesson 4.1 (reference 4.1.6). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 6 in Lesson 4.1">4.1.6</a> 0 across, 2 down</span><details class="qcheck"><summary><span class="qc-show">Reveal answer</span><span class="qc-hide">Hide</span><span class="vh"> to problem 6</span></summary><span class="qa">(0, −2).</span></details></div>
+<div class="prow"><span class="prob"><a class="refcode" id="4.1.7" href="#4.1.7" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 7 in Lesson 4.1 (reference 4.1.7). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 7 in Lesson 4.1">4.1.7</a> A dot 4 steps left of the origin and 1 step up.</span><details class="qcheck"><summary><span class="qc-show">Reveal answer</span><span class="qc-hide">Hide</span><span class="vh"> to problem 7</span></summary><span class="qa">(−4, 1).</span></details></div>
+<p class="practice-sub">C. True or false?</p>
+<div class="prow"><span class="prob"><a class="refcode" id="4.1.8" href="#4.1.8" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 8 in Lesson 4.1 (reference 4.1.8). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 8 in Lesson 4.1">4.1.8</a> (2, 5) is the same point as (5, 2).</span><details class="qcheck"><summary><span class="qc-show">Reveal answer</span><span class="qc-hide">Hide</span><span class="vh"> to problem 8</span></summary><span class="qa"><strong>False</strong> — (2, 5) is 2 right then 5 up; (5, 2) is 5 right then 2 up, a different point.</span></details></div>
 </section>
-<details class="answers">
-<summary><span class="tw"></span><span class="eyebrow">Answers</span><span class="hint">Try each one yourself first, then open to check.</span></summary>
-<div class="ak-body">
-<ol>
-<li><strong>Function</strong> — inputs 0,1,2 all distinct.</li>
-<li><strong>Function</strong> — output 4 repeats, but inputs 2,3,5 are distinct (two buttons, same snack).</li>
-<li><strong>Not a function</strong> — input 1 gives both 1 and 2.</li>
-<li><strong>Function</strong> — output 0 repeats, but inputs -1,0,1 are distinct.</li>
-<li><strong>Not a function</strong> — input 5 gives both 5 and 6.</li>
-<li><strong>Function</strong> — inputs all distinct; identical outputs are allowed.</li>
-<li><strong>Not a function</strong> — input 3 appears twice with outputs 1 and 8.</li>
-<li><strong>Function</strong> — inputs -2,-1,0,1 distinct; repeated output 1 is fine.</li>
-<li><strong>Function</strong> — each person has exactly one birth year.</li>
-<li><strong>Not a function</strong> — a year can match many people (one input → many outputs).</li>
-<li><strong>Function</strong> — a non-vertical line passes the vertical line test (each x has exactly one y).</li>
-<li><strong>Not a function</strong> — a vertical line through it hits twice.</li>
-<li><strong>Not a function</strong> — every point shares the input x=3, so that one input has infinitely many outputs; it fails the vertical line test.</li>
-<li><strong>Function</strong> — each input (a student) is paired with exactly one output (a chair). It's a plain pairing, no formula needed.</li>
-</ol>
 </div>
-</details>
 <nav class="pagenav" aria-label="Previous and next page">
 <a class="pn-prev" href="unit-04.html"><span class="pn-dir">&larr;&nbsp;Back</span><span class="pn-title">Unit 4</span></a>
 <a class="pn-next" href="unit-04-2.html"><span class="pn-dir">Next&nbsp;&rarr;</span><span class="pn-title">Lesson 4.2</span></a>

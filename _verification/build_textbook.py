@@ -250,9 +250,10 @@ _ILLUS = {
     "3-1-unit-rate": "A speedometer beside a car at a steady speed, picturing a unit rate like miles in one hour.",
     "3-2-cross-multiply": "Two fractions linked by a crossing X, picturing cross-multiplication.",
     "3-3-percent-triangle": "A 10-by-10 grid of 100 small squares with 25 of them shaded, picturing a percent as a count per hundred.",
-    "4-1-input-output": "One input entering a machine and a single output leaving it.",
-    "4-1-vertical-line-test": "A vertical line sweeping across a curve, picturing the vertical-line test.",
-    "4-2-trays": "A machine with an in-tray of allowed inputs and an out-tray of produced outputs.",
+    "4-1-coordinate-plane": "Two number lines crossing at the center, with a single dot reached by going across and then up.",
+    "4-2-input-output": "One input entering a machine and a single output leaving it.",
+    "4-2-vertical-line-test": "A vertical line sweeping across a curve, picturing the vertical-line test.",
+    "4-3-trays": "A machine with an in-tray of allowed inputs and an out-tray of produced outputs.",
     "5-3-staircase": "A staircase of equal rise-over-run steps climbing alongside a line, picturing slope.",
     "6-1-phrase-equation": "A phrase card turning into an equation card, picturing translation into symbols.",
     "6-2-drt": "A small road trip, picturing distance as rate multiplied by time.",
@@ -1337,13 +1338,12 @@ html.dark .hero-art{filter:brightness(.9) saturate(.92)}
 
 /* ---- figure (graph paper belongs here) ---- */
 figure.fig{margin:var(--s6) auto; background:var(--card); border-radius:var(--radius); padding:1.1rem 1.1rem .7rem;
-  box-shadow:var(--shadow); text-align:center; border:1px solid var(--rule);
-  background-image:linear-gradient(var(--rule) 1px,transparent 1px),linear-gradient(90deg,var(--rule) 1px,transparent 1px);
-  background-size:22px 22px}
+  box-shadow:var(--shadow); text-align:center; border:1px solid var(--rule)}
 figure.fig svg{max-width:100%; max-height:360px; height:auto; display:block; margin-inline:auto}
 figcaption{color:var(--ink-soft); font-size:var(--step--1); margin-top:.6rem; text-align:left}
 figcaption b,figcaption strong{color:var(--blue); font-weight:600}
 html.dark figure.fig [stroke="#888"]{stroke:#7c8590} html.dark figure.fig text[fill="#888"]{fill:#9aa3b0}
+html.dark figure.fig line[stroke="#e8e8e8"]{stroke:#2f343b}
 html.dark figure.fig text[fill="#c0392b"],html.dark figure.fig [fill="#c0392b"]{fill:#ef9b8e}
 html.dark figure.fig text[fill="#2980b9"],html.dark figure.fig [fill="#2980b9"]:not(line){fill:#6fb0e8}
 html.dark figure.fig text[fill="#27ae60"]{fill:#69cf97} html.dark figure.fig text[fill="#8e44ad"]{fill:#c3a4e6}

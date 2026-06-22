@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Multiple representations; linear vs. nonlinear — Algebra 1</title>
+<script>try{if(localStorage.getItem("a1-theme")==="dark")document.documentElement.classList.add("dark");}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..40,500..600&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="textbook.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous">
+</head>
+<body data-surface="textbook">
+<header class="topbar">
+  <button id="menu" class="menu" type="button" aria-label="Open or close the contents menu" aria-expanded="false">☰&nbsp;Contents</button>
+  <a class="home" href="index.html"><img class="brandmark" src="../assets/logo.png" alt="" width="26" height="26" decoding="async">Algebra&nbsp;1</a>
+  <span class="sp"></span>
+  <button id="theme" type="button" aria-label="Toggle light or dark theme">◐&nbsp;Theme</button>
+</header>
+<div class="shell">
+<aside class="sidenav" id="sidenav">
+<nav class="snav" aria-label="Contents">
+<a class="snav-top" href="how-to-use.html">How to use this book</a>
+<a class="snav-top" href="index.html">All units</a>
+<ol class="snav-units">
+<li class="">
+<a class="snav-unit" href="unit-01.html">Unit 1. Foundations &amp; the Language of Algebra</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-01-1.html"><span class="ln">1.1</span> Variables and the meaning of equations</a></li>
+<li><a class="snav-lesson" href="unit-01-2.html"><span class="ln">1.2</span> The number system &amp; the number line</a></li>
+<li><a class="snav-lesson" href="unit-01-3.html"><span class="ln">1.3</span> Order of operations</a></li>
+<li><a class="snav-lesson" href="unit-01-4.html"><span class="ln">1.4</span> Factors and exponents</a></li>
+<li><a class="snav-lesson" href="unit-01-5.html"><span class="ln">1.5</span> Negative numbers</a></li>
+<li><a class="snav-lesson" href="unit-01-6.html"><span class="ln">1.6</span> Expressions vs. equations; evaluating expressions</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-02.html">Unit 2. Solving Linear Equations</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-02-1.html"><span class="ln">2.1</span> Inverse operations &amp; one-step equations</a></li>
+<li><a class="snav-lesson" href="unit-02-2.html"><span class="ln">2.2</span> Two-step equations</a></li>
+<li><a class="snav-lesson" href="unit-02-3.html"><span class="ln">2.3</span> Combining like terms &amp; the distributive property</a></li>
+<li><a class="snav-lesson" href="unit-02-4.html"><span class="ln">2.4</span> Variables on both sides</a></li>
+<li><a class="snav-lesson" href="unit-02-5.html"><span class="ln">2.5</span> Fraction refresher</a></li>
+<li><a class="snav-lesson" href="unit-02-6.html"><span class="ln">2.6</span> Equations with fractions</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-03.html">Unit 3. Proportional Reasoning (the bridge to linearity)</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-03-1.html"><span class="ln">3.1</span> Ratios and rates</a></li>
+<li><a class="snav-lesson" href="unit-03-2.html"><span class="ln">3.2</span> Proportions &amp; cross-multiplication</a></li>
+<li><a class="snav-lesson" href="unit-03-3.html"><span class="ln">3.3</span> Percents</a></li>
+</ol>
+</li>
+<li class="active">
+<a class="snav-unit" href="unit-04.html">Unit 4. Graphs &amp; Functions</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-04-1.html"><span class="ln">4.1</span> What is a graph</a></li>
+<li><a class="snav-lesson" href="unit-04-2.html"><span class="ln">4.2</span> What is a function</a></li>
+<li><a class="snav-lesson" href="unit-04-3.html"><span class="ln">4.3</span> Function notation f(x), domain &amp; range</a></li>
+<li><a class="snav-lesson cur" href="unit-04-4.html"><span class="ln">4.4</span> Multiple representations; linear vs. nonlinear</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-05.html">Unit 5. Linear Functions &amp; Their Graphs</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-05-1.html"><span class="ln">5.1</span> The coordinate plane</a></li>
+<li><a class="snav-lesson" href="unit-05-2.html"><span class="ln">5.2</span> Graphing linear equations from a table</a></li>
+<li><a class="snav-lesson" href="unit-05-3.html"><span class="ln">5.3</span> Slope</a></li>
+<li><a class="snav-lesson" href="unit-05-4.html"><span class="ln">5.4</span> Slope-intercept form y = mx + b</a></li>
+<li><a class="snav-lesson" href="unit-05-5.html"><span class="ln">5.5</span> Writing equations of lines</a></li>
+<li><a class="snav-lesson" href="unit-05-6.html"><span class="ln">5.6</span> x-intercepts, graphing by intercepts &amp; standard form</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-06.html">Unit 6. Modeling &amp; Translation</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-06-1.html"><span class="ln">6.1</span> Translating words into expressions and equations</a></li>
+<li><a class="snav-lesson" href="unit-06-2.html"><span class="ln">6.2</span> Classic word problems (number, age, distance, value &amp; relationship)</a></li>
+<li><a class="snav-lesson" href="unit-06-3.html"><span class="ln">6.3</span> Scatter plots &amp; line of best fit (a first taste of data)</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-07.html">Unit 7. Systems of Equations</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-07-1.html"><span class="ln">7.1</span> Solving by graphing</a></li>
+<li><a class="snav-lesson" href="unit-07-2.html"><span class="ln">7.2</span> Substitution</a></li>
+<li><a class="snav-lesson" href="unit-07-3.html"><span class="ln">7.3</span> Elimination</a></li>
+<li><a class="snav-lesson" href="unit-07-4.html"><span class="ln">7.4</span> Special cases &amp; applications</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-08.html">Unit 8. Inequalities</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-08-1.html"><span class="ln">8.1</span> One-variable inequalities</a></li>
+<li><a class="snav-lesson" href="unit-08-2.html"><span class="ln">8.2</span> Compound inequalities</a></li>
+<li><a class="snav-lesson" href="unit-08-3.html"><span class="ln">8.3</span> Absolute value: graphs &amp; distance</a></li>
+<li><a class="snav-lesson" href="unit-08-4.html"><span class="ln">8.4</span> Graphing linear inequalities (two variables) &amp; systems</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-09.html">Unit 9. Sequences &amp; Exponential Functions</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-09-1.html"><span class="ln">9.1</span> Arithmetic &amp; geometric sequences as functions</a></li>
+<li><a class="snav-lesson" href="unit-09-2.html"><span class="ln">9.2</span> Exponential growth &amp; decay; linear vs. exponential</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-10.html">Unit 10. Exponents &amp; Polynomials</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-10-1.html"><span class="ln">10.1</span> Exponent rules (including zero &amp; negative exponents)</a></li>
+<li><a class="snav-lesson" href="unit-10-2.html"><span class="ln">10.2</span> Scientific notation</a></li>
+<li><a class="snav-lesson" href="unit-10-3.html"><span class="ln">10.3</span> Polynomials — terms, degree, standard form; add &amp; subtract</a></li>
+<li><a class="snav-lesson" href="unit-10-4.html"><span class="ln">10.4</span> Multiplying polynomials</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-11.html">Unit 11. Factoring</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-11-1.html"><span class="ln">11.1</span> Greatest common factor (GCF)</a></li>
+<li><a class="snav-lesson" href="unit-11-2.html"><span class="ln">11.2</span> Factoring trinomials x²+bx+c</a></li>
+<li><a class="snav-lesson" href="unit-11-3.html"><span class="ln">11.3</span> Special patterns</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="unit-12.html">Unit 12. Quadratic Functions &amp; Equations (the capstone)</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="unit-12-1.html"><span class="ln">12.1</span> Square roots &amp; simplifying radicals</a></li>
+<li><a class="snav-lesson" href="unit-12-2.html"><span class="ln">12.2</span> The simplest quadratics (x²=9 → two solutions)</a></li>
+<li><a class="snav-lesson" href="unit-12-3.html"><span class="ln">12.3</span> Solving by factoring (zero-product property)</a></li>
+<li><a class="snav-lesson" href="unit-12-4.html"><span class="ln">12.4</span> Completing the square</a></li>
+<li><a class="snav-lesson" href="unit-12-5.html"><span class="ln">12.5</span> The quadratic formula &amp; the discriminant</a></li>
+<li><a class="snav-lesson" href="unit-12-6.html"><span class="ln">12.6</span> Graphing parabolas</a></li>
+</ol>
+</li>
+<li class="">
+<a class="snav-unit" href="appendix.html">Appendix. Data &amp; Statistics</a>
+<ol class="snav-lessons">
+<li><a class="snav-lesson" href="appendix-1.html"><span class="ln">A.1</span> One-variable statistics — center &amp; spread</a></li>
+<li><a class="snav-lesson" href="appendix-2.html"><span class="ln">A.2</span> Two-variable data — line of best fit, correlation vs. causation</a></li>
+<li><a class="snav-lesson" href="appendix-3.html"><span class="ln">A.3</span> Two-way tables</a></li>
+</ol>
+</li>
+</ol></nav>
+</aside>
+<div class="content">
+<main>
+<div class="hero"><div class="hero-text"><div class="kicker">Unit 4 · Lesson 4.4</div><h1>Multiple representations; linear vs. nonlinear</h1></div><img class="hero-art" src="../assets/hero-4-4.jpg" alt=""></div>
+
+<p>A function rarely shows up in the form you'd have picked. Sometimes it's a sentence, sometimes a table, sometimes an equation, sometimes a picture. The useful skill is seeing that those are four views of one and the same relationship, and being able to slide from any one to any other. This is exactly the fluency the next unit builds on when it starts graphing lines.</p>
+<p>Start with a plain sentence: <em>start with $1, and add $2 every step.</em> That's a relationship between a step number and an amount of money, and you can lay it out as a table by just following the instruction:</p>
+<table>
+<thead>
+<tr>
+<th>x</th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>f(x)=2x+1</td>
+<td>1</td>
+<td>3</td>
+<td>5</td>
+<td>7</td>
+</tr>
+</tbody>
+</table>
+<p>At step 0 you have the starting $1. Each step adds $2: 1, then 3, then 5, then 7. The same relationship has an equation too, f(x) = 2x + 1, and if you turn the table's pairs into dots the way 4.1 turned a list of pairs into a picture, they fall in a straight line. Words, table, equation, graph: one relationship, four faces.</p>
+<p>Look closely at the output row. From 1 to 3 is +2; from 3 to 5 is +2; from 5 to 7 is +2. Equal steps in x (here, +1 each time) produce equal steps in the output (+2 each time). That steady, repeating step is what your eye reads as "straight" when the points are plotted, and it has a name: a <strong>constant rate of change</strong>. A function whose rate of change is constant, equal x-steps always giving equal output-steps, is a <strong>linear function</strong>, and its graph is a straight line.</p>
+<p>Not every relationship is so steady. Watch what happens with y = x²:</p>
+<table>
+<thead>
+<tr>
+<th>x</th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>y=x^2</td>
+<td>0</td>
+<td>1</td>
+<td>4</td>
+<td>9</td>
+</tr>
+</tbody>
+</table>
+<p>The differences are 1 − 0 = 1, then 4 − 1 = 3, then 9 − 4 = 5: the steps go 1, 3, 5, and they keep growing. The rate of change isn't constant, so this is a <strong>nonlinear function</strong>, and its graph curves instead of running straight.</p>
+<p>Here's the line and the curve side by side <a class="refcode" id="4.4.f1" href="#4.4.f1" data-prompt="Use the Algebra 1 tutor skill to help me with the figure in Lesson 4.4 (reference 4.4.f1). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for the figure in Lesson 4.4">4.4.f1</a>, so you can see "straight versus curved" at a glance. The curve has a name, a parabola, but for now the point is just that changing steps mean a bend, not a line.</p>
+<figure class="fig" id="fig-4.4.f1"><svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+  <line x1="18.0" y1="18.0" x2="18.0" y2="222.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="52.0" y1="18.0" x2="52.0" y2="222.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="86.0" y1="18.0" x2="86.0" y2="222.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="154.0" y1="18.0" x2="154.0" y2="222.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="188.0" y1="18.0" x2="188.0" y2="222.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="222.0" y1="18.0" x2="222.0" y2="222.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="18.0" y1="222.0" x2="222.0" y2="222.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="18.0" y1="205.0" x2="222.0" y2="205.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="18.0" y1="188.0" x2="222.0" y2="188.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="18.0" y1="171.0" x2="222.0" y2="171.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="18.0" y1="154.0" x2="222.0" y2="154.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="18.0" y1="120.0" x2="222.0" y2="120.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="18.0" y1="103.0" x2="222.0" y2="103.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="18.0" y1="86.0" x2="222.0" y2="86.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="18.0" y1="69.0" x2="222.0" y2="69.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="18.0" y1="52.0" x2="222.0" y2="52.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="18.0" y1="35.0" x2="222.0" y2="35.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="18.0" y1="18.0" x2="222.0" y2="18.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="18.0" y1="137.0" x2="222.0" y2="137.0" stroke="#888"/>
+  <text x="216.0" y="133.0" font-size="10" fill="#888">x</text>
+  <line x1="120.0" y1="18.0" x2="120.0" y2="222.0" stroke="#888"/>
+  <text x="124.0" y="26.0" font-size="10" fill="#888">y</text>
+  <line x1="18.0" y1="222.0" x2="222.0" y2="18.0" stroke="#2980b9" stroke-width="2.5"/>
+  <circle cx="120.0" cy="120.0" r="3.5" fill="#c0392b"/>
+  <text x="125.0" y="114.0" font-size="10" fill="#c0392b">(0,1)</text>
+  <text x="164.8" y="75.2" font-size="10" fill="#2980b9">y = 2x + 1</text>
+</svg><figcaption><b>Figure 4.4.f1</b></figcaption></figure>
+
+<p>That comparison is the heart of it, so here are the two graphs together once more, with their difference rows underneath <a class="refcode" id="4.4.f2" href="#4.4.f2" data-prompt="Use the Algebra 1 tutor skill to help me with the figure in Lesson 4.4 (reference 4.4.f2). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for the figure in Lesson 4.4">4.4.f2</a>: a constant difference draws a straight line, and a growing difference draws a curve.</p>
+<figure class="fig" id="fig-4.4.f2"><svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+  <line x1="18.0" y1="18.0" x2="18.0" y2="222.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="52.0" y1="18.0" x2="52.0" y2="222.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="86.0" y1="18.0" x2="86.0" y2="222.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="154.0" y1="18.0" x2="154.0" y2="222.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="188.0" y1="18.0" x2="188.0" y2="222.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="222.0" y1="18.0" x2="222.0" y2="222.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="18.0" y1="222.0" x2="222.0" y2="222.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="18.0" y1="181.2" x2="222.0" y2="181.2" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="18.0" y1="160.8" x2="222.0" y2="160.8" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="18.0" y1="140.4" x2="222.0" y2="140.4" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="18.0" y1="120.0" x2="222.0" y2="120.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="18.0" y1="99.6" x2="222.0" y2="99.6" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="18.0" y1="79.2" x2="222.0" y2="79.2" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="18.0" y1="58.8" x2="222.0" y2="58.8" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="18.0" y1="38.4" x2="222.0" y2="38.4" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="18.0" y1="18.0" x2="222.0" y2="18.0" stroke="#e8e8e8" stroke-width="1"/>
+  <line x1="18.0" y1="201.6" x2="222.0" y2="201.6" stroke="#888"/>
+  <text x="216.0" y="197.6" font-size="10" fill="#888">x</text>
+  <line x1="120.0" y1="18.0" x2="120.0" y2="222.0" stroke="#888"/>
+  <text x="124.0" y="26.0" font-size="10" fill="#888">y</text>
+  <polyline fill="none" stroke="#8e44ad" stroke-width="2.5" points="18.0,18.0 20.55,27.07 23.1,35.9 25.65,44.51 28.2,52.88 30.75,61.03 33.3,68.95 35.85,76.64 38.4,84.1 40.95,91.33 43.5,98.33 46.05,105.1 48.6,111.64 51.15,117.95 53.7,124.03 56.25,129.88 58.8,135.5 61.35,140.9 63.9,146.06 66.45,151.0 69.0,155.7 71.55,160.18 74.1,164.42 76.65,168.44 79.2,172.22 81.75,175.78 84.3,179.11 86.85,182.21 89.4,185.08 91.95,187.72 94.5,190.13 97.05,192.31 99.6,194.26 102.15,195.98 104.7,197.47 107.25,198.73 109.8,199.76 112.35,200.57 114.9,201.14 117.45,201.49 120.0,201.6 122.55,201.49 125.1,201.14 127.65,200.57 130.2,199.76 132.75,198.73 135.3,197.47 137.85,195.98 140.4,194.26 142.95,192.31 145.5,190.12 148.05,187.72 150.6,185.08 153.15,182.21 155.7,179.11 158.25,175.78 160.8,172.22 163.35,168.44 165.9,164.42 168.45,160.18 171.0,155.7 173.55,151.0 176.1,146.06 178.65,140.9 181.2,135.5 183.75,129.88 186.3,124.03 188.85,117.95 191.4,111.64 193.95,105.1 196.5,98.32 199.05,91.33 201.6,84.1 204.15,76.64 206.7,68.95 209.25,61.03 211.8,52.88 214.35,44.51 216.9,35.9 219.45,27.07 222.0,18.0"/>
+  <circle cx="120.0" cy="201.6" r="3.5" fill="#c0392b"/>
+  <text x="125.0" y="195.6" font-size="10" fill="#c0392b">vertex (0,0)</text>
+  <circle cx="188.0" cy="120.0" r="3.5" fill="#c0392b"/>
+  <text x="193.0" y="114.0" font-size="10" fill="#c0392b">(2,4)</text>
+</svg><figcaption><b>Figure 4.4.f2</b></figcaption></figure>
+
+<p>One thing the constant-difference shortcut relies on: it only works when the x-values step evenly, so check the inputs are evenly spaced first, then read the output differences.</p>
+<p>The four faces are meant to be reversible, not just read left to right. You can go from equation to table by plugging in x-values, and you can go from table back to equation by reading the steady step. For a linear table, that backward move is short: the constant step is the number that sits in front of x, and the output at x = 0 is the constant added on. Once you've recovered the equation, check it against one row of the table to be sure.</p>
+<div class="cl-terms">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6.5C9.5 5 6 5 3.5 6.5V18C6 16.5 9.5 16.5 12 18C14.5 16.5 18 16.5 20.5 18V6.5C18 5 14.5 5 12 6.5Z"/><path d="M12 6.5V18"/></svg>New words</span></p>
+<ul>
+<li><a class="refcode" id="4.4.d1" href="#4.4.d1" data-prompt="Use the Algebra 1 tutor skill to help me with a key term in Lesson 4.4 (reference 4.4.d1). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for a key term in Lesson 4.4">4.4.d1</a> <strong>Linear function:</strong> constant rate of change; its graph is a straight line; its equation has the form y=mx+b (equivalently f(x)=mx+b), where (looking ahead to Unit 5) m is that constant step (how much the output changes per +1 in x) and b is the starting output at x=0. For now you don't need to manipulate m and b; just recognize the straight-line shape and the constant step.</li>
+<li><a class="refcode" id="4.4.d2" href="#4.4.d2" data-prompt="Use the Algebra 1 tutor skill to help me with a key term in Lesson 4.4 (reference 4.4.d2). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for a key term in Lesson 4.4">4.4.d2</a> <strong>Constant rate of change:</strong> equal steps in x always produce equal steps in the output. (This <em>is</em> the unit rate from Unit 3, and it becomes <strong>slope</strong> in Unit 5.)</li>
+<li><a class="refcode" id="4.4.d3" href="#4.4.d3" data-prompt="Use the Algebra 1 tutor skill to help me with a key term in Lesson 4.4 (reference 4.4.d3). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for a key term in Lesson 4.4">4.4.d3</a> <strong>Nonlinear function:</strong> rate of change is <em>not</em> constant; the graph curves (e.g. y=x²).</li>
+</ul>
+<p>Read each example a line at a time. The move to study here is reading the constant step off a table.</p>
+</div>
+<section class="worked">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19.5V15L15.5 4.5 19.5 8.5 9 19Z"/><path d="M13.5 6.5 17.5 10.5"/></svg>Worked example</span></p>
+<p><a class="refcode" id="4.4.w1" href="#4.4.w1" data-prompt="Use the Algebra 1 tutor skill to help me with worked example 1 in Lesson 4.4 (reference 4.4.w1). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for worked example 1 in Lesson 4.4">4.4.w1</a>
+<em>Example 1: build a table from f(x)=2x+1; note the constant step.</em></p>
+<table>
+<thead>
+<tr>
+<th>x</th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>f(x)=2x+1</td>
+<td>1</td>
+<td>3</td>
+<td>5</td>
+<td>7</td>
+</tr>
+</tbody>
+</table>
+<p>Output differences: 3-1=2, 5-3=2, 7-5=2, so it's <strong>constant +2</strong> for each +1 in x. <strong>Linear.</strong> That constant +2 is the rate of change (the future slope).</p>
+<p><a class="refcode" id="4.4.w2" href="#4.4.w2" data-prompt="Use the Algebra 1 tutor skill to help me with worked example 2 in Lesson 4.4 (reference 4.4.w2). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for worked example 2 in Lesson 4.4">4.4.w2</a>
+<em>Example 2: contrast with y=x².</em></p>
+<table>
+<thead>
+<tr>
+<th>x</th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>y=x^2</td>
+<td>0</td>
+<td>1</td>
+<td>4</td>
+<td>9</td>
+</tr>
+</tbody>
+</table>
+<p>Differences: 1-0=1, 4-1=3, 9-4=5, giving 1,3,5, <strong>not constant</strong>. <strong>Nonlinear</strong> (this curve is a parabola).</p>
+<p><a class="refcode" id="4.4.w3" href="#4.4.w3" data-prompt="Use the Algebra 1 tutor skill to help me with worked example 3 in Lesson 4.4 (reference 4.4.w3). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for worked example 3 in Lesson 4.4">4.4.w3</a>
+<em>Example 3: linear-or-not from a table (no equation given).</em></p>
+<table>
+<thead>
+<tr>
+<th>x</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>y</td>
+<td>1</td>
+<td>4</td>
+<td>7</td>
+<td>10</td>
+</tr>
+</tbody>
+</table>
+<p>Equal x-steps of +1; output steps 3,3,3, so it's constant. <strong>Linear.</strong> (Rule: y=3x-2.)</p>
+<p><a class="refcode" id="4.4.w4" href="#4.4.w4" data-prompt="Use the Algebra 1 tutor skill to help me with worked example 4 in Lesson 4.4 (reference 4.4.w4). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for worked example 4 in Lesson 4.4">4.4.w4</a>
+<em>Example 4: same relationship, four faces (translate in both directions).</em></p>
+<ul>
+<li><strong>Words:</strong> "start at $1, add $2 each step."</li>
+<li><strong>Equation:</strong> f(x)=2x+1.</li>
+<li><strong>Table:</strong> the table from Example 1.</li>
+<li><strong>Graph:</strong> a straight line through (0,1) rising 2 for every 1 right.</li>
+</ul>
+<p>All four describe one function, and the skill runs <strong>both ways</strong>: given the equation you can <em>build the table</em> (plug in x=0,1,2,3 to get 1,3,5,7), and given the table you can <em>read off the equation</em> (the constant step +2 is the number in front of x, and the value at x=0 is the +1, so f(x)=2x+1). Practice going each direction, not just left-to-right.</p>
+<p><a class="refcode" id="4.4.w5" href="#4.4.w5" data-prompt="Use the Algebra 1 tutor skill to help me with worked example 5 in Lesson 4.4 (reference 4.4.w5). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for worked example 5 in Lesson 4.4">4.4.w5</a>
+<em>Example 5: both directions explicitly (table ↔ equation).</em></p>
+<ul>
+<li><strong>Equation → table.</strong> From g(x)=5x−2, build the table at x=0,1,2,3: g(0)=−2, g(1)=3, g(2)=8, g(3)=13.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>x</th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>g(x)=5x−2</td>
+<td>−2</td>
+<td>3</td>
+<td>8</td>
+<td>13</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Table → equation.</strong> Now go the other way. Given this table</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>x</th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>y</td>
+<td>2</td>
+<td>5</td>
+<td>8</td>
+<td>11</td>
+</tr>
+</tbody>
+</table>
+<p>read the constant step (5−2=3, 8−5=3, 11−8=3 → +3 per step, so 3 sits in front of x) and the start at x=0 (that's 2), giving <strong>y=3x+2</strong>. Check it against the table: 3(2)+2=8. Same relationship, recovered from numbers alone.</p>
+<p>After all that translating, here's a clean one to settle the idea. Outputs go 2, 2, 2, 2 for x = 0, 1, 2, 3. The steps are 0, 0, 0, which is constant, so it's <strong>linear</strong>, with a rate of change of 0. A perfectly flat, steady relationship is still linear; the steady step just happens to be nothing.</p>
+<p>A couple of slips to know about, now that you've done the real thing a few times. The first sounds harmless: deciding a relationship is linear because the <em>outputs</em> climb by the same amount, without first checking that the <em>inputs</em> step evenly. Equal output-jumps only mean a straight line when they're measured over equal input-steps, so look at the x-row first.</p>
+<p>The second is a worry that the curve from Example 2 somehow "failed." It didn't. A curve is still a perfectly good function. It passes the vertical line test from Lesson 4.2; it simply isn't a <em>straight</em> one. Nonlinear isn't broken; it's just not a line.</p>
+</section>
+<div class="cl-check">
+<p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M9.6 9.6a2.6 2.6 0 1 1 3.3 2.5c-.9.3-1.4.9-1.4 1.8"/><circle cx="11.5" cy="16.6" r=".9" fill="currentColor" stroke="none"/></svg>Check yourself</span></p>
+<ol>
+<li><a class="refcode" id="4.4.c1" href="#4.4.c1" data-prompt="Use the Algebra 1 tutor skill to help me with a check-for-understanding question in Lesson 4.4 (reference 4.4.c1). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for a check-for-understanding question in Lesson 4.4">4.4.c1</a> Here's a table with x = 0,1,2,3 and y = 2,2,2,2. Linear or not, and what's its rate of change? (Linear: the output steps are 0, 0, 0, which is constant, and the rate of change is 0.)</li>
+<li><a class="refcode" id="4.4.c2" href="#4.4.c2" data-prompt="Use the Algebra 1 tutor skill to help me with a check-for-understanding question in Lesson 4.4 (reference 4.4.c2). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for a check-for-understanding question in Lesson 4.4">4.4.c2</a> Turn the words <em>"start at 10 and lose 1 each step"</em> into an equation and a four-row table. (Equation: y = 10 − x. Table at x=0,1,2,3: outputs 10, 9, 8, 7.)</li>
+<li><a class="refcode" id="4.4.c3" href="#4.4.c3" data-prompt="Use the Algebra 1 tutor skill to help me with a check-for-understanding question in Lesson 4.4 (reference 4.4.c3). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for a check-for-understanding question in Lesson 4.4">4.4.c3</a> A table's outputs go 2, 6, 12, 20 for x=1,2,3,4. Linear or nonlinear, and how can you tell without graphing? (The x-steps are even, +1 each. The output steps are 4, 6, 8, not constant, so it's nonlinear; you can tell straight from the changing differences.)</li>
+</ol>
+<p>These mix building tables, classifying, and translating both ways, so expect to switch gears between them. Each answer is at the end of the lesson. If one stalls you, find the worked example it's based on.</p>
+<section class="practice">
+<span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4.5" width="15.5" height="15.5" rx="2.5"/><path d="M7.5 10 9 11.5 12 8.5"/><path d="M14 10H16.5"/><path d="M7.5 15H16.5"/></svg>Practice</span>
+<p class="practice-sub">A. Fill the table from the rule.</p>
+<div class="prow"><span class="prob"><a class="refcode" id="4.4.1" href="#4.4.1" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 1 in Lesson 4.4 (reference 4.4.1). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 1 in Lesson 4.4">4.4.1</a> f(x)=3x: find outputs at x=0,1,2,3,4.</span><details class="qcheck"><summary><span class="qc-show">Reveal answer</span><span class="qc-hide">Hide</span><span class="vh"> to problem 1</span></summary><span class="qa">0,3,6,9,12 — constant +3, linear.</span></details></div>
+<div class="prow"><span class="prob"><a class="refcode" id="4.4.2" href="#4.4.2" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 2 in Lesson 4.4 (reference 4.4.2). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 2 in Lesson 4.4">4.4.2</a> k(x)=10-x: find outputs at x=0,1,2,3.</span><details class="qcheck"><summary><span class="qc-show">Reveal answer</span><span class="qc-hide">Hide</span><span class="vh"> to problem 2</span></summary><span class="qa">10,9,8,7 — constant -1, linear.</span></details></div>
+<div class="prow"><span class="prob"><a class="refcode" id="4.4.3" href="#4.4.3" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 3 in Lesson 4.4 (reference 4.4.3). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 3 in Lesson 4.4">4.4.3</a> f(x)=2x+1: find outputs at x=-2,-1,0,1.</span><details class="qcheck"><summary><span class="qc-show">Reveal answer</span><span class="qc-hide">Hide</span><span class="vh"> to problem 3</span></summary><span class="qa">-3,-1,1,3 — constant +2, linear.</span></details></div>
+<p class="practice-sub">B. Linear or nonlinear? (equal x-steps; check the output differences)</p>
+<div class="prow"><span class="prob"><a class="refcode" id="4.4.4" href="#4.4.4" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 4 in Lesson 4.4 (reference 4.4.4). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 4 in Lesson 4.4">4.4.4</a> x:0,1,2,3 → y:1,4,7,10</span><details class="qcheck"><summary><span class="qc-show">Reveal answer</span><span class="qc-hide">Hide</span><span class="vh"> to problem 4</span></summary><span class="qa"><strong>Linear</strong> — output steps 3,3,3.</span></details></div>
+<div class="prow"><span class="prob"><a class="refcode" id="4.4.5" href="#4.4.5" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 5 in Lesson 4.4 (reference 4.4.5). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 5 in Lesson 4.4">4.4.5</a> x:0,1,2,3 → y:0,1,4,9</span><details class="qcheck"><summary><span class="qc-show">Reveal answer</span><span class="qc-hide">Hide</span><span class="vh"> to problem 5</span></summary><span class="qa"><strong>Nonlinear</strong> — steps 1,3,5 (this is y=x²).</span></details></div>
+<div class="prow"><span class="prob"><a class="refcode" id="4.4.6" href="#4.4.6" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 6 in Lesson 4.4 (reference 4.4.6). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 6 in Lesson 4.4">4.4.6</a> x:1,2,3,4 → y:5,5,5,5</span><details class="qcheck"><summary><span class="qc-show">Reveal answer</span><span class="qc-hide">Hide</span><span class="vh"> to problem 6</span></summary><span class="qa"><strong>Linear</strong> — steps 0,0,0 (a constant/horizontal function; rate of change 0).</span></details></div>
+<div class="prow"><span class="prob"><a class="refcode" id="4.4.7" href="#4.4.7" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 7 in Lesson 4.4 (reference 4.4.7). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 7 in Lesson 4.4">4.4.7</a> x:0,1,2,3 → y:1,2,4,8</span><details class="qcheck"><summary><span class="qc-show">Reveal answer</span><span class="qc-hide">Hide</span><span class="vh"> to problem 7</span></summary><span class="qa"><strong>Nonlinear</strong> — steps 1,2,4 (doubling).</span></details></div>
+<p class="practice-sub">C. Match the representation.</p>
+<div class="prow"><span class="prob"><a class="refcode" id="4.4.8" href="#4.4.8" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 8 in Lesson 4.4 (reference 4.4.8). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 8 in Lesson 4.4">4.4.8</a> Which equation matches the words <em>"start at $1 and add $2 each step"</em>: (a) f(x)=x+2, (b) f(x)=2x+1, (c) f(x)=2x?</span><details class="qcheck"><summary><span class="qc-show">Reveal answer</span><span class="qc-hide">Hide</span><span class="vh"> to problem 8</span></summary><span class="qa"><strong>(b)</strong> f(x)=2x+1 — start 1 at x=0, add 2 per step.</span></details></div>
+<p class="practice-sub">D. Translate both directions (table ↔ equation).</p>
+<div class="prow"><span class="prob"><a class="refcode" id="4.4.9" href="#4.4.9" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 9 in Lesson 4.4 (reference 4.4.9). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 9 in Lesson 4.4">4.4.9</a> <strong>Table → equation.</strong> The table x:0,1,2,3 → y:2,5,8,11 is linear. Write its equation.</span><details class="qcheck"><summary><span class="qc-show">Reveal answer</span><span class="qc-hide">Hide</span><span class="vh"> to problem 9</span></summary><span class="qa"><strong>y=3x+2</strong> — constant step +3 (so 3 in front of x), value 2 at x=0. Check: 3(3)+2=11.</span></details></div>
+<div class="prow"><span class="prob"><a class="refcode" id="4.4.10" href="#4.4.10" data-prompt="Use the Algebra 1 tutor skill to help me with practice problem 10 in Lesson 4.4 (reference 4.4.10). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for practice problem 10 in Lesson 4.4">4.4.10</a> <strong>Equation → table.</strong> From g(x)=5x-2, fill the outputs at x=0,1,2,3.</span><details class="qcheck"><summary><span class="qc-show">Reveal answer</span><span class="qc-hide">Hide</span><span class="vh"> to problem 10</span></summary><span class="qa">-2, 3, 8, 13 — at x=0,1,2,3 (constant step +5, linear).</span></details></div>
+</section>
+</div>
+<div class="ldiv" aria-hidden="true"><i></i><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3.5 20.5 12 12 20.5 3.5 12Z"/></svg><i></i></div>
+<p>You can now decide whether a pairing is a function and run the vertical line test on a graph; read and use f(x) without mistaking it for multiplication, evaluate at numbers and at negatives without losing a sign, and give a domain and range; and move one relationship between words, a table, an equation, and a graph, telling a straight line from a curve by whether its rate of change holds steady.</p>
+<p>A few threads worth carrying forward. Every time you evaluated a function, you were also practicing order of operations and signed arithmetic from Units 1 and 2, which is why those keep mattering. The constant rate of change from this lesson is the same unit rate from Unit 3, and in Unit 5 it gets one more name, slope. A good warm-up before that unit: build a table from f(x) = mx + b and read off its constant step.</p>
+<p>From here on, when a line or a curve shows up, it helps to hear it as a function. The line <em>is</em> a function, and f(x) = 2x + 1 just gives it a name.</p>
+<nav class="pagenav" aria-label="Previous and next page">
+<a class="pn-prev" href="unit-04-3.html"><span class="pn-dir">&larr;&nbsp;Back</span><span class="pn-title">Lesson 4.3</span></a>
+<a class="pn-next" href="unit-05.html"><span class="pn-dir">Next&nbsp;&rarr;</span><span class="pn-title">Unit 5</span></a>
+</nav>
+</main>
+<footer><p>A friendly Algebra 1 textbook, made to be read alongside the Claude tutor. Math by KaTeX.</p></footer>
+</div>
+</div>
+<div id="rc-tip" role="tooltip" aria-hidden="true"></div>
+<div id="rc-toast" role="status" aria-live="polite" aria-hidden="true"></div>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  renderMathInElement(document.body, {delimiters: [{left: "$$", right: "$$", display: true}, {left: "\\(", right: "\\)", display: false}], throwOnError: false});
+  var root = document.documentElement, body = document.body;
+  document.getElementById("theme").addEventListener("click", function () {
+    root.classList.toggle("dark");
+    localStorage.setItem("a1-theme", root.classList.contains("dark") ? "dark" : "light");
+  });
+  var menu = document.getElementById("menu");
+  menu.addEventListener("click", function () {
+    var open = body.classList.toggle("nav-open");
+    menu.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+  var sn = document.getElementById("sidenav");
+  if (sn) sn.addEventListener("click", function (e) { if (e.target.closest("a")) body.classList.remove("nav-open"); });
+});
+</script>
+<script>
+(function () {
+  var tip = document.getElementById("rc-tip"), toast = document.getElementById("rc-toast");
+  if (!tip || !toast) return;
+  var toastT = 0, active = null;
+  function hideTip() {
+    tip.classList.remove("show"); tip.setAttribute("aria-hidden", "true");
+    if (active) { active.removeAttribute("aria-describedby"); active = null; }
+  }
+  function showTip(a) {
+    var p = a.getAttribute("data-prompt"); if (!p) return;
+    tip.textContent = "";
+    var h = document.createElement("span"); h.className = "rc-tip-h";
+    h.textContent = "Tutor prompt (click the code to copy):";
+    var q = document.createElement("span"); q.className = "rc-tip-q"; q.textContent = p;
+    tip.appendChild(h); tip.appendChild(q);
+    tip.setAttribute("aria-hidden", "false"); tip.classList.add("show");
+    if (active && active !== a) active.removeAttribute("aria-describedby");
+    active = a; a.setAttribute("aria-describedby", "rc-tip");  // expose the prompt text to screen readers
+    var r = a.getBoundingClientRect(), t = tip.getBoundingClientRect();
+    var top = r.top - t.height - 8;
+    if (top < 8) {                                  // no room above: place below, then clamp to the viewport
+      top = r.bottom + 8;
+      if (top + t.height > window.innerHeight - 8) top = Math.max(8, window.innerHeight - t.height - 8);
+    }
+    var left = Math.max(8, Math.min(r.left + r.width / 2 - t.width / 2, window.innerWidth - t.width - 8));
+    tip.style.top = top + "px"; tip.style.left = left + "px";
+  }
+  function showToast(msg) {
+    toast.textContent = msg; toast.classList.add("show"); toast.setAttribute("aria-hidden", "false");
+    if (toastT) clearTimeout(toastT);
+    toastT = setTimeout(function () {
+      toast.classList.remove("show"); toast.setAttribute("aria-hidden", "true");
+    }, 2600);
+  }
+  function fallbackCopy(text, ok) {
+    try {
+      var ta = document.createElement("textarea"); ta.value = text;
+      ta.style.position = "fixed"; ta.style.top = "-1000px"; ta.style.opacity = "0";
+      document.body.appendChild(ta); ta.focus(); ta.select();
+      var done = document.execCommand("copy"); document.body.removeChild(ta);
+      if (done) { ok(); } else { showToast("Select the prompt above and copy it."); }
+    } catch (e) { showToast("Select the prompt above and copy it."); }
+  }
+  function copyText(text, ok) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(ok, function () { fallbackCopy(text, ok); });
+    } else { fallbackCopy(text, ok); }
+  }
+  document.addEventListener("pointerover", function (e) {
+    var a = e.target.closest && e.target.closest(".refcode"); if (a) showTip(a);
+  });
+  document.addEventListener("pointerout", function (e) {
+    var a = e.target.closest && e.target.closest(".refcode");
+    if (a && !a.contains(e.relatedTarget)) hideTip();
+  });
+  document.addEventListener("focusin", function (e) {
+    var a = e.target.closest && e.target.closest(".refcode"); if (a) showTip(a);
+  });
+  document.addEventListener("focusout", function (e) {
+    if (e.target.closest && e.target.closest(".refcode")) hideTip();
+  });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") hideTip(); });
+  window.addEventListener("scroll", hideTip, true);
+  window.addEventListener("resize", hideTip);
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest && e.target.closest(".refcode"); if (!a) return;
+    e.preventDefault();
+    copyText(a.getAttribute("data-prompt") || a.textContent, function () {
+      showToast("Copied. Paste it into Claude to start.");
+    });
+  });
+})();
+</script>
+</body>
+</html>

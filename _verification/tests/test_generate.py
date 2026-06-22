@@ -7,7 +7,7 @@ def test_load_ssot_shape():
     ssot = generate.load_ssot()
     assert len(ssot.units) == 13                       # 12 units + appendix A
     total = sum(len(u.lessons) for u in ssot.units)
-    assert total == 53                                  # 50 core + 3 appendix (unit 1 +Factors&exponents; unit 2 split: 2.5 refresher + 2.6 equations)
+    assert total == 54                                  # 50 core + 3 appendix (unit 1 +Factors&exponents; unit 2 split: 2.5 refresher + 2.6 equations) + the Unit-4 graphs primer (4.1)
     u5 = next(u for u in ssot.units if u.id == "5")
     assert u5.title == "Linear Functions & Their Graphs"
     assert [l.id for l in u5.lessons][0] == "5.1"
