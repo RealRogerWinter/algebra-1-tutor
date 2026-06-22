@@ -105,8 +105,8 @@ The grid splits into four corners around the origin; those corners get names in 
 **Why it matters:** "Function" is the word the rest of the course is built on. Lines, sequences, and parabolas are all functions; getting the definition clean now pays off in every later unit.
 
 **New terms:**
-- {#4.2.d1} **Function** — a **pairing** (a correspondence) that matches **each input with exactly one output**. The pairing can be given any way at all — a list of (input, output) pairs, a table, a graph, or a formula. What makes it a *function* is the one-output-per-input promise, not the form it comes in. (Heads-up: in 4.3 a *formula* like f(x)=3x−1 is called a **rule** — a rule is one common *way* to give a function's pairing, not the definition itself. A pair-list with no formula is still a function.)
-- {#4.2.d2} **Input / output** — what you feed in, and what comes back, written as a pair (input, output). The inputs form one set and the outputs form another; in 4.3 those sets get the names **domain** and **range**. (Later the input is also called the variable and the output its value.)
+- {#4.2.d1} **Function** — a **pairing** (a correspondence) that matches **each input with exactly one output**. The pairing can be given any way at all — a list of (input, output) pairs, a table, a graph, or a formula. What makes it a *function* is the one-output-per-input promise, not the form it comes in.
+- {#4.2.d2} **Input / output** — what you feed in, and what comes back, written as a pair (input, output). The inputs form one set and the outputs form another; in 4.3 those sets get the names **domain** and **range**.
 - {#4.2.d3} **Vertical line test** — a graph is a function exactly when **every vertical line** hits it in **at most one point** (one hit, or none). If some vertical line hits the graph twice, that one input has two outputs, so it is not a function.
 
 **Teaching arc (concrete → pictorial → symbolic):**
@@ -140,8 +140,7 @@ Input 1 is paired with both 2 *and* 3 — one input, two outputs. **No, not a fu
 Input 0 appears twice, giving 4 once and 9 once — two outputs for one input. **No, not a function.**
 
 {#4.2.w5}
-*Example 5 — a graph (vertical line test).* A non-vertical straight line such as y=2x+1: sweep a vertical line across it — it touches exactly once everywhere. **Function.** {#4.2.f2} A circle centered at the origin, or a sideways "U" (a parabola opening rightward): a vertical line through the middle hits it **twice**. **Not a function.** {#4.2.f3}
-One straight line is the exception: a **vertical** line such as x=3 is *not* a function — every point on it shares the same input x=3, so that single input has infinitely many outputs. It is the cleanest case of "one input, many outputs." {#4.2.f4}
+*Example 5 — a graph (vertical line test).* Try three graphs. A straight line such as y=2x+1: the test line hits once wherever you put it. **Function.** {#4.2.f2} A circle centered at the origin: a vertical line through the middle hits it in **two** places at once. **Not a function.** {#4.2.f3} The vertical line x=3: the test line lands right on top of it and hits at every height, so that one input has infinitely many outputs. **Not a function.** {#4.2.f4}
 
 **Watch for:**
 - **"Any repeat means it's not a function."** Tell: student rejects {(1,5),(2,5)}. Repair: back to the vending machine — "two buttons, same snack: is the machine broken? No." Then point only at the *input* column. (Root: same asymmetry as `misconceptions.md` §2 — read what the structure actually says, not a memorized "no repeats" rule.)

@@ -275,8 +275,9 @@ def _r_vlt(s):
     elif shape == "vline":
         vx, vy1 = M(s["k"], ymax); _, vy2 = M(s["k"], ymin)
         out.append(f'<line x1="{vx}" y1="{vy1}" x2="{vx}" y2="{vy2}" stroke="{col}" stroke-width="2.5"/>')
-    if shape != "vline":
-        px, ty1 = M(s["test_x"], ymax); _, ty2 = M(s["test_x"], ymin)
+    _tx = s.get("test_x", s.get("k"))
+    if _tx is not None:
+        px, ty1 = M(_tx, ymax); _, ty2 = M(_tx, ymin)
         out.append(f'<line x1="{px}" y1="{ty1}" x2="{px}" y2="{ty2}" stroke="#c0392b" stroke-width="1.5" stroke-dasharray="5 3"/>')
     for (mx, my, lab) in s.get("marks", []):
         out.append(_dot(M, mx, my))
@@ -473,17 +474,17 @@ FIGURES = [
     {"code": "4.1.f5", "lesson": "4.1", "type": "plane", "xwindow": [-1, 7], "ywindow": [-1, 7],
      "marks": [(1, 2, "(1, 2)"), (2, 4, "(2, 4)"), (3, 6, "(3, 6)")], "caption": "Example 4: (1, 2), (2, 4), (3, 6) fall in a row"},
     # Unit 4 — the vertical line test (4.2): a graph + a sweeping vertical test line, hits marked
-    {"code": "4.2.f1", "lesson": "4.2", "type": "vlt", "shape": "uparabola", "a": 1, "b": 0, "c": 0,
-     "xwindow": [-3, 3], "ywindow": [-1, 9], "test_x": 1, "marks": [(1, 1, "(1, 1)")],
+    {"code": "4.2.f1", "lesson": "4.2", "type": "vlt", "shape": "line", "m": 1, "b": 0,
+     "xwindow": [-4, 4], "ywindow": [-4, 4], "test_x": 2, "marks": [(2, 2, "(2, 2)")],
      "caption": "a function: the vertical line meets the graph in just one place"},
     {"code": "4.2.f2", "lesson": "4.2", "type": "vlt", "shape": "line", "m": 2, "b": 1,
      "xwindow": [-3, 3], "ywindow": [-5, 7], "test_x": 1, "marks": [(1, 3, "(1, 3)")],
      "caption": "y = 2x + 1: the vertical line hits once — a function"},
     {"code": "4.2.f3", "lesson": "4.2", "type": "vlt", "shape": "circle", "r": 5,
-     "xwindow": [-6, 6], "ywindow": [-6, 6], "test_x": 3, "marks": [(3, 4, "(3, 4)"), (3, -4, "(3, -4)")],
+     "xwindow": [-6, 6], "ywindow": [-6, 6], "test_x": 0, "marks": [(0, 5, "(0, 5)"), (0, -5, "(0, -5)")],
      "caption": "a circle: the vertical line hits twice — not a function"},
-    {"code": "4.2.f4", "lesson": "4.2", "type": "vlt", "shape": "vline", "k": 3,
-     "xwindow": [-1, 5], "ywindow": [-4, 4], "marks": [(3, -2, "(3, -2)"), (3, 1, "(3, 1)"), (3, 3, "(3, 3)")],
+    {"code": "4.2.f4", "lesson": "4.2", "type": "vlt", "shape": "vline", "k": 3, "test_x": 3,
+     "xwindow": [-1, 5], "ywindow": [-4, 4], "marks": [(3, -3, ""), (3, -1, ""), (3, 1, "(3, 1)"), (3, 3, "")],
      "caption": "x = 3: one input, many outputs — not a function"},
     # Unit 5 — the coordinate plane; writing a line from a point + slope
     {"code": "5.1.f1", "lesson": "5.1", "type": "plane", "xwindow": [-5, 5], "ywindow": [-5, 5],
