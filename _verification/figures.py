@@ -370,6 +370,9 @@ FIGURES = [
     # Unit 1 — factors: 12 as its rectangles (1x12, 2x6, 3x4); side lengths are the factor pairs
     {"code": "1.4.f1", "lesson": "1.4", "type": "factor_array", "num": 12,
      "pairs": [[1, 12], [2, 6], [3, 4]], "caption": "the factors of 12 as rectangles: 1x12, 2x6, 3x4"},
+    # Unit 4 — the coordinate plane intro; the two worked points plotted (no quadrant labels yet)
+    {"code": "4.1.f1", "lesson": "4.1", "type": "plane", "xwindow": [-5, 5], "ywindow": [-5, 5],
+     "marks": [(3, 2, "(3, 2)"), (-2, -1, "(-2, -1)")], "caption": "plotting (3, 2) and (-2, -1) on the plane"},
     # Unit 5 — the coordinate plane; writing a line from a point + slope
     {"code": "5.1.f1", "lesson": "5.1", "type": "plane", "xwindow": [-5, 5], "ywindow": [-5, 5],
      "quadrants": [(2.7, 2.7, "(+, +)"), (-2.7, 2.7, "(-, +)"), (-2.7, -2.7, "(-, -)"), (2.7, -2.7, "(+, -)")],

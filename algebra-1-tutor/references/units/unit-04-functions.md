@@ -48,7 +48,7 @@ Restate the one-liner the student can repeat: *"Start at the origin; across firs
 *Example 1: plot (3, 2).* Start at the origin. The first number is 3, so step 3 to the right. The second number is 2, so step 2 up. Mark the point there. Across first, then up.
 
 {#4.1.w2}
-*Example 2: plot (−2, −1).* Start at the origin again. The first number is −2, so step 2 to the left (left because it's negative). The second number is −1, so step 1 down (down because it's negative). The point lands below and to the left of the origin. Same routine as before; only the directions change with the signs.
+*Example 2: plot (−2, −1).* Start at the origin again. The first number is −2, so step 2 to the left (left because it's negative). The second number is −1, so step 1 down (down because it's negative). The point lands below and to the left of the origin. Same routine as before; only the directions change with the signs. Here are both points on one plane {#4.1.f1}.
 
 {#4.1.w3}
 *Example 3: read a dot back into an address.* A dot sits 1 step left of the origin and 3 steps up. Left means the across number is negative, so x is −1; up means the second number is positive, so y is 3. Its address is (−1, 3). Reading a point is just plotting in reverse: see how far across, then how far up or down.
