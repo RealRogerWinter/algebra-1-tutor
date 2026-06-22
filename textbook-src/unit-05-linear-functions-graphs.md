@@ -107,7 +107,7 @@ To test (3, 5) on y = 2x − 1, substitute x = 3 and see what y the equation giv
 <!--viz:interactive_graph#1-->
 
 **New terms:**
-- {#5.2.d1} **Table of values:** a list of x inputs and their computed y outputs, exactly the input→output table from Unit 4.3, now plotted.
+- {#5.2.d1} **Table of values:** a list of x inputs and their computed y outputs, exactly the input→output table from Unit 4.4, now plotted.
 - {#5.2.d2} **"On the line":** a point (a,b) is on the line when its coordinates make the equation true. That is, substituting x=a gives y=b.
 
 Graph y = 2x − 1, then test two points against it: (3, 5) and (3, 4). Work through the table a row at a time, and notice the negative input in the first row. That's the row most likely to bite, so compute it slowly.

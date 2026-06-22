@@ -326,9 +326,9 @@ FIGURES = [
      "points": [{"x": 0.75, "label": "3/4"}, {"x": -2.5, "label": "-2.5"}],
      "caption": "number line"},
     # Unit 4 — multiple representations: a line and a parabola
-    {"code": "4.3.f1", "lesson": "4.3", "type": "line", "m": 2, "b": 1,
+    {"code": "4.4.f1", "lesson": "4.4", "type": "line", "m": 2, "b": 1,
      "xwindow": [-3, 3], "ywindow": [-5, 7], "marks": [(0, 1, "(0,1)")], "caption": "y = 2x + 1"},
-    {"code": "4.3.f2", "lesson": "4.3", "type": "parabola", "a": 1, "b": 0, "c": 0,
+    {"code": "4.4.f2", "lesson": "4.4", "type": "parabola", "a": 1, "b": 0, "c": 0,
      "xwindow": [-3, 3], "ywindow": [-1, 9], "marks": [(0, 0, "vertex (0,0)"), (2, 4, "(2,4)")],
      "roots": [0], "caption": "y = x^2"},
     # Unit 5 — linear functions & graphs

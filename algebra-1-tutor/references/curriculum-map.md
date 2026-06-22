@@ -14,7 +14,7 @@ The spine is deliberately ordered so each idea rests on the one before it. But a
 | 1 | **Foundations & the Language of Algebra** | Variables, the equals sign as a balance, the number system & number line, order of operations, factors & exponents, negative numbers, expressions vs. equations | Arithmetic only |
 | 2 | **Solving Linear Equations** | One- and two-step equations, like terms, distributive property, variables on both sides, fractions in equations | Unit 1 (esp. negatives, order of operations) |
 | 3 | **Proportional Reasoning (the bridge to linearity)** | Ratios, rates, unit rate, proportions, percents | Unit 2 (solving), fraction comfort |
-| 4 | **Introducing Functions** | What a function is, f(x) notation, domain & range, table/graph/equation/words | Unit 2; helped by Unit 3 (rates) |
+| 4 | **Graphs & Functions** | The coordinate plane & plotting; what a function is, f(x) notation, domain & range; table/graph/equation/words | Unit 2; helped by Unit 3 (rates) |
 | 5 | **Linear Functions & Their Graphs** | Coordinate plane, graphing, slope, slope-intercept, writing equations of lines | Units 3 & 4 (rate, functions) |
 | 6 | **Modeling & Translation** | Turning words into equations; number/age/distance/value & relationship problems; intro scatter plots | Units 2 & 5 |
 | 7 | **Systems of Equations** | Two equations, two unknowns: graphing, substitution, elimination, special cases | Units 5 & 6 |
@@ -57,10 +57,10 @@ Functions (Unit 4) are a **backbone, not a side topic** — once introduced, nar
 - 3.2 Proportions & cross-multiplication
 - 3.3 Percents (three types + percent change)
 
-**Unit 4 — Introducing Functions**
-- 4.1 What is a function (input → one output; vertical line test)
-- 4.2 Function notation f(x), domain & range
-- 4.3 Multiple representations; linear vs. nonlinear
+**Unit 4 — Graphs & Functions**
+- 4.2 What is a function (input → one output; vertical line test)
+- 4.3 Function notation f(x), domain & range
+- 4.4 Multiple representations; linear vs. nonlinear
 
 **Unit 5 — Linear Functions & Their Graphs**
 - 5.1 The coordinate plane

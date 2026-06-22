@@ -99,7 +99,7 @@ Offer the artifact (computed screen coords, Template 2 mapping): (3,2)→(170,70
 **Goal:** Build a table of values from a linear equation, plot the points, connect them into a line, and test whether a given point lies *on* the line by substitution.
 **Why it matters:** This is the bridge from "equation" to "picture." It also teaches the meaning of a solution to a two-variable equation — every point on the line is a solution; everything off it is not.
 **New terms:**
-- {#5.2.d1} **Table of values:** a list of x inputs and their computed y outputs — exactly the input→output table from Unit 4.3, now plotted.
+- {#5.2.d1} **Table of values:** a list of x inputs and their computed y outputs — exactly the input→output table from Unit 4.4, now plotted.
 - {#5.2.d2} **"On the line":** a point (a,b) is on the line when its coordinates make the equation true — i.e. substituting x=a gives y=b.
 
 **Teaching arc (concrete → pictorial → symbolic):**

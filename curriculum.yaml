@@ -41,15 +41,15 @@ units:
       - { id: "3.3", title: "Percents" }
   - id: 4
     slug: functions
-    title: "Introducing Functions"
-    short_title: "Functions"
-    description: "What a function is, f(x) notation, domain & range, table/graph/equation/words"
+    title: "Graphs & Functions"
+    short_title: "Graphs & Functions"
+    description: "The coordinate plane & plotting; what a function is, f(x) notation, domain & range; table/graph/equation/words"
     prerequisites: "Unit 2; helped by Unit 3 (rates)"
     optional: false
     lessons:
-      - { id: "4.1", title: "What is a function" }
-      - { id: "4.2", title: "Function notation f(x), domain & range" }
-      - { id: "4.3", title: "Multiple representations; linear vs. nonlinear" }
+      - { id: "4.2", title: "What is a function" }
+      - { id: "4.3", title: "Function notation f(x), domain & range" }
+      - { id: "4.4", title: "Multiple representations; linear vs. nonlinear" }
   - id: 5
     slug: linear-functions-graphs
     title: "Linear Functions & Their Graphs"

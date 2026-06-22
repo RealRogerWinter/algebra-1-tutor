@@ -31,7 +31,7 @@ You can read the whole course as a textbook online at <https://realrogerwinter.g
 | 1 | Foundations & the Language of Algebra | Variables, the equals sign as a balance, the number system & number line, order of operations, factors & exponents, negative numbers, expressions vs. equations |
 | 2 | Solving Linear Equations | One- and two-step equations, like terms, distributive property, variables on both sides, fractions in equations |
 | 3 | Proportional Reasoning (the bridge to linearity) | Ratios, rates, unit rate, proportions, percents |
-| 4 | Introducing Functions | What a function is, f(x) notation, domain & range, table/graph/equation/words |
+| 4 | Graphs & Functions | The coordinate plane & plotting; what a function is, f(x) notation, domain & range; table/graph/equation/words |
 | 5 | Linear Functions & Their Graphs | Coordinate plane, graphing, slope, slope-intercept, writing equations of lines |
 | 6 | Modeling & Translation | Turning words into equations; number/age/distance/value & relationship problems; intro scatter plots |
 | 7 | Systems of Equations | Two equations, two unknowns: graphing, substitution, elimination, special cases |
