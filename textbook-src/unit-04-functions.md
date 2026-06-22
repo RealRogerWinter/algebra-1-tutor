@@ -1,12 +1,79 @@
 # Unit 4: Graphs & Functions
 
-> This unit is about one big idea: a function, a dependable way of matching each thing you put in to one thing that comes back. Almost everything later in the course is built on it. Working with simple equations and plugging numbers into expressions is what helps most here, so it's good to have those fresh.
+> This unit is about one big idea: a function, a dependable way of matching each thing you put in to one thing that comes back. Almost everything later in the course is built on it. First you set up the flat grid every function gets drawn on, then you meet the function idea itself. Working with simple equations and plugging numbers into expressions is what helps most here, so it's good to have those fresh.
 
 Before you start, a small habit that pays off all through this unit: redo two or three problems from a lesson or two back from memory first. It takes a few minutes and makes the rest of the unit easier.
 
-The one word to get solid is *function*. Once it is, every later topic is a function with a new name: lines, systems, sequences, and the U-shaped curves near the end.
+The first lesson is a short one: the coordinate plane, the grid where a point has an address and a function later turns into a picture you can see. After that the word to get solid is *function*. Once it is, every later topic is a function with a new name: lines, systems, sequences, and the U-shaped curves near the end.
 
 So there's no rush here. The aim is to get comfortable, not to get fast. Each new piece builds on the arithmetic and the equation-solving from earlier units.
+
+---
+
+## Lesson 4.1: What is a graph
+
+You already have one number line from Lesson 1.2, a single line where every number has its spot. One number is enough to pin a place along that line. But a flat page is bigger than a line. To point at a seat in a row, or a place on a map, one number can't say where; you need two, *how far across* and then *how far up or down*.
+
+So take that number line and stand a second one upright, crossing the first at zero. <!--illus:4-1-coordinate-plane--> Now the page is a grid, like the lines on a map that let you name any spot. The across line is the **x-axis**, the up-and-down line is the **y-axis**, and the point where they cross is the **origin**, written (0, 0).
+
+Every point on the grid gets an address written (x, y). The first number is how far across: right is positive, left is negative. The second is how far up or down: up is positive, down is negative. You always read the across number first. That order is the whole idea, and it's why (3, 2) and (2, 3) are two different points, not one point written two ways.
+
+**New terms:**
+- {#4.1.d1} **Coordinate plane:** a flat grid made by two number lines crossing at right angles.
+- {#4.1.d2} **x-axis / y-axis:** the across (horizontal) and up-and-down (vertical) number lines. They cross at the **origin**, (0, 0).
+- {#4.1.d3} **Ordered pair (x, y) / coordinates:** a point's address: *x first* (how far across, right is +, left is −), *then y* (how far up or down, up is +, down is −). Order matters: (3, 2) ≠ (2, 3).
+- {#4.1.d4} **Plot:** to mark the point for an ordered pair by starting at the origin and stepping across, then up or down.
+
+Work through these one at a time, and picture each step on the grid before you read the next line. The move to get comfortable with is starting at the origin every single time.
+
+**Worked examples:**
+
+{#4.1.w1}
+*Example 1: plot (3, 2).* Start at the origin. The first number is 3, so step 3 to the right. The second number is 2, so step 2 up. Mark the point there. Across first, then up.
+
+{#4.1.w2}
+*Example 2: plot (−2, −1).* Start at the origin again. The first number is −2, so step 2 to the left (left because it's negative). The second number is −1, so step 1 down (down because it's negative). The point lands below and to the left of the origin. Same routine as before; only the directions change with the signs.
+
+{#4.1.w3}
+*Example 3: read a dot back into an address.* A dot sits 1 step left of the origin and 3 steps up. Left means the across number is negative, so x is −1; up means the second number is positive, so y is 3. Its address is (−1, 3). Reading a point is just plotting in reverse: see how far across, then how far up or down.
+
+{#4.1.w4}
+*Example 4: a list of pairs becomes a picture.* Take three pairs: (1, 2), (2, 4), (3, 6). Plot each one from the origin: 1 right and 2 up, then 2 right and 4 up, then 3 right and 6 up. Three dots. That is the real point of the grid: a list of number-pairs turns into something you can see. These three happen to fall in a row, but that's not a rule. Sometimes plotted pairs line up and sometimes they stay scattered; you'll see which, and when, later.
+
+You'll notice the grid splits into four corners around the origin. Those corners get names in Unit 5; here you don't need them. Naming a direction, across-then-up, is all it takes to find any point.
+
+**Check for understanding (transfer):**
+1. {#4.1.c1} Is (4, 1) the same point as (1, 4)? (No. (4, 1) is 4 right then 1 up; (1, 4) is 1 right then 4 up. The two land in different spots, because the across number comes first.)
+2. {#4.1.c2} A dot sits 2 steps left and 2 steps down of the origin. Write its ordered pair. ((−2, −2): left makes the across number −2, down makes the second number −2.)
+3. {#4.1.c3} Where do you start to plot any point, and which number do you use first? (Start at the origin, and use x, the across number, first.)
+
+The problems below mix plotting points and reading them back, which takes a little more thought than doing one kind over and over. Every answer is at the end of the lesson if you want to check yourself.
+
+**Practice problems:**
+
+*A. Plot the point (start at the origin; across first, then up or down).*
+1. (5, 1)
+2. (0, 3)
+3. (−3, 2)
+4. (2, −4)
+
+*B. Write the ordered pair.*
+5. 3 across (right), 0 up or down
+6. 0 across, 2 down
+7. A dot 4 steps left of the origin and 1 step up.
+
+*C. True or false?*
+8. (2, 5) is the same point as (5, 2).
+
+**Answer key:**
+1. From the origin, 5 right and 1 up.
+2. From the origin, 0 across and 3 up (it sits on the y-axis).
+3. From the origin, 3 left and 2 up.
+4. From the origin, 2 right and 4 down.
+5. (3, 0).
+6. (0, −2).
+7. (−4, 1).
+8. **False** — (2, 5) is 2 right then 5 up; (5, 2) is 5 right then 2 up, a different point.
 
 ---
 

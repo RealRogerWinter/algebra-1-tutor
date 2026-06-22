@@ -2,6 +2,7 @@
 
 > **Prerequisites:** Unit 2 (solving and evaluating expressions). Helped by Unit 3 — the *unit rate* idea returns here as a function's constant rate of change.
 > **By the end, the student can:**
+> - Plot and read a point on the coordinate plane from its ordered pair (across-then-up), including a point in the negative region.
 > - Decide whether a table, a set of pairs, a graph, or a rule is a function (each input is paired with exactly one output; the vertical line test).
 > - Read and use f(x) notation; evaluate a function at a number and at a simple expression; explain why f(x) is *not* multiplication.
 > - State the domain and range from a small table or list, and for a line.
@@ -11,14 +12,89 @@
 
 Functions are the backbone of everything after this unit — once a student owns them, every later topic (lines, systems, sequences, quadratics) gets *narrated in function language*. So the goal here is fluency and comfort, not speed. From this unit on, when a line or rule shows up, name it as a function: "this line *is* a function; f(x)=2x+1 just names it."
 
-The arc is: (4.2) build the *one-output-per-input* idea with the **vending-machine** picture and the vertical line test; (4.3) name the rule with **f(x)** notation using the **recipe** picture, then pin down domain and range; (4.4) show that table ↔ graph ↔ equation ↔ words are four faces of *one* relationship, and split linear from nonlinear (constant rate of change → the seed of slope, forward to Unit 5).
+The arc is: (4.1) set up the **coordinate plane** every function will be pictured on — two number lines, the origin, and an ordered pair as a point's address — as a short from-first-principles runway; (4.2) build the *one-output-per-input* idea with the **vending-machine** picture and the vertical line test; (4.3) name the rule with **f(x)** notation using the **recipe** picture, then pin down domain and range; (4.4) show that table ↔ graph ↔ equation ↔ words are four faces of *one* relationship, and split linear from nonlinear (constant rate of change → the seed of slope, forward to Unit 5). Keep 4.1 minimal: it teaches the plane just enough to plot and read a point, and deliberately leaves the four quadrants to Unit 5.1 — across-then-up is all a student needs here.
 
 **The three biggest traps:**
 1. **"Two outputs is fine."** Students often think *any* repetition breaks a function. The exact rule: two inputs *may* share an output (fine); one input may *not* have two outputs (broken). Drill the asymmetry directly.
 2. **f(x) read as multiplication** — "f times x." This is the single most important fix in 4.3. Name it early, every time. (Ties to the variable misconception, `misconceptions.md` §2 — letter as object/operation.)
 3. **Sign slips when evaluating at negatives**, e.g. f(-2) with a squared or doubled term. Lean on the substitution habit and `misconceptions.md` §3 (negatives).
 
-**Pacing:** an adult who already evaluates expressions can move briskly through 4.2–4.3; spend the saved time on 4.4's representation-translation, which is where durable understanding lives. Use the **backward-faded** evaluation scripts from `pedagogy.md` if notation feels shaky. Interleave: every evaluation is also an order-of-operations and a negatives rep — call that out as a free callback to Units 1–2.
+**Pacing:** 4.1 is a short runway — an adult comfortable with a number line can plot and read a point in a few minutes; don't linger, but do anchor the worked negative point (−2, −1) so signs map to directions cleanly. Then an adult who already evaluates expressions can move briskly through 4.2–4.3; spend the saved time on 4.4's representation-translation, which is where durable understanding lives. Use the **backward-faded** evaluation scripts from `pedagogy.md` if notation feels shaky. Interleave: every evaluation is also an order-of-operations and a negatives rep — call that out as a free callback to Units 1–2.
+
+---
+
+## Lesson 4.1: What is a graph
+
+**Goal:** Plot and read a point on the coordinate plane from its ordered pair — across-then-up, including a point in the negative region.
+
+**Why it matters:** Every function in this course gets pictured on one flat grid. Setting it up now, from first principles, means 4.2's vertical line test and Unit 5's lines land on ground the student already stands on. Keep it minimal: the plane just far enough to place and name a point.
+
+**New terms:**
+- {#4.1.d1} **Coordinate plane** — a flat grid made by two number lines crossing at right angles.
+- {#4.1.d2} **x-axis / y-axis** — the across (horizontal) and up-and-down (vertical) number lines. They cross at the **origin**, (0, 0).
+- {#4.1.d3} **Ordered pair (x, y) / coordinates** — a point's address: *x first* (how far across, right is +, left is −), *then y* (how far up or down, up is +, down is −). Order matters: (3, 2) ≠ (2, 3).
+- {#4.1.d4} **Plot** — to mark the point for an ordered pair by starting at the origin and stepping across, then up or down.
+
+**Teaching arc (concrete → pictorial → symbolic):**
+- **Concrete (one number line → two):** "You already have one number line from 1.2 — one number pins a spot *on* it. A flat page is bigger than a line, so one number can't say where (a seat in a row, a place on a map). You need two: *how far across*, then *how far up or down*." Stand a second number line upright crossing the first at zero. **One metaphor only — the map/two-number-lines on-ramp.** (Do *not* tell the Descartes-fly story.)
+- **Pictorial (the grid + an address):** the across line is the **x-axis**, the up-and-down line is the **y-axis**, their crossing is the **origin** (0, 0). Every point has an address (x, y): across first (right +, left −), then up/down (up +, down −). Make "across first" the whole game — (3, 2) and (2, 3) are different points.
+- **Symbolic (plot and read):** to *plot*, start at the origin, step the x-amount across, then the y-amount up/down. To *read* a dot, do it in reverse: how far across (sign tells left/right), then how far up/down. Always start at the origin.
+
+Restate the one-liner the student can repeat: *"Start at the origin; across first, then up or down."*
+
+**Worked examples:**
+
+{#4.1.w1}
+*Example 1: plot (3, 2).* Start at the origin. The first number is 3, so step 3 to the right. The second number is 2, so step 2 up. Mark the point there. Across first, then up.
+
+{#4.1.w2}
+*Example 2: plot (−2, −1).* Start at the origin again. The first number is −2, so step 2 to the left (left because it's negative). The second number is −1, so step 1 down (down because it's negative). The point lands below and to the left of the origin. Same routine as before; only the directions change with the signs.
+
+{#4.1.w3}
+*Example 3: read a dot back into an address.* A dot sits 1 step left of the origin and 3 steps up. Left means the across number is negative, so x is −1; up means the second number is positive, so y is 3. Its address is (−1, 3). Reading a point is just plotting in reverse: see how far across, then how far up or down.
+
+{#4.1.w4}
+*Example 4: a list of pairs becomes a picture.* Take three pairs: (1, 2), (2, 4), (3, 6). Plot each one from the origin: 1 right and 2 up, then 2 right and 4 up, then 3 right and 6 up. Three dots. That is the real point of the grid: a list of number-pairs turns into something you can see. These three happen to fall in a row, but that's not a rule. Sometimes plotted pairs line up and sometimes they stay scattered; you'll see which, and when, later.
+
+**Watch for:**
+- **Reversing the pair** (`misconceptions.md` — read-the-structure). Tell: a student plots (−2, −1) as "1 left, 2 down," or reads (−1, 3) as (3, −1). Repair: read the address the same way every time — the first number is always the across one. Start at the origin and say "across, then up/down" out loud.
+- **Sign-to-direction slips.** Tell: a student steps right for a negative x or up for a negative y. Repair: tie sign to direction explicitly — left is −, down is −; let the worked negative point (−2, −1) be the anchor.
+- **Hunting for a quadrant name.** The four corners are deliberately *not* named here. If a student asks, defer it warmly: "those corners get names in Unit 5 — across-then-up is all you need for now." Don't invent a placeholder name.
+
+**Visuals to offer:** a single clean coordinate-plane sketch with the two axes, the origin labeled (0, 0), and the worked points (3, 2) and (−2, −1) marked carries the whole lesson. A small grid the student plots on themselves beats any pre-drawn picture; offer to talk them through plotting one point at a time. (The bundled figure for this lesson is a Phase-2 add; the prose stands on its own.)
+
+The grid splits into four corners around the origin; those corners get names in Unit 5, and here the student doesn't need them. Naming a direction, across-then-up, is all it takes to find any point.
+
+**Check for understanding (transfer):**
+1. {#4.1.c1} "Is (4, 1) the same point as (1, 4)?" (No. (4, 1) is 4 right then 1 up; (1, 4) is 1 right then 4 up. The two land in different spots, because the across number comes first.)
+2. {#4.1.c2} "A dot sits 2 steps left and 2 steps down of the origin — write its ordered pair." ((−2, −2): left makes the across number −2, down makes the second number −2.)
+3. {#4.1.c3} "Where do you start to plot any point, and which number do you use first?" (Start at the origin, and use x, the across number, first.)
+
+**Practice problems:**
+
+*A. Plot the point (start at the origin; across first, then up or down).*
+1. (5, 1)
+2. (0, 3)
+3. (−3, 2)
+4. (2, −4)
+
+*B. Write the ordered pair.*
+5. 3 across (right), 0 up or down
+6. 0 across, 2 down
+7. A dot 4 steps left of the origin and 1 step up.
+
+*C. True or false?*
+8. (2, 5) is the same point as (5, 2).
+
+**Answer key:**
+1. From the origin, 5 right and 1 up.
+2. From the origin, 0 across and 3 up (it sits on the y-axis).
+3. From the origin, 3 left and 2 up.
+4. From the origin, 2 right and 4 down.
+5. (3, 0).
+6. (0, −2).
+7. (−4, 1).
+8. **False** — (2, 5) is 2 right then 5 up; (5, 2) is 5 right then 2 up, a different point.
 
 ---
 
@@ -352,7 +428,7 @@ read the constant step (5−2=3, 8−5=3, 11−8=3 → +3 per step, so 3 sits in
 
 ## Wrap-up & interleaving
 
-**Consolidate:** the one-output-per-input rule and the vertical line test (4.2); f(x) as a *named rule you feed a value* — never multiplication — plus domain/range from explicit data (4.3); and the table ↔ graph ↔ equation ↔ words quartet with the linear/nonlinear split (4.4).
+**Consolidate:** plotting and reading a point on the coordinate plane, across-then-up (4.1); the one-output-per-input rule and the vertical line test (4.2); f(x) as a *named rule you feed a value* — never multiplication — plus domain/range from explicit data (4.3); and the table ↔ graph ↔ equation ↔ words quartet with the linear/nonlinear split (4.4).
 
 **Mix back in:** every evaluation is also an order-of-operations and a negatives drill (Units 1–2) — call that out. The constant rate of change in 4.4 *is* Unit 3's unit rate, and it becomes **slope** in Unit 5 — name that bridge explicitly. A good warm-up before Unit 5 is "build a table from f(x)=mx+b and read off its constant step."
 

@@ -47,6 +47,7 @@ units:
     prerequisites: "Unit 2; helped by Unit 3 (rates)"
     optional: false
     lessons:
+      - { id: "4.1", title: "What is a graph" }
       - { id: "4.2", title: "What is a function" }
       - { id: "4.3", title: "Function notation f(x), domain & range" }
       - { id: "4.4", title: "Multiple representations; linear vs. nonlinear" }

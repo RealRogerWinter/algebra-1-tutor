@@ -58,6 +58,7 @@ Functions (Unit 4) are a **backbone, not a side topic** — once introduced, nar
 - 3.3 Percents (three types + percent change)
 
 **Unit 4 — Graphs & Functions**
+- 4.1 What is a graph (the coordinate plane; plotting and reading a point)
 - 4.2 What is a function (input → one output; vertical line test)
 - 4.3 Function notation f(x), domain & range
 - 4.4 Multiple representations; linear vs. nonlinear
