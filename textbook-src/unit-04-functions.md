@@ -101,7 +101,7 @@ Now picture the same idea on the coordinate plane from 4.1, which is where you'l
 
 So sweep a vertical line slowly across the graph, left to right, and watch how many times it touches. If it never touches the graph in more than one place, every input has at most one output, and you've got a function. If a vertical line ever hits the graph in two places at once, that one input has two outputs, and it isn't.
 
-<!--illus:4-2-vertical-line-test-->
+Here's a function with the test line drawn in: it meets the graph at just one point. {#4.2.f1}
 
 This sweep has a name: the **vertical line test**. Walking your finger across the page as the imaginary line is a fine way to do it.
 
@@ -151,17 +151,19 @@ A table is read the same way; just scan the input row for a repeat. Input 0 appe
 {#4.2.w5}
 *Example 5: a graph (vertical line test).* Is the graph a function? Try two shapes.
 
-First, a non-vertical straight line such as y=2x+1. Sweep a vertical line across it and it touches in exactly one spot everywhere you put it. **Function.**
+First, a non-vertical straight line such as y=2x+1. Sweep a vertical line across it and it touches in exactly one spot everywhere you put it. **Function.** {#4.2.f2}
 
-Now a circle centered at the origin, or a sideways "U" (a parabola opening to the right). A vertical line through the middle cuts across it in **two** places at once. **Not a function.**
+Now a circle centered at the origin, or a sideways "U" (a parabola opening to the right). A vertical line through the middle cuts across it in **two** places at once. **Not a function.** {#4.2.f3}
 
-One straight line is the exception worth knowing. A *vertical* line such as x=3 is **not** a function: every point on it sits at the same input, x=3, so that single input is paired with infinitely many outputs. It's the cleanest possible example of one input with many outputs.
+One straight line is the exception worth knowing. A *vertical* line such as x=3 is **not** a function: every point on it sits at the same input, x=3, so that single input is paired with infinitely many outputs. It's the cleanest possible example of one input with many outputs. {#4.2.f4}
 
 Now that you've seen the right reading a few times, here's the slip that snares almost everyone at first. It's natural to decide that *any* repeat at all kills a function, a sensible-sounding "no repeats allowed" rule. But go back to the machine: two buttons giving the same snack doesn't break anything.
 
 So when a number repeats, don't reject it on sight. Look only at the input side, and ask whether one input is trying to give two different outputs. That, and only that, is what breaks a function.
 
 One more place to be careful, and it's about direction. The test line is *vertical*, not horizontal. An input is an x, and the line that gathers all the points sharing one x stands straight up and down. If you find yourself sliding a line up and down the page instead of across it, you're testing the wrong thing.
+
+<!--illus:4-2-vertical-line-test-->
 
 **Check for understanding (transfer):**
 1. {#4.2.c1} Make a set of three pairs that is *not* a function, and say which input breaks it. (One answer: {(2,1),(2,5),(3,9)}. The input 2 is paired with both 1 and 5, so that's the one that breaks it.)

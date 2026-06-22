@@ -112,7 +112,7 @@ The grid splits into four corners around the origin; those corners get names in 
 **Teaching arc (concrete → pictorial → symbolic):**
 - **Concrete (vending machine — `metaphors.md` Functions A):** "Press a button (input), get exactly one snack (output). Press B4 today and tomorrow — same snack both times. That reliable *pairing* of each button with one snack *is* what makes it a function." Then the key asymmetry: "Two different buttons can both give pretzels — two inputs paired to one output, totally fine. But one button can *not* sometimes give pretzels and sometimes give a soda — that machine is broken. One input paired to two outputs = not a function." Note there is no formula here — the machine just *pairs* buttons with snacks, and that is already a function.
 - **Pictorial (input → output table / arrow map):** draw inputs on the left, outputs on the right, arrows between — this *is* the pairing. It's a function if **every input has exactly one arrow leaving it**. Repeated *outputs* (two arrows landing on the same right-hand value) are fine; a *split input* (two arrows leaving one left-hand value) breaks it.
-- **Symbolic / graphical (vertical line test):** picture the coordinate plane from 4.1 — an input is an x-value, a spot along the across-direction; a vertical line is "all the points with that one x." Sweep a vertical line across: a function lets it hit the graph **at most once** at every position. If a vertical line ever hits twice, that input has two outputs → not a function. Walk a finger left-to-right as an imaginary vertical line.
+- **Symbolic / graphical (vertical line test):** picture the coordinate plane from 4.1 — an input is an x-value, a spot along the across-direction; a vertical line is "all the points with that one x." Sweep a vertical line across: a function lets it hit the graph **at most once** at every position. If a vertical line ever hits twice, that input has two outputs → not a function. Walk a finger left-to-right as an imaginary vertical line. {#4.2.f1}
 
 Always restate the definition as a one-liner the student can repeat: *"Each input is paired with exactly one output. Repeats are only a problem on the input side."*
 
@@ -140,8 +140,8 @@ Input 1 is paired with both 2 *and* 3 — one input, two outputs. **No, not a fu
 Input 0 appears twice, giving 4 once and 9 once — two outputs for one input. **No, not a function.**
 
 {#4.2.w5}
-*Example 5 — a graph (vertical line test).* A non-vertical straight line such as y=2x+1: sweep a vertical line across it — it touches exactly once everywhere. **Function.** A circle centered at the origin, or a sideways "U" (a parabola opening rightward): a vertical line through the middle hits it **twice**. **Not a function.**
-One straight line is the exception: a **vertical** line such as x=3 is *not* a function — every point on it shares the same input x=3, so that single input has infinitely many outputs. It is the cleanest case of "one input, many outputs."
+*Example 5 — a graph (vertical line test).* A non-vertical straight line such as y=2x+1: sweep a vertical line across it — it touches exactly once everywhere. **Function.** {#4.2.f2} A circle centered at the origin, or a sideways "U" (a parabola opening rightward): a vertical line through the middle hits it **twice**. **Not a function.** {#4.2.f3}
+One straight line is the exception: a **vertical** line such as x=3 is *not* a function — every point on it shares the same input x=3, so that single input has infinitely many outputs. It is the cleanest case of "one input, many outputs." {#4.2.f4}
 
 **Watch for:**
 - **"Any repeat means it's not a function."** Tell: student rejects {(1,5),(2,5)}. Repair: back to the vending machine — "two buttons, same snack: is the machine broken? No." Then point only at the *input* column. (Root: same asymmetry as `misconceptions.md` §2 — read what the structure actually says, not a memorized "no repeats" rule.)
