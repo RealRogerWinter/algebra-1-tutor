@@ -97,7 +97,7 @@ Here's that idea as a picture you can draw. Put the inputs in a column on the le
 
 The reading rule follows the vending machine exactly: it's a function when every input on the left has exactly one arrow leaving it. Two arrows landing on the same right-hand value (two buttons, same snack) is fine. But two arrows *leaving* one left-hand value means that single input has two outputs, and that breaks it.
 
-Now the same idea on a graph, which is where you'll meet it most often. On a graph, an input is an x-value: a spot along the horizontal direction. "All the points sharing one input" is a single vertical line standing at that x.
+Now picture the same idea on the coordinate plane from 4.1, which is where you'll meet it most often. There an input is an x-value: a spot along the across-direction you stepped out across the page. "All the points sharing one input" is a single vertical line standing at that x.
 
 So sweep a vertical line slowly across the graph, left to right, and watch how many times it touches. If it never touches the graph in more than one place, every input has at most one output, and you've got a function. If a vertical line ever hits the graph in two places at once, that one input has two outputs, and it isn't.
 
@@ -273,7 +273,7 @@ the **Domain** is the input row, {1,2,3,4}. The **Range** is the outputs with re
 
 {#4.3.w6}
 *Example 6: discrete vs. continuous domain (why braces for one, "all reals" for the other).* This is the difference between Example 5's table and the line f(x)=3x−1.
-- A **table or pair-list** gives a **discrete** domain: a handful of *separate* inputs. You plot them as separate dots and list them in braces. Concrete case: tickets cost \$12 each, so the cost of n tickets is t(n)=12n. You can buy 0, 1, 2, 3, … tickets but never 2.5, so the domain is the *separate* whole numbers {0,1,2,3,…}: separate dots, **don't connect them**.
+- A **table or pair-list** gives a **discrete** domain: a handful of *separate* inputs. You plot them as separate dots and list them in braces. Concrete case: tickets cost \$12 each, so the cost of n tickets is t(n)=12n. You can buy 0, 1, 2, 3, … tickets but never 2.5, so the domain is the *separate* whole numbers {0,1,2,3,…}: each pair gets the across-then-up plotting you practiced in 4.1, and you leave them as separate dots, **don't connect them**.
 - A **line** like f(x)=3x−1 accepts **every** real number in between, with no gaps, so its domain is **continuous**: an unbroken line, described in words as "all real numbers." Concrete case: a candle's height after t hours, for any t from 0 to 5; time can be 2.5 hours or 2.501 hours, so the inputs fill the whole range and the graph is an unbroken curve.
 
 So the form of the answer follows the domain: a discrete domain → list in braces {…}; a continuous domain → say "all real numbers" (or "all real numbers from 0 to 5"). The one-line check: *can the input land between two of your values?* If no (tickets), it's discrete dots; if yes (hours), it's a continuous line. (No interval notation yet. That's later; words are enough here.)
@@ -342,7 +342,7 @@ Start with a plain sentence: *start with \$1, and add \$2 every step.* That's a 
 |---|---|---|---|---|
 | f(x)=2x+1 | 1 | 3 | 5 | 7 |
 
-At step 0 you have the starting \$1. Each step adds \$2: 1, then 3, then 5, then 7. The same relationship has an equation too, f(x) = 2x + 1, and if you plot the table's pairs as points, they fall in a straight line. Words, table, equation, graph: one relationship, four faces.
+At step 0 you have the starting \$1. Each step adds \$2: 1, then 3, then 5, then 7. The same relationship has an equation too, f(x) = 2x + 1, and if you turn the table's pairs into dots the way 4.1 turned a list of pairs into a picture, they fall in a straight line. Words, table, equation, graph: one relationship, four faces.
 
 Look closely at the output row. From 1 to 3 is +2; from 3 to 5 is +2; from 5 to 7 is +2. Equal steps in x (here, +1 each time) produce equal steps in the output (+2 each time). That steady, repeating step is what your eye reads as "straight" when the points are plotted, and it has a name: a **constant rate of change**. A function whose rate of change is constant, equal x-steps always giving equal output-steps, is a **linear function**, and its graph is a straight line.
 
