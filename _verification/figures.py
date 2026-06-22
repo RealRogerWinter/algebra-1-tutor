@@ -376,7 +376,7 @@ FIGURES = [
     {"code": "4.1.f2", "lesson": "4.1", "type": "plane", "xwindow": [-5, 5], "ywindow": [-5, 5],
      "marks": [(3, 2, "(3, 2)")], "caption": "Example 1: plotting (3, 2)"},
     {"code": "4.1.f3", "lesson": "4.1", "type": "plane", "xwindow": [-5, 5], "ywindow": [-5, 5],
-     "marks": [(3, 2, "(3, 2)"), (-2, -1, "(-2, -1)")], "caption": "Example 2: (-2, -1) plotted alongside (3, 2)"},
+     "marks": [(-2, -1, "(-2, -1)")], "caption": "Example 2: plotting (-2, -1)"},
     {"code": "4.1.f4", "lesson": "4.1", "type": "plane", "xwindow": [-5, 5], "ywindow": [-5, 5],
      "marks": [(-1, 3, "(-1, 3)")], "caption": "Example 3: the dot read back as (-1, 3)"},
     {"code": "4.1.f5", "lesson": "4.1", "type": "plane", "xwindow": [-1, 7], "ywindow": [-1, 7],
