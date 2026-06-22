@@ -16,7 +16,7 @@ You already have one number line from Lesson 1.2, a single line where every numb
 
 So take that number line and stand a second one upright, crossing the first at zero. <!--illus:4-1-coordinate-plane--> Now the page is a grid, like the lines on a map that let you name any spot. The across line is the **x-axis**, the up-and-down line is the **y-axis**, and the point where they cross is the **origin**, written (0, 0).
 
-Every point on the grid gets an address written (x, y). The first number is how far across: right is positive, left is negative. The second is how far up or down: up is positive, down is negative. You always read the across number first. That order is the whole idea, and it's why (3, 2) and (2, 3) are two different points, not one point written two ways. {#4.1.f2}
+Every point on the grid gets an address written (x, y). The first number is how far across: right is positive, left is negative. The second is how far up or down: up is positive, down is negative. You always read the across number first. That order is the whole idea, and it's why (3, 2) and (2, 3) are two different points, not one point written two ways. {#4.1.f1}
 
 **New terms:**
 - {#4.1.d1} **Coordinate plane:** a flat grid made by two number lines crossing at right angles.
@@ -29,16 +29,16 @@ Work through these one at a time, and picture each step on the grid before you r
 **Worked examples:**
 
 {#4.1.w1}
-*Example 1: plot (3, 2).* Start at the origin. The first number is 3, so step 3 to the right. The second number is 2, so step 2 up. Mark the point there. Across first, then up.
+*Example 1: plot (3, 2).* Start at the origin. The first number is 3, so step 3 to the right. The second number is 2, so step 2 up. Mark the point there. Across first, then up. {#4.1.f2}
 
 {#4.1.w2}
-*Example 2: plot (−2, −1).* Start at the origin again. The first number is −2, so step 2 to the left (left because it's negative). The second number is −1, so step 1 down (down because it's negative). The point lands below and to the left of the origin. Same routine as before; only the directions change with the signs. Here are both points on one plane {#4.1.f1}.
+*Example 2: plot (−2, −1).* Start at the origin again. The first number is −2, so step 2 to the left (left because it's negative). The second number is −1, so step 1 down (down because it's negative). The point lands below and to the left of the origin. Same routine as before; only the directions change with the signs. Here are both points on one plane {#4.1.f3}.
 
 {#4.1.w3}
-*Example 3: read a dot back into an address.* A dot sits 1 step left of the origin and 3 steps up. Left means the across number is negative, so x is −1; up means the second number is positive, so y is 3. Its address is (−1, 3). Reading a point is just plotting in reverse: see how far across, then how far up or down.
+*Example 3: read a dot back into an address.* A dot sits 1 step left of the origin and 3 steps up. Left means the across number is negative, so x is −1; up means the second number is positive, so y is 3. Its address is (−1, 3). Reading a point is just plotting in reverse: see how far across, then how far up or down. {#4.1.f4}
 
 {#4.1.w4}
-*Example 4: a list of pairs becomes a picture.* Take three pairs: (1, 2), (2, 4), (3, 6). Plot each one from the origin: 1 right and 2 up, then 2 right and 4 up, then 3 right and 6 up. Three dots. That is the real point of the grid: a list of number-pairs turns into something you can see. These three happen to fall in a row, but that's not a rule. Sometimes plotted pairs line up and sometimes they stay scattered; you'll see which, and when, later.
+*Example 4: a list of pairs becomes a picture.* Take three pairs: (1, 2), (2, 4), (3, 6). Plot each one from the origin: 1 right and 2 up, then 2 right and 4 up, then 3 right and 6 up. Three dots. That is the real point of the grid: a list of number-pairs turns into something you can see. These three happen to fall in a row, but that's not a rule. Sometimes plotted pairs line up and sometimes they stay scattered; you'll see which, and when, later. {#4.1.f5}
 
 You'll notice the grid splits into four corners around the origin. Those corners get names in Unit 5; here you don't need them. Naming a direction, across-then-up, is all it takes to find any point.
 

@@ -3,8 +3,8 @@
   <text x="216.0" y="116.0" font-size="10" fill="#888">x</text>
   <line x1="120.0" y1="18.0" x2="120.0" y2="222.0" stroke="#888"/>
   <text x="124.0" y="26.0" font-size="10" fill="#888">y</text>
-  <line x1="120.0" y1="79.2" x2="181.2" y2="79.2" stroke="#c0392b" stroke-width="1" stroke-dasharray="3 3"/>
-  <line x1="181.2" y1="120.0" x2="181.2" y2="79.2" stroke="#c0392b" stroke-width="1" stroke-dasharray="3 3"/>
-  <circle cx="181.2" cy="79.2" r="3.5" fill="#c0392b"/>
-  <text x="186.2" y="73.2" font-size="10" fill="#c0392b">(3, 2)</text>
+  <line x1="120.0" y1="58.8" x2="99.6" y2="58.8" stroke="#c0392b" stroke-width="1" stroke-dasharray="3 3"/>
+  <line x1="99.6" y1="120.0" x2="99.6" y2="58.8" stroke="#c0392b" stroke-width="1" stroke-dasharray="3 3"/>
+  <circle cx="99.6" cy="58.8" r="3.5" fill="#c0392b"/>
+  <text x="104.6" y="52.8" font-size="10" fill="#c0392b">(-1, 3)</text>
 </svg>

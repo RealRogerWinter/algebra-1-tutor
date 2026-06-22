@@ -7,4 +7,8 @@
   <line x1="181.2" y1="120.0" x2="181.2" y2="79.2" stroke="#c0392b" stroke-width="1" stroke-dasharray="3 3"/>
   <circle cx="181.2" cy="79.2" r="3.5" fill="#c0392b"/>
   <text x="186.2" y="73.2" font-size="10" fill="#c0392b">(3, 2)</text>
+  <line x1="120.0" y1="140.4" x2="79.2" y2="140.4" stroke="#c0392b" stroke-width="1" stroke-dasharray="3 3"/>
+  <line x1="79.2" y1="120.0" x2="79.2" y2="140.4" stroke="#c0392b" stroke-width="1" stroke-dasharray="3 3"/>
+  <circle cx="79.2" cy="140.4" r="3.5" fill="#c0392b"/>
+  <text x="84.2" y="134.4" font-size="10" fill="#c0392b">(-2, -1)</text>
 </svg>

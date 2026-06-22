@@ -372,9 +372,15 @@ FIGURES = [
      "pairs": [[1, 12], [2, 6], [3, 4]], "caption": "the factors of 12 as rectangles: 1x12, 2x6, 3x4"},
     # Unit 4 — the coordinate plane intro; the two worked points plotted (no quadrant labels yet)
     {"code": "4.1.f1", "lesson": "4.1", "type": "plane", "xwindow": [-5, 5], "ywindow": [-5, 5],
-     "marks": [(3, 2, "(3, 2)"), (-2, -1, "(-2, -1)")], "caption": "plotting (3, 2) and (-2, -1) on the plane"},
+     "marks": [(3, 2, "(3, 2)")], "caption": "the address (3, 2): three across, two up from the origin"},
     {"code": "4.1.f2", "lesson": "4.1", "type": "plane", "xwindow": [-5, 5], "ywindow": [-5, 5],
-     "marks": [(3, 2, "(3, 2)")], "caption": "the point (3, 2): three across, two up from the origin"},
+     "marks": [(3, 2, "(3, 2)")], "caption": "Example 1: plotting (3, 2)"},
+    {"code": "4.1.f3", "lesson": "4.1", "type": "plane", "xwindow": [-5, 5], "ywindow": [-5, 5],
+     "marks": [(3, 2, "(3, 2)"), (-2, -1, "(-2, -1)")], "caption": "Example 2: (-2, -1) plotted alongside (3, 2)"},
+    {"code": "4.1.f4", "lesson": "4.1", "type": "plane", "xwindow": [-5, 5], "ywindow": [-5, 5],
+     "marks": [(-1, 3, "(-1, 3)")], "caption": "Example 3: the dot read back as (-1, 3)"},
+    {"code": "4.1.f5", "lesson": "4.1", "type": "plane", "xwindow": [-1, 7], "ywindow": [-1, 7],
+     "marks": [(1, 2, "(1, 2)"), (2, 4, "(2, 4)"), (3, 6, "(3, 6)")], "caption": "Example 4: (1, 2), (2, 4), (3, 6) fall in a row"},
     # Unit 5 — the coordinate plane; writing a line from a point + slope
     {"code": "5.1.f1", "lesson": "5.1", "type": "plane", "xwindow": [-5, 5], "ywindow": [-5, 5],
      "quadrants": [(2.7, 2.7, "(+, +)"), (-2.7, 2.7, "(-, +)"), (-2.7, -2.7, "(-, -)"), (2.7, -2.7, "(+, -)")],

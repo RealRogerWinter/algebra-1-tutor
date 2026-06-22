@@ -37,7 +37,7 @@ The arc is: (4.1) set up the **coordinate plane** every function will be picture
 
 **Teaching arc (concrete → pictorial → symbolic):**
 - **Concrete (one number line → two):** "You already have one number line from 1.2 — one number pins a spot *on* it. A flat page is bigger than a line, so one number can't say where (a seat in a row, a place on a map). You need two: *how far across*, then *how far up or down*." Stand a second number line upright crossing the first at zero. **One metaphor only — the map/two-number-lines on-ramp.** (Do *not* tell the Descartes-fly story.)
-- **Pictorial (the grid + an address):** the across line is the **x-axis**, the up-and-down line is the **y-axis**, their crossing is the **origin** (0, 0). Every point has an address (x, y): across first (right +, left −), then up/down (up +, down −). Make "across first" the whole game — (3, 2) and (2, 3) are different points. {#4.1.f2}
+- **Pictorial (the grid + an address):** the across line is the **x-axis**, the up-and-down line is the **y-axis**, their crossing is the **origin** (0, 0). Every point has an address (x, y): across first (right +, left −), then up/down (up +, down −). Make "across first" the whole game — (3, 2) and (2, 3) are different points. {#4.1.f1}
 - **Symbolic (plot and read):** to *plot*, start at the origin, step the x-amount across, then the y-amount up/down. To *read* a dot, do it in reverse: how far across (sign tells left/right), then how far up/down. Always start at the origin.
 
 Restate the one-liner the student can repeat: *"Start at the origin; across first, then up or down."*
@@ -45,16 +45,16 @@ Restate the one-liner the student can repeat: *"Start at the origin; across firs
 **Worked examples:**
 
 {#4.1.w1}
-*Example 1: plot (3, 2).* Start at the origin. The first number is 3, so step 3 to the right. The second number is 2, so step 2 up. Mark the point there. Across first, then up.
+*Example 1: plot (3, 2).* Start at the origin. The first number is 3, so step 3 to the right. The second number is 2, so step 2 up. Mark the point there. Across first, then up. {#4.1.f2}
 
 {#4.1.w2}
-*Example 2: plot (−2, −1).* Start at the origin again. The first number is −2, so step 2 to the left (left because it's negative). The second number is −1, so step 1 down (down because it's negative). The point lands below and to the left of the origin. Same routine as before; only the directions change with the signs. Here are both points on one plane {#4.1.f1}.
+*Example 2: plot (−2, −1).* Start at the origin again. The first number is −2, so step 2 to the left (left because it's negative). The second number is −1, so step 1 down (down because it's negative). The point lands below and to the left of the origin. Same routine as before; only the directions change with the signs. Here are both points on one plane {#4.1.f3}.
 
 {#4.1.w3}
-*Example 3: read a dot back into an address.* A dot sits 1 step left of the origin and 3 steps up. Left means the across number is negative, so x is −1; up means the second number is positive, so y is 3. Its address is (−1, 3). Reading a point is just plotting in reverse: see how far across, then how far up or down.
+*Example 3: read a dot back into an address.* A dot sits 1 step left of the origin and 3 steps up. Left means the across number is negative, so x is −1; up means the second number is positive, so y is 3. Its address is (−1, 3). Reading a point is just plotting in reverse: see how far across, then how far up or down. {#4.1.f4}
 
 {#4.1.w4}
-*Example 4: a list of pairs becomes a picture.* Take three pairs: (1, 2), (2, 4), (3, 6). Plot each one from the origin: 1 right and 2 up, then 2 right and 4 up, then 3 right and 6 up. Three dots. That is the real point of the grid: a list of number-pairs turns into something you can see. These three happen to fall in a row, but that's not a rule. Sometimes plotted pairs line up and sometimes they stay scattered; you'll see which, and when, later.
+*Example 4: a list of pairs becomes a picture.* Take three pairs: (1, 2), (2, 4), (3, 6). Plot each one from the origin: 1 right and 2 up, then 2 right and 4 up, then 3 right and 6 up. Three dots. That is the real point of the grid: a list of number-pairs turns into something you can see. These three happen to fall in a row, but that's not a rule. Sometimes plotted pairs line up and sometimes they stay scattered; you'll see which, and when, later. {#4.1.f5}
 
 **Watch for:**
 - **Reversing the pair** (`misconceptions.md` — read-the-structure). Tell: a student plots (−2, −1) as "1 left, 2 down," or reads (−1, 3) as (3, −1). Repair: read the address the same way every time — the first number is always the across one. Start at the origin and say "across, then up/down" out loud.
