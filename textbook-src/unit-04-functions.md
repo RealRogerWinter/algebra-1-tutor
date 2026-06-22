@@ -151,8 +151,6 @@ The vertical line x=3: the test line lands right on top of it and hits at every 
 
 One caution about direction: the test line is **vertical**, not horizontal. An input is an x, so the line that gathers all the points sharing one x stands straight up and down.
 
-<!--illus:4-2-vertical-line-test-->
-
 **Check for understanding (transfer):**
 1. {#4.2.c1} Make a set of three pairs that is *not* a function, and say which input breaks it. (One answer: {(2,1),(2,5),(3,9)}. The input 2 is paired with both 1 and 5, so that's the one that breaks it.)
 2. {#4.2.c2} Here's a table where the output 7 shows up three times. Can it still be a function, and what would you have to check? (Yes, it can: a repeated output is fine. Check the *inputs*: as long as no input appears twice with different outputs, it's a function.)
