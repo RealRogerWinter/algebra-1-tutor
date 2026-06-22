@@ -18,15 +18,11 @@ Before each new lesson, redo two or three problems from a lesson or two back fro
 
 ## Lesson 5.1: The coordinate plane
 
-Every graph in the rest of algebra lives on one grid, so spend a few minutes getting comfortable on it. The payoff is concrete: a function's table of inputs and outputs turns into *points* you can see, and a line is just infinitely many of those points in a row.
+You met the coordinate plane in 4.1: two number lines crossed at the origin, with every point an across-then-up address (x, y). Here you put it to work for graphing lines, where reading a point's quadrant from its signs and spacing the axes evenly start to matter.
 
-Start with something you read every day: a street map. Picture a city laid out in a grid, with one road running east to west and one running north to south, crossing at the town center. To tell someone where a place is, you give two numbers: how many blocks east or west, then how many blocks north or south. You always say the east-or-west number first. Swap the two and you've sent them to a different corner.
+A quick re-anchor first. Plot (3, 2): start at the origin, step 3 right, then 2 up. The across number comes first, which is why (3, 2) and (2, 3) land in different spots {#5.1.f1}.
 
-Now strip the map down to its bones. Draw a horizontal number line and a vertical number line crossing at right angles. The horizontal one is the **x-axis**, and the vertical one is the **y-axis**. The spot where they cross, the town center, is the **origin**, (0, 0).
-
-Every point gets an address written (x, y). The first number is how far across (right is positive, left is negative). The second is how far up or down (up is positive, down is negative). That across-then-up order is the whole game, and it's why (3, 2) and (2, 3) are two different points, not the same one written two ways {#5.1.f1}.
-
-The two axes cut the flat grid into four regions, called **quadrants**. They're numbered with Roman numerals I, II, III, IV, starting in the top-right and going counter-clockwise. You don't have to memorize a chart for them, because the signs tell you everything. In the top-right, both coordinates are positive: (+, +). Move counter-clockwise and one sign flips at a time:
+With that fresh, look at how the plane is carved up. The two axes cut the flat grid into four regions, called **quadrants**. They're numbered with Roman numerals I, II, III, IV, starting in the top-right and going counter-clockwise. You don't have to memorize a chart for them, because the signs tell you everything. In the top-right, both coordinates are positive: (+, +). Move counter-clockwise and one sign flips at a time:
 
 $$\text{I: }(+,+)\qquad \text{II: }(-,+)\qquad \text{III: }(-,-)\qquad \text{IV: }(+,-)$$
 
@@ -35,9 +31,9 @@ A useful habit: before you plot a point, read its two signs and predict the quad
 One case sits outside this scheme. If either coordinate is 0, the point isn't in any quadrant. It's sitting right *on* an axis. A point like (0, −3) hasn't gone left or right at all, so it rests on the y-axis, on the border between two quadrants rather than inside one. That's worth flagging now, because it's easy to feel you must name a quadrant for every point and force one where there isn't any.
 
 **New terms:**
-- {#5.1.d1} **Coordinate plane:** a flat grid made by two number lines crossing at right angles.
-- {#5.1.d2} **x-axis / y-axis:** the horizontal and vertical number lines. They cross at the **origin**, (0,0).
-- {#5.1.d3} **Ordered pair (x, y):** an address for a point: *x first* (how far across, right is +), *then y* (how far up/down, up is +). Order matters: (3,2)≠(2,3).
+- {#5.1.d1} **Coordinate plane** (from 4.1): the flat grid made by two number lines crossing at right angles.
+- {#5.1.d2} **x-axis / y-axis** (from 4.1): the horizontal and vertical number lines. They cross at the **origin**, (0,0).
+- {#5.1.d3} **Ordered pair (x, y)** (from 4.1): an address for a point: *x first* (how far across, right is +), *then y* (how far up/down, up is +). Order matters: (3,2)≠(2,3).
 - {#5.1.d4} **Quadrant:** one of the four regions the axes cut the plane into, numbered **I, II, III, IV** counter-clockwise starting top-right.
 
 Plot four points and name where each one lands, reading the signs as you go: (3,2), (-1,4), (0,-3), (-2,-2).
