@@ -223,7 +223,7 @@ def _vlt_widget(slug, r=_R):
 
   <div class="{slug}-ctrl">
     <label for="{slug}-x">test&nbsp;x</label>
-    <input id="{slug}-x" type="range" min="-6" max="6" step="0.1" value="-5"
+    <input id="{slug}-x" type="range" min="-6" max="6" step="any" value="-5"
        aria-label="x position of the vertical test line, from negative 6 to 6">
     <output id="{slug}-xo">-5</output>
   </div>
