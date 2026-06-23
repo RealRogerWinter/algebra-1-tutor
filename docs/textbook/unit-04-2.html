@@ -159,34 +159,375 @@
 <p>There's no formula anywhere in that vending machine, just a list of which button gives which snack. Hold onto that, because it's easy to assume a function has to be an equation. It doesn't. The pairing itself is the function, however it's written down.</p>
 <p>Here's that idea as a picture you can draw. Put the inputs in a column on the left, the outputs in a column on the right, and draw an arrow from each input to the output it's matched with.</p>
 <p>The reading rule follows the vending machine exactly: it's a function when every input on the left has exactly one arrow leaving it. Two arrows landing on the same right-hand value (two buttons, same snack) is fine. But two arrows <em>leaving</em> one left-hand value means that single input has two outputs, and that breaks it.</p>
-<p>On the coordinate plane an input is its x-value: how far left or right a point sits. All the points that share one input line up in a single vertical line at that x. So slide a vertical line across the graph and count the touches: one touch at every spot means each input has just one output, so it's a function; if the line ever touches in two places at once, that input has two outputs, and it isn't. Here's a function with the test line drawn in: it meets the line at just one point. <a class="refcode" id="4.2.f1" href="#4.2.f1" data-prompt="Use the Algebra 1 tutor skill to help me with the figure in Lesson 4.2 (reference 4.2.f1). Pull it up, then ask whether I'd like you to explain it, work through it together, or answer a specific question." aria-label="Copy a tutor prompt for the figure in Lesson 4.2">4.2.f1</a> This sweep has a name: the <strong>vertical line test</strong>.</p>
-<figure class="fig" id="fig-4.2.f1"><svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
-  <line x1="18.0" y1="18.0" x2="18.0" y2="222.0" stroke="#e8e8e8" stroke-width="1"/>
-  <line x1="43.5" y1="18.0" x2="43.5" y2="222.0" stroke="#e8e8e8" stroke-width="1"/>
-  <line x1="69.0" y1="18.0" x2="69.0" y2="222.0" stroke="#e8e8e8" stroke-width="1"/>
-  <line x1="94.5" y1="18.0" x2="94.5" y2="222.0" stroke="#e8e8e8" stroke-width="1"/>
-  <line x1="145.5" y1="18.0" x2="145.5" y2="222.0" stroke="#e8e8e8" stroke-width="1"/>
-  <line x1="171.0" y1="18.0" x2="171.0" y2="222.0" stroke="#e8e8e8" stroke-width="1"/>
-  <line x1="196.5" y1="18.0" x2="196.5" y2="222.0" stroke="#e8e8e8" stroke-width="1"/>
-  <line x1="222.0" y1="18.0" x2="222.0" y2="222.0" stroke="#e8e8e8" stroke-width="1"/>
-  <line x1="18.0" y1="222.0" x2="222.0" y2="222.0" stroke="#e8e8e8" stroke-width="1"/>
-  <line x1="18.0" y1="196.5" x2="222.0" y2="196.5" stroke="#e8e8e8" stroke-width="1"/>
-  <line x1="18.0" y1="171.0" x2="222.0" y2="171.0" stroke="#e8e8e8" stroke-width="1"/>
-  <line x1="18.0" y1="145.5" x2="222.0" y2="145.5" stroke="#e8e8e8" stroke-width="1"/>
-  <line x1="18.0" y1="94.5" x2="222.0" y2="94.5" stroke="#e8e8e8" stroke-width="1"/>
-  <line x1="18.0" y1="69.0" x2="222.0" y2="69.0" stroke="#e8e8e8" stroke-width="1"/>
-  <line x1="18.0" y1="43.5" x2="222.0" y2="43.5" stroke="#e8e8e8" stroke-width="1"/>
-  <line x1="18.0" y1="18.0" x2="222.0" y2="18.0" stroke="#e8e8e8" stroke-width="1"/>
-  <line x1="18.0" y1="120.0" x2="222.0" y2="120.0" stroke="#888"/>
-  <text x="216.0" y="116.0" font-size="10" fill="#888">x</text>
-  <line x1="120.0" y1="18.0" x2="120.0" y2="222.0" stroke="#888"/>
-  <text x="124.0" y="26.0" font-size="10" fill="#888">y</text>
-  <line x1="18.0" y1="222.0" x2="222.0" y2="18.0" stroke="#2980b9" stroke-width="2.5"/>
-  <line x1="171.0" y1="18.0" x2="171.0" y2="222.0" stroke="#c0392b" stroke-width="1.5" stroke-dasharray="5 3"/>
-  <circle cx="171.0" cy="69.0" r="3.5" fill="#c0392b"/>
-  <text x="176.0" y="63.0" font-size="10" fill="#c0392b">(2, 2)</text>
-</svg><figcaption><b>Figure 4.2.f1</b></figcaption></figure>
+<p>On the coordinate plane an input is its x-value: how far left or right a point sits. All the points that share one input line up in a single vertical line at that x. So slide a vertical line across the graph and count the touches: one touch at every spot means each input has just one output, so it's a function; if the line ever touches in two places at once, that input has two outputs, and it isn't. This sweep has a name: the <strong>vertical line test</strong>.</p>
+<p>Try it yourself: pick a graph, then drag the red vertical line across the plane (or press Sweep) and watch the tally. A straight line is touched exactly once wherever you stop it, so it's a function; switch to the circle and that same line gets caught twice, so it isn't.</p>
+<figure class="fig viz" id="fig-4.2.f1"><div class="vltslider-wrap" data-init="0">
+  <style>
+    .vltslider-wrap{max-width:380px;margin:0 auto;font-family:inherit}
+    .vltslider-wrap svg{width:100%;height:auto;display:block;
+      background:transparent;border-radius:var(--radius);touch-action:none}
+    .vltslider-seg{display:flex;gap:.3rem;justify-content:center;margin:.1rem 0 .55rem;
+      flex-wrap:wrap}
+    .vltslider-seg label{cursor:pointer;font-size:.85rem;font-weight:600;
+      color:var(--ink-soft);border:1.5px solid #888;border-radius:999px;
+      padding:.22rem .7rem;user-select:none;background:transparent;
+      transition:background .12s,color .12s,border-color .12s}
+    .vltslider-seg input{position:absolute;opacity:0;width:0;height:0}
+    .vltslider-seg input:checked + label{background:var(--blue);color:#fff;
+      border-color:var(--blue)}
+    .vltslider-seg input:focus-visible + label{outline:2px solid var(--blue);
+      outline-offset:2px}
+    .vltslider-ctrl{display:grid;grid-template-columns:auto 1fr auto;gap:.5rem .7rem;
+      align-items:center;margin:.55rem .3rem 0;font-size:.92rem;color:var(--ink-soft)}
+    .vltslider-ctrl label{font-weight:600;color:var(--ink)}
+    .vltslider-ctrl output{font:600 .92rem "IBM Plex Mono",monospace;color:var(--ink);
+      min-width:2.6em;text-align:right}
+    .vltslider-wrap input[type=range]{width:100%;accent-color:#c0392b;
+      height:1.4rem;cursor:pointer}
+    .vltslider-wrap input[type=range]:focus-visible{outline:2px solid #c0392b;
+      outline-offset:3px;border-radius:6px}
+    .vltslider-bar{display:flex;gap:.6rem;align-items:center;justify-content:center;
+      margin:.7rem 0 .2rem;flex-wrap:wrap}
+    .vltslider-sweep{font:700 1rem inherit;cursor:pointer;border:none;
+      border-radius:999px;padding:.5rem 1.3rem;background:#c0392b;color:#fff;
+      letter-spacing:.01em;box-shadow:0 2px 6px rgba(192,57,43,.35);
+      transition:transform .08s,background .12s}
+    .vltslider-sweep:hover{transform:translateY(-1px)}
+    .vltslider-sweep:active{transform:translateY(0)}
+    .vltslider-sweep:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+    .vltslider-reset{font:600 .85rem inherit;cursor:pointer;background:transparent;
+      border:1.5px solid #888;border-radius:999px;padding:.4rem .9rem;
+      color:var(--ink-soft)}
+    .vltslider-reset:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+    .vltslider-read{text-align:center;margin:.6rem 0 0;font-size:.95rem;
+      color:var(--ink-soft)}
+    .vltslider-hits b{font:700 1.05rem "IBM Plex Mono",monospace;color:#c0392b}
+    .vltslider-badge{display:inline-block;margin-top:.45rem;font-weight:700;
+      font-size:.95rem;padding:.28rem .85rem;border-radius:999px;
+      border:2px solid #27ae60;color:#27ae60;background:rgba(39,174,96,.08)}
+    .vltslider-badge.fail{border-color:#c0392b;color:#c0392b;
+      background:rgba(192,57,43,.1)}
+    .vltslider-hint{display:block;text-align:center;font-size:.8rem;
+      color:var(--ink-soft);margin-top:.4rem;opacity:.85}
+  </style>
 
+  <div class="vltslider-seg" role="radiogroup" aria-label="choose a graph to test">
+    <input type="radio" name="vltslider-graph" id="vltslider-g-line" value="line" checked>
+    <label for="vltslider-g-line">Line&nbsp;y = x</label>
+    <input type="radio" name="vltslider-graph" id="vltslider-g-circ" value="circle">
+    <label for="vltslider-g-circ">Circle&nbsp;r = 4</label>
+    <input type="radio" name="vltslider-graph" id="vltslider-g-par" value="parab">
+    <label for="vltslider-g-par">Parabola</label>
+  </div>
+
+  <svg viewBox="0 0 360 360" xmlns="http://www.w3.org/2000/svg"
+       font-family="sans-serif"
+       aria-label="coordinate grid with a graph and a movable vertical test line">
+    <line x1="30.0" y1="330.0" x2="30.0" y2="30.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="30.0" y1="330.0" x2="330.0" y2="330.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="55.0" y1="330.0" x2="55.0" y2="30.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="30.0" y1="305.0" x2="330.0" y2="305.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="80.0" y1="330.0" x2="80.0" y2="30.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="30.0" y1="280.0" x2="330.0" y2="280.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="105.0" y1="330.0" x2="105.0" y2="30.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="30.0" y1="255.0" x2="330.0" y2="255.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="130.0" y1="330.0" x2="130.0" y2="30.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="30.0" y1="230.0" x2="330.0" y2="230.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="155.0" y1="330.0" x2="155.0" y2="30.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="30.0" y1="205.0" x2="330.0" y2="205.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="205.0" y1="330.0" x2="205.0" y2="30.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="30.0" y1="155.0" x2="330.0" y2="155.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="230.0" y1="330.0" x2="230.0" y2="30.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="30.0" y1="130.0" x2="330.0" y2="130.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="255.0" y1="330.0" x2="255.0" y2="30.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="30.0" y1="105.0" x2="330.0" y2="105.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="280.0" y1="330.0" x2="280.0" y2="30.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="30.0" y1="80.0" x2="330.0" y2="80.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="305.0" y1="330.0" x2="305.0" y2="30.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="30.0" y1="55.0" x2="330.0" y2="55.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="330.0" y1="330.0" x2="330.0" y2="30.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="30.0" y1="30.0" x2="330.0" y2="30.0" stroke="#888" stroke-width="0.6" opacity="0.28"/>
+    <line x1="30.0" y1="180.0" x2="330.0" y2="180.0" stroke="#888" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="180.0" y1="30.0" x2="180.0" y2="330.0" stroke="#888" stroke-width="2.5" stroke-linecap="round"/>
+    <text x="326.0" y="172.0" font-size="13" fill="#888" text-anchor="end">x</text>
+    <text x="188.0" y="41.0" font-size="13" fill="#888">y</text>
+    <text x="80.0" y="195.0" font-size="10" fill="#888" text-anchor="middle">-4</text>
+    <text x="174.0" y="283.5" font-size="10" fill="#888" text-anchor="end">-4</text>
+    <text x="130.0" y="195.0" font-size="10" fill="#888" text-anchor="middle">-2</text>
+    <text x="174.0" y="233.5" font-size="10" fill="#888" text-anchor="end">-2</text>
+    <text x="230.0" y="195.0" font-size="10" fill="#888" text-anchor="middle">2</text>
+    <text x="174.0" y="133.5" font-size="10" fill="#888" text-anchor="end">2</text>
+    <text x="280.0" y="195.0" font-size="10" fill="#888" text-anchor="middle">4</text>
+    <text x="174.0" y="83.5" font-size="10" fill="#888" text-anchor="end">4</text>
+    <path id="vltslider-graph" fill="none" stroke="#2980b9" stroke-width="2.5"
+          stroke-linecap="round" stroke-linejoin="round"/>
+    <line id="vltslider-test" stroke="#c0392b" stroke-width="2.2"
+          stroke-dasharray="6 5" stroke-linecap="round"/>
+    <circle id="vltslider-h0" r="0" fill="#c0392b" stroke="#fff" stroke-width="1.4"
+            opacity="0"/>
+    <circle id="vltslider-h1" r="0" fill="#c0392b" stroke="#fff" stroke-width="1.4"
+            opacity="0"/>
+    <!-- the big draggable handle that rides the test line near the top edge -->
+    <circle id="vltslider-grip" r="11" fill="#c0392b" stroke="#fff" stroke-width="2.5"
+            tabindex="0" role="slider"
+            aria-label="vertical test line, drag or use the left and right arrow keys"
+            aria-valuemin="-6" aria-valuemax="6"
+            style="cursor:ew-resize;outline:none"/>
+  </svg>
+
+  <div class="vltslider-ctrl">
+    <label for="vltslider-x">test&nbsp;x</label>
+    <input id="vltslider-x" type="range" min="-6" max="6" step="0.1" value="-5"
+       aria-label="x position of the vertical test line, from negative 6 to 6">
+    <output id="vltslider-xo">-5</output>
+  </div>
+
+  <div class="vltslider-bar">
+    <button type="button" class="vltslider-sweep" id="vltslider-sweep"
+            aria-label="animate the test line sweeping across the graph"
+            aria-pressed="false">&#9654;&nbsp;Sweep</button>
+    <button type="button" class="vltslider-reset" id="vltslider-reset"
+            aria-label="reset the verdict">Reset</button>
+  </div>
+
+  <div class="vltslider-read">
+    <div class="vltslider-hits">hits at this x:&nbsp;<b id="vltslider-n">1</b></div>
+    <span class="vltslider-badge" id="vltslider-badge">&#10003; a function</span>
+    <span class="vltslider-hint" id="vltslider-hint">Drag the red handle across the plane
+      (or scrub the slider / press &larr; &rarr;). Two hits anywhere means it fails.</span>
+  </div>
+
+  <script>(function(){
+    var root=document.currentScript.parentNode;
+    if(!root||root.dataset.init==="1"){return;} root.dataset.init="1";
+    
+  var LIM=6, W=360, PAD=30;
+  var SX=(W-2*PAD)/(2*LIM);
+  function px(x){return PAD+(x+LIM)*SX;}
+  function py(y){return PAD+(LIM-y)*SX;}
+  function fmt(v){v=Math.round(v*100)/100; return (v===Math.round(v))?(''+Math.round(v)):(''+v);}
+
+    var R=4;
+
+    var gpath=root.querySelector("#vltslider-graph");
+    var tline=root.querySelector("#vltslider-test");
+    var h0=root.querySelector("#vltslider-h0");
+    var h1=root.querySelector("#vltslider-h1");
+    var grip=root.querySelector("#vltslider-grip");
+    var svg=gpath.ownerSVGElement;
+    var sx=root.querySelector("#vltslider-x");
+    var xo=root.querySelector("#vltslider-xo");
+    var nEl=root.querySelector("#vltslider-n");
+    var badge=root.querySelector("#vltslider-badge");
+    var hint=root.querySelector("#vltslider-hint");
+    var sweepBtn=root.querySelector("#vltslider-sweep");
+    var resetBtn=root.querySelector("#vltslider-reset");
+    var radios=root.querySelectorAll('input[name="vltslider-graph"]');
+
+    var mode="line";       // "line" | "circle" | "parab"
+    var failed=false;      // verdict locks to "not a function" once 2 hits seen
+    var raf=null;          // requestAnimationFrame handle for the sweep
+    var sweepDir=1;        // +1 right, -1 left
+    var bounces=0;         // stop after a left->right->left pass
+
+    function clampX(X){
+      if(!isFinite(X)) return 0;
+      if(X<-LIM) return -LIM;
+      if(X>LIM) return LIM;
+      return X;
+    }
+
+    // --- geometry: the chosen graph as an SVG path (mapper is the source) ----
+    function graphPath(){
+      var d="", started=false, i, x, y, t;
+      if(mode==="line"){
+        // y = x, drawn corner to corner
+        return "M"+px(-LIM).toFixed(2)+" "+py(-LIM).toFixed(2)+
+               " L"+px(LIM).toFixed(2)+" "+py(LIM).toFixed(2);
+      }
+      if(mode==="parab"){
+        // y = 0.5 x^2 (an up-parabola; still one hit per x)
+        for(i=0;i<=120;i++){
+          x=-LIM+(2*LIM)*i/120; y=0.5*x*x;
+          if(y<-LIM-0.5||y>LIM+0.5){ started=false; continue; }
+          d+=(started?" L":"M")+px(x).toFixed(2)+" "+py(y).toFixed(2);
+          started=true;
+        }
+        return d || ("M"+px(0)+" "+py(0));
+      }
+      // circle x^2 + y^2 = R^2, traced as a polyline so it uses the same mapper
+      for(i=0;i<=140;i++){
+        t=2*Math.PI*i/140;
+        x=R*Math.cos(t); y=R*Math.sin(t);
+        d+=(i===0?"M":" L")+px(x).toFixed(2)+" "+py(y).toFixed(2);
+      }
+      return d+" Z";
+    }
+
+    // --- intersections of the vertical line x=X with the chosen graph --------
+    // Returns an array of y-values (0, 1, or 2 entries).
+    function hitsAt(X){
+      if(mode==="line"){           // y = x  -> exactly one
+        return [X];
+      }
+      if(mode==="parab"){          // y = 0.5 x^2 -> exactly one (may be offscreen)
+        var y=0.5*X*X;
+        return (y<=LIM+0.001)?[y]:[];
+      }
+      // circle: y = +/- sqrt(R^2 - X^2) when |X| <= R
+      var disc=R*R - X*X;
+      if(disc<0) return [];
+      if(disc===0) return [0];
+      var s=Math.sqrt(disc);
+      return [s,-s];
+    }
+
+    function setDot(dot,X,y,vis){
+      if(vis){
+        dot.setAttribute("cx",px(X)); dot.setAttribute("cy",py(y));
+        dot.setAttribute("r","6"); dot.setAttribute("opacity","1");
+      } else {
+        dot.setAttribute("r","0"); dot.setAttribute("opacity","0");
+      }
+    }
+
+    function draw(){
+      var X=clampX(parseFloat(sx.value));
+      xo.textContent=fmt(X);
+      // test line top-to-bottom at x=X
+      tline.setAttribute("x1",px(X)); tline.setAttribute("y1",py(LIM));
+      tline.setAttribute("x2",px(X)); tline.setAttribute("y2",py(-LIM));
+      // the draggable handle rides the line just below the top edge
+      grip.setAttribute("cx",px(X)); grip.setAttribute("cy",py(LIM)+14);
+      grip.setAttribute("aria-valuenow",fmt(X));
+      grip.setAttribute("aria-valuetext","x equals "+fmt(X));
+      // intersection dots (only those on-screen are shown)
+      var ys=hitsAt(X);
+      var shown=[];
+      for(var k=0;k<ys.length;k++){
+        if(ys[k]>=-LIM-0.001 && ys[k]<=LIM+0.001) shown.push(ys[k]);
+      }
+      setDot(h0, X, shown[0], shown.length>=1);
+      setDot(h1, X, shown[1], shown.length>=2);
+      var n=shown.length;
+      nEl.textContent=n;
+      // a position with 2 hits permanently fails the test
+      if(n>=2 && !failed){ failed=true; }
+      updateVerdict();
+    }
+
+    function updateVerdict(){
+      badge.className="vltslider-badge";
+      if(failed){
+        badge.classList.add("fail");
+        badge.textContent="\u2717 not a function";
+      } else {
+        badge.textContent="\u2713 a function";
+      }
+    }
+
+    // --- the auto-sweep: a smooth left -> right -> left glide -----------------
+    function startSweep(){
+      stopSweep();
+      // begin from the far left so the whole graph gets tested
+      sx.value="-6"; sweepDir=1; bounces=0;
+      var last=null;
+      function step(ts){
+        if(last==null) last=ts;
+        var dt=(ts-last)/1000; last=ts;
+        if(dt>0.1) dt=0.1;                          // ignore long frame gaps
+        var X=clampX(parseFloat(sx.value))+sweepDir*5.0*dt;   // ~5 units/sec
+        if(X>=LIM){ X=LIM; sweepDir=-1; bounces++; }
+        else if(X<=-LIM){ X=-LIM; sweepDir=1; bounces++; }
+        sx.value=String(X);
+        draw();
+        if(bounces>=2){ stopSweep(); return; }   // left->right->left, then stop
+        raf=requestAnimationFrame(step);
+      }
+      sweepBtn.setAttribute("aria-pressed","true");
+      raf=requestAnimationFrame(step);
+    }
+    function stopSweep(){
+      if(raf!=null){ cancelAnimationFrame(raf); raf=null; }
+      sweepBtn.setAttribute("aria-pressed","false");
+    }
+
+    function setMode(m){
+      mode=m; failed=false; stopSweep();
+      gpath.setAttribute("d", graphPath());
+      sx.value="-5";
+      draw();
+      hint.textContent = (m==="circle")
+        ? "Drag inside the circle: the line hits twice \u2014 that fails the test."
+        : "Drag anywhere: one hit at every x \u2014 that passes the test.";
+    }
+
+    // --- manual control is the star: drag the handle, or drag anywhere on the
+    //     plane, and the test line snaps to your finger/pointer in real time. --
+    function gxFromEvent(evt){
+      var rb=svg.getBoundingClientRect();
+      var sxpx=(evt.clientX-rb.left)*(W/rb.width);   // client px -> viewBox px
+      var gxv=(sxpx-PAD)/SX-LIM;                      // inverse of px()
+      gxv=clampX(gxv);
+      return Math.round(gxv*10)/10;                   // match slider's 0.1 step
+    }
+    var dragging=false;
+    function beginDrag(e){
+      dragging=true; stopSweep();
+      if(svg.setPointerCapture && e.pointerId!=null){
+        try{svg.setPointerCapture(e.pointerId);}catch(_){}
+      }
+      sx.value=String(gxFromEvent(e)); draw(); e.preventDefault();
+    }
+    function moveDrag(e){
+      if(!dragging)return;
+      sx.value=String(gxFromEvent(e)); draw(); e.preventDefault();
+    }
+    function endDrag(e){
+      if(!dragging)return; dragging=false;
+      if(svg.releasePointerCapture && e&&e.pointerId!=null){
+        try{svg.releasePointerCapture(e.pointerId);}catch(_){}
+      }
+    }
+    grip.addEventListener("pointerdown",function(e){ e.stopPropagation(); beginDrag(e); });
+    svg.addEventListener("pointerdown",beginDrag);  // tap/drag anywhere on the plane
+    svg.addEventListener("pointermove",moveDrag);
+    svg.addEventListener("pointerup",endDrag);
+    svg.addEventListener("pointercancel",endDrag);
+    window.addEventListener("pointerup",endDrag);
+
+    // keyboard on the handle: arrows nudge, Home/End jump to the edges.
+    grip.addEventListener("keydown",function(e){
+      var X=clampX(parseFloat(sx.value)), moved=true;
+      if(e.key==="ArrowLeft"||e.key==="ArrowDown") X-=0.5;
+      else if(e.key==="ArrowRight"||e.key==="ArrowUp") X+=0.5;
+      else if(e.key==="Home") X=-LIM;
+      else if(e.key==="End") X=LIM;
+      else moved=false;
+      if(!moved) return;
+      stopSweep();
+      sx.value=String(clampX(X)); draw(); e.preventDefault();
+    });
+
+    // --- wiring --------------------------------------------------------------
+    sx.addEventListener("input",function(){ stopSweep(); draw(); });
+    sweepBtn.addEventListener("click",function(){
+      if(raf!=null) stopSweep(); else startSweep();
+    });
+    resetBtn.addEventListener("click",function(){
+      stopSweep(); failed=false; sx.value="-5"; draw();
+    });
+    for(var ri=0;ri<radios.length;ri++){
+      radios[ri].addEventListener("change",function(e){
+        if(e.target.checked) setMode(e.target.value);
+      });
+    }
+
+    // initial render (static, correct without any interaction)
+    gpath.setAttribute("d", graphPath());
+    draw();
+  })();</script>
+</div><figcaption><b>Figure 4.2.f1</b> &mdash; Vertical line test, hands-on: pick a graph, then grab the red handle and drag the dashed test line across the plane (scrub the slider, press the arrow keys, or tap ▶ Sweep to watch it glide on its own). The dots and the hit count update as you move. The line y = x (and the parabola) get touched exactly once at every x, so the verdict stays “✓ a function.” The circle r = 4 gets touched twice wherever the line is inside it — the instant you find a 2-hit spot the verdict locks to “✗ not a function.”</figcaption></figure>
 <div class="cl-terms">
 <p><span class="eyebrow"><svg class="cl-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6.5C9.5 5 6 5 3.5 6.5V18C6 16.5 9.5 16.5 12 18C14.5 16.5 18 16.5 20.5 18V6.5C18 5 14.5 5 12 6.5Z"/><path d="M12 6.5V18"/></svg>New words</span></p>
 <ul>

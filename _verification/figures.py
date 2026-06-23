@@ -474,9 +474,6 @@ FIGURES = [
     {"code": "4.1.f5", "lesson": "4.1", "type": "plane", "xwindow": [-1, 7], "ywindow": [-1, 7],
      "marks": [(1, 2, "(1, 2)"), (2, 4, "(2, 4)"), (3, 6, "(3, 6)")], "caption": "Example 4: (1, 2), (2, 4), (3, 6) fall in a row"},
     # Unit 4 — the vertical line test (4.2): a graph + a sweeping vertical test line, hits marked
-    {"code": "4.2.f1", "lesson": "4.2", "type": "vlt", "shape": "line", "m": 1, "b": 0,
-     "xwindow": [-4, 4], "ywindow": [-4, 4], "test_x": 2, "marks": [(2, 2, "(2, 2)")],
-     "caption": "a function: the vertical line meets the graph in just one place"},
     {"code": "4.2.f2", "lesson": "4.2", "type": "vlt", "shape": "line", "m": 2, "b": 1,
      "xwindow": [-3, 3], "ywindow": [-5, 7], "test_x": 1, "marks": [(1, 3, "(1, 3)")],
      "caption": "y = 2x + 1: the vertical line hits once — a function"},

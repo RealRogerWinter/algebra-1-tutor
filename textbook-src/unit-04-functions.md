@@ -97,7 +97,11 @@ Here's that idea as a picture you can draw. Put the inputs in a column on the le
 
 The reading rule follows the vending machine exactly: it's a function when every input on the left has exactly one arrow leaving it. Two arrows landing on the same right-hand value (two buttons, same snack) is fine. But two arrows *leaving* one left-hand value means that single input has two outputs, and that breaks it.
 
-On the coordinate plane an input is its x-value: how far left or right a point sits. All the points that share one input line up in a single vertical line at that x. So slide a vertical line across the graph and count the touches: one touch at every spot means each input has just one output, so it's a function; if the line ever touches in two places at once, that input has two outputs, and it isn't. Here's a function with the test line drawn in: it meets the line at just one point. {#4.2.f1} This sweep has a name: the **vertical line test**.
+On the coordinate plane an input is its x-value: how far left or right a point sits. All the points that share one input line up in a single vertical line at that x. So slide a vertical line across the graph and count the touches: one touch at every spot means each input has just one output, so it's a function; if the line ever touches in two places at once, that input has two outputs, and it isn't. This sweep has a name: the **vertical line test**.
+
+Try it yourself: pick a graph, then drag the red vertical line across the plane (or press Sweep) and watch the tally. A straight line is touched exactly once wherever you stop it, so it's a function; switch to the circle and that same line gets caught twice, so it isn't.
+
+<!--viz:vlt_slider#0-->
 
 **New terms:**
 - {#4.2.d1} **Function:** a **pairing** (a correspondence) that matches **each input with exactly one output**. The pairing can be given any way at all: a list of (input, output) pairs, a table, a graph, or a formula. What makes it a *function* is the one-output-per-input promise, not the form it comes in.

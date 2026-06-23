@@ -45,6 +45,7 @@ VIZ_FIGURES = [
     {"code": "3.1.f1", "module": "double_number_lines", "index": 0, "facts": [("60/1", "120/2"), ("120/2", "180/3")]},
     {"code": "3.2.f1", "module": "double_number_lines", "index": 1, "facts": [("4/3", "8/6"), ("8/6", "12/9")]},
     {"code": "3.3.f1", "module": "double_number_lines", "index": 2, "facts": [("10/40", "Rational(1,4)"), ("20/40", "Rational(1,2)")]},
+    {"code": "4.2.f1", "module": "vlt_slider", "index": 0, "facts": []},
     {"code": "5.0.f1", "module": "concept_map", "index": 1, "facts": []},
     {"code": "5.0.f2", "module": "reference_cards", "index": 0, "facts": []},
     {"code": "5.2.f2", "module": "interactive_graph", "index": 1, "facts": [("2*3-1", "5")]},
