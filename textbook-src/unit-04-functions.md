@@ -97,22 +97,18 @@ Here's that idea as a picture you can draw. Put the inputs in a column on the le
 
 The reading rule follows the vending machine exactly: it's a function when every input on the left has exactly one arrow leaving it. Two arrows landing on the same right-hand value (two buttons, same snack) is fine. But two arrows *leaving* one left-hand value means that single input has two outputs, and that breaks it.
 
-Now picture the same idea on the coordinate plane from 4.1, which is where you'll meet it most often. There an input is an x-value: a spot along the across-direction you stepped out across the page. "All the points sharing one input" is a single vertical line standing at that x.
+On the coordinate plane an input is its x-value: how far left or right a point sits. All the points that share one input line up in a single vertical line at that x. So slide a vertical line across the graph and count the touches: one touch at every spot means each input has just one output, so it's a function; if the line ever touches in two places at once, that input has two outputs, and it isn't. This sweep has a name: the **vertical line test**.
 
-So sweep a vertical line slowly across the graph, left to right, and watch how many times it touches. If it never touches the graph in more than one place, every input has at most one output, and you've got a function. If a vertical line ever hits the graph in two places at once, that one input has two outputs, and it isn't.
+Try it yourself: pick a graph, then drag the red vertical line across the plane (or press Sweep) and watch the tally. A straight line is touched exactly once wherever you stop it, so it's a function; switch to the circle and that same line gets caught twice, so it isn't.
 
-<!--illus:4-2-vertical-line-test-->
-
-This sweep has a name: the **vertical line test**. Walking your finger across the page as the imaginary line is a fine way to do it.
-
-A quick way to carry this in your pocket: *each input is paired with exactly one output, and repeats are only a problem on the input side.* Say it back to yourself; you'll use it constantly.
+<!--viz:vlt_slider#0-->
 
 **New terms:**
-- {#4.2.d1} **Function:** a **pairing** (a correspondence) that matches **each input with exactly one output**. The pairing can be given any way at all: a list of (input, output) pairs, a table, a graph, or a formula. What makes it a *function* is the one-output-per-input promise, not the form it comes in. (Heads-up: in 4.3 a *formula* like f(x)=3x−1 is called a **rule**. A rule is one common *way* to give a function's pairing, not the definition itself. A pair-list with no formula is still a function.)
-- {#4.2.d2} **Input / output:** what you feed in, and what comes back, written as a pair (input, output). The inputs form one set and the outputs form another; in 4.3 those sets get the names **domain** and **range**. (Later the input is also called the variable and the output its value.)
+- {#4.2.d1} **Function:** a **pairing** (a correspondence) that matches **each input with exactly one output**. The pairing can be given any way at all: a list of (input, output) pairs, a table, a graph, or a formula. What makes it a *function* is the one-output-per-input promise, not the form it comes in.
+- {#4.2.d2} **Input / output:** what you feed in, and what comes back, written as a pair (input, output). The inputs form one set and the outputs form another; in 4.3 those sets get the names **domain** and **range**.
 - {#4.2.d3} **Vertical line test:** a graph is a function exactly when **every vertical line** hits it in **at most one point** (one hit, or none). If some vertical line hits the graph twice, that one input has two outputs, so it is not a function.
 
-Read these next examples slowly, one at a time, and decide the answer in your head before you read the verdict. The whole skill is checking the input side, so practice spotting where to look.
+Work the next examples one at a time, deciding each answer before you read the verdict.
 
 **Worked examples:**
 
@@ -149,19 +145,15 @@ A table is read the same way; just scan the input row for a repeat. Input 0 appe
 **No, not a function.**
 
 {#4.2.w5}
-*Example 5: a graph (vertical line test).* Is the graph a function? Try two shapes.
+*Example 5: a graph (vertical line test).* Is the graph a function? Try three graphs.
 
-First, a non-vertical straight line such as y=2x+1. Sweep a vertical line across it and it touches in exactly one spot everywhere you put it. **Function.**
+A straight line such as y=2x+1: the test line hits once wherever you put it. **Function.** {#4.2.f2}
 
-Now a circle centered at the origin, or a sideways "U" (a parabola opening to the right). A vertical line through the middle cuts across it in **two** places at once. **Not a function.**
+A circle centered at the origin: a vertical line through the middle hits it in **two** places at once. **Not a function.** {#4.2.f3}
 
-One straight line is the exception worth knowing. A *vertical* line such as x=3 is **not** a function: every point on it sits at the same input, x=3, so that single input is paired with infinitely many outputs. It's the cleanest possible example of one input with many outputs.
+The vertical line x=3: the test line lands right on top of it and hits at every height, so that one input has infinitely many outputs. **Not a function.** {#4.2.f4}
 
-Now that you've seen the right reading a few times, here's the slip that snares almost everyone at first. It's natural to decide that *any* repeat at all kills a function, a sensible-sounding "no repeats allowed" rule. But go back to the machine: two buttons giving the same snack doesn't break anything.
-
-So when a number repeats, don't reject it on sight. Look only at the input side, and ask whether one input is trying to give two different outputs. That, and only that, is what breaks a function.
-
-One more place to be careful, and it's about direction. The test line is *vertical*, not horizontal. An input is an x, and the line that gathers all the points sharing one x stands straight up and down. If you find yourself sliding a line up and down the page instead of across it, you're testing the wrong thing.
+One caution about direction: the test line is **vertical**, not horizontal. An input is an x, so the line that gathers all the points sharing one x stands straight up and down.
 
 **Check for understanding (transfer):**
 1. {#4.2.c1} Make a set of three pairs that is *not* a function, and say which input breaks it. (One answer: {(2,1),(2,5),(3,9)}. The input 2 is paired with both 1 and 5, so that's the one that breaks it.)

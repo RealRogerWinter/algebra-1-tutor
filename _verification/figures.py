@@ -237,9 +237,58 @@ def _r_factor_array(s):
     return (f'<svg viewBox="0 0 240 {y}" xmlns="http://www.w3.org/2000/svg" '
             f'font-family="sans-serif">\n  ' + "\n  ".join(out) + "\n</svg>\n")
 
+def _r_vlt(s):
+    """Vertical-line-test figure: a graph (line / uparabola / rparabola / circle / vline) with a
+    dashed red vertical 'test line' at x = s['test_x'], and the intersection(s) marked. One hit ->
+    a function; two hits -> not. Circle uses a square window so it renders round."""
+    xmin, xmax = s["xwindow"]; ymin, ymax = s["ywindow"]
+    M = _mapper(xmin, xmax, ymin, ymax)
+    out = [_axes(M, xmin, xmax, ymin, ymax)]
+    shape = s["shape"]; col = "#2980b9"
+    if shape == "line":
+        m, b = sp.Rational(str(s["m"])), sp.Rational(str(s["b"]))
+        (x1, y1), (x2, y2) = M(xmin, float(m * xmin + b)), M(xmax, float(m * xmax + b))
+        out.append(f'<line x1="{x1}" y1="{y1}" x2="{x2}" y2="{y2}" stroke="{col}" stroke-width="2.5"/>')
+    elif shape == "uparabola":
+        a, b, c = (sp.Rational(str(s[k])) for k in "abc")
+        pts, x = [], xmin
+        while x <= xmax + 1e-9:
+            y = float(a * x * x + b * x + c)
+            if ymin - 1 <= y <= ymax + 1:
+                px, py = M(x, y); pts.append(f"{px},{py}")
+            x += (xmax - xmin) / 80.0
+        out.append(f'<polyline fill="none" stroke="{col}" stroke-width="2.5" points="{" ".join(pts)}"/>')
+    elif shape == "rparabola":
+        a = sp.Rational(str(s["a"]))
+        pts, y = [], ymin
+        while y <= ymax + 1e-9:
+            x = float(a * y * y)
+            if xmin - 1 <= x <= xmax + 1:
+                px, py = M(x, y); pts.append(f"{px},{py}")
+            y += (ymax - ymin) / 80.0
+        out.append(f'<polyline fill="none" stroke="{col}" stroke-width="2.5" points="{" ".join(pts)}"/>')
+    elif shape == "circle":
+        r = float(sp.Rational(str(s["r"]))); cx, cy = s.get("cx", 0), s.get("cy", 0)
+        mcx, mcy = M(cx, cy)
+        rpx = round(r * (SIZE - 2 * PAD) / (xmax - xmin), 2)
+        out.append(f'<circle cx="{mcx}" cy="{mcy}" r="{rpx}" fill="none" stroke="{col}" stroke-width="2.5"/>')
+    elif shape == "vline":
+        vx, vy1 = M(s["k"], ymax); _, vy2 = M(s["k"], ymin)
+        out.append(f'<line x1="{vx}" y1="{vy1}" x2="{vx}" y2="{vy2}" stroke="{col}" stroke-width="2.5"/>')
+    _tx = s.get("test_x", s.get("k"))
+    if _tx is not None:
+        px, ty1 = M(_tx, ymax); _, ty2 = M(_tx, ymin)
+        out.append(f'<line x1="{px}" y1="{ty1}" x2="{px}" y2="{ty2}" stroke="#c0392b" stroke-width="1.5" stroke-dasharray="5 3"/>')
+    for (mx, my, lab) in s.get("marks", []):
+        out.append(_dot(M, mx, my))
+        if lab:
+            out.append(_label(M, mx, my, lab))
+    return _svg("\n  ".join(out))
+
 RENDERERS = {"line": _r_line, "parabola": _r_parabola, "vgraph": _r_vgraph,
              "inequality_region": _r_inequality, "scatter": _r_scatter, "number_line": _r_number_line,
-             "plane": _r_plane, "lines2": _r_lines2, "growth": _r_growth, "factor_array": _r_factor_array}
+             "plane": _r_plane, "lines2": _r_lines2, "growth": _r_growth, "factor_array": _r_factor_array,
+             "vlt": _r_vlt}
 
 def render(spec):
     return RENDERERS[spec["type"]](spec)
@@ -335,6 +384,28 @@ def accuracy_issues(spec):
         given = sorted((min(a, b), max(a, b)) for (a, b) in pairs)
         if given != complete:
             iss.append(f"{code}: pairs {given} are not the complete factor pairs {complete} of {num}")
+    elif t == "vlt":
+        shape = spec["shape"]
+        for (mx, my, lab) in spec.get("marks", []):
+            mxs, mys = sp.nsimplify(mx), sp.nsimplify(my)
+            if shape == "line":
+                on = mys == sp.Rational(str(spec["m"])) * mxs + sp.Rational(str(spec["b"]))
+            elif shape == "uparabola":
+                a, b, c = (sp.Rational(str(spec[k])) for k in "abc"); on = mys == a * mxs * mxs + b * mxs + c
+            elif shape == "rparabola":
+                on = mxs == sp.Rational(str(spec["a"])) * mys * mys
+            elif shape == "circle":
+                r = sp.Rational(str(spec["r"]))
+                cx, cy = sp.nsimplify(spec.get("cx", 0)), sp.nsimplify(spec.get("cy", 0))
+                on = (mxs - cx) ** 2 + (mys - cy) ** 2 == r ** 2
+            elif shape == "vline":
+                on = mxs == sp.nsimplify(spec["k"])
+            else:
+                on = False
+            if not on:
+                iss.append(f"{code}: VLT mark ({mx},{my}) '{lab}' not on the {shape}")
+            if shape != "vline" and mxs != sp.nsimplify(spec["test_x"]):
+                iss.append(f"{code}: VLT mark ({mx},{my}) not on the test line x={spec['test_x']}")
     return iss
 
 # --- registry -----------------------------------------------------------------------------------
@@ -402,6 +473,16 @@ FIGURES = [
      "marks": [(-1, 3, "(-1, 3)")], "caption": "Example 3: the dot read back as (-1, 3)"},
     {"code": "4.1.f5", "lesson": "4.1", "type": "plane", "xwindow": [-1, 7], "ywindow": [-1, 7],
      "marks": [(1, 2, "(1, 2)"), (2, 4, "(2, 4)"), (3, 6, "(3, 6)")], "caption": "Example 4: (1, 2), (2, 4), (3, 6) fall in a row"},
+    # Unit 4 — the vertical line test (4.2): a graph + a sweeping vertical test line, hits marked
+    {"code": "4.2.f2", "lesson": "4.2", "type": "vlt", "shape": "line", "m": 2, "b": 1,
+     "xwindow": [-3, 3], "ywindow": [-5, 7], "test_x": 1, "marks": [(1, 3, "(1, 3)")],
+     "caption": "y = 2x + 1: the vertical line hits once — a function"},
+    {"code": "4.2.f3", "lesson": "4.2", "type": "vlt", "shape": "circle", "r": 5,
+     "xwindow": [-6, 6], "ywindow": [-6, 6], "test_x": 0, "marks": [(0, 5, "(0, 5)"), (0, -5, "(0, -5)")],
+     "caption": "a circle: the vertical line hits twice — not a function"},
+    {"code": "4.2.f4", "lesson": "4.2", "type": "vlt", "shape": "vline", "k": 3, "test_x": 3,
+     "xwindow": [-1, 5], "ywindow": [-4, 4], "marks": [(3, -3, ""), (3, -1, ""), (3, 1, "(3, 1)"), (3, 3, "")],
+     "caption": "x = 3: one input, many outputs — not a function"},
     # Unit 5 — the coordinate plane; writing a line from a point + slope
     {"code": "5.1.f1", "lesson": "5.1", "type": "plane", "xwindow": [-5, 5], "ywindow": [-5, 5],
      "quadrants": [(2.7, 2.7, "(+, +)"), (-2.7, 2.7, "(-, +)"), (-2.7, -2.7, "(-, -)"), (2.7, -2.7, "(+, -)")],

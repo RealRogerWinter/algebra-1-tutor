@@ -97,8 +97,14 @@ def _group_key_and_index(code):
     return None
 
 
-def _lint_anchor_list(anchors, ssot_ids):
-    """Pure linter over [(code, relpath), ...]: grammar + collision + density + SSOT existence."""
+def _lint_anchor_list(anchors, ssot_ids, extra_group_codes=()):
+    """Pure linter over [(code, relpath), ...]: grammar + collision + density + SSOT existence.
+
+    `extra_group_codes` are figure codes that occupy an f-index in a lesson but carry no {#}
+    anchor in the tutor .md (the student-only viz figures, numbered from viz_figures.py). They
+    are folded into the f-group density check only, so a viz holding e.g. 4.2.f1 alongside the
+    deterministic anchors 4.2.f2..f4 reads as the dense set {1,2,3,4} rather than a gap at 1.
+    """
     issues, seen, groups = [], {}, {}
     for code, rel in anchors:
         if not ID_RE.match(code):
@@ -114,6 +120,10 @@ def _lint_anchor_list(anchors, ssot_ids):
         gk = _group_key_and_index(code)
         if gk:
             groups.setdefault(gk[0], []).append(gk[1])
+    for code in extra_group_codes:                 # viz f-codes: density only, not grammar/collision
+        gk = _group_key_and_index(code)
+        if gk:
+            groups.setdefault(gk[0], []).append(gk[1])
     for key, idxs in sorted(groups.items()):
         dist = sorted(set(idxs))
         if dist != list(range(1, len(dist) + 1)):
@@ -123,11 +133,19 @@ def _lint_anchor_list(anchors, ssot_ids):
 
 
 def md_anchor_lint():
-    """Lint every {#code} anchor across the shipped .md files (SKILL.md excluded)."""
+    """Lint every {#code} anchor across the shipped .md files (SKILL.md excluded).
+
+    Viz figure codes (student-only <!--viz:--> markers, numbered from viz_figures.py) carry no
+    tutor {#} anchor, so they are passed in separately to keep the per-lesson f-group dense."""
     sys.path.insert(0, HERE)
     import generate
     ssot_ids = {l.id for u in generate.load_ssot().units for l in u.lessons}
-    return _lint_anchor_list(_scan_anchors(), ssot_ids)
+    try:
+        import viz_figures
+        viz_codes = [e["code"] for e in viz_figures.VIZ_FIGURES]
+    except Exception:                              # pragma: no cover - viz registry optional here
+        viz_codes = []
+    return _lint_anchor_list(_scan_anchors(), ssot_ids, extra_group_codes=viz_codes)
 
 
 _FIG_CODE_RE = re.compile(r"^(?:[1-9]|1[0-2]|A)\.\d+\.f\d+[a-z]?$")

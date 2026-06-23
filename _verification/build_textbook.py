@@ -252,7 +252,6 @@ _ILLUS = {
     "3-3-percent-triangle": "A 10-by-10 grid of 100 small squares with 25 of them shaded, picturing a percent as a count per hundred.",
     "4-1-coordinate-plane": "Two number lines crossing at the center, with a single dot reached by going across and then up.",
     "4-2-input-output": "One input entering a machine and a single output leaving it.",
-    "4-2-vertical-line-test": "A vertical line sweeping across a curve, picturing the vertical-line test.",
     "4-3-trays": "A machine with an in-tray of allowed inputs and an out-tray of produced outputs.",
     "5-3-staircase": "A staircase of equal rise-over-run steps climbing alongside a line, picturing slope.",
     "6-1-phrase-equation": "A phrase card turning into an equation card, picturing translation into symbols.",
